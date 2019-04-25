@@ -1,0 +1,31 @@
+<div class="product-card">
+  <div>
+    <h2 *ngIf="selectedProduct._id">Edit {{originalTitle}}</h2>
+    <h2 *ngIf="!selectedProduct._id">Create New Product</h2>
+  </div>
+  <div>
+    <form novalidate>
+        <div>
+          <label>Name</label>
+          <input [(ngModel)]="selectedProduct.title"
+            placeholder="Enter a Name" type="text">
+            
+        </div>
+        <div>
+          <label>Amount</label>
+          <input [(ngModel)]="selectedProduct.amount"
+            placeholder="Enter a Name" type="text">
+            
+        </div>
+        
+    </form>
+  </div>
+  <div>
+      <button type="submit" (click)="cancelled.emit(selectedProduct)">
+        Cancel
+      </button>
+      <button type="submit" (click)="saved.emit(selectedProduct)">
+        Save
+      </button>
+  </div>
+</div>

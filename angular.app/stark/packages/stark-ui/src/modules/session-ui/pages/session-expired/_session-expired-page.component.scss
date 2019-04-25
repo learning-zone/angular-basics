@@ -1,0 +1,19 @@
+/* ============================================================================== */
+/*  S t a r k   S e s s i o n   E x p i r e d   P a g e                           */
+/* ============================================================================== */
+/* stark-ui: src/modules/session-ui/pages/session-expired/_session-expired-page.component.scss */
+
+.stark-session-expired-page {
+  & .stark-session-ui-page {
+	margin: 16px auto;
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align: center;
+  }
+	& p {
+		text-align: left;
+		line-height: 1.5;
+	}
+}
+
+/* END stark-ui: src/modules/session-ui/pages/session-expired/_session-expired-page.component.scss */

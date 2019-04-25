@@ -1,0 +1,13 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+    <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="40" class="md-whiteframe-z2" layout-fill>
+        <md-toolbar>
+            <div layout="row">
+                <h3 class="md-display">{{shop.title}}</h3>
+            </div>
+        </md-toolbar>
+        
+        <div class="" *ngFor="let item of items; let index = index">
+            <product-line [item]="item"></product-line>
+        </div>
+    </md-whiteframe>
+</md-content>

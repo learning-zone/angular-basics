@@ -1,0 +1,173 @@
+<stark-app-container>
+	<stark-app-sidebar>
+		<ng-container stark-app-sidenav-menu>
+			<mat-nav-list class="nav-main">
+				<a mat-list-item uiSref="home" uiSrefActive="active">
+					<span matLine>Home</span>
+				</a>
+				<a mat-list-item uiSref="news" uiSrefActive="active">
+					<span matLine>Stark news</span>
+				</a>
+				<a mat-list-item uiSref="demo-action-bar" uiSrefActive="active">
+					<span matLine>Action Bar</span>
+				</a>
+				<a mat-list-item uiSref="demo-breadcrumb" uiSrefActive="active">
+					<span matLine>Breadcrumb</span>
+				</a>
+				<a mat-list-item uiSref="demo-button" uiSrefActive="active">
+					<span matLine>Button</span>
+				</a>
+				<a mat-list-item uiSref="demo-card" uiSrefActive="active">
+					<span matLine>Card</span>
+				</a>
+				<a mat-list-item uiSref="demo-collapsible" uiSrefActive="active">
+					<span matLine>Collapsible</span>
+				</a>
+				<a mat-list-item uiSref="demo-colors" uiSrefActive="active">
+					<span matLine>Colors</span>
+				</a>
+				<a mat-list-item uiSref="demo-date-picker" uiSrefActive="active">
+					<span matLine>Date Picker</span>
+				</a>
+				<a mat-list-item uiSref="demo-date-range-picker" uiSrefActive="active">
+					<span matLine>Date Range Picker</span>
+				</a>
+				<a mat-list-item uiSref="demo-dropdown" uiSrefActive="active">
+					<span matLine>Dropdown</span>
+				</a>
+				<a mat-list-item uiSref="demo-example-viewer" uiSrefActive="active">
+					<span matLine>Example Viewer</span>
+				</a>
+				<a mat-list-item uiSref="demo-keyboard-directives" uiSrefActive="active">
+					<span matLine>Keyboard Directives</span>
+				</a>
+				<a mat-list-item uiSref="demo-language-selector" uiSrefActive="active">
+					<span matLine>Language Selector</span>
+				</a>
+				<a mat-list-item uiSref="demo-logout" uiSrefActive="active">
+					<span matLine>Logout</span>
+				</a>
+				<a mat-list-item uiSref="demo-pagination" uiSrefActive="active">
+					<span matLine>Pagination</span>
+				</a>
+				<a mat-list-item uiSref="demo-pretty-print" uiSrefActive="active">
+					<span matLine>Pretty Print</span>
+				</a>
+				<a mat-list-item uiSref="demo-sidebar" uiSrefActive="active">
+					<span matLine>Sidebar</span>
+				</a>
+				<a mat-list-item uiSref="demo-slider" uiSrefActive="active">
+					<span matLine>Slider</span>
+				</a>
+				<a mat-list-item uiSref="demo-stark-footer" uiSrefActive="active">
+					<span matLine>Stark footer</span>
+				</a>
+				<a mat-list-item uiSref="stark-header" uiSrefActive="active">
+					<span matLine>Stark header</span>
+				</a>
+				<a mat-list-item uiSref="demo-table" uiSrefActive="active">
+					<span matLine>Table</span>
+				</a>
+				<a mat-list-item uiSref="demo-toast" uiSrefActive="active">
+					<span matLine>Toast Message</span>
+				</a>
+				<a mat-list-item uiSref="demo-typography" uiSrefActive="active">
+					<span matLine>Typography</span>
+				</a>
+			</mat-nav-list>
+		</ng-container>
+		<ng-container stark-app-sidenav-left>
+			<div class="stark-app-sidenav-top m1 center">
+				Top content
+			</div>
+			<div class="stark-app-sidenav-middle m1 center">
+				Middle content
+			</div>
+			<div class="stark-app-sidenav-bottom m1 center">
+				Bottom content
+			</div>
+		</ng-container>
+		<ng-container stark-app-sidenav-right>
+			<div class="stark-app-sidenav-top m1 center">
+				Top content
+			</div>
+			<div class="stark-app-sidenav-middle m1 center">
+				Middle content
+			</div>
+			<div class="stark-app-sidenav-bottom m1 center">
+				Bottom content
+			</div>
+		</ng-container>
+		<div stark-app-sidenav-content>
+			<header class="stark-app-header">
+				<div class="stark-header-container">
+					<div class="stark-app-bar">
+						<div class="stark-app-bar-content-left">
+							<div class="stark-actions">
+								<button class="stark-home-button" (click)="goHome()" color="white" mat-icon-button>
+									<mat-icon starkSvgViewBox svgIcon="home"></mat-icon>
+								</button>
+								<button color="white" mat-icon-button (click)="openMenu()">
+									<mat-icon starkSvgViewBox svgIcon="menu"></mat-icon>
+
+								</button>
+							</div>
+						</div>
+						<div class="stark-app-bar-content-center">
+							<div class="app-logo">
+								<stark-app-logo></stark-app-logo>
+							</div>
+						</div>
+						<div class="stark-app-bar-content-right">
+							<div>
+								<div class="app-data">
+									<p>App Data</p>
+								</div>
+								<button class="app-data-alt" color="white" mat-icon-button
+										[matTooltip]="'STARK.ICONS.APP_DATA' | translate">
+									<mat-icon starkSvgViewBox svgIcon="dots-vertical"></mat-icon>
+								</button>
+								<stark-app-logout></stark-app-logout>
+							</div>
+							<div class="stark-app-bar-content-right-center">
+								<stark-language-selector color="white" class="stark-full-width"
+														 mode="dropdown"></stark-language-selector>
+								<button color="white" (click)="openLeftSidebar()" mat-icon-button>
+									<mat-icon starkSvgViewBox svgIcon="skip-next"></mat-icon>
+								</button>
+								<button color="white" (click)="openRightSidebar()" mat-icon-button>
+									<mat-icon starkSvgViewBox svgIcon="skip-previous"></mat-icon>
+								</button>
+							</div>
+							<div class="stark-app-bar-content-right-actions-alt">
+								<button mat-mini-fab [matTooltip]="'SHOWCASE.STYLEGUIDE.TITLE' | translate">
+									<mat-icon starkSvgViewBox svgIcon="television-guide"></mat-icon>
+								</button>
+								<button mat-mini-fab color="success" [matTooltip]="'STARK.ICONS.ADD_ITEM' | translate">
+									<mat-icon starkSvgViewBox svgIcon="plus"></mat-icon>
+								</button>
+								<button mat-mini-fab color="primary" [matTooltip]="'STARK.ICONS.SEARCH' | translate">
+									<mat-icon starkSvgViewBox svgIcon="magnify"></mat-icon>
+								</button>
+							</div>
+						</div>
+
+						<div class="stark-app-bar-page-title">
+							<h1>Stark</h1>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="stark-main-container">
+				<main>
+					<ui-view></ui-view>
+				</main>
+			</div>
+		</div>
+	</stark-app-sidebar>
+	<stark-app-footer
+			legalInfoUrl="https://www.nbb.be/en/disclaimer-and-legal-information"
+			helpPageUrl="https://www.nbb.be/en/links"
+	>
+	</stark-app-footer>
+</stark-app-container>

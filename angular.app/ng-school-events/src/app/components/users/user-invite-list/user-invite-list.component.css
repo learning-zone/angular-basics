@@ -1,0 +1,14 @@
+.list-group {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.list-group-item {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.more-space {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

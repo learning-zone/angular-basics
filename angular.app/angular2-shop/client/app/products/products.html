@@ -1,0 +1,19 @@
+{{mode}}
+   <button *ngIf="!mode" type="submit"
+                (click)="changeMode('add')">Add New</button>
+  
+
+<div *ngIf="!mode">
+  
+  <product-list [products]="products | async"
+    (selected)="selectProduct($event)" (deleted)="deleteProduct($event)">
+  </product-list>
+</div>
+<div *ngIf="mode">
+  <product-detail
+    (saved)="saveProduct($event)" (cancelled)="resetProduct($event)"
+    [product]="selectedProduct | async">
+    
+    </product-detail>
+
+</div>

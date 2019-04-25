@@ -1,0 +1,15 @@
+{
+  "name": "@nationalbankbelgium/stark-core/testing",
+  "types": "testing.d.ts",
+  "main": "../bundles/stark-core-testing.umd.js",
+  "module": "../fesm5/testing.js",
+  "es2015": "../fesm2015/testing.js",
+  "esm5": "../esm5/testing/testing.js",
+  "esm2015": "../esm2015/testing/testing.js",
+  "fesm5": "../fesm5/testing.js",
+  "fesm2015": "../fesm2015/testing.js",
+  "scripts": {
+    "ngc": "node ../../../node_modules/@angular/compiler-cli/src/main.js -p ./tsconfig-build.json",
+    "tsc": "node ../../../node_modules/typescript/bin/tsc -p ./tsconfig-build.json"
+  }
+}

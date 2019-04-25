@@ -1,0 +1,39 @@
+{
+  "cmd": "npm start",
+  "name": "default",
+  "targets": {
+    "webpack-dev-server--hmr": {
+      "cmd": "npm start"
+    },
+    "build:dev": {
+      "cmd": "npm run build:dev"
+    },
+    "build:prod": {
+      "cmd": "npm run build:prod"
+    },
+    "build:docs": {
+      "cmd": "gulp build:docs"
+    },
+    "test": {
+      "cmd": "npm test"
+    },
+    "watch:test": {
+      "cmd": "npm run watch:test"
+    },
+    "e2e": {
+      "cmd": "npm run e2e"
+    },
+    "server:prod": {
+      "cmd": "npm run server:prod"
+    },
+    "watch:dev": {
+      "cmd": "npm run watch:dev"
+    },
+    "watch:prod": {
+      "cmd": "npm run watch:prod"
+    },
+    "watch:dev": {
+      "cmd": "npm run watch:dev"
+    }
+  }
+}

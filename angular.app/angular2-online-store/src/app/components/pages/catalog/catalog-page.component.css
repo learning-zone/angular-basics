@@ -1,0 +1,22 @@
+.page_catalog {
+}
+.page_catalog-title {
+    padding: 25px 0;
+    color: #f0ad4e;
+    text-align: center;
+}
+.page_catalog-list {
+    max-width: 928px;
+    padding-bottom: 50px;
+}
+.page_catalog-list-item{
+    border-color: #f0ad4e !important;
+}
+.page_catalog-list .content a, .page_catalog-list .content span, .page_catalog-list .content p {
+    color: white !important;
+}
+
+catalog-item {
+    margin-top: 20px;
+    margin-left: 10px;
+}

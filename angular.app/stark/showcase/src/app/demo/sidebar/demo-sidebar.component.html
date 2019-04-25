@@ -1,0 +1,9 @@
+<h1 class="mat-display-3" translate>SHOWCASE.DEMO.LANGUAGE_SELECTOR.TITLE</h1>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.SHARED.EXAMPLE_VIEWER_LIST</h1>
+<example-viewer [extensions]="['HTML', 'TS']" filesPath="sidebar/regular" exampleTitle="SHOWCASE.DEMO.SIDEBAR.TITLE">
+	<button color="primary" mat-raised-button mat-button (click)="openMenu()">{{ 'SHOWCASE.DEMO.SIDEBAR.OPEN_MENU' | translate }}</button>
+	<button color="primary" mat-raised-button mat-button (click)="openLeftSidebar()">{{ 'SHOWCASE.DEMO.SIDEBAR.OPEN_LEFT' | translate }}</button>
+	<button color="primary" mat-raised-button mat-button (click)="openRightSidebar()">{{ 'SHOWCASE.DEMO.SIDEBAR.OPEN_RIGHT' | translate }}</button>
+</example-viewer>
+</section>

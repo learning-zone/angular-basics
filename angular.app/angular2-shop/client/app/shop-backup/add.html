@@ -1,0 +1,39 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+    <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="md-whiteframe-z2" layout-fill>
+        <md-toolbar class="md-primary md-tall" layout="column" layout-align="end" layout-fill>
+            <div layout="row" class="md-toolbar-tools md-toolbar-tools-bottom">
+                <h3 class="md-display-1"> Add/Edit Shop </h3>
+            </div>
+        </md-toolbar>
+        <div layout="column" layout-fill layout-margin layout-padding>
+            <form [ngFormModel]="myForm" #f="ngForm" (submit)="submit(f.value)" layout="column" layout-fill layout-padding layout-margin>
+                <md-input-container>
+                    <md-input placeholder="Shop Name" ngControl="title" aria-label="title">
+                        {{title}}
+                    </md-input>
+                    <md-input placeholder="Cuisine" ngControl="cuisine" aria-label="cuisine">
+
+                    </md-input>
+               
+                </md-input-container>
+
+                <sebm-google-map [latitude]="u.latitude"
+                                 [longitude]="u.longitude" [zoom]="zoom" (mapClick)="mapClicked($event)">
+                    <sebm-google-map-marker [latitude]="u.latitude"
+                                            [longitude]="u.longitude">
+                    </sebm-google-map-marker>
+                </sebm-google-map>
+                <md-switch style="margin:5px" [(checked)]="isVeg">Veg </md-switch>
+ 
+                    <md-switch style="margin:2px"  [(checked)]="isDelivery" >Delivery</md-switch>
+                    <md-switch style="margin:2px"  [(checked)]="isPickup">Pickup </md-switch>
+                
+                <div layout="row" layout-align="space-between center">
+                    <button md-raised-button color="primary" type="submit" aria-label="login">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </md-whiteframe>
+</md-content>

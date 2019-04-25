@@ -1,0 +1,6 @@
+<div *ngFor="let product of products" (click)="selected.emit(product)"
+  class="product-card">
+  <div>
+    {{product.title}}+{{product.amount}}
+  </div> 
+</div>

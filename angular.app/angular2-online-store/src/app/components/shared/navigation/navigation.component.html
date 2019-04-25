@@ -1,0 +1,10 @@
+<nav class="navigation ui inverted segment">
+    <div class="navigation-items ui inverted secondary pointing menu">
+        <a class="navigation-item item" routerLink="/"        routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-home"></i>Home</a>
+        <a class="navigation-item item" routerLink="/catalog" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><i class="fa fa-list"></i>Catalog</a>
+        <a class="navigation-item item" routerLink="/cart"    routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="fa fa-shopping-cart"></i>Cart ({{cartSize$ | async}})
+        </a>
+        <a class="navigation-item item" routerLink="/admin"   routerLinkActive="active" ><i class="fa fa-user"></i>Admin</a>
+    </div>
+</nav>

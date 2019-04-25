@@ -1,0 +1,31 @@
+{
+  "extends": ["tslint:latest", "tslint-sonarts", "codelyzer", "tslint-config-prettier", "./packages/stark-build/config/tslint.json"],
+  "rules": {
+    "component-selector": false,
+    "completed-docs": [
+      true,
+      {
+        "enums": true,
+        "variables": {
+          "tags": { "existence": ["ignore", "link", "param", "returns"] }
+        },
+        "functions": {
+          "tags": { "existence": ["ignore", "link", "param", "returns"] }
+        },
+        "interfaces": {
+          "tags": { "existence": ["ignore", "link", "param", "returns"] },
+          "visibilities": ["exported", "internal"]
+        },
+        "classes": {
+          "tags": { "existence": ["ignore", "link", "param", "returns"] },
+          "visibilities": ["internal"]
+        },
+        "methods": {
+          "tags": { "existence": ["ignore", "link", "param", "returns"] }
+        }
+      }
+    ],
+    "jsdoc-format": [true, "check-multiline-start"],
+    "no-redundant-jsdoc": true
+  }
+}

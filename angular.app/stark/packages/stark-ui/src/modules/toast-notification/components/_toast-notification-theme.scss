@@ -1,0 +1,13 @@
+.stark-toast {
+  &.stark-toast-message-error {
+    background-color: $message-alert-700;
+  }
+
+  &.stark-toast-message-warning {
+    background-color: $message-warning-700;
+  }
+
+  &.stark-toast-message-info {
+    background-color: $message-info-700;
+  }
+}

@@ -1,0 +1,9 @@
+<stark-dropdown
+		dropdownId="numberDropdown"
+		[options]="[1,2,3,4,5,6,7]"
+		[value]="selectedNumber"
+		placeholder="SHOWCASE.DEMO.DROPDOWNS.SELECT_NUMBER"
+		(dropdownSelectionChanged)="numberDropdownOnChange($event)"
+		[defaultBlank]="true">
+</stark-dropdown>
+<div *ngIf="selectedNumber"> {{'SHOWCASE.DEMO.DROPDOWNS.SELECTED_VALUE' | translate }}: {{ selectedNumber }}</div>

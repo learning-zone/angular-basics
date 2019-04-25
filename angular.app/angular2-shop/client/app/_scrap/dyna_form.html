@@ -1,0 +1,46 @@
+<div class="container">
+   <!--
+  <button type="submit"
+                (click)="googleLogin()">Login with Google</button>
+                
+  <button type="submit"
+                (click)="fbLogin()">Login with Facebook</button>
+  -->
+  <!--
+  Login
+  <form>
+   Email
+  <input type="email"/>
+  
+   Passworddd
+  <input type="password"/>
+ 
+  <button type="submit"
+                (click)="submit()">Login</button>
+      
+  </form>
+ -->
+ ssssssssssssssss
+ {{f}} {{x}}
+</div>
+dddddddddddddddddddddddddd
+<!--
+fff {{field.label}}
+ fff {{field}}
+ fff {{field }}
+ -->
+ 
+<div d="form">
+  <label [attr.for]="field.key">{{field.label}}</label>
+  <div [ngSwitch]="field.type">
+    <input *ngSwitchWhen="'text'" [ngControl]="field.key"
+            [id]="field.key" [type]="field.type">
+    <input *ngSwitchWhen="'password'" [ngControl]="field.key"
+            [id]="field.key" [type]="field.type">
+            
+    <select [id]="field.key" *ngSwitchWhen="'dropdown'" [ngControl]="field.key">
+      <option *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+  </div>
+  <div class="errorMessage" *ngIf="!isValid">{{field.label}} is required</div>
+</div>

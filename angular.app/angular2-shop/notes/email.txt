@@ -1,0 +1,10 @@
+curl -s --user 'api:key-56ff4f5de3fe174e7982c11aa6d29e1b' \
+    https://api.mailgun.net/v3/sandbox565c19d059f94c43a311c43c92b8c426.mailgun.org/messages \
+    -F from='Mailgun Sandbox <postmaster@sandbox565c19d059f94c43a311c43c92b8c426.mailgun.org>' \
+    -F to='nawal <nawalkishore@hotmail.com>' \
+    -F subject='Hello nawal' \
+    -F text='Congratulations nawal, you just sent an email with Mailgun!  You are truly awesome!' 
+
+You can see a record of this email in your logs: https://mailgun.com/cp/log 
+
+You can send up to 300 emails/day from this sandbox server. Next, you should add your own domain so you can send 10,000 emails/month for free.'

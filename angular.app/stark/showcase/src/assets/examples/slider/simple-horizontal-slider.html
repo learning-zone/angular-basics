@@ -1,0 +1,23 @@
+<div>
+	<stark-slider [values]="sliderValues"
+                  sliderId="simple-slider"
+				  [sliderConfig]="sliderConfig"
+				  [isDisabled]="!isSliderEnabled"
+				  (changed)="onChangeSlider($event)">
+	</stark-slider>
+	<div>
+		<mat-checkbox class="slider-enabled-field"
+					  (change)="$event ? toggleSliderEnable() : null"
+					  [checked]="isSliderEnabled">
+			Enabled
+		</mat-checkbox>
+		<mat-form-field class="slider-value-field">
+			<input matInput
+				   placeholder="Value"
+				   type="number"
+				   step = "10"
+				   [(ngModel)]="valueForSlider"
+				   (change)="onChangeValueForSlider($event)">
+		</mat-form-field>
+	</div>
+</div>

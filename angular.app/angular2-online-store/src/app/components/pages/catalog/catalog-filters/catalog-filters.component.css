@@ -1,0 +1,19 @@
+.catalog-filters {
+    text-align: left;
+}
+
+.catalog-filters label{
+}
+.catalog-filters input {
+    margin-right: 15px;
+}
+.catalog-filters--error{
+    color: red;
+    margin-bottom: 25px;
+}
+.catalog-filters-sort--by-price input {
+    background: red ;
+}
+.catalog-filters-sort--by-price input:checked~label, .catalog-filters-sort--by-date input:checked~label {
+    color: #f0ad4e !important;
+}

@@ -1,0 +1,7 @@
+<span *ngFor="let breadcrumbPath of (breadcrumbConfig ? breadcrumbConfig.breadcrumbPaths : []); let last=last">
+	<a (click)="breadcrumbClickHandler(breadcrumbPath)"
+	   [id]="breadcrumbPath.id"
+	   translate>{{ breadcrumbPath.translationKey }}</a>
+	
+	<span *ngIf="!last">›</span>
+</span>

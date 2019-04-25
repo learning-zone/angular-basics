@@ -1,0 +1,14 @@
+<div class="stark-session-ui-page" role="alertdialog" aria-busy="true" aria-live="assertive">
+	<header><i></i></header>
+	<content>
+		<h2 translate>STARK.SESSION_LOGOUT.TITLE</h2>
+
+		<button mat-button
+				mat-raised-button
+				color="primary"
+				(click)="logon()"
+				[attr.aria-label]="'STARK.SESSION_LOGOUT.LOGIN' | translate">
+			<span translate>STARK.SESSION_LOGOUT.LOGIN</span>
+		</button>
+	</content>
+</div>

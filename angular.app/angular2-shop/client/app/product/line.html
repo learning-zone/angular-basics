@@ -1,0 +1,12 @@
+<md-list-item class="">
+    <div class="md-list-item-text" layout="column">
+        <a router-active [routerLink]="['ProductDetails',{'id' :item._id }]">
+
+            <img src="https://source.unsplash.com/category/food/20x20/?salad" />
+            {{ item.title }} @ {{ item.price }}
+        </a>
+            
+</div>
+</md-list-item>
+<md-divider></md-divider>
+

@@ -1,0 +1,44 @@
+/* ============================================================================== */
+/*  S t a r k   T a b l e   D i a l o g   M u l t i s o r t                       */
+/* ============================================================================== */
+/* stark-ui: src/modules/table/components/table/dialogs/_multisort.component.scss */
+
+$stark-table-multifilters-side-padding: 10px;
+
+.stark-table-dialog-multisort-panel-class {
+  width: 500px;
+}
+
+.stark-table-dialog-multisort {
+  .header {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+  }
+
+  .rules {
+    .rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > * {
+        padding-right: $stark-table-multifilters-side-padding;
+      }
+
+      > *:last-child {
+        padding-right: 0;
+      }
+
+      .form-field-name {
+        flex-grow: 1;
+      }
+
+      .form-field-order .mat-form-field-infix {
+        width: 80px;
+      }
+    }
+  }
+}
+
+/* END stark-ui: src/modules/table/components/table/dialogs/_multisort.component.scss */

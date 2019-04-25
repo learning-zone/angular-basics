@@ -1,0 +1,48 @@
+/* ============================================================================== */
+/*  S t a r k   C o l l a p s i b l e   -   T h e m e                             */
+/* ============================================================================== */
+/* stark-ui: src/modules/collapsible/components/_collapsible-theme.scss */
+
+@mixin stark-collapsible-color($color_high, $color_low) {
+  .mat-expansion-panel {
+    box-shadow: $elevation-1;
+    &.mat-expanded {
+      box-shadow: $elevation-16;
+    }
+
+    .mat-expansion-panel-header {
+      border-bottom: 1px solid rgba($color: $color_low, $alpha: 0.12);
+      background-color: rgba($color: $color_high, $alpha: 0.02);
+      &:not(.mat-expanded) {
+        &:hover {
+          background-color: rgba($color: $color_low, $alpha: 0.02);
+        }
+      }
+      &.mat-expanded {
+        background-color: rgba($color: $color_high, $alpha: 1);
+      }
+    }
+
+    .mat-expansion-panel-body {
+      background-color: rgba($color: $color_high, $alpha: 0.02);
+    }
+  }
+}
+
+.stark-collapsible {
+  @include stark-collapsible-color(mat-color($grey-palette, A100), mat-color($grey-palette, 900));
+
+  .mat-expansion-panel-header-description {
+    color: mat-color(map-get($base-theme, primary-palette), 900);
+  }
+
+  .mat-expansion-panel-header-title {
+    color: mat-color(map-get($base-theme, primary-palette), 500);
+  }
+
+  .stark-collapsible-icon {
+    color: mat-color(map-get($base-theme, primary-palette), 500);
+  }
+}
+
+/* END stark-ui: src/modules/collapsible/components/_collapsible-theme.scss */

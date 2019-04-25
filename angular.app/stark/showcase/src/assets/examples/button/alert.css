@@ -1,0 +1,10 @@
+.button-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button-row button {
+  margin-right: 10px;
+}

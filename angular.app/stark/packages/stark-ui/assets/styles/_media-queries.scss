@@ -1,0 +1,8 @@
+$tablet-query: "(min-width: 600px)";
+$tablet-screen-query: "screen and (min-width: 600px)";
+$desktop-query: "(min-width: 960px)";
+$desktop-screen-query: "screen and (min-width: 960px)";
+$mobile-only-query: "(max-width: 599px)";
+$mobile-only-screen-query: "screen and (max-width: 599px)";
+$tablet-only-query: "(min-width: 600px) and (max-width: 959px)";
+$tablet-only-screen-query: "screen and (min-width: 600px) and (max-width: 959px)";

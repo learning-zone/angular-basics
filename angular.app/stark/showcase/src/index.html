@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- The base href is defined through the Webpack configuration and can be customized through the angular.json file -->
+	<!-- necessary for HTML5 History API which adds support for pretty URLs (see app.ts) -->
+	<meta charset="utf-8">
+	<title><%= htmlWebpackPlugin.options.starkAppMetadata.name %></title>
+
+	<meta name="description" content="{%= htmlWebpackPlugin.options.starkAppMetadata.description %}">
+
+	<% if (webpackConfig.htmlElements.headTags) { %>
+	<!--Configured Head Tags  -->
+	<%= webpackConfig.htmlElements.headTags %>
+	<% } %>
+
+	<!-- Stylesheets -->
+	<!-- Generated CSS stylesheets will be added by webpack: extract-text-webpack-plugin -->
+
+	<!-- move the block of webpack dev server to the <head> section and change the IF conditions -->
+	<% if (htmlWebpackPlugin.options.metadata.IS_DEV_SERVER && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+	<!-- Webpack Dev Server reload -->
+	<script src="/webpack-dev-server.js"></script>
+	<% } %>
+
+	<!-- add this block at the end of the <head> section -->
+	<% if (htmlWebpackPlugin.options.dllFiles) { %>  <!-- dllFiles will be filled in by the Dll plugin -->
+	<!-- Webpack DLL CSS files -->
+	<% for (let i = 0; i < htmlWebpackPlugin.options.dllFiles.css.length; ++i) { %>
+	<link href="<%= htmlWebpackPlugin.options.dllFiles.css[i] %>" rel="stylesheet">
+	<% } %>
+	<% } %>
+</head>
+
+<body class="">
+
+<!-- FIXME reimplement these functionalities -->
+<!-- the 'stark-init'/'stark-exit' class is set when the current route state is a child of starkAppInit/starkAppExit -->
+<!--
+<div class="stark-message stark-js-error-messages" role="alertdialog" aria-busy="true" aria-live="assertive">
+	<header><i></i></header>
+	<content>
+		<div class="stark-msg-no-js">
+			<h1>No JavaScript</h1>
+			<p>You must have javascript enabled!</p>
+		</div>
+		<div class="stark-msg-outdated">
+			<h1>Browser not supported</h1>
+			<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to
+				improve your experience.</p>
+		</div>
+	</content>
+</div>
+-->
+
+<!-- the 'stark-init'/'stark-exit' class is set when the current route state is a child of starkAppInit/starkAppExit -->
+<!--
+<app class="stark-app" ui-sref-active="{'stark-init': 'starkAppInit.**', 'stark-exit': 'starkAppExit.**'}"></app>
+-->
+
+<!--
+<script nonce="cefb24121ec5443c8819cc7c5e33c4a2">
+	/* remove the no-js message and if compatible browser: display the app */
+	if ("querySelector" in document && "classList" in document.body && /*@cc_on!@*/false === false) {
+		document.body.classList.add("stark-browser-ok");
+	} else {
+		document.body.className += " stark-outdated-browser";
+		var starkApp = document.getElementsByClassName("stark-app")[0];
+		if (starkApp) {
+			document.body.removeChild(starkApp);
+		}
+		var starkInitView = document.getElementsByClassName("stark-login-container")[0];
+		if (starkInitView) {
+			document.body.removeChild(starkInitView);
+		}
+	}
+</script>
+-->
+
+<!-- <app>
+	<div class="stark-message stark-loading" role="alertdialog" aria-busy="true" aria-live="assertive">
+		<header><i></i></header>
+		<content>
+			<div class="stark-msg-loading">
+				<div class="stark-loading-icon"></div>
+				<h1>Loading...</h1>
+			</div>
+		</content>
+	</div>
+</app> -->
+<app>Loading...</app>
+
+<% if (htmlWebpackPlugin.options.dllFiles) { %>  <!-- dllFiles will be filled in by the Dll plugin -->
+<!-- Webpack DLL JS files -->
+<% for (let i = 0; i < htmlWebpackPlugin.options.dllFiles.js.length; ++i) { %>
+<script type="text/javascript" src="<%= htmlWebpackPlugin.options.dllFiles.js[i] %>"></script>
+<% } %>
+<% } %>
+
+<!-- CSS will be injected by webpack here -->
+<!-- Preload link tags will be injected by webpack here -->
+<!-- Generated bundle scripts will be injected by webpack here: html-webpack-plugin -->
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+strong {
+    color: #f0ad4e;
+    margin-right: 5px;
+}
+.catalog-item-preview {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    color: white;
+    padding: 25px 25px 50px;
+}
+.catalog-item-preview--title {
+    padding: 15px 0;
+    color: #f0ad4e;
+}
+.catalog-item-preview--description {
+    text-align: left;
+    font-size: 15px;
+    display: block;
+    font-style: italic;
+    text-indent: 25px;
+    margin-top: 20px;
+}
+.catalog-item-preview--image img {
+    max-width: 100%;
+}
+.catalog-item-preview--brand,
+.catalog-item-preview--price,
+.catalog-item-preview--date,
+.catalog-item-preview--details {
+    text-align: left;
+}
+.catalog-item-preview--details-detail {
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+.catalog-item-preview--details-detail::before {
+    content: ' - ';
+}
+.catalog-item-preview--back {
+
+}
+.catalog-item-preview--back:active {
+
+}

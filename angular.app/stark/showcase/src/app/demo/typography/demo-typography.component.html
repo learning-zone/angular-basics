@@ -1,0 +1,93 @@
+<h1 class="mat-display-3" translate>SHOWCASE.DEMO.TYPOGRAPHY.TITLE</h1>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.TYPOGRAPHY.MATERIAL_BASED.TITLE</h1>
+	<p [innerHTML]="'SHOWCASE.DEMO.TYPOGRAPHY.MATERIAL_BASED.DETAILS' | translate"></p>
+</section>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.TYPOGRAPHY.FONT_FAMILY.TITLE</h1>
+	<p translate>SHOWCASE.DEMO.TYPOGRAPHY.FONT_FAMILY.DETAILS_1</p>
+	<p translate>SHOWCASE.DEMO.TYPOGRAPHY.FONT_FAMILY.DETAILS_2</p>
+	<p>
+		<stark-pretty-print [data]="fontFamilyCSS" format="css" [enableHighlighting]="true"></stark-pretty-print>
+	</p>
+</section>
+
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.TYPOGRAPHY.CLASSES_AND_TAGS.TITLE</h1>
+	<example-viewer class="mb3" [extensions]="['HTML']" filesPath="typography/stark" exampleTitle="STARK Classes">
+		<h1>Headline 1</h1>
+		<h2>Headline 2</h2>
+		<h3>Headline 3</h3>
+		<h4>Headline 4</h4>
+	</example-viewer>
+	<example-viewer [extensions]="['HTML']" filesPath="typography/mat" exampleTitle="Angular Material Typography">
+		<div class="mat-display-4">Mat-Display-4</div>
+		<div class="mat-display-3">Mat-Display-3</div>
+		<div class="mat-display-2">Mat-Display-2</div>
+		<div class="mat-display-1">Mat-Display-1</div>
+		<p class="mat-body-2">Mat-Body-2</p>
+		<p class="mat-caption">Mat-Caption</p>
+	</example-viewer>
+</section>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.TYPOGRAPHY.CUSTOMIZATION.TITLE</h1>
+	<p translate [innerHTML]="'SHOWCASE.DEMO.TYPOGRAPHY.CUSTOMIZATION.DETAILS' | translate"></p>
+	<stark-pretty-print [data]="customizeMap" format="scss" [enableHighlighting]="true"></stark-pretty-print>
+	<p class="mt3" translate>SHOWCASE.DEMO.TYPOGRAPHY.CUSTOMIZATION.MAP_EXPLAINED</p>
+	<table class="stark-basic-table">
+		<tbody>
+			<tr>
+				<th>SCSS map property</th>
+				<th>Class / Tag</th>
+			</tr>
+			<tr>
+				<td>display-4</td>
+				<td><code>.mat-display-4</code></td>
+			</tr>
+			<tr>
+				<td>display-3</td>
+				<td><code>.mat-display-3</code></td>
+			</tr>
+			<tr>
+				<td>display-2</td>
+				<td><code>.mat-display-2</code></td>
+			</tr>
+			<tr>
+				<td>display-1</td>
+				<td><code>.mat-display-1</code></td>
+			</tr>
+			<tr>
+				<td>headline</td>
+				<td><code>h1</code></td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td><code>h2</code></td>
+			</tr>
+			<tr>
+				<td>subheading-2</td>
+				<td><code>h3</code></td>
+			</tr>
+			<tr>
+				<td>subheading-1</td>
+				<td><code>h4</code></td>
+			</tr>
+			<tr>
+				<td>body-2</td>
+				<td><code>.mat-body-2</code></td>
+			</tr>
+			<tr>
+				<td>body-1</td>
+				<td><code>.mat-body-1</code></td>
+			</tr>
+			<tr>
+				<td>caption</td>
+				<td><code>.mat-caption</code></td>
+			</tr>
+			<tr>
+				<td>input</td>
+				<td><code>input</code></td>
+			</tr>
+		</tbody>
+	</table>
+</section>

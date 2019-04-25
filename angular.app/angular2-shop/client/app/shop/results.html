@@ -1,0 +1,7 @@
+<md-list>
+    <md-subheader class="md-no-sticky">Shops near you</md-subheader>
+    <div class="" *ngFor="let item of items; let index = index">
+        <shop-line [item]="item"></shop-line>
+    </div>
+    <md-divider></md-divider>
+</md-list>

@@ -1,0 +1,11 @@
+.git/
+.github/
+.idea/
+.vscode/
+dist/
+coverage/
+reports/
+node_modules/
+CHANGELOG.md
+package.json
+package-lock.json

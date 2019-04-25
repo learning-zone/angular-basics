@@ -1,0 +1,44 @@
+/* ============================================================================== */
+/*  S t a r k   C o l l a p s i b l e                                             */
+/* ============================================================================== */
+/* stark-ui: packages/stark-ui/src/modules/collapsible/components/_collapsible.component.scss */
+
+.stark-collapsible {
+  .mat-expansion-panel {
+    transition: box-shadow 150ms linear;
+
+    &.mat-expanded {
+      .mat-expansion-panel-header-title {
+        .stark-collapsible-icon {
+          &.spin {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .mat-expansion-panel-header {
+      padding-right: 0;
+    }
+
+    .mat-expansion-panel-body {
+      padding-top: 16px;
+    }
+
+    .mat-expansion-panel-header-title {
+      align-items: center;
+      .stark-collapsible-title {
+        font-size: mat-font-size($typography-config, subheading-1);
+        font-weight: mat-font-weight($typography-config, subheading-1);
+        line-height: mat-line-height($typography-config, subheading-1);
+      }
+    }
+
+    .stark-collapsible-icon {
+      transition: transform 150ms linear;
+      margin-right: 6px;
+    }
+  }
+}
+
+/* END stark-ui: packages/stark-ui/src/modules/collapsible/components/_collapsible.component.scss */

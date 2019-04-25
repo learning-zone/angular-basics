@@ -1,0 +1,71 @@
+<dl>
+  <dt i18n>Parent</dt>
+  <dd>{{parent.firstName}} {{parent.lastName}}</dd>
+  <dt i18n>Details</dt>
+  <dd>{{parent.details}}</dd>
+</dl>
+
+<button i18n class="btn btn-primary" (click)="open(content)">Assign Students</button>
+
+<p class="h6 my-3"><u><ng-container i18n>Students related to this parent:</ng-container></u></p>
+
+<table class="table table-hover table-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" i18n>Full Name</th>
+      <th scope="col" i18n> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of assignedStudents">
+      <td>{{student.student?.firstName}} {{student.student?.lastName}}</td>
+      <td>
+        <button type="button" class="btn btn-outline-danger btn-space" (click)="removeStudent(student.id)">
+          <span class="fa fa-trash" aria-hidden="true"></span>
+          <span class="small" i18n>  Delete Relationship</span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--Modal to display students to assign, move this to common component with student home modals-->
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 i18n class="modal-title">Assign Students</h4>
+    <button type="button" class="close" i18n-aria-label aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <span i18n class="bold" >Available Students</span>
+          <ul class="list-group list-group-flush more-space">
+            <li class="list-group-item" *ngFor="let student of availableStudents">
+              {{student?.firstName}} {{student?.lastName}}
+              <button type="button" class="btn btn-outline-primary btn-sm pull-right" (click)="addStudent(student)">
+                <span class="fa fa-arrow-right" aria-hidden="true"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <span i18n class="bold">Assigned Students</span>
+          <ul class="list-group list-group-flush more-space">
+            <li class="list-group-item" *ngFor="let assigStudent of assignedStudents">
+              <button type="button" class="btn btn-outline-primary btn-sm pull-left" (click)="removeStudent(assigStudent.id)">
+                <span class="fa fa-arrow-left" aria-hidden="true"></span>
+              </button> &nbsp; &nbsp;
+              {{assigStudent.student?.firstName}} {{assigStudent.student?.lastName}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button i18n type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>

@@ -1,0 +1,17 @@
+534299037748-cliu0pqmr7kq184tc876q5f4v53rnplr.apps.googleusercontent.com
+
+uYeWUObzJRDq1xN08yJRk5Vi
+
+{
+  "type": "service_account",
+  "project_id": "neighbourkitchen",
+  "private_key_id": "4ed0a12b2ba3cfee796311c2cd60ca9ec31989f3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCPpnbAvYmszxyA\nKJ9wZiIzAi1HMfgowv/mXawyxyxip2pJ3tmoemu3eW10YRDrC+VN5vArvGV2DCBC\ndY0qkeovMAiPG6FB4vHgZp6EQZI7ERhpKHhDIo2/hFHFzBL48OiGMF12wbVtJsSj\nyL+nwH747LvB8gM/YcvUUq6u6oVvyz/HXLtPwesUkCEGnL6Lz9nm2YaD1h7DJXhT\n1MZjAs+iq44vMb7ckh/J/47k3WM5wW7LE1Q6RuvfB8qvoPQWbZ9hYZGm4KWoBIIH\nwWW7Tgr3NLymx4KNJVz+eK2uBTXNdEWDeLmqvXF7MpccUD9W+8IDxAdp790fpETB\nLJldXoLTAgMBAAECggEAWpvLaAOl5aS1+3ikKQejJr2GxdOVDlEBjNMlHNpY+tlS\nx8mTTRv6+b3T9oaLX1cfiiXS9CNfdDht2L3BD0r+hkkr/OiWrLJzkvHnptCdZjiA\nR0RJpz8SXe0ejz8L8I40fP/g1FmXEIRVoGGt0igvbuAUBl+bAM20/fYxTQ+Mn1iI\nR12jNC6Vq7ShqbmqxbZob2Fek38lcQ3rFnbvV6yZ+yL6Wsmen9DRfa5JDtXRBeZL\nDuHTkb1+oxzZxfcdzSuum/daVpEbRyi/naQGpUtFzNUexnpNV6h3hOkQrumJzN8k\nRghaBAgZebBfp8xLaC+Rho3H5d5I2g/TRCckJZIIgQKBgQDLf8NxLBNeF+M8/T8U\nY+KB4D9kt7QsE8J2eUETCbNZdu4K9l9RrsibDIoXGz6yxLS1F30n0+W8E4O/ubLn\nRwFhIWnSS3OfUTTUQVBfUjbRQFIG4lpfcJzngj9nQdbPMgO5UcQJRqXFa5SGQNNR\nBrQlrB6X4biZu8EJsHnD5BqJoQKBgQC0tfGIwA12l4T86tCDoL4HkdGLwG4KN3jt\n1g5YT2ohUWyM6LYg+SBrvh3fJtRId/oakBJDUO7zeQ4TcJei734azd72Oe0OgxPb\ndq4JBAYgXDdxacGfAX8J232r4ujAadETHd9YVrPrtmEh3KPjjCVqY9ziNqR8/nHO\ngTUt2od/8wKBgQCK9NgxHEaxVqBtkgQT2UzfIJBJJwPZoTiFi7C63kHgkkxjoe5e\nqXoEHeDhfFIo4hb/HWXx30idT7oEHjqioKK5f4Zx+eGe5WWslljabhpOcpxQZRoO\n16fckdzXlmanHuDaF5JEP0CM+TP3JKbnSiuTGd/eGFzkZQegpSfQcp8IYQKBgHsT\na8RiYQkDGz0SRB9R6/rF0nym+4sTytXZMv3sYHD+vrqdh+WfJviajEe+b1hH9lv/\nAaE9TvEd4ntU9MGw8ScaTZ9PRmfa2DxhcRiM2AtUIyKoD4nXAAnbppTZvwHFT/MA\nJmxI6NNB7JeeaTSB772s8/RRmOfUd/hYQbrQGfcHAoGBAIgFTnmqf/Yyy2PddWbY\n+YJOVutPA4jggU74k+UHgNrnWo6UNHb+NxqJXMFj+nX9PPUzFUZYo9hbPyA03tQc\nVHrtbvTBpI/TMtzn+hw4trN2iJ2NmOZh/SxGSp+A9NmfNuAk66tGQBWbgVvoV0U3\nlp7yfWRhW6chcKNZc05U9JiQ\n-----END PRIVATE KEY-----\n",
+  "client_email": "ruchi-200@neighbourkitchen.iam.gserviceaccount.com",
+  "client_id": "105076312951109005054",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ruchi-200%40neighbourkitchen.iam.gserviceaccount.com"
+}
+

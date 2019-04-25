@@ -1,0 +1,14 @@
+<mat-expansion-panel class="stark-collapsible" 
+					 id="{{ htmlId }}"
+					 [expanded]="isExpanded"
+					 hideToggle>
+	<mat-expansion-panel-header 
+			(click)="toggleCollapsible()">
+		<mat-panel-title>
+			<mat-icon [ngClass]="{ 'spin' : iconSpinningEnabled }" class="stark-collapsible-icon" starkSvgViewBox [svgIcon]="icon"></mat-icon>
+			<span class="stark-collapsible-title" translate>{{ titleLabel }}</span>
+		</mat-panel-title>
+	</mat-expansion-panel-header>
+
+	<ng-content></ng-content>
+</mat-expansion-panel>

@@ -1,0 +1,16 @@
+<div class="ui card page_catalog-list-item">
+    <div class="image page_catalog-list-item--image">
+        <img src="{{item.image}}">
+    </div>
+    <div class="content">
+        <a class="header page_catalog-list-item-header" (click)="preview(item._id)">{{item.brand}} {{item.title}}</a>
+        <div class="meta">
+            <span class="cinema page_catalog-list-item--price">{{item.price}} $, {{item.date | date}}</span>
+        </div>
+        <div class="description">{{item.description.slice(0, 115) + '...'}}</div>
+    </div>
+    <div class="extra content ui form">
+        <div class="ui label page_catalog-list-item--more" (click)="preview(item._id)">  <i class="fa fa-eye"></i>           View</div>
+        <div class="ui label page_catalog-list-item--add"  (click)="addToCart(item._id)"><i class="fa fa-shopping-cart"></i> Buy</div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<md-toolbar md-scroll-shrink layout="row" layout-align="start center" layout-padding>
+  <h2>
+    <a ui-sref="parties"><span class="md-title">Socially</span></a>
+  </h2>
+  <span flex></span>
+  <div class="navbar-right navbar-text">
+    <div [hidden]="user">
+      <button md-button [routerLink]="['/Login']" >Login</button>
+      <button md-button [routerLink]="['/Signup']">Sign up</button>
+    </div>
+    <div [hidden]="!user">
+      <span>{{ user | displayName }}</span>
+      <button md-button (click)="logout()">Logout</button>
+    </div>
+  </div>
+</md-toolbar>
+<router-outlet flex-gt-sm layout-gt-sm="row"></router-outlet>

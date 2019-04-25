@@ -1,0 +1,4 @@
+<div [ngClass]="{'horizontal': isHorizontal, 'vertical': !isHorizontal}">
+	<div [id]="sliderId" class="slider" [attr.disabled]="isDisabled ? '' : null"></div>
+	<!-- for the disabled attribute solution see: https://github.com/angular/angular/issues/13940 answer by Zec2703 -->
+</div>

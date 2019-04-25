@@ -1,0 +1,36 @@
+<div class="header">
+	<h1 mat-dialog-title translate>STARK.MULTI_COLUMN_SORTING.TITLE</h1>
+	<button mat-mini-fab mat-icon-button color="primary" (click)="onAdd()" [disabled]="isAddDisabled">
+		<mat-icon svgIcon="playlist-plus" [matTooltip]="'STARK.MULTI_COLUMN_SORTING.ADD_SORTING_LEVEL' | translate"></mat-icon>
+	</button>
+</div>
+<div mat-dialog-content>
+	<div class="rules">
+		<div *ngFor="let rule of rules; trackBy: trackRuleFn; first as isFirst">
+			<div class="rule" *ngIf="rule.sortDirection">
+				<span *ngIf="isFirst" translate>STARK.MULTI_COLUMN_SORTING.SORT_BY</span>
+				<span *ngIf="!isFirst" translate>STARK.MULTI_COLUMN_SORTING.THEN_BY</span>
+				<mat-form-field class="form-field-name">
+					<mat-select [value]="rule" (selectionChange)="onColumnChange(rule, $event.value)">
+						<ng-container *ngFor="let ruleOption of rules; trackBy: trackRuleFn">
+							<mat-option *ngIf="ruleOption==rule || !ruleOption.sortDirection" [value]="ruleOption">{{ ruleOption.column.name }}</mat-option>
+						</ng-container>
+					</mat-select>
+				</mat-form-field>
+				<mat-form-field class="form-field-order">
+					<mat-select [(ngModel)]="rule.sortDirection">
+						<mat-option value="asc">{{ 'STARK.SORTING.ASC' | translate }}</mat-option>
+						<mat-option value="desc">{{ 'STARK.SORTING.DESC' | translate }}</mat-option>
+					</mat-select>
+				</mat-form-field>
+				<button (click)="onDelete(rule)" mat-icon-button>
+					<mat-icon svgIcon="delete" [matTooltip]="'STARK.MULTI_COLUMN_SORTING.REMOVE_SORTING_LEVEL' | translate"></mat-icon>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div mat-dialog-actions>
+	<button mat-raised-button (click)="onCancel()">{{ 'STARK.MULTI_COLUMN_SORTING.CANCEL' | translate }}</button>
+	<button mat-raised-button color="primary" (click)="onSave()">{{ 'STARK.MULTI_COLUMN_SORTING.SAVE' | translate }}</button>
+</div>

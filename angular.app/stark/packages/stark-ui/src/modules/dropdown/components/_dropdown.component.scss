@@ -1,0 +1,39 @@
+/* ============================================================================== */
+/*  S t a r k   D r o p d o w n                                                   */
+/* ============================================================================== */
+/* stark-ui: src/modules/dropdown/components/dropdown/_dropdown.component.scss */
+.stark-dropdown {
+  mat-select {
+    margin: 0;
+  }
+
+  .mat-form-field {
+    width: 150px;
+  }
+
+  &.stark-full-width {
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+}
+
+@media #{$tablet-only-query} {
+  .stark-dropdown {
+    .mat-form-field {
+      width: 300px;
+    }
+  }
+}
+
+/* compact */
+
+@media #{$desktop-query} {
+  .stark-dropdown {
+    .mat-form-field {
+      width: 350px;
+    }
+  }
+}
+
+/* END stark-ui: src/modules/dropdown/components/dropdown/_dropdown.component.scss */

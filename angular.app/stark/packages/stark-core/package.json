@@ -1,0 +1,79 @@
+{
+  "name": "@nationalbankbelgium/stark-core",
+  "version": "0.0.0-PLACEHOLDER-VERSION",
+  "module": "./fesm5/stark-core.js",
+  "es2015": "./fesm2015/stark-core.js",
+  "esm5": "./esm5/stark-core.js",
+  "esm2015": "./esm2015/stark-core.js",
+  "fesm5": "./fesm5/stark-core.js",
+  "fesm2015": "./fesm2015/stark-core.js",
+  "main": "bundles/stark-core.umd.js",
+  "types": "stark-core.d.ts",
+  "description": "Stark - Core",
+  "author": "Stark Team",
+  "contributors": [
+    "PLACEHOLDER-CONTRIBUTORS"
+  ],
+  "license": "MIT",
+  "bugs": "https://github.com/nationalbankbelgium/stark/issues",
+  "homepage": "https://github.com/nationalbankbelgium/stark",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NationalBankBelgium/stark.git"
+  },
+  "engines": {
+    "node": ">=6.11.0",
+    "npm": ">=5.3.0"
+  },
+  "dependencies": {
+    "@angularclass/hmr": "2.1.3",
+    "@ng-idle/core": "6.0.0-beta.3",
+    "@ng-idle/keepalive": "6.0.0-beta.3",
+    "@ngrx/effects": "6.1.0",
+    "@ngrx/store": "6.1.0",
+    "@ngrx/store-devtools": "6.1.0",
+    "@ngx-translate/core": "10.0.2",
+    "@types/node": "8.10.15",
+    "@types/uuid": "3.4.4",
+    "@uirouter/angular": "2.0.2",
+    "cerialize": "0.1.18",
+    "class-validator": "0.7.3",
+    "deep-freeze-strict": "1.1.1",
+    "ibantools": "2.0.0",
+    "lodash": "4.17.11",
+    "moment": "2.22.2",
+    "uuid": "3.3.2"
+  },
+  "devDependencies": {
+    "@nationalbankbelgium/stark-testing": "../stark-testing"
+  },
+  "peerDependencies": {
+    "@angular/common": "6.x",
+    "@angular/compiler": "6.x",
+    "@angular/core": "6.x",
+    "@angular/router": "6.x",
+    "rxjs": "6.x",
+    "rxjs-compat": "6.x",
+    "tslib": "~1.9.1",
+    "typescript": ">=2.8.4 && <2.9.0",
+    "zone.js": "~0.8.26"
+  },
+  "scripts": {
+    "clean": "npx rimraf dist",
+    "clean:modules": "npx rimraf ./node_modules package-lock.json",
+    "clean:all": "npm run clean && npm run clean:modules",
+    "docs": "node ../../node_modules/@compodoc/compodoc/bin/index-cli src --theme material --tsconfig ../tsconfig.json --output ../../reports/api-docs/stark-core",
+    "docs:coverage": "npm run docs -- --coverageTest 85 --coverageTestThresholdFail true",
+    "docs:serve": "npm run docs -- --watch --serve --port 4321",
+    "ngc": "node ../../node_modules/@angular/compiler-cli/src/main.js -p ./tsconfig-build.json",
+    "lint": "npm run lint-ts && npm run lint-css",
+    "lint-ts": "node ../../node_modules/tslint/bin/tslint --config ./tslint.json --project ./tsconfig.spec.json --format codeFrame",
+    "lint-css": "node ../../node_modules/stylelint/bin/stylelint \"./(src|assets)/**/*.?(pc|sc|c|sa)ss\" --formatter \"string\"",
+    "test": "npm run lint && npm run test-fast",
+    "test:ci": "npm run lint && npm run test-fast:ci",
+    "test-fast": "node ./node_modules/@nationalbankbelgium/stark-testing/node_modules/karma/bin/karma start",
+    "test-fast:ci": "node ./node_modules/@nationalbankbelgium/stark-testing/node_modules/karma/bin/karma start karma.conf.ci.js",
+    "tsc": "node ../../node_modules/typescript/bin/tsc -p ./tsconfig-build.json",
+    "tslint": "node ../../node_modules/tslint/bin/tslint"
+  }
+}

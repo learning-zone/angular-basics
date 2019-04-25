@@ -1,0 +1,80 @@
+$icon-size: 18px;
+
+@mixin stark-button-color($color, $contrast) {
+  &.mat-button,
+  &.mat-icon-button,
+  &.mat-stroked-button {
+    color: $color;
+    .mat-button-focus-overlay {
+      background-color: rgba($color: $color, $alpha: 0.12);
+    }
+    .mat-ripple-element {
+      background-color: rgba($color: $color, $alpha: 0.1);
+    }
+  }
+  &.mat-flat-button,
+  &.mat-raised-button,
+  &.mat-fab,
+  &.mat-mini-fab {
+    color: $contrast;
+    background-color: $color;
+    .mat-ripple-element {
+      background-color: rgba($color: $contrast, $alpha: 0.1);
+    }
+  }
+  .mat-icon-button {
+    .mat-ripple-element {
+      background-color: rgba($color: $color, $alpha: 0.2);
+    }
+  }
+}
+
+.mat-success {
+  @include stark-button-color(mat-color($success-palette, 500), mat-contrast($success-palette, 500));
+}
+
+.mat-alert {
+  @include stark-button-color(mat-color($alert-palette, 500), mat-contrast($alert-palette, 500));
+}
+
+.mat-alt {
+  @include stark-button-color(mat-color($grey-palette, 900), mat-contrast($grey-palette, 900));
+}
+
+.mat-neutral {
+  @include stark-button-color(mat-color($grey-palette, 400), mat-contrast($grey-palette, 400));
+}
+
+.mat-white {
+  @include stark-button-color(#fff, $dark-primary-text);
+}
+
+.mat-icon.stark-small-icon {
+  line-height: $icon-size;
+  height: $icon-size;
+  width: $icon-size;
+  svg {
+    height: $icon-size;
+    width: $icon-size;
+  }
+}
+
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button,
+.mat-raised-button,
+.mat-fab,
+.mat-mini-fab {
+  text-transform: uppercase;
+}
+
+button {
+  &.mat-mini-fab,
+  &.mat-fab {
+    line-height: $icon-size;
+    .mat-button-wrapper {
+      line-height: $icon-size;
+    }
+  }
+}

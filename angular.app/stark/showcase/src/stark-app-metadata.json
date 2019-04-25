@@ -1,0 +1,9 @@
+{
+  "name": "Stark Showcase",
+  "description": "Stark Showcase application",
+  "version": "0.0.1",
+  "environment": "dummy env",
+  "buildTimestamp": "dummy buildTimestamp",
+  "deploymentTimestamp": "dummy deploymentTimestamp",
+  "supportedLanguages": ["en-US", "fr-BE", "nl-BE"]
+}

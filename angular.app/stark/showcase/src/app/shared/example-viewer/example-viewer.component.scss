@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.stark-card {
+  .example-source-wrapper {
+    margin-bottom: 16px;
+    margin-top: -16px;
+  }
+}
+
+@media (min-width: 600px) {
+  .stark-card {
+    .example-source-wrapper {
+      margin-top: -24px;
+    }
+  }
+}

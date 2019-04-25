@@ -1,0 +1,28 @@
+@mixin stark-dropdown-color($color) {
+  .mat-form-field-label {
+    color: rgba($color: $color, $alpha: 0.87);
+  }
+
+  // arrow color change
+  .mat-select-arrow,
+  .mat-form-field.mat-focused .mat-select-arrow {
+    color: rgba($color: $color, $alpha: 0.87);
+  }
+
+  // arrow color change
+  .mat-select-value {
+    color: rgba($color: $color, $alpha: 0.87);
+  }
+
+  // underline color change (normal and focus)
+  .mat-form-field-underline,
+  .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: rgba($color: $color, $alpha: 0.87);
+  }
+}
+
+.stark-dropdown {
+  &.stark-white {
+    @include stark-dropdown-color(mat-color($grey-palette, A100));
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "./node_modules/@nationalbankbelgium/stark-build/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "declaration": false,
+    "lib": ["dom", "dom.iterable", "es2017"],
+    "typeRoots": ["./node_modules/@types", "./node_modules/@nationalbankbelgium/stark-build/typings"],
+    "paths": {
+      "@angular/*": ["../node_modules/@angular/*"],
+      "@nationalbankbelgium/*": ["../node_modules/@nationalbankbelgium/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "src/assets"]
+}

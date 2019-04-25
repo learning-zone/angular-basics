@@ -1,0 +1,3 @@
+{
+	"extends": "./node_modules/@nationalbankbelgium/stark-build/config/stylelint.config.js"
+}

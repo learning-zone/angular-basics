@@ -1,0 +1,36 @@
+/* ============================================================================== */
+/*  S t a r k   A p p   L o g o                                                   */
+/* ============================================================================== */
+/* stark-ui: packages/stark-ui/src/modules/app-logo/components/app-logo.component.scss */
+
+.stark-app-logo a {
+  margin: 6px auto 0 auto;
+}
+
+@media screen and #{$tablet-query} {
+  .stark-app-logo {
+    & i {
+      display: block;
+      width: 60px;
+      height: 64px;
+      margin-top: 4px;
+      background-image: url(/assets/stark-ui/app-logo/angular.png); /* FIXME: add image for tablet */
+      background-size: 100% 100%;
+    }
+  }
+}
+
+@media screen and #{$desktop-query} {
+  .stark-app-logo {
+    & i {
+      display: block;
+      width: 60px;
+      height: 64px;
+      margin-top: 0;
+      background-image: url(/assets/stark-ui/app-logo/angular.png); /* FIXME: add image for desktop */
+      background-size: 100% 100%;
+    }
+  }
+}
+
+/* END stark-ui: packages/stark-ui/src/modules/app-logo/components/app-logo.component.scss */

@@ -1,0 +1,10 @@
+@import "~@angular/material/theming";
+@import "variables";
+
+/* Stark NG Material themes */
+@import "~@nationalbankbelgium/stark-ui/assets/themes/theming";
+@import "~@nationalbankbelgium/stark-ui/assets/themes/button-theme";
+@import "~@nationalbankbelgium/stark-ui/assets/themes/card-theme";
+@import "~@nationalbankbelgium/stark-ui/assets/themes/menu-theme";
+
+@import "../app/shared/example-viewer/example-viewer-theme";

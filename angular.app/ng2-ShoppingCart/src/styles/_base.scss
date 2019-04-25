@@ -1,0 +1,88 @@
+.btn-primary {
+    background-color: #585b6f;
+}
+
+.btn-success {
+    background-color:  #929abf;
+}
+
+.btn-danger {
+    background-color: #ce7a7d;
+}
+.text-align-center {
+  text-align: center;
+}
+.image-align-center {
+  display: block;
+  margin: 0 auto; 
+}
+//////////////////////////////////////////
+//////////////////////////////////////////
+//////////////////////////////////////////
+/*
+Create dynamic padding based on class name
+Example: padding-20, padding-40, padding-50, etc...
+*/
+@for $i from 1 through 100 {
+  .padding-#{$i} {
+    padding: $i * 1px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .padding-top-#{$i} {
+    padding-top: $i * 1px;
+  }
+}
+
+
+@for $i from 1 through 100 {
+  .padding-bottom-#{$i} {
+    padding-bottom: $i * 1px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .padding-right-#{$i} {
+    padding-right: $i * 1px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .padding-left-#{$i} {
+    padding-left: $i * 1px;
+  }
+}
+//////////////////////////////////////////
+//////////////////////////////////////////
+//////////////////////////////////////////
+@for $i from 1 through 100 {
+  .margin-#{$i} {
+    margin: $i * 1px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .margin-top-#{$i} {
+    margin-top: $i * 1px;
+  }
+}
+
+
+@for $i from 1 through 100 {
+  .margin-bottom-#{$i} {
+    margin-bottom: $i * 1px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .margin-right-#{$i} {
+    margin-right: $i * 1px;
+  }
+}
+
+@for $i from 1 through 100 {
+  .margin-left-#{$i} {
+    margin-left: $i * 1px;
+  }
+}

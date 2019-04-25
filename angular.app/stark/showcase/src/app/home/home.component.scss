@@ -1,0 +1,53 @@
+.mat-card {
+  .mat-card-content {
+    text-align: center;
+    width: 128px;
+    img {
+      height: 100px;
+    }
+  }
+}
+
+.documentation-links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  & a {
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  & img {
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    margin: 0 1em;
+    border: none;
+  }
+}
+
+.documentation-title {
+  text-align: center;
+}
+
+.img-stark-core-latest {
+  background-image: url("/assets/images/logo/logo-blue.svg");
+}
+
+.img-stark-core {
+  background-image: url("/assets/images/logo/core.png");
+}
+
+.img-stark-ui-latest {
+  background-image: url("/assets/images/logo/logo-blue.svg");
+}
+
+.img-stark-ui {
+  background-image: url("/assets/images/logo/logo-ui.png");
+}
+
+.img-stark-showcase {
+  background-image: url("/assets/images/logo/showcase.png");
+}

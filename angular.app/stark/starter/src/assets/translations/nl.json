@@ -1,0 +1,15 @@
+{
+  "STARTER": {
+    "ABOUT": {
+      "TITLE": "Over",
+      "TEXT": "Over de Stark Starter toepassing."
+    },
+    "HOME": {
+      "TITLE": "Stark Starter Toepassing"
+    },
+    "MENU": {
+      "HOME": "Start",
+      "ABOUT": "Over"
+    }
+  }
+}

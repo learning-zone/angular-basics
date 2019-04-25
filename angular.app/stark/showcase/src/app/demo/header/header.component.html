@@ -1,0 +1,20 @@
+<h1 class="mat-display-3" translate>SHOWCASE.DEMO.HEADER.TITLE</h1>
+<section class="stark-section">
+		<h1 translate>SHOWCASE.DEMO.HEADER.EXPLAINED</h1>
+		<p [innerHTML]="'SHOWCASE.DEMO.HEADER.STARK_APP_HEADER'|translate"></p>
+		<p [innerHTML]="'SHOWCASE.DEMO.HEADER.STARK_APP_BAR'|translate"></p>
+	
+		<ul>
+			<li [innerHTML]="'SHOWCASE.DEMO.HEADER.STARK_APP_BAR_CONTENT_LEFT'|translate"></li>
+			<li [innerHTML]="'SHOWCASE.DEMO.HEADER.STARK_APP_BAR_CONTENT_CENTER'|translate"></li>
+			<li [innerHTML]="'SHOWCASE.DEMO.HEADER.STARK_APP_BAR_CONTENT_RIGHT'|translate"></li>
+			<li [innerHTML]="'SHOWCASE.DEMO.HEADER.STARK_APP_BAR_PAGE_TITLE'|translate"></li>
+		</ul>
+	</section>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.HEADER.INTEGRATION</h1>
+	<p translate>SHOWCASE.DEMO.HEADER.INTEGRATION_DETAILS</p>
+	<stark-pretty-print [data]="importSCSS" format="css" [enableHighlighting]="true"></stark-pretty-print>
+	<p translate>SHOWCASE.DEMO.HEADER.COPY_PASTE</p>
+	<stark-pretty-print [data]="headerHtml" format="html" [enableHighlighting]="true"></stark-pretty-print>
+</section>

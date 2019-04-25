@@ -1,0 +1,38 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+  <md-whiteframe layout="column" flex flex-md="80" flex-lg-dis="66" flex-gt-lg="40" class="md-whiteframe-z2" layout-fill>
+    <md-toolbar class="md-primary md-tall" layout="column" layout-align="end" layout-fill>
+      <div layout="row" class="md-toolbar-tools md-toolbar-tools-bottom">
+        <h3 class="md-display-1"> Edit Profile </h3>
+      </div>
+    </md-toolbar>
+    <div layout="column" layout-fill layout-margin layout-padding>
+      <form [ngFormModel]="thisForm" #f="ngForm" (submit)="submit(f.value)" layout="column" layout-fill layout-padding layout-margin>
+          <md-input-container>
+
+              <md-input placeholder="First Name *" ngControl="firstName" [(ngModel)]="u.profile.firstName" ></md-input>
+
+              <md-input placeholder="Last Name" ngControl="lastName" [(ngModel)]="u.profile.lastName"></md-input>
+
+
+              <md-input placeholder="Address Line 1" ngControl="address1" [(ngModel)]="u.profile.address1"></md-input>
+
+              <md-input placeholder="Address Line 2" ngControl="address2" [(ngModel)]="u.profile.address2"></md-input>
+
+              <md-input placeholder="City" ngControl="city" [(ngModel)]="u.profile.city"></md-input>
+
+
+              <md-input placeholder="Country" ngControl="country" [(ngModel)]="u.profile.country"></md-input>
+              <md-input placeholder="Mobile" ngControl="mobile" [(ngModel)]="u.profile.mobile"></md-input>
+              <md-input placeholder="Phone" ngControl="phone" [(ngModel)]="u.profile.phone"></md-input>
+
+
+          </md-input-container>
+
+        <div layout="row" layout-align="space-between center">
+          <button md-raised-button color="primary" type="submit" aria-label="submit">Submit
+          </button>
+        </div>
+      </form>      
+    </div>           
+  </md-whiteframe>
+</md-content>

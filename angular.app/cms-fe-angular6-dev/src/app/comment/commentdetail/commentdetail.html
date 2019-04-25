@@ -1,0 +1,118 @@
+
+<h4>评论详情</h4>
+<form nz-form class="mgt20" #form="ngForm">
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">请求ip</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="ip" [ngModel]="mainModel.ip" nzPlaceHolder="请求ip"/>
+        </nz-form-control>
+
+        <nz-form-label nzSpan="3">文章标题</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="article" [ngModel]="mainModel.article.title" nzPlaceHolder="文章标题"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">评论内容</nz-form-label>
+        <nz-form-control nzSpan="19">
+          <textarea nz-input name="content" [ngModel]="mainModel.content" nzPlaceHolder="评论内容" rows="4"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">文章摘要</nz-form-label>
+        <nz-form-control nzSpan="19">
+          <textarea nz-input name="abstract" [ngModel]="mainModel.article.abstract" nzPlaceHolder="文章摘要" rows="4"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">客户端类型</nz-form-label>
+        <nz-form-control nzSpan="19">
+          <textarea nz-input name="client" [ngModel]="mainModel.client" nzPlaceHolder="客户端类型" rows="4"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <!-- <div nz-form-item nz-row >
+    <div nz-form-label nz-col [nzSpan]="3">
+      <label nz-form-item-required>评论内容</label>
+    </div>
+    <div nz-form-control nz-col [nzSpan]="19">
+      <nz-input name="content" [ngModel]="mainModel.content" [nzRows]="4" [nzType]="'textarea'"></nz-input>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row >
+    <div nz-form-label nz-col [nzSpan]="3">
+      <label nz-form-item-required>文章摘要</label>
+    </div>
+    <div nz-form-control nz-col [nzSpan]="19">
+      <nz-input name="abstract" [ngModel]="mainModel.article.abstract" [nzRows]="4" [nzType]="'textarea'"></nz-input>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row >
+    <div nz-form-label nz-col [nzSpan]="3">
+      <label nz-form-item-required>客户端类型</label>
+    </div>
+    <div nz-form-control nz-col [nzSpan]="19">
+      <nz-input name="client" [ngModel]="mainModel.client" [nzRows]="4" [nzType]="'textarea'"></nz-input>
+    </div>
+  </div> -->
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">创建时间</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="created_at" [ngModel]="mainModel.created_at" nzPlaceHolder="创建时间"/>
+        </nz-form-control>
+
+        <nz-form-label nzSpan="3">创建者</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="username" [ngModel]="mainModel.creator?mainModel.creator.username:''" nzPlaceHolder="创建者"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+<!--   <div nz-form-item nz-row >
+    <div nz-form-label nz-col [nzSpan]="3">
+      <label nz-form-item-required>创建时间</label>
+    </div>
+    <div nz-form-control nz-col [nzSpan]="8">
+      <nz-input name="created_at" [ngModel]="mainModel.created_at" [nzSize]="'large'"></nz-input>
+    </div>
+    <div nz-form-label nz-col [nzSpan]="3">
+      <label nz-form-item-required>创建者</label>
+    </div>
+    <div nz-form-control nz-col [nzSpan]="8">
+      <nz-input [ngModel]="mainModel.creator?mainModel.creator.username:''" maxSize="100" name="username" [nzSize]="'large'"></nz-input>
+    </div>
+  </div> -->
+
+  <div nz-form-item nz-row>
+    <div nz-form-control nz-col nzSpan="20" nzOffset="3">
+      <button nz-button nzType="default" (click)="back()">返回</button>
+    </div>
+  </div>
+
+</form>

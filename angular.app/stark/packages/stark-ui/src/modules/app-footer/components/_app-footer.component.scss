@@ -1,0 +1,28 @@
+/* ============================================================================== */
+/*  S t a r k   A p p   F o o t e r                                               */
+/* ============================================================================== */
+/* stark-ui: src/modules/app-footer/components/_app-footer.component.scss */
+stark-app-footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.stark-app-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1.1;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: $stark-footer-size;
+  a {
+    display: inline-block;
+  }
+  .bullet {
+    margin: 0 4px 0 4px;
+  }
+}
+
+/* end stark-ui: src/modules/app-footer/components/_app-footer.component.scss */

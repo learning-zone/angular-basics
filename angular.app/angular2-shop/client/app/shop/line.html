@@ -1,0 +1,21 @@
+<md-list-item class="">
+    <div class="md-list-item-text" layout="column">
+
+        <a router-active [routerLink]="['PList',{'shopid': item._id }]"> 
+        {{ item.title }} 
+        </a>
+
+    </div>
+</md-list-item>
+<md-list-item class="">
+    <div class="md-list-item-text" layout="column">
+
+        <a router-active [routerLink]="['PList',{'shopid': item._id }]">
+            Distance - 2.5 Miles {{item.cuisine}}
+        </a>
+
+    </div>
+</md-list-item>
+
+
+<md-divider></md-divider>

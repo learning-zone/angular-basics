@@ -1,0 +1,5 @@
+/**
+ * @license Stark v0.0.0-PLACEHOLDER-VERSION
+ * (c) 2018 National Bank of Belgium SA. https://www.nbb.be/
+ * License: MIT
+ */

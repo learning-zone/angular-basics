@@ -1,0 +1,16 @@
+<stark-date-range-picker 
+    [dateFilter]="customDateFilter" 
+    rangePickerId="id-range-picker" 
+    rangePickerName="name-range-picker"
+    [endDate]="endDate"
+    endDateLabel="To" 
+    [endMinDate]="minDate" 
+    [endMaxDate]="maxDate" 
+    [isDisabled]="isDisabled"
+    [startDate]="startDate" 
+    startDateLabel="From" 
+    [startMinDate]="minDate"
+    [startMaxDate]="maxDate" 
+    (dateRangeChanged)="onDateChanged($event)"> 
+</stark-date-range-picker>
+<mat-checkbox [(ngModel)]="isDisabled">isDisabled</mat-checkbox>

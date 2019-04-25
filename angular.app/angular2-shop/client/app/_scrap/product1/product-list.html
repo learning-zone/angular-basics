@@ -1,0 +1,38 @@
+<div *ngFor="let product of products" (click)="selected.emit(product)"
+  class="product-card">
+  <div>
+    <h2>{{product.title}}</h2>
+  </div>
+  <ul class="list-inline">
+    <li *ngFor="let tag of product.tags">
+      <span class="label label-warning">
+        #{{tag.name}}
+      </span>
+    </li>
+  </ul>
+  <div>
+    <rating [interactive]="false" [rate]="product.rating"></rating>
+    {{product.rating}}
+  </div>
+  <div>
+    {{product.creator}}
+  </div>
+  <div>
+    {{product.description}}
+  </div>
+  <ul>
+    <li *ngFor="let ingredient of product.ingredients">
+      {{ ingredient.amount }} {{ ingredient.unit}} {{ ingredient.name }}
+    </li>
+  </ul>
+  <ol>
+    <li *ngFor="let direction of product.directions">
+      {{ direction.step }}
+    </li>
+  </ol>
+  <div>
+    <button (click)="deleted.emit(product); $event.stopPropagation();">
+      <i>close</i>
+    </button>
+  </div>
+</div>

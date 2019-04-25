@@ -1,0 +1,47 @@
+107.170.162.133: 3000
+
+
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 3011
+
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
+
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 3000
+
+sudo apt-get install iptables-persistent
+sudo /etc/init.d/iptables-persistent save 
+
+lets encrypt
+--git
+
+sudo apt-get -y install bc
+
+sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
+
+
+cd /opt/letsencrypt
+
+./letsencrypt-auto certonly --standalone
+
+
+# add required global libraries
+$ npm install -g typings webpack webpack-dev-server concurrently
+
+# install the repo with npm
+# required only if you declined automated dependency installation
+# during installation
+$ npm install
+
+# build code
+$ npm run build
+
+net4 113.30.140.28
+dg http://107.170.162.133/
+107.170.162.133
+
+service nginx reload 
+/etc/init.d/nginx reload
+
+
+
+ ./letsencrypt-auto certonly -a webroot --webroot-path=/usr/share/nginx/html -d foodrings.in -d www.foodrings.in
+ 

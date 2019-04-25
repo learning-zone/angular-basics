@@ -1,0 +1,15 @@
+{
+  "STARTER": {
+    "ABOUT": {
+      "TITLE": "About",
+      "TEXT": "About the Stark Starter application."
+    },
+    "HOME": {
+      "TITLE": "Stark Starter Application"
+    },
+    "MENU": {
+      "HOME": "Home",
+      "ABOUT": "About"
+    }
+  }
+}

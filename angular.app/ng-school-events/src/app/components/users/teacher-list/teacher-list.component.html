@@ -1,0 +1,32 @@
+<table class="table table-hover table-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" i18n>Email</th>
+      <th scope="col" i18n>Full Name</th>
+      <th scope="col" i18n>Gender</th>
+      <th scope="col" i18n>Verified</th>
+      <th scope="col" i18n>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teacher of teachers">
+      <td>{{teacher.email}}</td>
+      <td>{{teacher.teachers ? teacher.teachers.firstName : ''}} {{teacher.teachers ? teacher.teachers.lastName : ''}}</td>
+      <td>{{teacher.teachers ? teacher.teachers.gender : ''}}</td>
+      <td>{{teacher.emailVerified ? 'Si' : 'No'}}</td>
+      <td>
+        <a class="btn btn-outline-info btn-space" href="teacher-management/{{teacher.teachers?.id}}" *ngIf="teacher.emailVerified">
+          <span class="fa fa-info-circle" aria-hidden="true"></span>
+          <span class="small" i18n>  More details</span>
+        </a>
+        <button type="button" class="btn btn-outline-danger btn-space">
+          <span class="fa fa-trash" aria-hidden="true"></span>
+          <span class="small" i18n>  Delete</span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <app-pagination [pages]="pages" [currentPage]="currentPage" baseUrl="teacher-management" [rangePages]="rangePages"></app-pagination>
+  </tfoot>
+</table>

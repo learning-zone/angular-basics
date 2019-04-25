@@ -1,0 +1,30 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+  <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="md-whiteframe-z2" layout-fill>
+    <md-toolbar class="md-primary md-tall" layout="column" layout-align="end" layout-fill>
+      <div layout="row" class="md-toolbar-tools md-toolbar-tools-bottom">
+        <h3 class="md-display-1"> Recover Your Password</h3>
+      </div>
+    </md-toolbar>
+    <div layout="column" layout-fill layout-margin layout-padding>
+      <form [ngFormModel]="recoverForm" #f="ngForm" (submit)="recover(f.value)" layout="column" layout-fill layout-padding layout-margin>
+        <md-input-container>
+          <label> Email </label>
+          <input md-input type="text" ngControl="email" aria-label="email" />
+        </md-input-container>
+        <div layout="row" layout-align="space-between center">
+          <button md-button class="md-raised md-primary" type="submit" aria-label="login">Recover
+          </button>
+        </div>
+      </form>
+      <div [hidden]="error == ''">
+        <md-toolbar class="md-warn" layout="row" layout-fill layout-padding layout-margin>
+          <p class="md-body-1">{{ error }}</p>
+        </md-toolbar>
+      </div>
+      <md-divider></md-divider>
+      <div layout="row" layout-align="center">
+        <button md-button [routerLink]="['/Login']">Remember your password?</button>
+      </div>
+    </div>
+  </md-whiteframe>
+</md-content>

@@ -1,0 +1,24 @@
+<mat-card class="stark-card">
+	<mat-card-header>
+		<mat-card-title>
+			<h3 translate>{{ exampleTitle }}</h3>
+		</mat-card-title>
+		<button color="white" mat-icon-button (click)="toggleSourceView()" matTooltip="View source">
+			<mat-icon svgIcon="code-tags"></mat-icon>
+		</button>
+	</mat-card-header>
+	<mat-card-content>
+		<div class="example-source-wrapper stark-full-width" *ngIf="showSource">
+				<mat-tab-group>
+				<mat-tab *ngFor="let file of exampleFiles; trackBy: trackExampleFile" [label]="file.extension">
+					<div>
+						<stark-pretty-print [data]="file.data"
+											[format]="file.format"
+											[enableHighlighting]="true"></stark-pretty-print>
+					</div>
+				</mat-tab>
+				</mat-tab-group>
+		</div>
+		<ng-content></ng-content>
+	</mat-card-content>
+</mat-card>

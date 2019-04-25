@@ -1,0 +1,27 @@
+@import '~scss/variables';
+
+.carousel {
+
+    .item {
+      width: 100%;
+      background-color: $silver;
+      img {
+        position: absolute;
+        top: 0;
+        right: 25%;
+        min-width: 80%;
+        height:inherit;
+      }  
+    }
+    
+    .carousel-caption {
+      z-index: 10;
+      p {
+        @media (min-width: 768px) {    
+          margin-bottom: 20px;
+          font-size: 21px;
+          line-height: 1.4;   
+        }
+      }
+    }
+}

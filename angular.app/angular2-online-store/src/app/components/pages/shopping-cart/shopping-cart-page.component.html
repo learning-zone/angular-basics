@@ -1,0 +1,14 @@
+<div class="page_cart">
+    <h1 class="page_cart-title">Shopping cart</h1>
+
+    <div class="page_cart--items ui divided items">
+        <shopping-cart-item class="item page_cart--item"
+                            *ngFor="let item of items$ | async"
+                            [item]="item"
+                            (quantityChange)="changeQuantity($event)"
+                            (remove)="removeFromCart($event)"></shopping-cart-item>
+    </div>
+</div>
+<div class="page_cart-total">
+    <button class="button ui"><i class="fa fa-credit-card-alt"></i> Purchase:  {{total$ | async | currency:'USD'}} total</button>
+</div>

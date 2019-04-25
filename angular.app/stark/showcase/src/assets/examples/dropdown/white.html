@@ -1,0 +1,13 @@
+<stark-dropdown
+		class="stark-full-width"
+		color="white"
+		dropdownId="serviceWhiteDropdown"
+		[options]="serviceDropdownOptions"
+		[value]="selectedServiceWhiteDropdown"
+		placeholder="SHOWCASE.DEMO.DROPDOWNS.SELECT_SERVICE"
+		optionIdProperty="id"
+		optionLabelProperty="value"
+		(dropdownSelectionChanged)="whiteDropdownOnChange($event)"
+		required>
+</stark-dropdown>
+<div class="result-display" *ngIf="selectedServiceWhiteDropdown"> {{ 'SHOWCASE.DEMO.DROPDOWNS.SELECTED_VALUE' | translate }}: {{ selectedServiceWhiteDropdown }}</div>

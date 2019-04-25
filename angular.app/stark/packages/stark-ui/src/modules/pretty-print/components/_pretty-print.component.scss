@@ -1,0 +1,23 @@
+/* ============================================================================== */
+/*  S t a r k   P r e t t y   P r i n t                                           */
+/* ============================================================================== */
+/* stark-ui: src/modules/pretty-print/components/_pretty-print.component.scss */
+
+.stark-pretty-print {
+  pre,
+  pre[class*="language-"] > code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  // Typography fix
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: mat-font-family($typography-config);
+    font-size: mat-font-size($typography-config, body-1);
+    font-weight: mat-font-weight($typography-config, body-1);
+    line-height: mat-line-height($typography-config, body-1);
+  }
+}
+
+/* end stark: src/modules/pretty-print/components/_pretty-print.component.scss */

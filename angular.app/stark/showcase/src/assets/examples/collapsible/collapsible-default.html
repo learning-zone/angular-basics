@@ -1,0 +1,8 @@
+<stark-collapsible
+		htmlId="firstCollapsible"
+		titleLabel="SHOWCASE.DEMO.COLLAPSIBLE.TITLE_0"
+		[(isExpanded)]="collapsed"
+>
+	{{ 'SHOWCASE.DEMO.COLLAPSIBLE.HTML_CONTENT' | translate }}
+</stark-collapsible>
+<button color="primary" class="collapsible-demo-button" (click)="toggleCollapsible()" mat-raised-button>{{ 'SHOWCASE.DEMO.COLLAPSIBLE.TOGGLE_COLLAPSIBLE' | translate }}</button>

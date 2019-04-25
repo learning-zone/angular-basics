@@ -1,0 +1,153 @@
+@import '~scss/variables';
+
+// footer start
+
+  #footer {
+    background: $black;
+    padding: 0 0 30px 0;
+    color: $lightGrey;
+    font-size: 14px;
+    bottom: 0;
+  
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+    }
+  
+    .credits {
+      text-align: center;
+      font-size: 13px;
+      color: #ddd;
+    }
+  }
+  
+  %commonBeforeAfterForH4 {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+  }
+  
+  #footer .footer-top {
+    background: $darkGrey;
+    padding: 30px 0 30px 0;
+    
+    h4 {
+      font-size: 14px;
+      font-weight: bold;
+      color: $white;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 12px;
+  
+      &:after {
+        @extend %commonBeforeAfterForH4;
+        background: $lightRed;
+        width: 60px;
+      }
+  
+      &:before {
+        @extend %commonBeforeAfterForH4;
+        right: 0;
+        background: $dimGrey;  
+      }
+    }
+  }
+  
+  #footer .footer-top .footer-info {
+    margin-bottom: 30px;
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 0;
+      font-family: "Montserrat", sans-serif;
+      color: $lightGrey;
+    }
+  }
+  
+  #footer .footer-top .social-links {
+    a {
+      font-size: 18px;
+      display: inline-block;
+      background: #333;
+      color: $lightGrey;
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      border-radius: 50%;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+      &:hover {
+        background: $lightRed;
+        color: $white;
+      }
+    }
+  }
+  
+  #footer .footer-top .footer-links {
+    margin-bottom: 30px;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        border-bottom: 1px solid $darkGrey;
+        padding: 10px 0;
+        i {
+          padding-right: 8px;
+          color: $white;
+        }
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+  
+      a {
+        color: $lightGrey;
+        &:hover {
+          color: $lightRed;
+        }
+      }
+  
+    }
+  }  
+  
+  #footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+    p {
+      line-height: 26px;
+    }
+  }
+  
+  #footer .footer-top .footer-newsletter {
+    margin-bottom: 30px;
+    input {
+      
+      &[type="email"] {
+        border: 0;
+        padding: 6px 8px;
+        width: 65%;
+      }
+  
+      &[type="submit"] {
+        background: $lightRed;
+        border: 0;
+        width: 35%;
+        padding: 6px 0;
+        text-align: center;
+        color: $white;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background: #13a456;
+        }
+      }
+      
+    }
+  }
+  
+  // footer end 

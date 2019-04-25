@@ -1,0 +1,72 @@
+<md-content flex layout="row" class="ma-parties-list">
+  <div layout="row" flex>
+    <div flex="50">
+      <div>
+        <md-content class="new-party-form-container">
+          <md-toolbar>
+            <div class="md-toolbar-tools">
+              <h3>Create a new party!</h3>
+            </div>
+          </md-toolbar>
+          <parties-form [hidden]="!user"></parties-form>
+          <div [hidden]="user">You need to login to create new parties!</div>
+        </md-content>
+        <div layout-padding layout="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Search</label>
+            <input type="text" md-input #searchtext placeholder="Search by Location">
+          </md-input-container>
+          Sort by name: <select class="form-control" #sort (change)="changeSortOrder(sort.value)">
+            <option value="1" selected>Ascending</option>
+            <option value="-1">Descending</option>
+          </select>
+        </div>
+      </div>
+      <md-content class="md-padding" style="padding-top:0;">
+        <pagination-controls (change)="onPageChanged($event.page)"></pagination-controls>
+        <div *ngFor="let party of parties | paginate:{currentPage: 1, itemsPerPage: pageSize, totalItems: partiesSize}" class="ma-party">
+          <md-card>
+            <md-card-content>
+              <h2 class="md-title ma-name" style=""><a [routerLink]="['/PartyDetails', {partyId: party._id}]">{{party.name}}</a></h2>
+              <p class="ma-description" style="padding:0 10px;margin-bottom:35px;margin-top: 6px;">{{party.description}}</p>
+              <div layout="row">
+                <div layout="row" layout-align="end end">
+                  <div>
+                    <div class="rsvps-sum">
+                      <div class="rsvps-amount">{{party | rsvp:'yes'}}</div>
+                      <div class="rsvps-title">Yes</div>
+                    </div>
+                    <div class="rsvps-sum">
+                      <div class="rsvps-amount">{{party | rsvp:'maybe'}}</div>
+                      <div class="rsvps-title">Maybe</div>
+                    </div>
+                    <div class="rsvps-sum">
+                      <div class="rsvps-amount">{{party | rsvp:'no'}}</div>
+                      <div class="rsvps-title">No</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </md-card-content>
+          </md-card>
+        </div>
+      </md-content>
+    </div>
+    <div flex="50" layout="row" style="min-height:300px;">
+      <sebm-google-map
+              style="width: 100%; min-height:300px;"
+              flex layout="row"
+              [latitude]="0"
+              [longitude]="0"
+              [zoom]="1">
+        <div *ngFor="let party of parties">
+          <sebm-google-map-marker
+                  *ngIf="party.location.lat"
+                  [latitude]="party.location.lat"
+                  [longitude]="party.location.lng">
+          </sebm-google-map-marker>
+        </div>
+      </sebm-google-map>
+    </div>
+  </div>
+</md-content>

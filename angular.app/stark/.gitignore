@@ -1,0 +1,73 @@
+# Build
+dist/
+.awcache/
+dist/
+.tmp/
+/.tmp/
+tmp/
+
+# Reports directory
+reports/
+
+# Logs
+logs/
+*.log
+
+# Sec
+stark-ssh
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Bak
+*.bak
+
+# Node
+node_modules/
+npm-debug.log
+/npm-debug.log.*
+
+# OS generated files #
+Desktop.ini
+Thumbs.db
+.DS_Store
+ehthumbs.db
+Icon?
+
+# JetBrains IDEs
+*.iml
+.idea/
+.webstorm/
+*.swp
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Sublime text
+.sublime-gulp.cache
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Patch files
+*.patch
+
+# Bash
+bash.exe.stackdump
+
+# Angular #
+*.ngfactory.ts
+*.css.shim.ts
+*.ngsummary.json
+*.shim.ngstyle.ts

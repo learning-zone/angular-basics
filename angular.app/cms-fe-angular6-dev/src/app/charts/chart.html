@@ -1,0 +1,48 @@
+
+<h4>图表</h4>
+<form nz-form style="margin-top: 20px;">
+  <nz-form-item nz-row >
+    <div nz-col nzSm="24">
+      <div class="chart-wrap">
+        <div class="chart-content" #systemLog></div>
+      </div>
+    </div>
+    <div nz-col nzSm="24" class="text-center">
+      系统日志每日统计数据
+    </div>
+  </nz-form-item>
+
+  <nz-form-item nz-row >
+    <div nz-col nzSm="24">
+      <div class="chart-wrap">
+        <div class="chart-content" #systemLogDate></div>
+      </div>
+    </div>
+    <div nz-col nzSm="20" class="text-center">
+      系统日志分时统计
+    </div>
+    <div nz-col nzSm="4">
+      <nz-date-picker name="date" [(ngModel)]="date" nzPlaceHolder="选择日期" [nzDisabled]="disable" [nzDisabledDate]="disabledDate" (ngModelChange)="changedDate()"></nz-date-picker>
+    </div>
+  </nz-form-item>
+
+  <nz-form-item nz-row [nzGutter]="20">
+    <div nz-col nzSm="12">
+      <div class="chart-wrap" style="height: 400px;">
+        <div class="chart-content" #articleType></div>
+      </div>
+      <div class="text-center">
+        文章分类统计
+      </div>
+    </div>
+    <div nz-col nzSm="12">
+      <div class="chart-wrap" style="height: 400px;">
+        <div class="chart-content" #tag></div>
+      </div>
+      <div class="text-center">
+        标签分类统计
+      </div>
+    </div>
+  </nz-form-item>
+
+</form>

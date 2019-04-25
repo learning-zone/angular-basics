@@ -1,0 +1,36 @@
+<h4>编辑文章标签</h4>
+<form nz-form #form="ngForm">
+  <div nz-row class="markdown">
+    <blockquote><p>基本信息</p></blockquote>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="12">
+      <nz-form-item>
+        <nz-form-label nzSpan="6">名称</nz-form-label>
+        <nz-form-control nzSpan="18" [nzValidateStatus]="name.control">
+          <input nz-input name="name" placeholder="名称" [(ngModel)]="editTag.name" #name="ngModel"/>
+          <div nz-form-explain *ngIf="name.dirty&&name.invalid">必须填写!</div>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="12">
+      <nz-form-item>
+        <nz-form-label nzSpan="6">备注</nz-form-label>
+        <nz-form-control nzSpan="18" [nzValidateStatus]="remark.control">
+          <textarea nz-input name="remark" placeholder="备注" [(ngModel)]="editTag.remark" #remark="ngModel" rows="4"></textarea>
+          <div nz-form-explain *ngIf="remark.dirty&&remark.invalid">必须填写!</div>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row>
+    <div nz-form-control nz-col nzSpan="20" nzOffset="4">
+      <button nz-button nzType="primary" (click)="save()" [nzLoading]="isConfirmLoading">保存</button>
+      <button nz-button nzType="default" (click)="back()">取消</button>
+    </div>
+  </div>
+
+</form>

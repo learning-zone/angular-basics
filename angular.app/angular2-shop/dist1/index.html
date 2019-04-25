@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+  <title>Angual2 E-Commerce</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= webpackConfig.metadata.title %>">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="manifest" href="/assets/manifest.json">
+  <!-- end favicon -->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <!-- base url -->
+  <base href="/">
+
+</head>
+
+<body>
+
+  <app></app>
+  <!-- -- % if (webpackConfig.metadata.ENV === 'development') { %-->
+  <!-- Webpack Dev Server reload -->
+  <script srcs="/webpack-dev-server.js"></script>
+  <!-- % } %-->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANkWBvMkNeB6PUZwOksOOWOQylvrYidj0&libraries=places"></script>
+
+    <script>
+
+
+    </script>
+
+	  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  
+<script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+
+
+</html>

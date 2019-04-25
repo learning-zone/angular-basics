@@ -1,0 +1,18 @@
+<h1 class="mat-display-3" translate>SHOWCASE.DEMO.DATE_PICKER.TITLE</h1>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.SHARED.EXAMPLE_VIEWER_LIST</h1>
+	<example-viewer [extensions]="['HTML', 'TS']" filesPath="date-picker/weekends" exampleTitle="SHOWCASE.DEMO.DATE_PICKER.ONLY_WEEKENDS">
+		<stark-date-picker pickerId="picker-only-weekends" pickerName="only-weekends" [date]="currentDate" [dateFilter]="'OnlyWeekends'"
+		 label="SHOWCASE.DEMO.DATE_PICKER.PLACEHOLDER" [minDate]="minDate" [maxDate]="maxDate" (dateChanged)="onDateChanged($event)"></stark-date-picker>
+	</example-viewer>
+
+	<example-viewer [extensions]="['HTML', 'TS']" filesPath="date-picker/weekdays" exampleTitle="SHOWCASE.DEMO.DATE_PICKER.ONLY_WEEKDAYS">
+		<stark-date-picker pickerId="picker-only-weekdays" pickerName="only-weekdays" [date]="currentDate" [dateFilter]="'OnlyWeekdays'"
+		 label="SHOWCASE.DEMO.DATE_PICKER.PLACEHOLDER" [minDate]="minDate" [maxDate]="maxDate" (dateChanged)="onDateChanged($event)"></stark-date-picker>
+	</example-viewer>
+
+	<example-viewer [extensions]="['HTML', 'TS']" filesPath="date-picker/custom-filter" exampleTitle="SHOWCASE.DEMO.DATE_PICKER.CUSTOM_FILTER">
+		<stark-date-picker pickerId="picker-custom-filter" pickerName="custom-filter" [date]="currentDate" [dateFilter]="customDateFilter"
+		 label="SHOWCASE.DEMO.DATE_PICKER.PLACEHOLDER" [minDate]="minDate" [maxDate]="maxDate" (dateChanged)="onDateChanged($event)"></stark-date-picker>
+	</example-viewer>
+</section>

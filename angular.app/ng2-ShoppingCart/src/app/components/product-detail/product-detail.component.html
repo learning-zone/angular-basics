@@ -1,0 +1,20 @@
+<div *ngIf="selectedProduct">
+    
+    <div class="col-md-6 well">
+            <span class="badge">{{selectedProduct.id}}</span> <strong>{{selectedProduct.name}}</strong>
+            <p>{{selectedProduct.info}}</p>
+            <div style="display: flex">
+                <span class="padding-right-5">Quantity: </span>
+                <input type="number" [(ngModel)]="quantity">
+            </div>
+            <h1 class="badge">${{selectedProduct.price}}</h1>
+            <button (click)="addToCart(selectedProduct)" class="btn btn-md btn-primary">Add to Cart</button>
+            <hr />
+            <button (click)="goBack()" class="btn btn-danger">Back</button>
+    </div>
+
+    <div class="col-md-4 thumbnail margin-left-50">
+        <img width="250" height="250" src={{selectedProduct.src}} />
+    </div>
+
+</div>

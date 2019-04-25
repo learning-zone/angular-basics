@@ -1,0 +1,21 @@
+<form [ngFormModel]="partiesForm" #f="ngForm" (submit)="addParty(f.value)" class="form-inline">
+  <fieldset class="form-group">
+    <label for="partyName">Party name</label>
+    <input id="partyName" class="form-control" type="text" ngControl="name" placeholder="Party name" />
+
+    <label for="description">Description</label>
+    <input id="description" class="form-control" type="text" ngControl="description" placeholder="Description">
+
+    <label for="location_name">Location</label>
+    <input id="location_name" class="form-control" type="text" ngControl="location" placeholder="Location name">
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ngControl="public">
+        Public
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Party!</button>
+  </fieldset>
+</form>

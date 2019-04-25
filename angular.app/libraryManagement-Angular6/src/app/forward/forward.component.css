@@ -1,0 +1,110 @@
+.widget {
+    border-top: 2px solid rgba(255, 255, 255, .5);
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    
+  }
+  .center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 95% !important;
+  }
+  .blur {
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(10px);
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    
+  }  
+  .bg {
+    background-color: #AE1AF7;
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0.5;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    
+  }  
+  .container{
+    width: 82%;  
+    align:center;
+    margin-left: 80px !important;
+
+}
+  .bg1 {
+    margin-left: 10%;
+    margin-top: 7.5%;
+    height: 350px;
+    width: 490px;
+    background-size: 100% 100% ;
+    background-size: cover;
+    overflow: hidden;    
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    border-radius: 20px; 
+    float: left;   
+  }  
+  .divRight {
+    margin-left: 55%;
+    margin-top: 7.5%;
+    height: 350px;
+    width: 590px;
+    background-size: 100% 100% ;
+    background-size: cover;
+    overflow: hidden;    
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    border-radius: 20px;   
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 35px;
+    
+}
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    line-height: 10px;
+    color: white;
+}
+.button{
+    background: white;
+    display:inline-block;
+    height: 60px;
+    width: 220px;  
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: 90;
+    color: #680F94;
+    border-style: solid;
+    cursor: pointer;
+    border-color: #680F94 !important;
+}
+.button:hover{
+    background: #680F94;
+    color: white;
+    border-style: solid;
+    border-color: white !important;
+}

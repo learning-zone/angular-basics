@@ -1,0 +1,75 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark indigo">
+
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">ikismail</a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="javascript:;;" [routerLink]="[ '/' ]">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="jaascript:;;" [routerLink]="[ '/products/all-products' ]">Our Products</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li> -->
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <div>
+          <a class="nav-link" href="javascript:;;" [routerLink]="['/products/favourite-products']">
+            <i class="fa fa-heart">
+              <span class="mt-2"> {{productService.navbarFavProdCount}}</span>
+            </i>
+          </a>
+        </div>
+
+      </li>
+      <li class="nav-item">
+        <div>
+          <a class="nav-link" href="javascript:;;" [routerLink]="['/products/cart-items']">
+            <i class="fa fa-shopping-cart">
+              <span class="mt-2"> {{productService.navbarCartCount}}</span>
+            </i>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="javascript:;;">
+          <i class="fa fa-envelope"></i> Contact
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item" *ngIf="authService.isLoggedIn()">
+        <a class="nav-link" [routerLink]="['/users']">
+          <i class="fa fa-user"></i> My Account</a>
+      </li>
+      <li class="nav-item" *ngIf="!authService.isLoggedIn()">
+        <a class="nav-link" [routerLink]="[ '/index/login' ]">
+          <i class="fa fa-sign-in"></i> Signin / Signup</a>
+      </li>
+      <li class="nav-item" *ngIf="authService.isLoggedIn()">
+        <a class="nav-link" (click)="logout()">
+          <i class="fa fa-sign-in"></i>Logout</a>
+      </li>
+    </ul>
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->

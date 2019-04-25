@@ -1,0 +1,62 @@
+@function mat-typography-level-create($list) {
+  @return mat-typography-level(nth($list, 1), nth($list, 2), nth($list, 3));
+}
+
+@if variable-exists(stark-typography-theme) {
+  $typography-theme: map-merge($typography-theme, $stark-typography-theme);
+}
+
+//TO DO: Document correspondance with html tags
+$typography-config: mat-typography-config(
+  $font-family: map-get($typography-theme, font-family),
+  $display-4: mat-typography-level-create(map-get($typography-theme, display-4)),
+  $display-3: mat-typography-level-create(map-get($typography-theme, display-3)),
+  $display-2: mat-typography-level-create(map-get($typography-theme, display-2)),
+  $display-1: mat-typography-level-create(map-get($typography-theme, display-1)),
+  $headline: mat-typography-level-create(map-get($typography-theme, headline)),
+  $title: mat-typography-level-create(map-get($typography-theme, title)),
+  $subheading-2: mat-typography-level-create(map-get($typography-theme, subheading-2)),
+  $subheading-1: mat-typography-level-create(map-get($typography-theme, subheading-1)),
+  $body-2: mat-typography-level-create(map-get($typography-theme, body-2)),
+  $body-1: mat-typography-level-create(map-get($typography-theme, body-1)),
+  $caption: mat-typography-level-create(map-get($typography-theme, caption)),
+  $button: mat-typography-level-create(map-get($typography-theme, button)),
+  $input: mat-typography-level-create(map-get($typography-theme, input))
+);
+
+@include mat-core($typography-config);
+
+body {
+  font-family: mat-font-family($typography-config);
+  font-size: mat-font-size($typography-config, body-1);
+  font-weight: mat-font-weight($typography-config, body-1);
+  line-height: mat-line-height($typography-config, body-1);
+}
+
+h1 {
+  font-size: mat-font-size($typography-config, headline);
+  font-weight: mat-font-weight($typography-config, headline);
+  line-height: mat-line-height($typography-config, headline);
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: mat-font-size($typography-config, title);
+  font-weight: mat-font-weight($typography-config, title);
+  line-height: mat-line-height($typography-config, title);
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: mat-font-size($typography-config, subheading-2);
+  font-weight: mat-font-weight($typography-config, subheading-2);
+  line-height: mat-line-height($typography-config, subheading-2);
+  margin: 0 0 16px;
+}
+
+h4 {
+  font-size: mat-font-size($typography-config, subheading-1);
+  font-weight: mat-font-weight($typography-config, subheading-1);
+  line-height: mat-line-height($typography-config, subheading-1);
+  margin: 0 0 16px;
+}

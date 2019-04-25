@@ -1,0 +1,10 @@
+{
+  "ENV" : "development",
+  "PORT" : 3000,
+  "MONGO_URI" : {
+    "DEVELOPMENT" : "mongodb://localhost:27017/ng2shop-dev-new",
+    "PRODUCTION" : "mongodb://localhost:27017/ng2shopa-prod",
+    "TEST" : "mongodb://localhost:27017/ng2shop-test"
+  },
+  "SESSION_SECRET" : "dsdsdsddsdsdsdsdsdsdsdsdsdsd"
+}

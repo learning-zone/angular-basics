@@ -1,0 +1,53 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+    <md-whiteframe-1 layout="column" flex flex-md-dis="50" flex-lg-dis="50" flex-gt-lg="66" class="md-whiteframe-z2-dis" layout-fill>
+        <md-toolbar class="md-primary md-tall" layout="column" layout-align="end" layout-fill>
+            <div layout="row" class="md-toolbar-tools md-toolbar-tools-bottom">
+                <h3 class="md-display-1"> Add/Edit Shop </h3>
+            </div>
+        </md-toolbar>
+        
+        
+        <div layout="column" layout-fill layout-margin layout-padding>
+            
+            <map-autocomplete style="height:250px" 
+                              [latitude]="u.latitude"
+                                 [longitude]="u.longitude" zoom="zoom" mapClick="mapClicked($event)"
+
+                              >
+                            
+            </map-autocomplete>
+            
+            <form [ngFormModel]="myForm" #f="ngForm" (submit)="submit(f.value)" layout="column" layout-fill layout-padding layout-margin>
+                <md-input-container>
+                    <md-input placeholder="Shop Name" ngControl="title"  aria-label="title">
+                    </md-input>
+                    
+                    <md-input placeholder="Cuisine" ngControl="cuisine" aria-label="cuisine">
+
+                    </md-input>
+                    <md-input style="width:400px" placeholder="Description" ngControl="description" aria-label="description">
+
+                    </md-input>
+                    <md-input style="width:400px"  placeholder="Address" ngControl="address" [(ngModel)]="u.map_address" aria-label="address">
+
+                    </md-input>
+
+                    <md-switch style="margin:5px;width:200px;display:inline-block" [(checked)]="isVeg">Veg </md-switch>
+
+                    <md-switch style="margin:2px;width:200px;display:inline-block" [(checked)]="isDelivery">Delivery</md-switch>
+                    <md-switch style="margin:2px;width:200px;display:inline-block" [(checked)]="isPickup">Pickup </md-switch>
+                </md-input-container>
+            
+
+                
+                <div layout="row" layout-align="space-between center">
+                    <button md-raised-button color="primary" type="submit" aria-label="login">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </md-whiteframe-1>
+</md-content>
+
+{{u.latitude}}+

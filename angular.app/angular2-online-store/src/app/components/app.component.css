@@ -1,0 +1,52 @@
+/*reset styles*/
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #333;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    margin: 0;
+}
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.flex-container{
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-end{
+    align-content: flex-end;
+}
+.flex-justify-space-around{
+    justify-content: space-around;
+}
+.flex-direction-column{
+    flex-direction: column;
+}
+.flex-grid-1{
+    flex-basis: 16.6%;
+}
+.flex-grid-2{
+    flex-basis: 33.3%;
+}
+.flex-grid-3{
+    flex-basis: 50%;
+}
+.flex-grid-4{
+    flex-basis: 66.6%;
+}
+.flex-grid-5{
+    flex-basis: 83.3%;
+}
+.flex-grid-6{
+    flex-basis: 100%;
+}

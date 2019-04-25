@@ -1,0 +1,38 @@
+
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+    <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="md-whiteframe-z2" layout-fill>
+        <md-toolbar class="md-primary md-tall" layout="column" layout-align="end" layout-fill>
+            <div layout="row">
+                <h3 class="md-display-1"> My Shop List </h3>
+            </div>   
+            <button md-button router-active [routerLink]="['ShopAdd']">
+                Add New Shop
+            </button>
+         
+        </md-toolbar>
+        <md-list>
+            <md-subheader class="md-no-sticky"></md-subheader>
+            <div class="" *ngFor="let item of shops; let index = index">
+            
+                    <div class="md-list-item-text" layout="column">
+                    <p>
+                        <a router-active [routerLink]="['ProductList',{shopid: item._id}]"> {{ item.title }}</a>
+                        
+                        <br/>
+                        <a router-active [routerLink]="['ProductList',{shopid: item._id}] "> Manage</a>
+                        <a router-active [routerLink]="['ProductAdd',{shopid: item._id}]"> Add Product</a>
+
+                    </p>
+
+
+                </div>
+                <md-divider></md-divider>
+            </div>
+
+
+            
+
+        </md-list>
+    </md-whiteframe>
+</md-content>
+

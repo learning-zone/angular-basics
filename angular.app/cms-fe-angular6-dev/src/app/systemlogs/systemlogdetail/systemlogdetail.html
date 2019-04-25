@@ -1,0 +1,125 @@
+
+<h4>系统日志详情</h4>
+<form nz-form style="margin-top: 20px;" #form="ngForm">
+  
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">请求URL</nz-form-label>
+        <nz-form-control nzSpan="19">
+          <input nz-input name="request_url" [ngModel]="mainModel.request_url" nzPlaceHolder="请求URL"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">请求ip</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="request_ip" [ngModel]="mainModel.request_ip" nzPlaceHolder="请求ip"/>
+        </nz-form-control>
+
+        <nz-form-label nzSpan="3">请求方法</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="request_method" [ngModel]="mainModel.request_method" nzPlaceHolder="请求方法"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">请求参数</nz-form-label>
+        
+        <nz-form-control nzSpan="19">
+          <textarea nz-input name="request_params" [ngModel]="mainModel.request_params" nzPlaceHolder="请求参数" rows="6"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">客户端类型</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="client_type" [ngModel]="mainModel.client_type" nzPlaceHolder="客户端类型"/>
+        </nz-form-control>
+
+        <nz-form-label nzSpan="3">客户端版本</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="client_version" [ngModel]="mainModel.client_version" nzPlaceHolder="客户端版本"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">HOST</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="host" [ngModel]="mainModel.host" nzPlaceHolder="HOST"/>
+        </nz-form-control>
+
+        <nz-form-label nzSpan="3">Hostname</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="hostname" [ngModel]="mainModel.hostname" nzPlaceHolder="Hostname"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">处理时间</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="time" [ngModel]="mainModel.time" nzPlaceHolder="处理时间"/>
+        </nz-form-control>
+
+        <nz-form-label nzSpan="3">消息Message</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="msg" [ngModel]="mainModel.msg" nzPlaceHolder="消息Message"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">请求头</nz-form-label>
+        <nz-form-control nzSpan="19">
+          <textarea nz-input name="request_header" [ngModel]="mainModel.request_header" nzPlaceHolder="请求头" rows="8"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="3">创建时间</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="created_at" [ngModel]="mainModel.created_at" nzPlaceHolder="创建时间"/>
+        </nz-form-control>
+
+        <nz-form-label nzSpan="3">创建者</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <input nz-input name="nick_name" [ngModel]="mainModel.creator?mainModel.creator.nick_name:'未知者'" nzPlaceHolder="创建者"/>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row>
+    <div nz-form-control nz-col [nzSpan]="20" [nzOffset]="3">
+      <button nz-button nzType="default" (click)="back()">返回</button>
+    </div>
+  </div>
+
+</form>

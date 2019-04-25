@@ -1,0 +1,55 @@
+/* ============================================================================== */
+/*  S t a r k   A c t i o n   B a r   -   T h e m e                               */
+/* ============================================================================== */
+/* stark-ui: src/modules/action-bar/components/_action-bar-theme.scss */
+
+@media #{$tablet-query} {
+  .stark-action-bar {
+    .action-label {
+      &.primary {
+        color: mat-color(map-get($base-theme, primary-palette));
+      }
+      &.warn {
+        color: mat-color(map-get($base-theme, warn-palette));
+      }
+      &.accent {
+        color: mat-color($accent-palette, 500);
+      }
+      &.success {
+        color: mat-color($success-palette, 500);
+      }
+      &.alert {
+        color: mat-color($alert-palette, 500);
+      }
+      &.alt {
+        color: mat-color($grey-palette, 900);
+      }
+      &.neutral {
+        color: mat-color($grey-palette, 400);
+      }
+      &.white {
+        color: #fff;
+      }
+      &.disabled {
+        color: map-get($mat-light-theme-foreground, disabled-text);
+      }
+    }
+  }
+}
+
+@media #{$mobile-only-query} {
+  .stark-action-bar-full {
+    background-color: rgba(0, 0, 0, 0.85);
+    .mat-icon-button {
+      @include stark-button-color(rgba($color: #fff, $alpha: 0.8), $light-primary-text);
+    }
+    .action-label {
+      color: rgba(255, 255, 255, 0.8);
+      &.disabled {
+        color: rgba($color: #fff, $alpha: 0.25);
+      }
+    }
+  }
+}
+
+/* END stark-ui: src/modules/action-bar/components/_action-bar-theme.scss */

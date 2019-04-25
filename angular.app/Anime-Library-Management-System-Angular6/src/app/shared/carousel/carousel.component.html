@@ -1,0 +1,17 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel" [style.height.px]="sliderHeight">                    
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>                   
+    <div class="carousel-inner" role="listbox">
+        <div class="item" *ngFor="let imageObject of sliderImages; let i = index;" [ngClass]="{'active' : i == 0}" [style.height.px]="sliderHeight">
+            <img [src]="imageObject.image" alt="Attack On Titan" width="1200" height="700">
+            <div class="carousel-caption">
+                <h3>{{ imageObject.name | uppercase }}</h3>
+                <p>{{ imageObject.description }}</p>
+            </div> 
+        </div>
+    </div>
+</div>

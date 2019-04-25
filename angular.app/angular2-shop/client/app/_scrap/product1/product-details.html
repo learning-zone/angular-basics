@@ -1,0 +1,83 @@
+<div class="product-card">
+  <div>
+    <h2 *ngIf="selectedProduct._id">Editing {{originalTitle}}</h2>
+    <h2 *ngIf="!selectedProduct._id">Create New Product</h2>
+  </div>
+  <div>
+    <form novalidate>
+        <div>
+          <label>Product Title</label>
+          <input [(ngModel)]="selectedProduct.title"
+            placeholder="Enter a title" type="text">
+        </div>
+        <div>
+          <label>Tags</label>
+          <button (click)="newTag()">
+              Add new tag
+          </button>
+          <div *ngFor="let tag of selectedProduct.tags">
+            <input [(ngModel)]="tag.name" placeholder="Enter a tag"
+            type="text">
+            <button (click)="deleteTag(tag)">
+              X
+            </button>
+          </div>
+        </div>
+        <div>
+          <label>Description</label>
+          <input [(ngModel)]="selectedProduct.description"
+            placeholder="Enter a description" type="text">
+        </div>
+        <div>
+          <label>Rating</label>
+          <rating [interactive]="true" [rate]="selectedProduct.rating"
+            (updateRate)="onUpdate($event)"></rating>
+          <input [(ngModel)]="selectedProduct.rating"
+            placeholder="Enter a rating" type="text">
+        </div>
+        <div>
+          <label>Creator</label>
+          <input [(ngModel)]="selectedProduct.creator"
+            placeholder="Enter a username" type="text">
+        </div>
+        <div>
+          <label>Ingredients</label>
+          <button (click)="newIngredient()">
+              Add an Ingredient <i class="glyphicon glyphicon-plus"></i>
+          </button>
+          <div *ngFor="let ingredient of selectedProduct.ingredients">
+            <input [(ngModel)]="ingredient.amount"
+              placeholder="Amount?" type="text">
+            <input [(ngModel)]="ingredient.unit"
+              placeholder="Units?" type="text">
+            <input [(ngModel)]="ingredient.name"
+              placeholder="Name?" type="text">
+            <i (click)="deleteIngredient(ingredient)"
+              class="glyphicon glyphicon-remove">
+            </i>
+          </div>
+        </div>
+        <div>
+          <label>Directions</label>
+          <button (click)="newDirection()">
+              Add a Step in the Process
+          </button>
+          <div *ngFor="let direction of selectedProduct.directions">
+            <input [(ngModel)]="direction.step"
+              placeholder="Enter a step" type="text">
+            <button (click)="deleteDirection(step)">
+              X
+            </button>
+          </div>
+        </div>
+    </form>
+  </div>
+  <div>
+      <button type="submit" (click)="cancelled.emit(selectedProduct)">
+        Cancel
+      </button>
+      <button type="submit" (click)="saved.emit(selectedProduct)">
+        Save
+      </button>
+  </div>
+</div>

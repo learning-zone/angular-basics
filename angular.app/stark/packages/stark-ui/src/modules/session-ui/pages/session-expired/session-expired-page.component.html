@@ -1,0 +1,13 @@
+<div class="stark-session-ui-page" role="alertdialog" aria-busy="true" aria-live="assertive">
+	<header><i></i></header>
+	<content>
+		<h2 translate>STARK.SESSION_EXPIRED.TITLE</h2>
+
+		<p class="md-body-1" translate>STARK.SESSION_EXPIRED.MESSAGE</p>
+
+		<button color="primary" mat-button mat-raised-button
+				(click)="reload()"
+				[attr.aria-label]="'STARK.SESSION_EXPIRED.RELOAD' | translate"><span translate>STARK.SESSION_EXPIRED.RELOAD</span>
+		</button>
+	</content>
+</div>

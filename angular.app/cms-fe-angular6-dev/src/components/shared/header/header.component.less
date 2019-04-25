@@ -1,0 +1,53 @@
+.logo{
+  display: inline-block;
+  margin: 15px;
+  width:34px;
+  height:34px;
+  background: url('../../../assets/images/logo.svg') no-repeat center center;
+  background-size: cover;
+  animation: rotate 6s linear 0s infinite normal running;
+  transform-origin: center center;
+  /*transition: all 0.3s;*/
+
+  &:hover{
+    animation-play-state: paused;
+  }
+}
+.sys-name{
+  font-size: 16px;
+  color: #fff;
+  margin: 28px 0 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.user-info{
+  float: right;
+  margin: 20px 20px 0 0;
+}
+
+@keyframes rotate{
+  from{
+    transform: rotateZ(0deg)
+  }
+  to{
+    transform: rotateZ(360deg)
+  }
+}
+
+.bar-right{
+  display: flex;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-items: center;
+  padding-right: 10px;
+}
+.bar-right .lang{
+  margin-right: 10px;
+}
+.bar-right .anticon{
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}

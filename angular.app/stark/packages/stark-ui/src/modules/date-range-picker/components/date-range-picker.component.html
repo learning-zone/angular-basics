@@ -1,0 +1,24 @@
+<stark-date-picker
+	#startPicker
+	[pickerId]="rangePickerId+'-start'"
+	[pickerName]="rangePickerName+'-start'"
+	[date]="startDate"
+	[dateFilter]="dateFilter"
+	[isDisabled]="isDisabled"
+	[label]="startDateLabel"
+	[minDate]="startMinDate"
+	[maxDate]="startMaxDate"
+	(dateChanged)="onDateStartChanged($event)">
+</stark-date-picker>
+<stark-date-picker
+	#endPicker
+	[pickerId]="rangePickerId+'-end'"
+	[pickerName]="rangePickerName+'-end'"
+	[date]="endDate"
+	[dateFilter]="dateFilter"
+	[isDisabled]="isDisabled"
+	[label]="endDateLabel"
+	[minDate]="endMinDate"
+	[maxDate]="endMaxDate"
+	(dateChanged)="onDateEndChanged($event)">
+</stark-date-picker>	

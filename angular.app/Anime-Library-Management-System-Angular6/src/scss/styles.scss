@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~scss/variables';
+@import "~bootstrap/scss/bootstrap-grid.scss";
+// @import "~bootstrap/dist/css/bootstrap.min.css";
+$fa-font-path: "~font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
+
+// simple css
+
+.darkGreyBackGround {
+  background-color: $darkGrey !important;
+}
+
+.paddingZero {
+  padding: 0px !important;
+}
+
+.marginBottomZero {
+  margin-bottom: 0px;
+}
+
+.borderRadiusZero {
+  border-radius: 0px !important;
+}
+
+.displayBlock {
+  display: block !important;
+}
+
+.inheritHeightWidth {
+  width: inherit;
+  height: inherit;
+}
+
+.posRelative {
+  position: relative;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+// applied css
+
+
+// main section below
+
+main {
+  margin-top: 50px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  @include make-row();
+  margin: 0px !important;
+}
+
+.content {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+.listSection {
+  width:100%; 
+  height:600px; 
+  text-align: center;
+}
+
+.headerDecorator {
+  margin: 0 auto; 
+  margin-top: 520px; 
+  border: solid black 1px; 
+  height: 40px; 
+  background-color: black; 
+  color: white;
+}
+
+// animation css
+  
+.tp-box {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  margin: 3rem auto;
+}
+  
+.tp-box__side {
+  width: 100%;
+  height: 95%;
+  color: $white;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+// animation css end

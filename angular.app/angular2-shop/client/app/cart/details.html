@@ -1,0 +1,48 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+    <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="md-whiteframe-z2" layout-fill>
+        <md-toolbar>
+            <div layout="row" class="md-toolbar-tools md-toolbar-tools-bottom">
+                <h3 class="md-display-1">
+                    
+                    Order : {{item.title}} 
+                </h3>
+                
+
+            </div>
+        </md-toolbar>
+
+        <div  layout="column" layout-fill layout-margin layout-padding>
+            <form [ngFormModel]="myForm" #f="ngForm" (submit)="submit(f.value)" layout="column" layout-fill layout-padding layout-margin>
+                <div layout="row" layout-align="space-between center">
+                      @ {{item.rate}} (INR) 
+                </div>
+
+                <div layout="row" layout-align="space-between center">                    
+                    Also known as Paneer Makhani is a vegetarian dish. The dish combines paneer (Indian cottage cheese) in a butter sauce.
+                </div>
+                
+                <div layout="row" layout-align="space-between center">
+                    <img src="https://source.unsplash.com/category/food/600x300/?pizza" />
+                </div>
+    
+
+                <md-input-container>
+                    <md-input placeholder="Quantity" ngControl="quantity" aria-label="quantity">
+                        {{quantity}}
+                    </md-input>
+
+                </md-input-container>
+                
+                
+                <div layout="row" layout-align="space-between center">
+                    <button md-raised-button color="primary" type="submit" aria-label="Search">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </md-whiteframe>
+</md-content>
+

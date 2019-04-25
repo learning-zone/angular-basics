@@ -1,0 +1,1207 @@
+  
+    <div class="top-header" style="position: fixed; z-index: 99; left: 0px; top: 0px; width: 100%;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-xs-5 col-md-2">
+          <a href="/"><img src="https://static.teabox.com/static/Teabox_LogoW.svg" class="img-responsive"></a>
+        </div>
+        <div class="nav-ctn">
+          
+          <ul class="nav nav-for-desktop">
+              <li class="tb-nav-shop" data-class="shop" style="width:70px;">
+                <a href="#">Shop</a>
+                <span class="arrow arrow-white"></span>
+              </li>
+              <li style="width:118px;">
+                <a href="/subscription">Subscription</a>
+              </li>
+              <li style="width:108px;">
+                <a href="/blends/iced-teas/"><span class="iced-promtn-menu-icon"></span>Iced teas</a>
+              </li>
+              <li style="width: 100px;">
+                <a href="/wholesale">wholesale</a>
+              </li>
+              <li>
+                <a href="/blog">blog</a>
+              </li>
+            </ul>
+          
+        </div>
+          
+            <div class="quick-access right">
+              <ul class="nav">
+                <li id="tb-search">
+                  <form method="get" action="/search" class="hidden icon-child ng-pristine ng-valid">
+                    <div class="search-form">
+                      <input class="form-control input-search bj" id="search-input" name="q" placeholder="Search by region, name, SKU" tabindex="1" type="search" autocomplete="off" data-store-id="8" required="">
+                    <input type="submit" value="" class="btn btn-search" onclick="if(!$('#search-input').val()){$('#tb-search').click();return false;}">
+                  
+                </div></form></li>
+                <li id="tb-login" class="not-logged">
+                
+<div class="login-wrap hidden icon-child">
+  
+  <script type="text/javascript">
+  function testing (data) {
+      if(data.status){
+        if(data.redirect_url){
+          location.href = data.redirect_url;
+        }else{
+          
+            location.href =  "";
+          
+        }
+      }else{
+        $(".tb-error").remove();
+        var $elm = '<div class="tb-error"><span class="error-flag"></span><span class="error-mssg">'+gettext(data.errors)+'</span></div>';
+        $(".login-wrapper").before($elm);
+        setTimeout(function(){
+          $(".tb-error").remove();
+        },20000);
+      }
+  }
+</script>
+  <div id="login-iframe">
+        
+    
+    <div class="container login-wrapper"> 
+<div class="login-form-ctn">
+                    <div class="login-no-forgot">
+                      <div class="buttons-set">
+                        <span id="fbspan">
+                          <a class="fb-login-btn" href="/login/facebook/?next=/">LOGIN WITH FACEBOOK</a>
+                        </span>
+                        <span id="fbspan">
+                        <a style="" href="/login/google-oauth2/?next=/" class="prim-cta-3 google-login-btn">LOGIN WITH GOOGLE</a>
+                        </span>
+                      </div>
+                      <div class="seperator">
+                        <span class="bar left"> </span>
+                        <span class="or">OR</span>
+                        <span class="bar right"></span>
+                      </div>
+                      <div class="login-form">
+                        <form action="/login" method="post" id="login-form" class="ng-pristine ng-valid">
+                          <input type="hidden" name="csrfmiddlewaretoken" value="cK0GrBFBm4HNK6fUT9T5WqibkEnF4NJW">
+                          
+                          <div>
+                            <dl>
+                              <dd>
+                              <label for="inputEmail" class="sr-only"></label>
+                              <input type="email" name="username" value="" class="form-control" placeholder="Email address" required="" autofocus="">
+                              <span class="error-username in-error-msg hidden">Please enter a Valid Email ID</span>
+                              </dd>
+                            </dl>
+                            <dl>
+                              <dd>
+                                <label for="inputPassword" class="sr-only"></label>
+                                <input type="password" name="password" value="" class="form-control" placeholder="Password" required="">
+                                <span class="error-password in-error-msg hidden">This is a required field</span>
+                              </dd>
+                            </dl>                           
+                            <dl class="a-center">
+                              <button type="submit" name="submit" class="prim-cta-3" onclick="submitForm(event, this, testing);">
+                              LOGIN
+                              </button>
+                            </dl>
+                            <dl>
+                              <dd>
+                                <span>
+                                  <a class="forgot-pass" href="javascript:void(0);">Forgot password?</a>
+                                </span>
+                              </dd>
+                            </dl>
+                            <dl class="clearfix a-center">
+                              <span>New to Teabox? <a href="javascript:void(0);" class="enableRegDiv">Sign Up Now!</a>
+                          <a href="/signup" class="enableRegDiv-page">SIGN UP</a></span>
+                            </dl>
+                          </div>
+                        </form>            
+                      </div>
+                      </div>
+                      <!-- forget pass start -->
+                      <div class="login-forgot">
+                        <div class="">
+                          <h2>FORGOT PASSWORD?</h2>
+                        </div>
+                        <form action="/reset_password" method="post" id="forgot-password-form" name="forgot-password-name" class="ng-pristine ng-valid">
+                          <div>
+                           <input type="hidden" name="csrfmiddlewaretoken" value="cK0GrBFBm4HNK6fUT9T5WqibkEnF4NJW">
+                            <dl><span class="reset-mail">Enter your email address below and receive a link to reset your password.</span></dl>
+                            <dl>
+                              <dd>
+                                <input type="text" name="email" alt="email" id="email_address" class="input-text" value="" placeholder="Email">
+                                <span class="error-email in-error-msg hidden">This is a required field</span>
+                              </dd>
+                            </dl>
+                            <dl class="">
+                              <button type="submit" class="prim-cta-3" onclick="submitForm(event, this, testing);">SUBMIT</button>
+                            </dl>
+                          </div>
+                          <input type="hidden" name="src" value="">
+                          <input type="hidden" name="dst" value="">
+                          <input type="hidden" name="refurl" value="http://www.teabox.com">
+                        </form>
+                         <!-- forget pass end -->
+                        <div class="new-to-tbox">
+                          <span>New to Teabox?' </span>
+                          <a href="javascript:void(0);" class="enableRegDiv">SIGN UP</a>
+                          <a href="/signup" class="enableRegDiv-page">SIGN UP</a>
+                          <br>
+                          <a href="javascript:void(0);" class="enableLoginDiv">LOGIN</a>
+                        </div>
+                      </div>
+
+
+</div></div>
+  </div>
+  <div id="signup-iframe">
+    
+    
+    <div class="container login-wrapper">  
+<div class="signup-form-ctn">
+ 
+    <div class="buttons-set">
+                        <span id="fbspan">
+                          <a class="fb-login-btn" href="/login/facebook/?next=/">LOGIN WITH FACEBOOK</a>
+                        </span>
+                        <a style="" href="/login/google-oauth2/" class="prim-cta-3 google-login-btn">LOGIN WITH GOOGLE</a>
+                      </div>
+                      <div class="seperator">
+                        <span class="bar left"> </span>
+                        <span class="or">OR</span>
+                        <span class="bar right"></span>
+                      </div> 
+                        <form action="/signup" method="post" id="signup-form" class="ng-pristine ng-valid">      
+                          <input type="hidden" name="csrfmiddlewaretoken" value="cK0GrBFBm4HNK6fUT9T5WqibkEnF4NJW">
+                          
+                          <div>
+                            <dl>
+                                <dd>
+                                  <input type="text" id="" name="name" class="input-text" placeholder="Name" required="">
+                                  <span class="error-name in-error-msg hidden">This is a required field</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                              <dd>
+                                <input type="email" id="" name="username" class="input-text required-entry validate-email validation-passed" placeholder="Email">
+                                <span class="error-username in-error-msg hidden">This is a required field</span>
+                              </dd>
+                            </dl>
+                            <dl>
+                              <dd>
+                                <input class="input-text" type="password" id="" name="password" placeholder="Password" required="">
+                                <span class="error-password in-error-msg hidden">This is a required field</span>
+                              </dd>
+                            </dl>                           
+                            <dl class="a-center">
+                              <button type="submit" name="submit" class="prim-cta-3" onclick="submitForm(event, this, testing);">
+                              SIGNUP
+                              </button>
+                            </dl>
+                            <dl class="clearfix a-center">
+                              <span>Already a member? <a href="javascript:void(0);" class="enableLoginDiv">LOGIN</a>
+                              <a href="/login" class="enableLoginDiv-page">LOGIN</a></span>
+                            </dl>
+                          </div>
+                        </form>            
+                      </div>
+</div>
+
+  </div>
+  
+
+  <span class="icon-drop-carat"></span>
+</div>
+                </li>
+                <li id="tb-cart">
+                   
+                
+<div class="tb-cart-wrap icon-child hidden">
+	<span class="icon-drop-carat"></span>
+    
+    <ul class="cart-prods-wrap">
+        <li style="margin-bottom:0px;">
+                You have no items in your shopping cart.            
+        </li>
+    </ul>
+        
+</div>
+                </li>
+                <li id="tb-location">
+                
+<div class="tb-location-wrap form-group hidden icon-child">
+<span class="icon-drop-carat"></span>
+    <div class="tb-select-country tb-select-wrap">
+	   <!-- <span class="tb-select-box"><input class="tb-select-val"></input><span class="arrow-black"></span></span>-->
+	    <select id="tb-select-country" class="tb-select-ul select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+	      
+	    <option value="AF" title="Afghanistan">Afghanistan</option><option value="AX" title="Aland Islands">Aland Islands</option><option value="AL" title="Albania">Albania</option><option value="DZ" title="Algeria">Algeria</option><option value="AS" title="American Samoa">American Samoa</option><option value="AD" title="Andorra">Andorra</option><option value="AO" title="Angola">Angola</option><option value="AI" title="Anguilla">Anguilla</option><option value="AQ" title="Antarctica">Antarctica</option><option value="AG" title="Antigua and Barbuda">Antigua and Barbuda</option><option value="AR" title="Argentina">Argentina</option><option value="AM" title="Armenia">Armenia</option><option value="AW" title="Aruba">Aruba</option><option value="AU" title="Australia">Australia</option><option value="AT" title="Austria">Austria</option><option value="AZ" title="Azerbaijan">Azerbaijan</option><option value="BS" title="Bahamas">Bahamas</option><option value="BH" title="Bahrain">Bahrain</option><option value="BD" title="Bangladesh">Bangladesh</option><option value="BB" title="Barbados">Barbados</option><option value="BY" title="Belarus">Belarus</option><option value="BE" title="Belgium">Belgium</option><option value="BZ" title="Belize">Belize</option><option value="BJ" title="Benin">Benin</option><option value="BM" title="Bermuda">Bermuda</option><option value="BT" title="Bhutan">Bhutan</option><option value="BO" title="Bolivia">Bolivia</option><option value="BQ" title="Bonaire, Saint Eustatius and Saba">Bonaire, Saint Eustatius and Saba</option><option value="BA" title="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="BW" title="Botswana">Botswana</option><option value="BV" title="Bouvet Island">Bouvet Island</option><option value="BR" title="Brazil">Brazil</option><option value="IO" title="British Indian Ocean Territory">British Indian Ocean Territory</option><option value="VG" title="British Virgin Islands">British Virgin Islands</option><option value="BN" title="Brunei">Brunei</option><option value="BG" title="Bulgaria">Bulgaria</option><option value="BF" title="Burkina Faso">Burkina Faso</option><option value="BI" title="Burundi">Burundi</option><option value="KH" title="Cambodia">Cambodia</option><option value="CM" title="Cameroon">Cameroon</option><option value="CA" title="Canada">Canada</option><option value="CV" title="Cape Verde">Cape Verde</option><option value="KY" title="Cayman Islands">Cayman Islands</option><option value="CF" title="Central African Republic">Central African Republic</option><option value="TD" title="Chad">Chad</option><option value="CL" title="Chile">Chile</option><option value="CN" title="China">China</option><option value="CX" title="Christmas Island">Christmas Island</option><option value="CC" title="Cocos Islands">Cocos Islands</option><option value="CO" title="Colombia">Colombia</option><option value="KM" title="Comoros">Comoros</option><option value="CK" title="Cook Islands">Cook Islands</option><option value="CR" title="Costa Rica">Costa Rica</option><option value="HR" title="Croatia">Croatia</option><option value="CU" title="Cuba">Cuba</option><option value="CW" title="Curacao">Curacao</option><option value="CY" title="Cyprus">Cyprus</option><option value="CZ" title="Czech Republic">Czech Republic</option><option value="CD" title="Democratic Republic of the Congo">Democratic Republic of the Congo</option><option value="DK" title="Denmark">Denmark</option><option value="DJ" title="Djibouti">Djibouti</option><option value="DM" title="Dominica">Dominica</option><option value="DO" title="Dominican Republic">Dominican Republic</option><option value="TL" title="East Timor">East Timor</option><option value="EC" title="Ecuador">Ecuador</option><option value="EG" title="Egypt">Egypt</option><option value="SV" title="El Salvador">El Salvador</option><option value="GQ" title="Equatorial Guinea">Equatorial Guinea</option><option value="ER" title="Eritrea">Eritrea</option><option value="EE" title="Estonia">Estonia</option><option value="ET" title="Ethiopia">Ethiopia</option><option value="FK" title="Falkland Islands">Falkland Islands</option><option value="FO" title="Faroe Islands">Faroe Islands</option><option value="FJ" title="Fiji">Fiji</option><option value="FI" title="Finland">Finland</option><option value="FR" title="France">France</option><option value="GF" title="French Guiana">French Guiana</option><option value="PF" title="French Polynesia">French Polynesia</option><option value="TF" title="French Southern Territories">French Southern Territories</option><option value="GA" title="Gabon">Gabon</option><option value="GM" title="Gambia">Gambia</option><option value="GE" title="Georgia">Georgia</option><option value="DE" title="Germany">Germany</option><option value="GH" title="Ghana">Ghana</option><option value="GI" title="Gibraltar">Gibraltar</option><option value="GR" title="Greece">Greece</option><option value="GL" title="Greenland">Greenland</option><option value="GD" title="Grenada">Grenada</option><option value="GP" title="Guadeloupe">Guadeloupe</option><option value="GU" title="Guam">Guam</option><option value="GT" title="Guatemala">Guatemala</option><option value="GG" title="Guernsey">Guernsey</option><option value="GN" title="Guinea">Guinea</option><option value="GW" title="Guinea-Bissau">Guinea-Bissau</option><option value="GY" title="Guyana">Guyana</option><option value="HT" title="Haiti">Haiti</option><option value="HM" title="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option><option value="HN" title="Honduras">Honduras</option><option value="HK" title="Hong Kong">Hong Kong</option><option value="HU" title="Hungary">Hungary</option><option value="IS" title="Iceland">Iceland</option><option value="IN" title="India">India</option><option value="ID" title="Indonesia">Indonesia</option><option value="IR" title="Iran">Iran</option><option value="IQ" title="Iraq">Iraq</option><option value="IE" title="Ireland">Ireland</option><option value="IM" title="Isle of Man">Isle of Man</option><option value="IL" title="Israel">Israel</option><option value="IT" title="Italy">Italy</option><option value="CI" title="Ivory Coast">Ivory Coast</option><option value="JM" title="Jamaica">Jamaica</option><option value="JP" title="Japan">Japan</option><option value="JE" title="Jersey">Jersey</option><option value="JO" title="Jordan">Jordan</option><option value="KZ" title="Kazakhstan">Kazakhstan</option><option value="KE" title="Kenya">Kenya</option><option value="KI" title="Kiribati">Kiribati</option><option value="XK" title="Kosovo">Kosovo</option><option value="KW" title="Kuwait">Kuwait</option><option value="KG" title="Kyrgyzstan">Kyrgyzstan</option><option value="LA" title="Laos">Laos</option><option value="LV" title="Latvia">Latvia</option><option value="LB" title="Lebanon">Lebanon</option><option value="LS" title="Lesotho">Lesotho</option><option value="LR" title="Liberia">Liberia</option><option value="LY" title="Libya">Libya</option><option value="LI" title="Liechtenstein">Liechtenstein</option><option value="LT" title="Lithuania">Lithuania</option><option value="LU" title="Luxembourg">Luxembourg</option><option value="MO" title="Macao">Macao</option><option value="MK" title="Macedonia">Macedonia</option><option value="MG" title="Madagascar">Madagascar</option><option value="MW" title="Malawi">Malawi</option><option value="MY" title="Malaysia">Malaysia</option><option value="MV" title="Maldives">Maldives</option><option value="ML" title="Mali">Mali</option><option value="MT" title="Malta">Malta</option><option value="MH" title="Marshall Islands">Marshall Islands</option><option value="MQ" title="Martinique">Martinique</option><option value="MR" title="Mauritania">Mauritania</option><option value="MU" title="Mauritius">Mauritius</option><option value="YT" title="Mayotte">Mayotte</option><option value="MX" title="Mexico">Mexico</option><option value="FM" title="Micronesia">Micronesia</option><option value="MD" title="Moldova">Moldova</option><option value="MC" title="Monaco">Monaco</option><option value="MN" title="Mongolia">Mongolia</option><option value="ME" title="Montenegro">Montenegro</option><option value="MS" title="Montserrat">Montserrat</option><option value="MA" title="Morocco">Morocco</option><option value="MZ" title="Mozambique">Mozambique</option><option value="MM" title="Myanmar">Myanmar</option><option value="NA" title="Namibia">Namibia</option><option value="NR" title="Nauru">Nauru</option><option value="NP" title="Nepal">Nepal</option><option value="NL" title="Netherlands">Netherlands</option><option value="AN" title="Netherlands Antilles">Netherlands Antilles</option><option value="NC" title="New Caledonia">New Caledonia</option><option value="NZ" title="New Zealand">New Zealand</option><option value="NI" title="Nicaragua">Nicaragua</option><option value="NE" title="Niger">Niger</option><option value="NG" title="Nigeria">Nigeria</option><option value="NU" title="Niue">Niue</option><option value="NF" title="Norfolk Island">Norfolk Island</option><option value="MP" title="Northern Mariana Islands">Northern Mariana Islands</option><option value="KP" title="North Korea">North Korea</option><option value="NO" title="Norway">Norway</option><option value="OM" title="Oman">Oman</option><option value="PK" title="Pakistan">Pakistan</option><option value="PW" title="Palau">Palau</option><option value="PS" title="Palestinian Territory">Palestinian Territory</option><option value="PA" title="Panama">Panama</option><option value="PG" title="Papua New Guinea">Papua New Guinea</option><option value="PY" title="Paraguay">Paraguay</option><option value="PE" title="Peru">Peru</option><option value="PH" title="Philippines">Philippines</option><option value="PN" title="Pitcairn">Pitcairn</option><option value="PL" title="Poland">Poland</option><option value="PT" title="Portugal">Portugal</option><option value="PR" title="Puerto Rico">Puerto Rico</option><option value="QA" title="Qatar">Qatar</option><option value="CG" title="Republic of the Congo">Republic of the Congo</option><option value="RE" title="Reunion">Reunion</option><option value="RO" title="Romania">Romania</option><option value="RU" title="Russia">Russia</option><option value="RW" title="Rwanda">Rwanda</option><option value="BL" title="Saint Barthelemy">Saint Barthelemy</option><option value="SH" title="Saint Helena">Saint Helena</option><option value="KN" title="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="LC" title="Saint Lucia">Saint Lucia</option><option value="MF" title="Saint Martin">Saint Martin</option><option value="PM" title="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option><option value="VC" title="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="WS" title="Samoa">Samoa</option><option value="SM" title="San Marino">San Marino</option><option value="ST" title="Sao Tome and Principe">Sao Tome and Principe</option><option value="SA" title="Saudi Arabia">Saudi Arabia</option><option value="SN" title="Senegal">Senegal</option><option value="RS" title="Serbia">Serbia</option><option value="CS" title="Serbia and Montenegro">Serbia and Montenegro</option><option value="SC" title="Seychelles">Seychelles</option><option value="SL" title="Sierra Leone">Sierra Leone</option><option value="SG" title="Singapore">Singapore</option><option value="SX" title="Sint Maarten">Sint Maarten</option><option value="SK" title="Slovakia">Slovakia</option><option value="SI" title="Slovenia">Slovenia</option><option value="SB" title="Solomon Islands">Solomon Islands</option><option value="SO" title="Somalia">Somalia</option><option value="ZA" title="South Africa">South Africa</option><option value="GS" title="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option><option value="KR" title="South Korea">South Korea</option><option value="SS" title="South Sudan">South Sudan</option><option value="ES" title="Spain">Spain</option><option value="LK" title="Sri Lanka">Sri Lanka</option><option value="SD" title="Sudan">Sudan</option><option value="SR" title="Suriname">Suriname</option><option value="SJ" title="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option><option value="SZ" title="Swaziland">Swaziland</option><option value="SE" title="Sweden">Sweden</option><option value="CH" title="Switzerland">Switzerland</option><option value="SY" title="Syria">Syria</option><option value="TW" title="Taiwan">Taiwan</option><option value="TJ" title="Tajikistan">Tajikistan</option><option value="TZ" title="Tanzania">Tanzania</option><option value="TH" title="Thailand">Thailand</option><option value="TG" title="Togo">Togo</option><option value="TK" title="Tokelau">Tokelau</option><option value="TO" title="Tonga">Tonga</option><option value="TT" title="Trinidad and Tobago">Trinidad and Tobago</option><option value="TN" title="Tunisia">Tunisia</option><option value="TR" title="Turkey">Turkey</option><option value="TM" title="Turkmenistan">Turkmenistan</option><option value="TC" title="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="TV" title="Tuvalu">Tuvalu</option><option value="UG" title="Uganda">Uganda</option><option value="UA" title="Ukraine">Ukraine</option><option value="AE" title="United Arab Emirates">United Arab Emirates</option><option value="GB" title="United Kingdom">United Kingdom</option><option value="US" title="United States">United States</option><option value="UM" title="United States Minor Outlying Islands">United States Minor Outlying Islands</option><option value="UY" title="Uruguay">Uruguay</option><option value="VI" title="U.S. Virgin Islands">U.S. Virgin Islands</option><option value="UZ" title="Uzbekistan">Uzbekistan</option><option value="VU" title="Vanuatu">Vanuatu</option><option value="VA" title="Vatican">Vatican</option><option value="VE" title="Venezuela">Venezuela</option><option value="VN" title="Vietnam">Vietnam</option><option value="WF" title="Wallis and Futuna">Wallis and Futuna</option><option value="EH" title="Western Sahara">Western Sahara</option><option value="YE" title="Yemen">Yemen</option><option value="ZM" title="Zambia">Zambia</option><option value="ZW" title="Zimbabwe">Zimbabwe</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-tb-select-country-container"><span class="select2-selection__rendered" id="select2-tb-select-country-container" title="United States">United States</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
+    <div class="tb-select-language tb-select-wrap">
+	   <!-- <span class="tb-select-box"><input class="tb-select-val"></input><span class="arrow-black"></span></span>-->
+	    <select class="tb-select-ul select2-hidden-accessible" id="tb-select-language" tabindex="-1" aria-hidden="true">
+	      
+	    <option value="en-US">English</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-tb-select-language-container"><span class="select2-selection__rendered" id="select2-tb-select-language-container" title="English">English</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
+    <div class="tb-select-currency tb-select-wrap">
+	    <!--<span class="tb-select-box"><input class="tb-select-val"></input><span class="arrow-black"></span></span>-->
+	    <select class="tb-select-ul select2-hidden-accessible" id="tb-select-currency" tabindex="-1" aria-hidden="true">
+	      
+	    <option value="USD">$</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-tb-select-currency-container"><span class="select2-selection__rendered" id="select2-tb-select-currency-container" title="$">$</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+    </div>
+    <a class="prim-cta-3" id="lang_curr_save">Save</a>
+</div>
+                </li>
+                <li class="nav-mobile tb-for-mobile">
+                
+                <div class="nav-for-mobile hidden  icon-child">
+                  <ul>
+                    <li>
+                      <a href="/subscription">Subscription</a>
+                    </li>
+                    <li class="shop-expandable level-1">
+                    <span class="open-close active"></span>
+                      <a href="#">Shop</a>
+                      <div class="tb-shop-menu hidden">
+                        <ul>
+                          <li class="shop-expandable level-2">
+                          <span class="open-close active"></span>
+                          <a href="#">TEA</a>
+                          <div class="tb-shop-menu hidden level-2">
+                            <ul class="">
+                                <li class=""><a href="/black">black</a></li>
+                                <li class=""><a href="/green">green</a></li>
+                                <li class=""><a href="/white">white</a></li>
+                                <li class=""><a href="/oolong">oolong</a></li>
+                                <li class=""><a href="/chai">chai</a></li>
+                                <li class=""><a href="/blends">blends</a></li>
+                                <li class=""><a href="/tea">see all teas</a></li>
+                            </ul>
+                          </div>
+                          </li>
+                          
+                            <li class="shop-expandable level-2">
+                              <span class="open-close active"></span>
+                              <a href="#">accessories</a>
+                              <div class="tb-shop-menu hidden level-2">
+                                <ul>
+                                <li><a href="/tea-accessories/mugs">Cups, Mugs &amp; Tumblers</a></li>
+                                <li><a href="/tea-accessories/tea-sets">Tea Sets</a></li>
+                                <li><a href="/tea-accessories/tea-makers">Teamakers, Pots &amp; Kettles</a></li>
+                                <li><a href="/tea-accessories/infuser-filters">Infusers &amp; Strainers</a></li>
+                                <li><a href="/tea-accessories/tea-essentials">Tea Tins &amp; Storage</a></li>
+                                <li><a href="/tea-accessories/tea-tools-decor">Tea Tools &amp; Décor</a></li>
+                                <li><a href="/tea-accessories">VIew All accessories</a></li>
+                            </ul>
+                            </div>
+                            </li>
+                          
+                          <li>
+                            <a href="/gifts">gifts</a>
+                          </li>
+                          <li>
+                            <a href="/sale">Sale</a>
+                          </li>
+                          <li>
+                            <a href="/best-selling">best selling</a>
+                          </li>
+                          <li>
+                            <a href="/new">New</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-explore">
+                      <a href="#">Explore</a>
+                    </li>
+                    <li id="tb-mob-location">Choose Location
+                    </li>
+                  </ul>
+                </div>
+              
+                </li>
+              </ul>
+            </div>
+          
+              </div>
+
+            </div>
+          </div>
+          
+            <div class="tb-category-nav">
+              <div class="container-fluid sub-menu-wrap shop hidden" style="position: relative; z-index: 1;">
+                <div class="row level-1">
+                  <div class="col-md-6 col-sm-6">
+                    <ul class="nav">
+                      <li class="sub-menu-li" data-class="teas">
+                        <a href="#">Teas</a>
+                        <span class="arrow arrow-black"></span>
+                      </li>
+                      <li class="sub-menu-li" data-class="accessories">
+                        <a href="#">accessories</a>
+                        <span class="arrow arrow-black"></span>
+                      </li>
+                      <li class="sub-menu-li">
+                        <a href="/samples">samples</a>
+                      </li>
+                      <li class="sub-menu-li">
+                        <a href="/gifts">gifts</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 col-sm-6 right">
+                    <ul class="nav">
+                      <li class="sub-menu-li">
+                        <a href="/best-selling">best selling</a>
+                      </li>
+                      <li class="sub-menu-li">
+                        <a href="/sale">Sale</a>
+                      </li>
+                      <li class="sub-menu-li">
+                        <a href="/new">New</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="container-fluid sub-menu hidden">
+                  <div class="row level-2 accessories hidden">
+                    <div class="menu-column w20">
+                      <ul>
+                        <li>
+                            <span class="heading">SHOP BY TYPE</span>  
+                        </li>
+                         <li>
+                            <a href="/tea-accessories/mugs">Cups, Mugs &amp; Tumblers</a>
+                        </li>
+                         <li>
+                            <a href="/tea-accessories/tea-sets">Tea Sets</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/tea-makers">Teamakers, Pots &amp; Kettles</a>
+                        </li>
+                         <li>
+                            <a href="/tea-accessories/infuser-filters">Infusers &amp; Strainers</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/tea-essentials">Tea Tins &amp; Storage</a>
+                        </li>
+                         <li>
+                            <a href="/tea-accessories/tea-tools-decor">Tea Tools &amp; Décor</a>
+                        </li>
+                        <li>
+                          <a href="/tea-accessories" class="tb-green-txt tb-pnsb">VIew All accessories &gt;&gt;</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="menu-column w15">
+                      <ul>
+                        <li>
+                            <span class="heading">Shop By Material</span>  
+                        </li>
+                        <li>
+                            <a href="/tea-accessories?gifts_material=470&amp;isAjax=1">Glass Ware</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories?gifts_material=464&amp;isAjax=1">Ceramic </a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories?gifts_material=469&amp;isAjax=1">Steel &amp; Metal</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories?gifts_material=467&amp;isAjax=1">BPA free plastic</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="menu-column w20">
+                      <ul>
+                        <li>
+                            <span class="heading">Best Sellers</span>  
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/clear-tea-mug">Clear Tea Mug</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/ez-brew-oriental-tea-maker-india">Oriental Tea Maker</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/ez-brew-carafe-tea-maker-india">Caraffe Tea Maker</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/valencia-glass-teacup">Valencia</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/jubilee-set">Jubilee set</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/seidel-glass-tea-mug-with-infuser">Seidel Glass Tea Mug with Infuser</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="menu-column w25">
+                      <ul>
+                        <li>
+                            <span class="heading">Featured Accessories</span>  
+                        </li>
+                        <li style="margin-bottom:12px;">
+                            <a href="/tea-accessories/stony-brooke-set"><img src="https://cdn.teabox.com/media/wysiwyg/_STONY-BROOKE-SET.jpg" <="" a="">
+                        </a></li><a href="/tea-accessories/stony-brooke-set">
+                        </a><li><a href="/tea-accessories/stony-brooke-set">
+                            </a><a href="/tea-accessories/stony-brooke-set">Stony Brook Tea Set</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/stony-brooke-set" class="tb-green-txt tb-pnsb">Buy NOW</a>
+                        </li>
+                        
+                    </ul>
+                    </div>
+                    <div class="menu-column w25">
+                      <ul>
+                        <li>
+                            <span class="heading">&nbsp;</span>  
+                        </li>
+                        <li style="margin-bottom:12px;">
+                            <a href="/tea-accessories/ez-brew-classic-tea-maker-india"><img src="https://cdn.teabox.com/media/wysiwyg/CLASSIC-TEA-MAKER.jpg" <="" a="">
+                        </a></li><a href="/tea-accessories/ez-brew-classic-tea-maker-india">
+                        </a><li><a href="/tea-accessories/ez-brew-classic-tea-maker-india">
+                            </a><a href="/tea-accessories/ez-brew-classic-tea-maker-india">Classic Tea Maker</a>
+                        </li>
+                        <li>
+                            <a href="/tea-accessories/ez-brew-classic-tea-maker-india" class="tb-green-txt tb-pnsb">Buy NOW</a>
+                        </li>
+                        
+                    </ul>
+                    </div>
+                  </div>
+                  <div class="row  level-2 teas hidden">
+                    <div class="menu-column w13">
+                      <ul>
+                        <li>
+                          <span class="heading">TEA TYPES</span>
+                        </li>
+                        <li>
+                          <a href="/black">BLACK</a>
+                        </li>
+                        <li>
+                          <a href="/green">GREEN</a>
+                        </li>
+                        <li>
+                          <a href="/white">WHITE</a>
+                        </li>
+                        <li>
+                          <a href="/oolong">OOLONG</a>
+                        </li>
+                        <li>
+                          <a href="/chai">CHAI</a>
+                        </li>
+                        <li>
+                          <a href="/blends">BLENDS</a>
+                        </li>
+                        <li class="green-txt top-margin">
+                          <a href="/tea" class="tb-green-txt tb-pnsb">VIEW ALL TEAS &gt;&gt;</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="menu-column w13">
+                      <ul>
+                        <li>
+                          <span class="heading">REGIONS</span>
+                        </li>
+                        <li>
+                          <a href="/estates/darjeeling">DARJEELING</a>
+                        </li>
+                        <li>
+                          <a href="/estates/assam">ASSAM</a>
+                        </li>
+                        <li>
+                          <a href="/estates/nepal">NEPAL</a>
+                        </li>
+                        <li>
+                          <a href="/estates/nilgiri">NILGIRIS</a>
+                        </li>
+                        <li>
+                          <a href="/estates/north-east-india">NORTH-EAST</a>
+                        </li>
+                        <li>
+                          <a href="/estates/kangra">KANGRA</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="menu-column w15">
+                      <ul>
+                        <li>
+                          <span class="heading">FLUSH / SEASONS</span>
+                        </li>
+                        <li>
+                          <a href="/first-flush">FIRST / SPRING</a>
+                        </li>
+                        <li>
+                          <a href="/second-flush">SECOND / SUMMER</a>
+                        </li>
+                        <li>
+                          <a href="/autumn-flush">AUTUMN</a>
+                        </li>
+                        <li>
+                          <a href="/winter-flush">WINTER</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="menu-column w13">
+                      <ul>
+                        <li>
+                          <span class="heading">COLLECTIONS</span>
+                        </li>
+                        <li>
+                          <a href="/organic-teas">ORGANIC</a>
+                        </li>
+                        <li>
+                          <a href="/blends/breakfast-tea-blends">BREAKFAST</a>
+                        </li>
+                        <li>
+                          <a href="/blends/flavored-tea-blends">FLAVORED TEAS</a>
+                        </li>
+                        <li>
+                          <a href="/blends/iced-teas">ICED TEAS</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="menu-column w15">
+                      <ul>
+                        <li>
+                          <span class="heading">POPULAR ESTATES</span>
+                        </li>
+                        <li>
+                          <a href="/estates/darjeeling/jungpana">JUNGPANA</a>
+                        </li>
+                        <li>
+                          <a href="/estates/darjeeling/castleton">CASTLETON</a>
+                        </li>
+                        <li>
+                          <a href="/estates/darjeeling/margaret-s-hope">MARGARET'S HOPE</a>
+                        </li>
+                        <li>
+                          <a href="/estates/darjeeling/goomtee">GOOMTEE</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="menu-column w30">
+                      <ul>
+                        <li>
+                          <span class="heading">FEATURED TEA</span>
+                        </li>
+                        <li style="margin-bottom:12px;">
+                          <a href="/tea/margaret-s-hope-china-spring-darjeeling-black-tea"><img src="//cdn.teabox.com/media/wysiwyg/Featured-Tea_Margeret_s-Hope-Spring-Black.jpg"></a>
+                        </li>
+                        <li>
+                          <a href="/tea/margaret-s-hope-china-spring-darjeeling-black-tea">MARGARET'S HOPE SPRING BLACK</a>
+                        </li>
+                        <li class="green-txt">
+                          <a href="/tea/margaret-s-hope-china-spring-darjeeling-black-tea" class="tb-green-txt tb-pnsb">Buy Now</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          
+    
+    
+
+    
+      <div class="header-mssg-default hidden"></div>
+    
+
+    
+    
+
+    
+    <div class="body-content default ">
+
+    
+    
+      
+      
+<div class="container-fluid home-page-banner tb-white deferred-bg" data-bg-sm="//media.teabox.com/media/uploads/Summer-Campaign_Hp_Mb.jpg" data-bg="//media.teabox.com/media/uploads/Summer-Campaign_Hp.jpg" data-target="home-page-banner" style="position: relative; background: url(&quot;//media.teabox.com/media/uploads/Summer-Campaign_Hp.jpg&quot;);">
+	<div class="row">
+		<div class="tb-banner-content">
+			<h1>THE ALL-NEW<br> SUMMER COLLECTION</h1>
+			<p style="font: normal 20px ProximaNovaLight;margin-bottom:10px;line-height: 23px;">
+Now in store</p>
+			<a href="/season-store" class="prim-cta-1 tb-green-btn">SHOP NOW</a>
+			<p style="display:none;
+    position: absolute;
+    left: 0px;
+    padding: 0 10px;
+    max-width: 1200px;
+    color: #fff;
+    width: 1200px;
+    margin: auto;
+    font-size: 18px;
+    bottom: 70px;
+          "><sup>*</sup>Use coupon code 'BOGO'</p>
+		</div>
+	</div>
+</div><style>
+.home-page-banner .tb-banner-content {
+        padding-top: 250px;
+ }
+    @media (max-width: 990px) {
+        .home-page-banner .tb-banner-content {
+            padding-top: 600px;
+        }
+    }
+    @media (max-width: 768px) {
+        .home-page-banner .tb-banner-content {
+            padding-top: 365px;
+        }
+    }
+.home-page-banner h1,.home-page-banner p{text-shadow: 2px 2px 13px rgba(0,0,0,0.5);}
+@media (max-width: 400px){
+.home-page-banner h1 {line-height:27px;}}</style>
+<!-- best_of_darjeeling block -->
+<div class="container-fluid darjeeling tb-black">
+	<div class="row">
+		<h2 class="tb-uppercase">CONTEMPORARY GLASSWARE</h2>
+		<div class="col-md-12 clearfix">
+			<div class="col-sm-4 col-xs-12">
+				<a href="/tea-accessories/ez-brew-neo-teapot">
+					<img src="//cdn.teabox.com/media/wysiwyg/GPM1.jpg" alt="NEO TEAPOT">
+					<h5 class="tb-uppercase">SHOP NEO TEAPOT</h5>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<a href="/tea-accessories/ez-brew-urban-teapot">
+					<img src="//cdn.teabox.com/media/wysiwyg/GPM2.jpg" alt="URBAN TEAPOT">
+					<h5 class="tb-uppercase">SHOP URBAN TEAPOT</h5>
+				</a>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<a href="/tea-accessories/kinto-carat-teapot">
+					<img src="//cdn.teabox.com/media/wysiwyg/KICT.jpg" alt="KINTO CARAT TEAPOT">
+					<h5 class="tb-uppercase">SHOP KINTO CARAT TEAPOT</h5>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ice_teas_banner block -->
+<div class="iced-teas deferred-bg tb-white" data-bg="//cdn.teabox.com/media/wysiwyg/Masala-Chai_2nd-Banner.jpg" data-target="iced-teas" style="height: 400px; background: url(&quot;//cdn.teabox.com/media/wysiwyg/Masala-Chai_2nd-Banner.jpg&quot;);"><div class="home_page_blocks_two">
+<a href="/chai" class="manual-optin-trigger">
+
+<div class="block4 tb-cnt"><h3 style="text-align:left !important;font: normal 30px TeaboxStencilMedium;text-transform:uppercase">BRIMMING WITH DELICIOUS <br>INDIAN FLAVORS</h3><p style="font: normal 18px ProximaNovaRegular;">Exotic chai blends crafted by our master blenders.</p><span class="prim-cta-2">
+SHOP NOW</span></div></a>
+</div>
+<div>
+
+</div>
+</div>
+
+
+    
+        <div class="tb-cnt">
+            <div class="best-seller-cnt">
+                <div class="heading-cnt">
+                    <p class="tb-center bs-heading header-9"><span class="active" data-target="best-seller-cnt" data-off="new-arrival-cnt">BEST SELLERS</span><span data-target="new-arrival-cnt" data-off="best-seller-cnt">NEW ARRIVALS</span></p>
+                </div>
+                <div class="bs-pdt-cnt tb-pg-cnt" id="best-seller-cnt">
+                    <div class="owl-bs-blk owl-carousel owl-theme" style="opacity: 1; display: block;">
+                    
+                    <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 2358px; left: 0px; display: block;"><div class="owl-item" style="width: 393px;"><div class="item bs-pdt">
+                        <div data-id="12269">
+                            <a class="pdt-img-cnt" href="https://www.teabox.com/tea/goomtee-summer-darjeeling-black-tea1">
+                                <img src="https://media.teabox.com/media/media/images/products/sfgtmsb_1_sXqmU43.jpg" height="240" width="240" alt="Goomtee Special Summer Muscatel Black">
+                            </a>
+                            <a href="https://www.teabox.com/tea/goomtee-summer-darjeeling-black-tea1">
+                                <p class="pdt-title capitalize header-9">Goomtee Special Summer Muscatel Black</p>
+                            </a>
+                            <div class="pdt-short-desc hidden-xs">Uncanny Chinary muscatel; an effort well rewarded.</div>
+                            <div class="pdt-price-box">
+                                
+                                     <span class="pdt-price header-8"><span>$ </span>24.5</span>
+                                
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 393px;"><div class="item bs-pdt">
+                        <div data-id="13145">
+                            <a class="pdt-img-cnt" href="https://www.teabox.com/tea/cardamom-chai-tea">
+                                <img src="https://media.teabox.com/media/media/images/products/cxcdb_1_cltG3hP.jpg" height="240" width="240" alt="Wayanad Cardamom Chai">
+                            </a>
+                            <a href="https://www.teabox.com/tea/cardamom-chai-tea">
+                                <p class="pdt-title capitalize header-9">Wayanad Cardamom Chai</p>
+                            </a>
+                            <div class="pdt-short-desc hidden-xs">Full of personality and exploding with cardamom.</div>
+                            <div class="pdt-price-box">
+                                
+                                     <span class="pdt-price header-8"><span>$ </span>9.99</span>
+                                
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 393px;"><div class="item bs-pdt">
+                        <div data-id="13382">
+                            <a class="pdt-img-cnt" href="https://www.teabox.com/tea/longview-spring-darjeeling-black-tea">
+                                <img src="https://media.teabox.com/media/media/images/products/fflvb_1_2_W75JPyJ.jpg" height="240" width="240" alt="Longview Classic Spring Black">
+                            </a>
+                            <a href="https://www.teabox.com/tea/longview-spring-darjeeling-black-tea">
+                                <p class="pdt-title capitalize header-9">Longview Classic Spring Black</p>
+                            </a>
+                            <div class="pdt-short-desc hidden-xs">This is a simple black tea with sweet green flavor attributes.</div>
+                            <div class="pdt-price-box">
+                                
+                                     <span class="pdt-price header-8"><span>$ </span>14.5</span>
+                                
+                            </div>
+                        </div>
+                    </div></div></div></div>
+                    
+                    
+                    
+                    
+                    
+                    <div class="owl-controls clickable" style="display: none;"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div></div></div></div>
+                    <div class="view-all-link tb-center">
+                        <a href="/best-selling" class="header-8 text-link-1">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="bs-pdt-cnt tb-pg-cnt hidden" id="new-arrival-cnt">
+                    <div class="owl-bs-blk owl-carousel owl-theme" style="opacity: 0; display: block;">
+                    
+                    <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 198px; left: 0px; display: block;"><div class="owl-item" style="width: 33px;"><div class="item bs-pdt">
+                        <div data-id="12475">
+                            <a class="pdt-img-cnt" href="https://www.teabox.com/tea/giddapahar-exotic-summer-darjeeling-black">
+                                <img src="https://media.teabox.com/media/media/images/products/sfgpcsb_1_1_rvqv0Ax.jpg" height="240" width="240" alt="Giddapahar Special Summer Black">
+                            </a>
+                            <a href="https://www.teabox.com/tea/giddapahar-exotic-summer-darjeeling-black">
+                                <p class="pdt-title capitalize header-9">Giddapahar Special Summer Black</p>
+                            </a>
+                            <div class="pdt-short-desc hidden-xs">The first summer tea of the year, this one is marked by bright flavors of dried stone fruit and firewood.</div>
+                            <div class="pdt-price-box">
+                                
+                                     <span class="pdt-price header-8"><span>$ </span>15.99</span>
+                                
+                            </div>
+                            <div>
+                                <span class="new-blk-home">NEW</span>
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 33px;"><div class="item bs-pdt">
+                        <div data-id="12596">
+                            <a class="pdt-img-cnt" href="https://www.teabox.com/tea/wonder-spring-darjeeling-white-tea">
+                                <img src="https://media.teabox.com/media/media/images/products/ffgdww_1_2_nPyTJh6.jpg" height="240" width="240" alt="Darjeeling Special Spring White">
+                            </a>
+                            <a href="https://www.teabox.com/tea/wonder-spring-darjeeling-white-tea">
+                                <p class="pdt-title capitalize header-9">Darjeeling Special Spring White</p>
+                            </a>
+                            <div class="pdt-short-desc hidden-xs">A white tea blend that delivers heady flavors of geranium, lavender, and citrus with every sip.</div>
+                            <div class="pdt-price-box">
+                                
+                                     <span class="pdt-price header-8"><span>$ </span>36.99</span>
+                                
+                            </div>
+                            <div>
+                                <span class="new-blk-home">NEW</span>
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 33px;"><div class="item bs-pdt">
+                        <div data-id="12665">
+                            <a class="pdt-img-cnt" href="https://www.teabox.com/tea/margaret-s-hope-spring-darjeeling-black-tea">
+                                <img src="https://media.teabox.com/media/media/images/products/ffmhb_1_1_kgktKUp.jpg" height="240" width="240" alt="Margaret's Hope Classic Spring Black">
+                            </a>
+                            <a href="https://www.teabox.com/tea/margaret-s-hope-spring-darjeeling-black-tea">
+                                <p class="pdt-title capitalize header-9">Margaret's Hope Classic Spring Black</p>
+                            </a>
+                            <div class="pdt-short-desc hidden-xs">A high-grade black tea with clean floral-woody flavors from one of Darjeeling’s finest estates.</div>
+                            <div class="pdt-price-box">
+                                
+                                     <span class="pdt-price header-8"><span>$ </span>15.99</span>
+                                
+                            </div>
+                            <div>
+                                <span class="new-blk-home">NEW</span>
+                            </div>
+                        </div>
+                    </div></div></div></div>
+                    
+                    
+                    
+                    
+                    
+                    <div class="owl-controls clickable" style="display: none;"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div></div></div></div>
+                    <div class="view-all-link tb-center">
+                        <a href="/new" class="header-8 text-link-1">VIEW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="container-fluid experience-tea tb-white deferred-bg hidden" data-target="experience-tea" data-bg="//cdn.teabox.com/media/wysiwyg/Acc_Home_1.jpg" style="background: url(&quot;//cdn.teabox.com/media/wysiwyg/Acc_Home_1.jpg&quot;);">
+	<a href="">
+		<div class="row">
+			<h2 class="tb-uppercase">Experience Tea</h2>
+			<p>All new tea accessories<br class="lh-0">and essentials</p>
+			<span class="prim-cta-2 tb-green-btn">Shop Now</span>
+		</div>
+	</a>
+</div>
+
+<div class="tb-pg-cnt tea-of-week tb-black">
+<h2 class="heading-for-cell tb-uppercase">tea of the week</h2>
+	<div class="row">
+		<a href="/tea/guranse-exotic-spring-nepal-white-tea">
+		<div class="col-xs-12 col-md-6">
+			<h2 class="tb-uppercase">tea of the week</h2>
+			<p class="tb-uppercase tb-semibold">GURANSE EXOTIC SPRING WHITE</p>
+			<p>Here’s a Nepalese white tea that can hold its own among the best whites, and emerge a winner.</p>
+			<p>Easily the best white tea from Nepal this year, it does change one’s perception about teas from here. Much like a good Darjeeling white tea, it has a delicate texture and boasts a complex aromatic profile. But it packs a pleasant surprise – the largely mellow tea is interrupted by bursts of vibrant notes, keeping you going back for more.</p>
+			<span class="prim-cta-2 tb-green-btn">SHOP NOW</span>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<img src="//cdn.teabox.com/media/wysiwyg/NPFFHSO_TOW.png" alt="TEA OF THE WEEK">
+		</div>
+		</a>
+	</div>
+</div>
+<style>
+@media (max-width: 769px){
+.tea-of-week{padding:50px 0;}
+}
+</style>
+<div class="container-fluid tea-transformed tb-white tb-center deferred-bg" data-target="tea-transformed" data-bg="//cdn.teabox.com/media/wysiwyg/Tea-transformed.jpg" data-optional="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))" style="background: linear-gradient(rgba(0, 0, 0, 0.498039), rgba(0, 0, 0, 0.498039)), url(&quot;//cdn.teabox.com/media/wysiwyg/Tea-transformed.jpg&quot;);">
+	<div class="row tb-bottom">
+		<h2 class="tb-uppercase">tea transformed</h2>
+		<div class="col-sm-4 col-xs-12 tb-white">
+			<img src="https://cdn.teabox.com/media/wysiwyg/Tea_Transformed_1.svg">
+			<h3 class="tb-uppercase tb-semibold"><u>Selected for freshness</u></h3>
+			<p>We make sure every selection we send out is<br class="lh-0">
+			fresher and tastier than any tea you've ever had.</p>
+		</div>
+		<div class="col-sm-4 col-xs-12 tb-white">
+			<img src="https://cdn.teabox.com/media/wysiwyg/Tea_Transformed_2.svg">
+			<h3 class="tb-uppercase tb-semibold"><u>Straight from tea gardens</u></h3>
+			<p>We work directly with over 150 tea growers across<br class="lh-0">India and Nepal to source the best tea there is.</p>
+		</div>
+		<div class="col-sm-4 col-xs-12 tb-white">
+			<img src="https://cdn.teabox.com/media/wysiwyg/Tea_Transformed_3.svg">
+			<h3 class="tb-uppercase tb-semibold"><u>35mn cups, to 94 countries</u></h3>
+			<p>We are a culture that’s changing the way tea is<br class="lh-0">perceived and consumed, one cup at a time.</p>
+		</div>
+	</div>
+</div>
+<div class="row tb-center padding-50-div">
+   <h1 class="tb-uppercase tb-semibold ">customer testimonials</h1>
+   <div id="carousel-testimonials" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+      <div class="owl-wrapper-outer autoHeight" style="height: 100px;"><div class="owl-wrapper" style="width: 3600px; left: 0px; display: block; transition: all 800ms ease; transform: translate3d(-1200px, 0px, 0px);"><div class="owl-item" style="width: 600px;"><div class="item">
+        <p>Received my tea in only 4 days ,beautifully packed .I am a brit. living in usa and this is the best tea I have tasted in all my 66yrs! I have tried a lot of teas over the years, but nothing came near this. i guess I never really knew what Fresh tea was! I love the extras too the free samples etc. Thank you so much and I know where my tea will always be coming from now!</p>
+        <p class="header-9 capitalize">Nick Dennison - Kentucky, US</p>
+      </div></div><div class="owl-item" style="width: 600px;"><div class="item">
+        <p>My parcel arrived in record time (4 days) and it was beautifully packaged. I really appreciate the attention to detail and the free samples. Thank you teabox!</p>
+        <p class="header-9 capitalize">Marion Ware - Victoria, Australia</p>
+      </div></div><div class="owl-item" style="width: 600px;"><div class="item tb-center">
+        <p>I think your company is fantastic. As soon as I got my parcel I started to brew some tea and it's the best I've ever tasted! I can't believe I've been drinking tea all these years without an appreciation for types, the growers, the regions, brewing processes, etc. I have now signed up for a monthly subscription and would definitely recommend your tea to everyone! Thank you.</p>
+        <p class="header-9 capitalize">Gillian Cowell - Scotland, UK</p>
+      </div></div></div></div>
+      
+      
+    <div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page active"><span class=""></span></div></div></div></div>
+  </div>
+</div>
+    <div class="teabuzz">
+        <div class="wrap tb-cnt">
+            <a href="http://dealbook.nytimes.com/2014/06/26/as-indias-teas-gain-fans-seeking-a-faster-way-to-get-it-to-them/" target="_blank" rel="nofollow"><img src="https://cdn.teabox.com/skin/frontend/enterprise/teabox/images/nyt.png" alt=""></a>
+
+            <a href="https://techcrunch.com/2015/03/24/teabox-tea-commerce/" target="_blank" rel="nofollow"><img src="https://cdn.teabox.com/skin/frontend/enterprise/teabox/images/techcrunch.png" alt=""></a>
+
+            <a href="http://edition.cnn.com/videos/tv/2015/08/24/india-silk-road-spc-a.cnn/video/playlists/the-silk-road-past-present-future/" target="_blank" rel="nofollow"><img src="https://cdn.teabox.com/skin/frontend/enterprise/teabox/images/CNN.jpg" alt=""></a>
+
+            <a href="http://m.smh.com.au/world/speaking-the-language-of-tea-20140724-zubx2.html" target="_blank" rel="nofollow"><img src="https://cdn.teabox.com/skin/frontend/enterprise/teabox/images/The-Age.png" alt=""></a>
+
+            <a href="http://www.forbes.com/sites/hunteratkins/2014/09/22/how-teabox-is-bringing-silicon-valley-to-the-darjeeling-tea-fields/" target="_blank" rel="nofollow"><img src="https://cdn.teabox.com/skin/frontend/enterprise/teabox/images/forbes-new.png" alt=""></a>
+        </div>
+    </div>
+
+<div class="referral-call-out-wrap bck-lit-grn">
+        <div class="referral-call-out tb-cnt">
+        	<div class="referfriend_img"></div>
+			<div style=" padding-left: 10px;padding-top: 43px;"><p><span style="font: normal 28px ProximaNovaLight;line-height: 31px;color:#000">SPREAD THE WORD&nbsp;</span><a rel="nofollow" href="/refer-a-friend/" style="font: normal 15px ProximaNovaSemibold;color:#2cbe5a;padding-top: 10px;">Refer a friend&nbsp;</a><span style="padding-top:10px;  line-height: 19px;font: normal 15px ProximaNovaLight;color:#000">and get&nbsp;₹500 for yourself and your friend.&nbsp;</span></p></div>
+			<div style="clear:both;float: none!important;"></div>
+	    </div>
+		<div style="clear:both;float: none!important;"></div>
+	</div>
+
+    </div>
+
+
+    
+      
+
+
+<footer id="footer">
+	<div class="container-fluid">
+		<div class="row clearfix">
+			<div class="col-md-5">
+				<h5>
+					<strong>SHOP</strong>
+				</h5>
+				<ul class="wid100">
+					<li><a href="/tea"><h5>
+								<strong>By Type</strong>
+							</h5></a></li>
+					<li><a href="/black">Black Tea</a></li>
+					<li><a href="/green">Green Tea</a></li>
+					<li><a href="/oolong">Oolong Tea</a></li>
+					<li><a href="/white">White Tea</a></li>
+					<li><a href="/chai">Chai Tea</a></li>
+				</ul>
+				<ul class="wid100">
+					<li><a href="/estates"><h5>
+								<strong>By Region</strong>
+							</h5></a></li>
+					<li><a href="/estates/darjeeling">Darjeeling</a></li>
+					<li><a href="/estates/assam">Assam</a></li>
+					<li><a href="/estates/nilgiri">Nilgiri</a></li>
+					<li><a href="/estates/kangra">Kangra</a></li>
+					<li><a href="/estates/nepal">Nepal</a></li>
+					<li><a href="/estates/north-east-india">North East</a></li>
+				</ul>
+				<ul class="wid100">
+					<li><a><h5>
+						<strong>By Speciality</strong>
+					</h5></a></li>
+					<li><a href="/new">New</a></li>
+					<li><a href="/best-selling">Best Selling</a></li>
+					<li><a href="/sale">Sale</a></li>
+					<li><a href="/blends">Blends</a></li>
+					<li><a href="/samples">Samples</a></li>
+				</ul>
+			</div>
+			<div class="col-md-1 padding20">
+				<h5>
+					<strong>ABOUT US</strong>
+				</h5>
+				<ul>
+					<li><a href="/about-teabox">About Teabox</a></li>
+					<li><a href="/about-teabox/newsroom">Newsroom</a></li>
+					<!-- <li><a href="/our-team">Our Team</a></li> -->
+					<li><a href="/testimonial/">Testimonials</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/wholesale/">Wholesale</a></li>
+					<li><a href="/brewing">Brewing</a></li>
+					<li><a href="/careers" rel="nofollow">Careers</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<div class="wid100">
+					<h5>
+						<strong>CUSTOMER SERVICE</strong>
+					</h5>
+					<ul>
+						<li><a href="/shipping_delivery/" rel="nofollow">Shipping &amp; Delivery</a></li>
+						<li><a href="http://support.teabox.com" target="_blank" rel="nofollow">Help Desk</a></li>
+						<li><a href="/contact-us/" target="_blank">Contact Us</a></li>
+						<!--<li id="track-order-outer-list"><a title="Log In" href="javascript:void(0)" id="track_order_click" class="">Track Order</a></li>-->
+					</ul>
+				</div>
+				<div class="wid100 padding40">
+					<h5>
+						<strong>POLICIES</strong>
+					</h5>
+					<ul class="wid100" style="width: 80px ! important;">
+						<li><a href="/terms" rel="nofollow">Terms of use</a></li>
+						<li><a href="/security" rel="nofollow">Security</a></li>
+						<li><a href="/privacy" rel="nofollow">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="wid100 padding20">
+					<h5>
+						<strong>SOCIAL CONNECT</strong>
+					</h5>
+					<ul class="nav social">
+						<span itemscope="" itemtype="https://schema.org/Organization">
+							<link itemprop="url" href="https://www.teabox.com/"> 
+							<meta itemprop="logo" content="https://www.teabox.com/static/Teabox_LogoW.svg">
+							<li><a itemprop="sameAs" href="https://www.facebook.com/teabox.tea" target="_blank" class="footer-fb" title="Facebook" rel="nofollow"></a>
+							</li>
+							<li><a itemprop="sameAs" href="https://www.twitter.com/TeaBoxInt" target="_blank" class="footer-twitter" title="Twitter" rel="nofollow"></a>
+							</li>
+							<li><a itemprop="sameAs" href="https://pinterest.com" target="_blank" class="footer-pinterest"></a>
+							</li>
+							<li><a itemprop="sameAs" href="https://www.instagram.com/teabox.tea" target="_blank" class="footer-instagram" title="Instagram" rel="nofollow"></a>
+							</li>
+						</span>
+						<!--li><a href="https://www.flickr.com/" class="footer-flickr"></a></li>
+				<li><a href="#" class="footer-qic"></a></li> -->
+					</ul>
+					<!--<div class="fb-like" data-href="https://www.facebook.com/teabox.tea" data-width="47" datalayout="button_count" data-show-faces="false" data-send="false" rel="nofollow"></div>-->
+				</div>
+			</div>
+		</div>
+		<div class="row copyright">
+			<address>Copyright © 2012-2016 Teabox</address>
+		</div>
+		<div style="display: none" class="footer footer-seo">
+			<h4 style="color: grey; padding-bottom: 9px; text-align: left; font-size: 13px;">TEABOX
+				DIRECTORY</h4>
+			<div style="display: none; text-align: left;">
+				<strong><a href="#">LANGUAGES : </a></strong><a href="/ru">Russia</a>
+			</div>
+
+			<div style="text-align: left;">
+				<strong><a href="/black">BLACK
+						TEA : </a></strong> <a href="/black/darjeeling">
+					Darjeeling Black </a> | <a href="/black/assam"> Assam Black</a> |<a href="/black/nilgiri"> Nilgiri Black</a>
+				|<a href="/black/kangra"> Kangra
+					Black</a> | <a href="/black/north-east-india">
+					North East India Black</a> | <a href="/black/nepal"> Nepal Black </a> |
+				<a href="/black/first-flush">First
+					Flush Spring Black </a> | <a href="/black/second-flush"> Second
+					Flush Summer Black </a> | <a href="/black/autumn-flush"> Autumn
+					Flush Black </a>
+			</div>
+
+			<div style="text-align: left;">
+				<strong> <a href="/green">GREEN
+						TEA : </a></strong> <a href="/green/darjeeling">
+					Darjeeling Green </a> | <a href="/green/green-north-east-india-teas">
+					North East India Green </a> | <a href="/green/nilgiri"> Nilgiri Green</a>
+				|<a href="/green/kangra"> Kangra
+					Green</a> | <a href="/green/nepal">
+					Nepal Green </a> | <a href="/green/first-flush">First
+					Flush Spring Green</a> | <a href="/green/second-flush"> Second
+					Flush Summer Green </a> | <a href="/green/autumn-flush"> Autumn
+					Flush Green </a>
+			</div>
+
+			<div style="text-align: left;">
+				<strong><a href="/white">WHITE
+						TEA : </a></strong> <a href="/white/darjeeling">
+					Darjeeling White </a> | <a href="/white/assam"> Assam White </a> |<a href="/white/nilgiri"> Nilgiri White</a>
+				| <a href="/white/first-flush">First
+					Flush Spring White</a> | <a href="/white/second-flush"> Second
+					Flush Summer White </a>
+			</div>
+
+			<div style="text-align: left;">
+				<strong> <a href="/oolong">
+						OOLONG TEA : </a></strong> <a href="/oolong/darjeeling">
+					Darjeeling Oolong Tea </a> | <a href="/oolong/oolong-north-east-india-teas">
+					North-East India Oolong Tea </a> | <a href="/oolong/first-flush">First
+					Flush Spring Oolong Tea</a> | <a href="/oolong/second-flush"> Second
+					Flush Summer Oolong Tea </a> | <a href="/oolong/autumn-flush"> Autumn
+					Flush Oolong Tea </a>
+			</div>
+
+			<div style="text-align: left;">
+				<strong> <a href="/chai">
+						CHAI TEA : </a></strong><a href="/chai"> </a><a href="/chai/black"> Black Chai Tea</a> |
+				<a href="/chai/green"> Green Chai Tea
+				</a> | <a href="/chai/white"> White Chai
+					Tea</a> |<a href="/chai/oolong"> Oolong
+					Chai Tea </a>
+			</div>
+
+			<div style="text-align: left;">
+				<strong><a href="/blends">BLENDS
+						TEA : </a></strong> <a href="/blends/darjeeling">
+					Darjeeling Blends Tea </a> | <a href="/blends/assam"> Assam Blends
+					Tea </a> |<a href="/blends/north-east-blend-teas ">
+					North East India Blends</a> | <a href="/blends/first-flush">First
+					Flush Spring Blends Tea</a> | <a href="/blends/second-flush"> Second
+					Flush Summer Blends Tea </a>
+			</div>
+
+			<div style="text-align: left;">
+				<strong> <a href="/sitemap">
+						Sitemap </a></strong>
+			</div>
+			<br>
+		</div>
+		<div class="footer-seo-text tb-cnt" style="color: #000000;text-align: left;">
+	<p style="margin-bottom: 10px;font-family: ProximaNovaSemiBold;"><b>About Teabox.com</b></p>
+<p style="margin-bottom: 30px;">
+Teabox is an online tea shop that delivers, every single day, the freshest Indian teas from estates in Darjeeling, Assam, and the Nilgiris as well as freshest teas from Nepal to tea lovers everywhere. As a company, we believe tea is so much more than just a staple part of mornings and meals.  An exceptional cup of tea, for us, has a more exalted place in the everyday life. 
+</p>
+<p style="margin-bottom: 10px;font-family: ProximaNovaSemiBold;"><b>
+Why Teabox.com
+</b></p>
+<p style="margin-bottom: 30px;">
+We believe tea is endlessly engaging, brings people together, provides a sense of peace and well-being, and grants of a moment to yourself when you most need it. Great tea touches upon art, defines a sense of culture, marks a ritual, and offers a sense of connoisseurship. But a truly remarkable cup of tea is one which enhances the everyday.
+</p>
+<p style="margin-bottom: 30px;">
+This is the goal we are trying to achieve through our tea store - to bring great tea into the everyday life.
+</p>
+<p style="margin-bottom: 10px;font-family: ProximaNovaSemiBold;"><b>
+Freshest teas that make a delicious cup 
+</b></p>
+<p style="margin-bottom: 30px;">
+So, what makes our teas great? Well, it’s got a lot to do with freshness. And the reason why freshness matters is because tea is an agricultural product. So, fresher tea tastes better and is healthier. We buy the first pick of every season and take utmost care when it comes to storage and packaging. We work directly with tea growers who know to hand-select tea leaves for their texture, color, scent, and purity. And by sourcing the highest-quality Indian teas directly from the most capable and most interesting growers and estates, Teabox’s online tea shop makes it easy for anyone—from tea experts to complete novices—to experience the freshness, delicate aromas, flavors, and authenticity that fine loose-leaf tea has to offer. We can do this because we’re based in the same foothills and gardens where our teas are grown.
+</p>
+<p style="margin-bottom: 10px;font-family: ProximaNovaSemiBold;"><b>
+Shopping with Teabox.com
+</b></p>
+<p style="margin-bottom: 30px;">
+With Teabox, shopping for fresh loose-leaf tea from India is easy because you make an informed purchase and you know exactly where your tea is coming from. Every batch of tea we procure is put up on our online tea store along with its invoice number, date of plucking, specialty and tea grade. And so, every time you sip one of our expert-curated teas, you are in the company of the most authentic tea experience there is.
+</p>
+<p style="padding-bottom: 30px;">
+For someone who loves tea, commitment to good tea comes naturally. We are trying to uphold this commitment every day with Teabox. 
+</p>
+<div>
+	<img src="https://cdn.teabox.com/skin/frontend/enterprise/teabox/images/Teabox_Logo.svg" alt="Teabox " style="width: 160px;">
+	<br><br>
+	<a href="https://www.teabox.com" style="padding-right: 10px;">United States</a><span style="padding-right: 10px;display: inline-block;">|</span><span style="padding-right: 10px;">India</span><span style="padding-right: 10px;display: inline-block;">|</span><span style="padding-right: 10px;">United Kingdom</span><span style="padding-right: 10px;display: inline-block;">|</span><span style="padding-right: 10px;">Australia</span><span style="padding-right: 10px;display: inline-block;">|</span><a href="https://www.teabox.com/ru" style="padding-right: 10px;">Russia</a>
+</div>
+</div>
+	</div>
+
+	<script type="text/javascript">
+function isValidEmailAddress(emailAddress) {
+	var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
+	return pattern.test(emailAddress);
+};
+//]]>
+</script>
+	<script type="text/javascript">
+	window.fbAsyncInit = function() {
+		FB.init({appId: '159293994272095', version: 'v2.0', status: true, cookie: true, xfbml: true});};
+		(function() {
+			var e = document.createElement('script');
+			e.type = 'text/javascript';
+			e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
+			e.async = true;
+			if(document.getElementById('fb-root')){
+				document.getElementById('fb-root').appendChild(e);
+			}
+		}());
+	</script>
+	<!-- AppId of FB is changed by Khan and below commented FB is commented -->
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f75ca295ef2624&amp;origin=https%3A%2F%2Fwww.teabox.com" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#version=v2.0&xfbml=1&appId=159293994272095";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="footerstoreselector" class="hidden-sm hidden-xs hidden">
+<div class="tb-cnt">
+<div class="we-set-stores col-lg-6">
+	<p>Hi! We'd like to set these regional settings for you:</p><p> <strong class="language">English</strong>, <strong class="currency">$ USD</strong>, <strong class="country">United States</strong>.</p>
+	
+</div>
+<div class="change-store-controls col-lg-6">
+<a class="prim-cta-3" href="javascript:void(0);" onclick="yesSetStore();">Yes, that's right.</a><a class="sec-cta-2" href="javascript:void(0);" style="border:none;" onclick="noChangeStore(event);">No, I need to change it.</a>
+</div>
+<div class="thank-you hidden"><p><span>Thank you for the confirmation! You can always change the regional settings at the top of the page.</span></p>
+</div>
+</div>
+</div>
+
+</footer>
+    

@@ -1,0 +1,12 @@
+<example-viewer [extensions]="['HTML', 'TS']" filesPath="toast/toast"
+				exampleTitle="SHOWCASE.DEMO.TOAST.EXAMPLE">
+	<button class="toast-demo-button" color="primary" mat-raised-button (click)="openToast(exampleMessage)">{{ 'SHOWCASE.DEMO.TOAST.BUTTON_INFO' | translate }}</button>
+	<button class="toast-demo-button" color="alert" mat-raised-button (click)="openErrorToast(exampleMessage)">{{ 'SHOWCASE.DEMO.TOAST.BUTTON_ALERT' | translate }}</button>
+	<button class="toast-demo-button" color="warn" mat-raised-button (click)="openWarningToast(exampleMessage)">{{ 'SHOWCASE.DEMO.TOAST.BUTTON_WARNING' | translate }}</button>
+	<button class="toast-demo-button" color="primary" mat-stroked-button (click)="openToast(exampleMessage, 0, 'dismiss')">{{ 'SHOWCASE.DEMO.TOAST.BUTTON_ACTION' | translate }}</button>
+	<button class="toast-demo-button" color="alt" (click)="openToast(exampleMessage, 8000)" mat-stroked-button>{{ 'SHOWCASE.DEMO.TOAST.BUTTON_DELAY_LONG' | translate }}</button>
+	<button class="toast-demo-button" color="alt" (click)="openToast(exampleMessage, 2000)" mat-stroked-button>{{ 'SHOWCASE.DEMO.TOAST.BUTTON_DELAY_SHORT' | translate }}</button>
+	<button class="toast-demo-button" color="alt" [disabled]= "hideDisabled" (click)="hideToast()" mat-stroked-button>{{ 'SHOWCASE.DEMO.TOAST.BUTTON_HIDE' | translate }}</button>
+	<br/>
+	<div class="toast-demo-message">{{ messageText | translate }}</div>
+</example-viewer>

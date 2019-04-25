@@ -1,0 +1,53 @@
+<div class="container">
+    {{mode}}
+    {{currentItem.amount}}
+    {{currentItem.text}}
+    
+  
+  <div *ngIf="!mode" id="data-list" class="row">
+      <ul class="col-sm-4 col-sm-offset-4">
+
+          <li  *ngFor="let item of products" (click)="selectItem(item)">
+               {{ item.title }}
+          </li>
+
+      </ul>
+  </div>
+    {{mode}}
+
+            <button *ngIf="!mode" type="submit"
+                (click)="changeMode('add')">Add New Product</button>
+  
+  <div *ngIf="mode">  
+ 
+  <div id="data-form" class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+          <form>
+              <div class="form-group">
+
+                  <!-- BIND THIS VALUE TO productData.text IN ANGULAR -->
+                  <input type="text" class="form-control input-lg text-center" 
+                  placeholder="Product Name" [(ngModel)]="currentItem.title" required>
+                  
+                  <!-- BIND THIS VALUE TO productData.text IN ANGULAR -->
+                  <input type="text" class="form-control input-lg text-center"
+                         placeholder="cuisine" [(ngModel)]="currentItem.cuisine">
+
+                  
+                  <!-- BIND THIS VALUE TO productData.text IN ANGULAR -->
+                  <input type="text" class="form-control input-lg text-center" 
+                  placeholder="Product No" [(ngModel)]="currentItem.no" >
+
+
+                  
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg"
+                (click)="save()">Save</button>
+          </form>
+      </div>
+  </div>
+
+</div>
+
+</div>

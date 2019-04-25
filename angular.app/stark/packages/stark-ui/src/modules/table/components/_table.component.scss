@@ -1,0 +1,102 @@
+/* ============================================================================== */
+/*  S t a r k   T a b l e                                                         */
+/* ============================================================================== */
+/* stark-ui: src/modules/table/components/table/_table.component.scss */
+
+.stark-table {
+  .header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .transcluded {
+      flex-grow: 1;
+    }
+
+    .actions {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      &.actions-alt {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+
+    th {
+      .priority {
+        display: none;
+      }
+
+      &.filtering {
+        &.mat-header-cell {
+          .header-cell-content {
+            .button-filter {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      &.mat-column-select {
+        width: 1%;
+        white-space: nowrap;
+      }
+
+      &.mat-header-cell {
+        padding-right: 24px;
+
+        .header-cell-content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: start;
+
+          .sort-header {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex: 1 1 0%;
+            user-select: none;
+
+            &:hover {
+              .order-tip {
+                opacity: 0.3;
+              }
+            }
+          }
+
+          .mat-icon {
+            &.order-tip {
+              opacity: 0;
+            }
+          }
+
+          .button-filter {
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+
+    .header-cell-content.sortable {
+      cursor: pointer;
+    }
+
+    &.multi-sorting {
+      th .priority {
+        display: block;
+      }
+    }
+  }
+
+  .mat-table-filter {
+    padding: 0 10px;
+  }
+}
+
+/* END stark-ui: src/modules/table/components/table/_table.component.scss */

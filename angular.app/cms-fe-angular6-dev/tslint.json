@@ -1,0 +1,42 @@
+{
+  "extends": "tslint:recommended",
+  "rulesDirectory": ["src/"],
+  "rules": {
+    "forin": false,
+    "no-empty": false,
+    "variable-name": false,
+    "import-spacing": false,
+    "ordered-imports": false,
+    "max-line-length": false,
+    "object-literal-sort-keys": false,
+    "quotemark": [true, "single", "avoid-escape"],
+    "no-console": false,
+    "member-ordering": false,
+    "max-classes-per-file": [false, 1],
+    "indent": [true, "spaces", 2],
+    "curly": false,
+    "space-before-function-paren": [true, "always"],
+    "one-variable-per-declaration": false,
+    "no-var-requires": false,
+    "no-shadowed-variable": false,
+    "no-irregular-whitespace": false,
+    "object-literal-key-quotes": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-typecast",
+      "check-type",
+      "check-type-operator",
+      "check-preblock"
+    ],
+    "triple-equals": false,
+    "eofline": true,
+    "interface-name": [true, "always-prefix"],
+    "semicolon": [true, "always", "ignore-interfaces", "ignore-bound-class-methods"]
+  }
+}

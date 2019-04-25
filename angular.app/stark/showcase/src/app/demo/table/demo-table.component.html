@@ -1,0 +1,57 @@
+<h1 class="mat-display-3" translate>SHOWCASE.DEMO.TABLE.TITLE</h1>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.SHARED.EXAMPLE_VIEWER_LIST</h1>
+	<example-viewer [extensions]="['HTML', 'TS', 'SCSS']" filesPath="table/regular" exampleTitle="SHOWCASE.DEMO.TABLE.REGULAR">
+		<stark-table htmlId="table-regular"
+					 class="shadowed"
+					 [columnProperties]="columnsProperties"
+					 [customTableActions]="customTableActions"
+					 [data]="dummyData"
+					 [filter]="filter"
+					 [multiselect]="true"
+					 multiSort
+					 [orderProperties]="orderProperties"
+					 [tableRowsActionBarConfig]="tableRowsActionBarConfig"
+					 [paginationConfig]="paginationConfig1">
+			<header><h1 translate>SHOWCASE.DEMO.TABLE.REGULAR</h1></header>
+		</stark-table>
+	</example-viewer>
+
+	<example-viewer [extensions]="['HTML', 'TS','SCSS']" filesPath="table/with-alternative-action-bar"
+					exampleTitle="SHOWCASE.DEMO.TABLE.WITH_ALTERNATIVE_ACTION_BAR">
+		<stark-table htmlId="table-with-alternative-action-bar"
+					 [columnProperties]="columnsProperties"
+					 [customTableActions]="customTableActions"
+					 customTableActionsType="alt"
+					 [data]="dummyData"
+					 [filter]="filter"
+					 [multiselect]="true"
+					 multiSort
+					 [orderProperties]="orderProperties"
+					 [tableRowsActionBarConfig]="tableRowsActionBarConfig"
+					 [paginationConfig]="paginationConfig2">
+			<header><h1 translate>SHOWCASE.DEMO.TABLE.WITH_ALTERNATIVE_ACTION_BAR</h1></header>
+		</stark-table>
+	</example-viewer>
+
+	<example-viewer [extensions]="['HTML', 'TS','SCSS']" filesPath="table/with-transcluded-action-bar"
+					exampleTitle="SHOWCASE.DEMO.TABLE.WITH_TRANSCLUDED_ACTION_BAR">
+		<stark-table htmlId="table-with-transcluded-action-bar"
+					 [columnProperties]="columnsProperties"
+					 [data]="dummyData"
+					 [filter]="filter"
+					 [multiselect]="true"
+					 multiSort
+					 [orderProperties]="orderProperties"
+					 [tableRowsActionBarConfig]="tableRowsActionBarConfig"
+					 [paginationConfig]="paginationConfig3">
+			<header>
+				<div class="example-transcluded">
+					<h1 translate>SHOWCASE.DEMO.TABLE.WITH_TRANSCLUDED_ACTION_BAR</h1>
+					<stark-action-bar [actionBarConfig]="{actions: customTableActions}"
+									  mode="compact"></stark-action-bar>
+				</div>
+			</header>
+		</stark-table>
+	</example-viewer>
+</section>

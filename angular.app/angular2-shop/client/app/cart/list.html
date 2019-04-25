@@ -1,0 +1,27 @@
+<md-content layout="row" layout-align="center start" layout-fill layout-margin>
+    <md-whiteframe layout="column" flex flex-md="50" flex-lg="50" flex-gt-lg="33" class="md-whiteframe-z2" layout-fill>
+        <md-toolbar>
+            <div layout="row">
+                <h3 class="md-display-1"> My Shopping Cart </h3>
+            </div>
+        </md-toolbar>
+        <div class="" *ngFor="let item of items; let index = index">
+            
+            <cart-line [item]="item"></cart-line>
+        </div>
+        <md-list>
+            <md-subheader class="md-no-sticky"></md-subheader>
+            <md-list-item class="md-3-line" >
+                <div class="md-list-item-text" layout="column">
+                    
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <button md-raised-button color="primary" type="submit" aria-label="login" (click)="order()">
+                Confirm Order
+            </button>
+
+        </md-list>
+    </md-whiteframe>
+</md-content>
+

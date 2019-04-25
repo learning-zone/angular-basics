@@ -1,0 +1,97 @@
+
+<h2>测试用例</h2>
+<form nz-form style="margin-top: 20px;">
+  <!-- http状态码测试 -->
+  <div style="margin-bottom: 20px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;padding: 10px 0">
+    <nz-form-item nz-row>
+      <h3>http状态码测试</h3>
+      <div nz-col nzSm="24" nzXl="24">
+        <nz-form-label nzRequired nzSpan="4">测试状态码</nz-form-label>
+        <nz-form-control nzSpan="4">
+          <input nz-input name="status" required [(ngModel)]="status" pattern="^[1-5]\d{2}$">
+        </nz-form-control>
+        <div nzSpan="4" nzOffset="2">
+          <button nz-button nzType="primary" (click)="testStatus()" >发送</button>
+        </div>
+      </div>
+    </nz-form-item>
+  </div>
+
+  <!-- ip地址测试 -->
+  <div style="margin-bottom: 20px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;padding: 10px 0">
+    <h3>ip地址测试</h3>
+    <nz-form-item nz-row>
+      <div nz-col nzSm="24" nzXl="24">
+        <nz-form-label nzRequired nzSpan="4">ip</nz-form-label>
+        <nz-form-control nzSpan="6">
+          <input nz-input name="ip" required [(ngModel)]="ip" nzPlaceHolder="请输入ip地址，如：1.1.1.1"/>
+        </nz-form-control>
+        <div nzSpan="4" nzOffset="2">
+          <button nz-button nzType="primary" (click)="queryIPGeo()" >发送</button>
+        </div>
+      </div>
+    </nz-form-item>
+    <div nz-form-item nz-row >
+      <div nz-col [nzSm]="16" [nzXl]="16" [nzOffset]="4">
+        <textarea nz-input name="ipGeo" [(ngModel)]="ipGeo" rows="25" nzPlaceHolder="ip地理位置"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文件上传测试 -->
+  <div nz-row style="margin-bottom: 20px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;padding: 10px 0">
+    <h3>文件上传测试</h3>
+    <nz-form-item nz-row>
+      <div nz-col nzSm="24" nzXl="24">
+        <nz-form-label nzRequired nzSpan="4">文件上传测试</nz-form-label>
+        <nz-form-control nzSpan="8">
+          <app-upload-file [(ngModel)]="uploadFile" maxSize="100" name="uploadFile"></app-upload-file>
+        </nz-form-control>
+      </div>
+    </nz-form-item>
+  </div>
+
+  <!-- api接口测试 -->
+  <div style="margin-bottom: 20px;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;padding: 10px 0">
+    <h3>api接口测试</h3>
+    <nz-form-item nz-row>
+      <div nz-col nzSm="24" nzXl="24">
+        <nz-form-label nzRequired nzSpan="4">url</nz-form-label>
+        <nz-form-control nzSpan="12">
+          <input nz-input name="urlObj" required [(ngModel)]="urlObj.url" nzPlaceHolder="url(如：/user/123)" pattern="^(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"/>
+        </nz-form-control>
+        <nz-form-control nzSpan="2" nzOffset="1">
+          <nz-select name="method" required [(ngModel)]="urlObj.method">
+            <nz-option nzLabel="GET" [nzValue]="'GET'"> </nz-option>
+            <nz-option nzLabel="POST" [nzValue]="'POST'"> </nz-option>
+            <nz-option nzLabel="PUT" [nzValue]="'PUT'"> </nz-option>
+            <nz-option nzLabel="DELETE" [nzValue]="'DELETE'"> </nz-option>
+          </nz-select>
+          <div nz-form-explain *ngIf="false">必须填写!</div>
+        </nz-form-control>
+        <div nzSpan="4" nzOffset="1">
+          <button nz-button nzType="primary" (click)="testUrl()">发送</button>
+        </div>
+      </div>
+    </nz-form-item>
+
+    <nz-form-item nz-row >
+      <nz-form-label nzSpan="4" nzRequired>参数(json格式)</nz-form-label>
+      <nz-form-control nzSm="16" nzXl="16">
+        <textarea nz-input name="params" [(ngModel)]="urlObj.params" rows="4" nzPlaceHolder='如：{"id":123,"name":"keefe"}'></textarea>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item nz-row>
+      <div nz-col nzSm="16" nzXl="16" nzOffset="4">
+        <textarea nz-input name="jsonData" [(ngModel)]="jsonData" rows="30" nzPlaceHolder="返回结果"></textarea>
+      </div>
+    </nz-form-item>
+  </div>
+
+  <!-- <nz-form-item nz-row>
+    <nz-form-control nz-col nzSpan="20" nzOffset="2">
+      <button nz-button nzType="primary">保存</button>
+    </nz-form-control>
+  </nz-form-item> -->
+
+</form>

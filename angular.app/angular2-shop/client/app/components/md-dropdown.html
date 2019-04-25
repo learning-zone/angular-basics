@@ -1,0 +1,31 @@
+<style>
+</style>
+
+Items {{items|json}}
+<div class="md-dropdown-outer-container">
+    <input type="text" 
+           name="md-dropdown-input" 
+           class="md-dropdown-input" [(ngModel)]="itemText" (change)="change($event)"
+            (keyup)="change($event)" /> 
+    <span class="arrow-down" (click)=toggle()></span>
+    {{itemText}}
+    <div *ngIf="showPopup" class="md-dropdown-popup-container">
+        <ul class="md-dropdown-popup">
+            <li class="md-dropdown-item"
+                (click1) ="select(item)" 
+                *ngFor="let item of items | filterItems :itemText ; let index = index ">
+                <a style="vertical-align:middle">
+                    <span style="vertical-align:central;min-height:42px;min-width:80px;display:inline-block">
+                    {{item}}  
+                        <ng-content></ng-content>
+                    </span>
+
+                        <img src="https://source.unsplash.com/category/food/40x40/?apple" />
+                 
+                </a>
+             </li>           
+        </ul>
+    </div>
+</div> 
+
+

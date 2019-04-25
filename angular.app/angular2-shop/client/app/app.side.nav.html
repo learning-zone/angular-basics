@@ -1,0 +1,137 @@
+<md-sidenav-layout layout="row" fullscreen>
+    <md-sidenav #menu class="app-menu" >
+        <md-toolbar >
+            <h3>ng2-shop</h3>
+        </md-toolbar>
+        <md-list>
+
+
+            <md-list-item>
+
+                <md-button md-button router-active [routerLink]=" ['CartList'] ">
+                    Cart
+                </md-button>
+            </md-list-item>
+            <md-list-item>
+
+                <md-button md-button router-active [routerLink]=" ['ShopSearch'] ">
+                    Search
+                </md-button>
+            </md-list-item>
+            <md-list-item>
+
+                <button md-button router-active [routerLink]=" ['Test'] ">
+                    Test
+                </button>
+
+            </md-list-item>
+            <md-list-item>
+
+
+                <button md-button router-active [routerLink]=" ['ShopAdd'] ">
+                    Shop Add
+                </button>
+            </md-list-item>
+            <md-list-item>
+                <button md-button router-active [routerLink]=" ['ShopList'] ">
+                    Shop List
+                </button>
+            </md-list-item>
+            <md-list-item>
+
+                <button md-button router-active [routerLink]=" ['Products'] ">
+                    Products Flux
+                </button>
+            </md-list-item>
+            <md-list-item>
+                <button md-button router-active [routerLink]=" ['Product'] ">
+                    Products
+                </button>
+            </md-list-item>
+            <md-list-item>
+
+                <button md-button router-active [routerLink]=" ['Signin'] ">
+                    Login
+                </button>
+            </md-list-item>
+
+</md-list>
+
+    </md-sidenav>
+
+    <md-content #content>
+        <md-toolbar color="primary" class="hero">
+
+         
+            <button md-button
+                    class="md-hamburger md-icon-button"
+                    xx-hide-gt-lg
+                    (click)="menu.open($event)"
+                    aria-label="Home">
+                <i md-icon class="md-dark">menu</i>
+            </button>
+
+
+
+
+            <md-button md-button router-active [routerLink]=" ['CartList'] ">
+                Cart
+            </md-button>
+
+            <md-button md-button router-active [routerLink]=" ['ShopSearch'] ">
+                Search
+            </md-button>
+
+            <button md-button router-active [routerLink]=" ['Test'] ">
+                Test
+            </button>
+
+
+
+            <button md-button router-active [routerLink]=" ['ShopAdd'] ">
+                Shop Add
+            </button>
+            <button md-button router-active [routerLink]=" ['ShopList'] ">
+                Shop List
+            </button>
+
+            <button md-button router-active [routerLink]=" ['Products'] ">
+                Products Flux
+            </button>
+            <button md-button router-active [routerLink]=" ['Product'] ">
+                Products
+            </button>
+
+            <button md-button router-active [routerLink]=" ['Signin'] ">
+                Login
+            </button>
+
+            <button md-button router-active [routerLink]=" ['FileUpload'] ">
+                File
+            </button>
+
+            <button md-button router-active [routerLink]=" ['Demo'] ">
+                Demo
+            </button>
+
+                <h1>
+                    
+                </h1>
+
+                <h1 md-peekaboo
+                    breakAction="hide">
+                    {{navigation?.currentTitle}}
+                </h1>
+            </md-toolbar>
+            
+        
+            <md-content >
+                <router-outlet></router-outlet>
+            </md-content>
+        
+        
+
+    </md-content>
+</md-sidenav-layout>
+
+

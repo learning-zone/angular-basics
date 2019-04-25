@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - node
+  - "5"
+  - "4"
+sudo: false
+branches:
+only:
+  - master
+script: npm test
+notifications:
+  slack: vulgardisplayofpower:RQzt5qlhpuN4caO9OavVbmoi

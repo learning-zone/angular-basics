@@ -1,0 +1,19 @@
+<table class="table table-hover table-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" i18n>Course Name</th>
+      <th scope="col" i18n>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{course.course.name}}</td>
+      <td>
+        <a class="btn btn-info" href="teacher-questions/{{course.courseId}}">
+          <span class="fa fa-info-circle" aria-hidden="true"></span>
+          <span class="small" i18n>  View Conversations</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

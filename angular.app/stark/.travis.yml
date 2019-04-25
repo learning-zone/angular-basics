@@ -1,0 +1,66 @@
+language: node_js
+node_js:
+  - "8"
+  - "6"
+
+dist: trusty
+sudo: false # better for performance
+
+before_install:
+  - echo $TRAVIS_COMMIT
+  - echo $TRAVIS_TAG
+  - echo $TRAVIS_BRANCH
+  - echo $TRAVIS_BUILD_NUMBER
+  - echo $TRAVIS_REPO
+  - AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+  - echo $AUTHOR_NAME
+  - export TZ=Europe/Brussels
+  - npm i -g npm@5.8.0
+  - npm i -g greenkeeper-lockfile@2.4.0
+  # This ensures that we are authenticated without requiring to have an actual .npmrc file within the project
+  - 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc'
+
+install:
+  # Create file & folder for Travis logs
+  # cfr scripts/_travis-fold.sh
+  - mkdir -p $LOGS_DIR
+  - touch $LOGS_DIR/build-perf.log
+  - if [[ ${TRAVIS_BRANCH} =~ ^greenkeeper.*$ || ${AUTHOR_NAME} == "greenkeeper[bot]" ]]; then npm run clean:modules:all; fi
+  - if [[ ${TRAVIS_BRANCH} =~ ^greenkeeper.*$ || ${AUTHOR_NAME} == "greenkeeper[bot]" ]]; then npm i --no-optional; else npm ci; fi
+  - if [[ ${TRAVIS_BRANCH} =~ ^greenkeeper.*$ || ${AUTHOR_NAME} == "greenkeeper[bot]" ]]; then npm run install:travis:all; else npm run install:ci:all; fi
+
+env:
+  global:
+    - LOGS_DIR=/tmp/stark/logs
+    - LOGS_FILE=/tmp/stark/logs/build-perf.log
+
+branches:
+  only:
+    - master
+    - /^greenkeeper/.*$/
+    - /^\d+\.\d+\.\d(-alpha\.\d+|-beta\.\d+)?$/
+
+cache:
+  directories:
+    - $HOME/.npm
+
+before_script:
+  - greenkeeper-lockfile-update
+
+# Not needed since we use Puppeteer in karma.conf.ci.js
+# It downloads Chrome itself and works with or without Travis
+#addons:
+#  chrome: stable
+
+script:
+  - npm run lint:all
+  - npm run test:ci:all
+  - npm run docs:coverage
+  - if [[ ${TRAVIS_TAG} == "" && ${TRAVIS_EVENT_TYPE} != "cron" ]]; then travis_wait npm run build:showcase:ghpages:ci-test-env; else travis_wait npm run build:showcase:ghpages; fi
+  - npm run docs:publish
+  - npm run release:publish
+  - bash ./scripts/ci/print-logs.sh
+
+after_success:
+  - npm run test:ci:coveralls:combined
+  - greenkeeper-lockfile-upload

@@ -1,0 +1,26 @@
+.body{
+    background-color: #1E1E1E;
+    width: 100%;
+    height: 270px;;
+}
+.color1{
+    font-size: 20px;
+    font-family: Arial;
+    color: white;
+}
+.padding{
+    margin-top: 15%;
+    margin-left: 42%;
+}
+.color{
+    font-size: 15px;
+    font-family: Arial;
+    color: white;
+    opacity: .5;    
+}
+a{
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    opacity: .5 !important;
+}

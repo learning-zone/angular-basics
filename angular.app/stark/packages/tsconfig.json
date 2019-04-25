@@ -1,0 +1,32 @@
+{
+  // this config is only used by build.sh
+  "extends": "./stark-build/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "../dist/all/@nationalbankbelgium",
+    "module": "commonjs",
+    "importHelpers": false,
+    "paths": {
+      "rxjs/*": ["../node_modules/rxjs/*"],
+      "@angular/*": ["../node_modules/@angular/*"],
+      "@ngrx/*": ["./stark-core/node_modules/@ngrx/*"],
+      "@ngx-translate/*": ["./stark-core/node_modules/@ngx-translate/*"],
+      "@uirouter/*": ["./stark-core/node_modules/@uirouter/*"],
+      "moment": ["./stark-core/node_modules/moment"],
+      "environments/environment": ["./stark-core/src/common/environment"],
+      "@nationalbankbelgium/stark-*": ["./stark-*"]
+    },
+    "skipDefaultLibCheck": true,
+    "inlineSourceMap": true,
+    "sourceMap": false,
+    "typeRoots": [
+      "./stark-build/node_modules/@types",
+      "./stark-build/typings",
+      "./stark-core/node_modules/@types",
+      "./stark-testing/node_modules/@types",
+      "./stark-ui/node_modules/@types"
+    ]
+  },
+  "exclude": ["stark-build/config-stark"]
+}

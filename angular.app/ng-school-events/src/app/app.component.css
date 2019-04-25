@@ -1,0 +1,55 @@
+  /* avatarContainer needed to position the button. Adjust the width as needed */
+.avatarContainer {
+}
+
+.avatarContainer img {
+  width: 40px;
+  height: auto;
+}
+
+.avatarContainer .btn {
+  position: absolute;
+  top: 71%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.avatarContainer .btn:hover {
+  background-color:transparent;
+}
+
+.fa-stack[data-count]:after{
+  position:absolute;
+  right:0%;
+  top:1%;
+  content: attr(data-count);
+  font-size:50%;
+  padding:.6em;
+  border-radius:999px;
+  line-height:.75em;
+  color: white;
+  background:rgba(255,0,0,.85);
+  text-align:center;
+  min-width:2em;
+  font-weight:bold;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.cross-validation-error input {
+  border-left: 5px solid red;
+}

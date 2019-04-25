@@ -1,0 +1,12 @@
+<mat-card class="news-item">
+	<div class="mat-card-title">
+		<h2><ng-content select=".news-item-title"></ng-content></h2>
+	</div>
+	<div class="mat-card-subtitle">
+		<h4>Release: {{ release }} <br>Date: {{ newsDate }}
+		</h4>
+	</div>
+	<div class="mat-card-content">
+		<ng-content select=".news-item-content"></ng-content>
+	</div>
+</mat-card>

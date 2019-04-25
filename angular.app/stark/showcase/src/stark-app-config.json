@@ -1,0 +1,64 @@
+{
+  "rootStateUrl": null,
+  "rootStateName": null,
+  "homeStateName": null,
+  "errorStateName": null,
+  "defaultLanguage": "en",
+  "logoutUrl": "http://localhost:5001/logout",
+  "baseUrl": "/",
+  "sessionTimeout": 1337,
+  "sessionTimeoutWarningPeriod": 20,
+  "keepAliveUrl": "http://localhost:5000/keepalive",
+  "keepAliveInterval": 20,
+  "keepAliveDisabled": true,
+  "angularDebugInfoEnabled": null,
+  "debugLoggingEnabled": null,
+  "loggingFlushPersistSize": 50,
+  "loggingFlushApplicationId": "STARK",
+  "loggingFlushResourceName": "logging",
+  "loggingCorrelationIdHttpHeaderName": "correlation-id",
+  "routerLoggingEnabled": null,
+  "publicApp": false,
+  "backends": {
+    "default": {
+      "mock": "json-server",
+      "name": "default",
+      "url": "http://localhost:5000",
+      "authenticationType": 1,
+      "devAuthenticationEnabled": true,
+      "devAuthenticationRolePrefix": "",
+      "loginResource": "",
+      "token": ""
+    },
+    "userProfile": {
+      "mock": "json-server",
+      "name": "userProfile",
+      "url": "http://localhost:5000",
+      "authenticationType": 1,
+      "devAuthenticationEnabled": false,
+      "devAuthenticationRolePrefix": "",
+      "loginResource": "",
+      "token": ""
+    },
+    "logging": {
+      "mock": "json-server",
+      "name": "logging",
+      "url": "http://localhost:5000",
+      "authenticationType": 1,
+      "devAuthenticationEnabled": false,
+      "devAuthenticationRolePrefix": "",
+      "loginResource": "",
+      "token": ""
+    },
+    "rbac": {
+      "mock": "json-server",
+      "name": "rbac",
+      "url": "http://localhost:5000",
+      "authenticationType": 1,
+      "devAuthenticationEnabled": false,
+      "devAuthenticationRolePrefix": "",
+      "loginResource": "",
+      "token": ""
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<h4>添加文章类型</h4>
+<form nz-form #form="ngForm">
+  <div nz-row class="markdown">
+    <blockquote><p>基本信息</p></blockquote>
+  </div>
+
+  <nz-form-item nz-row>
+    <nz-form-label nzSpan="6">类型名称</nz-form-label>
+    <nz-form-control nzSpan="14" [nzValidateStatus]="type_name.control">
+      <input nz-input required name="type_name" placeholder="类型名称" [(ngModel)]="addArticleType.type_name" #type_name="ngModel">
+      <div nz-form-explain *ngIf="type_name.dirty&&type_name.invalid">必须填写!</div>
+    </nz-form-control>
+
+  </nz-form-item>
+
+  <nz-form-item nz-row>
+    <nz-form-label nzSpan="6">备注</nz-form-label>
+    <nz-form-control nzSpan="14">
+      <textarea nz-input name="remark" placeholder="备注" [(ngModel)]="addArticleType.remark" [nzAutosize]="{ minRows: 2, maxRows: 6 }"></textarea>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item nz-row>
+    <nz-form-control nzSpan="20" nzOffset="4">
+      <button nz-button nzType="primary" (click)="save()" [nzLoading]="isConfirmLoading">保存</button>
+      <button nz-button nzType="default" (click)="back()">取消</button>
+    </nz-form-control>
+
+  </nz-form-item>
+
+</form>

@@ -1,0 +1,17 @@
+<md-list-item *ngIf="!item.removed" class="">
+    <div class="md-list-item-text" layout="column">
+        
+        <a router-active [routerLink]=" ['ProductDetails',{'id' :item._id }] "> {{ item.title }} @ {{ item.rate }}</a>
+
+        <md-input-container>
+            <md-input placeholder="Quantity" [(ngModel)]="item.quantity" aria-label="quantity">
+            </md-input> # {{item.quantity*item.rate}}
+
+        </md-input-container>
+        <button md-raised-button color="primary" (click)="remove()"
+                type="submit" aria-label="Search">
+            Remove
+        </button>
+    </div>
+</md-list-item>
+

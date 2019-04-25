@@ -1,0 +1,14 @@
+div {
+  & h4 {
+    color: #888;
+  }
+
+  & h2 {
+    color: #000;
+    size: 120%;
+  }
+}
+
+.news-item {
+  margin-bottom: 15px;
+}

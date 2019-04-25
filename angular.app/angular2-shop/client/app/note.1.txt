@@ -1,0 +1,126 @@
+<div *ngFor="let party of parties">
+      <sebm-google-map-marker
+              *ngIf="party.location.lat"
+              [latitude]="party.location.lat"
+              [longitude]="party.location.lng">
+      </sebm-google-map-marker>
+    </div>ss
+    
+    , MouseEvent
+    
+    import {ANGULAR2_GOOGLE_MAPS_DIRECTIVES, MouseEvent} from 'angular2-google-maps/core';
+ 
+ get lat(): Number {
+    return this.party && this.party.location.lat;
+  }
+ 
+  get lng(): Number {
+    return this.party && this.party.location.lng;
+  }
+ 
+  mapClicked($event: MouseEvent) {
+    this.party.location.lat = $event.coords.lat;
+    this.party.location.lng = $event.coords.lng;
+  }
+  
+  
+  <sebm-google-map
+        [latitude]="lat || centerLat"
+        [longitude]="lng || centerLng"
+        [zoom]="8"
+        (mapClick)="mapClicked($event)">
+  <sebm-google-map-marker
+          *ngIf="lat && lng"
+          [latitude]="lat"
+          [longitude]="lng">
+  </sebm-google-map-marker>
+</sebm-google-map>
+
+if (window.navigator && window.navigator.geolocation) {
+				window.navigator.geolocation.getCurrentPosition(
+					(position) => {
+						observer.next(position);
+            observer.complete();
+					},
+          
+          
+          (position) => {
+          let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+ 
+          let mapOptions = {
+              center: latLng,
+              zoom: 15,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+ 
+          this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      },
+      
+      
+      
+      npm install ng2-file-upload --save
+      
+      http://ng2-uploader.com/#docs
+      
+      
+      
+      
+      $scope.getPhoto = function() {
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 75, targetWidth: 320,
+    targetHeight: 320, destinationType: 0 }); 
+    //destination type was a base64 encoding
+    function onSuccess(imageData) {
+        //preview image on img tag
+        $('#image-preview').attr('src', "data:image/jpeg;base64,"+imageData);
+        //setting scope.lastPhoto 
+        $scope.lastPhoto = dataURItoBlob("data:image/jpeg;base64,"+imageData);
+    }
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
+} 
+function dataURItoBlob(dataURI) {
+// convert base64/URLEncoded data component to raw binary data held in a string
+ var byteString = atob(dataURI.split(',')[1]);
+ var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+
+ var ab = new ArrayBuffer(byteString.length);
+ var ia = new Uint8Array(ab);
+ for (var i = 0; i < byteString.length; i++)
+ {
+    ia[i] = byteString.charCodeAt(i);
+ }
+
+ var bb = new Blob([ab], { "type": mimeString });
+ return bb;
+}
+
+
+<img ng-src="data:image/jpeg;base64,{{image}}" />
+
+
+
+$scope.upload = function() {
+    var url = '';
+    var fd = new FormData();
+
+    //previously I had this
+    //angular.forEach($scope.files, function(file){
+        //fd.append('image',file)
+    //});
+
+    fd.append('image', $scope.lastPhoto);
+
+    $http.post(url, fd, {
+
+        transformRequest:angular.identity,
+        headers:{'Content-Type':undefined
+        }
+    })
+    .success(function(data, status, headers){
+        $scope.imageURL = data.resource_uri; //set it to the response we get
+    })
+    .error(function(data, status, headers){
+
+    })
+}

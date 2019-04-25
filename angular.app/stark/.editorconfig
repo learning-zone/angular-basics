@@ -1,0 +1,30 @@
+# This file is for unifying the coding style for different editors and IDEs.
+# More information at http://editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file.
+# Tab for indentation, whitespace trimming and UTF-8 encoding
+[*]
+end_of_line = lf
+insert_final_newline = true
+indent_style = tab
+trim_trailing_whitespace = false
+charset = utf-8
+
+[*.bat]
+end_of_line = crlf
+
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+
+[**.{css, pcss, scss,json,sh}]
+indent_style = space
+indent_size = 2
+
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false
+

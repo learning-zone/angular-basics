@@ -1,0 +1,11 @@
+<stark-dropdown
+		dropdownId="multipleServiceDropdown"
+		[options]="serviceDropdownOptions"
+		[value]="selectedServices"
+		optionIdProperty="id"
+		optionLabelProperty="value"
+		placeholder="SHOWCASE.DEMO.DROPDOWNS.SELECT_SERVICES"
+		(dropdownSelectionChanged)="multipleServicesDropdownOnChange($event)"
+		multipleSelect="true">
+</stark-dropdown>
+<div *ngIf="selectedServices">{{'SHOWCASE.DEMO.DROPDOWNS.SELECTED_VALUES' | translate }}: {{ selectedServices }}</div>

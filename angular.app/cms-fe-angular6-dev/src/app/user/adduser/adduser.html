@@ -1,0 +1,86 @@
+<h4>添加用户</h4>
+<form nz-form #form="ngForm">
+  <div nz-row class="markdown">
+    <blockquote><p>基本信息</p></blockquote>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="4">用户名称</nz-form-label>
+        <nz-form-control nzSpan="6" [nzValidateStatus]="username.control">
+          <input nz-input name="username" placeholder="用户名称" [(ngModel)]="addUser.username" #username="ngModel"/>
+          <div nz-form-explain *ngIf="username.dirty&&username.invalid">必须填写!</div>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="4">用户密码</nz-form-label>
+        <nz-form-control nzSpan="6" [nzValidateStatus]="password.control">
+          <input nz-input name="password" placeholder="用户密码" [(ngModel)]="addUser.password" #password="ngModel"/>
+          <div nz-form-explain *ngIf="password.dirty&&password.invalid">必须填写!</div>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="4">用户昵称</nz-form-label>
+        <nz-form-control nzSpan="6" [nzValidateStatus]="nick_name.control">
+          <input nz-input name="nick_name" placeholder="用户昵称" [(ngModel)]="addUser.nick_name" #nick_name="ngModel"/>
+          <div nz-form-explain *ngIf="nick_name.dirty&&nick_name.invalid">必须填写!</div>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="4">用户性别</nz-form-label>
+        <nz-form-control nzSpan="6" [nzValidateStatus]="sex.control">
+          <nz-select name="sex" required [(ngModel)]="addUser.sex" #sex="ngModel">
+            <nz-option nzLabel="女" [nzValue]="0"> </nz-option>
+            <nz-option nzLabel="男" [nzValue]="1"> </nz-option>
+          </nz-select>
+          <div nz-form-explain *ngIf="sex.dirty&&sex.invalid">必须填写!</div>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="4">用户类型</nz-form-label>
+        <nz-form-control nzSpan="6" [nzValidateStatus]="user_type.control">
+          <nz-select name="user_type" required [(ngModel)]="addUser.user_type" #user_type="ngModel">
+            <nz-option nzLabel="超级管理员" [nzValue]="0"> </nz-option>
+            <nz-option nzLabel="普通用户" [nzValue]="1"> </nz-option>
+            <nz-option nzLabel="测试用户" [nzValue]="9"> </nz-option>
+          </nz-select>
+          <div nz-form-explain *ngIf="user_type.dirty&&user_type.invalid">必须填写!</div>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row nzGutter="24">
+    <div nz-col nzSm="24">
+      <nz-form-item>
+        <nz-form-label nzSpan="4">备注</nz-form-label>
+        <nz-form-control nzSpan="12" [nzValidateStatus]="remark.control">
+          <textarea nz-input name="remark" placeholder="备注" [(ngModel)]="addUser.remark" #remark="ngModel" rows="4"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+
+  <div nz-form-item nz-row>
+    <div nz-form-control nz-col nzSpan="20" nzOffset="4">
+      <button nz-button nzType="primary" [nzSize]="'large'" (click)="save()" [nzLoading]="isConfirmLoading">保存</button>
+      <button nz-button nzType="default" [nzSize]="'large'" (click)="back()">取消</button>
+    </div>
+  </div>
+
+</form>

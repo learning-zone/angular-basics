@@ -1,0 +1,58 @@
+<h1 class="mat-display-3" translate>SHOWCASE.DEMO.CARD.TITLE</h1>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.CARD.BASIC.TITLE</h1>
+	<p [innerHTML]="'SHOWCASE.DEMO.CARD.BASIC.DETAILS' | translate"></p>
+	<mat-card class="stark-card">
+		<mat-card-header>
+			<mat-card-title>
+				<h3 translate>SHOWCASE.DEMO.CARD.BASIC.TITLE</h3>
+			</mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</mat-card-content>
+	</mat-card>
+	<p translate>SHOWCASE.DEMO.CARD.CODE</p>
+	<stark-pretty-print [data]="basicCard" format="html" [enableHighlighting]="true"></stark-pretty-print>
+</section>
+
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.CARD.ADVANCED.TITLE</h1>
+	<p [innerHTML]="'SHOWCASE.DEMO.CARD.ADVANCED.DETAILS' | translate"></p>
+	<mat-card class="stark-card">
+		<mat-card-header>
+			<mat-card-title>
+				<h3 translate>SHOWCASE.DEMO.CARD.ADVANCED.TITLE</h3>
+			</mat-card-title>
+			<mat-card-subtitle>
+				<h4>Card subtitle</h4>
+			</mat-card-subtitle>
+			<div>
+				<button color="white" mat-icon-button>
+					<mat-icon svgIcon="cogs"></mat-icon>
+				</button>
+				<button color="white" mat-icon-button>
+					<mat-icon svgIcon="dots-vertical"></mat-icon>
+				</button>
+			</div>
+		</mat-card-header>
+		<mat-card-content>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+					magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<div class="stark-full-width full-width-example">	
+				<h1>FULL WIDTH CONTAINER</h1>
+			</div>
+		</mat-card-content>
+		<mat-card-actions>
+			<button mat-raised-button color="primary">LIKE</button>
+			<button mat-raised-button color="primary">SHARE</button>
+		</mat-card-actions>
+	</mat-card>
+	<p translate>SHOWCASE.DEMO.CARD.CODE</p>
+	<stark-pretty-print [data]="advancedCard" format="html" [enableHighlighting]="true"></stark-pretty-print>
+	</section>

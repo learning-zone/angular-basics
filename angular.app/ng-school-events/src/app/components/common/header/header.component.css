@@ -1,0 +1,45 @@
+.navbar-nav button.btn{
+  margin-top: 2px ;
+  margin-bottom: 2px ;
+}
+
+#brand-text{
+align-items: center;
+display: flex;
+color: black;
+}
+
+#notif-dropdown, #user-dropdown{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-left: 2px !important;
+  padding-right: 4px !important;
+  color: black;
+  font-size: 90%;
+}
+:host >>> .dropdown-item:hover{
+  background-color:lightskyblue;
+}
+:host >>> .dropdown-item{
+  font-size: 90%;
+}
+
+.fa-stack{
+  color: black;
+}
+
+.fa-stack[data-count]:after{
+  position:absolute;
+  right:0%;
+  top:1%;
+  content: attr(data-count);
+  font-size:50%;
+  padding:.6em;
+  border-radius:999px;
+  line-height:0.5em;
+  color: white;
+  background:rgba(255,0,0,.85);
+  text-align:center;
+  min-width:1em;
+  font-weight:bold;
+}

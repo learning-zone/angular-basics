@@ -1,0 +1,23 @@
+/********** PAGINATION THEME **********/
+/* stark: src/modules/pagination/components/_pagination-theme.scss */
+
+@media #{$tablet-query} {
+  .stark-pagination > div {
+    .pagination-enter-page {
+      & input {
+        border: solid 1px $divider-color;
+      }
+    }
+
+    .page-numbers {
+      &.active {
+        a {
+          color: mat-color(map-get($base-theme, primary-palette));
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* END stark: src/modules/pagination/components/_pagination-theme.scss */

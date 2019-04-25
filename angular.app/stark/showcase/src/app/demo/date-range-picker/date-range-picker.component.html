@@ -1,0 +1,13 @@
+<h1 class="mat-display-3" translate>SHOWCASE.DEMO.DATE_RANGE_PICKER.TITLE</h1>
+<section class="stark-section">
+	<h1 translate>SHOWCASE.DEMO.SHARED.EXAMPLE_VIEWER_LIST</h1>
+	<example-viewer [extensions]="['HTML', 'TS']" filesPath="date-range-picker/full" exampleTitle="SHOWCASE.DEMO.DATE_RANGE_PICKER.TITLE">
+		<div>
+			<stark-date-range-picker [dateFilter]="customDateFilter" rangePickerId="id-range-picker" rangePickerName="name-range-picker"
+			 [endDate]="endDate" endDateLabel="To" [endMinDate]="minDate" [endMaxDate]="maxDate" [isDisabled]="isDisabled"
+			 [startDate]="startDate" startDateLabel="From" [startMinDate]="minDate" [startMaxDate]="maxDate" (dateRangeChanged)="onDateChanged($event)">
+			</stark-date-range-picker>
+		</div>
+		<mat-checkbox [(ngModel)]="isDisabled">isDisabled</mat-checkbox>
+	</example-viewer>
+</section>

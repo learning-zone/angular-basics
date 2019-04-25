@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Whitney-semi-bold";
+    src: url("assets/WhitneyHTF-SemiBold.woff") format("woff")
+}
+@font-face {
+    font-family: "Whitney";
+    src: url("assets/WhitneyHTF-Book.woff") format("woff")
+}
+
+// bootstrap fonts
+$icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+
+@import "app/shared/scss/themes";
+@import "app/shared/scss/custom_bootstrap";
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+body {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #697071;
+  background-color: #fff;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.row-base {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.coming-soon {
+  cursor: url('/assets/comingsoon.png'), auto !important;
+}
+
+html {
+overflow-y: scroll;
+}

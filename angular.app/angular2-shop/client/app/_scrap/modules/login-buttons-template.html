@@ -1,0 +1,57 @@
+<div class="login-buttons">
+  <div class="dropdown-toggle" [hidden]="isDropdownOpen" (click)="isDropdownOpen=true">
+    <span *ngIf="isLoggedIn">
+      {{ displayName() }} ▾
+    </span>
+    <span *ngIf="!isLoggedIn">
+      Login ▾
+    </span>
+  </div>
+  <div class="content-container" [hidden]="!isDropdownOpen">
+    <div class="accounts-close" (click)="isDropdownOpen=false">Close</div>
+    <div *ngIf="isLoggedIn">
+      <div class="login-text-and-button">
+        <div class="login-display-name">
+          {{ displayName() }}
+        </div>
+        <a class="login-buttons-logout" (click)="logout()" href="#">Sign Out</a>
+      </div>
+    </div>
+    <div *ngIf="!isLoggedIn">
+      <span [hidden]="!isLoggingIn">Please wait...</span>
+      <form class="login-buttons-login-form" [hidden]="isLoggingIn">
+        <div *ngIf="message == ''">
+
+          <label for="email">Email</label>
+          <input class="login-buttons-email-input form-control" type="email" required [(ngModel)]="credentials.email"/>
+          <div [hidden]="isPasswordRecovery">
+            <label for="password">Password</label>
+            <input class="login-buttons-password-input form-control" type="password" required
+                   [(ngModel)]="credentials.password"/>
+          </div>
+        </div>
+        <br/>
+        <ul [hidden]="!errors || errors.length == 0">
+          <li *ngFor="let error of errors">
+            {{ error }}
+          </li>
+        </ul>
+        {{ message }}
+        <div *ngIf="message == ''">
+          <button *ngIf="!isPasswordRecovery && !isSignup" class="login-button-login" (click)="login()">Login</button>
+          <button *ngIf="!isPasswordRecovery && isSignup" class="login-button-signup" (click)="signup()">Signup
+          </button>
+          <!--<button *ngIf="isPasswordRecovery && !isSignup" class="login-button-recover" (click)="recover()">Recover-->
+          <!--</button>-->
+        </div>
+        <br/>
+        <a [hidden]="isSignup" class="signup-button" (click)="isSignup=true; isPasswordRecovery=false; resetErrors();"
+           href="#">Signup</a>
+        <!--<a [hidden]="isPasswordRecovery" class="recover-button"-->
+        <!--(click)="isPasswordRecovery=true; isSignup=false; resetErrors();" href="#">Recover Password</a>-->
+        <a [hidden]="!isSignup && !isPasswordRecovery" class="login-button"
+           (click)="isPasswordRecovery=false; isSignup=false; resetErrors();" href="#">Back to Login</a>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div layout="row" flex class="ma-party-details" *ngIf="party">
+  <div flex="33" offset="33">
+    <md-content class="new-party-form-container">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h3>Your party details:</h3>
+        </div>
+      </md-toolbar>
+      <form layout="column">
+        <md-input-container>
+          <label>Party Name</label>
+          <input md-input [disabled]="!isOwner" type="text" [(ngModel)]="party.name">
+        </md-input-container>
+        <md-input-container>
+          <label>Party Description</label>
+          <input md-input [disabled]="!isOwner" type="text" [(ngModel)]="party.description">
+        </md-input-container>
+        <md-input-container>
+          <label>Location name</label>
+          <input md-input [disabled]="!isOwner" type="text" [(ngModel)]="party.location.name" class="form-control">
+        </md-input-container>
+        <md-checkbox [(checked)]="party.public" aria-label="Public">
+          Is public
+        </md-checkbox>
+
+        <div layout="row" layout-align="left">
+          <button [disabled]="!isOwner" type="submit" md-raised-button class="md-raised md-primary">Save</button>
+          <button [routerLink]="['/PartiesList']" md-raised-button class="md-raised">Back</button>
+        </div>
+
+        <md-list>
+          <md-subheader class="md-no-sticky">Users to invite:</md-subheader>
+          <md-list-item *ngFor="let user of users">
+            <div>{{ user | displayName }}</div>
+            <button (click)="invite(user)" md-raised-button class="md-raised">Invite</button>
+          </md-list-item>
+        </md-list>
+
+        <div class="angular-google-map-container">
+          <sebm-google-map
+                  style="height: 300px;"
+                  [latitude]="lat || centerLat"
+                  [longitude]="lng || centerLng"
+                  [zoom]="8"
+                  (mapClick)="mapClicked($event)">
+            <sebm-google-map-marker
+                    *ngIf="lat && lng"
+                    [latitude]="lat"
+                    [longitude]="lng">
+            </sebm-google-map-marker>
+          </sebm-google-map>
+        </div>
+      </form>
+    </md-content>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="stark-toast" [ngClass]="getMessageTypeClass()">
+
+	<mat-icon svgIcon="information" starkSvgViewBox *ngIf="message.type === 0"></mat-icon>
+	<mat-icon svgIcon="alert-circle" starkSvgViewBox *ngIf="message.type === 1"></mat-icon>
+	<mat-icon svgIcon="alert" starkSvgViewBox *ngIf="message.type === 2"></mat-icon>
+
+	<span class="stark-toast-text"
+			role="alert"
+		  	[innerHTML]="message.key | translate:message.interpolateValues">
+	</span>
+
+	<button class="stark-toast-action"
+			*ngIf="message.actionLabel"
+			[ngClass]="message.actionClasses"
+			(click)="closeToast()"
+			mat-button>
+		<span translate>{{ message.actionLabel }}</span>
+	</button>
+</div>

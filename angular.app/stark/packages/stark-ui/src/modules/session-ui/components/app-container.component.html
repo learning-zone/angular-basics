@@ -1,0 +1,6 @@
+<ui-view class="stark-login-container stark-init" name="initOrExit"
+		 *ngIf="isSessionUIState()">
+</ui-view>
+<ng-container *ngIf="!isSessionUIState()">
+	<ng-content></ng-content>
+</ng-container>

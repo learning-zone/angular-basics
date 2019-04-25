@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/">ngCart</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a routerLink="/">Home</a></li>
+        <li class="nav-item"><a routerLink="/cart">Shopping Cart</a></li>
+        <li class="nav-item"><a href="https://github.com/bsubedi26/ng2-ShoppingCart">Github/Source Code</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a routerLink="/cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+        </li>
+        <li>
+          <div *ngIf="totalPrice">
+            <div class="thumbnail price">
+              <strong>Total Items: </strong><span class="badge">{{ totalQuantity }}</span> <strong>Total Price: ${{ totalPrice }}</strong>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>

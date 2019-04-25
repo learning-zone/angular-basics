@@ -1,0 +1,45 @@
+<h4>双色球列表</h4>
+<form nz-form class="">
+  <div nz-row>
+    <div nz-col [nzSpan]="24" class="right-btns">
+      <button nz-button (click)="add()"><i class="anticon anticon-plus"></i><span>添加</span></button>
+      <button nz-button (click)="clear()">清空</button>
+      <button nz-button [nzType]="'primary'" (click)="query()">查询</button>
+    </div>
+  </div>
+</form>
+
+<nz-table #nzTable
+  [nzData]="dataSet"
+  [nzFrontPagination]="false"
+  [nzShowSizeChanger]="false"
+  [nzLoading]="_loading"
+  [nzTotal]="total"
+  [(nzPageIndex)]="current_page"
+  (nzPageIndexChange)="query()"
+  [(nzPageSize)]="per_page"
+  (nzPageSizeChange)="query()">
+  <thead nz-thead>
+    <tr>
+      <th nz-th><span>红色球</span></th>
+      <th nz-th><span>蓝色球</span></th>
+      <th nz-th><span>生成结果</span></th>
+      <th nz-th style="width:180px"><span>开奖结果</span></th>
+      <th nz-th><span>创建时间</span></th>
+      <th nz-th><span>操作</span></th>
+    </tr>
+  </thead>
+  <tbody nz-tbody>
+    <tr nz-tbody-tr *ngFor="let data of nzTable.data">
+      <td nz-td>{{data.red_balls}}</td>
+      <td nz-td>{{data.blue_ball}}</td>
+      <td nz-td>{{data.gen_result}}</td>
+      <td nz-td [doubleballResult]="data.award"></td>
+      <td nz-td>{{data.created_at}}</td>
+      <td nz-td>
+        <!-- <a href="#" [routerLink]="['/article/edit', data.id]">详情</a> -->
+        <a href="javascript:;" (click)="delArticle(data.id)">删除</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

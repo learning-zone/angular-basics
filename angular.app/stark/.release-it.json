@@ -1,0 +1,48 @@
+{
+	"non-interactive": false,
+	"dry-run": false,
+	"verbose": false,
+	"force": false,
+	"pkgFiles": ["package.json", "package-lock.json"],
+	"increment": "conventional:angular",
+	"beforeChangelogCommand": "npm run generate:changelog",
+	"changelogCommand": "npm run generate:changelog-recent",
+	"buildCommand": false,
+	"safeBump": false,
+	"requireCleanWorkingDir": true,
+	"requireUpstream": true,
+	"src": {
+		"commit": true,
+		"commitMessage": "chore(release): release %s",
+		"commitArgs": "",
+		"tag": true,
+		"tagName": "%s",
+		"tagAnnotation": "%s",
+		"push": true,
+		"pushArgs": "",
+		"pushRepo": "origin",
+		"beforeStartCommand": false,
+		"afterReleaseCommand": false
+	},
+	"npm": {
+		"publish": false
+	},
+	"github": {
+		"release": true,
+		"releaseName": "Release %s",
+		"draft": false,
+		"tokenRef": "GITHUB_TOKEN",
+		"assets": null,
+		"host": null
+	},
+	"prompt": {
+		"src": {
+			"status": false,
+			"commit": true,
+			"tag": true,
+			"push": true,
+			"release": true,
+			"publish": true
+		}
+	}
+}

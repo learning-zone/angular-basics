@@ -1,0 +1,8 @@
+<div *ngIf="!spinner.active">    
+    <app-header [title]="title"></app-header>
+    <router-outlet></router-outlet>
+    <app-footer [title]="title"></app-footer>
+</div>
+<div *ngIf="spinner.active">
+   <app-spinner></app-spinner>
+</div>

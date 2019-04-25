@@ -1,0 +1,17 @@
+<stark-table htmlId="table-with-transcluded-action-bar"
+			 [columnProperties]="columnsProperties"
+			 [data]="dummyData"
+			 [filter]="filter"
+			 [multiselect]="true"
+			 multiSort
+			 [orderProperties]="orderProperties"
+			 [tableRowsActionBarConfig]="tableRowsActionBarConfig"
+			 [paginationConfig]="paginationConfig3">
+	<header>
+		<div class="example-transcluded">
+			<h1>Table with transcluded action bar</h1>
+			<stark-action-bar [actionBarConfig]="{actions: customTableActions}"
+							  mode="compact"></stark-action-bar>
+		</div>
+	</header>
+</stark-table>

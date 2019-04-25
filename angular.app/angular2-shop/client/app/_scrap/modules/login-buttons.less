@@ -1,0 +1,115 @@
+@meteor-accounts-base-padding: 8px;
+@meteor-accounts-dialog-border-width: 1px;
+@login-buttons-accounts-dialog-width: 250px;
+@login-buttons-color: #596595;
+@login-buttons-color-border: darken(@login-buttons-color, 10%);
+@login-buttons-color-active: lighten(@login-buttons-color, 10%);
+@login-buttons-color-active-border: darken(@login-buttons-color-active, 10%);
+
+.box-sizing-by-border () {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.box-shadow (...) {
+  box-shadow: @arguments;
+  -webkit-box-shadow: @arguments; // For Android
+}
+
+.login-buttons {
+  position: relative;
+  display: inline-block;
+
+  .dropdown-toggle {
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .accounts-close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+
+    font-weight: bold;
+    line-height: 20px;
+    text-decoration: underline;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .content-container {
+    position:absolute; top: 0; left: 0;
+
+    border: @meteor-accounts-dialog-border-width solid #ccc;
+    z-index: 1000;
+    background: white;
+    border-radius: 4px;
+
+    padding: 8px 12px;
+    margin: -8px -12px 0 -12px;
+
+    width: @login-buttons-accounts-dialog-width;
+
+    .box-shadow(0 0 3px 0 rgba(0, 0, 0, 0.2));
+
+    // Labels and links inherit app's font with this line commented out:
+    //font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+
+    // XXX Make the dropdown and dialogs look good without a top-level
+    // line-height: 1.6.  For now, we apply it to everything except
+    // the "Close" link, which we want to have the same line-height
+    // as the "Sign in" link.
+    & > * { line-height: 1.6; }
+    & > .login-close-text {
+      line-height: inherit;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    label, .title {
+      font-size: 80%;
+      margin-top: 7px;
+      margin-bottom: -2px;
+    }
+
+    label {
+      // Bootstrap sets labels as 'display: block;'. Undo that.
+      display: inline;
+    }
+
+    input[type=text], input[type=email], input[type=password] {
+      // Be pixel-accurate in IE 8+ regardless of our borders and
+      // paddings, at the expense of IE 7.
+      // Any heights or widths applied to this element will set the
+      // size of the border box (including padding and borders)
+      // instead of the content box.  This makes it possible to
+      // do width 100%.
+      .box-sizing-by-border();
+      width: 100%;
+      // A fix purely for the "meteor add bootstrap" experience.
+      // Bootstrap sets "height: 20px" on form fields, which is too
+      // small when applied to the border box.  People have complained
+      // that Bootstrap takes this approach for the sake of IE 7:
+      // https://github.com/twitter/bootstrap/issues/2935
+      // Our work-around is to override Bootstrap's rule (with higher
+      // precedence).
+      &[type] { height: auto; }
+    }
+  }
+
+  .loading {
+    line-height: 1;
+    background-image: url(data:image/gif;base64,R0lGODlhEAALAPQAAP///wAAANra2tDQ0Orq6gYGBgAAAC4uLoKCgmBgYLq6uiIiIkpKSoqKimRkZL6+viYmJgQEBE5OTubm5tjY2PT09Dg4ONzc3PLy8ra2tqCgoMrKyu7u7gAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCwAAACwAAAAAEAALAAAFLSAgjmRpnqSgCuLKAq5AEIM4zDVw03ve27ifDgfkEYe04kDIDC5zrtYKRa2WQgAh+QQJCwAAACwAAAAAEAALAAAFJGBhGAVgnqhpHIeRvsDawqns0qeN5+y967tYLyicBYE7EYkYAgAh+QQJCwAAACwAAAAAEAALAAAFNiAgjothLOOIJAkiGgxjpGKiKMkbz7SN6zIawJcDwIK9W/HISxGBzdHTuBNOmcJVCyoUlk7CEAAh+QQJCwAAACwAAAAAEAALAAAFNSAgjqQIRRFUAo3jNGIkSdHqPI8Tz3V55zuaDacDyIQ+YrBH+hWPzJFzOQQaeavWi7oqnVIhACH5BAkLAAAALAAAAAAQAAsAAAUyICCOZGme1rJY5kRRk7hI0mJSVUXJtF3iOl7tltsBZsNfUegjAY3I5sgFY55KqdX1GgIAIfkECQsAAAAsAAAAABAACwAABTcgII5kaZ4kcV2EqLJipmnZhWGXaOOitm2aXQ4g7P2Ct2ER4AMul00kj5g0Al8tADY2y6C+4FIIACH5BAkLAAAALAAAAAAQAAsAAAUvICCOZGme5ERRk6iy7qpyHCVStA3gNa/7txxwlwv2isSacYUc+l4tADQGQ1mvpBAAIfkECQsAAAAsAAAAABAACwAABS8gII5kaZ7kRFGTqLLuqnIcJVK0DeA1r/u3HHCXC/aKxJpxhRz6Xi0ANAZDWa+kEAA7AAAAAAAAAAAA);
+    width: 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

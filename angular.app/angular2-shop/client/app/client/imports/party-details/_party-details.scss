@@ -1,0 +1,32 @@
+.ma-party-details-container {
+  padding: 20px;
+
+  .angular-google-map-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .angular-google-map {
+    width: 100%;
+    height: 400px;
+  }
+
+  .ma-map-title {
+    font-size: 16px;
+    font-weight: bolder;
+  }
+
+  .ma-invite-list {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: bolder;
+    }
+
+    ul {
+      padding: 0;
+    }
+  }
+}

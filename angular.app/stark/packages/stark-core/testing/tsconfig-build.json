@@ -1,0 +1,36 @@
+{
+  "extends": "../tsconfig-build.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "../",
+    "typeRoots": [
+      "../node_modules/@types",
+      "../node_modules/@nationalbankbelgium/stark-testing/node_modules/@types",
+      "../../stark-build/typings"
+    ],
+    "paths": {
+      "environments/environment": ["../src/common/environment"],
+      "@nationalbankbelgium/stark-core": ["../"]
+    },
+    "outDir": "../../../dist/packages/stark-core"
+  },
+
+  "files": ["public_api.ts"],
+
+  // Unfortunately, all those options have to be written in every tsconfig file
+  "angularCompilerOptions": {
+    "generateCodeForLibraries": true,
+    "skipMetadataEmit": false,
+    "strictMetadataEmit": false,
+    "strictInjectionParameters": true,
+    "fullTemplateTypeCheck": true,
+    "annotationsAs": "static fields",
+    "enableLegacyTemplate": false,
+    "preserveWhitespaces": false,
+    "allowEmptyCodegenFiles": false,
+    "annotateForClosureCompiler": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "testing.js",
+    "flatModuleId": "@nationalbankbelgium/stark-core/testing"
+  }
+}

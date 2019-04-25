@@ -1,0 +1,19 @@
+<md-list-item class="">
+    <div class="md-list-item-text" layout="column">
+
+        <a router-active [routerLink]="['PList',{'shopid': item._id }]"> 
+        {{ item.title }} - 2.5 Miles - {{item.cuisine}}
+        </a>
+
+    </div>
+</md-list-item>
+<div class="">
+    <div class="md-list-item-text" layout="column">
+        <a router-active [routerLink]="['PList',{'shopid': item._id }]">
+            Especially the Mango Lassi! You have to try the Mango Lassi from Indian Aroma, it is the best in town - yum. 
+        </a>
+
+    </div>
+
+</div>
+<md-divider></md-divider>
