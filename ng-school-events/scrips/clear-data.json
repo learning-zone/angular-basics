@@ -1,4 +1,0 @@
-db['course-student'].remove({});
-db['course-teacher'].remove({});
-db['course-year'].remove({});
-db['student-parent'].remove({});

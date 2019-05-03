@@ -1,9 +1,0 @@
-<span tabindex="0">
-  <template ngFor [ngForOf]="range" let-index="index">
-    <span class="sr-only">({{ index < rate ? '*' : ' ' }})</span>
-    <i class="glyphicon"
-      [ngClass]="index < rate ? 'glyphicon-star' : 'glyphicon-star-empty'"
-      (click)="update(index + 1)">
-    </i>
-  </template>
-</span>

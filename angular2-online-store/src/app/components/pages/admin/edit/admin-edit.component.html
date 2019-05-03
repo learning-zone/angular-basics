@@ -1,6 +1,0 @@
-<div class="page_admin-edit">
-    <h1 class="page_admin-edit-title">Editing existing computer</h1>
-
-    <!--Updating the existing one! NOTE: Using elvis operator to wait when data is loaded-->
-    <computer-form *ngIf="itemToUpdate?._id" [action]="'update'" [itemToUpdate]="itemToUpdate" (formSubmit)="updateComputer(itemToUpdate._id, $event)"></computer-form>
-</div>

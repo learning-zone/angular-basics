@@ -1,4 +1,0 @@
-stark-build
-stark-testing
-stark-core
-stark-ui

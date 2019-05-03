@@ -1,7 +1,0 @@
-{
-  "profiles": [
-    { "uuid": "1", "username": "janedoe", "firstName": "Jane", "lastName": "Doe", "language": "en", "roles": ["admin"] },
-    { "uuid": "2", "username": "johndoe", "firstName": "John", "lastName": "Doe", "language": "fr", "roles": ["manager"] },
-    { "uuid": "3", "username": "chucknorris", "firstName": "Chuck", "lastName": "Norris", "language": "nl", "roles": ["developer"] }
-  ]
-}

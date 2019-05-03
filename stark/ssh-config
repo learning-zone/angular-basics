@@ -1,7 +1,0 @@
-Host					github.com
-User					git
-IdentityFile			~/.ssh/stark-ssh
-StrictHostKeyChecking	no
-PasswordAuthentication	no
-CheckHostIP				no
-BatchMode				yes

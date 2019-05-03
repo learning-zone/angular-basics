@@ -1,3 +1,0 @@
-{
-	"extends": "./packages/stark-build/config/stylelint.config.js"
-}
