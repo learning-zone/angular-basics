@@ -22,6 +22,22 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Quick start
+
+```
+npm install 
+
+ng serve --open
+```
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Resources
+*   [Bootstrap](https://getbootstrap.com/)
+*   [ngx bootstrap](https://valor-software.com/ngx-bootstrap/)
+*   [Font awsome](http://fontawesome.io/)
+*   [Angular Perfect Scrollbar](https://github.com/zefoy/ngx-perfect-scrollbar)
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { SidebarService } from './sidebar/sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  private isOpened: boolean;
+  title = 'Angular Tutorials';
+  constructor(public sidebarservice: SidebarService) { }
+  toggleSidebar() {
+    this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());
+  }
+  toggleBackgroundImage() {
+    this.sidebarservice.hasBackgroundImage = !this.sidebarservice.hasBackgroundImage;
+  }
+  getSideBarState() {
+    return this.sidebarservice.getSidebarState();
+  }
 
-  private toggleSidebar() {
-    this.isOpened = !this.isOpened;
+  hideSidebar() {
+    this.sidebarservice.setSidebarState(true);
   }
 }

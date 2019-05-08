@@ -1,13 +1,13 @@
-<app-layout>
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav role="navigation">
-      <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-      <main>
-        <outer-outlet></outer-outlet>
-      </main>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</app-layout>
+<div class="page-wrapper" [ngClass]="{ toggled: getSideBarState() }">
+  <app-sidebar></app-sidebar>
+  <main class="page-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="form-group col-md-12">
+          <h2><img src="assets/img/angular.png" alt="angular logo" width="70px" />Angular Tutorials</h2>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

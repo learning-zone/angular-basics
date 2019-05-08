@@ -1,40 +1,37 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
+import { BsDropdownModule } from 'ngx-bootstrap';
+
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { MatTabsModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
-import { HeaderComponent } from './navigation/header/header.component';
-import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
-
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    HeaderComponent,
-    SidenavListComponent
+    SidebarComponent
   ],
   imports: [
-    CommonModule,
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule,
-    MatSidenavModule,
-    MatToolbarModule
+    AppRoutingModule,
+    BsDropdownModule.forRoot(),
+    PerfectScrollbarModule
   ],
-  exports: [
-    MatTabsModule,
-    MatSidenavModule,
-    MatToolbarModule
-  ],
-  providers: [],
+  providers: [ {
+    provide: PERFECT_SCROLLBAR_CONFIG,
+    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

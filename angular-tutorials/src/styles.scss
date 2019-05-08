@@ -1,36 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-body, html {
-    height: 100%;
-    margin: 0 auto;
-}
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
 
 body {
-    font-family: 'Montserrat';
-    font-size: 18px;
+  font-size: 0.9rem;
 }
 
-a {
-    text-decoration: none;
+.page-wrapper.toggled .sidebar {
+  left: -300px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 1.3em;
-    display: grid;
-    grid-template-columns: 30% auto;
-
-    a {
-        color: white;
-    }
+// angular perfect scrollbar style
+.sidebar .ps.ps--scrolling-y > .ps__rail-y,
+.sidebar > .ps.ps--scrolling-x > .ps__rail-x,
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking {
+  background-color: transparent !important;
 }
 
-section {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2em;
+.sidebar .ps.ps--active-y > .ps__rail-y:hover,
+.sidebar > .ps.ps--active-y > .ps__rail-y.ps--clicking {
+  width: 10px !important;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ps__thumb-y {
+  background-color: #fff !important;
+  width: 6px !important;
+  border-radius: 0px !important;
+  opacity: 0.5;
+}
+
