@@ -73,7 +73,6 @@
 1. How do we create a singleton service in Angular? 
 1. How HTTP Client is Interact with Angular  Servers? 
 1. What is Async Pipe? How to create and use a custom Pipes?
-1. What is router-outlet directive in Angular? 
 1. What is a structural directive? How do you identify a structural directive in html? 
 1. What are differences between template and templateUrl? 
 1. How can you add an active class to a selected element in a list component? 
@@ -112,6 +111,4 @@
 1. What are the utility functions provided by RxJS?
 1. What are the various kinds of directives?
 1. What are router events?
-1. What is activated route?
-1. How do you define routes?
 1. What is the purpose of any type cast function?
