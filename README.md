@@ -99,7 +99,6 @@
 1. What is metadata?
 1. What is a service?
 1. What is dependency injection in Angular?
-1. What is the purpose of async pipe?
 1. What is interpolation?
 1. What is the difference between pure and impure pipe?
 1. How can you read full response?
