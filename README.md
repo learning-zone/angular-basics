@@ -94,7 +94,6 @@
 1. What is the purpose of any type cast function?
 1. What is Non null type assertion operator?
 1. What is type narrowing?
-1. What is zone?
 1. What is State function?
 1. How to inject the dynamic script in angular?
 1. What is metadata?
