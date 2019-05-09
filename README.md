@@ -36,7 +36,7 @@
 1. How will you convert a string into a date? 
 1. What are Event Emitters and how it works in Angular? 
 1. What is shadow DOM? How is it helping Angular  to perform better? 
-1. What is AOT compilation? 
+1. What is difference between AOT and JIT compilation? 
 1. What are pipes in Angular ? How to create custom pipes? 
 1. What is Change detection? 
 1. What limits the number of two-way binding attributes in Angular? 
