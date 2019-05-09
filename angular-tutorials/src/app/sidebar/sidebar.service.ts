@@ -19,19 +19,23 @@ export class SidebarService {
       submenus: [
         {
           title: 'Component Interaction',
-          path: 'component-interaction',
+          path: 'component-interaction'
         },
         {
           title: 'Directives',
-          path: 'directives',
+          path: 'directives'
         },
         { 
           title: 'Lifecycles',
-          path: 'lifecycles',
+          path: 'lifecycles'
         },
         {
           title: 'Pipes',
-          path: 'pipes',
+          path: 'pipes'
+        },
+        {
+          title: 'Event Binding',
+          path: 'event-binding'
         }
       ]
     },
@@ -43,26 +47,32 @@ export class SidebarService {
       submenus: [
         {
           title: 'Angular Forms',
+          path: 'angular-forms'
         },
         {
-          title: 'Reative Forms'
+          title: 'Reative Forms',
+          path: 'reative-forms'
         }
       ]
     },
     {
-      title: 'Observables',
+      title: 'RxJS',
       icon: 'fa fa-folder',
       active: false,
       type: 'dropdown',
       submenus: [
         {
           title: 'Observables',
+          path: 'observables'
+          
         },
         {
           title: 'Promises',
+          path: 'promises'
         },
         {
-          title: 'RxJS'
+          title: 'RxJS',
+          path: 'rxjs'
         }
       ]
     },
@@ -74,9 +84,11 @@ export class SidebarService {
       submenus: [
         {
           title: 'Dependency Injection',
+          path: 'dependency-injection'
         },
         {
-          title: 'DI Providers'
+          title: 'DI Providers',
+          path: 'di-providers'
         }
       ]
     },
@@ -88,51 +100,53 @@ export class SidebarService {
       submenus: [
         {
           title: 'Routing',
+          path: 'routing'
         },
         {
-          title: 'Lazy Loading'
+          title: 'Lazy Loading',
+          path: 'lazy-loading'
         },
         {
-          title: 'Services'
+          title: 'Services',
+          path: 'services'
         },
         {
-          title: 'Authentication'
+          title: 'Providers',
+          path: 'providers'
+        },
+        {
+          title: 'Authentication',
+          path: 'authentication'
+        },
+        {
+          title: 'HttpClient',
+          path: 'httpclient'
         }
       ]
     },
     {
       title: 'Miscellaneous',
-      type: 'header'
-    },
-    {
-      title: 'HttpClient',
-      icon: 'fa fa-book',
+      icon: 'fa fa-folder',
       active: false,
-      type: 'simple',
-    },
-    {
-      title: 'Event Binding',
-      icon: 'fa fa-book',
-      active: false,
-      type: 'simple'
-    },
-    {
-      title: 'Providers',
-      icon: 'fa fa-book',
-      active: false,
-      type: 'simple'
-    },
-    {
-      title: 'Animations',
-      icon: 'fa fa-book',
-      active: false,
-      type: 'simple'
-    },
-    {
-      title: 'Internationalization',
-      icon: 'fa fa-book',
-      active: false,
-      type: 'simple'
+      type: 'dropdown',
+      submenus: [
+        {
+          title: 'Animations',
+          path: 'animations'
+        },
+        {
+          title: 'Internationalization',
+          path: 'internationalization'
+        },
+        {
+          title: 'Drag & drop',
+          path: 'drag-drop'
+        },
+        {
+          title: 'Virtual Scrolling',
+          path: 'virtual-scrolling'
+        }
+      ]
     }
   ];
   constructor() { }
