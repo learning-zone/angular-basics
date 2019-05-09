@@ -87,3 +87,33 @@
 1. Angular  Modules vs. JavaScript Modules 
 1. What is the difference between a module's forRoot() and forChild() methods and why do you need it? 
 1. What are Zones? What is Change Detection? What would be a good use for NgZone service?
+1. What is folding?
+1. What are macros?
+1. Give an example of few metadata errors?
+1. What is metadata rewriting?
+1. What is the purpose of any type cast function?
+1. What is Non null type assertion operator?
+1. What is type narrowing?
+1. What is zone?
+1. What is State function?
+1. How to inject the dynamic script in angular?
+1. What is metadata?
+1. What is a service?
+1. What is dependency injection in Angular?
+1. What is the purpose of async pipe?
+1. What is interpolation?
+1. What is the difference between pure and impure pipe?
+1. How can you read full response?
+1. How do you perform Error handling?
+1. What is RxJS?
+1. What is an observable?
+1. What is an observer?
+1. What is the difference between promise and observable?
+1. What is multicasting?
+1. How do you perform error handling in observables?
+1. What are the utility functions provided by RxJS?
+1. What are the various kinds of directives?
+1. What are router events?
+1. What is activated route?
+1. How do you define routes?
+1. What is the purpose of any type cast function?
