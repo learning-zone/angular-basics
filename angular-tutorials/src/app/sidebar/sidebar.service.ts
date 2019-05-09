@@ -58,6 +58,9 @@ export class SidebarService {
           title: 'Observables',
         },
         {
+          title: 'Promises',
+        },
+        {
           title: 'RxJS'
         }
       ]
