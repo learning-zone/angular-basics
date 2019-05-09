@@ -107,4 +107,4 @@
 1. What are the utility functions provided by RxJS?
 1. What are the various kinds of directives?
 1. What are router events?
-1. What is the purpose of any type cast function?
+
