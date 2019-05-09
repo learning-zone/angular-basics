@@ -103,7 +103,6 @@
 1. How can you read full response?
 1. How do you perform Error handling?
 1. What is RxJS?
-1. What is an observable?
 1. What is an observer?
 1. What is the difference between promise and observable?
 1. What is multicasting?
