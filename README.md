@@ -11,7 +11,6 @@
 1. What is Dependency Injection? Explain with example.
 1. How would you optimize the angular  application for better performance?
 1. Explain local reference variables, @ViewChild and @ContentChild.
-1. What are services in Angular ?
 1. What can be considered as replacement of $watch in Angular?
 1. Which Angular  directive can be used for internationalization?
 1. Why are decorators used in Angular?
