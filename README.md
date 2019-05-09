@@ -95,7 +95,6 @@
 1. What is type narrowing?
 1. What is State function?
 1. How to inject the dynamic script in angular?
-1. What is metadata?
 1. What is a service?
 1. What is dependency injection in Angular?
 1. What is interpolation?
