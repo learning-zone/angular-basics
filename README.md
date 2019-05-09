@@ -1,5 +1,6 @@
 # Angular Questions
 
+1. What's new in Angular 7?
 1. What is the difference between observable and promises?
 1. List the differences between Angular  components vs. directives?
 1. How do you define the transition between two states in Angular?
@@ -10,7 +11,6 @@
 1. What is Dependency Injection? Explain with example.
 1. How would you optimize the angular  application for better performance?
 1. Explain local reference variables, @ViewChild and @ContentChild.
-1. What are services in Angular ?
 1. What can be considered as replacement of $watch in Angular?
 1. Which Angular  directive can be used for internationalization?
 1. Why are decorators used in Angular?
@@ -35,7 +35,7 @@
 1. How will you convert a string into a date? 
 1. What are Event Emitters and how it works in Angular? 
 1. What is shadow DOM? How is it helping Angular  to perform better? 
-1. What is AOT compilation? 
+1. What is difference between AOT and JIT compilation? 
 1. What are pipes in Angular ? How to create custom pipes? 
 1. What is Change detection? 
 1. What limits the number of two-way binding attributes in Angular? 
@@ -107,4 +107,5 @@
 1. What are the utility functions provided by RxJS?
 1. What are the various kinds of directives?
 1. What are router events?
+1. What is IVY Renderer? Is it supported by Angular 7?
 
