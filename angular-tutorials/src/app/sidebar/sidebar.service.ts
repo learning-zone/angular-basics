@@ -19,18 +19,19 @@ export class SidebarService {
       submenus: [
         {
           title: 'Component Interaction',
+          path: 'component-interaction',
         },
         {
-          title: 'Directives'
+          title: 'Directives',
+          path: 'directives',
+        },
+        { 
+          title: 'Lifecycles',
+          path: 'lifecycles',
         },
         {
-          title: 'Structural Directive'
-        },
-        {
-          title: 'Lifecycles'
-        },
-        {
-          title: 'Pipes'
+          title: 'Pipes',
+          path: 'pipes',
         }
       ]
     },

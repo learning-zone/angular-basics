@@ -11,6 +11,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { ComponentInteractionComponent } from './nav/component/component-interaction/component-interaction.component';
+import { DirectivesComponent } from './nav/component/directives/directives.component';
+import { LifecyclesComponent } from './nav/component/lifecycles/lifecycles.component';
+import { PipesComponent } from './nav/component/pipes/pipes.component';
+import { PageNotFoundComponent } from './nav/page-not-found/page-not-found.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -19,7 +24,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    SidebarComponent,
+    ComponentInteractionComponent,
+    DirectivesComponent,
+    LifecyclesComponent,
+    PipesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
