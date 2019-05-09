@@ -102,7 +102,6 @@
 1. How do you perform Error handling?
 1. What is RxJS?
 1. What is an observer?
-1. What is the difference between promise and observable?
 1. What is multicasting?
 1. How do you perform error handling in observables?
 1. What are the utility functions provided by RxJS?
