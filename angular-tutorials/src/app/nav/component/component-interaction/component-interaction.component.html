@@ -1,3 +1,4 @@
-<p>
-  component-interaction works!
-</p>
+<h3>{{title}}</h3>
+<ul>
+    <li *ngFor='let number of numbers' (click)="call(number)" class="number-array">{{number}}</li>
+</ul> 
