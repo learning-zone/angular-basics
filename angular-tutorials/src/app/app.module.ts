@@ -36,6 +36,8 @@ import { DragDropComponent } from './nav/miscellaneous/drag-drop/drag-drop.compo
 import { VirtualScrollingComponent } from './nav/miscellaneous/virtual-scrolling/virtual-scrolling.component';
 import { ParentComponent } from './nav/component/component-interaction/parent/parent.component';
 import { ChildComponent } from './nav/component/component-interaction/child/child.component';
+import { AttributeDirectivesDirective } from './nav/component/directives/attribute-directives.directive';
+import { StructuralDirectivesDirective } from './nav/component/directives/structural-directives.directive';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -69,7 +71,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DragDropComponent,
     VirtualScrollingComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    AttributeDirectivesDirective,
+    StructuralDirectivesDirective
   ],
   imports: [
     BrowserModule,
