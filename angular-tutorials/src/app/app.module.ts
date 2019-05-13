@@ -34,6 +34,8 @@ import { AnimationsComponent } from './nav/miscellaneous/animations/animations.c
 import { InternationalizationComponent } from './nav/miscellaneous/internationalization/internationalization.component';
 import { DragDropComponent } from './nav/miscellaneous/drag-drop/drag-drop.component';
 import { VirtualScrollingComponent } from './nav/miscellaneous/virtual-scrolling/virtual-scrolling.component';
+import { ParentComponent } from './nav/component/component-interaction/parent/parent.component';
+import { ChildComponent } from './nav/component/component-interaction/child/child.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -65,7 +67,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AnimationsComponent,
     InternationalizationComponent,
     DragDropComponent,
-    VirtualScrollingComponent
+    VirtualScrollingComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

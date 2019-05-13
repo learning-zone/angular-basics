@@ -1,4 +1,8 @@
-<h3>{{title}}</h3>
+<h5>Displaying Data <hr/></h5>
+<div>{{title}} {{output}}</div>
 <ul>
     <li *ngFor='let number of numbers' (click)="call(number)" class="number-array">{{number}}</li>
-</ul> 
+</ul>
+<br/>
+<h5>Component Interaction <hr/></h5>
+<app-parent></app-parent>

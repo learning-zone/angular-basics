@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentInteractionComponent implements OnInit {
   title: string;
+  output: string;
   numbers: Array<number>;
 
   constructor() {
@@ -16,7 +17,7 @@ export class ComponentInteractionComponent implements OnInit {
 
   ngOnInit() {}
 
-  call(value: number): void {
-    console.log('You clicked: ' + value);
+  call(value: string): void {
+    this.output = '[ You Clicked: ' + value + ' ]';
   }
 }
