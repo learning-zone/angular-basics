@@ -1,0 +1,26 @@
+.lifecycle {
+  padding: 6px;
+  width: 15%;
+  background-color: var(--pink);
+  border: 1px solid var(--red);
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.lifecycle:nth-child(1) {
+  background-color: var(--blue);
+  border: 1px solid var(--primary);
+}
+
+.lifecycle:nth-child(n + 5) {
+  background-color: var(--yellow);
+  border: 1px solid var(--orange);
+  margin-left: 5%;
+}
+
+.lifecycle:nth-last-child(1) {
+  background-color: var(--blue);
+  border: 1px solid var(--primary);
+  margin-left: 10px;
+}
