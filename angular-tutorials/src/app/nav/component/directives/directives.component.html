@@ -1,5 +1,11 @@
 <h5>Attribute Directives <hr/></h5>
-<!-- <appAttributeDirectives></appAttributeDirectives> -->
 
+<b>Pick a highlight color</b>
+<div class="form-group">
+    <label class="radio-inline"><input type="radio" name="colors" (click)="color='lightgreen'" class="radio"/>Green</label>
+    <label class="radio-inline"><input type="radio" name="colors" (click)="color='yellow'" class="radio"/>Yellow</label>
+    <label class="radio-inline"><input type="radio" name="colors" (click)="color='cyan'" class="radio"/>Cyan</label>
+</div>
+<div [appAttributeDirectives]="color" class="highlight-container">Highlight me!</div>
+<br/><br/><br/>
 <h5>Structural Directives <hr/></h5>
-<!-- <appStructuralDirectives></appStructuralDirectives> -->
