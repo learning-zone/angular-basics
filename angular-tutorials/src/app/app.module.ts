@@ -38,6 +38,8 @@ import { ParentComponent } from './nav/component/component-interaction/parent/pa
 import { ChildComponent } from './nav/component/component-interaction/child/child.component';
 import { AttributeDirectivesDirective } from './nav/component/directives/attribute-directives.directive';
 import { StructuralDirectivesDirective } from './nav/component/directives/structural-directives.directive';
+import { heroSwitchComponents } from './nav/component/directives/hero-switch.components';
+import { UnlessDirective } from './nav/component/directives/unless.directive';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -73,7 +75,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ParentComponent,
     ChildComponent,
     AttributeDirectivesDirective,
-    StructuralDirectivesDirective
+    StructuralDirectivesDirective,
+    heroSwitchComponents,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
@@ -82,10 +86,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BsDropdownModule.forRoot(),
     PerfectScrollbarModule
   ],
-  providers: [ {
-    provide: PERFECT_SCROLLBAR_CONFIG,
-    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-  }],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

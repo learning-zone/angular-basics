@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero, heroes } from './hero';
 
 @Component({
   selector: 'app-directives',
@@ -7,7 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
   color: string;
+  heroes = heroes;
+  hero = this.heroes[0];
+  condition = false;
+  logs: string[] = [];
+  showSad = true;
+  status = 'ready';
+
   constructor() {}
 
   ngOnInit() {}
+
+  trackById(index: number, hero: Hero): number {
+    return hero.id;
+  }
 }

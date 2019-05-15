@@ -9,3 +9,133 @@
 <div [appAttributeDirectives]="color" class="highlight-container">Highlight me!</div>
 <br/><br/><br/>
 <h5>Structural Directives <hr/></h5>
+
+<p>Conditional display of hero</p>
+<blockquote>
+    <div *ngIf="hero" class="name">{{hero.name}}</div>
+</blockquote>
+
+<p>List of heroes</p>
+<ul>
+  <li *ngFor="let hero of heroes">{{hero.name}}</li>
+</ul>
+
+<h5 id="ngIf">NgIf</h5><hr/>
+
+<p *ngIf="true">
+  Expression is true and ngIf is true.
+  This paragraph is in the DOM.
+</p>
+<p *ngIf="false">
+  Expression is false and ngIf is false.
+  This paragraph is not in the DOM.
+</p>
+
+<p [style.display]="'block'">
+  Expression sets display to "block".
+  This paragraph is visible.
+</p>
+<p [style.display]="'none'">
+  Expression sets display to "none".
+  This paragraph is hidden but still in the DOM.
+</p>
+
+<b>NgIf with template</b>
+<p>&lt;ng-template&gt; element</p>
+<ng-template [ngIf]="hero">
+  <div class="name">{{hero.name}}</div>
+</ng-template>
+
+<hr/>
+
+<b id="ng-container">&lt;ng-container&gt;</b>
+
+<h4>*ngIf with a &lt;ng-container&gt;</h4>
+
+<button (click)="hero = hero ? null : heroes[0]">Toggle hero</button>
+
+<p>
+  I turned the corner
+  <ng-container *ngIf="hero">
+    and saw {{hero.name}}. I waved
+  </ng-container>
+  and continued on my way.
+</p>
+<p>
+  I turned the corner
+  <span *ngIf="hero">
+    and saw {{hero.name}}. I waved
+  </span>
+  and continued on my way.
+</p>
+
+<h5 id="ngFor">NgFor <hr/></h5>
+
+<div class="box">
+    <p class="code">&lt;div *ngFor="let hero of heroes; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd"&gt;</p>
+    <div *ngFor="let hero of heroes; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd">({{i}}) {{hero.name}}</div>
+
+    <p class="code">&lt;ng-template ngFor let-hero [ngForOf]="heroes" let-i="index" let-odd="odd" [ngForTrackBy]="trackById"/&gt;</p>
+    <ng-template ngFor let-hero [ngForOf]="heroes" let-i="index" let-odd="odd" [ngForTrackBy]="trackById">
+    <div [class.odd]="odd">({{i}}) {{hero.name}}</div>
+    </ng-template>
+</div>
+
+
+<h5 id="ngSwitch">NgSwitch <hr/></h5>
+
+<div [ngSwitch]="hero?.emotion">
+  <app-happy-hero    *ngSwitchCase="'happy'"    [hero]="hero"></app-happy-hero>
+  <app-sad-hero      *ngSwitchCase="'sad'"      [hero]="hero"></app-sad-hero>
+  <app-confused-hero *ngSwitchCase="'confused'" [hero]="hero"></app-confused-hero>
+  <app-unknown-hero  *ngSwitchDefault           [hero]="hero"></app-unknown-hero>
+</div>
+
+<b>NgSwitch with &lt;ng-template&gt;</b>
+<div [ngSwitch]="hero?.emotion">
+  <ng-template [ngSwitchCase]="'happy'">
+    <app-happy-hero [hero]="hero"></app-happy-hero>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'sad'">
+    <app-sad-hero [hero]="hero"></app-sad-hero>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'confused'">
+    <app-confused-hero [hero]="hero"></app-confused-hero>
+  </ng-template >
+  <ng-template ngSwitchDefault>
+    <app-unknown-hero [hero]="hero"></app-unknown-hero>
+  </ng-template>
+</div>
+
+<h5 id="appUnless">UnlessDirective<hr/></h5>
+<p>
+  The condition is currently
+  <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
+  <button
+    (click)="condition = !condition"
+    [ngClass] = "{ 'a': condition, 'b': !condition }" >
+    Toggle condition to {{condition ? 'false' : 'true'}}
+  </button>
+</p>
+<p *appUnless="condition" class="unless a">
+  (A) This paragraph is displayed because the condition is false.
+</p>
+
+<p *appUnless="!condition" class="unless b">
+  (B) Although the condition is true,
+  this paragraph is displayed because appUnless is set to false.
+</p>
+
+<h5>UnlessDirective with template<hr/></h5>
+
+<p *appUnless="condition">Show this sentence unless the condition is true.</p>
+
+<p *appUnless="condition" class="code unless">
+  (A) &lt;p *appUnless="condition" class="code unless"&gt;
+</p>
+
+<ng-template [appUnless]="condition">
+  <p class="code unless">
+    (A) &lt;ng-template [appUnless]="condition"&gt;
+  </p>
+</ng-template>
