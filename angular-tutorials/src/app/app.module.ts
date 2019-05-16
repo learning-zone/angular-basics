@@ -40,6 +40,7 @@ import { AttributeDirectivesDirective } from './nav/component/directives/attribu
 import { StructuralDirectivesDirective } from './nav/component/directives/structural-directives.directive';
 import { heroSwitchComponents } from './nav/component/directives/hero-switch.components';
 import { UnlessDirective } from './nav/component/directives/unless.directive';
+import { CustomPipe } from './nav/component/pipes/custom.pipe';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -77,7 +78,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AttributeDirectivesDirective,
     StructuralDirectivesDirective,
     heroSwitchComponents,
-    UnlessDirective
+    UnlessDirective,
+    CustomPipe
   ],
   imports: [
     BrowserModule,
