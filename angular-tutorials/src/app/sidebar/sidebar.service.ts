@@ -32,10 +32,6 @@ export class SidebarService {
         {
           title: 'Pipes',
           path: 'pipes'
-        },
-        {
-          title: 'Event Binding',
-          path: 'event-binding'
         }
       ]
     },

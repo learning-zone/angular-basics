@@ -16,7 +16,6 @@ import { DirectivesComponent } from './nav/component/directives/directives.compo
 import { LifecyclesComponent } from './nav/component/lifecycles/lifecycles.component';
 import { PipesComponent } from './nav/component/pipes/pipes.component';
 import { PageNotFoundComponent } from './nav/page-not-found/page-not-found.component';
-import { EventBindingComponent } from './nav/component/event-binding/event-binding.component';
 import { AngularFormsComponent } from './nav/forms/angular-forms/angular-forms.component';
 import { ReativeFormsComponent } from './nav/forms/reative-forms/reative-forms.component';
 import { ObservablesComponent } from './nav/rxjs/observables/observables.component';
@@ -55,7 +54,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LifecyclesComponent,
     PipesComponent,
     PageNotFoundComponent,
-    EventBindingComponent,
     AngularFormsComponent,
     ReativeFormsComponent,
     ObservablesComponent,
