@@ -25,7 +25,7 @@ export class SidebarService {
           title: 'Directives',
           path: 'directives'
         },
-        { 
+        {
           title: 'Lifecycles',
           path: 'lifecycles'
         },
@@ -42,12 +42,12 @@ export class SidebarService {
       type: 'dropdown',
       submenus: [
         {
-          title: 'Angular Forms',
-          path: 'angular-forms'
-        },
-        {
           title: 'Reative Forms',
           path: 'reative-forms'
+        },
+        {
+          title: 'Template-driven Forms',
+          path: 'template-driven-forms'
         }
       ]
     },
@@ -60,7 +60,6 @@ export class SidebarService {
         {
           title: 'Observables',
           path: 'observables'
-          
         },
         {
           title: 'Promises',
@@ -145,10 +144,10 @@ export class SidebarService {
       ]
     }
   ];
-  constructor() { }
+  constructor() {}
 
   toggle() {
-    this.toggled = ! this.toggled;
+    this.toggled = !this.toggled;
   }
 
   getSidebarState() {

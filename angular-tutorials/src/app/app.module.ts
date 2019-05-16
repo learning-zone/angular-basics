@@ -16,7 +16,6 @@ import { DirectivesComponent } from './nav/component/directives/directives.compo
 import { LifecyclesComponent } from './nav/component/lifecycles/lifecycles.component';
 import { PipesComponent } from './nav/component/pipes/pipes.component';
 import { PageNotFoundComponent } from './nav/page-not-found/page-not-found.component';
-import { AngularFormsComponent } from './nav/forms/angular-forms/angular-forms.component';
 import { ReativeFormsComponent } from './nav/forms/reative-forms/reative-forms.component';
 import { ObservablesComponent } from './nav/rxjs/observables/observables.component';
 import { PromisesComponent } from './nav/rxjs/promises/promises.component';
@@ -40,6 +39,7 @@ import { StructuralDirectivesDirective } from './nav/component/directives/struct
 import { heroSwitchComponents } from './nav/component/directives/hero-switch.components';
 import { UnlessDirective } from './nav/component/directives/unless.directive';
 import { CustomPipe } from './nav/component/pipes/custom.pipe';
+import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -54,7 +54,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LifecyclesComponent,
     PipesComponent,
     PageNotFoundComponent,
-    AngularFormsComponent,
     ReativeFormsComponent,
     ObservablesComponent,
     PromisesComponent,
@@ -77,7 +76,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     StructuralDirectivesDirective,
     heroSwitchComponents,
     UnlessDirective,
-    CustomPipe
+    CustomPipe,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,6 @@ import { DirectivesComponent } from './nav/component/directives/directives.compo
 import { LifecyclesComponent } from './nav/component/lifecycles/lifecycles.component';
 import { PipesComponent } from './nav/component/pipes/pipes.component';
 import { PageNotFoundComponent } from './nav/page-not-found/page-not-found.component';
-import { AngularFormsComponent } from './nav/forms/angular-forms/angular-forms.component';
 import { ReativeFormsComponent } from './nav/forms/reative-forms/reative-forms.component';
 import { ObservablesComponent } from './nav/rxjs/observables/observables.component';
 import { PromisesComponent } from './nav/rxjs/promises/promises.component';
@@ -23,6 +22,7 @@ import { AnimationsComponent } from './nav/miscellaneous/animations/animations.c
 import { InternationalizationComponent } from './nav/miscellaneous/internationalization/internationalization.component';
 import { DragDropComponent } from './nav/miscellaneous/drag-drop/drag-drop.component';
 import { VirtualScrollingComponent } from './nav/miscellaneous/virtual-scrolling/virtual-scrolling.component';
+import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
 
 const routes: Routes = [
   { path: 'component-interaction', component: ComponentInteractionComponent },
@@ -30,9 +30,9 @@ const routes: Routes = [
   { path: 'lifecycles', component: LifecyclesComponent },
   { path: 'pipes', component: PipesComponent },
 
-  { path: 'angular-forms', component: AngularFormsComponent },
+  { path: 'template-driven-forms', component: TemplateDrivenComponent },
   { path: 'reative-forms', component: ReativeFormsComponent },
-  
+
   { path: 'observables', component: ObservablesComponent },
   { path: 'promises', component: PromisesComponent },
   { path: 'rxjs', component: RxjsComponent },
