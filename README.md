@@ -18,8 +18,7 @@
 1. How to make sure that single instance will be used in an entire application? 
 1. How do you reference the host of a component? 
 1. How to add authentication in client side using Angular? 
-1. Explain Angular Framework Architecture with the help of diagram? 
-1. Briefly explain Event Binding in Angular? 
+1. Explain Angular Framework Architecture with the help of diagram?  
 1. Explain the process by which your application is bootstrapped. 
 1. What is NgZone and what is it used for?
 1. Why would you use renderer methods instead of using native element methods? 
