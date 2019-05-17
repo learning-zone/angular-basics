@@ -1,3 +1,15 @@
-<p>
-  reative-forms works!
-</p>
+<h5>Reactive Forms<hr/></h5>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-group">
+    <label for="First name">First Name</label>
+    <input type="text" formControlName="firstName" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+    <label for="Last Name">Last Name</label>
+    <input type="text" formControlName="lastName" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+    <label for="E-mail">E-mail</label>
+    <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control" placeholder="E-mail">
+    <br/>
+  <button class="btn btn-primary" type="submit">Submit</button>
+ </div>
+</form>    

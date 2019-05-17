@@ -8,10 +8,6 @@ export class SidebarService {
   _hasBackgroundImage = true;
   menus = [
     {
-      title: 'General',
-      type: 'header'
-    },
-    {
       title: 'Components',
       icon: 'fa fa-folder',
       active: false,
