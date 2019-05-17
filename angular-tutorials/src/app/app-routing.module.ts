@@ -51,6 +51,7 @@ const routes: Routes = [
   { path: 'drag-drop', component: DragDropComponent },
   { path: 'virtual-scrolling', component: VirtualScrollingComponent },
 
+  { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
