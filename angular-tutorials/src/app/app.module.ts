@@ -40,7 +40,7 @@ import { heroSwitchComponents } from './nav/component/directives/hero-switch.com
 import { UnlessDirective } from './nav/component/directives/unless.directive';
 import { CustomPipe } from './nav/component/pipes/custom.pipe';
 import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -86,7 +86,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     PerfectScrollbarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     {

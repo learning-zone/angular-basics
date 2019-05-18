@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-template-driven',
   templateUrl: './template-driven.component.html',
   styleUrls: ['./template-driven.component.scss']
 })
-export class TemplateDrivenComponent implements OnInit {
+export class TemplateDrivenComponent {
+  model: any = {};
 
-  constructor() { }
-
-  ngOnInit() {
+  onSubmit() {
+    alert('SUCCESS!!! \n\n' + JSON.stringify(this.model));
   }
-
 }
