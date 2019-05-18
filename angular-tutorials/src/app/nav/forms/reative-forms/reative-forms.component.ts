@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'; 
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reative-forms',
@@ -8,23 +7,27 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
   styleUrls: ['./reative-forms.component.scss']
 })
 export class ReativeFormsComponent implements OnInit {
-  userForm = this.userForm;
+  userForm: FormGroup;
+  submitted = false;
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.userForm = this.formBuilder.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
-      email: ['', [Validators.required]],
-      password: ['', [Validators.required]]
+      email: ['', [Validators.required, Validators.email]]
     });
   }
 
+  get formValues() {
+    return this.userForm.controls;
+  }
   onSubmit() {
-     if (this.userForm.valid) {
-       console.log('Form Saved Successfully !')
-     } else {
-       console.log('Some fields are missing !');
-     } 
+    this.submitted = true;
+     if (this.userForm.invalid) {
+       return;
+     }
+
+     alert('SUCCESS !!! \n\n' + JSON.stringify(this.userForm.value));
   }
 }

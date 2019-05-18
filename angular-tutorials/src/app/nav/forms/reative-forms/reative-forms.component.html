@@ -1,15 +1,28 @@
-<h5>Reactive Forms<hr/></h5>
-
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
-
-  <div class="form-group">
-    <label for="First name">First Name</label>
-    <input type="text" formControlName="firstName" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-    <label for="Last Name">Last Name</label>
-    <input type="text" formControlName="lastName" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-    <label for="E-mail">E-mail</label>
-    <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control" placeholder="E-mail">
-    <br/>
-  <button class="btn btn-primary" type="submit">Submit</button>
- </div>
-</form>    
+<h5>Angular 7 Reactive Form Validation<hr/></h5>
+<div class="container col-xl-10">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()"  >
+    <div class="form-group">
+      <label for="First name">First Name</label>
+      <input type="text" formControlName="firstName" class="form-control" placeholder="First Name" [ngClass]="{ 'is-invalid': submitted && formValues.firstName.errors }">
+      <div *ngIf="submitted && formValues.firstName.errors" class="invalid-feedback">
+          <div *ngIf="formValues.firstName.errors.required">First Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Last Name">Last Name</label>
+      <input type="text" formControlName="lastName" class="form-control" placeholder="Last Name" [ngClass]="{ 'is-invalid': submitted && formValues.lastName.errors }">
+      <div *ngIf="submitted && formValues.lastName.errors" class="invalid-feedback">
+          <div *ngIf="formValues.lastName.errors.required">Last Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="E-mail">E-mail</label>
+      <input type="email" formControlName="email" class="form-control" placeholder="E-mail" [ngClass]="{ 'is-invalid': submitted && formValues.email.errors }">
+      <div *ngIf="submitted && formValues.email.errors" class="invalid-feedback">
+          <div *ngIf="formValues.email.errors.required">Email is required</div>
+          <div *ngIf="formValues.email.errors.email">Email must be a valid email address</div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>    
+</div>
