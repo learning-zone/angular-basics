@@ -22,6 +22,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Run Fake Rest API server
+
+```
+ npm install -g json-server
+ json-server --watch db.json 
+```
+
 ## Resources
 *   [Bootstrap](https://getbootstrap.com/)
 *   [ngx bootstrap](https://valor-software.com/ngx-bootstrap/)

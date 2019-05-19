@@ -1,0 +1,84 @@
+{
+  "employees": [
+    {
+      "id": "001",
+      "name": "Romin",
+      "email": "romink@gmail.com"
+    },
+    {
+      "id": "002",
+      "name": "Neil",
+      "email": "neilrirani@gmail.com"
+    },
+    {
+      "id": "003",
+      "name": "Alex",
+      "email": "alextom@gmail.com"
+    },
+    {
+      "id": "004",
+      "name": "Jeanette",
+      "email": "jpenddreth0@census.gov"
+    },
+    {
+      "id": "005",
+      "name": "Giavani",
+      "email": "gfrediani1@senate.gov"
+    },
+    {
+      "id": "006",
+      "name": "Noell",
+      "email": "nbea2@imageshack.us"
+    },
+    {
+      "id": "007",
+      "name": "Willard",
+      "email": "wvalek3@vk.com"
+    },
+    {
+      "id": "008",
+      "name": "Logan Keller",
+      "email": "logankeller@artiq.com"
+    },
+    {
+      "id": "009",
+      "name": "Colon Salazar",
+      "email": "colonsalazarm@gmail.com"
+    },
+    {
+      "id": "010",
+      "name": "French Mcneil",
+      "email": "frenchmcneil@gmail.com"
+    },
+    {
+      "id": "010",
+      "name": "Carol Martin",
+      "email": "carolmartinl@gmail.com"
+    },
+    {
+      "id": "011",
+      "name": "Jane Lane",
+      "email": "janelane@example.com"
+    },
+    {
+      "id": "012",
+      "name": "John Doe",
+      "email": "janedoe@example.com"
+    },
+    {
+      "id": "013",
+      "name": "Anna Smith",
+      "email": "annasmith@example.com"
+    },
+    {
+      "id": "014",
+      "name": "Peter Jones",
+      "email": "peterjones@example.com"
+    },
+    {
+      "id": "015",
+      "name": "Sam Jackson",
+      "email": "samjackson@example.com"
+    }
+  ]
+}
