@@ -60,10 +60,6 @@ export class SidebarService {
         {
           title: 'Promises',
           path: 'promises'
-        },
-        {
-          title: 'RxJS',
-          path: 'rxjs'
         }
       ]
     },

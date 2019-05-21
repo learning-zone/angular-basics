@@ -20,7 +20,6 @@ import { PageNotFoundComponent } from './nav/page-not-found/page-not-found.compo
 import { ReativeFormsComponent } from './nav/forms/reative-forms/reative-forms.component';
 import { ObservablesComponent } from './nav/rxjs/observables/observables.component';
 import { PromisesComponent } from './nav/rxjs/promises/promises.component';
-import { RxjsComponent } from './nav/rxjs/rxjs/rxjs.component';
 import { DependencyInjectionComponent } from './nav/dependency-injection/dependency-injection/dependency-injection.component';
 import { DiProvidersComponent } from './nav/dependency-injection/di-providers/di-providers.component';
 import { RoutingComponent } from './nav/routing/routing/routing.component';
@@ -59,7 +58,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ReativeFormsComponent,
     ObservablesComponent,
     PromisesComponent,
-    RxjsComponent,
     DependencyInjectionComponent,
     DiProvidersComponent,
     RoutingComponent,
