@@ -41,6 +41,12 @@ import { UnlessDirective } from './nav/component/directives/unless.directive';
 import { CustomPipe } from './nav/component/pipes/custom.pipe';
 import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AnimalDetailsComponent } from './nav/dependency-injection/di-providers/animal-details.component';
+import { AnyAnimalComponent } from './nav/dependency-injection/di-providers/any-animal.component';
+import { LionComponent } from './nav/dependency-injection/di-providers/lion.component';
+import { CowComponent } from './nav/dependency-injection/di-providers/cow.component';
+import { BookComponent } from './nav/dependency-injection/di-providers/book/book.component';
+import { PreferredBookComponent } from './nav/dependency-injection/di-providers/preferred-book/preferred-book.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -77,7 +83,13 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     heroSwitchComponents,
     UnlessDirective,
     CustomPipe,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    AnimalDetailsComponent,
+    AnyAnimalComponent,
+    LionComponent,
+    CowComponent,
+    BookComponent,
+    PreferredBookComponent
   ],
   imports: [
     BrowserModule,
