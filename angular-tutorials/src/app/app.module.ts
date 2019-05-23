@@ -49,6 +49,8 @@ import { BookComponent } from './nav/dependency-injection/di-providers/book.comp
 import { PreferredBookComponent } from './nav/dependency-injection/di-providers/preferred-book.component';
 import { ComputerComponent } from './nav/dependency-injection/di-providers/computer.component';
 import { GlobalErrorHandlerService } from './nav/dependency-injection/di-providers/service/global-error-handler.service';
+import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
+import { ContactComponent } from './nav/routing/lazy-loading/contact/contact.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -92,7 +94,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CowComponent,
     BookComponent,
     PreferredBookComponent,
-    ComputerComponent
+    ComputerComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

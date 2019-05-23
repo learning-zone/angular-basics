@@ -86,20 +86,8 @@ export class SidebarService {
       type: 'dropdown',
       submenus: [
         {
-          title: 'Routing',
-          path: 'routing'
-        },
-        {
           title: 'Lazy Loading',
           path: 'lazy-loading'
-        },
-        {
-          title: 'Services',
-          path: 'services'
-        },
-        {
-          title: 'Providers',
-          path: 'providers'
         },
         {
           title: 'Authentication',
