@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Computer } from '../../di-providers/computer';
+import { LaptopService } from './laptop.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
+  useExisting: LaptopService
 })
-export class DesktopService {
+export class DesktopService implements Computer {
 
-  constructor() { }
+  getComputerName() {
+    return 'DESKTOP';
+  }
 }

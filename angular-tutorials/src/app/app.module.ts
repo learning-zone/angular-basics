@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -45,8 +45,10 @@ import { AnimalDetailsComponent } from './nav/dependency-injection/di-providers/
 import { AnyAnimalComponent } from './nav/dependency-injection/di-providers/any-animal.component';
 import { LionComponent } from './nav/dependency-injection/di-providers/lion.component';
 import { CowComponent } from './nav/dependency-injection/di-providers/cow.component';
-import { BookComponent } from './nav/dependency-injection/di-providers/book/book.component';
-import { PreferredBookComponent } from './nav/dependency-injection/di-providers/preferred-book/preferred-book.component';
+import { BookComponent } from './nav/dependency-injection/di-providers/book.component';
+import { PreferredBookComponent } from './nav/dependency-injection/di-providers/preferred-book.component';
+import { ComputerComponent } from './nav/dependency-injection/di-providers/computer.component';
+import { GlobalErrorHandlerService } from './nav/dependency-injection/di-providers/service/global-error-handler.service';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -89,7 +91,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     LionComponent,
     CowComponent,
     BookComponent,
-    PreferredBookComponent
+    PreferredBookComponent,
+    ComputerComponent
   ],
   imports: [
     BrowserModule,
@@ -104,8 +107,10 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    }
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+    },
+    GlobalErrorHandlerService,
+    { provide: ErrorHandler, useClass: GlobalErrorHandlerService }
   ],
   bootstrap: [AppComponent]
 })
