@@ -4,7 +4,7 @@ import { PreferredBookService } from './service/preferred-book.service';
 @Component({
   selector: 'app-preferred-book',
   template: `
-    <b>preferred Books </b> {{preferredBooks}}
+    preferred Books: <b>{{preferredBooks}}</b>
   `
 })
 export class PreferredBookComponent implements OnInit {

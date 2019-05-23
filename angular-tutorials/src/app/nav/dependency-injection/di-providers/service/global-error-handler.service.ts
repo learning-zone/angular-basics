@@ -6,15 +6,14 @@ import { LoggerService } from './logger.service';
   providedIn: 'root'
 })
 export class GlobalErrorHandlerService implements ErrorHandler {
-  constructor(private injector: Injector) {}
-
+ 
   handleError(error: any) {
-    const LoggerService = this.injector.get(LoggerService);
+    const loggerService = new LoggerService();
     if (error instanceof HttpErrorResponse) {
-      LoggerService.log('Backend returned status code: ' + error.status);
-      LoggerService.log('Response body: ' + error.message);
+      loggerService.log('Backend returned status code: ' + error.status);
+      loggerService.log('Response body: ' + error.message);
     } else {
-      LoggerService.log('An error occurred: ' + error.message);
+      loggerService.log('An error occurred: ' + error.message);
     }
   }
 }
