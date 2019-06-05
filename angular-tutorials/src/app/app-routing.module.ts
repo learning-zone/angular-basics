@@ -23,6 +23,7 @@ import { DragDropComponent } from './nav/miscellaneous/drag-drop/drag-drop.compo
 import { VirtualScrollingComponent } from './nav/miscellaneous/virtual-scrolling/virtual-scrolling.component';
 import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
 
+
 const routes: Routes = [
   { path: 'component-interaction', component: ComponentInteractionComponent },
   { path: 'directives', component: DirectivesComponent },
@@ -51,7 +52,7 @@ const routes: Routes = [
 
   { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent } 
 ];
 
 @NgModule({
