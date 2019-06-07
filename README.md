@@ -107,4 +107,5 @@
 1. What are the various kinds of directives?
 1. What are router events?
 1. What is IVY Renderer? Is it supported by Angular 7?
+1. what is auxiliary routes in angular 7
 
