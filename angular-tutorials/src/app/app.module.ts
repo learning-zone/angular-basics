@@ -49,6 +49,10 @@ import { BookComponent } from './nav/dependency-injection/di-providers/book.comp
 import { PreferredBookComponent } from './nav/dependency-injection/di-providers/preferred-book.component';
 import { ComputerComponent } from './nav/dependency-injection/di-providers/computer.component';
 import { GlobalErrorHandlerService } from './nav/dependency-injection/di-providers/service/global-error-handler.service';
+import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboard.component';
+import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
+import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
+import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -93,7 +97,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CowComponent,
     BookComponent,
     PreferredBookComponent,
-    ComputerComponent
+    ComputerComponent,
+    DashboardComponent,
+    HomeComponent,
+    RightsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -108,7 +116,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     },
     GlobalErrorHandlerService,
     { provide: ErrorHandler, useClass: GlobalErrorHandlerService }

@@ -1,9 +1,9 @@
 <h5>Angular 7 - Lazy-loading <hr /></h5>
 <p>Lazy loading is the technique were angular loads the modules only when it is needed rather than all at once. It is also called on-demand loading.</p>
 <ul>
-    <li><a class="navbar-brand" routerLink="">Home</a></li>
-    <li><a class="navbar-brand" routerLink="">Dashboard</a></li>
-    <li><a class="navbar-brand" routerLink="">Rights</a></li>
-    <li><a class="navbar-brand" routerLink="">Users</a></li>
+    <li><a class="navbar-brand" [routerLink]="['/lazy-loading/home']">Home</a></li>
+    <li><a class="navbar-brand" [routerLink]="['/lazy-loading/dashboard']">Dashboard</a></li>
+    <li><a class="navbar-brand" [routerLink]="['/lazy-loading/rights']">Rights</a></li>
+    <li><a class="navbar-brand" [routerLink]="['/lazy-loading/users']">Users</a></li>
 </ul>
 <router-outlet></router-outlet>

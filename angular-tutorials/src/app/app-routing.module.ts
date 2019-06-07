@@ -22,6 +22,10 @@ import { InternationalizationComponent } from './nav/miscellaneous/international
 import { DragDropComponent } from './nav/miscellaneous/drag-drop/drag-drop.component';
 import { VirtualScrollingComponent } from './nav/miscellaneous/virtual-scrolling/virtual-scrolling.component';
 import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
+import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboard.component';
+import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
+import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
+import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
 
 
 const routes: Routes = [
@@ -39,7 +43,14 @@ const routes: Routes = [
   { path: 'di-providers', component: DiProvidersComponent },
 
   { path: 'routing', component: RoutingComponent },
-  { path: 'lazy-loading', component: LazyLoadingComponent },
+  { path: 'lazy-loading', component: LazyLoadingComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'rights', component: RightsComponent },
+      { path: 'users', component: UsersComponent }
+    ]
+  },
   { path: 'services', component: ServicesComponent },
   { path: 'providers', component: ProvidersComponent },
   { path: 'authentication', component: AuthenticationComponent },
@@ -49,10 +60,10 @@ const routes: Routes = [
   { path: 'internationalization', component: InternationalizationComponent },
   { path: 'drag-drop', component: DragDropComponent },
   { path: 'virtual-scrolling', component: VirtualScrollingComponent },
-
+ 
   { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent } 
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
