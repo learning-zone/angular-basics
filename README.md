@@ -1,6 +1,6 @@
 # Angular Questions
 
-1. What's new in Angular 8?
+1. What's new in Angular 7?
 1. What is the difference between observable and promises?
 1. List the differences between Angular  components vs. directives?
 1. How do you define the transition between two states in Angular?
