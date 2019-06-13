@@ -1,4 +1,5 @@
 <h5>Angular 7 - Animations <hr /></h5>
-<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
-  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+
+<div [@buttonState]="state" (click)="toggleState()" class="open-close-container">
+  <p>The box color is {{ isOpen ? 'Yellow' : 'Green' }}!</p>
 </div>

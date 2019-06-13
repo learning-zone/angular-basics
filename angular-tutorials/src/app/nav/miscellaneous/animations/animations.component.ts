@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -6,33 +6,32 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './animations.component.html',
   styleUrls: ['./animations.component.scss'],
   animations: [
-    trigger('openClose', [
+    trigger('buttonState', [
       state(
-        'open',
+        'inactive',
         style({
-          height: '200px',
-          opacity: 1,
-          backgroundColor: 'yellow'
+          backgroundColor: 'yellow',
+          transform: 'scale(1)'
         })
       ),
       state(
-        'closed',
+        'active',
         style({
-          height: '100px',
-          opacity: 0.5,
-          backgroundColor: 'green'
+          backgroundColor: 'green',
+          transform: 'scale(1.1)'
         })
       ),
-      transition('open => closed', [animate('1s')]),
-      transition('closed => open', [animate('0.5s')])
+      transition('inactive => active', animate('500ms ease-in')),
+      transition('active => inactive', animate('500ms ease-out'))
     ])
   ]
 })
 export class AnimationsComponent {
- 
+  state: String = 'inactive';
   isOpen = true;
 
-  toggle() {
-    this.isOpen = !this.isOpen;
+  toggleState() {
+    this.state = this.state === 'active' ? 'inactive' : 'active';
+    this.isOpen = this.state === 'active' ? false : true;
   }
 }
