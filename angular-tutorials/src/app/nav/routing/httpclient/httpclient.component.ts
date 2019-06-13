@@ -104,6 +104,19 @@ export class HttpclientComponent {
 
   doGETAsPromise() {
     console.log('GET as Promise');
+    let url = `${this.apiRoot}/get`;
+    this.HttpClient.get(url)
+      .toPromise()
+      .then(
+        data => {
+           console.log(data);
+           document.getElementById('result').innerHTML = JSON.stringify(data);
+        },
+        error => {
+          console.log(error);
+        } 
+      );
+    document.getElementById('method_type').innerHTML = '[ GET as Promise ]';
   }
 
   doGETAsPromiseError() {
@@ -120,7 +133,7 @@ export class HttpclientComponent {
           document.getElementById('result').innerHTML = JSON.stringify(error);
         }
       );
-      document.getElementById('method_type').innerHTML = '[ GET As Promise Error ]';
+      document.getElementById('method_type').innerHTML = '[ GET as Promise Error ]';
   }
 
   doGETAsObservableError() {
@@ -135,10 +148,24 @@ export class HttpclientComponent {
          document.getElementById('result').innerHTML = JSON.stringify(error);
       }
     );
-    document.getElementById('method_type').innerHTML = '[ GET As Observable Error ]';
+    document.getElementById('method_type').innerHTML = '[ GET as Observable Error ]';
   }
 
   doGETWithHeaders() {
     console.log('GET With Headers');
+    let headers = new HttpHeaders()
+        .set('Authorization', 'username:password');
+    
+    let url = `${this.apiRoot}/get`;
+    this.HttpClient.get(url, { headers }).subscribe(
+      data => {
+        console.log(data);
+        document.getElementById('result').innerHTML = JSON.stringify(data);
+      },
+      error => {
+        console.error(`Error: ${error.status} ${error.statusText}`);
+      }
+    );
+    document.getElementById('method_type').innerHTML = '[ GET With Headers ]';
   }
 }
