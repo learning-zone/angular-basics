@@ -23,12 +23,14 @@
     "@fortawesome/fontawesome-free": "^5.9.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.6.9",
     "express": "^4.17.1",
     "ngx-bootstrap": "^4.2.0",
     "ngx-perfect-scrollbar": "^7.2.1",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
+    "web-animations-js": "^2.3.1",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
