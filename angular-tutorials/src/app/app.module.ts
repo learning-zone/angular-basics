@@ -41,14 +41,6 @@ import { UnlessDirective } from './nav/component/directives/unless.directive';
 import { CustomPipe } from './nav/component/pipes/custom.pipe';
 import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AnimalDetailsComponent } from './nav/dependency-injection/di-providers/animal-details.component';
-import { AnyAnimalComponent } from './nav/dependency-injection/di-providers/any-animal.component';
-import { LionComponent } from './nav/dependency-injection/di-providers/lion.component';
-import { CowComponent } from './nav/dependency-injection/di-providers/cow.component';
-import { BookComponent } from './nav/dependency-injection/di-providers/book.component';
-import { PreferredBookComponent } from './nav/dependency-injection/di-providers/preferred-book.component';
-import { ComputerComponent } from './nav/dependency-injection/di-providers/computer.component';
-import { GlobalErrorHandlerService } from './nav/dependency-injection/di-providers/service/global-error-handler.service';
 import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboard.component';
 import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
 import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
@@ -91,13 +83,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UnlessDirective,
     CustomPipe,
     TemplateDrivenComponent,
-    AnimalDetailsComponent,
-    AnyAnimalComponent,
-    LionComponent,
-    CowComponent,
-    BookComponent,
-    PreferredBookComponent,
-    ComputerComponent,
     DashboardComponent,
     HomeComponent,
     RightsComponent,
@@ -117,9 +102,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-    },
-    GlobalErrorHandlerService,
-    { provide: ErrorHandler, useClass: GlobalErrorHandlerService }
+    }
   ],
   bootstrap: [AppComponent]
 })
