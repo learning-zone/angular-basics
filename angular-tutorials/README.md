@@ -29,6 +29,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
  json-server --watch db.json 
 ```
 
+## Internationalization
+
+```
+ng xi18n
+```
+
 ## Resources
 *   [Bootstrap](https://getbootstrap.com/)
 *   [ngx bootstrap](https://valor-software.com/ngx-bootstrap/)
