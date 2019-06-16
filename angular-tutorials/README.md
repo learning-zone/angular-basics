@@ -32,7 +32,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Internationalization
 
 ```
-ng xi18n
+ng xi18n --output-path src/locale
 ```
 
 ## Resources
@@ -40,6 +40,7 @@ ng xi18n
 *   [ngx bootstrap](https://valor-software.com/ngx-bootstrap/)
 *   [Font awsome](http://fontawesome.io/)
 *   [Angular Perfect Scrollbar](https://github.com/zefoy/ngx-perfect-scrollbar)
+*   [Online XLIFF Editor](http://xliff.brightec.co.uk/)
 
 ## Further help
 
