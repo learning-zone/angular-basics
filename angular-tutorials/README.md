@@ -40,6 +40,7 @@ ng xi18n
 *   [ngx bootstrap](https://valor-software.com/ngx-bootstrap/)
 *   [Font awsome](http://fontawesome.io/)
 *   [Angular Perfect Scrollbar](https://github.com/zefoy/ngx-perfect-scrollbar)
+*   [Online XLIFF Editor](http://xliff.brightec.co.uk/)
 
 ## Further help
 
