@@ -32,7 +32,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Internationalization
 
 ```
-ng xi18n
+ng xi18n --output-path src/locale
 ```
 
 ## Resources
