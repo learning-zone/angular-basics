@@ -41,6 +41,9 @@ ng xi18n --output-path src/locale
 *   [Font awsome](http://fontawesome.io/)
 *   [Angular Perfect Scrollbar](https://github.com/zefoy/ngx-perfect-scrollbar)
 *   [Online XLIFF Editor](http://xliff.brightec.co.uk/)
+*   [Angular in-memory-web-api](https://github.com/angular/in-memory-web-api#readme)
+*   [Material Design for Angular](https://github.com/angular/components#readme)
+*   [Touch Gestures](http://hammerjs.github.io/)
 
 ## Further help
 
