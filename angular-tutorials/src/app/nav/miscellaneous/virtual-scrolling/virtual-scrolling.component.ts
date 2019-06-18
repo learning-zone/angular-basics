@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './virtual-scrolling.component.html',
   styleUrls: ['./virtual-scrolling.component.scss']
 })
-export class VirtualScrollingComponent implements OnInit {
+export class VirtualScrollingComponent {
+  numbers: number[] = [];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
+    for (let index = 0; index < 10000; index++) {
+      this.numbers.push(index);
+    }
   }
-
 }

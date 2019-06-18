@@ -1,1 +1,16 @@
 <h5>Angular 7 - Virtual Scrolling <hr /></h5>
+<p><b>Infinite Scroll:</b> Initially loads only few items and keep appending more items to the list as you scroll, 
+  it gives the complete snapshot of the list but as more and more items keep adding, list is going to slow down 
+  eventually as the number of nodes in the DOM are increasing and thus application will start slowing down.</p>
+
+<p><b>Virtual Scroll:</b> Display only small subset of the data that is in the viewport and keep changing the records 
+  as the user scrolls. It keep the number of DOM elements constant hence boosting the performance of the application.</p>
+
+
+<ul class="list">
+  <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="90" >
+    <ng-container *cdkVirtualFor="let n of numbers">
+      <li> {{n}} </li>
+    </ng-container>
+  </cdk-virtual-scroll-viewport>
+</ul>
