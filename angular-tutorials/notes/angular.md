@@ -3,13 +3,13 @@
 
 ##### Q. What is Angular Framework?
 
-    Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build applications with 
-    in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, 
-    end to end tooling, and many more other features are used to ease the development.
+Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build applications with 
+in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, 
+end to end tooling, and many more other features are used to ease the development.
 
 ##### Q. What is the difference between AngularJS and Angular?
-    Angular is a completely revived component-based framework in which an application is a tree of individual 
-    components.
+Angular is a completely revived component-based framework in which an application is a tree of individual 
+components.
 
 
 | AngularJS                                         | Angular                                             |
@@ -20,72 +20,51 @@
 | Not a mobile friendly framework                   | Developed considering mobile platform               |
 | Difficulty in SEO friendly application development| Ease to create SEO friendly applications            |
 
-##### Q. What is TypeScript?
-    TypeScript is a typed superset of JavaScript created by Microsoft that adds optional types, classes, async/await, and many other features, and compiles to plain JavaScript. Angular built entirely in TypeScript and used as a primary language.
-    You can install it globally as
-    ```
-    npm install -g typescript
-    ```
-    Let's see a simple example of TypeScript usage,
-    ```typescript
-    function greeter(person: string) {
-        return "Hello, " + person;
-    }
-
-    let user = "Sudheer";
-
-    document.body.innerHTML = greeter(user);
-    ```
-    The greeter method allows only string type as argument.
-
-##### Q. Write a pictorial diagram of Angular architecture?
-    The main building blocks of an Angular application is shown in the below diagram
-    ![ScreenShot](images/architecture.png)
 
 ##### Q. What are the key components of Angular?
-    Angular has the below key components,
-    1. **Component:** These are the basic building blocks of angular application to control HTML views.
-    2. **Modules:** An angular module is set of angular basic building blocks like component, directives, services etc. An application is divided into logical pieces and each piece of code is called as "module" which perform a single task.
-    3. **Templates:** This represent the views of an Angular application.
-    4. **Services:** It is used to create components which can be shared across the entire application.
-    5. **Metadata:** This can be used to add more data to an Angular class.
+Angular has the below key components,
+1. **Component:** These are the basic building blocks of angular application to control HTML views.
+2. **Modules:** An angular module is set of angular basic building blocks like component, directives, services etc. An application is divided into logical pieces and each piece of code is called as "module" which perform a single task.
+3. **Templates:** This represent the views of an Angular application.
+4. **Services:** It is used to create components which can be shared across the entire application.
+5. **Metadata:** This can be used to add more data to an Angular class.
 
 ##### Q. What are directives?
-    Directives add behaviour to an existing DOM element or an existing component instance.
-    ```typescript
-    import { Directive, ElementRef, Input } from '@angular/core';
+Directives add behaviour to an existing DOM element or an existing component instance.
+```typescript
+import { Directive, ElementRef, Input } from '@angular/core';
 
-    @Directive({ selector: '[myHighlight]' })
-    export class HighlightDirective {
-        constructor(el: ElementRef) {
-           el.nativeElement.style.backgroundColor = 'yellow';
-        }
+@Directive({ selector: '[myHighlight]' })
+export class HighlightDirective {
+    constructor(el: ElementRef) {
+        el.nativeElement.style.backgroundColor = 'yellow';
     }
-    ```
+}
+```
 
-    Now this directive extends HTML element behavior with a yellow background as below
-    ```html
-    <p myHighlight>Highlight me!</p>
-    ```
+Now this directive extends HTML element behavior with a yellow background as below
+```html
+<p myHighlight>Highlight me!</p>
+```
 
 ##### Q. What are components?
-    Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
-    Let's see a simple example of Angular component
-    ```typescript
-    import { Component } from '@angular/core';
+Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
+Let's see a simple example of Angular component
+```typescript
+import { Component } from '@angular/core';
 
-    @Component ({
-       selector: 'my-app',
-       template: ` <div>
-          <h1>{{title}}</h1>
-          <div>Learn Angular6 with examples</div>
-       </div> `,
-    })
+@Component ({
+    selector: 'my-app',
+    template: ` <div>
+        <h1>{{title}}</h1>
+        <div>Learn Angular6 with examples</div>
+    </div> `,
+})
 
-    export class AppComponent {
-       title: string = 'Welcome to Angular world';
-    }
-    ```
+export class AppComponent {
+    title: string = 'Welcome to Angular world';
+}
+```
 
 ##### Q. What are the differences between Component and Directive?
     In a short note, A component(@component) is a directive-with-a-template.
