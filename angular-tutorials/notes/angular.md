@@ -67,17 +67,17 @@ export class AppComponent {
 ```
 
 ##### Q. What are the differences between Component and Directive?
-    In a short note, A component(@component) is a directive-with-a-template.
+In a short note, A component(@component) is a directive-with-a-template.
 
-    Some of the major differences are mentioned in a tabular form
+Some of the major differences are mentioned in a tabular form
 
-    | Component | Directive |
-    |---- | ---------
-    | To register a component we use @Component meta-data annotation  | To register directives we use @Directive meta-data annotation |
-    | Components are typically used to create UI widgets| Directive is used to add behavior to an existing DOM element |
-    | Component is used to break up the application into smaller components| Directive is use to design re-usable components|
-    | Only one component can be present per DOM element | Many directives can be used per DOM element |
-    | @View decorator or templateurl/template are mandatory | Directive doesn't use View|
+| Component | Directive |
+|:--------- |:---------
+| To register a component we use @Component meta-data annotation  | To register directives we use @Directive meta-data annotation |
+| Components are typically used to create UI widgets| Directive is used to add behavior to an existing DOM element |
+| Component is used to break up the application into smaller components| Directive is use to design re-usable components|
+| Only one component can be present per DOM element | Many directives can be used per DOM element |
+| @View decorator or templateurl/template are mandatory | Directive doesn't use View|
 
 ##### Q. What is a template?
     A template is a HTML view where you can display data by binding controls to properties of an Angular component. You can store your component's template in one of two places. You can define it inline using the template property, or you can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.
