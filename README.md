@@ -108,4 +108,53 @@
 1. What are router events?
 1. What is IVY Renderer? Is it supported by Angular 7?
 1. What is auxiliary routes in angular 7
+1. How do you get a reference to a child component? [ANSWER]: ViewChild/ViewChildren or ContentChild/ContentChildren
+1. What is the difference between ViewChild and ContentChild?
+1. How do you listen for events in a component? [ANSWER]: HostListener or via elementRef.nativeElement
+1. What is ViewEncapsulation?
+1. Explain content projection. (ie ng-content)
+1. What are route guards and why are they useful?
+1. How do you force a change detection cycle? [ANSWER]: changeDetectorRef.markForCheck OR changeDetectorRef.detectChanges().
+1. Whats the different between changeDetectorRef.markForCheck and changeDetectorRef.detectChanges()?
+1. What is ng-container and why is it useful?
+1. How would you get a reference to a parent component? [ANSWER]: Inject it in the constructor.
+1. What does forwardRef do?
+1. What are rxjs letttable operators?
+1. What are entryComponents?
+1. What is Redux pattern and explain why its useful.
+1. When building custom form components, what interface do they components need to implement to particpate in forms? [ANSWER]: ControlValueAccessor
+1. How do components communicate with each other?
+1. Which lifecycle hook would you use to unsubscribe an observable?
+1. What is the difference between RouterModule.forRoot() vs RouterModule.forChild()? Why is it important?
+1. What is the difference between a module's forRoot() and forChild() methods and why do you need it?
+1. What's the difference between dirty, touched, and pristine on a form element?
+1. How do you decide to create a new NgModule?
+1. How will you inject custom header in your http call?
+1. How would you cache an observable data?
+1. How would you save data from a form control?
+1. How Event Emitters works in Angular?
+1. How do you mock a service to inject in a unit test?
+1. What is a factory Component?
+1. What is wildcard state?
+1. How would you insert an embedded view from a prepared TemplateRef?
+1. How will you intercept http to inject header to each http call?
+1. How would you create a component to display error messages throughout your application?
+1. How will you parallelize multiple observable call?
+1. How will you put one async call before another?
+1. How can you use web worker in angular app?
+1. Explain the difference between layout, painting and compositing.
+1. How can you cancel a router navigation?
+1. How would you animate routing?
+1. How would you cancel a promise on which you are waiting?
+1. When does a lazy loaded module is loaded?
+1. Why angular uses url segment?
+1. How will you make angular app secure?
+1. How will you localize numbers currencies and dates?
+1. What is the best way to use translation in your app?
+1. How will you optimize image/svg in your angular app?
+1. How would you make sure an api call that needs to be called only once but with multiple conditions? Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
+1. If you need to respond to two different Observable/Subject with one callback function, how would you do it? (ex: if you need to change the url through route parameters and with prev/next buttons).
+1. Write a program in angular to fetch data and display User Profile.
+1. Write a program in angular to create Persistent Todo List.
+1. Write a program in angular to create Registration System.
 
