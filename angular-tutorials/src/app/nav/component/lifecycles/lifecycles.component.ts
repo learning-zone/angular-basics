@@ -8,31 +8,31 @@ import { Component, OnInit, Input } from '@angular/core';
 export class LifecyclesComponent implements OnInit {
   data: number = 100;
   constructor() {
-    console.log(`new - data is ${this.data}`);
+    console.log(`constructor() called: ${this.data}`);
   }
   ngOnChanges() {
-    console.log(`ngOnChanges - data is ${this.data}`);
+    console.log(`ngOnChanges() called: ${this.data}`);
   }
   ngOnInit() {
-    console.log(`ngOnInit  - data is ${this.data}`);
+    console.log(`ngOnInit() called: ${this.data}`);
   }
   ngDoCheck() {
-    console.log('ngDoCheck');
+    console.log('ngDoCheck() called');
   }
   ngAfterContentInit() {
-    console.log('ngAfterContentInit');
+    console.log('ngAfterContentInit() called');
   }
   ngAfterContentChecked() {
-    console.log('ngAfterContentChecked');
+    console.log('ngAfterContentChecked() called');
   }
   ngAfterViewInit() {
-    console.log('ngAfterViewInit');
+    console.log('ngAfterViewInit() called');
   }
   ngAfterViewChecked() {
-    console.log('ngAfterViewChecked');
+    console.log('ngAfterViewChecked() called');
   }
   ngOnDestroy() {
-    console.log('ngOnDestroy');
+    console.log('ngOnDestroy() called');
   }
   fnAddNumber(): void {
     this.data += 100;
