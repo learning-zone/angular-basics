@@ -7,8 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./reative-forms.component.scss']
 })
 export class ReativeFormsComponent implements OnInit {
-  userForm: FormGroup;
-  submitted = false;
+  userForm: any = FormGroup;
+  submitted: boolean = false;
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
