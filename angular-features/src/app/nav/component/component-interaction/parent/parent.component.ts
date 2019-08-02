@@ -1,25 +1,22 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit {
+export class ParentComponent {
   child1: { futbols: Array<boolean>; name: string; id: number } = {
     futbols: [true, true, true, true, true],
-    name: 'Child 1',
+    name: 'Child Component 1',
     id: 1
   };
 
   child2: { futbols: Array<boolean>; name: string; id: number } = {
     futbols: [true, true, true, true],
-    name: 'Child 2',
+    name: 'Child Component 2',
     id: 2
   };
-  constructor() {}
-
-  ngOnInit() {}
 
   passBall(id: number) {
     if (id == 1) {
