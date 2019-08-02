@@ -38,6 +38,6 @@ export class LifecyclesComponent implements OnInit {
     this.data += 100;
   }
   deleteNumber(): void {
-    this.data -= 10;
+    this.data -= 50;
   }
 }
