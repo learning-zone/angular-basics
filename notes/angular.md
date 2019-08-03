@@ -1,8 +1,35 @@
 ## Angular Notes
 
+#### Q. Angular important commands
+
+```typescript
+cmd > npm install -g @angular/cli
+cmd > ng new project-name		    [ Create an Angular project with Angular CLI ]
+cmd > ng serve --open
+cmd > ng test						[ Running unit tests ]
+cmd > ng e2e 						[ Running end-to-end tests with protractor framwork]
+cmd > ng generate					[ Generate Angular components ]
+cmd > ng lint						[ prints out linting errors ]
+cmd > ng build						[ The build artifacts will be stored in the dist/ directory. ]
+cmd > ng build --prod				[ This will build the project in the dist directory ]
+cmd > ng build --dev				
+cmd > ng get/ng set					[ Set a value in the Angular CLI configuration ]
+cmd > ng doc						[ Opens a browser window with the keyword as search in Angular documentation. ]
+cmd > ng eject						[ ejects your app and output the proper webpack configuration and scripts ]
+cmd > ng xi18n						[ Extracts i18n messages from the templates. ]
+cmd > ng test --watch=false --code-coverage		[ Generate Code Coverage Reports ]
+cmd > npm run 
+cmd > npm run-script
+cmd > ng build --aot
+cmd > ng serve --aot
+```
+#### Q. How to optimize loading large data in angular?
+
+#### Q. How an Angular application gets started or loaded?
+
+#### Q. How to declare variable so that it can hold multiple values
 
 #### Q. What is Angular Framework?
-
 Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build applications with 
 in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, 
 end to end tooling, and many more other features are used to ease the development.
@@ -1604,3 +1631,7 @@ bazel build [targets] // Compile the default output artifacts of the given targe
 bazel test [targets] // Run the tests with *_test targets found in the pattern.
 bazel run [target]: Compile the program represented by target and then run it.
 ```
+
+#### Q. What are the typescript features? How typescript is different from ES6?
+
+#### Q. How to pass optional parameter in typescript?
