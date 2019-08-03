@@ -2,7 +2,7 @@
 
 #### Q. Angular important commands
 
-```typescript
+```
 cmd > npm install -g @angular/cli
 cmd > ng new project-name		    [ Create an Angular project with Angular CLI ]
 cmd > ng serve --open
