@@ -40,7 +40,7 @@ ng build --prod              -  this is for production build
 |No AOT compilation	                        |AOT compilation takes place                |
 
 
-**minification** - process of removing excess whiteSpace,comments and optinal tokens like curly braces and semi colons
+**minification** - process of removing excess whitespace, comments and optinal tokens like curly braces and semi colons
 **uglification** - process of transforming code to use short variable and function names  
 **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
