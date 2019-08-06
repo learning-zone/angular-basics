@@ -366,7 +366,7 @@ Sometimes an app needs to display a view or a portion of a view only under speci
 
 #### Q. What happens if you use script tag inside template?
 
-Angular recognizes the value as unsafe and automatically sanitizes it, which removes the **<script>** tag but keeps safe content such as the text content of the <script> tag. This way it eliminates the risk of script injection attacks. If you still use it then it will be ignored and a warning appears in the browser console.
+Angular recognizes the value as unsafe and automatically sanitizes it, which removes the *<script>* tag but keeps safe content such as the text content of the <script> tag. This way it eliminates the risk of script injection attacks. If you still use it then it will be ignored and a warning appears in the browser console.
 Let's take an example of innerHtml property binding which causes XSS vulnerability,
 ```typescript
 export class InnerHtmlBindingComponent {
