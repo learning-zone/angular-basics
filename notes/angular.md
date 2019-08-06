@@ -24,6 +24,25 @@
 |ng add @angular/pwa                  |Adds support for an external library to project                              |
 
 
+#### Q. What is difference between Angular Dev Build(JIT compilation) and Prod Build(AOT compilation)?
+
+Angular has 2 types of build dev build or prod build :
+```
+ng build or ng build --dev   -  this is for development build
+ng build --prod              -  this is for production build
+```
+
+|Dev Build	                                |Production build                           |
+|-------------------------------------------|-------------------------------------------|
+|Source maps(.js.map files) are generated	  |Source maps not generated                  |
+|Dev Build is not minified and uglified	    |Production Build is minified and uglified  |
+|Dev build is not tree shaked	              |Production build is tree shaked            |
+|No AOT compilation	                        |AOT compilation takes place                |
+
+
+*minification* - process of removing excess whiteSpace,comments and optinal tokens like curly braces and semi colons
+*uglification* - process of transforming code to use short variable and function names
+*tree shaking* -  is the process of removing any code that we are not actually using in our application from the final bundle
 
 #### Q. How to optimize loading large data in angular?
 
