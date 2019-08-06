@@ -127,7 +127,7 @@ Some of the major differences are mentioned in a tabular form
 | @View decorator or templateurl/template are mandatory | Directive doesn't use View|
 
 #### Q. What is a template?
-A template is a HTML view where you can display data by binding controls to properties of an Angular component. You can store your component's template in one of two places. You can define it inline using the template property, or you can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.
+A template is a HTML view where we can display data by binding controls to properties of an Angular component. We can define it inline using the template property, or we can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.
 **Using inline template with template syntax,**
 ```typescript
 import { Component } from '@angular/core';
@@ -183,7 +183,6 @@ The NgModule decorator has three options
 
 #### Q. What are lifecycle hooks available?
 Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
-
 
 The description of each lifecycle method is as below,
 1. **ngOnChanges:** When the value of a data bound property changes, then this method is called.
@@ -289,28 +288,9 @@ export class MyComponent {
 }
 ```
 
-#### Q. What is angular CLI?
-Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
-You need to install using below npm command,
-```
-npm install @angular/cli@latest
-```
-Below are the list of few commands, which will come handy while creating angular projects
-1. **Creating New Project:** ng new <project-name>
-2. **Generating Components, Directives & Services:** ng generate/g <feature-name>
-The different types of commands would be,
-* ng generate class my-new-class: add a class to your application
-* ng generate component my-new-component: add a component to your application
-* ng generate directive my-new-directive: add a directive to your application
-* ng generate enum my-new-enum: add an enum to your application
-* ng generate module my-new-module: add a module to your application
-* ng generate pipe my-new-pipe: add a pipe to your application
-* ng generate service my-new-service: add a service to your application
-3. **Running the Project:** ng serve
-
-#### Q. What is the difference between constructor and ngOnInit?
-TypeScript classes has a default method called constructor which is normally used for the initialization purpose. Whereas ngOnInit method is specific to Angular, especially used to define Angular bindings. Even though constructor getting called first, it is preferred to move all of your Angular bindings to ngOnInit method.
-In order to use ngOnInit, you need to implement OnInit interface as below,
+#### Q. What is the difference between constructor() and ngOnInit()?
+TypeScript classes has a default method called constructor() which is normally used for the initialization purpose. Whereas ngOnInit() method is specific to Angular, especially used to define Angular bindings. Even though constructor() getting called first, it is preferred to move all of your Angular bindings to ngOnInit() method.
+In order to use ngOnInit(), you need to implement OnInit interface as below,
 ```typescript
 export class App implements OnInit{
     constructor(){
@@ -1656,3 +1636,22 @@ bazel run [target]: Compile the program represented by target and then run it.
 Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build applications with 
 in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, 
 end to end tooling, and many more other features are used to ease the development.
+
+#### Q. What is angular CLI?
+Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
+You need to install using below npm command,
+```
+npm install @angular/cli@latest
+```
+Below are the list of few commands, which will come handy while creating angular projects
+1. **Creating New Project:** ng new <project-name>
+2. **Generating Components, Directives & Services:** ng generate/g <feature-name>
+The different types of commands would be,
+* ng generate class my-new-class: add a class to your application
+* ng generate component my-new-component: add a component to your application
+* ng generate directive my-new-directive: add a directive to your application
+* ng generate enum my-new-enum: add an enum to your application
+* ng generate module my-new-module: add a module to your application
+* ng generate pipe my-new-pipe: add a pipe to your application
+* ng generate service my-new-service: add a service to your application
+3. **Running the Project:** ng serve
