@@ -1,27 +1,29 @@
 ## Angular Notes
 
-#### Q. Angular important commands
+#### Q. Angular Commands
 
-```
-cmd > npm install -g @angular/cli
-cmd > ng new project-name		    [ Create an Angular project with Angular CLI ]
-cmd > ng serve --open
-cmd > ng test						[ Running unit tests ]
-cmd > ng e2e 						[ Running end-to-end tests with protractor framwork]
-cmd > ng generate					[ Generate Angular components ]
-cmd > ng lint						[ prints out linting errors ]
-cmd > ng build						[ The build artifacts will be stored in the dist/ directory. ]
-cmd > ng build --prod				[ This will build the project in the dist directory ]
-cmd > ng build --dev				
-cmd > ng get/ng set					[ Set a value in the Angular CLI configuration ]
-cmd > ng doc						[ Opens a browser window with the keyword as search in Angular documentation. ]
-cmd > ng eject						[ ejects your app and output the proper webpack configuration and scripts ]
-cmd > ng xi18n						[ Extracts i18n messages from the templates. ]
-cmd > ng test --watch=false --code-coverage		[ Generate Code Coverage Reports ]
-cmd > npm run 
-cmd > npm run-script
-cmd > ng build --aot
-cmd > ng serve --aot
+```typescript
+|Commands                             |Description                                                                  |
+|-------------------------------------|-----------------------------------------------------------------------------|
+|npm install -g @angular/cli          |                                                                             |
+|ng new project-name		              | Create an Angular project with Angular CLI                                  |
+|ng serve --open                      |                                                                             |
+|ng test						                  | Running unit tests                                                          |
+|ng e2e 						                  | Running end-to-end tests with protractor framwork                           |
+|ng generate					                | Generate Angular components                                                 |
+|ng lint						                  | prints out linting errors                                                   |
+|ng build						                  | The build artifacts will be stored in the dist/ directory.                  |
+|ng build --prod				              | This will build the project in the dist directory                           |
+|ng build --dev				                |                                                                             |
+|ng get/ng set					              | Set a value in the Angular CLI configuration                                |
+|ng doc						                    | Opens a browser window with the keyword as search in Angular documentation. | 
+|ng eject						                  | ejects your app and output the proper webpack configuration and scripts     |
+|ng xi18n						                  | Extracts i18n messages from the templates.                                  |
+|ng test --watch=false --code-coverage| Generate Code Coverage Reports                                              |
+|npm run                              |                                                                             |
+|npm run-script                       |                                                                             |
+|ng build --aot                       |                                                                             |
+|ng serve --aot                       |                                                                             |
 ```
 #### Q. How to optimize loading large data in angular?
 
