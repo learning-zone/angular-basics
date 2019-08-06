@@ -2,7 +2,7 @@
 
 #### Q. Angular Commands
 
-```typescript
+```
 |Commands                             |Description                                                                  |
 |-------------------------------------|-----------------------------------------------------------------------------|
 |npm install -g @angular/cli          |                                                                             |
