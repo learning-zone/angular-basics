@@ -135,7 +135,7 @@ import { Component } from '@angular/core';
 @Component ({
     selector: 'my-app',
     template: `
-      <div>
+        <div>
             <h1>{{title}}</h1>
             <div>Learn Angular</div>
         </div>
