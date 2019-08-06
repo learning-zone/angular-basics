@@ -2,7 +2,7 @@
 
 #### Q. Angular Commands
 
-```
+
 |Commands                             |Description                                                                  |
 |-------------------------------------|-----------------------------------------------------------------------------|
 |npm install -g @angular/cli          |                                                                             |
@@ -24,7 +24,7 @@
 |npm run-script                       |                                                                             |
 |ng build --aot                       |                                                                             |
 |ng serve --aot                       |                                                                             |
-```
+
 #### Q. How to optimize loading large data in angular?
 
 #### Q. How an Angular application gets started or loaded?
