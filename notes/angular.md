@@ -5,25 +5,25 @@
 
 |Commands                             |Description                                                                  |
 |-------------------------------------|-----------------------------------------------------------------------------|
-|npm install -g @angular/cli          |                                                                             |
 |ng new project-name		              | Create an Angular project with Angular CLI                                  |
-|ng serve --open                      |                                                                             |
+|ng serve --open                      | Builds and serves app, rebuilding on file changes                           |
 |ng test						                  | Running unit tests                                                          |
 |ng e2e 						                  | Running end-to-end tests with protractor framwork                           |
 |ng generate					                | Generate Angular components                                                 |
 |ng lint						                  | prints out linting errors                                                   |
-|ng build						                  | The build artifacts will be stored in the dist/ directory.                  |
-|ng build --prod				              | This will build the project in the dist directory                           |
+|ng build						                  | Compiles an Angular app into an output directory named dist/ at the given output path. |
+|ng build --prod				              | apply uglify and minify to reduce the bundle as well make angular work in production mode which reduces runtime warnings given by angular compiler as well increase performance. The ng build command with the --prod meta-flag (ng build --prod) compiles with AOT by default.                          |
 |ng build --dev				                |                                                                             |
 |ng get/ng set					              | Set a value in the Angular CLI configuration                                |
 |ng doc						                    | Opens a browser window with the keyword as search in Angular documentation. | 
 |ng eject						                  | ejects your app and output the proper webpack configuration and scripts     |
 |ng xi18n						                  | Extracts i18n messages from the templates.                                  |
 |ng test --watch=false --code-coverage| Generate Code Coverage Reports                                              |
-|npm run                              |                                                                             |
-|npm run-script                       |                                                                             |
-|ng build --aot                       |                                                                             |
-|ng serve --aot                       |                                                                             |
+|npm run                              | Runs an Architect target with an optional custom builder configuration defined in  project. |
+|ng build --aot                       | generally when we serve angular project all the angular files are downloaded on browser and it will compile and execute the application on the browser but in aot entire application delivered to the browser is precompiled hence improves the performance. |
+|ng add @angular/pwa                  |Adds support for an external library to project                              |
+
+
 
 #### Q. How to optimize loading large data in angular?
 
