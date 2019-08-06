@@ -44,16 +44,15 @@ ng build --prod              -  this is for production build
 **uglification** - process of transforming code to use short variable and function names  
 **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
+#### Q. What are the typescript features? How typescript is different from ES6?
+
+#### Q. How to pass optional parameter in typescript?
+
 #### Q. How to optimize loading large data in angular?
 
 #### Q. How an Angular application gets started or loaded?
 
 #### Q. How to declare variable so that it can hold multiple values
-
-#### Q. What is Angular Framework?
-Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build applications with 
-in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, 
-end to end tooling, and many more other features are used to ease the development.
 
 #### Q. What is the difference between AngularJS and Angular?
 Angular is a completely revived component-based framework in which an application is a tree of individual 
@@ -61,7 +60,7 @@ components.
 
 
 | AngularJS                                         | Angular                                             |
-|:--------------------------------------------------|-----------------------------------------------------|
+|---------------------------------------------------|-----------------------------------------------------|
 | It is based on MVC architecture                   | It is component based architecture                  |
 | This uses use JavaScript to build the application | Introduced the typescript to write the application  |
 | Based on controllers concept                      | This is a component based UI approach               |
@@ -120,7 +119,7 @@ In a short note, A component(@component) is a directive-with-a-template.
 Some of the major differences are mentioned in a tabular form
 
 | Component | Directive |
-|:--------- |:---------
+|---------- |----------
 | To register a component we use @Component meta-data annotation  | To register directives we use @Directive meta-data annotation |
 | Components are typically used to create UI widgets| Directive is used to add behavior to an existing DOM element |
 | Component is used to break up the application into smaller components| Directive is use to design re-usable components|
@@ -1653,6 +1652,7 @@ bazel test [targets] // Run the tests with *_test targets found in the pattern.
 bazel run [target]: Compile the program represented by target and then run it.
 ```
 
-#### Q. What are the typescript features? How typescript is different from ES6?
-
-#### Q. How to pass optional parameter in typescript?
+#### Q. What is Angular Framework?
+Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build applications with 
+in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, 
+end to end tooling, and many more other features are used to ease the development.
