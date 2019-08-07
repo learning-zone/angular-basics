@@ -41,9 +41,9 @@ let tuple_name = [value1, value2, value3,… value n]
 ```
 Example
 ```typescript
-let mytuple = ["Hi", 10]; //create a  tuple 
-console.log(mytuple[0]); // Output: Hi
-console.log(mytuple[1]); // Output: 10
+let employee: [number, string] = [10, "Pradeep"]; //create a  tuple 
+console.log(employee[0]); // Output: 10
+console.log(employee[1]); // Output: Pradeep
 ```
 
 
