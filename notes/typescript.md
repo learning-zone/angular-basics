@@ -46,5 +46,4 @@ console.log(employee[0]); // Output: 10
 console.log(employee[1]); // Output: Pradeep
 ```
 
-
 #### Q. Explain generics in TypeScript?
