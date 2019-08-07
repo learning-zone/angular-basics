@@ -44,15 +44,9 @@ ng build --prod              -  this is for production build
 **uglification** - process of transforming code to use short variable and function names  
 **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
-#### Q. What are the typescript features? How typescript is different from ES6?
-
-#### Q. How to pass optional parameter in typescript?
-
 #### Q. How to optimize loading large data in angular?
 
 #### Q. How an Angular application gets started or loaded?
-
-#### Q. How to declare variable so that it can hold multiple values
 
 #### Q. What is the difference between AngularJS and Angular?
 Angular is a completely revived component-based framework in which an application is a tree of individual 
