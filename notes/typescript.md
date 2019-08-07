@@ -14,5 +14,23 @@ Typescript is an extension of ES6.
 * The TypeScript compiler can inline source map information in the generated `.js` files or create separate `.map` files. This makes it possible to set breakpoints and inspect variables during runtime directly on TypeScript code.
 
 #### Q. How to pass optional parameter in typescript?
+Optional Parameter Syntax
+```typescript
+function functionName(par1: number, par2?: number) {
+ 
+}
+```
+Example
+```typescript
+function getSchool(name: string, address?: string, pinCode?: string): string {
+    //...
+}
+ 
+let school = getSchool("Elementary");
+let school2 = getSchool("Little Kid", "UK");  
+let school3 = getSchool("Rose Tree School", "US", "99501")
+```
 
-#### Q. How to declare variable so that it can hold multiple values
+#### Q. How to declare variable so that it can hold multiple values?
+
+#### Q. Explain generics in TypeScript?
