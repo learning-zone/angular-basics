@@ -32,5 +32,19 @@ let school3 = getSchool("Rose Tree School", "US", "99501")
 ```
 
 #### Q. How to declare variable so that it can hold multiple values?
+**Tuples**:
+It represents a heterogeneous collection of values. In other words, tuples enable storing multiple fields of different types. Tuples can also be passed as parameters to functions.
+
+Syntax
+```typescript
+let tuple_name = [value1, value2, value3,… value n]
+```
+Example
+```typescript
+let mytuple = ["Hi", 10]; //create a  tuple 
+console.log(mytuple[0]); // Output: Hi
+console.log(mytuple[1]); // Output: 10
+```
+
 
 #### Q. Explain generics in TypeScript?
