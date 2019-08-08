@@ -1499,13 +1499,6 @@ The above command completes the following actions:
 5. Installs icon files to support the installed Progressive Web App (PWA).
 6. Creates the service worker configuration file called ngsw-config.json, which specifies the caching behaviors and other settings.
 
-#### Q. What are the differences between AngularJS and Angular with respect to dependency injection?
-Dependency injection is a common component in both AngularJS and Angular, but there are some key differences between the two frameworks in how it actually works.
-| AngularJS                                           | Angular                                                         |
-|---------------------------------------------------- | ----------------------------------------------------------------|
-| Dependency injection tokens are always strings      | Tokens can have different types. They are often classes and sometimes can be strings. |
-| There is exactly one injector even though it is a multi-module applications | There is a tree hierarchy of injectors, with a root injector and an additional injector for each component. |
-
 #### Q. What is Angular Ivy?
 Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.
 1. You can enable ivy in a new project by using the --enable-ivy flag with the ng new command
