@@ -110,3 +110,19 @@ interface Point3d extends Point {
 let point3d: Point3d = {x: 1, y: 2, z: 3};
 ```
 Yes, the code is valid. A class declaration creates two things: a type representing instances of the class and a constructor function. Because classes create types, we can use them in the same places we would be able to use interfaces.
+
+#### Q. Explain how and why we could use property decorators in TS?
+Decorators can be used to modify the behavior of a class or become even more powerful when integrated into a framework. For instance, if your framework has methods with restricted access requirements (just for admin), it would be easy to write an @admin method decorator to deny access to non-administrative users, or an @owner decorator to only allow the owner of an object the ability to modify it.
+
+```typescript
+class Employee {
+    get() { }
+    post() { }
+
+    @admin
+    delete() { }
+
+    @owner
+    put() { }
+}
+```
