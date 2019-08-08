@@ -67,7 +67,7 @@ myStrArr.push(500); // Compiler Error
 ```
 
 #### Q. How to implement class constants in TypeScript?
-In TypeScript, the `const` keyword cannot be used to declare class properties. Doing so causes the compiler to an error with "A class member cannot have the 'const' keyword." TypeScript 2.0 has the readonly modifier.
+In TypeScript, the `const` keyword cannot be used to declare class properties. Doing so causes the compiler to an error with "A class member cannot have the 'const' keyword." TypeScript 2.0 has the `readonly` modifier.
 
 ```typescript
 class MyClass {
