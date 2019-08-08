@@ -104,6 +104,8 @@ export class App {
 ```
 
 #### Q. How an Angular application gets started or loaded?
+The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
+
 **main.ts**
 ```typescript
 import { enableProdMode } from '@angular/core';
@@ -119,7 +121,6 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 ```
-The main.ts file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
 
 Most importantly here is the line where bootstraps start our angular app by passing app module to the method. AppModule refers to the app.module.ts file.
 
@@ -143,7 +144,7 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
-When angular starts, is bootstrap array in `@NgModule`. It basically there is a list of all components which should be known to Angular at the point of time it analyzes **index.html** file
+When angular starts, it bootstrap array in `@NgModule`. It basically there is a list of all components which should be known to Angular at the point of time it analyzes **index.html** file.
 
 **index.html**
 ```html
@@ -160,7 +161,6 @@ When angular starts, is bootstrap array in `@NgModule`. It basically there is a 
     <app-root>Loading...</app-root>
   </body>
 </html>
-
 ```
 
 #### Q. What is BehaviorSubject in angular?
