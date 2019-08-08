@@ -21,6 +21,7 @@
     "@angular/material-moment-adapter": "^8.1.2",
     "@angular/platform-browser": "^8.2.0",
     "@angular/platform-browser-dynamic": "^8.2.0",
+    "@angular/pwa": "^0.802.0",
     "@angular/router": "^8.2.0",
     "@auth0/angular-jwt": "^2.1.2",
     "@fortawesome/fontawesome-free": "^5.10.0",
