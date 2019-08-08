@@ -139,8 +139,8 @@ type X = {
     b: string
 };
 ```
-|interface	                                                     |type
-|----------------------------------------------------------------|-----------------------------------
+|interface	                                                     |type                                                     |
+|----------------------------------------------------------------|---------------------------------------------------------|
 |An interface declaration always introduces a named object type. |	A type alias declaration can introduce a name for any kind of type, including primitive, union, and intersection types.|
 |An interface can be named in an extends or implements clause.	 |Type alias for an object type literal cannot be named in an |extends or implements clause.|
 |Interfaces create a new name that is used everywhere.	         |Type aliases don't create a new name.|
