@@ -47,3 +47,21 @@ console.log(employee[1]); // Output: Pradeep
 ```
 
 #### Q. Explain generics in TypeScript?
+Generics offer a way to create reusable components. Generics provide a way to make components work with any data type and not restrict to one data type.
+
+Example
+```typescript
+function getArray<T>(items : T[] ) : T[] {
+    return new Array<T>().concat(items);
+}
+
+let myNumArr = getArray<number>([100, 200, 300]);
+let myStrArr = getArray<string>(["Hello", "World"]);
+
+myNumArr.push(400); // OK
+myStrArr.push("Hello TypeScript"); // OK
+
+myNumArr.push("Hi"); // Compiler Error
+myStrArr.push(500); // Compiler Error
+
+```
