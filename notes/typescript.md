@@ -81,3 +81,19 @@ class MyClass {
 new MyClass().myReadonlyProperty = 5; // error, readonly
 ```
 
+#### Q. What is getters/setters in TypeScript?
+TypeScript supports getters/setters as a way of intercepting accesses to a member of an object. This gives a way of having finer-grained control over how a member is accessed on each object.
+```typescript
+class Employee {
+   
+    private _name: string;
+
+    get Name() {
+        return this._name;
+    }
+
+    set Name(val) {
+        this._name = val;
+    }
+}
+```
