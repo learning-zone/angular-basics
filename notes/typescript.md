@@ -96,3 +96,17 @@ class Employee {
     }
 }
 ```
+#### Q. Is that TypeScript code valid?
+```typescript
+class Point {
+    x: number;
+    y: number;
+}
+
+interface Point3d extends Point {
+    z: number;
+}
+
+let point3d: Point3d = {x: 1, y: 2, z: 3};
+```
+Yes, the code is valid. A class declaration creates two things: a type representing instances of the class and a constructor function. Because classes create types, we can use them in the same places we would be able to use interfaces.
