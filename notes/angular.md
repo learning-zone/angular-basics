@@ -59,9 +59,9 @@ ng build --prod              -  this is for production build
 8. **defer attribute**: Mentioning defer attribute to script tag will defer the loading of the scripts (sychronous) until the document is not parsed thus making site interactive quicker. 
 9. **async attribute**: async delays the loading of scripts until the document is not parsed but without respecting the order of loading of the scripts.
 10. **Using OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:
-i). The `Input` reference changes.
-ii). An event occurred from the component or one of his children.
-iii). You run change detection explicitly by calling `detectChanges()/tick()/markForCheck()`
+i). The `Input` reference changes.  
+ii). An event occurred from the component or one of his children.  
+iii). You run change detection explicitly by calling `detectChanges()/tick()/markForCheck()`  
 
 Example
 ```typescript
