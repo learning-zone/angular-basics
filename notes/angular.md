@@ -48,6 +48,8 @@ ng build --prod              -  this is for production build
 
 #### Q. How an Angular application gets started or loaded?
 
+#### Q. What is BehaviorSubject in angular?
+
 #### Q. what is an rxjs subject in Angular?
 An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
