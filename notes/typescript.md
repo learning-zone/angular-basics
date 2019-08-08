@@ -126,3 +126,17 @@ class Employee {
     put() { }
 }
 ```
+
+#### Q. What is the difference between "interface vs type" statements?
+```typescript
+interface X {
+    a: number
+    b: string
+}
+
+type X = {
+    a: number
+    b: string
+};
+```
+![alt text](https://github.com/learning-zone/Angular/blob/master/assets/type-vs-interface.png)
