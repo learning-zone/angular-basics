@@ -165,3 +165,18 @@ function sum(a: number, ...b: number[]): number {
 let result1 = sum(3, 5);    
 let result2 = sum(3, 5, 7, 9);   
 ```
+
+#### Q. Explain Enum in TypeScript?
+Enums or enumerations are a TypeScipt data type that allow us to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. It is a collection of related values that can be numeric or string values.
+
+*Example*
+```typescript
+enum Gender {  
+  Male,  
+  Female  
+  Other  
+}  
+console.log(Gender.Female); // Output: 1  
+//We can also access an enum value by it's number value.  
+console.log(Gender[1]); // Output: Female  
+```
