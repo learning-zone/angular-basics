@@ -58,7 +58,7 @@ ng build --prod              -  this is for production build
 7. **Service worker cache**: A service worker is a script that runs in the web browser and manages caching for an application.
 8. **defer attribute**: Mentioning defer attribute to script tag will defer the loading of the scripts (sychronous) until the document is not parsed thus making site interactive quicker. 
 9. **async attribute**: async delays the loading of scripts until the document is not parsed but without respecting the order of loading of the scripts.
-10. **Using OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:  
+10. **Using ChangeDetectionStrategy.OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:  
 i). The `Input` reference changes.  
 ii). An event occurred from the component or one of his children.  
 iii). You run change detection explicitly by calling `detectChanges()/tick()/markForCheck()`  
@@ -73,7 +73,35 @@ Example
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 ```
+11. **Using TrackBy**: If we provide a trackBy function, Angular can track which items have been added or removed according to the unique identifier and only create or destroy the things that have changed.
 
+Example:
+```typescript
+@Component({
+  selector: 'my-app',
+  template: `
+    <ul>
+      <li *ngFor="let item of collection;trackBy: trackByFn">{{item.id}}</li>
+    </ul>
+    <button (click)="getItems()">Refresh items</button>
+  `,
+})
+export class App {
+
+  constructor() {
+    this.collection = [{id: 1}, {id: 2}, {id: 3}];
+  }
+  getItems() {
+    this.collection = this.getItemsFromServer();
+  }
+  getItemsFromServer() {
+    return [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
+  }
+  trackByFn(index, item) {
+    return index; // or item.id
+  }
+}
+```
 
 #### Q. How an Angular application gets started or loaded?
 
