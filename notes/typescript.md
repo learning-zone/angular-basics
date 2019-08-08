@@ -147,7 +147,7 @@ type X = {
 |An interface can have multiple merged declarations.	         |Type alias for an object type literal cannot have multiple merged declarations.|
 
 #### Q. What is Rest parameters?
-The rest parameter is used to pass zero or more values to a function. It is declared by prefixing the three dot characters ('...')before the parameter. It allows the functions to have a variable number of arguments without using the arguments object. 
+The rest parameter is used to pass zero or more values to a function. It is declared by prefixing the three `dot` characters `('...')` before the parameter. It allows the functions to have a variable number of arguments without using the arguments object. 
 
 **Rules**:
 * Only one rest parameter is allowed in a function.
