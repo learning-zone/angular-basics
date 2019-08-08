@@ -48,6 +48,26 @@ ng build --prod              -  this is for production build
 
 #### Q. How an Angular application gets started or loaded?
 
+#### Q. what is an rxjs subject in Angular?
+An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
+
+A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
+``` typescript
+import { Subject } from 'rxjs';
+
+  const subject = new Subject<number>();
+
+  subject.subscribe({
+    next: (v) => console.log(`observerA: ${v}`)
+  });
+  subject.subscribe({
+    next: (v) => console.log(`observerB: ${v}`)
+  });
+
+  subject.next(1);
+  subject.next(2);
+```
+
 #### Q. What is the difference between AngularJS and Angular?
 Angular is a completely revived component-based framework in which an application is a tree of individual 
 components.
@@ -1576,25 +1596,6 @@ Basically you will see 3 main syntax in Angular DSL.
 2. []: Used for Input and specific DOM element attributes.
 3. * : Structural directives(*ngFor or *ngIf) will affect/change the DOM structure.
 
-#### Q. what is an rxjs subject in Angular
-An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
-
-A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
-``` typescript
-import { Subject } from 'rxjs';
-
-  const subject = new Subject<number>();
-
-  subject.subscribe({
-    next: (v) => console.log(`observerA: ${v}`)
-  });
-  subject.subscribe({
-    next: (v) => console.log(`observerB: ${v}`)
-  });
-
-  subject.next(1);
-  subject.next(2);
-```
 #### Q. What is Bazel tool?
 Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.
 **Note:** The Angular framework itself is built with Bazel.
