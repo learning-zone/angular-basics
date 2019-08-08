@@ -163,7 +163,9 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
 </html>
 ```
 
-#### Q. What is BehaviorSubject in angular?
+#### Q. What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?
+
+#### Q. What is difference between BehaviorSubject and Observable?
 
 #### Q. what is an rxjs subject in Angular?
 An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
