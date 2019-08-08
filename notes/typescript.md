@@ -145,3 +145,23 @@ type X = {
 |An interface can be named in an extends or implements clause.	 |Type alias for an object type literal cannot be named in an |extends or implements clause.|
 |Interfaces create a new name that is used everywhere.	         |Type aliases don't create a new name.|
 |An interface can have multiple merged declarations.	         |Type alias for an object type literal cannot have multiple merged declarations.|
+
+#### Q. What is Rest parameters?
+The rest parameter is used to pass zero or more values to a function. It is declared by prefixing the three dot characters ('...')before the parameter. It allows the functions to have a variable number of arguments without using the arguments object. 
+
+**Rules**:
+* Only one rest parameter is allowed in a function.
+* It must be an array type.
+* It must be a last parameter in the parameter list.
+
+```typescript
+function sum(a: number, ...b: number[]): number {    
+    let result = a;    
+    for (var i = 0; i < b.length; i++) {    
+        result += b[i];    
+    }    
+    console.log(result);    
+}    
+let result1 = sum(3, 5);    
+let result2 = sum(3, 5, 7, 9);   
+```
