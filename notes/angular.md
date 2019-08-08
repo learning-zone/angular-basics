@@ -1501,9 +1501,9 @@ The above command completes the following actions:
 
 #### Q. What are the differences between AngularJS and Angular with respect to dependency injection?
 Dependency injection is a common component in both AngularJS and Angular, but there are some key differences between the two frameworks in how it actually works.
-| AngularJS | Angular |
-|---- | ---------
-| Dependency injection tokens are always strings  | Tokens can have different types. They are often classes and sometimes can be strings. |
+| AngularJS                                           | Angular                                                         |
+|---------------------------------------------------- | ----------------------------------------------------------------|
+| Dependency injection tokens are always strings      | Tokens can have different types. They are often classes and sometimes can be strings. |
 | There is exactly one injector even though it is a multi-module applications | There is a tree hierarchy of injectors, with a root injector and an additional injector for each component. |
 
 #### Q. What is Angular Ivy?
