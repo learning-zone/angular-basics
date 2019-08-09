@@ -168,23 +168,38 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
 #### Q. What is difference between BehaviorSubject and Observable?
 
 #### Q. what is an rxjs subject in Angular?
-An RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
+An RxJS Subject is a special type of Observable that allows values to be **multicasted** to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
-A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
+A Subject observable is used to immediately notify subscribers of updated values emitted by it. It does not keep track of old values, i.e. if a Subject observable first emitted a value and was then later subscribed to, then the subscriber will not get get that value. A Subject is like an Observable, but can multicast to many Observers. Subjects are like **EventEmitters**: they maintain a registry of many listeners.
 ``` typescript
 import { Subject } from 'rxjs';
 
-  const subject = new Subject<number>();
+const mySubject = new Rx.Subject();
 
-  subject.subscribe({
-    next: (v) => console.log(`observerA: ${v}`)
-  });
-  subject.subscribe({
-    next: (v) => console.log(`observerB: ${v}`)
-  });
+mySubject.next(1); // Data can be pushed into the subject using its next method
 
-  subject.next(1);
-  subject.next(2);
+const subscription1 = mySubject.subscribe(x => {
+  console.log('From subscription 1:', x);
+});
+
+mySubject.next(2);
+
+const subscription2 = mySubject.subscribe(x => {
+  console.log('From subscription 2:', x);
+});
+
+mySubject.next(3);
+
+subscription1.unsubscribe();
+
+mySubject.next(4);
+```
+Output
+```typescript
+From subscription 1: 2
+From subscription 1: 3
+From subscription 2: 3
+From subscription 2: 4
 ```
 
 #### Q. What is the difference between AngularJS and Angular?
