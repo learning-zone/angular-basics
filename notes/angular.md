@@ -199,7 +199,7 @@ From subscription 2: 4
 ```
 
 #### Q. What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?
-**The BehaviorSubject**: The BehaviorSubject has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
+1. **The BehaviorSubject**: The BehaviorSubject has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
 ```typescript
 import * as Rx from "rxjs";
 
@@ -231,7 +231,7 @@ console.log(subject.value)
 // 0.1901322109907977
 ```
 
-**The ReplaySubject**: The ReplaySubject can send **old** values to new subscribers. It however has the extra characteristic that it can record a part of the observable execution and therefore store multiple old values and **replay** them to new subscribers.
+2. **The ReplaySubject**: The ReplaySubject can send **old** values to new subscribers. It however has the extra characteristic that it can record a part of the observable execution and therefore store multiple old values and **replay** them to new subscribers.
 
 When creating the ReplaySubject we can specify how much values want to store and for how long want to store them.
 ```typescript
@@ -264,7 +264,7 @@ subject.next(Math.random());
 // Subscriber B: 0.6664809293975393
 ```
 
-**The AsyncSubject**: The AsyncSubject is aSubject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes. 
+3. **The AsyncSubject**: The AsyncSubject is aSubject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes. 
 ```typescript
 import * as Rx from "rxjs";
 
