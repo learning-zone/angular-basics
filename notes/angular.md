@@ -1962,3 +1962,6 @@ We can get a handle to the DOM element via **ElementRef** by injecting it into c
 ```typescript
 constructor(myElement: ElementRef) { ... }
 ```
+
+#### Q. What is Redux and how does it relate to an Angular app?
+Redux is a way to manage application state and improve maintainability of asynchronicity in your application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
