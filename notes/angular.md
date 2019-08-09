@@ -199,6 +199,98 @@ From subscription 2: 4
 ```
 
 #### Q. What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?
+**The BehaviorSubject**: The BehaviorSubject has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
+```typescript
+import * as Rx from "rxjs";
+
+const subject = new Rx.BehaviorSubject();
+
+// subscriber 1
+subject.subscribe((data) => {
+    console.log('Subscriber A:', data);
+});
+
+subject.next(Math.random());
+subject.next(Math.random());
+
+// subscriber 2
+subject.subscribe((data) => {
+    console.log('Subscriber B:', data);
+});
+
+subject.next(Math.random());
+
+console.log(subject.value)
+
+// output
+// Subscriber A: 0.24957144215097515
+// Subscriber A: 0.8751123892486292
+// Subscriber B: 0.8751123892486292
+// Subscriber A: 0.1901322109907977
+// Subscriber B: 0.1901322109907977
+// 0.1901322109907977
+```
+
+**The ReplaySubject**: The ReplaySubject can send **old** values to new subscribers. It however has the extra characteristic that it can record a part of the observable execution and therefore store multiple old values and **replay** them to new subscribers.
+
+When creating the ReplaySubject we can specify how much values want to store and for how long want to store them.
+```typescript
+import * as Rx from "rxjs";
+
+const subject = new Rx.ReplaySubject(2);
+
+// subscriber 1
+subject.subscribe((data) => {
+    console.log('Subscriber A:', data);
+});
+
+subject.next(Math.random())
+subject.next(Math.random())
+subject.next(Math.random())
+
+// subscriber 2
+subject.subscribe((data) => {
+    console.log('Subscriber B:', data);
+});
+
+subject.next(Math.random());
+
+// Subscriber A: 0.3541746356538569
+// Subscriber A: 0.12137498878080955
+// Subscriber A: 0.531935186034298
+// Subscriber B: 0.12137498878080955
+// Subscriber B: 0.531935186034298
+// Subscriber A: 0.6664809293975393
+// Subscriber B: 0.6664809293975393
+```
+
+**The AsyncSubject**: The AsyncSubject is aSubject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes. 
+```typescript
+import * as Rx from "rxjs";
+
+const subject = new Rx.AsyncSubject();
+
+// subscriber 1
+subject.subscribe((data) => {
+    console.log('Subscriber A:', data);
+});
+
+subject.next(Math.random())
+subject.next(Math.random())
+subject.next(Math.random())
+
+// subscriber 2
+subject.subscribe((data) => {
+    console.log('Subscriber B:', data);
+});
+
+subject.next(Math.random());
+subject.complete();
+
+// Subscriber A: 0.4447275989704571
+// Subscriber B: 0.4447275989704571
+```
+
 
 #### Q. What is difference between BehaviorSubject and Observable?
 
