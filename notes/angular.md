@@ -1933,3 +1933,26 @@ The different types of commands would be,
 * ng generate pipe my-new-pipe: add a pipe to your application
 * ng generate service my-new-service: add a service to your application
 3. **Running the Project:** ng serve
+
+#### Q. What is Ng-Content?
+The `<ng-content></ng-content>` tag as a placeholder for dynamic content, then when the template is parsed Angular will replace that placeholder tag with your content.
+
+They are used to create configurable components. This means the components can be configured depending on the needs of its user. This is well known as Content Projection. Components that are used in published libraries make use of <ng-content> to make themselves configurable.
+Example
+```html
+<!-- project-content.html -->
+<div class="heading">
+  <h1>Welcome to Content Projection</h1>
+</div>
+<div class="body">
+  <div>Some Content...</div>
+</div>
+<div class="footer">
+  <ng-content></ng-content>
+</div>
+```
+```html
+<project-content>
+  <div>This is custom footer...</div>
+</project-content>
+```
