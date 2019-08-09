@@ -299,7 +299,7 @@ The unique features of a behavior subject are:
 
 * Behavior subject needs an initial value as it must always return a value on subscription even if it hasn’t received a **next()**
 * Upon subscription, it returns the last value of the subject. A regular observable only triggers when it receives a onnext
-* at any point you can retrieve the last value of the subject in a non-observable code using the **getValue()** method.
+* At any point you can retrieve the last value of the subject in a non-observable code using the **getValue()** method.
 
 Unique features of a subject compared to a observable are:
 
