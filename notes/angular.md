@@ -1956,3 +1956,9 @@ Example
   <div>This is custom footer...</div>
 </project-content>
 ```
+
+#### Q. How can I select an element in a component template?
+We can get a handle to the DOM element via **ElementRef** by injecting it into component's constructor:
+```typescript
+constructor(myElement: ElementRef) { ... }
+```
