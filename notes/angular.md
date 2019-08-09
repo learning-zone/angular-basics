@@ -293,6 +293,54 @@ subject.complete();
 
 
 #### Q. What is difference between BehaviorSubject and Observable?
+Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.   
+
+The unique features of a behavior subject are:
+
+* Behavior subject needs an initial value as it must always return a value on subscription even if it hasn’t received a **next()**
+* Upon subscription, it returns the last value of the subject. A regular observable only triggers when it receives a onnext
+* at any point you can retrieve the last value of the subject in a non-observable code using the **getValue()** method.
+
+Unique features of a subject compared to a observable are:
+
+* It is a observer in addition to being a observable so you can also send values to a subject in addition to subscribing to it.
+* In addition you can get a observable from behavior subject using the asobservable() method on behaviour subject.
+* Observable is a Generic, and Behavior subject is technically a sub-type of Observable because behavior subject is a observable with specific qualities.
+```typescript
+// Behavior Subject
+
+// a is a initial value. if there is a subscription 
+// after this, it would get "a" value immediately
+let bSubject = new BehaviorSubject("a"); 
+
+bSubject.next("b");
+
+bSubject.subscribe((value) => {
+  console.log("Subscription got", value); // Subscription got b, 
+                                          // ^ This would not happen 
+                                          // for a generic observable 
+                                          // or generic subject by default
+});
+
+bSubject.next("c"); // Subscription got c
+bSubject.next("d"); // Subscription got d
+```
+Example 2: With regular subject
+```typescript
+// Regular Subject
+
+let subject = new Subject(); 
+
+subject.next("b");
+
+subject.subscribe((value) => {
+  console.log("Subscription got", value); // Subscription wont get 
+                                          // anything at this point
+});
+
+subject.next("c"); // Subscription got c
+subject.next("d"); // Subscription got d
+```
 
 #### Q. What is the difference between AngularJS and Angular?
 Angular is a completely revived component-based framework in which an application is a tree of individual 
