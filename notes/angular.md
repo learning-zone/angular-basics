@@ -29,8 +29,8 @@
 
 Angular has 2 types of build dev build or prod build :
 
-**Just-in-Time (JIT)**, which compiles app in the browser at runtime.
-**Ahead-of-Time (AOT)**, which compiles app at build time.
+**Just-in-Time (JIT)**, which compiles app in the browser at runtime.  
+**Ahead-of-Time (AOT)**, which compiles app at build time.  
 ```
 ng build or ng build --dev   -  this is for development build
 ng build --prod              -  this is for production build
@@ -59,7 +59,7 @@ ng build --prod              -  this is for production build
 7. **Service worker cache**: A service worker is a script that runs in the web browser and manages caching for an application.
 8. **defer attribute**: Mentioning defer attribute to script tag will defer the loading of the scripts (sychronous) until the document is not parsed thus making site interactive quicker. 
 9. **async attribute**: async delays the loading of scripts until the document is not parsed but without respecting the order of loading of the scripts.
-10. **Using ChangeDetectionStrategy.OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:  
+10. **ChangeDetectionStrategy.OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:  
 i). The `Input` reference changes.  
 ii). An event occurred from the component or one of his children.  
 iii). You run change detection explicitly by calling `detectChanges()/tick()/markForCheck()`  
@@ -74,7 +74,7 @@ Example
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 ```
-11. **Using TrackBy**: If we provide a trackBy function, Angular can track which items have been added or removed according to the unique identifier and only create or destroy the things that have changed.
+11. **TrackBy**: If we provide a trackBy function, Angular can track which items have been added or removed according to the unique identifier and only create or destroy the things that have changed.
 
 Example:
 ```typescript
@@ -167,7 +167,7 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
 #### Q. What is rxjs subject in Angular?
 An RxJS Subject is a special type of Observable that allows values to be **multicasted** to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
-A Subject observable is used to immediately notify subscribers of updated values emitted by it. It does not keep track of old values, i.e. if a Subject observable first emitted a value and was then later subscribed to, then the subscriber will not get get that value. A Subject is like an Observable, but can multicast to many Observers. Subjects are like **EventEmitters**: they maintain a registry of many listeners.
+A Subject observable is used to immediately notify subscribers of updated values emitted by it. It does not keep track of old values, i.e. if a Subject observable first emitted a value and was then later subscribed to, then the subscriber will not get that value. A Subject is like an Observable, but can multicast to many Observers. Subjects are like **EventEmitters**: they maintain a registry of many listeners.
 ``` typescript
 import { Subject } from 'rxjs';
 
