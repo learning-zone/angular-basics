@@ -4,7 +4,7 @@
 
 
 |Commands                             |Description                                                                  |
-|-------------------------------------|-----------------------------------------------------------------------------|
+|:------------------------------------|-----------------------------------------------------------------------------|
 |ng new project-name		              | Create an Angular project with Angular CLI                                  |
 |ng serve --open                      | Builds and serves app, rebuilding on file changes                           |
 |ng test						                  | Running unit tests                                                          |
