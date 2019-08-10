@@ -21,7 +21,8 @@
 |ng test --watch=false --code-coverage| Generate Code Coverage Reports                                              |
 |npm run                              | Runs an Architect target with an optional custom builder configuration defined in  project. |
 |ng build --aot                       | generally when we serve angular project all the angular files are downloaded on browser and it will compile and execute the application on the browser but in aot entire application delivered to the browser is precompiled hence improves the performance. |
-|ng add @angular/pwa                  |Adds support for an external library to project                              |
+|ng add @angular/pwa                  |Adds support for an external library to project  |
+|ng xi18n --output-path src/locale    |Internationalization |
 
 
 #### Q. What is difference between Angular Dev Build(JIT compilation) and Prod Build(AOT compilation)?
