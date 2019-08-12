@@ -292,7 +292,6 @@ subject.complete();
 // Subscriber B: 0.4447275989704571
 ```
 
-
 #### Q. What is difference between BehaviorSubject and Observable?
 Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.   
 
@@ -580,6 +579,33 @@ export class MyComponent {
     }
 }
 ```
+#### Q. What is a service worker and its role in Angular?
+A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content. Adding a service worker to an Angular application is one of the steps for turning an application into a **Progressive Web App** (also known as a `PWA`).
+
+Below are the list of design goals of Angular's service workers,
+1. It caches an application just like installing a native application
+2. A running application continues to run with the same version of all files without any incompatible files
+3. When you refresh the application, it loads the latest fully cached version
+4. When changes are published then it immediately updates in the background
+5. Service workers saves the bandwidth by downloading the resources only when they changed.
+
+**Adding a service worker to your project**
+```typescript
+ng add @angular/pwa --project *project-name*
+```
+The above command completes the following actions:
+
+1. Adds the @angular/service-worker package to your project.
+2. Enables service worker build support in the CLI.
+3. Imports and registers the service worker in the app module.
+4. Updates the index.html file:
+    * Includes a link to add the manifest.json file.
+    * Adds meta tags for theme-color.
+5. Installs icon files to support the installed Progressive Web App (PWA).
+6. Creates the service worker configuration file called ngsw-config.json, which specifies the caching behaviors and other settings.
+
+#### Q. How to set time for caching in service-worker?
+*TODO*
 
 #### Q. What is the difference between constructor() and ngOnInit()?
 TypeScript classes has a default method called constructor() which is normally used for the initialization purpose. Whereas ngOnInit() method is specific to Angular, especially used to define Angular bindings. Even though constructor() getting called first, it is preferred to move all of your Angular bindings to ngOnInit() method.
@@ -1696,30 +1722,6 @@ export class App {
       htmlSnippet: string = this.sanitizer.bypassSecurityTrustScript("<script>safeCode()</script>");
   }
 ```
-#### Q. What is a service worker and its role in Angular?
-A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content. Adding a service worker to an Angular application is one of the steps for turning an application into a **Progressive Web App** (also known as a `PWA`).
-
-Below are the list of design goals of Angular's service workers,
-1. It caches an application just like installing a native application
-2. A running application continues to run with the same version of all files without any incompatible files
-3. When you refresh the application, it loads the latest fully cached version
-4. When changes are published then it immediately updates in the background
-5. Service workers saves the bandwidth by downloading the resources only when they changed.
-
-**Adding a service worker to your project**
-```typescript
-ng add @angular/pwa --project *project-name*
-```
-The above command completes the following actions:
-
-1. Adds the @angular/service-worker package to your project.
-2. Enables service worker build support in the CLI.
-3. Imports and registers the service worker in the app module.
-4. Updates the index.html file:
-    * Includes a link to add the manifest.json file.
-    * Adds meta tags for theme-color.
-5. Installs icon files to support the installed Progressive Web App (PWA).
-6. Creates the service worker configuration file called ngsw-config.json, which specifies the caching behaviors and other settings.
 
 #### Q. What is Angular Ivy?
 Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.
