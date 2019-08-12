@@ -370,6 +370,13 @@ Angular has the below key components,
 
 #### Q. What are directives?
 Directives add behaviour to an existing DOM element or an existing component instance.
+There are four types of directives in Angular
+* Components directives
+* Structural directives
+* Attribute directives
+* Custom Directive
+
+Example
 ```typescript
 import { Directive, ElementRef, Input } from '@angular/core';
 
