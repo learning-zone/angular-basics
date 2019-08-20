@@ -596,7 +596,7 @@ Below are the list of design goals of Angular's service workers,
 4. When changes are published then it immediately updates in the background
 5. Service workers saves the bandwidth by downloading the resources only when they changed.
 
-**Adding a service worker to your project**
+*Syntax:*
 ```typescript
 ng add @angular/pwa --project *project-name*
 ```
