@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-pro-sidebar": {
+    "angular-features": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-pro-sidebar",
+            "outputPath": "dist/angular-features",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-pro-sidebar:build"
+            "browserTarget": "angular-features:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-pro-sidebar:build:production"
+              "browserTarget": "angular-features:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-pro-sidebar:build"
+            "browserTarget": "angular-features:build"
           }
         },
         "test": {
@@ -102,7 +102,7 @@
         }
       }
     },
-    "angular-pro-sidebar-e2e": {
+    "angular-features-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-pro-sidebar:serve"
+            "devServerTarget": "angular-features:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-pro-sidebar:serve:production"
+              "devServerTarget": "angular-features:serve:production"
             }
           }
         },
@@ -131,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "angular-pro-sidebar"
+  "defaultProject": "angular-features"
 }
