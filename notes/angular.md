@@ -612,7 +612,36 @@ The above command completes the following actions:
 6. Creates the service worker configuration file called ngsw-config.json, which specifies the caching behaviors and other settings.
 
 #### Q. How to set time for caching in service-worker?
-*TODO*
+**ngsw-config.json**
+```typescript
+{
+    ...
+    "dataGroups": [{
+            "name": "api-freshness",
+            "urls": [
+                "/timeline"
+            ],
+            "cacheConfig": {
+                "strategy": "freshness",
+                "maxSize": 100,
+                "maxAge": "3d",
+                "timeout": "10s"
+            }
+        },
+        {
+            "name": "api-performance",
+            "urls": [
+                "/favorites"
+            ],
+            "cacheConfig": {
+                "strategy": "performance",
+                "maxSize": 100,
+                "maxAge": "3d"
+            }
+        }
+    ]
+}
+```
 
 #### Q. What is the difference between constructor() and ngOnInit()?
 TypeScript classes has a default method called constructor() which is normally used for the initialization purpose. Whereas ngOnInit() method is specific to Angular, especially used to define Angular bindings. Even though constructor() getting called first, it is preferred to move all of your Angular bindings to ngOnInit() method.
