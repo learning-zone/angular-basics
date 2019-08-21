@@ -1977,10 +1977,10 @@ The different types of commands would be,
 * ng generate service my-new-service: add a service to your application
 3. **Running the Project:** ng serve
 
-#### Q. What is Ng-Content?
+#### Q. What is Ng-Content/Content Projection?
 The `<ng-content></ng-content>` tag as a placeholder for dynamic content, then when the template is parsed Angular will replace that placeholder tag with your content.
 
-They are used to create configurable components. This means the components can be configured depending on the needs of its user. This is well known as Content Projection. Components that are used in published libraries make use of <ng-content> to make themselves configurable.
+They are used to create configurable components. This means the components can be configured depending on the needs of its user. This is well known as **Content Projection**. Components that are used in published libraries make use of <ng-content> to make themselves configurable.
 Example
 ```html
 <!-- project-content.html -->
@@ -2159,13 +2159,7 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q. How would you animate routing?
 *TODO*
-#### Q. Why angular uses url segment?
-*TODO*
 #### Q. How will you localize numbers currencies and dates?
-*TODO*
-#### Q. What is the best way to use translation in your app?
-*TODO*
-#### Q. How will you optimize image/svg in your angular app?
 *TODO*
 #### Q. How would you make sure an api call that needs to be called only once but with multiple conditions? Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
 *TODO*
