@@ -2008,3 +2008,312 @@ constructor(myElement: ElementRef) { ... }
 
 #### Q. What is Redux and how does it relate to an Angular app?
 Redux is a way to manage application state and improve maintainability of asynchronicity in your application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
+
+#### Q.What's new in Angular 7?
+*TODO*
+#### Q.What is the difference between observable and promises?
+*TODO*
+#### Q.List the differences between Angular components vs. directives?
+*TODO*
+#### Q.How do you define the transition between two states in Angular?
+*TODO*
+#### Q.When to use NgOnInit and constructor in Angular?
+*TODO*
+#### Q.Explain the concept of lazy loading in Angular.
+*TODO*
+#### Q.What is the meaning of component life cycle in Angular?
+*TODO*
+#### Q.How routing works in Angular.
+*TODO*
+#### Q.What is Dependency Injection? Explain with example.
+*TODO*
+#### Q.How would you optimize the angular application for better performance?
+*TODO*
+#### Q.Explain local reference variables, @ViewChild and @ContentChild.
+*TODO*
+#### Q.What can be considered as replacement of $watch in Angular?
+*TODO*
+#### Q.Which Angular directive can be used for internationalization?
+*TODO*
+#### Q.Why are decorators used in Angular?
+*TODO*
+#### Q.How does angular keep track of two-way data binding?
+*TODO*
+#### Q.How to make sure that single instance will be used in an entire application?
+*TODO*
+#### Q.How do you reference the host of a component?
+*TODO*
+#### Q.How to add authentication in client side using Angular?
+*TODO*
+#### Q.Explain Angular Framework Architecture with the help of diagram?
+*TODO*
+#### Q.Explain the process by which your application is bootstrapped.
+*TODO*
+#### Q.What is NgZone and what is it used for?
+*TODO*
+#### Q.Why would you use renderer methods instead of using native element methods?
+*TODO*
+#### Q.How would you control size of an element on resize of the window in a component?
+*TODO*
+#### Q.What is the use of ngForTrackBy directive?
+*TODO*
+#### Q.What is In-memory Web API in angular?
+*TODO*
+#### Q.List down the advantages and disadvantages associated with Angular?
+*TODO*
+#### Q.What is Traceur Compiler?
+*TODO*
+#### Q.How to cache an observable data?
+*TODO*
+#### Q.List out the differences between ActivatedRoute and RouterState, with reference to Angular.
+*TODO*
+#### Q.What do you mean by a structural directive in Angular?
+*TODO*
+#### Q.What do you understand by a template variable? How is it used?
+*TODO*
+#### Q.How will you convert a string into a date?
+*TODO*
+#### Q.What are Event Emitters and how it works in Angular?
+*TODO*
+#### Q.What is shadow DOM? How is it helping Angular to perform better?
+*TODO*
+#### Q.What is difference between AOT and JIT compilation?
+*TODO*
+#### Q.What are pipes in Angular ? How to create custom pipes?
+*TODO*
+#### Q.What is Change detection?
+*TODO*
+#### Q.What limits the number of two-way binding attributes in Angular?
+*TODO*
+#### Q.How is using two-way data binding encouraged in Angular?
+*TODO*
+#### Q.How can we bind a variable with DOM element in Angular?
+*TODO*
+#### Q.What is Host Decorators in Angular?
+*TODO*
+#### Q.What are template reference variables and how are they different from variables in classes?
+*TODO*
+#### Q.What’s the difference between for..in and for..of?
+*TODO*
+#### Q.Why do we need provider aliases? And how do you create one?
+*TODO*
+#### Q.What's the difference between a TypeScript class and an interface?
+*TODO*
+#### Q.What's the expression context in Angular? Explain it with an example.
+*TODO*
+#### Q.What are a few subclasses of @Injectable?
+*TODO*
+#### Q.What are HTML attributes and DOM properties; and how are they related?
+*TODO*
+#### Q.What is the NgForTrackBy directive?
+*TODO*
+#### Q.How do you resolve a template URL relative to a Component class?
+*TODO*
+#### Q.How do you use a JavaScript (Non TypeScript) third party lib in an Angular App?
+*TODO*
+#### Q.Can we create two Components with the same name in two different .ts files?
+*TODO*
+#### Q.How would you intercept 404 errors in Angular?
+*TODO*
+#### Q.What's the difference between RouterModule.forChild and RouterModule.forRoot?
+*TODO*
+#### Q.How do you create and show pop-up windows in Angular?
+*TODO*
+#### Q.Briefly explain Angular Metadata?
+*TODO*
+#### Q.What is ChangeDetection.OnPush and what other ChangeDetection strategies exist?
+*TODO*
+#### Q.How to declare a property binding in Angular?
+*TODO*
+#### Q.What is ngModel and why is it considered a shorthand?
+*TODO*
+#### Q.Explain NgModule and how a root module differs from a feature module?
+*TODO*
+#### Q.What is tree shaking?
+*TODO*
+#### Q.What is “@Inject” and why is it needed?
+*TODO*
+#### Q.What directive would you use to loop data?
+*TODO*
+#### Q.What is Export array in Angular?
+*TODO*
+#### Q.What is Import array in Angular?
+*TODO*
+#### Q.What are the main components of Routing in Angualr?
+*TODO*
+#### Q.What Is Primeng? How Can It Be Used With Angular?
+*TODO*
+#### Q.What is hidden property in Angular?
+*TODO*
+#### Q.What are the difference between Renderer and ElementRef in angular?
+*TODO*
+#### Q.How do we create a singleton service in Angular?
+*TODO*
+#### Q.How HTTP Client is Interact with Angular Servers?
+*TODO*
+#### Q.What is Async Pipe? How to create and use a custom Pipes?
+*TODO*
+#### Q.What is a structural directive? How do you identify a structural directive in html?
+*TODO*
+#### Q.What are differences between template and templateUrl?
+*TODO*
+#### Q.How can you add an active class to a selected element in a list component?
+*TODO*
+#### Q.How to import css using system import?
+*TODO*
+#### Q.How to Load external css style into Angular?
+*TODO*
+#### Q.What is RouterOutlet? Is it possible to have a multiple router-outlet in the same template?
+*TODO*
+#### Q.What is RouterLink? How would you pass data from a parent component to a child component?
+*TODO*
+#### Q.What is @Inject()? Why Use? What are the difference between @Inject and @Injectable?
+*TODO*
+#### Q.What is the purpose of NgModule? How do you decide to create a new NgModule?
+*TODO*
+#### Q.What is the purpose of exports in a NgModule?
+*TODO*
+#### Q.Angular Modules vs. JavaScript Modules
+*TODO*
+#### Q.What is the difference between a module's forRoot() and forChild() methods and why do you need it?
+*TODO*
+#### Q.What are Zones? What is Change Detection? What would be a good use for NgZone service?
+*TODO*
+#### Q.What is folding?
+*TODO*
+#### Q.What are macros?
+*TODO*
+#### Q.Give an example of few metadata errors?
+*TODO*
+#### Q.What is metadata rewriting?
+*TODO*
+#### Q.What is the purpose of any type cast function?
+*TODO*
+#### Q.What is Non null type assertion operator?
+*TODO*
+#### Q.What is type narrowing?
+*TODO*
+#### Q.What is State function?
+*TODO*
+#### Q.How to inject the dynamic script in angular?
+*TODO*
+#### Q.What is dependency injection in Angular?
+*TODO*
+#### Q.What is interpolation?
+*TODO*
+#### Q.What is the difference between pure and impure pipe?
+*TODO*
+#### Q.How can you read full response?
+*TODO*
+#### Q.How do you perform Error handling?
+*TODO*
+#### Q.What is RxJS?
+*TODO*
+#### Q.What is an observer?
+*TODO*
+#### Q.What is multicasting?
+*TODO*
+#### Q.How do you perform error handling in observables?
+*TODO*
+#### Q.What are the utility functions provided by RxJS?
+*TODO*
+#### Q.What are the various kinds of directives?
+*TODO*
+#### Q.What are router events?
+*TODO*
+#### Q.What is IVY Renderer? Is it supported by Angular 7?
+*TODO*
+#### Q.What is auxiliary routes in angular 7
+*TODO*
+#### Q.How do you get a reference to a child component? [ANSWER]: ViewChild/ViewChildren or ContentChild/ContentChildren
+*TODO*
+#### Q.What is the difference between ViewChild and ContentChild?
+*TODO*
+#### Q.How do you listen for events in a component? [ANSWER]: HostListener or via elementRef.nativeElement
+*TODO*
+#### Q.What is ViewEncapsulation?
+*TODO*
+#### Q.Explain content projection. (ie ng-content)
+*TODO*
+#### Q.What are route guards and why are they useful?
+*TODO*
+#### Q.How do you force a change detection cycle? [ANSWER]: changeDetectorRef.markForCheck OR changeDetectorRef.detectChanges().
+*TODO*
+#### Q.Whats the different between changeDetectorRef.markForCheck and changeDetectorRef.detectChanges()?
+*TODO*
+#### Q.What is ng-container and why is it useful?
+*TODO*
+#### Q.How would you get a reference to a parent component? [ANSWER]: Inject it in the constructor.
+*TODO*
+#### Q.What does forwardRef do?
+*TODO*
+#### Q.What are rxjs letttable operators?
+*TODO*
+#### Q.What are entryComponents?
+*TODO*
+#### Q.What is Redux pattern and explain why its useful.
+*TODO*
+#### Q.When building custom form components, what interface do they components need to implement to particpate in forms? [ANSWER]: ControlValueAccessor
+*TODO*
+#### Q.How do components communicate with each other?
+*TODO*
+#### Q.Which lifecycle hook would you use to unsubscribe an observable?
+*TODO*
+#### Q.What is the difference between RouterModule.forRoot() vs RouterModule.forChild()? Why is it important?
+*TODO*
+#### Q.What is the difference between a module's forRoot() and forChild() methods and why do you need it?
+*TODO*
+#### Q.What's the difference between dirty, touched, and pristine on a form element?
+*TODO*
+#### Q.How do you decide to create a new NgModule?
+*TODO*
+#### Q.How will you inject custom header in your http call?
+*TODO*
+#### Q.How would you cache an observable data?
+*TODO*
+#### Q.How would you save data from a form control?
+*TODO*
+#### Q.How Event Emitters works in Angular?
+*TODO*
+#### Q.How do you mock a service to inject in a unit test?
+*TODO*
+#### Q.What is a factory Component?
+*TODO*
+#### Q.What is wildcard state?
+*TODO*
+#### Q.How would you insert an embedded view from a prepared TemplateRef?
+*TODO*
+#### Q.How will you intercept http to inject header to each http call?
+*TODO*
+#### Q.How would you create a component to display error messages throughout your application?
+*TODO*
+#### Q.How will you parallelize multiple observable call?
+*TODO*
+#### Q.How will you put one async call before another?
+*TODO*
+#### Q.How can you use web worker in angular app?
+*TODO*
+#### Q.Explain the difference between layout, painting and compositing.
+*TODO*
+#### Q.How can you cancel a router navigation?
+*TODO*
+#### Q.How would you animate routing?
+*TODO*
+#### Q.How would you cancel a promise on which you are waiting?
+*TODO*
+#### Q.When does a lazy loaded module is loaded?
+*TODO*
+#### Q.Why angular uses url segment?
+*TODO*
+#### Q.How will you make angular app secure?
+*TODO*
+#### Q.How will you localize numbers currencies and dates?
+*TODO*
+#### Q.What is the best way to use translation in your app?
+*TODO*
+#### Q.How will you optimize image/svg in your angular app?
+*TODO*
+#### Q.How would you make sure an api call that needs to be called only once but with multiple conditions? Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
+*TODO*
+#### Q.If you need to respond to two different Observable/Subject with one callback function, how would you do it? (ex: if you need to change the url through route parameters and with prev/next buttons).
+*TODO*
