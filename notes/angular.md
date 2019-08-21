@@ -2069,15 +2069,7 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.How to declare a property binding in Angular?
 *TODO*
-#### Q.What is ngModel and why is it considered a shorthand?
-*TODO*
-#### Q.Explain NgModule and how a root module differs from a feature module?
-*TODO*
-#### Q.What is tree shaking?
-*TODO*
 #### Q.What is “@Inject” and why is it needed?
-*TODO*
-#### Q.What directive would you use to loop data?
 *TODO*
 #### Q.What is Export array in Angular?
 *TODO*
@@ -2085,7 +2077,7 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.What are the main components of Routing in Angualr?
 *TODO*
-#### Q.What Is Primeng? How Can It Be Used With Angular?
+#### Q.What is Primeng? How Can It Be Used With Angular?
 *TODO*
 #### Q.What is hidden property in Angular?
 *TODO*
@@ -2093,9 +2085,7 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.How do we create a singleton service in Angular?
 *TODO*
-#### Q.How HTTP Client is Interact with Angular Servers?
-*TODO*
-#### Q.What is Async Pipe? How to create and use a custom Pipes?
+#### Q.How HTTP Client is interact with Angular Servers?
 *TODO*
 #### Q.What is a structural directive? How do you identify a structural directive in html?
 *TODO*
