@@ -47,6 +47,8 @@ import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboa
 import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
 import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -100,7 +102,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FormsModule,
     HttpClientModule,
     DragDropModule,
-    ScrollingModule
+    ScrollingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {
