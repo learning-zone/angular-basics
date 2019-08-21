@@ -2087,18 +2087,6 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.How HTTP Client is interact with Angular Servers?
 *TODO*
-#### Q.What is a structural directive? How do you identify a structural directive in html?
-*TODO*
-#### Q.What are differences between template and templateUrl?
-*TODO*
-#### Q.How can you add an active class to a selected element in a list component?
-*TODO*
-#### Q.How to import css using system import?
-*TODO*
-#### Q.How to Load external css style into Angular?
-*TODO*
-#### Q.What is RouterOutlet? Is it possible to have a multiple router-outlet in the same template?
-*TODO*
 #### Q.What is RouterLink? How would you pass data from a parent component to a child component?
 *TODO*
 #### Q.What is @Inject()? Why Use? What are the difference between @Inject and @Injectable?
@@ -2107,51 +2095,7 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.What is the purpose of exports in a NgModule?
 *TODO*
-#### Q.Angular Modules vs. JavaScript Modules
-*TODO*
-#### Q.What is the difference between a module's forRoot() and forChild() methods and why do you need it?
-*TODO*
 #### Q.What are Zones? What is Change Detection? What would be a good use for NgZone service?
-*TODO*
-#### Q.What is folding?
-*TODO*
-#### Q.What are macros?
-*TODO*
-#### Q.Give an example of few metadata errors?
-*TODO*
-#### Q.What is metadata rewriting?
-*TODO*
-#### Q.What is the purpose of any type cast function?
-*TODO*
-#### Q.What is Non null type assertion operator?
-*TODO*
-#### Q.What is type narrowing?
-*TODO*
-#### Q.What is State function?
-*TODO*
-#### Q.How to inject the dynamic script in angular?
-*TODO*
-#### Q.What is interpolation?
-*TODO*
-#### Q.What is the difference between pure and impure pipe?
-*TODO*
-#### Q.How can you read full response?
-*TODO*
-#### Q.How do you perform Error handling?
-*TODO*
-#### Q.What is RxJS?
-*TODO*
-#### Q.What is an observer?
-*TODO*
-#### Q.What is multicasting?
-*TODO*
-#### Q.How do you perform error handling in observables?
-*TODO*
-#### Q.What are the utility functions provided by RxJS?
-*TODO*
-#### Q.What are the various kinds of directives?
-*TODO*
-#### Q.What are router events?
 *TODO*
 #### Q.What is IVY Renderer? Is it supported by Angular 7?
 *TODO*
@@ -2165,15 +2109,11 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.What is ViewEncapsulation?
 *TODO*
-#### Q.Explain content projection. (ie ng-content)
-*TODO*
 #### Q.What are route guards and why are they useful?
 *TODO*
 #### Q.How do you force a change detection cycle? [ANSWER]: changeDetectorRef.markForCheck OR changeDetectorRef.detectChanges().
 *TODO*
 #### Q.Whats the different between changeDetectorRef.markForCheck and changeDetectorRef.detectChanges()?
-*TODO*
-#### Q.What is ng-container and why is it useful?
 *TODO*
 #### Q.How would you get a reference to a parent component? [ANSWER]: Inject it in the constructor.
 *TODO*
@@ -2186,8 +2126,6 @@ Redux is a way to manage application state and improve maintainability of asynch
 #### Q.What is Redux pattern and explain why its useful.
 *TODO*
 #### Q.When building custom form components, what interface do they components need to implement to particpate in forms? [ANSWER]: ControlValueAccessor
-*TODO*
-#### Q.How do components communicate with each other?
 *TODO*
 #### Q.Which lifecycle hook would you use to unsubscribe an observable?
 *TODO*
