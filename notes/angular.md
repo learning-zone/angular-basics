@@ -2009,21 +2009,13 @@ constructor(myElement: ElementRef) { ... }
 #### Q. What is Redux and how does it relate to an Angular app?
 Redux is a way to manage application state and improve maintainability of asynchronicity in your application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
 
-#### Q.Explain the concept of lazy loading in Angular.
+#### Q.Explain the concept of lazy loading in Angular?
 *TODO*
-#### Q.How routing works in Angular.
-*TODO*
-#### Q.How would you optimize the angular application for better performance?
+#### Q.How routing works in Angular?
 *TODO*
 #### Q.Explain local reference variables, @ViewChild and @ContentChild.
 *TODO*
-#### Q.What can be considered as replacement of $watch in Angular?
-*TODO*
 #### Q.Which Angular directive can be used for internationalization?
-*TODO*
-#### Q.Why are decorators used in Angular?
-*TODO*
-#### Q.How does angular keep track of two-way data binding?
 *TODO*
 #### Q.How to make sure that single instance will be used in an entire application?
 *TODO*
@@ -2031,47 +2023,21 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.How to add authentication in client side using Angular?
 *TODO*
-#### Q.Explain Angular Framework Architecture with the help of diagram?
-*TODO*
-#### Q.Explain the process by which your application is bootstrapped.
-*TODO*
-#### Q.What is NgZone and what is it used for?
-*TODO*
 #### Q.Why would you use renderer methods instead of using native element methods?
 *TODO*
 #### Q.How would you control size of an element on resize of the window in a component?
 *TODO*
-#### Q.What is the use of ngForTrackBy directive?
-*TODO*
 #### Q.What is In-memory Web API in angular?
-*TODO*
-#### Q.List down the advantages and disadvantages associated with Angular?
 *TODO*
 #### Q.What is Traceur Compiler?
 *TODO*
 #### Q.How to cache an observable data?
 *TODO*
-#### Q.List out the differences between ActivatedRoute and RouterState, with reference to Angular.
-*TODO*
-#### Q.What do you mean by a structural directive in Angular?
-*TODO*
 #### Q.What do you understand by a template variable? How is it used?
 *TODO*
 #### Q.How will you convert a string into a date?
 *TODO*
-#### Q.What are Event Emitters and how it works in Angular?
-*TODO*
 #### Q.What is shadow DOM? How is it helping Angular to perform better?
-*TODO*
-#### Q.What is difference between AOT and JIT compilation?
-*TODO*
-#### Q.What are pipes in Angular ? How to create custom pipes?
-*TODO*
-#### Q.What is Change detection?
-*TODO*
-#### Q.What limits the number of two-way binding attributes in Angular?
-*TODO*
-#### Q.How is using two-way data binding encouraged in Angular?
 *TODO*
 #### Q.How can we bind a variable with DOM element in Angular?
 *TODO*
@@ -2083,15 +2049,9 @@ Redux is a way to manage application state and improve maintainability of asynch
 *TODO*
 #### Q.Why do we need provider aliases? And how do you create one?
 *TODO*
-#### Q.What's the difference between a TypeScript class and an interface?
-*TODO*
 #### Q.What's the expression context in Angular? Explain it with an example.
 *TODO*
 #### Q.What are a few subclasses of @Injectable?
-*TODO*
-#### Q.What are HTML attributes and DOM properties; and how are they related?
-*TODO*
-#### Q.What is the NgForTrackBy directive?
 *TODO*
 #### Q.How do you resolve a template URL relative to a Component class?
 *TODO*
@@ -2104,8 +2064,6 @@ Redux is a way to manage application state and improve maintainability of asynch
 #### Q.What's the difference between RouterModule.forChild and RouterModule.forRoot?
 *TODO*
 #### Q.How do you create and show pop-up windows in Angular?
-*TODO*
-#### Q.Briefly explain Angular Metadata?
 *TODO*
 #### Q.What is ChangeDetection.OnPush and what other ChangeDetection strategies exist?
 *TODO*
