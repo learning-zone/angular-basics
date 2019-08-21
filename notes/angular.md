@@ -2009,23 +2009,9 @@ constructor(myElement: ElementRef) { ... }
 #### Q. What is Redux and how does it relate to an Angular app?
 Redux is a way to manage application state and improve maintainability of asynchronicity in your application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
 
-#### Q.What's new in Angular 7?
-*TODO*
-#### Q.What is the difference between observable and promises?
-*TODO*
-#### Q.List the differences between Angular components vs. directives?
-*TODO*
-#### Q.How do you define the transition between two states in Angular?
-*TODO*
-#### Q.When to use NgOnInit and constructor in Angular?
-*TODO*
 #### Q.Explain the concept of lazy loading in Angular.
 *TODO*
-#### Q.What is the meaning of component life cycle in Angular?
-*TODO*
 #### Q.How routing works in Angular.
-*TODO*
-#### Q.What is Dependency Injection? Explain with example.
 *TODO*
 #### Q.How would you optimize the angular application for better performance?
 *TODO*
@@ -2196,8 +2182,6 @@ Redux is a way to manage application state and improve maintainability of asynch
 #### Q.What is State function?
 *TODO*
 #### Q.How to inject the dynamic script in angular?
-*TODO*
-#### Q.What is dependency injection in Angular?
 *TODO*
 #### Q.What is interpolation?
 *TODO*
