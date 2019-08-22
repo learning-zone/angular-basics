@@ -2254,15 +2254,30 @@ show(name: HTMLInputElement){
 }
 ```
 
-#### Q. How will you convert a string into a date?
-*TODO*
 #### Q. What is shadow DOM? How is it helping Angular to perform better?
-*TODO*
+Shadow DOM basically allows group of DOM implementation to be hidden inside a single element and encapsulate styles to the element.
+Example:
+```typescript
+@Component({
+  templateUrl: 'card.html',
+  styles: [`
+    .card {
+      height: 70px;
+      width: 100px;
+    }
+  `],
+  encapsulation: ViewEncapsulation.Native
+  // encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.Emulated is default 
+})
+```
+* **ViewEncapsulation.None**: - No Shadow DOM at all. Therefore, also no style encapsulation.
+* **ViewEncapsulation.Emulated**: - No Shadow DOM but style encapsulation emulation.
+* **ViewEncapsulation.Native**: - Native Shadow DOM with all it’s goodness.
+
 #### Q. How can we bind a variable with DOM element in Angular?
 *TODO*
 #### Q. What is Host Decorators in Angular?
-*TODO*
-#### Q. What are template reference variables and how are they different from variables in classes?
 *TODO*
 #### Q. What’s the difference between for..in and for..of?
 *TODO*
