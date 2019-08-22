@@ -2156,7 +2156,24 @@ There are two ways to make a service a singleton in Angular:
 * Declare root for the value of the @Injectable() providedIn property
 * Include the service in the AppModule or in a module that is only imported by the AppModule
 #### Q. How do you reference the host of a component?
-*TODO*
+We can get the host element reference using
+```typescript
+class MyComponent {
+  constructor(private elRef:ElementRef) {
+    console.log(this.elRef.nativeElement);
+  }
+}
+```
+We can also subscribe to the `focus` event
+```typescript
+class MyComponent {
+  @HostBinding() tabindex = 0;
+  @HostListener('focus', ['$event'])
+  onFocus(event) {
+    console.log(event);
+  }
+}
+```
 #### Q. How to add authentication in client side using Angular?
 *TODO*
 #### Q. Why would you use renderer methods instead of using native element methods?
