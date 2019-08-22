@@ -403,7 +403,7 @@ import { Component } from '@angular/core';
     selector: 'my-app',
     template: ` <div>
         <h1>{{title}}</h1>
-        <div>Learn Angular6 with examples</div>
+        <div>Angular components examples</div>
     </div> `,
 })
 
