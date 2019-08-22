@@ -2030,8 +2030,124 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 * **resolver**: script that fetches data before the requested page is activated
 * **router outlet**: location in the DOM where Angular Router can place activated components.
 
-#### Q. Explain local reference variables, @ViewChild and @ContentChild.
-The @ViewChild and @ViewChildren decorators in Angular provide a way to access and manipulate DOM elements, directives and components.
+#### Q. Explain local reference variables, @ViewChild() and @ContentChild().
+The @ViewChild and @ViewChildren decorators in Angular provide a way to access and manipulate DOM elements, directives and components. @ViewChild is used to query one element from the DOM and @ViewChildren for multiple elements.
+
+If you want to access following inside the Parent Component, use @ViewChild decorator of Angular.
+
+1. Child Component
+1. Directive
+1. DOM Element
+
+ViewChild returns the first element that matches the selector.
+Example: *@ViewChild()*
+```typescript
+import { Component, Input } from '@angular/core';
+@Component({
+    selector: 'app-message',
+    template: `
+    <h2>{{message}}</h2>
+`
+})
+export class MessageComponent {
+    @Input() message: string;
+}
+```
+We are using MessageComponent inside AppComponent as shown in below listing:
+```typescript
+import { Component, OnInit } from '@angular/core';
+@Component({
+    selector: 'app-root',
+    template: `
+    <div>
+      <h1>Messages</h1>
+      <app-message [message]='message'></app-message>
+    </div>
+`
+})
+export class AppComponent implements OnInit {
+    message: any;
+    ngOnInit() {
+        this.message = 'Hello World !';
+    }
+}
+```
+Here MessageComponent is located inside template of AppComponent, so it can be accessed as ViewChild.
+```typescript
+export class AppComponent implements OnInit, AfterViewInit {
+    message: any;
+    @ViewChild(MessageComponent) messageViewChild: MessageComponent;
+  
+    ngAfterViewInit() {
+        console.log(this.messageViewChild);
+    }
+    ngOnInit() {
+        this.message = 'Hello World !';
+    }
+}
+```
+
+* **@ContentChild()**
+
+Example: MessageContainerComponent
+```typescript
+import { Component } from '@angular/core';
+@Component({
+    selector: 'app-messagecontainer',
+    template: `
+    <div>
+      <h3>{{greetMessage}}</h3>
+      <ng-content select="app-message"></ng-content>
+    </div>
+  `
+})
+export class MessageContainerComponent {
+    greetMessage = 'Ignite UI Rocks!';
+}
+```
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+@Component({
+    selector: 'app-root',
+    template: `
+    <div>
+      <app-messagecontainer>
+      <app-message [message]='message'></app-message>
+      </app-messagecontainer>
+    </div>
+`
+})
+export class AppComponent implements OnInit {
+    message: any;
+    ngOnInit() {
+        this.message = 'Hello World !';
+    }
+}
+```
+Since, MessageComponnet is projected and being used inside template of MessageContainerComponent, it can be used as ContentChild as shown in the below listing:
+
+```typescript
+import { Component, ContentChild, AfterContentInit } from '@angular/core';
+import { MessageComponent } from './message.component';
+  
+@Component({
+    selector: 'app-messagecontainer',
+    template: `
+    <div>
+        <h3>{{greetMessage}}</h3>
+        <ng-content select="app-message"></ng-content>
+    </div>
+    `
+})
+export class MessageContainerComponent implements AfterContentInit {
+    greetMessage = 'Ignite UI Rocks!';
+    @ContentChild(MessageComponent) MessageComponnetContentChild: MessageComponent;
+    ngAfterContentInit() {
+        console.log(this.MessageComponnetContentChild);
+    }
+}
+```
 #### Q. Which Angular directive can be used for internationalization?
 *TODO*
 #### Q. How to make sure that single instance will be used in an entire application?
