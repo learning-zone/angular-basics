@@ -2273,7 +2273,7 @@ Example:
 ```
 * **ViewEncapsulation.None**: - No Shadow DOM at all. Therefore, also no style encapsulation.
 * **ViewEncapsulation.Emulated**: - No Shadow DOM but style encapsulation emulation.
-* **ViewEncapsulation.Native**: - Native Shadow DOM with all it’s goodness.
+* **ViewEncapsulation.Native**: - Native Shadow DOM enabled.
 
 #### Q. How can we bind a variable with DOM element in Angular?
 *TODO*
