@@ -2009,8 +2009,6 @@ constructor(myElement: ElementRef) { ... }
 #### Q. What is Redux and how does it relate to an Angular app?
 Redux is a way to manage application state and improve maintainability of asynchronicity in your application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
 
-#### Q. Explain the concept of lazy loading in Angular?
-*TODO*
 #### Q. How routing works in Angular?
 *TODO*
 #### Q. Explain local reference variables, @ViewChild and @ContentChild.
