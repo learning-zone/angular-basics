@@ -2241,7 +2241,7 @@ export class SomeComponent implements OnInit {
 }
 ```
 #### Q. What do you understand by a template variable? 
-A template reference variable is often a reference to a DOM element within a template. It can also be a reference to an Angular component or directive or a web component.
+A template reference variable is often a reference to a DOM element within a template. It can also be a reference to an Angular component or directive or a web component.  
 Example:
 ```html
 <input type="text" #name>
