@@ -2010,7 +2010,16 @@ constructor(myElement: ElementRef) { ... }
 Redux is a way to manage application state and improve maintainability of asynchronicity in your application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
 
 #### Q. How routing works in Angular?
-*TODO*
+When a user navigates to a page, Angular Router performs the following steps in order:
+
+1. It reads the browser URL the user wants to navigate to
+1. It applies a URL redirect (if one is defined)
+1. It figures out which router state corresponds to the URL
+1. It runs the guards that are defined in the router state
+1. It resolves the required data for the router state
+1. It activates the Angular components to display the page
+1. It manages navigation and repeats the steps above when a new page is requested.
+
 #### Q. Explain local reference variables, @ViewChild and @ContentChild.
 *TODO*
 #### Q. Which Angular directive can be used for internationalization?
