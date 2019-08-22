@@ -2255,7 +2255,8 @@ show(name: HTMLInputElement){
 ```
 
 #### Q. What is shadow DOM? How is it helping Angular to perform better?
-Shadow DOM basically allows group of DOM implementation to be hidden inside a single element and encapsulate styles to the element.
+Shadow DOM basically allows group of DOM implementation to be hidden inside a single element and encapsulate styles to the element. 
+Whenever we create a component, Angular puts it’s template into a shadowRoot, which is the Shadow DOM of that particular component.     
 Example:
 ```typescript
 @Component({
