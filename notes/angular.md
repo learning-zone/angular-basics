@@ -2174,7 +2174,7 @@ class MyComponent {
   }
 }
 ```
-#### Q. Why would you use renderer methods instead of using native element methods / What is difference between Renderer and ElementRef in angular?
+#### Q. Why would you use renderer methods instead of using native element methods? / What is difference between Renderer and ElementRef in angular?
 The `Renderer` is a class that is a partial abstraction over the DOM. Using the `Renderer` for manipulating the DOM doesn't break server-side rendering or Web Workers (where direct access to the DOM would break).
 
 `ElementRef` is a class that can hold a reference to a DOM element. This is again an abstraction to not break in environments where the browsers DOM isn't actually available.
