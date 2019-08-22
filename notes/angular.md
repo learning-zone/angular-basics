@@ -2240,8 +2240,19 @@ export class SomeComponent implements OnInit {
   }
 }
 ```
-#### Q. What do you understand by a template variable? How is it used?
-*TODO*
+#### Q. What do you understand by a template variable? 
+A template reference variable is often a reference to a DOM element within a template. It can also be a reference to an Angular component or directive or a web component
+```html
+<input type="text" #name>
+
+<button (click)="show(name)">Show</button>
+```
+```typescript
+show(name: HTMLInputElement){
+    console.log(name.value);
+}
+```
+
 #### Q. How will you convert a string into a date?
 *TODO*
 #### Q. What is shadow DOM? How is it helping Angular to perform better?
