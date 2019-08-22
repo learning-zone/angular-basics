@@ -2092,8 +2092,6 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 *TODO*
 #### Q. What is Import array in Angular?
 *TODO*
-#### Q. What are the main components of Routing in Angualr?
-*TODO*
 #### Q. What is Primeng? How Can It Be Used With Angular?
 *TODO*
 #### Q. What is hidden property in Angular?
