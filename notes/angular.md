@@ -436,7 +436,7 @@ import { Component } from '@angular/core';
     template: `
         <div>
             <h1>{{title}}</h1>
-            <div>Learn Angular</div>
+            <div>Angular Template Example</div>
         </div>
       `
 })
