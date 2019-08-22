@@ -2031,7 +2031,7 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 * **router outlet**: location in the DOM where Angular Router can place activated components.
 
 #### Q. Explain local reference variables, @ViewChild and @ContentChild.
-*TODO*
+The @ViewChild and @ViewChildren decorators in Angular provide a way to access and manipulate DOM elements, directives and components.
 #### Q. Which Angular directive can be used for internationalization?
 *TODO*
 #### Q. How to make sure that single instance will be used in an entire application?
@@ -2145,8 +2145,6 @@ export class ChildModule {}
 #### Q. What is auxiliary routes in angular 7
 *TODO*
 #### Q. How do you get a reference to a child component? [ANSWER]: ViewChild/ViewChildren or ContentChild/ContentChildren
-*TODO*
-#### Q. What is the difference between ViewChild and ContentChild?
 *TODO*
 #### Q. How do you listen for events in a component? [ANSWER]: HostListener or via elementRef.nativeElement
 *TODO*
