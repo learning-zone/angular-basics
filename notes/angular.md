@@ -2206,12 +2206,40 @@ onResize(event) {
   event.target.innerWidth;
 }
 ```
-#### Q. What is In-memory Web API in angular?
-*TODO*
-#### Q. What is Traceur Compiler?
-*TODO*
 #### Q. How to cache an observable data?
-*TODO*
+```typescript
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable, ReplaySubject } from 'rxjs';
+
+@Injectable()
+export class CachedService {
+  data$: Observable<Response> = this.dataSubject.asObservable();
+
+  private dataSubject = new ReplaySubject<Response>(1);
+
+  constructor(private http: Http) { }
+
+  fetch() {
+    this.http.get(...).subscribe(res => this.dataSubject.next(res));
+  }
+}
+```
+This will make an HTTP call when the fetch method is called, and any subscribers to service.data$ ($ as a suffix basically represents a stream of values) will get the response from the ReplaySubject. As it replays earlier values, any subscribers who join after the HTTP call resolves will still get the previous response.
+
+If We want to trigger an update, we can just call service.fetch() to kick off a new HTTP call and all subscribers will be updated once the new response arrives.
+```typescript
+@Component({ ... })
+export class SomeComponent implements OnInit {
+
+  constructor(private service: CachedService) { }
+
+  ngOnInit() {
+    this.service.fetch();
+    this.service.data$.subscribe(...);
+  }
+}
+```
 #### Q. What do you understand by a template variable? How is it used?
 *TODO*
 #### Q. How will you convert a string into a date?
