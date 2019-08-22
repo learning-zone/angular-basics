@@ -2150,8 +2150,6 @@ export class MessageContainerComponent implements AfterContentInit {
     }
 }
 ```
-#### Q. Which Angular directive can be used for internationalization?
-*TODO*
 #### Q. How to make sure that single instance will be used in an entire application?
 *TODO*
 #### Q. How do you reference the host of a component?
