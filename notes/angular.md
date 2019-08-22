@@ -1856,8 +1856,7 @@ if (typeof Worker !== 'undefined') {
 ```
 **Note:** You may need to refactor your initial scaffolding web worker code for sending messages to and from.
 #### Q. What are the limitations with web workers?
-You need to remember two important things when using Web Workers in Angular projects,
-1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, don't support Web Workers. In this case you need to provide a fallback mechanism to perform the computations to work in this environments.
+1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, don't support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
 2. Running Angular in web worker using `@angular/platform-webworker` is not yet supported in Angular CLI.
 
 #### Q. What is Angular CLI Builder?
