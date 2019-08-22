@@ -2081,26 +2081,32 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 #### Q. What's the difference between RouterModule.forRoot(ROUTES) and RouterModule.forChild(ROUTES)?
 * **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
 * **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.
-Example:
+Example: *RouterModule.forRoot(ROUTES)*
 ```typescript
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {ComponentAComponent} from './component-a/component-a.component';
-import {ComponentBComponent} from './component-b/component-b.component';
-import {RouterModule} from '@angular/router';
+// ...
+import { Routes, RouterModule } from '@angular/router';
+
+export const ROUTES: Routes = [];
 
 @NgModule({
-    imports: [
-        CommonModule,
-        RouterModule.forChild([
-            {path: 'component-a', component: ComponentAComponent }, 
-            {path: 'component-b', component: ComponentBComponent }
-        ])
-    ],
-    declarations: [ComponentAComponent, ComponentBComponent]
+  imports: [BrowserModule, RouterModule.forRoot(ROUTES)],
+  // ...
 })
-export class ModuleRoutesModule {
-}
+export class AppModule {}
+```
+Example: *RouterModule.forChild(ROUTES)*
+```typescript
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+
+export const ROUTES: Routes = [];
+
+@NgModule({
+  imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  // ...
+})
+export class ChildModule {}
 ```
 #### Q. How do you create and show pop-up windows in Angular?
 *TODO*
