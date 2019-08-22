@@ -7,8 +7,8 @@
 1. When to use NgOnInit and constructor in Angular?
 1. Explain the concept of lazy loading in Angular.
 1. What is the meaning of component life cycle in Angular?
-1. How routing works in Angular.
-1. What is Dependency Injection? Explain with example.
+1. How routing works in Angular?
+1. What is Dependency Injection?
 1. How would you optimize the angular  application for better performance?
 1. Explain local reference variables, @ViewChild and @ContentChild.
 1. What can be considered as replacement of $watch in Angular?
@@ -45,7 +45,7 @@
 1. What’s the difference between for..in and for..of? 
 1. Why do we need provider aliases? And how do you create one? 
 1. What's the difference between a TypeScript class and an interface? 
-1. What's the expression context in Angular? Explain it with an example. 
+1. What's the expression context in Angular? 
 1. What are a few subclasses of @Injectable? 
 1. What are HTML attributes and DOM properties; and how are they related? 
 1. What is the NgForTrackBy directive? 
