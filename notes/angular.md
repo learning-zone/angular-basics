@@ -2020,6 +2020,16 @@ When a user navigates to a page, Angular Router performs the following steps in 
 1. It activates the Angular components to display the page
 1. It manages navigation and repeats the steps above when a new page is requested.
 
+To accomplish its tasks, Angular Router introduces the following terms and concepts:
+
+* **router service**: the global Angular Router service in our application
+* **router configuration**: definition of all possible router states our application can be in
+* **router state**: the state of the router at some point in time, expressed as a tree of activated route snapshots
+* **activated route snapshot**: provides access to the URL, parameters, and data for a router state node
+* **guard**: script that runs when a route is loaded, activated or deactivated
+* **resolver**: script that fetches data before the requested page is activated
+* **router outlet**: location in the DOM where Angular Router can place activated components.
+
 #### Q. Explain local reference variables, @ViewChild and @ContentChild.
 *TODO*
 #### Q. Which Angular directive can be used for internationalization?
