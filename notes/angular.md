@@ -2151,7 +2151,10 @@ export class MessageContainerComponent implements AfterContentInit {
 }
 ```
 #### Q. How to make sure that single instance will be used in an entire application?
-*TODO*
+There are two ways to make a service a singleton in Angular:
+
+* Declare root for the value of the @Injectable() providedIn property
+* Include the service in the AppModule or in a module that is only imported by the AppModule
 #### Q. How do you reference the host of a component?
 *TODO*
 #### Q. How to add authentication in client side using Angular?
