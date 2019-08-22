@@ -2078,8 +2078,30 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 *TODO*
 #### Q. How would you intercept 404 errors in Angular?
 *TODO*
-#### Q. What's the difference between RouterModule.forChild and RouterModule.forRoot?
-*TODO*
+#### Q. What's the difference between RouterModule.forRoot(ROUTES) and RouterModule.forChild(ROUTES)?
+* **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
+* **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.
+Example:
+```typescript
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ComponentAComponent} from './component-a/component-a.component';
+import {ComponentBComponent} from './component-b/component-b.component';
+import {RouterModule} from '@angular/router';
+
+@NgModule({
+    imports: [
+        CommonModule,
+        RouterModule.forChild([
+            {path: 'component-a', component: ComponentAComponent }, 
+            {path: 'component-b', component: ComponentBComponent }
+        ])
+    ],
+    declarations: [ComponentAComponent, ComponentBComponent]
+})
+export class ModuleRoutesModule {
+}
+```
 #### Q. How do you create and show pop-up windows in Angular?
 *TODO*
 #### Q. What is ChangeDetection.OnPush and what other ChangeDetection strategies exist?
