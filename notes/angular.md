@@ -2182,7 +2182,30 @@ The `Renderer` is a class that is a partial abstraction over the DOM. Using the 
 There are other ways to acquire an `ElementRef` instance like `@ViewChild()`, `@ViewChildren()`, `@ContentChild()`, `@ContentChildren()`. In this case `ElementRef` is a reference to the matching element(s) in the template or children.
 
 #### Q. How would you control size of an element on resize of the window in a component?
-*TODO*
+```html
+<div (window:resize)="onResize($event)"
+```
+```typescript
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  host: {
+    '(window:resize)': 'onResize($event)'
+  }
+})
+export class AppComponent{
+   onResize(event){
+     event.target.innerWidth; // window width
+   }
+}
+
+//OR
+@HostListener('window:resize', ['$event'])
+onResize(event) {
+  event.target.innerWidth;
+}
+```
 #### Q. What is In-memory Web API in angular?
 *TODO*
 #### Q. What is Traceur Compiler?
