@@ -2031,6 +2031,9 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 * **router outlet**: location in the DOM where Angular Router can place activated components.
 
 #### Q. Explain local reference variables, @ViewChild() and @ContentChild().
+
+![alt text](https://github.com/learning-zone/Angular/tree/master/assets/viewchild-1.png)
+
 The @ViewChild and @ViewChildren decorators in Angular provide a way to access and manipulate DOM elements, directives and components. @ViewChild is used to query one element from the DOM and @ViewChildren for multiple elements.
 
 If you want to access following inside the Parent Component, use @ViewChild decorator of Angular.
