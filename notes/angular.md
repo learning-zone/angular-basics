@@ -2080,7 +2080,7 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 *TODO*
 #### Q. What's the difference between RouterModule.forRoot(ROUTES) and RouterModule.forChild(ROUTES)?
 * **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
-* **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.
+* **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.  
 Example: *RouterModule.forRoot(ROUTES)*
 ```typescript
 // ...
