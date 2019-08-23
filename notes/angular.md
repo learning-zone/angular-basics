@@ -2279,8 +2279,6 @@ Example:
 *TODO*
 #### Q. What is Host Decorators in Angular?
 *TODO*
-#### Q. What’s the difference between for..in and for..of?
-*TODO*
 #### Q. Why do we need provider aliases? And how do you create one?
 *TODO*
 #### Q. What's the expression context in Angular? Explain it with an example.
