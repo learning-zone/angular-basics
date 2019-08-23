@@ -2277,18 +2277,37 @@ Example:
 
 #### Q. How can we bind a variable with DOM element in Angular?
 *TODO*
-#### Q. What is Host Decorators in Angular?
+#### Q. What is Host Decorator in Angular?
 *TODO*
-#### Q. Why do we need provider aliases? And how do you create one?
+#### Q. Why do we need provider aliases? 
 *TODO*
-#### Q. What's the expression context in Angular? Explain it with an example.
-*TODO*
-#### Q. What are a few subclasses of @Injectable?
-*TODO*
-#### Q. How do you resolve a template URL relative to a Component class?
-*TODO*
-#### Q. How do you use a JavaScript (Non TypeScript) third party lib in an Angular App?
-*TODO*
+#### Q. How do you use a JavaScript third party lib in an Angular App?
+Example: Adding `underscore.js` library to a Angular Project.
+
+Step 1: Create a new project using Angular CLI
+```typescript
+ng new learning
+```
+Step 2: Install the package 
+```typescript
+npm install --save underscore
+```
+Step 3: Import the library into Angular (TypeScript)
+```typescript
+npm install --save @types/underscore
+```
+Step 4: Import type declaration into Angular app
+```typescript
+import * as _ from 'underscore';
+
+export class AppComponent {
+  constructor() {
+    const myArray: number[] = [9, 1, 5];
+    const lastItem: number = _.last(myArray); //Using underscore
+    console.log(lastItem); //5
+  }
+}
+```
 #### Q. Can we create two Components with the same name in two different .ts files?
 *TODO*
 #### Q. How would you intercept 404 errors in Angular?
