@@ -2309,7 +2309,7 @@ export class AppComponent {
 }
 ```
 #### Q. Can we create two Components with the same name in two different .ts files?
-*TODO*
+No
 #### Q. How would you intercept 404 errors in Angular?
 *TODO*
 #### Q. What's the difference between RouterModule.forRoot(ROUTES) and RouterModule.forChild(ROUTES)?
