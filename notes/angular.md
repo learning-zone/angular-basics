@@ -2396,6 +2396,12 @@ Next we must define the link to the auxiliary route for the application to navig
   Component Aux
 </a>
 ```
+Each auxiliary route is an independent route which can have:
+* Its own child routes
+* Its own auxiliary routes
+* Its own route-params
+* Its own history stack
+
 #### Q. How do you get a reference to a child component? [ANSWER]: ViewChild/ViewChildren or ContentChild/ContentChildren
 *TODO*
 #### Q. How do you listen for events in a component? [ANSWER]: HostListener or via elementRef.nativeElement
