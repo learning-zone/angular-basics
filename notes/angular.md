@@ -2351,12 +2351,12 @@ export class SomeService {
   }
 }
 ```
-#### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
-*TODO*
-#### Q. What is the purpose of exports in a NgModule?
-*TODO*
+
 #### Q. What are Zones? What is Change Detection? What would be a good use for NgZone service?
-*TODO*
+The most common use of `NgZone` service is to optimize performance when starting a work consisting of one or more asynchronous tasks that don't require UI updates or error handling to be handled by Angular.   
+
+Zone.js is an execution context that helps developers intercept and keep track of async operations. Zone works on the concept of associating each operation with a zone. Each zone can fork and create a child zone with a different context, no limits. Inside a zone, async operations are captured using different APIs, so that the developer can decide what to do with the interceptions.
+
 #### Q. What is IVY Renderer? Is it supported by Angular 7?
 *TODO*
 #### Q. What is auxiliary routes in angular 7
