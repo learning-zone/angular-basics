@@ -2463,8 +2463,58 @@ A bootstrapped component is an entry component that Angular loads into the DOM d
 
 #### Q. When building custom form components, what interface do they components need to implement to particpate in forms?
 `ControlValueAccessor`
-#### Q. Which lifecycle hook would you use to unsubscribe an observable?
-*TODO*
+#### Q. What are the best way to unsubscribe from Observables in Angular?
+**The Problem**  
+```typescript
+export class SimpleComponent implements OnInit, OnDestroy {
+  private paramsSubscription: Subscription;
+  private httpSubscription: Subscription;
+  constructor(private route: ActivatedRoute,
+              private http: Http) {
+  }
+  ngOnInit() {
+    this.paramsSubscription = this.route.params
+      .subscribe(params => {
+        // do something
+      });
+    this.httpSubscription = this.http.get("/load")
+      .subscribe(result => {
+        // do something
+      });
+  }
+  ngOnDestroy() {
+    this.paramsSubscription.unsubscribe();
+    this.httpSubscription.unsubscribe();
+  }
+}
+```
+For every `Observable.subscribe()`, we store the Subscription instance and call its unsubscribe method in the `ngOnDestroy` callback. Angular calls the `ngOnDestroy` method once the component is not used anymore. Therefore, its the perfect place to end our subscriptions. While this solution might be OK for if you have one or two subscriptions, it becomes very tedious if we have more subscriptions.
+
+**The solution**  
+```typescript
+export class SimpleComponent implements OnInit, OnDestroy {
+  constructor(private route: ActivatedRoute,
+              private http: Http) {
+  }
+  ngOnInit() {
+    this.route.params
+      .takeUntil(componentDestroyed(this))
+      .subscribe(params => {
+        // do something
+      });
+    this.http.get("/load")
+      .takeUntil(componentDestroyed(this))
+      .subscribe(result => {
+        // do something
+      });
+  }
+  ngOnDestroy() {
+    // empty
+  }
+}
+```
+At runtime, the function componentDestroyed alters the component instance and creates a new `ngOnDestroy` method which in turn calls an internally created Subject. The existing ngOnDestroy gets called by the new ngOnDestroy method.
+
 #### Q. What's the difference between dirty, touched, and pristine on a form element?
 *TODO*
 #### Q. How would you save data from a form control?
