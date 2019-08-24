@@ -2555,7 +2555,39 @@ class MyService {
 ```
 
 #### Q. How will you intercept http to inject header to each http call?
-*TODO*
+It provides a way to intercept HTTP requests and responses to transform or handle them before passing them along. Although interceptors are capable of mutating requests and responses, the HttpRequest and HttpResponse instance properties are read-only, rendering them largely immutable.
+
+This is because we might want to retry a request if it does not succeed at first. And immutability ensures that the interceptor chain can re-process the same request multiple times.
+
+**Create an Interceptor**:    
+The goal is to include the JWT which is in local storage as the `Authorization` header in any HTTP request that is sent. The first step is to create an interceptor. To do this, create an `Injectable` class which implements `HttpInterceptor`.
+
+```typescript
+// src/app/auth/token.interceptor.ts
+import { Injectable } from '@angular/core';
+import {
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpInterceptor
+} from '@angular/common/http';
+import { AuthService } from './auth/auth.service';
+import { Observable } from 'rxjs/Observable';
+@Injectable()
+export class TokenInterceptor implements HttpInterceptor {
+  constructor(public auth: AuthService) {}
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    
+    request = request.clone({
+      setHeaders: {
+        Authorization: `Bearer ${this.auth.getToken()}`
+      }
+    });
+    return next.handle(request);
+  }
+}
+```
+
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
 #### Q. How will you parallelize multiple observable call?
