@@ -2461,8 +2461,6 @@ Example:
 ```
 A bootstrapped component is an entry component that Angular loads into the DOM during the bootstrap process (application launch).
 
-#### Q. What is Redux pattern and explain why its useful.
-*TODO*
 #### Q. When building custom form components, what interface do they components need to implement to particpate in forms?
 `ControlValueAccessor`
 #### Q. Which lifecycle hook would you use to unsubscribe an observable?
