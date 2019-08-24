@@ -2359,10 +2359,43 @@ Zone.js is an execution context that helps developers intercept and keep track o
 
 `Zone` and `NgZone` are used to automatically trigger change detection as a result of async operations. But since change detection is a separate mechanism it can successfully work without Zone and NgZone. 
 
-#### Q. What is IVY Renderer? Is it supported by Angular 7?
-*TODO*
-#### Q. What is auxiliary routes in angular 7
-*TODO*
+#### Q. What is auxiliary routes in angular 7?
+Angular supports the concept of auxiliary routes, which allow to set up and navigate multiple independent routes in a single app. Each component has one primary route and zero or more auxiliary outlets. Auxiliary outlets must have unique name within a component.  
+
+To define the auxiliary route we must first add a named router `outlet` where contents for the auxiliary route are to be rendered.  
+Example:
+```typescript
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'app',
+  template: `
+    <nav>
+      <a [routerLink]="['/component-one']">Component One</a>
+      <a [routerLink]="['/component-two']">Component Two</a>
+      <a [routerLink]="[{ outlets: { 'sidebar': ['component-aux'] } }]">Component Aux</a>
+    </nav>
+
+    <div style="color: green; margin-top: 1rem;">Outlet:</div>
+    <div style="border: 2px solid green; padding: 1rem;">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div style="color: green; margin-top: 1rem;">Sidebar Outlet:</div>
+    <div style="border: 2px solid blue; padding: 1rem;">
+      <router-outlet name="sidebar"></router-outlet>
+    </div>
+  `
+})
+export class AppComponent { }
+```
+
+Next we must define the link to the auxiliary route for the application to navigate and render the contents.
+```html
+<a [routerLink]="[{ outlets: { 'sidebar': ['component-aux'] } }]">
+  Component Aux
+</a>
+```
 #### Q. How do you get a reference to a child component? [ANSWER]: ViewChild/ViewChildren or ContentChild/ContentChildren
 *TODO*
 #### Q. How do you listen for events in a component? [ANSWER]: HostListener or via elementRef.nativeElement
