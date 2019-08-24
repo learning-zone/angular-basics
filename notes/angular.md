@@ -2515,12 +2515,44 @@ export class SimpleComponent implements OnInit, OnDestroy {
 ```
 At runtime, the function componentDestroyed alters the component instance and creates a new `ngOnDestroy` method which in turn calls an internally created Subject. The existing ngOnDestroy gets called by the new ngOnDestroy method.
 
-#### Q. What's the difference between dirty, touched, and pristine on a form element?
-*TODO*
-#### Q. How would you save data from a form control?
-*TODO*
 #### Q. How Event Emitters works in Angular?
-*TODO*
+`Event Emitters` use in components with the @Output directive to emit custom events synchronously or asynchronously, and register handlers for those events by subscribing to an instance.
+
+EventEmitter is really an Angular abstraction, and should be used pretty much only for emitting custom Events in components. Otherwise, just use Rx as if it was any other library.
+
+**how to use it properly**  
+```typescript
+@Component({
+    selector : 'child',
+    template : `
+        <button (click)="sendNotification()">Notify my parent!</button>
+    `
+})
+class Child {
+    @Output() notifyParent: EventEmitter<any> = new EventEmitter();
+    sendNotification() {
+        this.notifyParent.emit('Some value to send to the parent');
+    }
+}
+
+@Component({
+    selector : 'parent',
+    template : `
+        <child (notifyParent)="getNotification($event)"></child>
+    `
+})
+class Parent {
+    getNotification(evt) {
+        // Do something with the notification (evt) sent by the child!
+    }
+}
+```
+**How not to use it?**
+```typescript
+class MyService {
+    @Output() myServiceEvent : EventEmitter<any> = new EventEmitter();
+}
+```
 #### Q. How do you mock a service to inject in a unit test?
 *TODO*
 #### Q. What is a factory Component?
