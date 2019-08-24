@@ -2417,6 +2417,25 @@ Inject it in the constructor.
 #### Q. What does forwardRef do?
 Allows to refer to references which are not yet defined.
 
+For instance, `forwardRef` is used when the token which we need to refer to for the purposes of DI is declared, but not yet defined. It is also used when the token which we use when creating a query is not yet defined.  
+Example:
+```typescript
+class Door {
+  lock: Lock;
+
+  // Door attempts to inject Lock, despite it not being defined yet.
+  // forwardRef makes this possible.
+  constructor(@Inject(forwardRef(() => Lock)) lock: Lock) { this.lock = lock; }
+}
+
+// Only at this point Lock is defined.
+class Lock {}
+
+const injector = ReflectiveInjector.resolveAndCreate([Door, Lock]);
+const door = injector.get(Door);
+expect(door instanceof Door).toBeTruthy();
+expect(door.lock instanceof Lock).toBeTruthy();
+```
 #### Q. What are rxjs letttable operators?
 *TODO*
 #### Q. What are entryComponents?
