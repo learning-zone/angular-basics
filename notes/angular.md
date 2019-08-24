@@ -2245,7 +2245,6 @@ A template reference variable is often a reference to a DOM element within a tem
 Example:
 ```html
 <input type="text" #name>
-
 <button (click)="show(name)">Show</button>
 ```
 ```typescript
