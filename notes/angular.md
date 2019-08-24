@@ -2402,10 +2402,12 @@ Each auxiliary route is an independent route which can have:
 * Its own route-params
 * Its own history stack
 
-#### Q. How do you get a reference to a child component? [ANSWER]: ViewChild/ViewChildren or ContentChild/ContentChildren
-*TODO*
-#### Q. How do you listen for events in a component? [ANSWER]: HostListener or via elementRef.nativeElement
-*TODO*
+#### Q. How do you get a reference to a child component? 
+`ViewChild`/`ViewChildren` or `ContentChild`/`ContentChildren`
+
+#### Q. How do you listen for events in a component? 
+`HostListener` or via `elementRef.nativeElement`
+
 #### Q. What is ViewEncapsulation?
 *TODO*
 #### Q. What are route guards and why are they useful?
