@@ -2357,6 +2357,8 @@ The most common use of `NgZone` service is to optimize performance when starting
 
 Zone.js is an execution context that helps developers intercept and keep track of async operations. Zone works on the concept of associating each operation with a zone. Each zone can fork and create a child zone with a different context, no limits. Inside a zone, async operations are captured using different APIs, so that the developer can decide what to do with the interceptions.
 
+`Zone` and `NgZone` are used to automatically trigger change detection as a result of async operations. But since change detection is a separate mechanism it can successfully work without Zone and NgZone. 
+
 #### Q. What is IVY Renderer? Is it supported by Angular 7?
 *TODO*
 #### Q. What is auxiliary routes in angular 7
