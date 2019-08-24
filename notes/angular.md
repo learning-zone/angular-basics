@@ -2408,18 +2408,15 @@ Each auxiliary route is an independent route which can have:
 #### Q. How do you listen for events in a component? 
 `HostListener` or via `elementRef.nativeElement`
 
-#### Q. What is ViewEncapsulation?
-*TODO*
-#### Q. What are route guards and why are they useful?
-*TODO*
-#### Q. How do you force a change detection cycle? [ANSWER]: changeDetectorRef.markForCheck OR changeDetectorRef.detectChanges().
-*TODO*
-#### Q. Whats the different between changeDetectorRef.markForCheck and changeDetectorRef.detectChanges()?
-*TODO*
-#### Q. How would you get a reference to a parent component? [ANSWER]: Inject it in the constructor.
-*TODO*
+#### Q. How do you force a change detection cycle? 
+`changeDetectorRef.markForCheck` OR `changeDetectorRef.detectChanges()`
+
+#### Q. How would you get a reference to a parent component?  
+Inject it in the constructor.
+
 #### Q. What does forwardRef do?
-*TODO*
+Allows to refer to references which are not yet defined.
+
 #### Q. What are rxjs letttable operators?
 *TODO*
 #### Q. What are entryComponents?
