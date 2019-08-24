@@ -2553,14 +2553,7 @@ class MyService {
     @Output() myServiceEvent : EventEmitter<any> = new EventEmitter();
 }
 ```
-#### Q. How do you mock a service to inject in a unit test?
-*TODO*
-#### Q. What is a factory Component?
-*TODO*
-#### Q. What is wildcard state?
-*TODO*
-#### Q. How would you insert an embedded view from a prepared TemplateRef?
-*TODO*
+
 #### Q. How will you intercept http to inject header to each http call?
 *TODO*
 #### Q. How would you create a component to display error messages throughout your application?
