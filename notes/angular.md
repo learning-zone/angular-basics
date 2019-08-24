@@ -2304,8 +2304,6 @@ export class AppComponent {
 ```
 #### Q. Can we create two Components with the same name in two different .ts files?
 No
-#### Q. How would you intercept 404 errors in Angular?
-*TODO*
 #### Q. What's the difference between RouterModule.forRoot(ROUTES) and RouterModule.forChild(ROUTES)?
 * **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
 * **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.  
@@ -2336,32 +2334,24 @@ export const ROUTES: Routes = [];
 })
 export class ChildModule {}
 ```
-#### Q. How do you create and show pop-up windows in Angular?
-*TODO*
-#### Q. What is ChangeDetection.OnPush and what other ChangeDetection strategies exist?
-*TODO*
-#### Q. How to declare a property binding in Angular?
-*TODO*
-#### Q. What is “@Inject” and why is it needed?
-*TODO*
-#### Q. What is Export array in Angular?
-*TODO*
-#### Q. What is Import array in Angular?
-*TODO*
-#### Q. What is Primeng? How Can It Be Used With Angular?
-*TODO*
-#### Q. What is hidden property in Angular?
-*TODO*
-#### Q. What are the difference between Renderer and ElementRef in angular?
-*TODO*
-#### Q. How do we create a singleton service in Angular?
-*TODO*
-#### Q. How HTTP Client is interact with Angular Servers?
-*TODO*
-#### Q. What is RouterLink? How would you pass data from a parent component to a child component?
-*TODO*
-#### Q. What is @Inject()? Why Use? What are the difference between @Inject and @Injectable?
-*TODO*
+
+#### Q. What are the difference between @Inject and @Injectable?
+The `@Injectable` decorator aims to actually set some metadata about which dependencies to inject into the constructor of the associated class. It's a class decorator that doesn't require parameters. Without this decorator no dependency will be injected.
+```typescript
+@Injectable()
+export class SomeService {
+  constructor(private http:Http) {
+  }
+}
+```
+The `@Inject` decorator must be used at the level of constructor parameters to specify metadata regarding elements to inject. Without it, the type of parameters is used (`obj:SomeType` is equivalent to `@Inject(SomeType) obj`).
+```typescript
+@Injectable()
+export class SomeService {
+  constructor(@Inject(Http) private http:Http, @Inject('sometoken') obj) {
+  }
+}
+```
 #### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
 *TODO*
 #### Q. What is the purpose of exports in a NgModule?
