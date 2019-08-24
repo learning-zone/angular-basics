@@ -2359,7 +2359,7 @@ Zone.js is an execution context that helps developers intercept and keep track o
 
 `Zone` and `NgZone` are used to automatically trigger change detection as a result of async operations. But since change detection is a separate mechanism it can successfully work without Zone and NgZone. 
 
-#### Q. What is auxiliary routes in angular 7?
+#### Q. What is auxiliary routes in angular?
 Angular supports the concept of auxiliary routes, which allow to set up and navigate multiple independent routes in a single app. Each component has one primary route and zero or more auxiliary outlets. Auxiliary outlets must have unique name within a component.  
 
 To define the auxiliary route we must first add a named router `outlet` where contents for the auxiliary route are to be rendered.  
