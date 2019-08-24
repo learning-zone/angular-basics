@@ -2560,34 +2560,48 @@ It provides a way to intercept HTTP requests and responses to transform or handl
 This is because we might want to retry a request if it does not succeed at first. And immutability ensures that the interceptor chain can re-process the same request multiple times.
 
 **Create an Interceptor**:    
-The goal is to include the JWT which is in local storage as the `Authorization` header in any HTTP request that is sent. The first step is to create an interceptor. To do this, create an `Injectable` class which implements `HttpInterceptor`.
+Let’s say we want to send 3 headers : Content-Type, Accept and Accept-Language. To set headers for every request in Angular, we will create a class that implements HttpInterceptor.
 
 ```typescript
-// src/app/auth/token.interceptor.ts
-import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
-import { AuthService } from './auth/auth.service';
-import { Observable } from 'rxjs/Observable';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+ 
 @Injectable()
-export class TokenInterceptor implements HttpInterceptor {
-  constructor(public auth: AuthService) {}
+export class CustomHttpInterceptorService implements HttpInterceptor {
+ 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    
-    request = request.clone({
-      setHeaders: {
-        Authorization: `Bearer ${this.auth.getToken()}`
-      }
-    });
+    request = request.clone({headers: request.headers.set('Content-Type', 'application/json')});
+    if (!request.headers.has('Accept')) {
+      request = request.clone({headers: request.headers.set('Accept', 'application/json')});
+    }
+    request = request.clone({headers: request.headers.set('Accept-Language', 'fr-FR')});
     return next.handle(request);
   }
 }
 ```
-
+Adding the interceptor to app.module.ts  
+```typescript
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+ 
+import { AppComponent } from './app.component';
+ 
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: CustomHttpInterceptorService, multi: true},
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
 #### Q. How will you parallelize multiple observable call?
