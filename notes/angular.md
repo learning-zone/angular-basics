@@ -2463,8 +2463,8 @@ A bootstrapped component is an entry component that Angular loads into the DOM d
 
 #### Q. What is Redux pattern and explain why its useful.
 *TODO*
-#### Q. When building custom form components, what interface do they components need to implement to particpate in forms? [ANSWER]: ControlValueAccessor
-*TODO*
+#### Q. When building custom form components, what interface do they components need to implement to particpate in forms?
+`ControlValueAccessor`
 #### Q. Which lifecycle hook would you use to unsubscribe an observable?
 *TODO*
 #### Q. What's the difference between dirty, touched, and pristine on a form element?
