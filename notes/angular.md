@@ -2602,8 +2602,7 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
-#### Q. How would you create a component to display error messages throughout your application?
-*TODO*
+
 #### Q. How will you parallelize multiple observable call?
 *TODO*
 #### Q. How will you put one async call before another?
