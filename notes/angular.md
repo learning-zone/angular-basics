@@ -2409,7 +2409,7 @@ Each auxiliary route is an independent route which can have:
 `HostListener` or via `elementRef.nativeElement`
 
 #### Q. How do you force a change detection cycle? 
-`changeDetectorRef.markForCheck` OR `changeDetectorRef.detectChanges()`
+`changeDetectorRef.markForCheck` or `changeDetectorRef.detectChanges()`
 
 #### Q. How would you get a reference to a parent component?  
 Inject it in the constructor.
