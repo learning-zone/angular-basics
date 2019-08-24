@@ -2436,10 +2436,31 @@ const door = injector.get(Door);
 expect(door instanceof Door).toBeTruthy();
 expect(door.lock instanceof Lock).toBeTruthy();
 ```
-#### Q. What are rxjs letttable operators?
-*TODO*
+
 #### Q. What are entryComponents?
-*TODO*
+An entry component is any component that Angular loads imperatively. 
+There are two main kinds of entry components:
+
+* The bootstrapped root component.
+* A component you specify in a route definition.
+Example:
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent] // bootstrapped entry component
+})
+```
+A bootstrapped component is an entry component that Angular loads into the DOM during the bootstrap process (application launch).
+
 #### Q. What is Redux pattern and explain why its useful.
 *TODO*
 #### Q. When building custom form components, what interface do they components need to implement to particpate in forms? [ANSWER]: ControlValueAccessor
