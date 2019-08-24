@@ -2442,7 +2442,7 @@ An entry component is any component that Angular loads imperatively.
 There are two main kinds of entry components:
 
 * The bootstrapped root component.
-* A component you specify in a route definition.
+* A component you specify in a route definition.  
 Example:
 ```typescript
 @NgModule({
