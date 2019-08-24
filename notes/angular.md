@@ -2520,7 +2520,7 @@ At runtime, the function componentDestroyed alters the component instance and cr
 
 EventEmitter is really an Angular abstraction, and should be used pretty much only for emitting custom Events in components. Otherwise, just use Rx as if it was any other library.
 
-**how to use it properly**  
+Example: 
 ```typescript
 @Component({
     selector : 'child',
