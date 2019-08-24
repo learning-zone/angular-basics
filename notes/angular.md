@@ -2275,12 +2275,6 @@ Example:
 * **ViewEncapsulation.Emulated**: - No Shadow DOM but style encapsulation emulation.
 * **ViewEncapsulation.Native**: - Native Shadow DOM enabled.
 
-#### Q. How can we bind a variable with DOM element in Angular?
-*TODO*
-#### Q. What is Host Decorator in Angular?
-*TODO*
-#### Q. Why do we need provider aliases? 
-*TODO*
 #### Q. How do you use a JavaScript third party lib in an Angular App?
 Example: Adding `underscore.js` library to a Angular Project.
 
