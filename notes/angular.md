@@ -2861,3 +2861,10 @@ We can store data in a  singleton service, which its object is created once and 
 
 #### Q. If you need to respond to two different Observable/Subject with one callback function, how would you do it? (ex: if you need to change the url through route parameters and with prev/next buttons).
 We can create page change Subject and we can emit when route parameters change or next/prev button change.
+
+#### Q. How can you access validation errors in the template to display error messages?
+```typescript
+*ngIf="name.invalid && (name.dirty || name.touched)"
+
+*ngIf="name.errors.required"
+```
