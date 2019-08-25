@@ -2604,7 +2604,57 @@ export class AppModule { }
 ```
 
 #### Q. How will you parallelize multiple observable call?
-*TODO*
+Parallel Http requests are required when application need to make simultaneously to get data and display result to end user. 
+
+* **forkJoin()**: waits for each HTTP request to complete and group’s all the observables returned by each HTTP call into a single observable array and finally return that observable array.  
+Example:  
+```typescript
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { forkJoin } from 'rxjs';  // RxJS 6 syntax
+
+@Injectable()
+export class DataService {
+
+  constructor(private http: HttpClient) { }
+
+  public requestDataFromMultipleSources(): Observable<any[]> {
+    let response1 = this.http.get(requestUrl1);
+    let response2 = this.http.get(requestUrl2);
+    let response3 = this.http.get(requestUrl3);
+    // Observable.forkJoin (RxJS 5) changes to just forkJoin() in RxJS 6
+    return forkJoin([response1, response2, response3]);
+  }
+}
+```
+At the component level We can subscribe to single observable array and save the responses separately.  
+Example:  
+```typescript
+import { Component, OnInit } from '@angular/core';
+import { DataService } from "../data.service";
+
+@Component({
+    selector: 'app-page',
+    templateUrl: './page.component.html',
+    styleUrls: ['./page.component.css']
+})
+export class DemoComponent implements OnInit {
+    public responseData1: any;
+    public responseData2: any;
+    public responseData3: any;
+
+    constructor(private dataService: DataService) {}
+
+    ngOnInit() {
+        this.dataService.requestDataFromMultipleSources().subscribe(responseList => {
+            this.responseData1 = responseList[0];
+            this.responseData2 = responseList[1];
+            this.responseData3 = responseList[1];
+        });
+    }
+}
+```
 #### Q. How will you put one async call before another?
 *TODO*
 #### Q. How can you use web worker in angular app?
