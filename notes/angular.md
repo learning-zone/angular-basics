@@ -2856,7 +2856,7 @@ router-outlet ~ * {
 }
 ```
 
-#### Q. How would you make sure an api call that needs to be called only once but with multiple conditions? Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
+#### Q. How would you make sure an api call that needs to be called only once but with multiple conditions?
 We can store data in a  singleton service, which its object is created once and it won’t get destroyed throughout the application. So even routes get changes the data will be available in other routes
 
 #### Q. If you need to respond to two different Observable/Subject with one callback function, how would you do it? (ex: if you need to change the url through route parameters and with prev/next buttons).
