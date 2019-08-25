@@ -2708,7 +2708,35 @@ export class AppComponent  {
 ```
 
 #### Q. How can you use web worker in angular app?
-*TODO*
+`Web Workers` allows to run CPU intensive computations in a background thread, freeing the main thread to update the user interface.
+```typescript
+ng generate web-worker app
+```
+Running this command will:  
+* configure your project to use Web Workers, if it isn't already.
+* add src/app/app.worker.ts with scaffolded code to receive messages:  
+```typescript
+addEventListener('message', ({ data }) => {
+  const response = `worker response to ${data}`;
+  postMessage(response);
+});
+```
+* add scaffolded code to src/app/app.component.ts to use the worker:  
+```typescript
+if (typeof Worker !== 'undefined') {
+  // Create a new
+  const worker = new Worker('./app.worker', { type: 'module' });
+  worker.onmessage = ({ data }) => {
+    console.log(`page got message: ${data}`);
+  };
+  worker.postMessage('hello');
+} else {
+  // Web Workers are not supported in this environment.
+  // You should add a fallback so that your program still executes correctly.
+}
+```
+After the initial scaffolding, we will need to refactor our code to use the Web Worker by sending messages to and from.
+
 #### Q. Explain the difference between layout, painting and compositing.
 *TODO*
 #### Q. How can you cancel a router navigation?
