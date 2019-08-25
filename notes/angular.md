@@ -2707,10 +2707,42 @@ export class AppComponent  {
       .toPromise();
   }
 ```
-#### Q. Explain the difference between layout, painting and compositing.
-*TODO*
 #### Q. How can you cancel a router navigation?
-*TODO*
+```typescript
+import { Injectable }           from '@angular/core';
+import { Observable }           from 'rxjs';
+import { CanDeactivate,
+         ActivatedRouteSnapshot,
+         RouterStateSnapshot }  from '@angular/router';
+
+import { MyComponent} from './my-component/my-component.component';
+
+@Injectable()
+export class CanDeactivateGuard implements CanDeactivate<MyComponent> {
+
+  canDeactivate(
+    component: MyComponent,
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Observable<boolean> | boolean {
+    // you can just return true or false synchronously
+    if (expression === true) {
+      return true;
+    }
+    // or, you can also handle the guard asynchronously, e.g.
+    // asking the user for confirmation.
+    return component.dialogService.confirm('Discard changes?');
+  }
+}
+```
+Where `MyComponent` is custom component and `CanDeactivateGuard` is going to be registered in `AppModule` in the providers section and, more importantly, in your routing config in the `canDeactivate` array property:
+```typescript
+{
+  path: 'somePath',
+  component: MyComponent,
+  canDeactivate: [CanDeactivateGuard]
+},
+```
 #### Q. How would you animate routing?
 *TODO*
 #### Q. How will you localize numbers currencies and dates?
