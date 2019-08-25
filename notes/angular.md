@@ -2607,7 +2607,6 @@ export class AppModule { }
 Parallel Http requests are required when application need to make simultaneously to get data and display result to end user. 
 
 * **forkJoin()**: waits for each HTTP request to complete and group’s all the observables returned by each HTTP call into a single observable array and finally return that observable array.  
-Example:  
 ```typescript
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -2628,8 +2627,7 @@ export class DataService {
   }
 }
 ```
-At the component level We can subscribe to single observable array and save the responses separately.  
-Example:  
+At the component level we can subscribe to single observable array and save the responses separately.   
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../data.service";
