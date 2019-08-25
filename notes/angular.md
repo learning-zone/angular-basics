@@ -2443,7 +2443,6 @@ There are two main kinds of entry components:
 
 * The bootstrapped root component.
 * A component you specify in a route definition.  
-Example:
 ```typescript
 @NgModule({
   declarations: [
