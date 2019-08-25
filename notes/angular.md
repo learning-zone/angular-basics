@@ -2652,6 +2652,23 @@ export class DemoComponent implements OnInit {
     }
 }
 ```
+
+* **mergeMap()**: Projects each source value to an Observable which is merged in the output Observable. It executes requests in parallel and it is fault tolerant so we still display most of the posts even if some of the requests fail.
+```typescript
+getItems(ids: number[]): Observable<Item> {
+  return from(ids).pipe(
+    mergeMap(id => <Observable<Item>> this.httpClient.get(`item/${id}`))
+  );
+}
+```
+* **concatMap()**: Projects each source value to an Observable which is merged in the output Observable, in a serialized fashion waiting for each one to complete before merging the next
+```typescript
+getItems(ids: number[]): Observable<Item> {
+  return from(ids).pipe(
+     concatMap(id => <Observable<Item>> this.httpClient.get(`item/${id}`))
+  );
+}
+```
 #### Q. How will you put one async call before another?
 *TODO*
 #### Q. How can you use web worker in angular app?
