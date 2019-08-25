@@ -2880,3 +2880,6 @@ TestBed.configureTestingModule({
   providers: [AuthService]
 });
 ```
+#### Q. What is the difference between an observable and a promise?
+* `observable` are cancelable and use subscribe
+* `promise` are non-cancelable and always returns
