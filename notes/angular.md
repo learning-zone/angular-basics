@@ -2888,3 +2888,11 @@ TestBed.configureTestingModule({
 A RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
 A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
+
+#### Q. What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?
+* **Dirty flag** – indicates user has changed values
+* **Pristine** – opposite of dirty flag
+* **Touched** – indicates field is touched by user
+* **Untouched** – Opposite of touched
+* **Valid** – Checks whether all validation have passed
+* **Invalid** – opposite of valid
