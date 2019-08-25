@@ -2334,6 +2334,8 @@ export const ROUTES: Routes = [];
 })
 export class ChildModule {}
 ```
+* **forRoot()**: service register to entire application
+* **forChild()**: service register to particular child component
 
 #### Q. What are the difference between @Inject and @Injectable?
 The `@Injectable` decorator aims to actually set some metadata about which dependencies to inject into the constructor of the associated class. It's a class decorator that doesn't require parameters. Without this decorator no dependency will be injected.
@@ -2868,11 +2870,6 @@ We can create page change Subject and we can emit when route parameters change o
 
 *ngIf="name.errors.required"
 ```
-
-#### Q. What is the difference between a module’s forRoot() and forChild() methods?
-* **forRoot()**: service register to entire application
-* **forChild()**: service register to particular child component
-
 #### Q. How do you unit test a service with a dependency?
 Using `TestBed`
 ```typescript
