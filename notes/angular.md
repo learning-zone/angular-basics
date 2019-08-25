@@ -2670,7 +2670,42 @@ getItems(ids: number[]): Observable<Item> {
 }
 ```
 #### Q. How will you put one async call before another?
-*TODO*
+An `async` function can contain an `await` expression, that pauses the execution of the async function and waits for the passed `Promise`'s resolution, and then resumes the `async` function's execution and returns the resolved value.
+```typescript
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: [ './app.component.css' ]
+})
+export class AppComponent  {
+  name = 'Angular';
+  users;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.getAllData();
+  }
+
+  getUsers() {
+    return this.http.get('https://jsonplaceholder.typicode.com/users')
+      .toPromise();
+  }
+
+  getUserPosts(userId) {
+    return this.http.get(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+      .toPromise();
+  }
+
+  getPostComments(postId) {
+    return this.http.get(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
+      .toPromise();
+  }
+```
+
 #### Q. How can you use web worker in angular app?
 *TODO*
 #### Q. Explain the difference between layout, painting and compositing.
