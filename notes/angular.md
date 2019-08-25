@@ -2744,7 +2744,118 @@ Where `MyComponent` is custom component and `CanDeactivateGuard` is going to be 
 },
 ```
 #### Q. How would you animate routing?
-*TODO*
+**Set up Routes**
+```typescript
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent }
+];
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
+```
+**Creating an Animation**  
+First we need to add the Angular Animation module to our application.
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+
+@NgModule({
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
+  declarations: [AppComponent, HomeComponent, AboutComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+We will now add a new file `animations.ts`. In this file, we will define our fade animation.
+```typescript
+import {
+  trigger,
+  animate,
+  transition,
+  style,
+  query
+} from '@angular/animations';
+
+export const fadeAnimation = trigger('fadeAnimation', [
+  // The '* => *' will trigger the animation to change between any two states
+  transition('* => *', [
+    // The query function has three params.
+    // First is the event, so this will apply on entering or when the element is added to the DOM.
+    // Second is a list of styles or animations to apply.
+    // Third we add a config object with optional set to true, this is to signal
+    // angular that the animation may not apply as it may or may not be in the DOM.
+    query(
+      ':enter',
+      [style({ opacity: 0 })],
+      { optional: true }
+    ),
+    query(
+      ':leave',
+      // here we apply a style and use the animate function to apply the style over 0.3 seconds
+      [style({ opacity: 1 }), animate('0.3s', style({ opacity: 0 }))],
+      { optional: true }
+    ),
+    query(
+      ':enter',
+      [style({ opacity: 0 }), animate('0.3s', style({ opacity: 1 }))],
+      { optional: true }
+    )
+  ])
+]);
+```
+Now that we have defined our animation we need to explicitly set what element it should be applied to.  
+```html
+<header>
+  <nav>
+    <a routerLink="">home</a>
+    <a routerLink="about">about</a>
+  </nav>
+</header>
+
+<main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+```
+Next in our App Component TypeScript file we need to add some information to our component decorator.  
+```typescript
+import { Component } from '@angular/core';
+import { fadeAnimation } from './animations';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  animations: [fadeAnimation] // register the animation
+})
+export class AppComponent { }
+```
+The last missing piece is some CSS in our global style sheet.  
+```css
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+```
+
 #### Q. How will you localize numbers currencies and dates?
 *TODO*
 #### Q. How would you make sure an api call that needs to be called only once but with multiple conditions? Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
