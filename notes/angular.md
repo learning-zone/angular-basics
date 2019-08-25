@@ -2871,7 +2871,6 @@ We can create page change Subject and we can emit when route parameters change o
 
 #### Q. What is the difference between a module’s forRoot() and forChild() methods?
 * **forRoot()**: service register to entire application
-
 * **forChild()**: service register to particular child component
 
 #### Q. How do you unit test a service with a dependency?
