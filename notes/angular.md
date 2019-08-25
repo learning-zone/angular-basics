@@ -2670,7 +2670,7 @@ getItems(ids: number[]): Observable<Item> {
 }
 ```
 #### Q. How will you put one async call before another?
-An `async` function can contain an `await` expression, that pauses the execution of the async function and waits for the passed `Promise`'s resolution, and then resumes the `async` function's execution and returns the resolved value.
+An `async` function can contain an `await` expression, that pauses the execution of the async function and waits for the passed `Promise`'s resolution, and then resumes the `async` function's execution and returns the resolved value.  
 Example:
 ```typescript
 import { Component } from '@angular/core';
