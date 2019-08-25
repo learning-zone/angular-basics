@@ -2893,3 +2893,10 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * **Untouched** – Opposite of touched
 * **Valid** – Checks whether all validation have passed
 * **Invalid** – opposite of valid
+
+#### Q. what is defer in promise?
+Defer is a object that exposes promises. It has three methods.
+
+1. Reject
+1. Resolve
+1. Notify
