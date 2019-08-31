@@ -2901,8 +2901,11 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * Notify
 
 #### Q. What is the difference between an Annotation and a Decorator in Angular?
+*TODO*
 #### Q. What is transclusion in angular?
+*TODO*
 #### Q. If your data model is updated outside the ‘Zone’, explain the process how will you the view?
+*TODO*
 #### Q. What is the process of inserting an embedded view from a prepared TemplateRef?
 ```typescript
 @Component({
