@@ -1,4 +1,4 @@
-# Angular Questions
+## Angular Questions
 
 1. What's new in Angular 8?
 1. What is the difference between observable and promises?
