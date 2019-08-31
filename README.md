@@ -2899,3 +2899,24 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * Reject
 * Resolve
 * Notify
+
+#### Q. What is the difference between an Annotation and a Decorator in Angular?
+#### Q. What is transclusion in angular?
+#### Q. If your data model is updated outside the ‘Zone’, explain the process how will you the view?
+#### Q. What is the process of inserting an embedded view from a prepared TemplateRef?
+```typescript
+@Component({
+    selector: 'app-root',
+    template: `
+        <ng-template #template let-name='fromContext'><div>{{name}}</ng-template>
+    `
+})
+export class AppComponent implements AfterViewChecked {
+    @ViewChild('template', { read: TemplateRef }) _template: TemplateRef<any>;
+    constructor() { }
+
+    ngAfterViewChecked() {
+        this.vc.createEmbeddedView(this._template, {fromContext: 'John'});
+    }
+}
+```
