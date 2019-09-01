@@ -1,4 +1,4 @@
-## TypeScript Notes
+## TypeScript Interview Questions and Answers
 
 
 #### Q. What are the typescript features? How typescript is different from ES6?
