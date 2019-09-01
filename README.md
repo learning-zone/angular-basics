@@ -1,4 +1,4 @@
-## Angular Notes
+## Angular Interview Questions and Answers
 
 #### Q. Angular Commands
 
