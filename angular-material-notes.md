@@ -1,4 +1,4 @@
-## Angular Material Notes
+## Angular-Material Interview Questions and Answers
 
 #### Q. Create a percentage progress bar using angular-material?
 #### Q. What is angular material dropdown? 
