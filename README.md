@@ -188,25 +188,27 @@
 |183. |[List the differences between Angular components vs directives](#q-list-the-differences-between-Angular-components-vs-directives)|
 |184.|[How do you define the transition between two states in Angular?](#q-How-do-you-define-the-transition-between-two-states-in-Angular)|
 |185. |[When to use NgOnInit and constructor in Angular?](#q-When-to-use-NgOnInit-and-constructor-in-Angular)|
-|183. |[Q. What is Traceur Compiler?](#q-what-is-traceur-compiler)
-|184. |[Q. How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)
-|185. |[Q. What is Host Decorators in Angular?](#q-what-is-host-decorators-in-angular)
-|186. |[Q. Why do we need provider aliases? And how do you create one?](#q-why-do-we-need-provider-aliases--and-how-do-you-create-one)
-|187. |[Q. What is the expression context in Angular?](#q-what-is-the-expression-context-in-angular)
-|188. |[Q. What Is Primeng? How Can It Be Used With Angular?](#q-what-is-primeng--how-can-it-be-used-with-angular)
-|189. |[Q. How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)
-|190. |[Q. What is RouterLink? How would you pass data from a parent component to a child component?](#q-what-is-routerlink--how-would-you-pass-data-from-a-parent-component-to-a-child-component)
-|191. |[Q. What is the purpose of NgModule? How do you decide to create a new NgModule?](#q-what-is-the-purpose-of-ngmodule--how-do-you-decide-to-create-a-new-ngmodule)
-|192. |[Q. What is the purpose of exports in a NgModule?](#q-what-is-the-purpose-of-exports-in-a-ngmodule)
-|193. |[Q. What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)
-|194. |[Q. What is ng-container and why is it useful?](#q-what-is-ng-container-and-why-is-it-useful)
-|195. |[Q. What are rxjs letttable operators?](#q-what-are-rxjs-letttable-operators)
-|196. |[Q. How do components communicate with each other?](#q-how-do-components-communicate-with-each-other)
-|197. |[Q. How do you mock a service to inject in a unit test?](#q-how-do-you-mock-a-service-to-inject-in-a-unit-test)
-|198. |[Q. What is a factory Component?](#q-what-is-a-factory-component)
-|199. |[Q. What is wildcard state?](#q-what-is-wildcard-state)
-|200. |[Q. How will you localize numbers currencies and dates?](#q-how-will-you-localize-numbers-currencies-and-dates)
-|201. |[Q. How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)
+|186. |[What is Traceur Compiler?](#q-what-is-traceur-compiler)|
+|187. |[How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)|
+|188. |[What is Host Decorators in Angular?](#q-what-is-host-decorators-in-angular)|
+|189. |[Why do we need provider aliases? And how do you create one?](#q-why-do-we-need-provider-aliases--and-how-do-you-create-one)|
+|190. |[What is the expression context in Angular?](#q-what-is-the-expression-context-in-angular)|
+|191. |[What Is Primeng? How Can It Be Used With Angular?](#q-what-is-primeng--how-can-it-be-used-with-angular)|
+|192. |[How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)|
+|193. |[What is RouterLink? How would you pass data from a parent component to a child component?](#q-what-is-routerlink--how-would-you-pass-data-from-a-parent-component-to-a-child-component)|
+|194. |[What is the purpose of NgModule? How do you decide to create a new NgModule?](#q-what-is-the-purpose-of-ngmodule--how-do-you-decide-to-create-a-new-ngmodule)|
+|195. |[What is the purpose of exports in a NgModule?](#q-what-is-the-purpose-of-exports-in-a-ngmodule)|
+|196. |[What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)|
+|197. |[What is ng-container and why is it useful?](#q-what-is-ng-container-and-why-is-it-useful)|
+|198. |[What are rxjs letttable operators?](#q-what-are-rxjs-letttable-operators)|
+|199. |[How do components communicate with each other?](#q-how-do-components-communicate-with-each-other)|
+|200. |[How do you mock a service to inject in a unit test?](#q-how-do-you-mock-a-service-to-inject-in-a-unit-test)|
+|201. |[What is a factory Component?](#q-what-is-a-factory-component)|
+|202. |[What is wildcard state?](#q-what-is-wildcard-state)|
+|203. |[How will you localize numbers currencies and dates?](#q-how-will-you-localize-numbers-currencies-and-dates)|
+|204. |[How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)|
+
+
 
 
 #### Q. Frequently used angular 7 commands
