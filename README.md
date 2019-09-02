@@ -154,7 +154,7 @@
 |149. |[What is shadow DOM? How is it helping Angular to perform better?](#what-is-shadow-dom--how-is-it-helping-angular-to-perform-better)|
 |150. |[How do you use a JavaScript third party lib in an Angular App?](#how-do-you-use-a-javascript-third-party-lib-in-an-angular-app)|
 |151. |[Can we create two Components with the same name in two different .ts files?](#can-we-create-two-components-with-the-same-name-in-two-different-ts-files)|
-|152. |[What is the difference between RouterModule.forRoot and RouterModule.forChild?](#what-s-the-difference-between-routermoduleforroot-and-routermoduleforchild)|
+|152. |[What is the difference between RouterModule.forRoot and RouterModule.forChild?](#what-is-the-difference-between-routermoduleforroot-and-routermoduleforchild)|
 |153. |[What are the difference between @Inject and @Injectable?](#what-are-the-difference-between--inject-and--injectable)|
 |154. |[What are Zones? What is Change Detection? What would be a good use for NgZone service?](#what-are-zones--what-is-change-detection--what-would-be-a-good-use-for-ngzone-service)|
 |155. |[What is auxiliary routes in angular?](#what-is-auxiliary-routes-in-angular)|
