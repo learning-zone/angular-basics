@@ -662,9 +662,9 @@ import { AppComponent }  from './app.component';
 export class AppModule { }
 ```
 The NgModule decorator has three options
-1. The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application
-2. The declarations option is used to define components in the respective module
-3. The bootstrap option tells Angular which Component to bootstrap in the application
+* The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application
+* The declarations option is used to define components in the respective module
+* The bootstrap option tells Angular which Component to bootstrap in the application
 
 15. #### What are lifecycle hooks available?
 Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
