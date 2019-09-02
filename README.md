@@ -2,10 +2,10 @@
 
 
 - [Angular Commands](#angular-commands)
-- [What is difference between Angular Dev Build(JIT compilation) and Prod Build(AOT compilation)?](#what-is-difference-between-angular-dev-build-jit-compilation--and-prod-build-aot-compilation--)
-- [How to optimize loading large data in angular?](#how-to-optimize-loading-large-data-in-angular-)
-- [How an Angular application gets started or loaded?](#how-an-angular-application-gets-started-or-loaded-)
-- [What is rxjs subject in Angular?](#what-is-rxjs-subject-in-angular-)
+- [What is difference between Angular Dev Build(JIT compilation) and Prod Build(AOT compilation)?](#what-is-difference-between-angular-dev-build-jit-compilation--and-prod-build-aot-compilation)
+- [How to optimize loading large data in angular?](#how-to-optimize-loading-large-data-in-angular)
+- [How an Angular application gets started or loaded?](#how-an-angular-application-gets-started-or-loaded)
+- [What is rxjs subject in Angular?](#what-is-rxjs-subject-in-angular)
 - [What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?](#what-is-rxjs-behaviorsubject--replaysubject-and-asyncsubject-in-angular-)
 - [What is difference between BehaviorSubject and Observable?](#what-is-difference-between-behaviorsubject-and-observable-)
 - [What is the difference between AngularJS and Angular?](#what-is-the-difference-between-angularjs-and-angular-)
