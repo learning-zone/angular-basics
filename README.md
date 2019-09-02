@@ -1,7 +1,7 @@
 ## Angular7 Interview Questions and Answers
 
 
-|Sl. No  | Angular7 Questions|
+|Sl.No  | Angular7 Questions|
 |--------|---------------|
 |01. |[Frequently used angular 7 commands](#q-frequently-used-angular-7-commands)|
 |02. |[What is difference between Angular JIT compilation and AOT compilation?](#q-what-is-difference-between-angular-jit-compilation-and-aot-compilation)|
