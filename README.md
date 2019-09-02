@@ -203,7 +203,7 @@
 |ng doc						                    | Opens a browser window with the keyword as search in Angular documentation. | 
 |ng eject						                  | ejects your app and output the proper webpack configuration and scripts     |
 |ng xi18n						                  | Extracts i18n messages from the templates.                                  |
-|<pre>ng test --watch=false --code-coverage</pre>| Generate Code Coverage Reports                                              |
+|<pre-wrap>ng test --watch=false --code-coverage</pre-wrap>| Generate Code Coverage Reports                                              |
 |npm run                              | Runs an Architect target with an optional custom builder configuration defined in  project. |
 |ng build --aot                       | generally when we serve angular project all the angular files are downloaded on browser and it will compile and execute the application on the browser but in aot entire application delivered to the browser is precompiled hence improves the performance. |
 |ng add @angular/pwa                  |Adds support for an external library to project  |
