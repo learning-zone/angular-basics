@@ -173,7 +173,7 @@
 |168. |[How can you cancel a router navigation?](#q-how-can-you-cancel-a-router-navigation)|
 |169. |[How would you animate routing?](#q-how-would-you-animate-routing)|
 |170. |[How would you make sure an api call that needs to be called only once but with multiple conditions?](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions)|
-|171. |[If you need to respond to two different Observable or Subject with one callback function, how would you do it? ex: if you need to change the url through route parameters and with prev-next buttons.](#q-if-you-need-to-respond-to-two-different-observable-or-subject-with-one-callback-function-how-would-you-do-it-ex-if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons|
+|171. |[If you need to respond to two different Observable or Subject with one callback function, how would you do it? ex: if you need to change the url through route parameters and with prev next buttons.](#q-if-you-need-to-respond-to-two-different-observable-or-subject-with-one-callback-function-how-would-you-do-it-ex-if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons|
 |172. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages)|
 |173. |[How do you unit test a service with a dependency?](#q-how-do-you-unit-test-a-service-with-a-dependency)|
 |174. |[What is the difference between an observable and a promise?](#q-what-is-the-difference-between-an-observable-and-a-promise)|
