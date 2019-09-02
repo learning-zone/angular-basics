@@ -679,7 +679,7 @@ The description of each lifecycle method is as below,
 1. **ngAfterViewChecked:** This is called in response after Angular checks the component's views and child views.
 1. **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
 
-#### What is a data binding?
+16. #### What is a data binding?
 Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding(divided as 3 categories) which differ in the way the data is flowing.
 1. **From the Component to the DOM:**
 **Interpolation:** {{ value }}: Adds the value of a property from the component
@@ -702,7 +702,7 @@ Data binding is a core concept in Angular and allows to define communication bet
 <input type="email" [(ngModel)]="user.email">
 ```
 
-#### What is metadata?
+17. #### What is metadata?
 Metadata is used to decorate a class so that it can configure the expected behavior of the class. The metadata is represented by decorators
 1. **Class decorators**, e.g. @Component and @NgModule
 ```typescript
@@ -772,7 +772,7 @@ export class MyComponent {
     }
 }
 ```
-#### What is a service worker and its role in Angular?
+18. #### What is a service worker and its role in Angular?
 A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content. Adding a service worker to an Angular application is one of the steps for turning an application into a **Progressive Web App** (also known as a `PWA`).
 
 Below are the list of design goals of Angular's service workers,
@@ -797,7 +797,7 @@ The above command completes the following actions:
 5. Installs icon files to support the installed Progressive Web App (PWA).
 6. Creates the service worker configuration file called ngsw-config.json, which specifies the caching behaviors and other settings.
 
-#### How to set time for caching in service-worker?
+19. #### How to set time for caching in service-worker?
 **ngsw-config.json**
 ```typescript
 {
@@ -829,7 +829,7 @@ The above command completes the following actions:
 }
 ```
 
-#### What is the difference between constructor() and ngOnInit()?
+20. #### What is the difference between constructor() and ngOnInit()?
 TypeScript classes has a default method called constructor() which is normally used for the initialization purpose. Whereas ngOnInit() method is specific to Angular, especially used to define Angular bindings. Even though constructor() getting called first, it is preferred to move all of your Angular bindings to ngOnInit() method.
 In order to use ngOnInit(), you need to implement OnInit interface as below,
 ```typescript
@@ -843,7 +843,7 @@ export class App implements OnInit{
     }
 }
 ```
-#### What is a service?
+21. #### What is a service?
 A service is used when a common functionality needs to be provided to various modules. Services allow for greater separation of concerns for your application and better modularity by allowing you to extract common functionality out of components.
 Let's create a repoService which can be used across components,
 ```typescript
@@ -865,11 +865,11 @@ export class RepoService{
 ```
 The above service uses Http service as a dependency.
 
-#### What is dependency injection in Angular?
+22. #### What is dependency injection in Angular?
 Dependency injection (DI), is an important application design pattern in which a class asks for dependencies from external sources rather than creating them itself. Angular comes with its own dependency injection framework for resolving dependencies( services or objects that a class needs to perform its function).So you can have your services depend on other services throughout your application.
 
 
-#### What is the purpose of async pipe?
+23. #### What is the purpose of async pipe?
 The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.
 Let's take a time observable which continuously updates the view for every 2 seconds with the current time.
 ```typescript
@@ -884,13 +884,13 @@ export class AsyncObservablePipeComponent {
     );
 }
 ```
-#### What is the option to choose between inline and external template file?
+24. #### What is the option to choose between inline and external template file?
 You can store your component's template in one of two places. You can define it inline using the **template** property, or you can define the template in a separate HTML file and link to it in the component metadata using the **@Component** decorator's **templateUrl** property.
 The choice between inline and separate HTML is a matter of taste, circumstances, and organization policy. But normally we use inline template for small portion of code and external template file for bigger views. By default, the Angular CLI generates components with a template file. But you can override that with the below command,
 ```
 ng generate component hero -it
 ```
-#### What is the purpose of ngFor directive?
+25. #### What is the purpose of ngFor directive?
 We use Angular ngFor directive in the template to display each item in the list. For example, here we iterate over list of users,
 ```html
 <li *ngFor="let user of users">
@@ -898,14 +898,14 @@ We use Angular ngFor directive in the template to display each item in the list.
 </li>
 ```
 The user variable in the ngFor double-quoted instruction is a **template input variable**
-#### What is the purpose of ngIf directive?
+26. #### What is the purpose of ngIf directive?
 Sometimes an app needs to display a view or a portion of a view only under specific circumstances. The Angular ngIf directive inserts or removes an element based on a truthy/falsy condition. Let's take an example to display a message if the user age is more than 18,
 ```html
 <p *ngIf="user.age > 18">You are not eligible for student pass!</p>
 ```
 **Note:** Angular isn't showing and hiding the message. It is adding and removing the paragraph element from the DOM. That improves performance, especially in the larger projects with many data bindings.
 
-#### What happens if you use script tag inside template?
+27. #### What happens if you use script tag inside template?
 
 Angular recognizes the value as unsafe and automatically sanitizes it, which removes the *<script>* tag but keeps safe content such as the text content of the <script> tag. This way it eliminates the risk of script injection attacks. If you still use it then it will be ignored and a warning appears in the browser console.
 Let's take an example of innerHtml property binding which causes XSS vulnerability,
@@ -916,7 +916,7 @@ export class InnerHtmlBindingComponent {
 }
 ```
 
-#### What is interpolation?
+28. #### What is interpolation?
 
 Interpolation is a special syntax that Angular converts into property binding. It’s a convenient alternative to property binding. It is represented by double curly braces({{}}). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
 Let's take an example,
@@ -928,7 +928,7 @@ Let's take an example,
 ```
 In the example above, Angular evaluates the title and url properties and fills in the blanks, first displaying a bold application title and then a URL.
 
-#### What are template expressions?
+29. #### What are template expressions?
 A template expression produces a value similar to any Javascript expression. Angular executes the expression and assigns it to a property of a binding target; the target might be an HTML element, a component, or a directive. In the property binding, a template expression appears in quotes to the right of the = symbol as in [property]="expression".
 In interpolation syntax, the template expression is surrounded by double curly braces. For example, in the below interpolation, the template expression is {{username}},
 ```html
@@ -940,7 +940,7 @@ The below javascript expressions are prohibited in template expression
 3. chaining expressions with ; or ,
 4. increment and decrement operators (++ and -)
 
-#### What are template statements?
+30. #### What are template statements?
 A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statements appear in quotes to the right of the = symbol like **(event)="statement"**. Let's take an example of button click event's statement
 ```html
 <button (click)="editProfile()">Edit Profile</button>
