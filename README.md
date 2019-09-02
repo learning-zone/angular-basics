@@ -670,14 +670,14 @@ The NgModule decorator has three options
 Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
 
 The description of each lifecycle method is as below,
-1. **ngOnChanges:** When the value of a data bound property changes, then this method is called.
-1. **ngOnInit:** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
-1. **ngDoCheck:** This is for the detection and to act on changes that Angular can't or won't detect on its own.
-1. **ngAfterContentInit:** This is called in response after Angular projects external content into the component's view.
-1. **ngAfterContentChecked:** This is called in response after Angular checks the content projected into the component.
-1. **ngAfterViewInit:** This is called in response after Angular initializes the component's views and child views.
-1. **ngAfterViewChecked:** This is called in response after Angular checks the component's views and child views.
-1. **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
+* **ngOnChanges:** When the value of a data bound property changes, then this method is called.
+* **ngOnInit:** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
+* **ngDoCheck:** This is for the detection and to act on changes that Angular can't or won't detect on its own.
+* **ngAfterContentInit:** This is called in response after Angular projects external content into the component's view.
+* **ngAfterContentChecked:** This is called in response after Angular checks the content projected into the component.
+* **ngAfterViewInit:** This is called in response after Angular initializes the component's views and child views.
+* **ngAfterViewChecked:** This is called in response after Angular checks the component's views and child views.
+* **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
 
 16. #### What is a data binding?
 Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding(divided as 3 categories) which differ in the way the data is flowing.
