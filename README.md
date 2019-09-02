@@ -179,7 +179,7 @@
 |174. |[What is the difference between an observable and a promise?](#q-what-is-the-difference-between-an-observable-and-a-promise)|
 |175. |[What is the difference between an observable and a subject?](#q-what-is-the-difference-between-an-observable-and-a-subject)|
 |176. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag--pristine--touched--untouched--valid--invalid)|
-|177. |[what is defer in promise?](#q-what-is-defer-in-promise)|
+|177. |[What is defer in promise?](#q-what-is-defer-in-promise)|
 |178. |[What is the difference between an Annotation and a Decorator in Angular?](#q-what-is-the-difference-between-an-annotation-and-a-decorator-in-angular)|
 |179. |[What is transclusion in angular?](#q-what-is-transclusion-in-angular)|
 |180. |[If your data model is updated outside the Zone explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the-zone-explain-the-process-how-will-you-the-view)|
@@ -3104,7 +3104,7 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * **Valid** – Checks whether all validation have passed
 * **Invalid** – opposite of valid
 
-#### Q. what is defer in promise?
+#### Q. What is defer in promise?
 `Defer` is a object that exposes promises. It has three methods.
 * Reject
 * Resolve
