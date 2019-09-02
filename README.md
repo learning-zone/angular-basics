@@ -3,7 +3,7 @@
 
 |Sl. No  | Angular7 Questions|
 |--------|---------------|
-|01. |[Angular Commands](#angular-commands)|
+|01. |[frequently used angular 7 commands](#frequently-used-angular-7-commands)|
 |02. |[What is difference between Angular JIT compilation and AOT compilation?](#what-is-difference-between-angular-jit-compilation-and-aot-compilation)|
 |03. |[How to optimize loading large data in angular?](#how-to-optimize-loading-large-data-in-angular)|
 |04. |[How an Angular application gets started or loaded?](#how-an-angular-application-gets-started-or-loaded)|
@@ -186,7 +186,7 @@
 |181. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
 
 
-01. #### Angular Commands
+01. #### frequently used angular 7 commands
 
 |Commands                             |Description                                                                  |
 |-------------------------------------|-----------------------------------------------------------------------------|
