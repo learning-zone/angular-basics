@@ -211,7 +211,7 @@
 |ng generate web-worker app           |Add a Web Worker to angular app|
 
 
-#### What is difference between Angular JIT compilation and AOT compilation?
+02. #### What is difference between Angular JIT compilation and AOT compilation?
 
 Angular has 2 types of build dev build or prod build :
 
@@ -234,7 +234,7 @@ ng build --prod              -  this is for production build
 **uglification** - process of transforming code to use short variable and function names  
 **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
-#### How to optimize loading large data in angular?
+03. #### How to optimize loading large data in angular?
 **Load Time Performance**
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
 2. **Tree-shaking**: This is the process of removing unused code resulting in smaller build size. In **angular-cli**, Tree-Shaking is enabled by default.
@@ -290,7 +290,7 @@ export class App {
 }
 ```
 
-#### How an Angular application gets started or loaded?
+04. #### How an Angular application gets started or loaded?
 The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
 
 **main.ts**
@@ -350,7 +350,7 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
 </html>
 ```
 
-#### What is rxjs subject in Angular?
+05. #### What is rxjs subject in Angular?
 An RxJS Subject is a special type of Observable that allows values to be **multicasted** to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
 A Subject observable is used to immediately notify subscribers of updated values emitted by it. It does not keep track of old values, i.e. if a Subject observable first emitted a value and was then later subscribed to, then the subscriber will not get that value. A Subject is like an Observable, but can multicast to many Observers. Subjects are like **EventEmitters**: they maintain a registry of many listeners.
@@ -385,7 +385,7 @@ From subscription 2: 3
 From subscription 2: 4
 ```
 
-#### What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?
+06. #### What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?
 1. **The BehaviorSubject**: The BehaviorSubject has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
 ```typescript
 import * as Rx from "rxjs";
@@ -478,7 +478,7 @@ subject.complete();
 // Subscriber B: 0.4447275989704571
 ```
 
-#### What is difference between BehaviorSubject and Observable?
+07. #### What is difference between BehaviorSubject and Observable?
 Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.   
 
 The unique features of a behavior subject are:
@@ -528,7 +528,7 @@ subject.next("c"); // Subscription got c
 subject.next("d"); // Subscription got d
 ```
 
-#### What is the difference between AngularJS and Angular?
+08. #### What is the difference between AngularJS and Angular?
 Angular is a completely revived component-based framework in which an application is a tree of individual 
 components.
 
@@ -542,7 +542,7 @@ components.
 | Difficulty in SEO friendly application development| Ease to create SEO friendly applications            |
 
 
-#### What are the key components of Angular?
+09. #### What are the key components of Angular?
 Angular has the below key components,
 1. **Modules**: An angular module is set of angular basic building blocks like component, directives, services etc. An application is divided into logical pieces and each piece of code is called as "module" which perform a single task.
 1. **Components**: These are the basic building blocks of angular application to control HTML views.
@@ -554,7 +554,7 @@ Angular has the below key components,
 1. **Dependency Injection**:
 
 
-#### What are directives?
+10. #### What are directives?
 Directives add behaviour to an existing DOM element or an existing component instance.
 There are four types of directives in Angular
 * Components directives
@@ -579,7 +579,7 @@ Now this directive extends HTML element behavior with a yellow background as bel
 <p myHighlight>Highlight me!</p>
 ```
 
-#### What are components?
+11. #### What are components?
 Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
 Let's see a simple example of Angular component
 ```typescript
@@ -598,7 +598,7 @@ export class AppComponent {
 }
 ```
 
-#### What are the differences between Component and Directive?
+12. #### What are the differences between Component and Directive?
 In a short note, A component(@component) is a directive-with-a-template.
 
 Some of the major differences are mentioned in a tabular form
@@ -611,7 +611,7 @@ Some of the major differences are mentioned in a tabular form
 | Only one component can be present per DOM element | Many directives can be used per DOM element |
 | @View decorator or templateurl/template are mandatory | Directive doesn't use View|
 
-#### What is a template?
+13. #### What is a template?
 A template is a HTML view where we can display data by binding controls to properties of an Angular component. We can define it inline using the template property, or we can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.
 **Using inline template with template syntax,**
 ```typescript
@@ -645,7 +645,7 @@ export class AppComponent {
 }
 ```
 
-#### What is a module?
+14. #### What is a module?
 
 Modules are logical boundaries in your application and the application is divided into separate modules to separate the functionality of your application.
 Lets take an example of **app.module.ts** root module declared with **@NgModule** decorator as below,
@@ -666,7 +666,7 @@ The NgModule decorator has three options
 2. The declarations option is used to define components in the respective module
 3. The bootstrap option tells Angular which Component to bootstrap in the application
 
-#### What are lifecycle hooks available?
+15. #### What are lifecycle hooks available?
 Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
 
 The description of each lifecycle method is as below,
