@@ -1,4 +1,4 @@
-## Top Angular7 Interview Questions and Answers
+## Angular7 Interview Questions and Answers
 
 
 |Sl. No  | Angular7 Questions|
