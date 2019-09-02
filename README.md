@@ -184,7 +184,29 @@
 |179. |[What is transclusion in angular?](#q-what-is-transclusion-in-angular)|
 |180. |[If your data model is updated outside the Zone explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the-zone-explain-the-process-how-will-you-the-view)|
 |181. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#q-what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
-|182. |[What is the difference between observable and promises?](#q-What-is-the-difference-between-observable-and-promises)
+|182. |[What is the difference between observable and promises?](#q-What-is-the-difference-between-observable-and-promises)|
+|183. |[List the differences between Angular components vs directives](#q-list-the-differences-between-Angular-components-vs-directives)|
+|184.|[How do you define the transition between two states in Angular?](#q-How-do-you-define-the-transition-between-two-states-in-Angular)|
+|185. |[When to use NgOnInit and constructor in Angular?](#q-When-to-use-NgOnInit-and-constructor-in-Angular)|
+|183. |[Q. What is Traceur Compiler?](#q-what-is-traceur-compiler)
+|184. |[Q. How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)
+|185. |[Q. What is Host Decorators in Angular?](#q-what-is-host-decorators-in-angular)
+|186. |[Q. Why do we need provider aliases? And how do you create one?](#q-why-do-we-need-provider-aliases--and-how-do-you-create-one)
+|187. |[Q. What is the expression context in Angular?](#q-what-is-the-expression-context-in-angular)
+|188. |[Q. What Is Primeng? How Can It Be Used With Angular?](#q-what-is-primeng--how-can-it-be-used-with-angular)
+|189. |[Q. How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)
+|190. |[Q. What is RouterLink? How would you pass data from a parent component to a child component?](#q-what-is-routerlink--how-would-you-pass-data-from-a-parent-component-to-a-child-component)
+|191. |[Q. What is the purpose of NgModule? How do you decide to create a new NgModule?](#q-what-is-the-purpose-of-ngmodule--how-do-you-decide-to-create-a-new-ngmodule)
+|192. |[Q. What is the purpose of exports in a NgModule?](#q-what-is-the-purpose-of-exports-in-a-ngmodule)
+|193. |[Q. What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)
+|194. |[Q. What is ng-container and why is it useful?](#q-what-is-ng-container-and-why-is-it-useful)
+|195. |[Q. What are rxjs letttable operators?](#q-what-are-rxjs-letttable-operators)
+|196. |[Q. How do components communicate with each other?](#q-how-do-components-communicate-with-each-other)
+|197. |[Q. How do you mock a service to inject in a unit test?](#q-how-do-you-mock-a-service-to-inject-in-a-unit-test)
+|198. |[Q. What is a factory Component?](#q-what-is-a-factory-component)
+|199. |[Q. What is wildcard state?](#q-what-is-wildcard-state)
+|200. |[Q. How will you localize numbers currencies and dates?](#q-how-will-you-localize-numbers-currencies-and-dates)
+|201. |[Q. How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)
 
 
 #### Q. Frequently used angular 7 commands
@@ -3111,3 +3133,28 @@ export class AppComponent implements AfterViewChecked {
 ```
 #### Q. What is the difference between observable and promises?
 *TODO*
+#### Q. List the differences between Angular components vs directives?
+*TODO*
+#### Q. How do you define the transition between two states in Angular?
+*TODO*
+#### Q. When to use NgOnInit and constructor in Angular?
+*TODO*
+#### Q. What is Traceur Compiler?
+#### Q. How can we bind a variable with DOM element in Angular?
+#### Q. What is Host Decorators in Angular?
+#### Q. Why do we need provider aliases? And how do you create one?
+#### Q. What is the expression context in Angular?
+#### Q. What Is Primeng? How Can It Be Used With Angular?
+#### Q. How can you add an active class to a selected element in a list component?
+#### Q. What is RouterLink? How would you pass data from a parent component to a child component?
+#### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
+#### Q. What is the purpose of exports in a NgModule?
+#### Q. What is difference between Angular Modules and JavaScript Modules?
+#### Q. What is ng-container and why is it useful?
+#### Q. What are rxjs letttable operators?
+#### Q. How do components communicate with each other?
+#### Q. How do you mock a service to inject in a unit test?
+#### Q. What is a factory Component?
+#### Q. What is wildcard state?
+#### Q. How will you localize numbers currencies and dates?
+#### Q. How will you optimize image and svg in your angular app?
