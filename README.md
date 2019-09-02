@@ -1,7 +1,8 @@
 ## Angular7 Interview Questions and Answers
 
 
-|Sl. No|Questions|
+|Sl. No  |Questions|
+|--------|---------------|
 |1. |[Angular Commands](#angular-commands)|
 |1. |[What is difference between Angular Dev Build(JIT compilation) and Prod Build(AOT compilation)?](#what-is-difference-between-angular-dev-build-jit-compilation--and-prod-build-aot-compilation)|
 |1. |[How to optimize loading large data in angular?](#how-to-optimize-loading-large-data-in-angular)|
