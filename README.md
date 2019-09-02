@@ -144,7 +144,7 @@
 |139. |[How can I select an element in a component template?](#how-can-i-select-an-element-in-a-component-template)|
 |140. |[What is Redux and how does it relate to an Angular app?](#what-is-redux-and-how-does-it-relate-to-an-angular-app)|
 |141. |[How routing works in Angular?](#how-routing-works-in-angular)|
-|142. |[Explain local reference variables, @ViewChild()| and @ContentChild()|.](#explain-local-reference-variables---viewchild---and--contentchild)|
+|142. |[Explain local reference variables @ViewChild() and @ContentChild().](#explain-local-reference-variables-viewchild-and-contentchild)|
 |143. |[How to make sure that single instance will be used in an entire application?](#how-to-make-sure-that-single-instance-will-be-used-in-an-entire-application)|
 |144. |[How do you reference the host of a component?](#how-do-you-reference-the-host-of-a-component)|
 |145. |[Why would you use renderer methods instead of using native element methods? / What is difference between Renderer and ElementRef in angular?](#why-would-you-use-renderer-methods-instead-of-using-native-element-methods----what-is-difference-between-renderer-and-elementref-in-angular)|
@@ -154,7 +154,7 @@
 |149. |[What is shadow DOM? How is it helping Angular to perform better?](#what-is-shadow-dom--how-is-it-helping-angular-to-perform-better)|
 |150. |[How do you use a JavaScript third party lib in an Angular App?](#how-do-you-use-a-javascript-third-party-lib-in-an-angular-app)|
 |151. |[Can we create two Components with the same name in two different .ts files?](#can-we-create-two-components-with-the-same-name-in-two-different-ts-files)|
-|152. |[What's the difference between RouterModule.forRoot(ROUTES)| and RouterModule.forChild(ROUTES)|?](#what-s-the-difference-between-routermoduleforroot-routes--and-routermoduleforchild-routes-)|
+|152. |[What is the difference between RouterModule.forRoot and RouterModule.forChild?](#what-s-the-difference-between-routermoduleforroot-and-routermoduleforchild)|
 |153. |[What are the difference between @Inject and @Injectable?](#what-are-the-difference-between--inject-and--injectable)|
 |154. |[What are Zones? What is Change Detection? What would be a good use for NgZone service?](#what-are-zones--what-is-change-detection--what-would-be-a-good-use-for-ngzone-service)|
 |155. |[What is auxiliary routes in angular?](#what-is-auxiliary-routes-in-angular)|
@@ -2489,7 +2489,7 @@ export class AppComponent {
 ```
 #### Can we create two Components with the same name in two different .ts files?
 No
-#### What's the difference between RouterModule.forRoot(ROUTES) and RouterModule.forChild(ROUTES)?
+#### What is the difference between RouterModule.forRoot and RouterModule.forChild?
 * **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
 * **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.  
 Example: *RouterModule.forRoot(ROUTES)*
