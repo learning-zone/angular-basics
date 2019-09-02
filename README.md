@@ -8,182 +8,182 @@
 |03. |[How to optimize loading large data in angular?](#q-how-to-optimize-loading-large-data-in-angular)|
 |04. |[How an Angular application gets started or loaded?](#q-how-an-angular-application-gets-started-or-loaded)|
 |05. |[What is rxjs subject in Angular?](#q-what-is-rxjs-subject-in-angular)|
-|06. |[What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?](#what-is-rxjs-behaviorsubject--replaysubject-and-asyncsubject-in-angular)|
-|07. |[What is difference between BehaviorSubject and Observable?](#what-is-difference-between-behaviorsubject-and-observable)|
-|08. |[What is the difference between AngularJS and Angular?](#what-is-the-difference-between-angularjs-and-angular)|
-|09. |[What are the key components of Angular?](#what-are-the-key-components-of-angular)|
-|10. |[What are directives?](#what-are-directives)|
-|11. |[What are components?](#what-are-components)|
-|12. |[What are the differences between Component and Directive?](#what-are-the-differences-between-component-and-directive)|
-|13. |[What is a template?](#what-is-a-template)|
-|14. |[What is a module?](#what-is-a-module)|
-|15. |[What are lifecycle hooks available?](#what-are-lifecycle-hooks-available)|
-|16. |[What is a data binding?](#what-is-a-data-binding)|
-|17. |[What is metadata?](#what-is-metadata)|
-|18. |[What is a service worker and its role in Angular?](#what-is-a-service-worker-and-its-role-in-angular)|
-|19. |[How to set time for caching in service-worker?](#how-to-set-time-for-caching-in-service-worker)|
-|20. |[What is the difference between constructor() and ngOnInit()?](#what-is-the-difference-between-constructor---and-ngoninit-)|
-|21. |[What is a service?](#what-is-a-service)|
-|22. |[What is dependency injection in Angular?](#what-is-dependency-injection-in-angular)|
-|23. |[What is the purpose of async pipe?](#what-is-the-purpose-of-async-pipe)|
-|24. |[What is the option to choose between inline and external template file?](#what-is-the-option-to-choose-between-inline-and-external-template-file)|
-|25. |[What is the purpose of ngFor directive?](#what-is-the-purpose-of-ngfor-directive)|
-|26. |[What is the purpose of ngIf directive?](#what-is-the-purpose-of-ngif-directive)|
-|27. |[What happens if you use script tag inside template?](#what-happens-if-you-use-script-tag-inside-template)|
-|28. |[What is interpolation?](#what-is-interpolation)|
-|29. |[What are template expressions?](#what-are-template-expressions)|
-|30. |[What are template statements?](#what-are-template-statements)|
-|31. |[How do you categorize data binding types?](#how-do-you-categorize-data-binding-types)|
-|32. |[What are pipes?](#what-are-pipes)|
-|33. |[What is a parameterized pipe?](#what-is-a-parameterized-pipe)|
-|34. |[How do you chain pipes?](#how-do-you-chain-pipes)|
-|35. |[What is a custom pipe?](#what-is-a-custom-pipe)|
-|36. |[Give an example of custom pipe?](#give-an-example-of-custom-pipe)|
-|37. |[What is the difference between pure and impure pipe?](#what-is-the-difference-between-pure-and-impure-pipe)|
-|38. |[What is a bootstrapping module?](#what-is-a-bootstrapping-module)|
-|39. |[What are observables?](#what-are-observables)|
-|40. |[What is HttpClient and its benefits?](#what-is-httpclient-and-its-benefits)|
-|41. |[Explain on how to use HttpClient with an example?](#explain-on-how-to-use-httpclient-with-an-example)|
-|42. |[How can you read full response?](#how-can-you-read-full-response)|
-|43. |[How do you perform Error handling?](#how-do-you-perform-error-handling)|
-|44. |[What is RxJS?](#what-is-rxjs)|
-|45. |[What is subscribing?](#what-is-subscribing)|
-|46. |[What is an observable?](#what-is-an-observable)|
-|47. |[What is an observer?](#what-is-an-observer)|
-|48. |[What is the difference between promise and observable?](#what-is-the-difference-between-promise-and-observable)|
-|49. |[What is multicasting?](#what-is-multicasting)|
-|50. |[How do you perform error handling in observables?](#how-do-you-perform-error-handling-in-observables)|
-|51. |[What is the short hand notation for subscribe method?](#what-is-the-short-hand-notation-for-subscribe-method)|
-|52. |[What are the utility functions provided by RxJS?](#what-are-the-utility-functions-provided-by-rxjs)|
-|53. |[What are observable creation functions?](#what-are-observable-creation-functions)|
-|54. |[What will happen if you do not supply handler for observer?](#what-will-happen-if-you-do-not-supply-handler-for-observer)|
-|55. |[What are angular elements?](#what-are-angular-elements)|
-|56. |[What is the browser support of Angular Elements?](#what-is-the-browser-support-of-angular-elements)|
-|57. |[What are custom elements?](#what-are-custom-elements)|
-|58. |[Do I need to bootstrap custom elements?](#do-i-need-to-bootstrap-custom-elements)|
-|59. |[Explain how custom elements works internally?](#explain-how-custom-elements-works-internally)|
-|60. |[How to transfer components to custom elements?](#how-to-transfer-components-to-custom-elements)|
-|61. |[What are the mapping rules between Angular component and custom element?](#what-are-the-mapping-rules-between-angular-component-and-custom-element)|
-|62. |[How do you define typings for custom elements?](#how-do-you-define-typings-for-custom-elements)|
-|63. |[What are dynamic components?](#what-are-dynamic-components)|
-|64. |[What are the various kinds of directives?](#what-are-the-various-kinds-of-directives)|
-|65. |[How do you create directives using CLI?](#how-do-you-create-directives-using-cli)|
-|66. |[Give an example for attribute directives?](#give-an-example-for-attribute-directives)|
-|67. |[What is Angular Router?](#what-is-angular-router)|
-|68. |[What is the purpose of base href tag?](#what-is-the-purpose-of-base-href-tag)|
-|69. |[What are the router imports?](#what-are-the-router-imports)|
-|70. |[What is router outlet?](#what-is-router-outlet)|
-|71. |[What are router links?](#what-are-router-links)|
-|72. |[What are active router links?](#what-are-active-router-links)|
-|73. |[What is router state?](#what-is-router-state)|
-|74. |[What are router events?](#what-are-router-events)|
-|75. |[What is activated route?](#what-is-activated-route)|
-|76. |[How do you define routes?](#how-do-you-define-routes)|
-|77. |[What is the purpose of Wildcard route?](#what-is-the-purpose-of-wildcard-route)|
-|78. |[Do I need a Routing Module always?](#do-i-need-a-routing-module-always)|
-|79. |[What is Angular Universal?](#what-is-angular-universal)|
-|80. |[What are different types of compilation in Angular?](#what-are-different-types-of-compilation-in-angular)|
-|81. |[What is JIT?](#what-is-jit)|
-|82. |[What is AOT?](#what-is-aot)|
-|83. |[Why do we need compilation process?](#why-do-we-need-compilation-process)|
-|84. |[What are the advantages with AOT?](#what-are-the-advantages-with-aot)|
-|85. |[What are the ways to control AOT compilation?](#what-are-the-ways-to-control-aot-compilation)|
-|86. |[What are the restrictions of metadata?](#what-are-the-restrictions-of-metadata)|
-|87. |[What are the two phases of AOT?](#what-are-the-two-phases-of-aot)|
-|88. |[Can I use arrow functions in AOT?](#can-i-use-arrow-functions-in-aot)|
-|89. |[What is the purpose of metadata json files?](#what-is-the-purpose-of-metadata-json-files)|
-|90. |[Can I use any javascript feature for expression syntax in AOT?](#can-i-use-any-javascript-feature-for-expression-syntax-in-aot)|
-|91. |[What is folding?](#what-is-folding)|
-|92. |[What are macros?](#what-are-macros)|
-|93. |[Give an example of few metadata errors?](#give-an-example-of-few-metadata-errors)|
-|94. |[What is metadata rewriting?](#what-is-metadata-rewriting)|
-|95. |[How do you provide configuration inheritance?](#how-do-you-provide-configuration-inheritance)|
-|96. |[How do you specify angular template compiler options?](#how-do-you-specify-angular-template-compiler-options)|
-|97. |[How do you enable binding expression validation?](#how-do-you-enable-binding-expression-validation)|
-|98. |[What is the purpose of any type cast function?](#what-is-the-purpose-of-any-type-cast-function)|
-|99. |[What is Non null type assertion operator?](#what-is-non-null-type-assertion-operator)|
-|100. |[What is type narrowing?](#what-is-type-narrowing)|
-|101. |[How do you describe various dependencies in angular application?](#how-do-you-describe-various-dependencies-in-angular-application)|
-|102. |[What is zone?](#what-is-zone)|
-|103. |[What is the purpose of common module?](#what-is-the-purpose-of-common-module)|
-|104. |[What is codelyzer?](#what-is-codelyzer)|
-|105. |[What is angular animation?](#what-is-angular-animation)|
-|106. |[What are the steps to use animation module?](#what-are-the-steps-to-use-animation-module)|
-|107. |[What is State function?](#what-is-state-function)|
-|108. |[What is Style function?](#what-is-style-function)|
-|109. |[What is the purpose of animate function?](#what-is-the-purpose-of-animate-function)|
-|110. |[What is transition function?](#what-is-transition-function)|
-|111. |[How to inject the dynamic script in angular?](#how-to-inject-the-dynamic-script-in-angular)|
-|112. |[What is Angular Ivy?](#what-is-angular-ivy)|
-|113. |[What are the features included in ivy preview?](#what-are-the-features-included-in-ivy-preview)|
-|114. |[Can I use AOT compilation with Ivy?](#can-i-use-aot-compilation-with-ivy)|
-|115. |[What is Angular Language Service?](#what-is-angular-language-service)|
-|116. |[How do you install angular language service in the project?](#how-do-you-install-angular-language-service-in-the-project)|
-|117. |[Is there any editor support for Angular Language Service?](#is-there-any-editor-support-for-angular-language-service)|
-|118. |[Explain the features provided by Angular Language Service?](#explain-the-features-provided-by-angular-language-service)|
-|119. |[How do you add web workers in your application?](#how-do-you-add-web-workers-in-your-application)|
-|120. |[What are the limitations with web workers?](#what-are-the-limitations-with-web-workers)|
-|121. |[What is Angular CLI Builder?](#what-is-angular-cli-builder)|
-|122. |[What is a builder?](#what-is-a-builder)|
-|123. |[How do you invoke a builder?](#how-do-you-invoke-a-builder)|
-|124. |[How do you create app shell in Angular?](#how-do-you-create-app-shell-in-angular)|
-|125. |[What are the case types in Angular?](#what-are-the-case-types-in-angular)|
-|126. |[What are the class decorators in Angular?](#what-are-the-class-decorators-in-angular)|
-|127. |[What are class field decorators?](#what-are-class-field-decorators)|
-|128. |[What is declarable in Angular?](#what-is-declarable-in-angular)|
-|129. |[What are the restrictions on declarable classes?](#what-are-the-restrictions-on-declarable-classes)|
-|130. |[What is a DI token?](#what-is-a-di-token)|
-|131. |[What is Angular DSL?](#what-is-angular-dsl)|
-|132. |[What is Bazel tool?](#what-is-bazel-tool)|
-|133. |[What are the advantages of Bazel tool?](#what-are-the-advantages-of-bazel-tool)|
-|134. |[How do you use Bazel with Angular CLI?](#how-do-you-use-bazel-with-angular-cli)|
-|135. |[How do you run Bazel directly?](#how-do-you-run-bazel-directly)|
-|136. |[What is Angular Framework?](#what-is-angular-framework)|
-|137. |[What is angular CLI?](#what-is-angular-cli)|
-|138. |[What is Ng-Content/Content Projection?](#what-is-ng-content-content-projection)|
-|139. |[How can I select an element in a component template?](#how-can-i-select-an-element-in-a-component-template)|
-|140. |[What is Redux and how does it relate to an Angular app?](#what-is-redux-and-how-does-it-relate-to-an-angular-app)|
-|141. |[How routing works in Angular?](#how-routing-works-in-angular)|
-|142. |[Explain local reference variables @ViewChild() and @ContentChild().](#explain-local-reference-variables-viewchild-and-contentchild)|
-|143. |[How to make sure that single instance will be used in an entire application?](#how-to-make-sure-that-single-instance-will-be-used-in-an-entire-application)|
-|144. |[How do you reference the host of a component?](#how-do-you-reference-the-host-of-a-component)|
-|145. |[Why would you use renderer methods instead of using native element methods? / What is difference between Renderer and ElementRef in angular?](#why-would-you-use-renderer-methods-instead-of-using-native-element-methods----what-is-difference-between-renderer-and-elementref-in-angular)|
-|146. |[How would you control size of an element on resize of the window in a component?](#how-would-you-control-size-of-an-element-on-resize-of-the-window-in-a-component)|
-|147. |[How to cache an observable data?](#how-to-cache-an-observable-data)|
-|148. |[What do you understand by a template variable?](#what-do-you-understand-by-a-template-variable)|
-|149. |[What is shadow DOM? How is it helping Angular to perform better?](#what-is-shadow-dom--how-is-it-helping-angular-to-perform-better)|
-|150. |[How do you use a JavaScript third party lib in an Angular App?](#how-do-you-use-a-javascript-third-party-lib-in-an-angular-app)|
-|151. |[Can we create two Components with the same name in two different .ts files?](#can-we-create-two-components-with-the-same-name-in-two-different-ts-files)|
-|152. |[What is the difference between RouterModule.forRoot and RouterModule.forChild?](#what-is-the-difference-between-routermoduleforroot-and-routermoduleforchild)|
-|153. |[What are the difference between @Inject and @Injectable?](#what-are-the-difference-between--inject-and--injectable)|
-|154. |[What are Zones? What is Change Detection? What would be a good use for NgZone service?](#what-are-zones--what-is-change-detection--what-would-be-a-good-use-for-ngzone-service)|
-|155. |[What is auxiliary routes in angular?](#what-is-auxiliary-routes-in-angular)|
-|156. |[How do you get a reference to a child component?](#how-do-you-get-a-reference-to-a-child-component)|
-|157. |[How do you listen for events in a component?](#how-do-you-listen-for-events-in-a-component)|
-|158. |[How do you force a change detection cycle?](#how-do-you-force-a-change-detection-cycle)|
-|159. |[How would you get a reference to a parent component?](#how-would-you-get-a-reference-to-a-parent-component)|
-|160. |[What does forwardRef do?](#what-does-forwardref-do)|
-|161. |[What are entryComponents?](#what-are-entrycomponents)|
-|162. |[When building custom form components, what interface do they components need to implement to particpate in forms?](#when-building-custom-form-components--what-interface-do-they-components-need-to-implement-to-particpate-in-forms)|
-|163. |[What are the best way to unsubscribe from Observables in Angular?](#what-are-the-best-way-to-unsubscribe-from-observables-in-angular)|
-|164. |[How Event Emitters works in Angular?](#how-event-emitters-works-in-angular)|
-|165. |[How will you intercept http to inject header to each http call?](#how-will-you-intercept-http-to-inject-header-to-each-http-call)|
-|166. |[How will you parallelize multiple observable call?](#how-will-you-parallelize-multiple-observable-call)|
-|167. |[How will you put one async call before another?](#how-will-you-put-one-async-call-before-another)|
-|168. |[How can you cancel a router navigation?](#how-can-you-cancel-a-router-navigation)|
-|169. |[How would you animate routing?](#how-would-you-animate-routing)|
-|170. |[How would you make sure an api call that needs to be called only once but with multiple conditions?](#how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions)|
-|171. |[If you need to respond to two different Observable/Subject with one callback function, how would you do it? (ex: if you need to change the url through route parameters and with prev/next buttons).](#if-you-need-to-respond-to-two-different-observable-subject-with-one-callback-function--how-would-you-do-it---ex--if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons)|
-|172. |[How can you access validation errors in the template to display error messages?](#how-can-you-access-validation-errors-in-the-template-to-display-error-messages)|
-|173. |[How do you unit test a service with a dependency?](#how-do-you-unit-test-a-service-with-a-dependency)|
-|174. |[What is the difference between an observable and a promise?](#what-is-the-difference-between-an-observable-and-a-promise)|
-|175. |[What is the difference between an observable and a subject?](#what-is-the-difference-between-an-observable-and-a-subject)|
-|176. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#what-the-importance-of-dirty-flag--pristine--touched--untouched--valid--invalid)|
-|177. |[what is defer in promise?](#what-is-defer-in-promise)|
-|178. |[What is the difference between an Annotation and a Decorator in Angular?](#what-is-the-difference-between-an-annotation-and-a-decorator-in-angular)|
-|179. |[What is transclusion in angular?](#what-is-transclusion-in-angular)|
-|180. |[If your data model is updated outside the ‘Zone’, explain the process how will you the view?](#if-your-data-model-is-updated-outside-the--zone---explain-the-process-how-will-you-the-view)|
-|181. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
+|06. |[What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?](#q-what-is-rxjs-behaviorsubject--replaysubject-and-asyncsubject-in-angular)|
+|07. |[What is difference between BehaviorSubject and Observable?](#q-what-is-difference-between-behaviorsubject-and-observable)|
+|08. |[What is the difference between AngularJS and Angular?](#q-what-is-the-difference-between-angularjs-and-angular)|
+|09. |[What are the key components of Angular?](#q-what-are-the-key-components-of-angular)|
+|10. |[What are directives?](#q-what-are-directives)|
+|11. |[What are components?](#q-what-are-components)|
+|12. |[What are the differences between Component and Directive?](#q-what-are-the-differences-between-component-and-directive)|
+|13. |[What is a template?](#q-what-is-a-template)|
+|14. |[What is a module?](#q-what-is-a-module)|
+|15. |[What are lifecycle hooks available?](#q-what-are-lifecycle-hooks-available)|
+|16. |[What is a data binding?](#q-what-is-a-data-binding)|
+|17. |[What is metadata?](#q-what-is-metadata)|
+|18. |[What is a service worker and its role in Angular?](#q-what-is-a-service-worker-and-its-role-in-angular)|
+|19. |[How to set time for caching in service-worker?](#q-how-to-set-time-for-caching-in-service-worker)|
+|20. |[What is the difference between constructor() and ngOnInit()?](#q-what-is-the-difference-between-constructor---and-ngoninit-)|
+|21. |[What is a service?](#q-what-is-a-service)|
+|22. |[What is dependency injection in Angular?](#q-what-is-dependency-injection-in-angular)|
+|23. |[What is the purpose of async pipe?](#q-what-is-the-purpose-of-async-pipe)|
+|24. |[What is the option to choose between inline and external template file?](#q-what-is-the-option-to-choose-between-inline-and-external-template-file)|
+|25. |[What is the purpose of ngFor directive?](#q-what-is-the-purpose-of-ngfor-directive)|
+|26. |[What is the purpose of ngIf directive?](#q-what-is-the-purpose-of-ngif-directive)|
+|27. |[What happens if you use script tag inside template?](#q-what-happens-if-you-use-script-tag-inside-template)|
+|28. |[What is interpolation?](#q-what-is-interpolation)|
+|29. |[What are template expressions?](#q-what-are-template-expressions)|
+|30. |[What are template statements?](#q-what-are-template-statements)|
+|31. |[How do you categorize data binding types?](#q-how-do-you-categorize-data-binding-types)|
+|32. |[What are pipes?](#q-what-are-pipes)|
+|33. |[What is a parameterized pipe?](#q-what-is-a-parameterized-pipe)|
+|34. |[How do you chain pipes?](#q-how-do-you-chain-pipes)|
+|35. |[What is a custom pipe?](#q-what-is-a-custom-pipe)|
+|36. |[Give an example of custom pipe?](#q-give-an-example-of-custom-pipe)|
+|37. |[What is the difference between pure and impure pipe?](#q-what-is-the-difference-between-pure-and-impure-pipe)|
+|38. |[What is a bootstrapping module?](#q-what-is-a-bootstrapping-module)|
+|39. |[What are observables?](#q-what-are-observables)|
+|40. |[What is HttpClient and its benefits?](#q-what-is-httpclient-and-its-benefits)|
+|41. |[Explain on how to use HttpClient with an example?](#q-explain-on-how-to-use-httpclient-with-an-example)|
+|42. |[How can you read full response?](#q-how-can-you-read-full-response)|
+|43. |[How do you perform Error handling?](#q-how-do-you-perform-error-handling)|
+|44. |[What is RxJS?](#q-what-is-rxjs)|
+|45. |[What is subscribing?](#q-what-is-subscribing)|
+|46. |[What is an observable?](#q-what-is-an-observable)|
+|47. |[What is an observer?](#q-what-is-an-observer)|
+|48. |[What is the difference between promise and observable?](#q-what-is-the-difference-between-promise-and-observable)|
+|49. |[What is multicasting?](#q-what-is-multicasting)|
+|50. |[How do you perform error handling in observables?](#q-how-do-you-perform-error-handling-in-observables)|
+|51. |[What is the short hand notation for subscribe method?](#q-what-is-the-short-hand-notation-for-subscribe-method)|
+|52. |[What are the utility functions provided by RxJS?](#q-what-are-the-utility-functions-provided-by-rxjs)|
+|53. |[What are observable creation functions?](#q-what-are-observable-creation-functions)|
+|54. |[What will happen if you do not supply handler for observer?](#q-what-will-happen-if-you-do-not-supply-handler-for-observer)|
+|55. |[What are angular elements?](#q-what-are-angular-elements)|
+|56. |[What is the browser support of Angular Elements?](#q-what-is-the-browser-support-of-angular-elements)|
+|57. |[What are custom elements?](#q-what-are-custom-elements)|
+|58. |[Do I need to bootstrap custom elements?](#q-do-i-need-to-bootstrap-custom-elements)|
+|59. |[Explain how custom elements works internally?](#q-explain-how-custom-elements-works-internally)|
+|60. |[How to transfer components to custom elements?](#q-how-to-transfer-components-to-custom-elements)|
+|61. |[What are the mapping rules between Angular component and custom element?](#q-what-are-the-mapping-rules-between-angular-component-and-custom-element)|
+|62. |[How do you define typings for custom elements?](#q-how-do-you-define-typings-for-custom-elements)|
+|63. |[What are dynamic components?](#q-what-are-dynamic-components)|
+|64. |[What are the various kinds of directives?](#q-what-are-the-various-kinds-of-directives)|
+|65. |[How do you create directives using CLI?](#q-how-do-you-create-directives-using-cli)|
+|66. |[Give an example for attribute directives?](#q-give-an-example-for-attribute-directives)|
+|67. |[What is Angular Router?](#q-what-is-angular-router)|
+|68. |[What is the purpose of base href tag?](#q-what-is-the-purpose-of-base-href-tag)|
+|69. |[What are the router imports?](#q-what-are-the-router-imports)|
+|70. |[What is router outlet?](#q-what-is-router-outlet)|
+|71. |[What are router links?](#q-what-are-router-links)|
+|72. |[What are active router links?](#q-what-are-active-router-links)|
+|73. |[What is router state?](#q-what-is-router-state)|
+|74. |[What are router events?](#q-what-are-router-events)|
+|75. |[What is activated route?](#q-what-is-activated-route)|
+|76. |[How do you define routes?](#q-how-do-you-define-routes)|
+|77. |[What is the purpose of Wildcard route?](#q-what-is-the-purpose-of-wildcard-route)|
+|78. |[Do I need a Routing Module always?](#q-do-i-need-a-routing-module-always)|
+|79. |[What is Angular Universal?](#q-what-is-angular-universal)|
+|80. |[What are different types of compilation in Angular?](#q-what-are-different-types-of-compilation-in-angular)|
+|81. |[What is JIT?](#q-what-is-jit)|
+|82. |[What is AOT?](#q-what-is-aot)|
+|83. |[Why do we need compilation process?](#q-why-do-we-need-compilation-process)|
+|84. |[What are the advantages with AOT?](#q-what-are-the-advantages-with-aot)|
+|85. |[What are the ways to control AOT compilation?](#q-what-are-the-ways-to-control-aot-compilation)|
+|86. |[What are the restrictions of metadata?](#q-what-are-the-restrictions-of-metadata)|
+|87. |[What are the two phases of AOT?](#q-what-are-the-two-phases-of-aot)|
+|88. |[Can I use arrow functions in AOT?](#q-can-i-use-arrow-functions-in-aot)|
+|89. |[What is the purpose of metadata json files?](#q-what-is-the-purpose-of-metadata-json-files)|
+|90. |[Can I use any javascript feature for expression syntax in AOT?](#q-can-i-use-any-javascript-feature-for-expression-syntax-in-aot)|
+|91. |[What is folding?](#q-what-is-folding)|
+|92. |[What are macros?](#q-what-are-macros)|
+|93. |[Give an example of few metadata errors?](#q-give-an-example-of-few-metadata-errors)|
+|94. |[What is metadata rewriting?](#q-what-is-metadata-rewriting)|
+|95. |[How do you provide configuration inheritance?](#q-how-do-you-provide-configuration-inheritance)|
+|96. |[How do you specify angular template compiler options?](#q-how-do-you-specify-angular-template-compiler-options)|
+|97. |[How do you enable binding expression validation?](#q-how-do-you-enable-binding-expression-validation)|
+|98. |[What is the purpose of any type cast function?](#q-what-is-the-purpose-of-any-type-cast-function)|
+|99. |[What is Non null type assertion operator?](#q-what-is-non-null-type-assertion-operator)|
+|100. |[What is type narrowing?](#q-what-is-type-narrowing)|
+|101. |[How do you describe various dependencies in angular application?](#q-how-do-you-describe-various-dependencies-in-angular-application)|
+|102. |[What is zone?](#q-what-is-zone)|
+|103. |[What is the purpose of common module?](#q-what-is-the-purpose-of-common-module)|
+|104. |[What is codelyzer?](#q-what-is-codelyzer)|
+|105. |[What is angular animation?](#q-what-is-angular-animation)|
+|106. |[What are the steps to use animation module?](#q-what-are-the-steps-to-use-animation-module)|
+|107. |[What is State function?](#q-what-is-state-function)|
+|108. |[What is Style function?](#q-what-is-style-function)|
+|109. |[What is the purpose of animate function?](#q-what-is-the-purpose-of-animate-function)|
+|110. |[What is transition function?](#q-what-is-transition-function)|
+|111. |[How to inject the dynamic script in angular?](#q-how-to-inject-the-dynamic-script-in-angular)|
+|112. |[What is Angular Ivy?](#q-what-is-angular-ivy)|
+|113. |[What are the features included in ivy preview?](#q-what-are-the-features-included-in-ivy-preview)|
+|114. |[Can I use AOT compilation with Ivy?](#q-can-i-use-aot-compilation-with-ivy)|
+|115. |[What is Angular Language Service?](#q-what-is-angular-language-service)|
+|116. |[How do you install angular language service in the project?](#q-how-do-you-install-angular-language-service-in-the-project)|
+|117. |[Is there any editor support for Angular Language Service?](#q-is-there-any-editor-support-for-angular-language-service)|
+|118. |[Explain the features provided by Angular Language Service?](#q-explain-the-features-provided-by-angular-language-service)|
+|119. |[How do you add web workers in your application?](#q-how-do-you-add-web-workers-in-your-application)|
+|120. |[What are the limitations with web workers?](#q-what-are-the-limitations-with-web-workers)|
+|121. |[What is Angular CLI Builder?](#q-what-is-angular-cli-builder)|
+|122. |[What is a builder?](#q-what-is-a-builder)|
+|123. |[How do you invoke a builder?](#q-how-do-you-invoke-a-builder)|
+|124. |[How do you create app shell in Angular?](#q-how-do-you-create-app-shell-in-angular)|
+|125. |[What are the case types in Angular?](#q-what-are-the-case-types-in-angular)|
+|126. |[What are the class decorators in Angular?](#q-what-are-the-class-decorators-in-angular)|
+|127. |[What are class field decorators?](#q-what-are-class-field-decorators)|
+|128. |[What is declarable in Angular?](#q-what-is-declarable-in-angular)|
+|129. |[What are the restrictions on declarable classes?](#q-what-are-the-restrictions-on-declarable-classes)|
+|130. |[What is a DI token?](#q-what-is-a-di-token)|
+|131. |[What is Angular DSL?](#q-what-is-angular-dsl)|
+|132. |[What is Bazel tool?](#q-what-is-bazel-tool)|
+|133. |[What are the advantages of Bazel tool?](#q-what-are-the-advantages-of-bazel-tool)|
+|134. |[How do you use Bazel with Angular CLI?](#q-how-do-you-use-bazel-with-angular-cli)|
+|135. |[How do you run Bazel directly?](#q-how-do-you-run-bazel-directly)|
+|136. |[What is Angular Framework?](#q-what-is-angular-framework)|
+|137. |[What is angular CLI?](#q-what-is-angular-cli)|
+|138. |[What is Ng-Content/Content Projection?](#q-what-is-ng-content-content-projection)|
+|139. |[How can I select an element in a component template?](#q-how-can-i-select-an-element-in-a-component-template)|
+|140. |[What is Redux and how does it relate to an Angular app?](#q-what-is-redux-and-how-does-it-relate-to-an-angular-app)|
+|141. |[How routing works in Angular?](#q-how-routing-works-in-angular)|
+|142. |[Explain local reference variables @ViewChild() and @ContentChild().](#q-explain-local-reference-variables-viewchild-and-contentchild)|
+|143. |[How to make sure that single instance will be used in an entire application?](#q-how-to-make-sure-that-single-instance-will-be-used-in-an-entire-application)|
+|144. |[How do you reference the host of a component?](#q-how-do-you-reference-the-host-of-a-component)|
+|145. |[Why would you use renderer methods instead of using native element methods? / What is difference between Renderer and ElementRef in angular?](#q-why-would-you-use-renderer-methods-instead-of-using-native-element-methods----what-is-difference-between-renderer-and-elementref-in-angular)|
+|146. |[How would you control size of an element on resize of the window in a component?](#q-how-would-you-control-size-of-an-element-on-resize-of-the-window-in-a-component)|
+|147. |[How to cache an observable data?](#q-how-to-cache-an-observable-data)|
+|148. |[What do you understand by a template variable?](#q-what-do-you-understand-by-a-template-variable)|
+|149. |[What is shadow DOM? How is it helping Angular to perform better?](#q-what-is-shadow-dom--how-is-it-helping-angular-to-perform-better)|
+|150. |[How do you use a JavaScript third party lib in an Angular App?](#q-how-do-you-use-a-javascript-third-party-lib-in-an-angular-app)|
+|151. |[Can we create two Components with the same name in two different .ts files?](#q-can-we-create-two-components-with-the-same-name-in-two-different-ts-files)|
+|152. |[What is the difference between RouterModule.forRoot and RouterModule.forChild?](#q-what-is-the-difference-between-routermoduleforroot-and-routermoduleforchild)|
+|153. |[What are the difference between @Inject and @Injectable?](#q-what-are-the-difference-between--inject-and--injectable)|
+|154. |[What are Zones? What is Change Detection? What would be a good use for NgZone service?](#q-what-are-zones--what-is-change-detection--what-would-be-a-good-use-for-ngzone-service)|
+|155. |[What is auxiliary routes in angular?](#q-what-is-auxiliary-routes-in-angular)|
+|156. |[How do you get a reference to a child component?](#q-how-do-you-get-a-reference-to-a-child-component)|
+|157. |[How do you listen for events in a component?](#q-how-do-you-listen-for-events-in-a-component)|
+|158. |[How do you force a change detection cycle?](#q-how-do-you-force-a-change-detection-cycle)|
+|159. |[How would you get a reference to a parent component?](#q-how-would-you-get-a-reference-to-a-parent-component)|
+|160. |[What does forwardRef do?](#q-what-does-forwardref-do)|
+|161. |[What are entryComponents?](#q-what-are-entrycomponents)|
+|162. |[When building custom form components, what interface do they components need to implement to particpate in forms?](#q-when-building-custom-form-components--what-interface-do-they-components-need-to-implement-to-particpate-in-forms)|
+|163. |[What are the best way to unsubscribe from Observables in Angular?](#q-what-are-the-best-way-to-unsubscribe-from-observables-in-angular)|
+|164. |[How Event Emitters works in Angular?](#q-how-event-emitters-works-in-angular)|
+|165. |[How will you intercept http to inject header to each http call?](#q-how-will-you-intercept-http-to-inject-header-to-each-http-call)|
+|166. |[How will you parallelize multiple observable call?](#q-how-will-you-parallelize-multiple-observable-call)|
+|167. |[How will you put one async call before another?](#q-how-will-you-put-one-async-call-before-another)|
+|168. |[How can you cancel a router navigation?](#q-how-can-you-cancel-a-router-navigation)|
+|169. |[How would you animate routing?](#q-how-would-you-animate-routing)|
+|170. |[How would you make sure an api call that needs to be called only once but with multiple conditions?](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions)|
+|171. |[If you need to respond to two different Observable/Subject with one callback function, how would you do it? (ex: if you need to change the url through route parameters and with prev/next buttons).](#q-if-you-need-to-respond-to-two-different-observable-subject-with-one-callback-function--how-would-you-do-it---ex--if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons)|
+|172. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages)|
+|173. |[How do you unit test a service with a dependency?](#q-how-do-you-unit-test-a-service-with-a-dependency)|
+|174. |[What is the difference between an observable and a promise?](#q-what-is-the-difference-between-an-observable-and-a-promise)|
+|175. |[What is the difference between an observable and a subject?](#q-what-is-the-difference-between-an-observable-and-a-subject)|
+|176. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag--pristine--touched--untouched--valid--invalid)|
+|177. |[what is defer in promise?](#q-what-is-defer-in-promise)|
+|178. |[What is the difference between an Annotation and a Decorator in Angular?](#q-what-is-the-difference-between-an-annotation-and-a-decorator-in-angular)|
+|179. |[What is transclusion in angular?](#q-what-is-transclusion-in-angular)|
+|180. |[If your data model is updated outside the ‘Zone’, explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the--zone---explain-the-process-how-will-you-the-view)|
+|181. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#q-what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
 
 
 #### Q. frequently used angular 7 commands
