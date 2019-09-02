@@ -184,6 +184,7 @@
 |179. |[What is transclusion in angular?](#q-what-is-transclusion-in-angular)|
 |180. |[If your data model is updated outside the Zone explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the-zone-explain-the-process-how-will-you-the-view)|
 |181. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#q-what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
+|182. |[What is the difference between observable and promises?](#q-What-is-the-difference-between-observable-and-promises)
 
 
 #### Q. Frequently used angular 7 commands
@@ -3108,3 +3109,5 @@ export class AppComponent implements AfterViewChecked {
     }
 }
 ```
+#### Q. What is the difference between observable and promises?
+*TODO*
