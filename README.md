@@ -935,10 +935,10 @@ In interpolation syntax, the template expression is surrounded by double curly b
 <h3>{{username}}, welcome to Angular</h3>
 ```
 The below javascript expressions are prohibited in template expression
-1. assignments (=, +=, -=, ...)
-2. new
-3. chaining expressions with ; or ,
-4. increment and decrement operators (++ and -)
+* assignments (=, +=, -=, ...)
+* new
+* chaining expressions with ; or ,
+* increment and decrement operators (++ and -)
 
 30. #### What are template statements?
 A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statements appear in quotes to the right of the = symbol like **(event)="statement"**. Let's take an example of button click event's statement
@@ -946,18 +946,18 @@ A template statement responds to an event raised by a binding target such as an 
 <button (click)="editProfile()">Edit Profile</button>
 ```
 In the above expression, editProfile is a template statement. The below JavaScript syntax expressions are not allowed.
-1. new
-2. increment and decrement operators, ++ and --
-3. operator assignment, such as += and -=
-4. the bitwise operators | and &
-5. the template expression operators
+* new
+* increment and decrement operators, ++ and --
+* operator assignment, such as += and -=
+* the bitwise operators | and &
+* the template expression operators
 
 #### How do you categorize data binding types?
 
 Binding types can be grouped into three categories distinguished by the direction of data flow. They are listed as below,
-1. From the source-to-view
-2. From view-to-source
-3. View-to-source-to-view
+* From the source-to-view
+* From view-to-source
+* View-to-source-to-view
 
 The possible binding syntax can be tabularized as below,
 
@@ -1085,11 +1085,11 @@ import { HttpClientModule } from '@angular/common/http';
 ```
 
 The major advantages of HttpClient can be listed as below,
-1. Contains testability features
-2. Provides typed request and response objects
-3. Intercept request and response
-4. Supports Observalbe APIs
-5. Supports streamlined error handling
+* Contains testability features
+* Provides typed request and response objects
+* Intercept request and response
+* Supports Observalbe APIs
+* Supports streamlined error handling
 
 #### Explain on how to use HttpClient with an example?
 Below are the steps need to be followed for the usage of HttpClient.
