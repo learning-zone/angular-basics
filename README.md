@@ -182,7 +182,7 @@
 |177. |[what is defer in promise?](#q-what-is-defer-in-promise)|
 |178. |[What is the difference between an Annotation and a Decorator in Angular?](#q-what-is-the-difference-between-an-annotation-and-a-decorator-in-angular)|
 |179. |[What is transclusion in angular?](#q-what-is-transclusion-in-angular)|
-|180. |[If your data model is updated outside the ‘Zone’, explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the--zone---explain-the-process-how-will-you-the-view)|
+|180. |[If your data model is updated outside the Zone explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the-zone-explain-the-process-how-will-you-the-view)|
 |181. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#q-what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
 
 
@@ -3089,7 +3089,7 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 *TODO*
 #### Q. What is transclusion in angular?
 *TODO*
-#### Q. If your data model is updated outside the ‘Zone’, explain the process how will you the view?
+#### Q. If your data model is updated outside the Zone explain the process how will you the view?
 *TODO*
 #### Q. What is the process of inserting an embedded view from a prepared TemplateRef?
 ```typescript
