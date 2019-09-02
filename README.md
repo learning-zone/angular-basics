@@ -4,7 +4,7 @@
 |Sl. No  | Angular7 Questions|
 |--------|---------------|
 |01. |[frequently used angular 7 commands](#frequently-used-angular-7-commands)|
-|02. |[What is difference between Angular JIT compilation and AOT compilation?](#what-is-difference-between-angular-jit-compilation-and-aot-compilation)|
+|02. |[What is difference between Angular JIT compilation and AOT compilation?](#q-what-is-difference-between-angular-jit-compilation-and-aot-compilation)|
 |03. |[How to optimize loading large data in angular?](#how-to-optimize-loading-large-data-in-angular)|
 |04. |[How an Angular application gets started or loaded?](#how-an-angular-application-gets-started-or-loaded)|
 |05. |[What is rxjs subject in Angular?](#what-is-rxjs-subject-in-angular)|
@@ -211,7 +211,7 @@
 |ng generate web-worker app           |Add a Web Worker to angular app|
 
 
-02. #### What is difference between Angular JIT compilation and AOT compilation?
+02. #### Q. What is difference between Angular JIT compilation and AOT compilation?
 
 Angular has 2 types of build dev build or prod build :
 
