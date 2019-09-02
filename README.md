@@ -190,7 +190,7 @@
 
 |Commands                             |Description                                                                  |
 |-------------------------------------|-----------------------------------------------------------------------------|
-|ng new project-name		              | Create an Angular project with Angular CLI                                  |
+|<pre>ng new project-name</pre>       | Create an Angular project with Angular CLI                                  |
 |ng serve --open                      | Builds and serves app, rebuilding on file changes                           |
 |ng test						                  | Running unit tests                                                          |
 |ng e2e 						                  | Running end-to-end tests with protractor framwork                           |
