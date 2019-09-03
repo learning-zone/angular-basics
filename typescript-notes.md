@@ -1,5 +1,19 @@
 ## TypeScript Interview Questions and Answers
 
+|Sl.No|TypeScript Questions|
+|-----|--------------------|
+|01. |[What are the typescript features? How typescript is different from ES6?](#q-what-are-the-typescript-features--how-typescript-is-different-from-es6)|
+|02. |[How to pass optional parameter in typescript?](#q-how-to-pass-optional-parameter-in-typescript)|
+|03. |[How to declare variable so that it can hold multiple values?](#q-how-to-declare-variable-so-that-it-can-hold-multiple-values)|
+|04. |[Explain generics in TypeScript?](#q-explain-generics-in-typescript)|
+|05. |[How to implement class constants in TypeScript?](#q-how-to-implement-class-constants-in-typescript)|
+|06. |[What is getters/setters in TypeScript?](#q-what-is-getters-setters-in-typescript)|
+|07. |[Is that TypeScript code valid?](#q-is-that-typescript-code-valid)|
+|08. |[Explain how and why we could use property decorators in TS?](#q-explain-how-and-why-we-could-use-property-decorators-in-ts)|
+|09. |[What is the difference between "interface vs type" statements?](#q-what-is-the-difference-between--interface-vs-type--statements)|
+|10. |[What is Rest parameters?](#q-what-is-rest-parameters)|
+|11. |[Explain Enum in TypeScript?](#q-explain-enum-in-typescript)|
+
 
 #### Q. What are the typescript features? How typescript is different from ES6?
 **TypeScript** is a superset of JavaScript which primarily provides optional static typing, classes and interfaces.
