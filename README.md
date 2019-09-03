@@ -3142,21 +3142,40 @@ export class AppComponent implements AfterViewChecked {
 #### Q. When to use NgOnInit and constructor in Angular?
 *TODO*
 #### Q. What is Traceur Compiler?
+*TODO*
 #### Q. How can we bind a variable with DOM element in Angular?
+*TODO*
 #### Q. What is Host Decorators in Angular?
+*TODO*
 #### Q. Why do we need provider aliases? And how do you create one?
+*TODO*
 #### Q. What is the expression context in Angular?
+*TODO*
 #### Q. What Is Primeng? How Can It Be Used With Angular?
+*TODO*
 #### Q. How can you add an active class to a selected element in a list component?
+*TODO*
 #### Q. What is RouterLink? How would you pass data from a parent component to a child component?
+*TODO*
 #### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
+*TODO*
 #### Q. What is the purpose of exports in a NgModule?
+*TODO*
 #### Q. What is difference between Angular Modules and JavaScript Modules?
+*TODO*
 #### Q. What is ng-container and why is it useful?
+*TODO*
 #### Q. What are rxjs letttable operators?
+*TODO*
 #### Q. How do components communicate with each other?
+*TODO*
 #### Q. How do you mock a service to inject in a unit test?
+*TODO*
 #### Q. What is a factory Component?
+*TODO*
 #### Q. What is wildcard state?
+*TODO*
 #### Q. How will you localize numbers currencies and dates?
+*TODO*
 #### Q. How will you optimize image and svg in your angular app?
+*TODO*
