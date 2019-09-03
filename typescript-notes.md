@@ -7,7 +7,7 @@
 |03. |[How to declare variable so that it can hold multiple values?](#q-how-to-declare-variable-so-that-it-can-hold-multiple-values)|
 |04. |[Explain generics in TypeScript?](#q-explain-generics-in-typescript)|
 |05. |[How to implement class constants in TypeScript?](#q-how-to-implement-class-constants-in-typescript)|
-|06. |[What is getters/setters in TypeScript?](#q-what-is-getters-setters-in-typescript)|
+|06. |[What is getters and setters in TypeScript?](#q-what-is-getters-and-setters-in-typescript)|
 |07. |[Is that TypeScript code valid?](#q-is-that-typescript-code-valid)|
 |08. |[Explain how and why we could use property decorators in TS?](#q-explain-how-and-why-we-could-use-property-decorators-in-ts)|
 |09. |[What is the difference between "interface vs type" statements?](#q-what-is-the-difference-between--interface-vs-type--statements)|
@@ -95,7 +95,7 @@ class MyClass {
 new MyClass().myReadonlyProperty = 5; // error, readonly
 ```
 
-#### Q. What is getters/setters in TypeScript?
+#### Q. What is getters and setters in TypeScript?
 TypeScript supports getters/setters as a way of intercepting accesses to a member of an object. This gives a way of having finer-grained control over how a member is accessed on each object.
 ```typescript
 class Employee {
