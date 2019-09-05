@@ -1,6 +1,6 @@
-# AngularMaterial
+# Angular6SidenavExample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
 
@@ -22,6 +22,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Other Similar Tutorials
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[Angular Data Table Example](https://www.devglan.com/angular/angular-data-table-example).
+
+[Angular JWT Authentication](https://www.devglan.com/spring-security/angular-jwt-authentication)
+
+[Spring Boot Angular Example](https://www.devglan.com/spring-boot/spring-boot-angular-example)
