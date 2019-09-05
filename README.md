@@ -207,6 +207,7 @@
 |202. |[What is wildcard state?](#q-what-is-wildcard-state)|
 |203. |[How will you localize numbers currencies and dates?](#q-how-will-you-localize-numbers-currencies-and-dates)|
 |204. |[How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)|
+|205. |[What is hammerjs in angular?](#q-what-is-hammerjs-in-angular)|
 
 
 
@@ -3178,4 +3179,6 @@ export class AppComponent implements AfterViewChecked {
 #### Q. How will you localize numbers currencies and dates?
 *TODO*
 #### Q. How will you optimize image and svg in your angular app?
+*TODO*
+#### Q. What is hammerjs in angular?
 *TODO*
