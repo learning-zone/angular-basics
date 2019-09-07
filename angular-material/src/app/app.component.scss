@@ -2,18 +2,29 @@
     width: 100%;
     height: 91%;
     border: 1px solid rgba(0, 0, 0, 0.5);
-  }
+}
   
-  .sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .sidenav {
-    padding: 20px;
-    min-width: 16%;
-    box-shadow: 5px 2px 10px #aaaaaa;
-  }
-  
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav {
+  padding: 20px;
+  min-width: 16%;
+  box-shadow: 5px 2px 10px #aaaaaa;
+}
+
+.header-toolbar {
+  padding-left: 60%;
+}
+
+a.mat-button.mat-button-base:hover {
+    border: 1px solid #fafafa;
+} 
+
+.header-toolbar-link {
+  min-width: 120px;
+}

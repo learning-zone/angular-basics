@@ -5,6 +5,11 @@
     </button>
     <h1>Angular Material</h1>
     <span class="menu-spacer"></span>
+    <div class="header-toolbar">
+      <a mat-button [routerLink]="'/accounts'" class="header-toolbar-link"> Item-1 </a>
+      <a mat-button [routerLink]="'/create-account'" class="header-toolbar-link"> Item-2 </a>
+      <a mat-button [routerLink]="'/contacts'" class="header-toolbar-link"> Item-3 </a>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
