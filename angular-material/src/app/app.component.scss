@@ -28,3 +28,13 @@ a.mat-button.mat-button-base:hover {
 .header-toolbar-link {
   min-width: 120px;
 }
+
+.page {
+  display: flex
+}
+.page__sidebar {
+  width: 300px;
+}
+.page__content {
+  flex: 1
+}

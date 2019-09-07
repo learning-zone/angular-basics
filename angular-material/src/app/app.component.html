@@ -15,7 +15,33 @@
 
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side" opened="true" disableClose="true">
-    <p>User Profile</p>
+      
+    <div class="page">
+          <div class="page__sidebar">    
+            <mat-accordion multi="true" displayMode="flat">
+              <mat-expansion-panel
+                *ngFor="let panel of config.panels">
+        
+                <mat-expansion-panel-header>
+                  <mat-panel-title>{{ panel.name }}</mat-panel-title>
+                  <mat-panel-description>{{ panel.description }}</mat-panel-description>
+                </mat-expansion-panel-header>
+        
+                <!--<p>Panel content goes here</p>-->
+                <app-widget-container
+                  [selector]="panel.component.selector"
+                  [settings]="panel.component.settings">
+                </app-widget-container>
+        
+              </mat-expansion-panel>
+            </mat-accordion>
+        
+          </div>
+        
+          <div class="page__content">
+          </div>
+        </div>
+        
     
   </mat-drawer>
 
