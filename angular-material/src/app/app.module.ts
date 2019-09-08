@@ -6,14 +6,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from '@angular/material';
-import { SidebarModule } from './sidebar/sidebar.module';
-import { WidgetContainerComponent } from './sidebar/widget-container/widget-container.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    WidgetContainerComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,8 +22,7 @@ import { WidgetContainerComponent } from './sidebar/widget-container/widget-cont
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    MatExpansionModule,
-    SidebarModule
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  panelOpenState = false;
   config = {
-    panels: [
+    menus: [
       {
         name: 'Section 1',
         description: '',
