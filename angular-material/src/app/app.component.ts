@@ -6,31 +6,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-material';
-  showFiller = false;
   config = {
     panels: [
       {
         name: 'Section 1',
-        description: 'First section',
+        description: '',
         component: {
-          selector: 'app-sidebar-widget-1',
+          selector: 'app-sidebar-widget-one',
           settings: {}
         }
       },
       {
         name: 'Section 2',
-        description: 'Second section',
+        description: '',
         component: {
-          selector: 'app-sidebar-widget-2',
+          selector: 'app-sidebar-widget-two',
           settings: {}
         }
       },
       {
         name: 'Section 3',
-        description: 'Third section',
+        description: '',
         component: {
-          selector: 'app-sidebar-widget-3',
+          selector: 'app-sidebar-widget-three',
           settings: {}
         }
       }

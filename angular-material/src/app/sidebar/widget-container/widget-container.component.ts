@@ -4,10 +4,10 @@ import { Component,
   ViewContainerRef,
   Input,
   ComponentRef,
-  Compiler,
   OnDestroy,
   ComponentFactoryResolver
  } from '@angular/core';
+ import { SidebarModule } from '../sidebar.module';
  import { SidebarService } from "../sidebar.service";
 
 
@@ -27,8 +27,7 @@ export class WidgetContainerComponent implements OnInit, OnDestroy {
 
 
   constructor(private sidebarService: SidebarService,
-    private cfr: ComponentFactoryResolver,
-    public viewContainerRef: ViewContainerRef
+    private cfr: ComponentFactoryResolver
   ) { }
 
   ngOnInit() {
@@ -47,5 +46,4 @@ export class WidgetContainerComponent implements OnInit, OnDestroy {
       this.componentRef = null;
     }
   }
-
 }

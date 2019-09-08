@@ -3,9 +3,7 @@ import { SidebarWidgetOneComponent } from './sidebar-widget-one/sidebar-widget-o
 import { SidebarWidgetTwoComponent } from './sidebar-widget-two/sidebar-widget-two.component';
 import { SidebarWidgetThreeComponent } from './sidebar-widget-three/sidebar-widget-three.component';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SidebarService {
 
   widgets: { [id: string]: Type<{}> } = {
