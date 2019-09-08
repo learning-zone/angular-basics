@@ -6,22 +6,20 @@
     <h1>Angular Material</h1>
     <span class="menu-spacer"></span>
     <div class="header-toolbar">
-      <a mat-button [routerLink]="'/accounts'" class="header-toolbar-link"> Item-1 </a>
-      <a mat-button [routerLink]="'/create-account'" class="header-toolbar-link"> Item-2 </a>
-      <a mat-button [routerLink]="'/log-out'" class="header-toolbar-link"> Log Out </a>
+      <!-- Header Toolbar Links Area -->
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side" opened="true" disableClose="true">
+    <!-- Sidebar Navigation Links Area -->
     <app-sidebar></app-sidebar>    
   </mat-drawer>
 
   <div class="sidenav-content">
     Dashboard 
+    <router-outlet></router-outlet>
   </div>
 
 </mat-drawer-container>
-
-<router-outlet></router-outlet>
