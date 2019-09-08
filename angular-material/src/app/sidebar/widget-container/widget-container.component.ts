@@ -9,7 +9,7 @@ import { Component,
   ComponentFactoryResolver
  } from '@angular/core';
  import { SidebarService } from "../sidebar.service";
- import { SidebarModule } from '../sidebar.module';
+
 
 @Component({
   selector: 'app-widget-container',
