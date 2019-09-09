@@ -35,5 +35,47 @@
             <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Stepper</a></p>
             <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Tabs</a></p>
             <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Tree</a></p>
-        </mat-expansion-panel>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+        <mat-panel-title>Buttons & Indicators</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p><a mat-button [routerLink]="'/accounts'" class="sidenav-link">Button</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Button toggle</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Badge</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Chips</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Icon</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Progress spinner</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Progress bar</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Ripples</a></p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+        <mat-panel-title>Popups & Modals</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p><a mat-button [routerLink]="'/accounts'" class="sidenav-link">Card</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Divider</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Expansion Panel</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Grid list</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">List</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Stepper</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Tabs</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Tree</a></p>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+        <mat-panel-title>Data table</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p><a mat-button [routerLink]="'/accounts'" class="sidenav-link">Card</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Divider</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Expansion Panel</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Grid list</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">List</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Stepper</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Tabs</a></p>
+        <p><a mat-button [routerLink]="'/create-account'" class="sidenav-link">Tree</a></p>
+    </mat-expansion-panel>
 </mat-accordion>
