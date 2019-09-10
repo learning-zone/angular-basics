@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from '@angular/material';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AutocompleteComponent } from './components/pages/autocomplete/autocomplete.component';
+import { CheckboxComponent } from './components/pages/checkbox/checkbox.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import { AutocompleteComponent } from './components/pages/autocomplete/autocompl
     MatIconModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
