@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
     this.menus = sidebarservice.getMenuList();
   }
 
-
   ngOnInit() {
     const appTitle = this.titleService.getTitle();
     this.router
