@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-export const APP_NAME = 'cdx';
+export const APP_NAME = 'angular-material';
 export const REFERRER = `/${APP_NAME}/#/home`;
 
 @Injectable({
