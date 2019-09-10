@@ -1,5 +1,4 @@
 import { APP_INITIALIZER, ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
-// import { AnalyticsProvider, AnalyticsRun, AnalyticsService } from '@cdx/analytics';
 import { AnalyticsProvider, AnalyticsRun, AnalyticsService } from 'analytics';
 import { I18nModule } from 'i18n';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
