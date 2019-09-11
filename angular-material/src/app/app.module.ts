@@ -10,13 +10,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AutocompleteComponent } from './components/pages/autocomplete/autocomplete.component';
 import { CheckboxComponent } from './components/pages/checkbox/checkbox.component';
+import { DatepickerComponent } from './components/pages/datepicker/datepicker.component';
+import { FormComponent } from './components/pages/form/form.component';
+import { InputComponent } from './components/pages/input/input.component';
+import { RadioComponent } from './components/pages/radio/radio.component';
+import { SelectComponent } from './components/pages/select/select.component';
+import { SliderComponent } from './components/pages/slider/slider.component';
+import { SlideComponent } from './components/pages/slide/slide.component';
 
 // Angular Material Components
-import {MatCheckboxModule} from '@angular/material';
+import {MatCheckboxModule, MatNativeDateModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatDatepickerModule } from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
@@ -42,13 +49,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import { DatepickerComponent } from './components/pages/datepicker/datepicker.component';
-import { FormComponent } from './components/pages/form/form.component';
-import { InputComponent } from './components/pages/input/input.component';
-import { RadioComponent } from './components/pages/radio/radio.component';
-import { SelectComponent } from './components/pages/select/select.component';
-import { SliderComponent } from './components/pages/slider/slider.component';
-import { SlideComponent } from './components/pages/slide/slide.component';
+
 
 
 
@@ -74,11 +75,11 @@ import { SlideComponent } from './components/pages/slide/slide.component';
     FormsModule,
     ReactiveFormsModule,
     MatCheckboxModule,
-    MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     MatFormFieldModule,
     MatRadioModule,
     MatSelectModule,
@@ -105,7 +106,8 @@ import { SlideComponent } from './components/pages/slide/slide.component';
     MatSortModule,
     MatPaginatorModule
   ],
-  providers: [Title],
+  providers: [Title,
+    MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
