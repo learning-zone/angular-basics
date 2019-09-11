@@ -42,6 +42,13 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { DatepickerComponent } from './components/pages/datepicker/datepicker.component';
+import { FormComponent } from './components/pages/form/form.component';
+import { InputComponent } from './components/pages/input/input.component';
+import { RadioComponent } from './components/pages/radio/radio.component';
+import { SelectComponent } from './components/pages/select/select.component';
+import { SliderComponent } from './components/pages/slider/slider.component';
+import { SlideComponent } from './components/pages/slide/slide.component';
 
 
 
@@ -50,7 +57,14 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     AppComponent,
     SidebarComponent,
     AutocompleteComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    DatepickerComponent,
+    FormComponent,
+    InputComponent,
+    RadioComponent,
+    SelectComponent,
+    SliderComponent,
+    SlideComponent
   ],
   imports: [
     BrowserModule,
