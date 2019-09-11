@@ -1,1 +1,26 @@
-<p>form works!</p>
+<h3>Form Field<hr /></h3>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create Contact Form</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="example-container">
+      <mat-form-field>
+        <input matInput placeholder="Input" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Select">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+</mat-card>
