@@ -12,11 +12,6 @@ import { AutocompleteComponent } from './components/pages/autocomplete/autocompl
 import { CheckboxComponent } from './components/pages/checkbox/checkbox.component';
 import { DatepickerComponent } from './components/pages/datepicker/datepicker.component';
 import { FormComponent } from './components/pages/form/form.component';
-import { InputComponent } from './components/pages/input/input.component';
-import { RadioComponent } from './components/pages/radio/radio.component';
-import { SelectComponent } from './components/pages/select/select.component';
-import { SliderComponent } from './components/pages/slider/slider.component';
-import { SlideComponent } from './components/pages/slide/slide.component';
 
 // Angular Material Components
 import { MatCheckboxModule, MatNativeDateModule} from '@angular/material';
@@ -58,12 +53,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     AutocompleteComponent,
     CheckboxComponent,
     DatepickerComponent,
-    FormComponent,
-    InputComponent,
-    RadioComponent,
-    SelectComponent,
-    SliderComponent,
-    SlideComponent
+    FormComponent
   ],
   imports: [
     BrowserModule,
