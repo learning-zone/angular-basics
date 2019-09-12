@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
@@ -9,7 +9,9 @@ import { map, startWith } from 'rxjs/operators';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  hide = true;
   myControl = new FormControl();
+  email = new FormControl('', [Validators.required, Validators.email]);
   options: string[] = ['RED', 'ORANGE', 'YELLOW', 'GREEN', 'BLUE', 'INDIGO', 'VIOLET'];
   filteredOptions: Observable<string[]>;
 
@@ -25,5 +27,11 @@ export class FormComponent implements OnInit {
     const filterValue = value.toLowerCase();
 
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'You must enter a value' :
+        this.email.hasError('email') ? 'Not a valid email' :
+            '';
   }
 }

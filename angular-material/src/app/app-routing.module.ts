@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'autocomplete', component: AutocompleteComponent, data: {title: 'Autocomplete | Angular Material'}},
   { path: 'checkbox', component: CheckboxComponent, data: {title: 'Checkbox | Angular Material'}},
   { path: 'datepicker', component: DatepickerComponent, data: {title: 'Datepicker | Angular Material'}},
-  { path: 'form-field', component: FormComponent, data: {title: 'Form | Angular Material'}},
+  { path: 'material-form', component: FormComponent, data: {title: 'Form | Angular Material'}},
   { path: 'input', component: InputComponent, data: {title: 'Input | Angular Material'}},
   { path: 'radio', component: RadioComponent, data: {title: 'Radio | Angular Material'}},
   { path: 'select', component: SelectComponent, data: {title: 'Select | Angular Material'}},

@@ -1,21 +1,33 @@
-<h3>Form Field<hr /></h3>
+<h3>Material Form<hr /></h3>
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Create Contact Form</mat-card-title>
+    <mat-card-title>Contact Us</mat-card-title>
   </mat-card-header>
 
   <mat-card-content>
     <div class="example-container">
       <mat-form-field>
-        <input matInput placeholder="Input" />
+        <input matInput placeholder="User Name" />
       </mat-form-field>
 
       <mat-form-field>
-        <textarea matInput placeholder="Textarea"></textarea>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
 
       <mat-form-field>
-        <mat-select placeholder="Select">
+        <textarea matInput placeholder="Address"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+         <input matInput placeholder="Enter your email" [formControl]="email" required>
+         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-select placeholder="Choose color">
             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
             {{option}}
             </mat-option>
