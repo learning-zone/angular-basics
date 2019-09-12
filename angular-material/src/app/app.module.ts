@@ -44,7 +44,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { PaginatorComponent } from './app/components/pages/paginator/paginator.component';
+import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
 import { TableComponent } from './components/pages/table/table.component';
 

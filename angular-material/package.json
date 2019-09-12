@@ -24,11 +24,13 @@
     "@angular/router": "~9.0.0-next.5",
     "@ngx-translate/core": "^11.0.1",
     "analytics": "^0.1.20",
+    "classlist.js": "^1.1.20150312",
     "flex-layout": "^1.0.1",
     "hammerjs": "^2.0.8",
     "i18n": "^0.8.3",
     "rxjs": "~6.5.3",
     "tslib": "^1.9.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

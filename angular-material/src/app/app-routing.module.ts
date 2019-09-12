@@ -5,6 +5,9 @@ import { AutocompleteComponent } from '../app/components/pages/autocomplete/auto
 import { CheckboxComponent } from '../app/components/pages/checkbox/checkbox.component';
 import { DatepickerComponent } from '../app/components/pages/datepicker/datepicker.component';
 import { FormComponent } from '../app/components/pages/form/form.component';
+import { PaginatorComponent } from '../app/components/pages/paginator/paginator.component';
+import { SortHeaderComponent } from '../app/components/pages/sort-header/sort-header.component';
+import { TableComponent } from '../app/components/pages/table/table.component';
 
 
 const routes: Routes = [
@@ -16,7 +19,11 @@ const routes: Routes = [
   { path: 'autocomplete', component: AutocompleteComponent, data: {title: 'Autocomplete | Angular Material'}},
   { path: 'checkbox', component: CheckboxComponent, data: {title: 'Checkbox | Angular Material'}},
   { path: 'datepicker', component: DatepickerComponent, data: {title: 'Datepicker | Angular Material'}},
-  { path: 'material-form', component: FormComponent, data: {title: 'Form | Angular Material'}}
+  { path: 'material-form', component: FormComponent, data: {title: 'Form | Angular Material'}},
+  { path: 'paginator', component: PaginatorComponent, data: {title: 'Paginator | Angular Material'}},
+  { path: 'sort-header', component: SortHeaderComponent, data: {title: 'SortHeader | Angular Material'}},
+  { path: 'table', component: TableComponent, data: {title: 'Table | Angular Material'}}
+
 
 ];
 
