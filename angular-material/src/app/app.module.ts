@@ -46,7 +46,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
-import { TableComponent } from './components/pages/table/table.component';
 
 
 @NgModule({
@@ -58,8 +57,7 @@ import { TableComponent } from './components/pages/table/table.component';
     DatepickerComponent,
     FormComponent,
     PaginatorComponent,
-    SortHeaderComponent,
-    TableComponent
+    SortHeaderComponent
   ],
   imports: [
     BrowserModule,
