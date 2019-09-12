@@ -7,6 +7,10 @@ import { DatepickerComponent } from '../app/components/pages/datepicker/datepick
 import { FormComponent } from '../app/components/pages/form/form.component';
 import { PaginatorComponent } from '../app/components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from '../app/components/pages/sort-header/sort-header.component';
+import { CardComponent } from '../app/components/pages/card/card.component';
+import { TabsComponent } from '../app/components/pages/tabs/tabs.component';
+import { ListComponent } from '../app/components/pages/list/list.component';
+import { TreeComponent } from '../app/components/pages/tree/tree.component';
 
 
 const routes: Routes = [
@@ -20,7 +24,11 @@ const routes: Routes = [
   { path: 'datepicker', component: DatepickerComponent, data: {title: 'Datepicker | Angular Material'}},
   { path: 'material-form', component: FormComponent, data: {title: 'Form | Angular Material'}},
   { path: 'paginator', component: PaginatorComponent, data: {title: 'Paginator | Angular Material'}},
-  { path: 'sort-header', component: SortHeaderComponent, data: {title: 'SortHeader | Angular Material'}}
+  { path: 'sort-header', component: SortHeaderComponent, data: {title: 'SortHeader | Angular Material'}},
+  { path: 'card', component: CardComponent, data: {title: 'Card | Angular Material'}},
+  { path: 'tabs', component: TabsComponent, data: {title: 'Tabs | Angular Material'}},
+  { path: 'list', component: ListComponent, data: {title: 'List | Angular Material'}},
+  { path: 'tree', component: TreeComponent, data: {title: 'Tree | Angular Material'}},
 
 
 ];
