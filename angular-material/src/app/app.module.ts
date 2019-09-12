@@ -46,6 +46,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
+import { CardComponent } from './components/pages/card/card.component';
+import { ListComponent } from './components/pages/list/list.component';
+import { TabsComponent } from './components/pages/tabs/tabs.component';
+import { TreeComponent } from './components/pages/tree/tree.component';
 
 
 @NgModule({
@@ -57,7 +61,11 @@ import { SortHeaderComponent } from './components/pages/sort-header/sort-header.
     DatepickerComponent,
     FormComponent,
     PaginatorComponent,
-    SortHeaderComponent
+    SortHeaderComponent,
+    CardComponent,
+    ListComponent,
+    TabsComponent,
+    TreeComponent
   ],
   imports: [
     BrowserModule,
