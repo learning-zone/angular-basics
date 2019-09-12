@@ -12,6 +12,8 @@ export class FormComponent implements OnInit {
   hide = true;
   myControl = new FormControl();
   email = new FormControl('', [Validators.required, Validators.email]);
+  favoriteSeason: string;
+  seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
   options: string[] = ['RED', 'ORANGE', 'YELLOW', 'GREEN', 'BLUE', 'INDIGO', 'VIOLET'];
   filteredOptions: Observable<string[]>;
 
