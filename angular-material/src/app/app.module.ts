@@ -49,6 +49,12 @@ import { SortHeaderComponent } from './components/pages/sort-header/sort-header.
 import { CardComponent } from './components/pages/card/card.component';
 import { ListComponent } from './components/pages/list/list.component';
 import { TabsComponent } from './components/pages/tabs/tabs.component';
+import { ButtonComponent } from './components/pages/button/button.component';
+import { ButtonToggleComponent } from './components/pages/button-toggle/button-toggle.component';
+import { BadgeComponent } from './components/pages/badge/badge.component';
+import { ChipsComponent } from './components/pages/chips/chips.component';
+import { ProgressSpinnerComponent } from './components/pages/progress-spinner/progress-spinner.component';
+import { ProgressBarComponent } from './components/pages/progress-bar/progress-bar.component';
 
 
 @NgModule({
@@ -63,7 +69,13 @@ import { TabsComponent } from './components/pages/tabs/tabs.component';
     SortHeaderComponent,
     CardComponent,
     ListComponent,
-    TabsComponent
+    TabsComponent,
+    ButtonComponent,
+    ButtonToggleComponent,
+    BadgeComponent,
+    ChipsComponent,
+    ProgressSpinnerComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
