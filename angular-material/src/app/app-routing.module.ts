@@ -10,7 +10,6 @@ import { SortHeaderComponent } from '../app/components/pages/sort-header/sort-he
 import { CardComponent } from '../app/components/pages/card/card.component';
 import { TabsComponent } from '../app/components/pages/tabs/tabs.component';
 import { ListComponent } from '../app/components/pages/list/list.component';
-import { TreeComponent } from '../app/components/pages/tree/tree.component';
 
 
 const routes: Routes = [
@@ -28,8 +27,6 @@ const routes: Routes = [
   { path: 'card', component: CardComponent, data: {title: 'Card | Angular Material'}},
   { path: 'tabs', component: TabsComponent, data: {title: 'Tabs | Angular Material'}},
   { path: 'list', component: ListComponent, data: {title: 'List | Angular Material'}},
-  { path: 'tree', component: TreeComponent, data: {title: 'Tree | Angular Material'}},
-
 
 ];
 

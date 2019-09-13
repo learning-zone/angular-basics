@@ -49,7 +49,6 @@ import { SortHeaderComponent } from './components/pages/sort-header/sort-header.
 import { CardComponent } from './components/pages/card/card.component';
 import { ListComponent } from './components/pages/list/list.component';
 import { TabsComponent } from './components/pages/tabs/tabs.component';
-import { TreeComponent } from './components/pages/tree/tree.component';
 
 
 @NgModule({
@@ -64,8 +63,7 @@ import { TreeComponent } from './components/pages/tree/tree.component';
     SortHeaderComponent,
     CardComponent,
     ListComponent,
-    TabsComponent,
-    TreeComponent
+    TabsComponent
   ],
   imports: [
     BrowserModule,
