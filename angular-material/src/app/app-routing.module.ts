@@ -10,6 +10,12 @@ import { SortHeaderComponent } from '../app/components/pages/sort-header/sort-he
 import { CardComponent } from '../app/components/pages/card/card.component';
 import { TabsComponent } from '../app/components/pages/tabs/tabs.component';
 import { ListComponent } from '../app/components/pages/list/list.component';
+import { ButtonComponent } from '../app/components/pages/button/button.component';
+import { ButtonToggleComponent } from '../app/components/pages/button-toggle/button-toggle.component';
+import { BadgeComponent } from '../app/components/pages/badge/badge.component';
+import { ChipsComponent } from '../app/components/pages/chips/chips.component';
+import { ProgressSpinnerComponent } from '../app/components/pages/progress-spinner/progress-spinner.component';
+import { ProgressBarComponent } from '../app/components/pages/progress-bar/progress-bar.component';
 
 
 const routes: Routes = [
@@ -27,6 +33,13 @@ const routes: Routes = [
   { path: 'card', component: CardComponent, data: {title: 'Card | Angular Material'}},
   { path: 'tabs', component: TabsComponent, data: {title: 'Tabs | Angular Material'}},
   { path: 'list', component: ListComponent, data: {title: 'List | Angular Material'}},
+
+  { path: 'button', component: ButtonComponent, data: {title: 'Button | Angular Material'}},
+  { path: 'button-toggle', component: ButtonToggleComponent, data: {title: 'ButtonToggle | Angular Material'}},
+  { path: 'badge', component: BadgeComponent, data: {title: 'Badge | Angular Material'}},
+  { path: 'chips', component: ChipsComponent, data: {title: 'Chips | Angular Material'}},
+  { path: 'progress-spinner', component: ProgressSpinnerComponent, data: {title: 'ProgressSpinner | Angular Material'}},
+  { path: 'progress-bar', component: ProgressBarComponent, data: {title: 'ProgressBar | Angular Material'}},
 
 ];
 
