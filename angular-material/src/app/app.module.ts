@@ -16,6 +16,7 @@ import { FormComponent } from './components/pages/form/form.component';
 // Angular Material Components
 import { MatCheckboxModule, MatNativeDateModule} from '@angular/material';
 import { MatButtonModule} from '@angular/material';
+import { MatBadgeModule} from '@angular/material/badge';
 import { MatInputModule} from '@angular/material/input';
 import { MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -82,6 +83,7 @@ import { ProgressBarComponent } from './components/pages/progress-bar/progress-b
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatBadgeModule,
     MatCheckboxModule,
     MatButtonModule,
     MatInputModule,
