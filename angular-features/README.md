@@ -51,4 +51,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Project Output
 
-![alt text](https://github.com/learning-zone/Angular/blob/master/angular-material/src/assets/img/angular-features.png)
+![alt text](https://github.com/learning-zone/Angular/blob/master/angular-features/src/assets/img/angular-features.png)
