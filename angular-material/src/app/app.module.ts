@@ -62,6 +62,7 @@ import { SnackbarComponent } from './components/pages/snackbar/snackbar.componen
 import { TooltipComponent } from './components/pages/tooltip/tooltip.component';
 import { BottomSheetDialogComponent } from './components/pages/bottom-sheet-dialog/bottom-sheet-dialog.component';
 import { DialogExampleComponent } from './components/pages/dialog-example/dialog-example.component';
+import { SnackbarExampleComponent } from './components/pages/snackbar-example/snackbar-example.component';
 
 
 @NgModule({
@@ -87,7 +88,8 @@ import { DialogExampleComponent } from './components/pages/dialog-example/dialog
     SnackbarComponent,
     TooltipComponent,
     BottomSheetDialogComponent,
-    DialogExampleComponent
+    DialogExampleComponent,
+    SnackbarExampleComponent
   ],
   imports: [
     BrowserModule,
