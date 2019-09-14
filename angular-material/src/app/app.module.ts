@@ -17,6 +17,7 @@ import { FormComponent } from './components/pages/form/form.component';
 import { MatCheckboxModule, MatNativeDateModule} from '@angular/material';
 import { MatButtonModule} from '@angular/material';
 import { MatBadgeModule} from '@angular/material/badge';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatInputModule} from '@angular/material/input';
 import { MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -59,6 +60,7 @@ import { BottomSheetComponent } from './components/pages/bottom-sheet/bottom-she
 import { DialogComponent } from './components/pages/dialog/dialog.component';
 import { SnackbarComponent } from './components/pages/snackbar/snackbar.component';
 import { TooltipComponent } from './components/pages/tooltip/tooltip.component';
+import { BottomSheetDialogComponent } from './components/pages/bottom-sheet-dialog/bottom-sheet-dialog.component';
 
 
 @NgModule({
@@ -82,12 +84,14 @@ import { TooltipComponent } from './components/pages/tooltip/tooltip.component';
     BottomSheetComponent,
     DialogComponent,
     SnackbarComponent,
-    TooltipComponent
+    TooltipComponent,
+    BottomSheetDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatBottomSheetModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
