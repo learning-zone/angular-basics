@@ -55,6 +55,10 @@ import { BadgeComponent } from './components/pages/badge/badge.component';
 import { ChipsComponent } from './components/pages/chips/chips.component';
 import { ProgressSpinnerComponent } from './components/pages/progress-spinner/progress-spinner.component';
 import { ProgressBarComponent } from './components/pages/progress-bar/progress-bar.component';
+import { BottomSheetComponent } from './components/pages/bottom-sheet/bottom-sheet.component';
+import { DialogComponent } from './components/pages/dialog/dialog.component';
+import { SnackbarComponent } from './components/pages/snackbar/snackbar.component';
+import { TooltipComponent } from './components/pages/tooltip/tooltip.component';
 
 
 @NgModule({
@@ -74,7 +78,11 @@ import { ProgressBarComponent } from './components/pages/progress-bar/progress-b
     BadgeComponent,
     ChipsComponent,
     ProgressSpinnerComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    BottomSheetComponent,
+    DialogComponent,
+    SnackbarComponent,
+    TooltipComponent
   ],
   imports: [
     BrowserModule,

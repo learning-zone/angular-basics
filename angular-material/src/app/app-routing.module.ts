@@ -15,6 +15,10 @@ import { BadgeComponent } from '../app/components/pages/badge/badge.component';
 import { ChipsComponent } from '../app/components/pages/chips/chips.component';
 import { ProgressSpinnerComponent } from '../app/components/pages/progress-spinner/progress-spinner.component';
 import { ProgressBarComponent } from '../app/components/pages/progress-bar/progress-bar.component';
+import { BottomSheetComponent } from '../app/components/pages/bottom-sheet/bottom-sheet.component';
+import { DialogComponent } from '../app/components/pages/dialog/dialog.component';
+import { SnackbarComponent } from '../app/components/pages/snackbar/snackbar.component';
+import { TooltipComponent } from '../app/components/pages/tooltip/tooltip.component';
 
 
 const routes: Routes = [
@@ -38,6 +42,12 @@ const routes: Routes = [
   { path: 'chips', component: ChipsComponent, data: {title: 'Chips | Angular Material'}},
   { path: 'progress-spinner', component: ProgressSpinnerComponent, data: {title: 'ProgressSpinner | Angular Material'}},
   { path: 'progress-bar', component: ProgressBarComponent, data: {title: 'ProgressBar | Angular Material'}},
+
+  { path: 'bottom-sheet', component: BottomSheetComponent, data: {title: 'BottomSheet | Angular Material'}},
+  { path: 'dialog', component: DialogComponent, data: {title: 'Dialog | Angular Material'}},
+  { path: 'snackbar', component: SnackbarComponent, data: {title: 'Snackbar | Angular Material'}},
+  { path: 'tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+
 
 ];
 
