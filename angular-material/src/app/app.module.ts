@@ -46,6 +46,20 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+
+// Angular CDK Components
+import { A11yModule } from '@angular/cdk/a11y';
+import { BidiModule } from '@angular/cdk/bidi';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { LayoutModule } from '@angular/cdk/layout';
+import { ObserversModule } from '@angular/cdk/observers';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PlatformModule } from '@angular/cdk/platform';
+import { PortalModule } from '@angular/cdk/portal';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { TextFieldModule } from '@angular/cdk/text-field';
+
+// Angular Custom Components
 import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
 import { CardComponent } from './components/pages/card/card.component';
@@ -63,8 +77,6 @@ import { TooltipComponent } from './components/pages/tooltip/tooltip.component';
 import { BottomSheetDialogComponent } from './components/pages/bottom-sheet-dialog/bottom-sheet-dialog.component';
 import { DialogExampleComponent } from './components/pages/dialog-example/dialog-example.component';
 import { SnackbarExampleComponent } from './components/pages/snackbar-example/snackbar-example.component';
-import { AccessibilityComponent } from './cdk/pages/accessibility/accessibility.component';
-import { BidirectionalityComponent } from './cdk/pages/bidirectionality/bidirectionality.component';
 import { DragDropComponent } from './cdk/pages/drag-drop/drag-drop.component';
 import { LayoutComponent } from './cdk/pages/layout/layout.component';
 import { ObserversComponent } from './cdk/pages/observers/observers.component';
@@ -100,8 +112,6 @@ import { TextFieldComponent } from './cdk/pages/text-field/text-field.component'
     BottomSheetDialogComponent,
     DialogExampleComponent,
     SnackbarExampleComponent,
-    AccessibilityComponent,
-    BidirectionalityComponent,
     DragDropComponent,
     LayoutComponent,
     ObserversComponent,
@@ -119,6 +129,16 @@ import { TextFieldComponent } from './cdk/pages/text-field/text-field.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    A11yModule,
+    BidiModule,
+    LayoutModule,
+    ObserversModule,
+    DragDropModule,
+    OverlayModule,
+    PlatformModule,
+    PortalModule,
+    ScrollingModule,
+    TextFieldModule,
     MatBadgeModule,
     MatCheckboxModule,
     MatButtonModule,

@@ -20,8 +20,6 @@ import { DialogComponent } from '../app/components/pages/dialog/dialog.component
 import { SnackbarComponent } from '../app/components/pages/snackbar/snackbar.component';
 import { TooltipComponent } from '../app/components/pages/tooltip/tooltip.component';
 
-import { AccessibilityComponent } from '../app/cdk/pages/accessibility/accessibility.component';
-import { BidirectionalityComponent } from '../app/cdk/pages/bidirectionality/bidirectionality.component';
 import { DragDropComponent } from '../app/cdk/pages/drag-drop/drag-drop.component';
 import { LayoutComponent } from '../app/cdk/pages/layout/layout.component';
 import { ObserversComponent } from '../app/cdk/pages/observers/observers.component';
@@ -57,8 +55,6 @@ const routes: Routes = [
   { path: 'components/snackbar', component: SnackbarComponent, data: {title: 'Snackbar | Angular Material'}},
   { path: 'components/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
 
-  { path: 'cdk/accessibility', component: AccessibilityComponent, data: {title: 'Accessibility | Angular Material'}},
-  { path: 'cdk/bidirectionality', component: BidirectionalityComponent, data: {title: 'Bidirectionality | Angular Material'}},
   { path: 'cdk/drag-drop', component: DragDropComponent, data: {title: 'DragDrop | Angular Material'}},
   { path: 'cdk/layout', component: LayoutComponent, data: {title: 'Layout | Angular Material'}},
   { path: 'cdk/observers', component: ObserversComponent, data: {title: 'Observers | Angular Material'}},
