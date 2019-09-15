@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { AutocompleteComponent } from './components/pages/autocomplete/autocomplete.component';
 import { CheckboxComponent } from './components/pages/checkbox/checkbox.component';
 import { DatepickerComponent } from './components/pages/datepicker/datepicker.component';
