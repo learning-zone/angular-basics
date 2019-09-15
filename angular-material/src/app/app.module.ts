@@ -85,6 +85,17 @@ import { PlatformComponent } from './cdk/pages/platform/platform.component';
 import { PortalComponent } from './cdk/pages/portal/portal.component';
 import { ScrollingComponent } from './cdk/pages/scrolling/scrolling.component';
 import { TextFieldComponent } from './cdk/pages/text-field/text-field.component';
+import { BasicDragDropComponent } from './cdk/pages/drag-drop/basic-drag-drop/basic-drag-drop.component';
+import { SortingComponent } from './cdk/pages/drag-drop/sorting/sorting.component';
+import { ConnectedSortingComponent } from './cdk/pages/drag-drop/connected-sorting/connected-sorting.component';
+import { WithAHandleComponent } from './cdk/pages/drag-drop/with-a-handle/with-a-handle.component';
+import { CustomPreviewComponent } from './cdk/pages/drag-drop/custom-preview/custom-preview.component';
+import { CustomPlaceholerComponent } from './cdk/pages/drag-drop/custom-placeholer/custom-placeholer.component';
+import { HorizontalSortingComponent } from './cdk/pages/drag-drop/horizontal-sorting/horizontal-sorting.component';
+import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.component';
+import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
+import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
+import { EnterPredicateComponent } from './cdk/pages/drag-drop/enter-predicate/enter-predicate.component';
 
 
 @NgModule({
@@ -119,7 +130,18 @@ import { TextFieldComponent } from './cdk/pages/text-field/text-field.component'
     PlatformComponent,
     PortalComponent,
     ScrollingComponent,
-    TextFieldComponent
+    TextFieldComponent,
+    BasicDragDropComponent,
+    SortingComponent,
+    ConnectedSortingComponent,
+    WithAHandleComponent,
+    CustomPreviewComponent,
+    CustomPlaceholerComponent,
+    HorizontalSortingComponent,
+    BoundaryComponent,
+    PositionLockingComponent,
+    WithAlternateRootElementComponent,
+    EnterPredicateComponent
   ],
   imports: [
     BrowserModule,
