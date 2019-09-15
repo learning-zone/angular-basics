@@ -20,6 +20,8 @@ import { DialogComponent } from '../app/components/pages/dialog/dialog.component
 import { SnackbarComponent } from '../app/components/pages/snackbar/snackbar.component';
 import { TooltipComponent } from '../app/components/pages/tooltip/tooltip.component';
 
+import { AccessibilityComponent } from '../app/cdk/pages/accessibility/accessibility.component';
+
 
 const routes: Routes = [
 
@@ -44,7 +46,18 @@ const routes: Routes = [
   { path: 'components/bottom-sheet', component: BottomSheetComponent, data: {title: 'BottomSheet | Angular Material'}},
   { path: 'components/dialog', component: DialogComponent, data: {title: 'Dialog | Angular Material'}},
   { path: 'components/snackbar', component: SnackbarComponent, data: {title: 'Snackbar | Angular Material'}},
-  { path: 'components/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}}
+  { path: 'components/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+
+  { path: 'cdk/Accessibility', component: AccessibilityComponent, data: {title: 'Accessibility | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
+  { path: 'cdk/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
 
 ];
 
