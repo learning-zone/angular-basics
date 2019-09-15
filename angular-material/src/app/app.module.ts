@@ -95,7 +95,6 @@ import { HorizontalSortingComponent } from './cdk/pages/drag-drop/horizontal-sor
 import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.component';
 import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
 import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
-import { EnterPredicateComponent } from './cdk/pages/drag-drop/enter-predicate/enter-predicate.component';
 
 
 @NgModule({
@@ -140,8 +139,7 @@ import { EnterPredicateComponent } from './cdk/pages/drag-drop/enter-predicate/e
     HorizontalSortingComponent,
     BoundaryComponent,
     PositionLockingComponent,
-    WithAlternateRootElementComponent,
-    EnterPredicateComponent
+    WithAlternateRootElementComponent
   ],
   imports: [
     BrowserModule,
