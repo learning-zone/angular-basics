@@ -15,7 +15,6 @@ import { Component } from '@angular/core';
       <mat-tab label="Boundary"> <app-boundary></app-boundary> </mat-tab>
       <mat-tab label="Position Locking"> <app-position-locking></app-position-locking> </mat-tab>
       <mat-tab label="With alternate root element"> <app-with-alternate-root-element></app-with-alternate-root-element> </mat-tab>
-      <mat-tab label="Enter Predicate"> <app-enter-predicate></app-enter-predicate> </mat-tab>
     </mat-tab-group>
   `
 })
