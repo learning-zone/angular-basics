@@ -1,1 +1,4 @@
-<p>horizontal-sorting works!</p>
+<h3>Drag & Drop horizontal sorting<hr/></h3>
+<div cdkDropList cdkDropListOrientation="horizontal" class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
+</div>
