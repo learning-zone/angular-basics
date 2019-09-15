@@ -64,6 +64,15 @@ import { BottomSheetDialogComponent } from './components/pages/bottom-sheet-dial
 import { DialogExampleComponent } from './components/pages/dialog-example/dialog-example.component';
 import { SnackbarExampleComponent } from './components/pages/snackbar-example/snackbar-example.component';
 import { AccessibilityComponent } from './cdk/pages/accessibility/accessibility.component';
+import { BidirectionalityComponent } from './cdk/pages/bidirectionality/bidirectionality.component';
+import { DragDropComponent } from './cdk/pages/drag-drop/drag-drop.component';
+import { LayoutComponent } from './cdk/pages/layout/layout.component';
+import { ObserversComponent } from './cdk/pages/observers/observers.component';
+import { OverlayComponent } from './cdk/pages/overlay/overlay.component';
+import { PlatformComponent } from './cdk/pages/platform/platform.component';
+import { PortalComponent } from './cdk/pages/portal/portal.component';
+import { ScrollingComponent } from './cdk/pages/scrolling/scrolling.component';
+import { TextFieldComponent } from './cdk/pages/text-field/text-field.component';
 
 
 @NgModule({
@@ -91,7 +100,16 @@ import { AccessibilityComponent } from './cdk/pages/accessibility/accessibility.
     BottomSheetDialogComponent,
     DialogExampleComponent,
     SnackbarExampleComponent,
-    AccessibilityComponent
+    AccessibilityComponent,
+    BidirectionalityComponent,
+    DragDropComponent,
+    LayoutComponent,
+    ObserversComponent,
+    OverlayComponent,
+    PlatformComponent,
+    PortalComponent,
+    ScrollingComponent,
+    TextFieldComponent
   ],
   imports: [
     BrowserModule,
