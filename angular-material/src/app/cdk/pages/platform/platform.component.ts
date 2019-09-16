@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {
+  getSupportedInputTypes,
+  Platform,
+  supportsPassiveEventListeners,
+  supportsScrollBehavior,
+} from '@angular/cdk/platform';
 
 @Component({
   selector: 'app-platform',
   templateUrl: './platform.component.html',
   styleUrls: ['./platform.component.scss']
 })
-export class PlatformComponent implements OnInit {
+export class PlatformComponent {
 
-  constructor() { }
+  supportedInputTypes = Array.from(getSupportedInputTypes()).join(', ');
+  supportsPassiveEventListeners = supportsPassiveEventListeners();
+  supportsScrollBehavior = supportsScrollBehavior();
 
-  ngOnInit() {
-  }
-
+  constructor(public platform: Platform) {}
 }

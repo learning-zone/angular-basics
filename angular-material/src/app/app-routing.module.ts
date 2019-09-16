@@ -21,9 +21,6 @@ import { SnackbarComponent } from '../app/components/pages/snackbar/snackbar.com
 import { TooltipComponent } from '../app/components/pages/tooltip/tooltip.component';
 
 import { DragDropComponent } from '../app/cdk/pages/drag-drop/drag-drop.component';
-import { LayoutComponent } from '../app/cdk/pages/layout/layout.component';
-import { ObserversComponent } from '../app/cdk/pages/observers/observers.component';
-import { OverlayComponent } from '../app/cdk/pages/overlay/overlay.component';
 import { PlatformComponent } from '../app/cdk/pages/platform/platform.component';
 import { PortalComponent } from '../app/cdk/pages/portal/portal.component';
 import { ScrollingComponent } from '../app/cdk/pages/scrolling/scrolling.component';
@@ -56,9 +53,6 @@ const routes: Routes = [
   { path: 'components/tooltip', component: TooltipComponent, data: {title: 'Tooltip | Angular Material'}},
 
   { path: 'cdk/drag-drop', component: DragDropComponent, data: {title: 'DragDrop | Angular Material'}},
-  { path: 'cdk/layout', component: LayoutComponent, data: {title: 'Layout | Angular Material'}},
-  { path: 'cdk/observers', component: ObserversComponent, data: {title: 'Observers | Angular Material'}},
-  { path: 'cdk/overlay', component: OverlayComponent, data: {title: 'Overlay | Angular Material'}},
   { path: 'cdk/platform', component: PlatformComponent, data: {title: 'Platform | Angular Material'}},
   { path: 'cdk/portal', component: PortalComponent, data: {title: 'Portal | Angular Material'}},
   { path: 'cdk/scrolling', component: ScrollingComponent, data: {title: 'Scrolling | Angular Material'}},
