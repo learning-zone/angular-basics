@@ -3143,7 +3143,34 @@ export class AppComponent {
 }
 ```
 #### Q. What is transclusion in angular?
-*TODO*
+Transclusion is a way to let you define a fixed view template, and at the same time allow you to define a slot for dynamic content by using `ng-content` tag.
+
+* **Content Projection**  
+Content projection consists in passing a portion of the DOM tree from a parent component to a child component.
+It’s perfect to build reusable components such as dialogs, modals, tabs, and the like.
+
+Example: create a pop-up window with customizable content, and I’d like to “pass” that content to the pop-up as follows:
+```html
+<app-popup-window [isOpen]="showPopup" title="Test pop-up">
+   This is the content of the pop-up (thanks to transclusion aka        content projection)
+</app-popup-window>
+```
+
+Note that I’m also passing a title as an input to that component. Now, by default, the above code would not project the content. In order to make content projection happen, we need to add the ng-content directive somewhere in the template of the child component:
+```html
+<div class="modalW-content">
+      <div class="modalW-header">
+        <h2>{{title}}</h2>
+      </div>
+      <div class="modalW-body">
+          <!-- Our content will be projected here -->
+          <ng-content></ng-content>
+      </div>
+</div>
+```
+
+`ng-content` works very much like `router-outlet`: It’s a directive that indicates where dynamic content is going to be loaded.
+
 #### Q. If your data model is updated outside the Zone explain the process how will you the view?
 *TODO*
 #### Q. What is the process of inserting an embedded view from a prepared TemplateRef?
