@@ -3114,6 +3114,9 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 
 #### Q. What is the difference between an Annotation and a Decorator in Angular?
 
+A decorator corresponds to a function that is called on the class whereas annotations are "only" metadata set on the class using the Reflect Metadata library.
+
+With TypeScript and ES7, @Something is a decorator. In the context of Angular2, decorators like @Component, @Injectable, ... define metadata for the decorated element using the Reflect.defineMetadata method.
 
 |Annotation	              |Decorator                  |
 |-------------------------|---------------------------|
