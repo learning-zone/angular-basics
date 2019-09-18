@@ -3152,7 +3152,7 @@ It’s perfect to build reusable components such as dialogs, modals, tabs, and t
 Example: create a pop-up window with customizable content, and I’d like to “pass” that content to the pop-up as follows:
 ```html
 <app-popup-window [isOpen]="showPopup" title="Test pop-up">
-   This is the content of the pop-up (thanks to transclusion aka        content projection)
+   This is the content of the pop-up 
 </app-popup-window>
 ```
 
