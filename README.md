@@ -3116,7 +3116,7 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 
 A decorator corresponds to a function that is called on the class whereas annotations are "only" metadata set on the class using the Reflect Metadata library.
 
-With TypeScript and ES7, @Something is a decorator. In the context of Angular2, decorators like @Component, @Injectable, ... define metadata for the decorated element using the Reflect.defineMetadata method.
+With TypeScript and ES7, `@Something` is a decorator. In the context of Angular2, decorators like `@Component`, `@Injectable`, ... define metadata for the decorated element using the `Reflect.defineMetadata` method.
 
 |Annotation	              |Decorator                  |
 |-------------------------|---------------------------|
@@ -3125,6 +3125,23 @@ With TypeScript and ES7, @Something is a decorator. In the context of Angular2, 
 |Annotations are hard-coded	|Not hard-coded|
 |Example – import {Component} from 'angular2/angular2';|	Example - import {ComponentAnnotation as Component} from 'angular2/angular2';|
 
+Example: **Class decorator**
+```typescript
+export function MyClassDecorator(value: string) {
+  return function (target: Function) {
+    Reflect.defineMetadata("MyClassDecorator", value, target);
+  }
+}
+
+@Component({ ... })
+@MyClassDecorator("my metadata")
+export class AppComponent {
+  constructor() {
+    let decoratorValue: string
+      = Reflect.getMetadata("MyClassDecorator", this.constructor);
+  }
+}
+```
 #### Q. What is transclusion in angular?
 *TODO*
 #### Q. If your data model is updated outside the Zone explain the process how will you the view?
