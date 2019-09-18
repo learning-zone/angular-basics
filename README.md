@@ -3113,7 +3113,15 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * Notify
 
 #### Q. What is the difference between an Annotation and a Decorator in Angular?
-*TODO*
+
+
+|Annotation	              |Decorator                  |
+|-------------------------|---------------------------|
+|Used by Traceur compiler	|Used by Typescript compiler|
+|Annotation creates the attribute ‘annotations’ that stores arrays and pass metadata to the constructor of the annotated class.	|It is a function that gets the object that needs to be decorated (or constructed). They can change the attributes of the object as necessary.|
+|Annotations are hard-coded	|Not hard-coded|
+|Example – import {Component} from 'angular2/angular2';|	Example - import {ComponentAnnotation as Component} from 'angular2/angular2';|
+
 #### Q. What is transclusion in angular?
 *TODO*
 #### Q. If your data model is updated outside the Zone explain the process how will you the view?
