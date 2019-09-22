@@ -3221,7 +3221,21 @@ Observable provides **operators** like map, forEach, reduce, ... similar to an a
 
 There are also powerful operators like retry(), or replay(), ... that are often quite handy.
 #### Q. List the differences between Angular components vs directives?
-*TODO*
+The difference between a component and a directive in Angular 2 is that a component is a directive with a view whereas a directive is a decorator with no view.
+
+A Component is a special kind of directive that uses a simpler configuration which is suitable for a component-based application structure.
+
+* **Advantages of Components:**  
+* simpler configuration than plain directives
+* promote sane defaults and best practices
+* optimized for component-based architecture
+* writing component directives will make it easier to upgrade to Angular 2
+
+* **When not to use Components:**  
+* for directives that rely on DOM manipulation, adding event listeners etc, because the compile and link functions are unavailable
+* when you need advanced directive definition options like priority, terminal, multi-element
+* when you want a directive that is triggered by an attribute or CSS class, rather than an element
+
 #### Q. How do you define the transition between two states in Angular?
 *TODO*
 #### Q. When to use NgOnInit and constructor in Angular?
