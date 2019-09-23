@@ -210,6 +210,7 @@
 |204. |[How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)|
 |205. |[What is hammerjs in angular?](#q-what-is-hammerjs-in-angular)|
 |206. |[How to call component function from outside the app?](#q-how-to-call-component-function-from-outside-the-app)|
+|207. |[How to Use External JavaScript Libraries in Angular?](#q-how-to-use-external-javaScript-libraries-in-angular)|
 
 
 
@@ -3282,4 +3283,6 @@ A Component is a special kind of directive that uses a simpler configuration whi
 #### Q. What is hammerjs in angular?
 *TODO*
 #### Q. How to call component function from outside the app?
+*TODO*
+#### Q. How to Use External JavaScript Libraries in Angular?
 *TODO*
