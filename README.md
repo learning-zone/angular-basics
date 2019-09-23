@@ -209,6 +209,7 @@
 |203. |[How will you localize numbers currencies and dates?](#q-how-will-you-localize-numbers-currencies-and-dates)|
 |204. |[How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)|
 |205. |[What is hammerjs in angular?](#q-what-is-hammerjs-in-angular)|
+|206. |[How to call component function from outside the app?](#q-how-to-call-component-function-from-outside-the-app)|
 
 
 
@@ -3279,4 +3280,6 @@ A Component is a special kind of directive that uses a simpler configuration whi
 #### Q. How will you optimize image and svg in your angular app?
 *TODO*
 #### Q. What is hammerjs in angular?
+*TODO*
+#### Q. How to call component function from outside the app?
 *TODO*
