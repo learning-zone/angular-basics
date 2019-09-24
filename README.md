@@ -3239,7 +3239,64 @@ A Component is a special kind of directive that uses a simpler configuration whi
 * when you want a directive that is triggered by an attribute or CSS class, rather than an element
 
 #### Q. How do you define the transition between two states in Angular?
-*TODO*
+* **open-close.component.html**
+```html
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+```
+* **open-close.component.ts**
+```typescript
+@Component({
+  selector: 'app-open-close',
+  animations: [
+    trigger('openClose', [
+      // ...
+      state('open', style({
+        height: '200px',
+        opacity: 1,
+        backgroundColor: 'yellow'
+      })),
+      state('closed', style({
+        height: '100px',
+        opacity: 0.5,
+        backgroundColor: 'green'
+      })),
+      transition('open => closed', [
+        animate('1s')
+      ]),
+      transition('closed => open', [
+        animate('0.5s')
+      ]),
+    ]),
+  ],
+  templateUrl: 'open-close.component.html',
+  styleUrls: ['open-close.component.css']
+})
+export class OpenCloseComponent {
+  isOpen = true;
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+  }
+}
+```
+* **open-close.component.css**
+```css
+:host {
+  display: block;
+}
+
+.open-close-container {
+  border: 1px solid #dddddd;
+  margin-top: 1em;
+  padding: 20px 20px 0px 20px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+}
+```
+
 #### Q. When to use NgOnInit and constructor in Angular?
 *TODO*
 #### Q. What is Traceur Compiler?
