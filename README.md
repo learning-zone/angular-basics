@@ -211,6 +211,8 @@
 |205. |[What is hammerjs in angular?](#q-what-is-hammerjs-in-angular)|
 |206. |[How to call component function from outside the app?](#q-how-to-call-component-function-from-outside-the-app)|
 |207. |[How to Use External JavaScript Libraries in Angular?](#q-how-to-use-external-javaScript-libraries-in-angular)|
+|209. |[What is Babel and how it is used in Angular?](#q-what-is-babel-and-how-it-is-used-in-angular)|
+|210. |[How to configure Webpack 4 with Angular 7?](#q-how-to-configure-webpack-4-with-angular-7)|
 
 
 
@@ -3360,4 +3362,8 @@ Traceur compiler takes classes, generators, and other features from ECMAScript e
 #### Q. How to call component function from outside the app?
 *TODO*
 #### Q. How to Use External JavaScript Libraries in Angular?
+*TODO*
+#### Q. What is Babel and how it is used in Angular?
+*TODO*
+#### Q. How to configure Webpack 4 with Angular 7
 *TODO*
