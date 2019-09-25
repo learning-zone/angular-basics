@@ -3317,7 +3317,8 @@ export class App implements OnInit{
 }
 ```
 #### Q. What is Traceur Compiler?
-*TODO*
+Traceur compiler takes classes, generators, and other features from ECMAScript edition 6 (ES6) and compiles it into JavaScript ES5 that runs on the browser. This means developers can use the code from a future version that has more features and encourages design patterns.
+
 #### Q. How can we bind a variable with DOM element in Angular?
 *TODO*
 #### Q. What is Host Decorators in Angular?
