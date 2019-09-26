@@ -191,7 +191,7 @@
 |185. |[When to use NgOnInit and constructor in Angular?](#q-When-to-use-NgOnInit-and-constructor-in-Angular)|
 |186. |[What is Traceur Compiler?](#q-what-is-traceur-compiler)|
 |187. |[How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)|
-|188. |[What is Host Decorators in Angular?](#q-what-is-host-decorators-in-angular)|
+|188. |[What is Host Decorator in Angular?](#q-what-is-host-decorator-in-angular)|
 |189. |[Why do we need provider aliases? And how do you create one?](#q-why-do-we-need-provider-aliases--and-how-do-you-create-one)|
 |190. |[What is the expression context in Angular?](#q-what-is-the-expression-context-in-angular)|
 |191. |[What Is Primeng? How Can It Be Used With Angular?](#q-what-is-primeng--how-can-it-be-used-with-angular)|
