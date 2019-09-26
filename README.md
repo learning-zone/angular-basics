@@ -191,7 +191,7 @@
 |185. |[When to use NgOnInit and constructor in Angular?](#q-When-to-use-NgOnInit-and-constructor-in-Angular)|
 |186. |[What is Traceur Compiler?](#q-what-is-traceur-compiler)|
 |187. |[How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)|
-|188. |[What is Host Decorator in Angular?](#q-what-is-host-decorator-in-angular)|
+|188. |[What is Self and Host Decorator in Angular?](#q-what-is-self-and-host-decorator-in-angular)|
 |189. |[Why do we need provider aliases? And how do you create one?](#q-why-do-we-need-provider-aliases--and-how-do-you-create-one)|
 |190. |[What is the expression context in Angular?](#q-what-is-the-expression-context-in-angular)|
 |191. |[What Is Primeng? How Can It Be Used With Angular?](#q-what-is-primeng--how-can-it-be-used-with-angular)|
@@ -3371,8 +3371,65 @@ export class AppComponent {
 ```
 Two-way data binding is mostly used in forms and when dealing with inputs. User input has to be grabbed from the DOM and stored in the class property before being used.
 
-#### Q. What is Host Decorator in Angular?
-*TODO*
+#### Q. What is Self and Host Decorator in Angular?
+* **@Host**  
+The @Host decorator tells DI to look for a dependency in any injector until it reaches the host.
+
+When @Self is used, Angular will only look for a value that is bound on the component injector for the element that this Directive/Component exists on.
+```typescript
+class OtherService {}
+class HostService {}
+
+@Directive({selector: 'child-directive'})
+class ChildDirective {
+  logs: string[] = [];
+
+  constructor(@Optional() @Host() os: OtherService, @Optional() @Host() hs: HostService) {
+    // os is null: true
+    this.logs.push(`os is null: ${os === null}`);
+    // hs is an instance of HostService: true
+    this.logs.push(`hs is an instance of HostService: ${hs instanceof HostService}`);
+  }
+}
+
+@Component({
+  selector: 'parent-cmp',
+  viewProviders: [HostService],
+  template: '<child-directive></child-directive>',
+})
+class ParentCmp {
+}
+
+@Component({
+  selector: 'app',
+  viewProviders: [OtherService],
+  template: '<parent-cmp></parent-cmp>',
+})
+class App {
+}
+```
+* **@Self**   
+The @Self decorator tells DI to look for a dependency only from itself, so it will not walk up the tree.
+
+When @Host is used, Angular will look for a value that is bound on either the component injector for the element that this Directive/Component exists on, or on the injector of the parent component. Angular calls this parent component the "host".
+```typescript
+class Dependency {}
+
+@Injectable()
+class NeedsDependency {
+  constructor(@Self() public dependency: Dependency) {}
+}
+
+let inj = ReflectiveInjector.resolveAndCreate([Dependency, NeedsDependency]);
+const nd = inj.get(NeedsDependency);
+
+expect(nd.dependency instanceof Dependency).toBe(true);
+
+inj = ReflectiveInjector.resolveAndCreate([Dependency]);
+const child = inj.resolveAndCreateChild([NeedsDependency]);
+expect(() => child.get(NeedsDependency)).toThrowError();
+```
+
 #### Q. Why do we need provider aliases? And how do you create one?
 *TODO*
 #### Q. What is the expression context in Angular?
