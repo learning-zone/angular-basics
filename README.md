@@ -3371,7 +3371,7 @@ export class AppComponent {
 ```
 Two-way data binding is mostly used in forms and when dealing with inputs. User input has to be grabbed from the DOM and stored in the class property before being used.
 
-#### Q. What is Host Decorators in Angular?
+#### Q. What is Host Decorator in Angular?
 *TODO*
 #### Q. Why do we need provider aliases? And how do you create one?
 *TODO*
