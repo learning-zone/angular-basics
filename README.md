@@ -3488,7 +3488,14 @@ const AUTH_CONFIG = {
 providers: [{ provide: AuthConfig, useValue: AUTH_CONFIG }]
 ```
 #### Q. What is the expression context in Angular?
-*TODO*
+A template helps us to render HTML with some dynamic parts depending on our data. It allows us to express data and property binding, event binding and templating concerns. To be able to express those behaviours, Angular 2 comes with its own symbols:
+```typescript
+{{ }} for interpolation.
+[] for property binding.
+() for event binding.
+# for variable declaration.
+* for structural directives.
+```
 #### Q. What Is Primeng? How Can It Be Used With Angular?
 *TODO*
 #### Q. How can you add an active class to a selected element in a list component?
