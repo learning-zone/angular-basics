@@ -3468,7 +3468,7 @@ import { AuthService } from './auth.service';
 export class AppModule { }
 ```
 * **Class Providers**  
-By default Angular will inject a provider with the same class name and token, but useClass allows to use a different class. For example, the following will provide a service with the Auth token, but the UserAuth class:
+By default Angular will inject a provider with the same class name and token, but `useClass` allows to use a different class. For example, the following will provide a service with the Auth token, but the UserAuth class:
 ```typescript
 providers: [{ provide: Auth, useClass: UserAuth }]
 ```
