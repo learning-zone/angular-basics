@@ -192,7 +192,7 @@
 |186. |[What is Traceur Compiler?](#q-what-is-traceur-compiler)|
 |187. |[How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)|
 |188. |[What is Self and Host Decorator in Angular?](#q-what-is-self-and-host-decorator-in-angular)|
-|189. |[Why do we need provider aliases? And how do you create one?](#q-why-do-we-need-provider-aliases--and-how-do-you-create-one)|
+|189. |[Why do we need provider aliases?](#q-why-do-we-need-provider-aliases)|
 |190. |[What is the expression context in Angular?](#q-what-is-the-expression-context-in-angular)|
 |191. |[What Is Primeng? How Can It Be Used With Angular?](#q-what-is-primeng--how-can-it-be-used-with-angular)|
 |192. |[How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)|
@@ -3430,8 +3430,63 @@ const child = inj.resolveAndCreateChild([NeedsDependency]);
 expect(() => child.get(NeedsDependency)).toThrowError();
 ```
 
-#### Q. Why do we need provider aliases? And how do you create one?
-*TODO*
+#### Q. Why do we need provider aliases?  
+* **Provider**: A provider is an object declared to Angular so that it can be injected in the constructor of your components, directives and other classes instantiated by Angular. A service is a particular type of provider that is declared with its class name.
+
+In order for a service in Angular to be properly injected, it needs to be provided to either the component, the parent module or the app module. A service provided in the app module will have the same instance provided everywhere. Here's an example of two services provided in a component:
+```typescript
+import { Component } from '@angular/core';
+import { WeatherApiService } from './weather-api.service';
+import { AuthService } from './auth.service';
+
+@Component({
+  ...,
+  providers: [WeatherApiService, AuthService]
+})
+export class AppComponent {
+
+  constructor(public weatherApi: WeatherApiService,
+              public auth: AuthService) {}
+
+}
+```
+And here they are provided in the module instead:
+```typescript
+import { WeatherApiService } from './weather-api.service';
+import { AuthService } from './auth.service';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    ...
+  ],
+  providers: [WeatherApiService, AuthService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+* **Class Providers**  
+By default Angular will inject a provider with the same class name and token, but useClass allows to use a different class. For example, the following will provide a service with the Auth token, but the UserAuth class:
+```typescript
+providers: [{ provide: Auth, useClass: UserAuth }]
+```
+* **Aliased Providers**  
+If we want to alias an old provider to be handled by a new provider, we can do so with `useExisting`. This would be useful if,for example, a component needs to be still be using the old provider, but the logic should still be handled by the new provider:
+```typescript
+providers: [{ provide: OldService, useExisting: NewService }]
+```
+* **Value Providers**  
+Most of the time classes are used as providers, but simple values can also be used instead with `useValue`:
+```typescript
+const AUTH_CONFIG = {
+  apiKey: "...",
+  authDomain: "..."
+};
+
+providers: [{ provide: AuthConfig, useValue: AUTH_CONFIG }]
+```
 #### Q. What is the expression context in Angular?
 *TODO*
 #### Q. What Is Primeng? How Can It Be Used With Angular?
