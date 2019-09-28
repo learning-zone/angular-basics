@@ -3595,7 +3595,44 @@ export class AppComponent {
 ```
 
 #### Q. How can you add an active class to a selected element in a list component?
-*TODO*
+* Add class to an element on click and remove on click of other item and highlight the current one.
+* **app.component.html**
+```html
+<div>
+  <ul>
+    <li *ngFor="let n of list" (click)="select(n)" [ngClass]="{active: isActive(n)}">
+      <a>{{n}}</a>
+    </li>
+  </ul>
+</div>
+```
+* **app.component.ts**
+```typescript
+export class App {
+  list:any;
+  selected :any;
+  constructor() {
+    this.list = [
+       'Read about Angular',
+       'Read about knockout',
+       'Read about backbone',
+       'Read about jquery',
+       'Read about javascript'
+    ]; 
+  }
+  select(item) {
+      this.selected = item; 
+  };
+  isActive(item) {
+      return this.selected === item;
+  };
+
+}
+```
+* **app.component.css**
+```css
+.active a { color: red; }
+```
 #### Q. What is RouterLink? How would you pass data from a parent component to a child component?
 *TODO*
 #### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
