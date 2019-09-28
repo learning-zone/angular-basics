@@ -3500,7 +3500,7 @@ A template helps us to render HTML with some dynamic parts depending on our data
 `PrimeNG` is a free and open source library of UI components. It is developed by PrimeTek Informatics. PrimeNG provides 80+ UI components in a single library, so there would be no need to add any other library for different UIs. It includes all UI components like Datatable, Breadcrumbs, Input, Accordion, Notification message box, Multimedia, and Menu etc.  
 
 commands to install PrimeNG packages in the project
-```c++
+```
 npm install primeng --save  
 npm install primeicons --save  
 ```
