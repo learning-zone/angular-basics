@@ -3561,7 +3561,7 @@ export class AppComponent {
 }  
 ```
 * **app.component.html**
-```typescript
+```html
 <p-accordion>  
   <p-accordionTab header="India">  
     <p-orderList [value]="Indiastate">  
