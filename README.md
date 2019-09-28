@@ -3595,7 +3595,7 @@ export class AppComponent {
 ```
 
 #### Q. How can you add an active class to a selected element in a list component?
-* Add class to an element on click and remove on click of other item and highlight the current one.
+Add class to an element on click and remove on click of other item and highlight the current one.
 * **app.component.html**
 ```html
 <div>
