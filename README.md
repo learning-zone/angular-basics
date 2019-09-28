@@ -3505,6 +3505,94 @@ npm install primeng --save
 npm install primeicons --save  
 npm install --save @angular/animations  
 ```
+* **App.module.ts**
+```typescript
+import { BrowserModule } from '@angular/platform-browser';  
+import { NgModule } from '@angular/core';  
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";  
+import { AppRoutingModule } from './app-routing.module';  
+import { AppComponent } from './app.component';  
+import { AccordionModule } from 'primeng/components/accordion/accordion';  
+import {OrderListModule} from 'primeng/orderlist';  
+@NgModule({  
+  declarations: [  
+    AppComponent  
+  ],  
+  imports: [  
+    BrowserModule,  
+    AppRoutingModule,BrowserAnimationsModule,AccordionModule,OrderListModule  
+  ],  
+  providers: [],  
+  bootstrap: [AppComponent]  
+})  
+export class AppModule { } 
+```
+* **app.component.ts**
+```typescript
+import { Component } from '@angular/core';  
+@Component({  
+  selector: 'app-root',  
+  templateUrl: './app.component.html',  
+  styleUrls: ['./app.component.css']  
+})  
+export class AppComponent {  
+  Indiastate = [  
+    "Rajasthan",  
+    "UP",  
+    "Mp",  
+    "Delhi",  
+    "Goa",  
+    "Gurjat",  
+    "Punjab"  
+  ];  
+  Ausstate = [  
+  
+    "New South Wales",  
+    "Queensland",  
+    "South Australia",  
+    "Tasmania"  
+  ];  
+  Slstate = [  
+    "Kandy",  
+    "Galle",  
+    "Kegalle",  
+    "Mannar"  
+  ];  
+}  
+```
+* **app.component.html**
+```typescript
+<p-accordion>  
+  <p-accordionTab header="India">  
+    <p-orderList [value]="Indiastate">  
+      <ng-template let-state pTemplate="item">  
+        <div class="ui-helper-clearfix">  
+          <div style="font-size:16px;float:left;margin:5px">{{state}}</div>  
+        </div>  
+      </ng-template>  
+    </p-orderList>  
+  </p-accordionTab>  
+  <p-accordionTab header="Australia">  
+    <p-orderList [value]="Ausstate">  
+      <ng-template let-Ausstate pTemplate="item">  
+        <div class="ui-helper-clearfix">  
+          <div style="font-size:16px;float:left;margin:5px">{{Ausstate}}</div>  
+        </div>  
+      </ng-template>  
+    </p-orderList>  
+  </p-accordionTab>  
+  <p-accordionTab header="SriLanka">  
+    <p-orderList [value]="Slstate">  
+      <ng-template let-Slstate pTemplate="item">  
+        <div class="ui-helper-clearfix">  
+          <div style="font-size:16px;float:center;margin:5px">{{Slstate}}</div>  
+        </div>  
+      </ng-template>  
+    </p-orderList>  
+  
+  </p-accordionTab>  
+</p-accordion>
+```
 
 #### Q. How can you add an active class to a selected element in a list component?
 *TODO*
