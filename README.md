@@ -3503,6 +3503,7 @@ commands to install PrimeNG packages in the project
 ```
 npm install primeng --save  
 npm install primeicons --save  
+npm install --save @angular/animations  
 ```
 
 #### Q. How can you add an active class to a selected element in a list component?
