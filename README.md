@@ -3497,7 +3497,14 @@ A template helps us to render HTML with some dynamic parts depending on our data
 * for structural directives.
 ```
 #### Q. What Is Primeng? How Can It Be Used With Angular?
-*TODO*
+`PrimeNG` is a free and open source library of UI components. It is developed by PrimeTek Informatics. PrimeNG provides 80+ UI components in a single library, so there would be no need to add any other library for different UIs. It includes all UI components like Datatable, Breadcrumbs, Input, Accordion, Notification message box, Multimedia, and Menu etc.  
+
+commands to install PrimeNG packages in the project
+```c++
+npm install primeng --save  
+npm install primeicons --save  
+```
+
 #### Q. How can you add an active class to a selected element in a list component?
 *TODO*
 #### Q. What is RouterLink? How would you pass data from a parent component to a child component?
