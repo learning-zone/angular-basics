@@ -3634,7 +3634,65 @@ export class App {
 .active a { color: red; }
 ```
 #### Q. What is RouterLink? How would you pass data from a parent component to a child component?
-*TODO*
+The Angular Router enables navigation from one view to the next as users perform application tasks.
+* **AppComponent.ts**
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'navigation-app',
+  template: `
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['/about']">About</a>
+    <div class="outer-outlet">
+      <router-outlet></router-outlet>
+    </div>
+  `
+})
+export class AppComponent { }
+```
+* **app.routes.ts**  
+```typescript
+import { Routes } from '@angular/router';
+
+import { AboutComponent } from 'app/about.component';
+import { HomeComponent } from 'app/home.component';
+
+export const routes: Routes = [
+  { path: '', component: HomeComponent }
+  { path: 'about', component: AboutComponent }
+];
+export class AppRoutes { }
+```
+* **app.module.ts**  
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+import { routes } from './app.routes';
+import { AppComponent } from './app.component';
+import { AboutComponent } from './about.component';
+import { HomeComponent } from './home.component';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(routes)
+  ],
+  declarations: [
+    AboutComponent,
+    HomeComponent,
+    AppComponent
+  ],
+  providers: [ ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule { }
+```
+
 #### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
 *TODO*
 #### Q. What is the purpose of exports in a NgModule?
