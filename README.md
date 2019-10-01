@@ -3651,7 +3651,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { }
 ```
-* **app.routes.ts**  
+* **AppRoutes.ts**  
 ```typescript
 import { Routes } from '@angular/router';
 
@@ -3664,7 +3664,7 @@ export const routes: Routes = [
 ];
 export class AppRoutes { }
 ```
-* **app.module.ts**  
+* **AppModule.ts**  
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
