@@ -3692,6 +3692,11 @@ import { HomeComponent } from './home.component';
 })
 export class AppModule { }
 ```
+There are several ways how Angular components can pass data around:
+* Using `@Input` and `@Output`
+* By injecting parent component through constructor or child components through `@ViewChild`, `@ViewChildren`, `@ContentChild`, `@ContentChildren` and directly calling component’s API
+* Using services (this covers state management libraries like ngrx)
+* Using router parameters
 
 #### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
 *TODO*
