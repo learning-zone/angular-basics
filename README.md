@@ -1,8 +1,8 @@
-## Angular7 Interview Questions and Answers
+## Angular Interview Questions and Answers
 
-> Click :star2: if you like the project. Pull Request are highly appreciated. 
+*Click :star2: if you like the project. Pull Request are highly appreciated.* 
 
-|Sl.No  | Angular7 Questions|
+|Sl.No  | Angular Questions|
 |--------|---------------|
 |01. |[Frequently used angular 7 commands](#q-frequently-used-angular-7-commands)|
 |02. |[What is difference between Angular JIT compilation and AOT compilation?](#q-what-is-difference-between-angular-jit-compilation-and-aot-compilation)|
