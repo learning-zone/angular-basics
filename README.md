@@ -3982,7 +3982,7 @@ will then produce :
 ```
 
 #### Q. What are rxjs lettable operators?
-The version 5.5.0 beta of RxJS introduces lettable operators. Those operators are pure functions that can be used as standalone operators instead of methods on an observable. A lettable operator is basically any function that returns a function with the signature: <T, R>(source: Observable<T>) => Observable<R>. They are lightweight, will make your code easily re-usable and can decrease your overall build size.
+The version 5.5.0 beta of RxJS introduces `lettable` operators. Those operators are pure functions that can be used as standalone operators instead of methods on an observable. A lettable operator is basically any function that returns a function with the signature: `<T, R>(source: Observable<T>) => Observable<R>`. They are lightweight, will make your code easily re-usable and can decrease your overall build size.
 
 These operators are:
 * do -> tap
