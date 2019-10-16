@@ -246,6 +246,9 @@
 |ng xi18n --output-path src/locale    |Internationalization |
 |ng generate web-worker app           |Add a Web Worker to angular app|
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is difference between Angular JIT compilation and AOT compilation?
 
