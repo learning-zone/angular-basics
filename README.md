@@ -3928,7 +3928,25 @@ When we are dealing with medium or large apps, it includes discrete set of funct
 In the process of developing an app we might create a feature which we don't want to expose or create a feature which we want to lazy loading when the user decides it is time to revisit the feature. NgModules helps us to separate our features to logical units and load it when required.
 
 #### Q. What is difference between Angular Modules and JavaScript Modules?
-*TODO*
+**JavaScript modules**  
+In JavaScript, modules are individual files with JavaScript code in them. To make what’s in them available, you write an export statement, usually after the relevant code, like this:
+```typescript
+export class AppComponent { ... }
+```
+Then, when you need that file’s code in another file, you import it like this:
+```typescript
+import { AppComponent } from './app.component';
+```
+JavaScript modules help you namespace, preventing accidental global variables.
+**NgModules**  
+NgModules are classes decorated with @NgModule. The @NgModule decorator’s imports array tells Angular what other NgModules the current module needs. The modules in the imports array are different than JavaScript modules because they are NgModules rather than regular JavaScript modules. 
+
+**The NgModule classes differ from JavaScript module in the following key ways:**
+* An NgModule bounds declarable classes only. Declarables are the only classes that matter to the Angular compiler.
+* Instead of defining all member classes in one giant file as in a JavaScript module, you list the module's classes in the  @NgModule.declarations list.
+* An NgModule can only export the declarable classes it owns or imports from other modules. It doesn't declare or export any other kind of class.
+* Unlike JavaScript modules, an NgModule can extend the entire application with services by adding providers to the  @NgModule.providers list.
+
 #### Q. What is ng-container and why is it useful?
 *TODO*
 #### Q. What are rxjs letttable operators?
