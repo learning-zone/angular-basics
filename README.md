@@ -232,7 +232,7 @@
 |ng lint						                  | prints out linting errors                                                   |
 |ng build						                  | Compiles an Angular app into an output directory named dist/ at the given output path. |
 |ng build --prod				              | apply uglify and minify to reduce the bundle as well make angular work in production mode which reduces runtime warnings given by angular compiler as well increase performance. The ng build command with the --prod meta-flag (ng build --prod) compiles with AOT by default.                          |
-|ng build --dev				                |                                                                             |
+|ng build --dev				                | Compiles an Angular app into an output directory named dist/ at the given output path.|
 |ng get/ng set					              | Set a value in the Angular CLI configuration                                |
 |ng doc						                    | Opens a browser window with the keyword as search in Angular documentation. | 
 |ng eject						                  | ejects your app and output the proper webpack configuration and scripts     |
