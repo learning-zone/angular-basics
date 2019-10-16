@@ -3948,7 +3948,39 @@ NgModules are classes decorated with @NgModule. The @NgModule decorator’s impo
 * Unlike JavaScript modules, an NgModule can extend the entire application with services by adding providers to the  @NgModule.providers list.
 
 #### Q. What is ng-container and why is it useful?
-*TODO*
+`<ng-container>` is a logical container that can be used to group nodes but is not rendered in the DOM tree as a node. `<ng-container>` is rendered as an HTML comment.
+
+`ng-container` is useful when you want to conditionaly append a group of elements (ie using *ngIf="foo") in your application but don't want to wrap them with another element.
+```html
+<!-- Can't do this -->
+<div *ngIf="todos" *ngFor="let todo of todos">
+  {{ todo.content }}
+</div>
+```
+Instead what we usually do is use a wrapper like this:
+```html
+<div *ngIf="todos">
+  <div *ngFor="let todo of todos">
+    {{ todo.content }}
+  </div>
+</div>
+```
+```html
+<div>
+    <ng-container *ngIf="true">
+        <h2>Title</h2>
+        <div>Content</div>
+    </ng-container>
+</div>
+```
+will then produce :
+```html
+<div>
+    <h2>Title</h2>
+    <div>Content</div>
+</div>
+```
+
 #### Q. What are rxjs letttable operators?
 *TODO*
 #### Q. How do components communicate with each other?
