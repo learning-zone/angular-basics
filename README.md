@@ -4025,6 +4025,9 @@ const source$ = Observable.range(0, 10);
 source$.let(complicatedLogic).subscribe(x => console.log(x)); // 50
 ```
 *Note: The `do` operator was renamed in RxJS 5.5 to `tap` because it collided with the JavaScript `do` keyword.*
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How do components communicate with each other?
 **Parent to Child: Sharing Data via Input**  
