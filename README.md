@@ -201,7 +201,6 @@
 |192. |[How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)|
 |193. |[What is RouterLink? How would you pass data from a parent component to a child component?](#q-what-is-routerlink--how-would-you-pass-data-from-a-parent-component-to-a-child-component)|
 |194. |[What is the purpose of NgModule? How do you decide to create a new NgModule?](#q-what-is-the-purpose-of-ngmodule--how-do-you-decide-to-create-a-new-ngmodule)|
-|195. |[What is the purpose of exports in a NgModule?](#q-what-is-the-purpose-of-exports-in-a-ngmodule)|
 |196. |[What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)|
 |197. |[What is ng-container and why is it useful?](#q-what-is-ng-container-and-why-is-it-useful)|
 |198. |[What are rxjs letttable operators?](#q-what-are-rxjs-letttable-operators)|
@@ -3908,8 +3907,6 @@ There are several ways how Angular components can pass data around:
 </div>
 
 #### Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
-*TODO*
-#### Q. What is the purpose of exports in a NgModule?
 *TODO*
 #### Q. What is difference between Angular Modules and JavaScript Modules?
 *TODO*
