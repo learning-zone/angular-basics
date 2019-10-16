@@ -125,8 +125,6 @@
 |114. |[Can I use AOT compilation with Ivy?](#q-can-i-use-aot-compilation-with-ivy)|
 |115. |[What is Angular Language Service?](#q-what-is-angular-language-service)|
 |116. |[How do you install angular language service in the project?](#q-how-do-you-install-angular-language-service-in-the-project)|
-|117. |[Is there any editor support for Angular Language Service?](#q-is-there-any-editor-support-for-angular-language-service)|
-|118. |[Explain the features provided by Angular Language Service?](#q-explain-the-features-provided-by-angular-language-service)|
 |119. |[How do you add web workers in your application?](#q-how-do-you-add-web-workers-in-your-application)|
 |120. |[What are the limitations with web workers?](#q-what-are-the-limitations-with-web-workers)|
 |121. |[What is Angular CLI Builder?](#q-what-is-angular-cli-builder)|
@@ -2174,24 +2172,6 @@ After that add the following to the "compilerOptions" section of your project's 
 ]
 ```
 *Note: The completion and diagnostic services works for `.ts` files only. You need to use custom plugins for supporting HTML files.*
-#### Q. Is there any editor support for Angular Language Service?
-Yes, Angular Language Service is currently available for Visual Studio Code and WebStorm IDEs. You need to install angular language service using an extension and devDependency respectively. In sublime editor, you need to install typescript which has has a language service plugin model.
-
-#### Q. Explain the features provided by Angular Language Service?
-Basically there are 3 main features provided by Angular Language Service,
-
-1. **Autocompletion:** Autocompletion can speed up your development time by providing you with contextual possibilities and hints as you type with in an interpolation and elements.
-
-![ScreenShot](images/language-completion.gif)
-
-2. **Error checking:** It can also warn you of mistakes in your code.
-
-![ScreenShot](images/language-error.gif)
-
-3. **Navigation:** Navigation allows you to hover a component, directive, module and then click and press F12 to go directly to its definition.
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
 
 #### Q. How do you add web workers in your application?
 You can add web worker anywhere in your application. For example, If the file that contains your expensive computation is `src/app/app.component.ts`, you can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
