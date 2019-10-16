@@ -1728,7 +1728,8 @@ function getService(){
   }]
 })
 ```
-If you still use arrow function, it generates an error node in place of the function. When the compiler later interprets this node, it reports an error to turn the arrow function into an exported function.
+If you still use arrow function, it generates an error node in place of the function. When the compiler later interprets this node, it reports an error to turn the arrow function into an exported function.  
+
 *Note: From Angular5 onwards, the compiler automatically performs this rewriting while emitting the `.js` file.*
 
 #### Q. What is the purpose of metadata json files?
