@@ -3981,8 +3981,45 @@ will then produce :
 </div>
 ```
 
-#### Q. What are rxjs letttable operators?
-*TODO*
+#### Q. What are rxjs lettable operators?
+The version 5.5.0 beta of RxJS introduces lettable operators. Those operators are pure functions that can be used as standalone operators instead of methods on an observable. A lettable operator is basically any function that returns a function with the signature: <T, R>(source: Observable<T>) => Observable<R>. They are lightweight, will make your code easily re-usable and can decrease your overall build size.
+
+These operators are:
+* do -> tap
+* catch -> catchError
+* switch -> switchAll
+* finally -> finalize
+
+Basically, instead of doing:
+```typescript
+import 'rxjs/add/operator/switchMap'
+```
+We can do:
+```typescript
+import {switchMap} from 'rxjs/operators'
+```
+The old `rxjs/add/operator/switchMap` syntax is really bad for tree shaking since it patches the prototype of Observable directly. Every time you import an operator, the operator is added to Observable.prototype.
+
+Example
+```typescript
+import { Observable, pipe } from 'rxjs/Rx';
+import { filter, map, reduce } from 'rxjs/operators';
+
+const filterOutEvens = filter(x => x % 2);
+const sum = reduce((acc, next) => acc + next, 0);
+const doubleBy = x => map(value => value * x);
+
+const complicatedLogic = pipe(
+  filterOutEvens,
+  doubleBy(2),
+  sum
+);
+
+const source$ = Observable.range(0, 10);
+source$.let(complicatedLogic).subscribe(x => console.log(x)); // 50
+```
+*Note: The `do` operator was renamed in RxJS 5.5 to `tap` because it collided with the JavaScript `do` keyword.*
+
 #### Q. How do components communicate with each other?
 *TODO*
 #### Q. How do you mock a service to inject in a unit test?
