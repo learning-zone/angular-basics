@@ -980,7 +980,7 @@ Sometimes an app needs to display a view or a portion of a view only under speci
 ```html
 <p *ngIf="user.age > 18">You are not eligible for student pass!</p>
 ```
-**Note:** Angular isn't showing and hiding the message. It is adding and removing the paragraph element from the DOM. That improves performance, especially in the larger projects with many data bindings.
+*Note: Angular isn't showing and hiding the message. It is adding and removing the paragraph element from the DOM. That improves performance, especially in the larger projects with many data bindings.*
 
 #### Q. What happens if you use script tag inside template?
 
@@ -1076,7 +1076,7 @@ import { Component } from '@angular/core';
       birthday = new Date(1987, 6, 18);
     }
 ```
-**Note:** The parameter value can be any valid template expression, such as a string literal or a component property.
+*Note: The parameter value can be any valid template expression, such as a string literal or a component property.*
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -1321,7 +1321,7 @@ A handler that implements the Observer interface for receiving observable notifi
 ```javascript
 myObservable.subscribe(myObserver);
 ```
-**Note:** If you don't supply a handler for a notification type, the observer ignores notifications of that type.
+*Note: If you don't supply a handler for a notification type, the observer ignores notifications of that type.*
 #### Q. What is the difference between promise and observable?
 Below are the list of differences between promise and observable,
 
@@ -1670,7 +1670,7 @@ Ahead-of-Time (AOT) is a type of compilation that compiles your app at build tim
 ng build --aot
 ng serve --aot
 ```
-**Note:** The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.
+*Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -1729,7 +1729,7 @@ function getService(){
 })
 ```
 If you still use arrow function, it generates an error node in place of the function. When the compiler later interprets this node, it reports an error to turn the arrow function into an exported function.
-**Note:** From Angular5 onwards, the compiler automatically performs this rewriting while emitting the .js file.
+*Note: From Angular5 onwards, the compiler automatically performs this rewriting while emitting the `.js` file.*
 
 #### Q. What is the purpose of metadata json files?
 The metadata.json file can be treated as a diagram of the overall structure of a decorator's metadata, represented as an abstract syntax tree(AST). During the analysis phase, the AOT collector scan the metadata recorded in the Angular decorators and outputs metadata information in .metadata.json files, one per .d.ts file.
@@ -2035,7 +2035,7 @@ state('close', style({
   backgroundColor: 'green'
 })),
 ```
-**Note:** The style attributes must be in camelCase
+*Note: The style attributes must be in camelCase*
 
 #### Q. What is the purpose of animate function?
 Angular Animations are a powerful way to implement sophisticated and compelling animations for your Angular single page web application.
@@ -2172,7 +2172,7 @@ After that add the following to the "compilerOptions" section of your project's 
     {"name": "@angular/language-service"}
 ]
 ```
-**Note:** The completion and diagnostic services works for .ts files only. You need to use custom plugins for supporting HTML files.
+*Note: The completion and diagnostic services works for `.ts` files only. You need to use custom plugins for supporting HTML files.*
 #### Q. Is there any editor support for Angular Language Service?
 Yes, Angular Language Service is currently available for Visual Studio Code and WebStorm IDEs. You need to install angular language service using an extension and devDependency respectively. In sublime editor, you need to install typescript which has has a language service plugin model.
 
@@ -2215,7 +2215,8 @@ if (typeof Worker !== 'undefined') {
   // Web Workers are not supported in this environment.
 }
 ```
-**Note:** You may need to refactor your initial scaffolding web worker code for sending messages to and from.
+*Note: You may need to refactor your initial scaffolding web worker code for sending messages to and from.*
+
 #### Q. What are the limitations with web workers?
 1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, don't support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
 2. Running Angular in web worker using `@angular/platform-webworker` is not yet supported in Angular CLI.
@@ -2290,7 +2291,7 @@ Basically you will see 3 main syntax in Angular DSL.
 
 #### Q. What is Bazel tool?
 Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.
-**Note:** The Angular framework itself is built with Bazel.
+*Note: The Angular framework itself is built with Bazel.*
 
 #### Q. What are the advantages of Bazel tool?
 Below are the list of key advantages of Bazel tool,
