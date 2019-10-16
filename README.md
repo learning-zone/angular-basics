@@ -4055,7 +4055,6 @@ import { Component, Input } from '@angular/core';
 export class ChildComponent {
 
   @Input() childMessage: string;
-
   constructor() { }
 }
 ```
@@ -4081,7 +4080,6 @@ export class ParentComponent implements AfterViewInit {
   @ViewChild(ChildComponent) child;
 
   constructor() { }
-
   message:string;
 
   ngAfterViewInit() {
@@ -4131,7 +4129,6 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 
   constructor() { }
-
   message:string;
 
   receiveMessage($event) {
@@ -4154,7 +4151,6 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class ChildComponent {
 
   message: string = "Hola Mundo!"
-
   @Output() messageEvent = new EventEmitter<string>();
 
   constructor() { }
@@ -4214,7 +4210,6 @@ import { DataService } from "../data.service";
 export class ParentComponent implements OnInit {
 
   message:string;
-
   constructor(private data: DataService) { }
 
   ngOnInit() {
@@ -4239,7 +4234,6 @@ import { DataService } from "../data.service";
 export class SiblingComponent implements OnInit {
 
   message:string;
-
   constructor(private data: DataService) { }
 
   ngOnInit() {
@@ -4251,7 +4245,6 @@ export class SiblingComponent implements OnInit {
   }
 }
 ```
-
 #### Q. How do you mock a service to inject in a unit test?
 *TODO*
 #### Q. What is a factory Component?
