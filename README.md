@@ -3950,7 +3950,6 @@ NgModules are classes decorated with @NgModule. The @NgModule decorator’s impo
 #### Q. What is ng-container and why is it useful?
 `<ng-container>` is a logical container that can be used to group nodes but is not rendered in the DOM tree as a node. `<ng-container>` is rendered as an HTML comment.
 
-`ng-container` is useful when you want to conditionaly append a group of elements (ie using *ngIf="foo") in your application but don't want to wrap them with another element.
 ```html
 <!-- Can't do this -->
 <div *ngIf="todos" *ngFor="let todo of todos">
@@ -3965,6 +3964,7 @@ Instead what we usually do is use a wrapper like this:
   </div>
 </div>
 ```
+`ng-container` is useful when you want to conditionaly append a group of elements (ie using *ngIf="foo") in your application but don't want to wrap them with another element.
 ```html
 <div>
     <ng-container *ngIf="true">
