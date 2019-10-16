@@ -2291,7 +2291,8 @@ Basically you will see 3 main syntax in Angular DSL.
 </div>
 
 #### Q. What is Bazel tool?
-Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.
+Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.  
+
 *Note: The Angular framework itself is built with Bazel.*
 
 #### Q. What are the advantages of Bazel tool?
