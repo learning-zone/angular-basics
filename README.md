@@ -4486,7 +4486,16 @@ const routes:Routes = [
 The path can be the empty string which usually refers to the main URL of your application or can be also a **wildcard** string `(**)` which will be matched by the router if the visited URL doesn’t match any paths in the router configuration. This is usually used to display a **page doesn’t exist** message or redirect the users to an existing path.
 
 #### Q. How will you localize numbers currencies and dates?
-*TODO*
+**i18n**  
+Internationalization is the process of designing and preparing your app to be usable in different languages. Localization is the process of translating your internationalized app into specific languages for particular locales.
+
+Angular simplifies the following aspects of internationalization:
+
+* Displaying dates, number, percentages, and currencies in a local format.
+* Preparing text in component templates for translation.
+* Handling plural forms of words.
+* Handling alternative text.
+
 #### Q. How will you optimize image and svg in your angular app?
 *TODO*
 #### Q. What is hammerjs in angular?
