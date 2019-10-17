@@ -4383,7 +4383,97 @@ describe('Component: Login', () => {
 </div>
 
 #### Q. How to dynamically create a component in Angular?
-*TODO*
+**1. Dynamic Component**  
+First of all, we’ll create the Component to be dynamically added to the DOM:
+```typescript
+import { Component } from '@angular/core'
+@Component({
+  selector: 'dynamic-component',
+  template: `<h2>I'm dynamically attached</h2>`
+})
+export class DynamicComponent { }
+```
+**2. Service Loader**  
+The Service must have an exposed method to set the ViewContainerRef because it’s not possible to inject the ViewContainerRef by using the service’s constructor due to it not being a Component, so we must use a setter method: setRootViewContainer.
+addDynamicContainer adds the DynamicComponent to the DOM.
+```typescript
+import {
+  ComponentFactoryResolver,
+  Injectable,
+  Inject,
+  ReflectiveInjector
+} from '@angular/core'
+import { DynamicComponent } from './dynamic.component'
+@Injectable()
+export class Service {
+  constructor(@Inject(ComponentFactoryResolver) factoryResolver) {
+    this.factoryResolver = factoryResolver
+  }
+  setRootViewContainerRef(viewContainerRef) {
+    this.rootViewContainer = viewContainerRef
+  }
+  addDynamicComponent() {
+    const factory = this.factoryResolver
+                        .resolveComponentFactory(DynamicComponent)
+    const component = factory
+      .create(this.rootViewContainer.parentInjector)
+    this.rootViewContainer.insert(component.hostView)
+  }
+}
+```
+**3. Main Component**  
+The main component will inject it’s container (ViewContainerRef ) to the service:
+```typescript
+import { 
+  Component, 
+  NgModule,
+  OnInit,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core'
+import { Service } from './service'
+@Component({
+  selector: 'my-app',
+  template: `
+    <h1>Hello {{name}}</h1> 
+    <ng-template #dynamic></ng-template>
+  `
+})
+export class AppComponent implements OnInit {
+  name = 'from Angular'
+  @ViewChild('dynamic', { 
+    read: ViewContainerRef 
+  }) viewContainerRef: ViewContainerRef
+  constructor(@Inject(Service) service) {
+    this.service = service   
+  }
+  ngOnInit() {
+    this.service.setRootViewContainerRef(this.viewContainerRef)
+    this.service.addDynamicComponent()
+  }
+}
+```
+**4. Main Module: entryComponents**  
+The `entryComponents` will create a factory so that when the `ComponentFactoryResolver` is called we are able to create an instance of the component and add it to the DOM.
+
+```typescript
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { AppComponent } from './app.component'
+import { Service } from './service'
+import { DynamicComponent } from './dynamic.component'
+@NgModule({
+  imports: [BrowserModule],
+  declarations: [
+    AppComponent,
+    DynamicComponent
+  ],
+  providers: [Service],
+  bootstrap: [AppComponent],
+  entryComponents: [DynamicComponent]
+})
+export class AppModule { }
+```
 #### Q. What is wildcard state?
 *TODO*
 #### Q. How will you localize numbers currencies and dates?
