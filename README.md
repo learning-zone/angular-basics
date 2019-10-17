@@ -4323,7 +4323,6 @@ componentService = fixture.debugElement.injector.get(AuthService);
 **Listing**  
 login.component.spec.ts
 ```typescript
-/* tslint:disable:no-unused-variable */
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 import { LoginComponent } from './login.component';
 import { AuthService } from "./auth.service";
