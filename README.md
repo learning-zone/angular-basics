@@ -4583,7 +4583,31 @@ The ahead-of-time (AOT) compiler can catch template errors early and improve per
     * Better security
 
 #### Q. What is hammerjs in angular?
-*TODO*
+`HammerJS` gives us access to mobile gesture events that are not normally found in the browser, including `tap`, `swipe`, `pan`, `pinch`, `press`, and `rotate`. 
+```
+npm install --save hammerjs
+```
+Add the import to `main.ts` to make the events globally available in your application.
+```typescript
+import 'hammerjs';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.log(err));
+```
+
+**Gesture Recognizers**  
+* **Pan**: A Pan gesture is recognized when a pointer is down and moved within a set direction. The pan gesture is commonly used when scrolling through a set of items.
+* **Pinch**: A Pinch gesture is recognized when two or more pointers are moving toward or away from each other. The pinch gesture is commonly used for zooming in or out.
+* **Press**: A Press gesture is recognized when the pointer is being held down for a set amount of time. This is commonly used for long presses.
+* **Rotate**: A Rotate gesture is recognized when a set amount of pointers, minimum of 2, are moving in a circular motion. This is commonly used to rotate items.
+* **Swipe**: A Swipe gesture is recognized when a pointer is moving at a set speed for a set minimum amount of distance. This is commonly used to flip between items within a UI. Instead of scrolling, it is more useful to swap out items in a set direction.
+* **Tap**: A Tap gesture is recognized when a user taps the screen. This is commonly used for button presses.
+
+
 #### Q. How to call component function from outside the app?
 *TODO*
 #### Q. How to Use External JavaScript Libraries in Angular?
