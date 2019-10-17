@@ -4709,7 +4709,187 @@ export default {
 }
 ```
 #### Q. How to configure Webpack 4 with Angular 7
-*TODO*
+**Install Angular 7 Dependencies**  
+```
+npm install -save @angular/common@7 @angular/compiler@7 @angular/core@7 @angular/forms@7 @angular/platform-browser@7 @angular/platform-browser-dynamic@7 @angular/router@7 core-js@3 rxjs@6 zone.js@0
+```
+The package.json should look like this after installing Angular 7 dependencies with the above command:
+```typescript
+{
+    "name": "angular-7-tutorial",
+    "version": "1.0.0",
+    "dependencies": {
+        "@angular/common": "^7.2.13",
+        "@angular/compiler": "^7.2.13",
+        "@angular/core": "^7.2.13",
+        "@angular/forms": "^7.2.13",
+        "@angular/platform-browser": "^7.2.13",
+        "@angular/platform-browser-dynamic": "^7.2.13",
+        "@angular/router": "^7.2.13",
+        "core-js": "^3.0.1",
+        "rxjs": "^6.4.0",
+        "zone.js": "^0.9.0"
+    }
+}
+```
+
+**Install Angular 7 Development Dependencies**  
+```
+npm install --save-dev @types/node@11 angular2-template-loader@0 html-webpack-plugin@3 raw-loader@1 ts-loader@5 typescript@3 webpack@4 webpack-cli@3 webpack-dev-server@3
+```
+The package.json should look like this after installing Angular 7 development dependencies with the above command:
+```typescript
+{
+    "name": "angular-7-tutorial",
+    "version": "1.0.0",
+    "dependencies": {
+        "@angular/common": "^7.2.13",
+        "@angular/compiler": "^7.2.13",
+        "@angular/core": "^7.2.13",
+        "@angular/forms": "^7.2.13",
+        "@angular/platform-browser": "^7.2.13",
+        "@angular/platform-browser-dynamic": "^7.2.13",
+        "@angular/router": "^7.2.13",
+        "core-js": "^3.0.1",
+        "rxjs": "^6.4.0",
+        "zone.js": "^0.9.0"
+    },
+    "devDependencies": {
+        "@types/node": "^11.13.5",
+        "angular2-template-loader": "^0.6.2",
+        "html-webpack-plugin": "^3.2.0",
+        "raw-loader": "^1.0.0",
+        "ts-loader": "^5.3.3",
+        "typescript": "^3.4.4",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.0",
+        "webpack-dev-server": "^3.3.1"
+    }
+}
+```
+
+**Create tsconfig.json**  
+```typescript
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "ES5"
+    }
+}
+```
+
+**Create webpack.config.js**  
+```typescript
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+    entry: './src/main.ts',
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
+    module: {
+        rules: [
+            {
+                test: /\.ts$/,
+                use: ['ts-loader', 'angular2-template-loader']
+            },
+            {
+                test: /\.(html|css)$/,
+                use: 'raw-loader'
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({ template: './src/index.html' })
+    ]
+}
+```
+**Create Angular App Component** 
+**main.ts**
+```typescript
+import './polyfills';
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+```
+
+**index.html**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <title>Angular 7 Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- bootstrap css -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <app>Loading...</app>
+</body>
+</html>
+```
+
+**AppModule.ts**
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+    imports: [BrowserModule],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+**AppComponent.ts**
+```typescript
+import { Component } from '@angular/core';
+
+@Component({ selector: 'app', templateUrl: 'app.component.html' })
+export class AppComponent {}
+```
+
+**package.json**
+```typescript
+{
+    "name": "angular-7-tutorial",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "webpack-dev-server --mode development --open"
+    },
+    "dependencies": {
+        "@angular/common": "^7.2.13",
+        "@angular/compiler": "^7.2.13",
+        "@angular/core": "^7.2.13",
+        "@angular/forms": "^7.2.13",
+        "@angular/platform-browser": "^7.2.13",
+        "@angular/platform-browser-dynamic": "^7.2.13",
+        "@angular/router": "^7.2.13",
+        "core-js": "^3.0.1",
+        "rxjs": "^6.4.0",
+        "zone.js": "^0.9.0"
+    },
+    "devDependencies": {
+        "@types/node": "^11.13.5",
+        "angular2-template-loader": "^0.6.2",
+        "html-webpack-plugin": "^3.2.0",
+        "raw-loader": "^1.0.0",
+        "ts-loader": "^5.3.3",
+        "typescript": "^3.4.4",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.0",
+        "webpack-dev-server": "^3.3.1"
+    }
+}
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
