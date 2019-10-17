@@ -4632,7 +4632,82 @@ OR
 window.angularComponentRef.zone.run(() => {window.angularComponentRef.componentFn('2');})
 ```
 #### Q. What is Babel and how it is used in Angular?
-*TODO*
+**Babel** is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones).
+
+It makes available all the syntactical sugar that was added to JavaScript with the new ES6 specification, including classes, fat arrows and multiline strings.
+
+**Initial Setup**  
+```
+cmd> npm install --save-dev babel-loader @babel/core @babel/preset-env html-webpack-plugin script-ext-html-webpack-plugin
+cmd> npm install --save-dev @babel/register
+```
+
+**Configuration Files**  
+**webpack.config.babel.js**  
+```typescript
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
+export default {
+    entry: path.join(__dirname, 'src/index.js'),
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: '[name].bundle.js'
+    },
+    module: {
+        rules: [{
+            test: /\.js/,
+            exclude: /(node_modules|bower_components)/,
+            use: [{
+                loader: 'babel-loader'
+            }]
+        }]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Custom template',
+            template: path.join(__dirname, 'src/index.template.html')
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
+        })
+    ],
+    stats: {
+        colors: true
+    },
+    devtool: 'source-map'
+};
+```
+
+**package.json**  
+```typescript
+{
+  "name": "babel-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "script-ext-html-webpack-plugin": "^2.1.3",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {}
+}
+```
 #### Q. How to configure Webpack 4 with Angular 7
 *TODO*
 <div align="right">
