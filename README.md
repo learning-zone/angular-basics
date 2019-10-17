@@ -4496,7 +4496,92 @@ Angular simplifies the following aspects of internationalization:
 * Handling alternative text.
 
 #### Q. How will you optimize image and svg in your angular app?
-*TODO*
+**1. IMMUTABLE INPUT OBJECTS**  
+Angular’s `OnPush` change detection strategy enables us to reduce the number of checks Angular has to make when a change in our application happens.
+```typescript
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+
+@Component({
+    selector: 'my-sub-component',
+    template: `{{ item.name }}`,
+    changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class MySubComponent implements OnInit {
+    @Input() item: {name: string};
+
+    constructor() {}
+}
+```
+
+**2. OBSERVABLE INPUT OBJECTS**  
+```typescript
+import { Component, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+
+@Component({
+    selector: 'my-sub-component',
+    template: `{{ myItemName }}`,
+    changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class MySubComponent implements OnInit {
+    @Input() itemStream:Observable<any>;
+    myItemName: string;
+
+    constructor(private changeDetectorRef: ChangeDetectorRef) {}
+
+    ngOnInit() {
+        this.itemStream.subscribe(i => {
+            this.myItemName = item.name;
+            this.changeDetectorRef.markForCheck();
+        });
+    }
+}
+```
+
+**3. LAZY LOADING**  
+```typescript
+@NgModule({
+    ...
+    imports: [
+        RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
+    ]
+});
+```
+```typescript
+{
+    path: 'performance',
+    loadChildren: 'performance.module#PerformanceModule',
+    canLoad: [AuthGuard] // Optional
+}
+```
+
+**4. CODE SPLITTING AND COMMONS CHUNK PLUGIN (WEBPACK)**  
+There are mainly two kinds of code splitting that can be accomplished with webpack: “Vendor code splitting” and “On demand code-splitting” (used for lazy loading).
+```typescript
+new webpack.optimize.CommonsChunkPlugin({
+  children: true,
+  // (use all children of the chunk)
+
+  async: true,
+  // (create an async commons chunk)
+});
+```
+
+**5. REUSABLE CSS WITH BEM AND SASS**  
+Sass has been an all-time favorite for writing structured and maintainable CSS for large projects. We combined this with the BEM methodology which helps to create extendable and reusable interface components. 
+
+**6. GZIP**  
+Gzip is a file format and also a method of compressing files (making them smaller) for faster network transfers. It allows your web server to provide files with a smaller size that will be loaded faster by your browser. Compression of your files with gzip typically saves around fifty to seventy percent of the file size.
+
+**7. AOT**  
+The ahead-of-time (AOT) compiler can catch template errors early and improve performance by compiling at build time.
+
+  * **AOT ENSURES**
+    * Faster rendering
+    * Fewer asynchronous requests
+    * Smaller Angular framework download size
+    * Earlier detection of template errors
+    * Better security
+
 #### Q. What is hammerjs in angular?
 *TODO*
 #### Q. How to call component function from outside the app?
