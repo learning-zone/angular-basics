@@ -4609,7 +4609,30 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 
 #### Q. How to call component function from outside the app?
-*TODO*
+```typescript
+function callbackfunction(){   
+   // window['angularComponentRef'] might not yet be set here though
+   window['angularComponent'].zone.run(() => {
+     runThisFunctionFromOutside(); 
+   });
+ }
+
+constructor(private _ngZone: NgZone){
+  window['angularComponentRef'] = {component: this, zone: _ngZone};
+}
+
+ngOnDestroy() {
+  window.angularComponent = null;
+}
+```
+use:
+```typescript
+window['angularComponentRef'].zone.run(() => {window['angularComponentRef'].component.callFromOutside('1');})
+```
+OR
+```typescript
+window.angularComponentRef.zone.run(() => {window.angularComponentRef.componentFn('2');})
+```
 #### Q. How to Use External JavaScript Libraries in Angular?
 *TODO*
 #### Q. What is Babel and how it is used in Angular?
