@@ -4708,6 +4708,10 @@ export default {
   "dependencies": {}
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. How to configure Webpack 4 with Angular 7
 **Install Angular 7 Dependencies**  
 ```
