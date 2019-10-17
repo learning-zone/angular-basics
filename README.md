@@ -4475,7 +4475,16 @@ import { DynamicComponent } from './dynamic.component'
 export class AppModule { }
 ```
 #### Q. What is wildcard state?
-*TODO*
+```typescript
+const routes:Routes = [  
+    {path: '',  redirectTo: '/login', pathMatch: 'full' }, 
+    {path: 'login', component: LoginComponent},
+    {path:'home', component: HomeComponent},   
+    {path: "**", component: PageNotFoundComponent }  
+]; 
+```
+The path can be the empty string which usually refers to the main URL of your application or can be also a **wildcard** string `(**)` which will be matched by the router if the visited URL doesn’t match any paths in the router configuration. This is usually used to display a **page doesn’t exist** message or redirect the users to an existing path.
+
 #### Q. How will you localize numbers currencies and dates?
 *TODO*
 #### Q. How will you optimize image and svg in your angular app?
