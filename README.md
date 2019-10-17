@@ -4258,7 +4258,7 @@ export class SiblingComponent implements OnInit {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How do you mock a service to inject in a unit test? <hr/>
+#### Q. How do you mock a service to inject in a unit test?
 **Resolving via TestBed**  
 The `TestBed` acts as a dummy Angular Module and we can configure it like one including with a set of providers like so:
 ```typescript
