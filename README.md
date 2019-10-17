@@ -206,7 +206,7 @@
 |198. |[What are rxjs letttable operators?](#q-what-are-rxjs-letttable-operators)|
 |199. |[How do components communicate with each other?](#q-how-do-components-communicate-with-each-other)|
 |200. |[How do you mock a service to inject in a unit test?](#q-how-do-you-mock-a-service-to-inject-in-a-unit-test)|
-|201. |[What is a factory Component?](#q-what-is-a-factory-component)|
+|201. |[What is a ComponentFactory?](#q-what-is-a-ComponentFactory)|
 |202. |[What is wildcard state?](#q-what-is-wildcard-state)|
 |203. |[How will you localize numbers currencies and dates?](#q-how-will-you-localize-numbers-currencies-and-dates)|
 |204. |[How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)|
@@ -4383,7 +4383,7 @@ describe('Component: Login', () => {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is a factory Component?
+#### Q. What is a ComponentFactory?
 *TODO*
 #### Q. What is wildcard state?
 *TODO*
