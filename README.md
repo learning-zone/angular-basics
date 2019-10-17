@@ -4259,7 +4259,61 @@ export class SiblingComponent implements OnInit {
 </div>
 
 #### Q. How do you mock a service to inject in a unit test?
-*TODO*
+**Resolving via TestBed**  
+The `TestBed` acts as a dummy Angular Module and we can configure it like one including with a set of providers like so:
+```typescript
+TestBed.configureTestingModule({
+  providers: [AuthService]
+});
+```
+We can then ask the `TestBed` to resolve a token into a dependency using it’s internal injector, like so:
+```typescript
+testBedService = TestBed.get(AuthService);
+```
+If most of our test specs need the same dependency mocked the same way we can resolve it once in the `beforeEach` function and mock it it there.
+
+**Resolving via the inject function**  
+```typescript
+it('Service injected via inject(...) and TestBed.get(...) should be the same instance',
+    inject([AuthService], (injectService: AuthService) => {
+      expect(injectService).toBe(testBedService);
+    })
+);
+```
+The `inject` function wraps the test spec function but lets us also inject dependencies using the parent injector in the `TestBed`.
+```typescript
+inject(
+  [token1, token2, token2],
+  (dep1, dep2, dep3) => { }
+)
+```
+The first param is an array of tokens we want to resolve dependencies for, the second parameter is a function whose arguments are the resolved dependencies.
+
+Using the `inject` function:
+
+* Makes it clear what dependencies each spec function uses.
+* If each test spec requires different mocks and spys this is a better solution that resolving it once per test suite.
+
+**Overriding the components providers**  
+Before we create a component via the `TestBed` we can override it’s providers. Lets imagine we have a mock `AuthService` like so:
+```typescript
+class MockAuthService extends AuthService {
+  isAuthenticated() {
+    return 'Mocked';
+  }
+}
+```
+We can override the components providers to use this mocked `AuthService` like so.
+```typescript
+TestBed.overrideComponent(
+    LoginComponent,
+    {set: {providers: [{provide: AuthService, useClass: MockAuthService}]}}
+);
+```
+The syntax is pretty specific, it’s called a `MetaDataOverride` and it can have the properties `set`, `add` and `remove`. We use `set` to completely replace the providers array with the values we’ve set.
+
+
+
 #### Q. What is a factory Component?
 *TODO*
 #### Q. What is wildcard state?
