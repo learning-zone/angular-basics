@@ -4611,7 +4611,6 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 #### Q. How to call component function from outside the app?
 ```typescript
 function callbackfunction(){   
-   // window['angularComponentRef'] might not yet be set here though
    window['angularComponent'].zone.run(() => {
      runThisFunctionFromOutside(); 
    });
