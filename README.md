@@ -4473,6 +4473,10 @@ import { DynamicComponent } from './dynamic.component'
 })
 export class AppModule { }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is wildcard state?
 ```typescript
 const routes:Routes = [  
@@ -4493,6 +4497,9 @@ Angular simplifies the following aspects of internationalization:
 * Preparing text in component templates for translation.
 * Handling plural forms of words.
 * Handling alternative text.
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How will you optimize image and svg in your angular app?
 **1. IMMUTABLE INPUT OBJECTS**  
@@ -4580,6 +4587,9 @@ The ahead-of-time (AOT) compiler can catch template errors early and improve per
     * Smaller Angular framework download size
     * Earlier detection of template errors
     * Better security
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is hammerjs in angular?
 `HammerJS` gives us access to mobile gesture events that are not normally found in the browser, including `tap`, `swipe`, `pan`, `pinch`, `press`, and `rotate`. 
@@ -4605,7 +4615,9 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 * **Rotate**: A Rotate gesture is recognized when a set amount of pointers, minimum of 2, are moving in a circular motion. This is commonly used to rotate items.
 * **Swipe**: A Swipe gesture is recognized when a pointer is moving at a set speed for a set minimum amount of distance. This is commonly used to flip between items within a UI. Instead of scrolling, it is more useful to swap out items in a set direction.
 * **Tap**: A Tap gesture is recognized when a user taps the screen. This is commonly used for button presses.
-
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How to call component function from outside the app?
 ```typescript
