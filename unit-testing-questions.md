@@ -126,7 +126,7 @@ describe('Component: Login', () => {
 
 #### Q. What Is Karma? What Is the Use in Angular?
 #### Q. What Is Jasmine? What Is the Use in Angular? 
-Jasmine is a javascript testing framework that supports a software development practice called Behaviour Driven Development, or BDD for short. It’s a specific flavour of Test Driven Development (TDD).
+Jasmine is a javascript testing framework that supports a software development practice called `Behaviour Driven Development`, or `BDD` for short. It’s a specific flavour of `Test Driven Development (TDD)`.
 
 Jasmine, and BDD in general, attempts to describe tests in a human readable format so that non-technical people can understand what is being tested. 
 
