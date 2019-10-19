@@ -542,9 +542,9 @@ The following Steps –
 *Note – If you are going to development then type ng server command and if you want to test your project, you should type ng test command.  After type ng test command and press inter. It’s taking some time to installing everything in your project for test.*
 
 #### Q. What are the Test functions avilable in Angular?
-1. describe – Test suit (just a function)
-2. it  - The spec or test
-3. expect -  Expected outcome.
+1. `describe()` – Test suit (just a function)
+2. `it()`  - The spec or test
+3. `expect()` -  Expected outcome.
 
 Triple Rule of Testing –
 1. Arrange - Create and Initialize the Components
