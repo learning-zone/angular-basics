@@ -272,7 +272,7 @@ exports.config = {
 ```
 
 #### Q. How to test a components input as well as its outputs?
-**Test setup**  
+ 
 LoginComponent.ts  
 ```typescript
 import {Component, EventEmitter, Input, Output} from '@angular/core';
