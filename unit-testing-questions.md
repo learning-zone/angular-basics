@@ -125,7 +125,7 @@ describe('Component: Login', () => {
 </div>
 
 #### Q. What Is Karma? What Is the Use in Angular?
-Karma is a tool for executing source code against test code inside a browser environment. It supports the running of tests in each browser it’s configured for. Results are displayed on both the command line and on the browser for the developer to inspect which tests have passed or failed. Karma also watches the files and can trigger a test rerun whenever a file changes. At the root of the Angular project, we have the file karma.conf that’s used to configure Karma. 
+Karma is a tool for executing source code against test code inside a browser environment. It supports the running of tests in each browser it’s configured for. Results are displayed on both the command line and on the browser for the developer to inspect which tests have passed or failed. Karma also watches the files and can trigger a test rerun whenever a file changes. At the root of the Angular project, we have the file `karma.conf` that’s used to configure Karma. 
 
 The contents should look something like this:
 ```typescript
