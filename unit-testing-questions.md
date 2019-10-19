@@ -417,6 +417,7 @@ describe('LoginComponent', () => {
   });
 
 });
+```
 
 login.component.html
 ```html
