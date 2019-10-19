@@ -131,3 +131,44 @@ describe('Component: Login', () => {
 #### Q. What is End-to-End Testing in Angular?
 #### Q. How to Test a components inputs as well as its outputs?
 #### Q. How to Interact with a components view?
+#### Q. Which of the following can be used to run unit tests in Angular?
+* Karma
+* Protractor
+#### Q. Which of the following can be used to run end-to-end tests in Angular?
+* Karma
+* Protractor
+#### Q. Test doubles are needed when writing which of the following?
+* Unit tests
+* End-to-end tests
+* Both of the above
+#### Q. Which of the following will need Angular testing utilities for unit testing?
+* Services
+* Components
+* Both of the above
+#### Q. Which of the following utility is used to create an Angular testing module which can be used to create module environment for the class one wants to test?
+* AngularTestUtil
+* NgTest
+* NgTestBed
+* TestBed
+#### Q. It is recommended to write isolated unit tests for which of the following?
+* Services
+* Pipes
+* Both of the above
+* None of the above
+#### Q. Karma test runner requires tests to be written with file having extension such as which of the following?
+* .test.ts
+* .spec.ts
+* Both of the above
+#### Q. Which of the following TestBed method is used to create an Angular testing module which is used for creating module environment for testing the class?
+* createTestModule
+* configureTestModule
+* configureTestingModule
+* createTestingModule
+#### Q. Which of the following TestBed method is used to create an Angular component under test?
+* createComponent
+* createTestingComponent
+* configureComponent
+* configureTestingComponent
+#### Q. It is OK to re-configure TestBed after calling createComponent API on TestBed.
+* True
+* False
