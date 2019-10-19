@@ -176,10 +176,10 @@ expect(spy).toHaveBeenCalledWith(...arguments);
 
 **Setup and teardown**
 
-**beforeAll**: This function is called once, before all the specs in describe test suite are run.
-**afterAll**: This function is called once after all the specs in a test suite are finished.
-**beforeEach**: This function is called before each test specification, it function, has been run.
-**afterEach**: This function is called after each test specification has been run.
+**beforeAll**: This function is called once, before all the specs in describe test suite are run.  
+**afterAll**: This function is called once after all the specs in a test suite are finished.  
+**beforeEach**: This function is called before each test specification, it function, has been run.  
+**afterEach**: This function is called after each test specification has been run.  
 
 We might use these functions like so:
 ```typescript
