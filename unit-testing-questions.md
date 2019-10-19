@@ -126,9 +126,6 @@ describe('Component: Login', () => {
 
 #### Q. What Is Karma? What Is the Use in Angular?
 #### Q. What Is Jasmine? What Is the Use in Angular? 
-#### Q. What is Unit Test in Angular?
-#### Q. What Is Integration Testing in Angular?
-#### Q. What is End-to-End Testing in Angular?
 #### Q. How to Test a components inputs as well as its outputs?
 #### Q. How to Interact with a components view?
 #### Q. Which of the following can be used to run unit tests in Angular?
