@@ -180,7 +180,6 @@
 |170. |[How would you make sure an api call that needs to be called only once but with multiple conditions?](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions)|
 |171. |[If you need to respond to two different Observable or Subject with one callback function how would you do it?](#q-if-you-need-to-respond-to-two-different-observable-or-subject-with-one-callback-function-how-would-you-do-it)|
 |172. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages)|
-|174. |[What is the difference between an observable and a promise?](#q-what-is-the-difference-between-an-observable-and-a-promise)|
 |175. |[What is the difference between an observable and a subject?](#q-what-is-the-difference-between-an-observable-and-a-subject)|
 |176. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag--pristine--touched--untouched--valid--invalid)|
 |177. |[What is defer in promise?](#q-what-is-defer-in-promise)|
@@ -3263,9 +3262,6 @@ We can create page change Subject and we can emit when route parameters change o
 
 *ngIf="name.errors.required"
 ```
-#### Q. What is the difference between an observable and a promise?
-* `observable` are cancelable and use subscribe
-* `promise` are non-cancelable and always returns
 
 #### Q. What is the difference between an observable and a subject?
 A RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
