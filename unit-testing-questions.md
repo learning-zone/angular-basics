@@ -139,10 +139,10 @@ function message() {
 
 We would write a jasmine test spec like so:
 ```typescript
-describe('Hello world', () => { (1)
-  it('says hello', () => { (2)
-    expect(message()) (3)
-        .toEqual('Hello world!'); (4)
+describe('Hello world', () => { 
+  it('says hello', () => { 
+    expect(message()) 
+        .toEqual('Hello world!'); 
   });
 });
 ```
