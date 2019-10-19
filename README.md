@@ -180,7 +180,6 @@
 |170. |[How would you make sure an api call that needs to be called only once but with multiple conditions?](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions)|
 |171. |[If you need to respond to two different Observable or Subject with one callback function how would you do it?](#q-if-you-need-to-respond-to-two-different-observable-or-subject-with-one-callback-function-how-would-you-do-it)|
 |172. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages)|
-|173. |[How do you unit test a service with a dependency?](#q-how-do-you-unit-test-a-service-with-a-dependency)|
 |174. |[What is the difference between an observable and a promise?](#q-what-is-the-difference-between-an-observable-and-a-promise)|
 |175. |[What is the difference between an observable and a subject?](#q-what-is-the-difference-between-an-observable-and-a-subject)|
 |176. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag--pristine--touched--untouched--valid--invalid)|
@@ -3263,13 +3262,6 @@ We can create page change Subject and we can emit when route parameters change o
 *ngIf="name.invalid && (name.dirty || name.touched)"
 
 *ngIf="name.errors.required"
-```
-#### Q. How do you unit test a service with a dependency?
-Using `TestBed`
-```typescript
-TestBed.configureTestingModule({
-  providers: [AuthService]
-});
 ```
 #### Q. What is the difference between an observable and a promise?
 * `observable` are cancelable and use subscribe
