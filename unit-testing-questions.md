@@ -126,6 +126,33 @@ describe('Component: Login', () => {
 
 #### Q. What Is Karma? What Is the Use in Angular?
 #### Q. What Is Jasmine? What Is the Use in Angular? 
+Jasmine is a javascript testing framework that supports a software development practice called Behaviour Driven Development, or BDD for short. It’s a specific flavour of Test Driven Development (TDD).
+
+Jasmine, and BDD in general, attempts to describe tests in a human readable format so that non-technical people can understand what is being tested. 
+
+For example if we wanted to test this function:
+```typescript
+function message() {
+  return 'Hello world!';
+}
+```
+
+We would write a jasmine test spec like so:
+```typescript
+describe('Hello world', () => { (1)
+  it('says hello', () => { (2)
+    expect(message()) (3)
+        .toEqual('Hello world!'); (4)
+  });
+});
+```
+
+* The `describe(string, function)` function defines what we call a Test Suite, a collection of individual Test Specs.
+* The `it(string, function)` function defines an individual Test Spec, this contains one or more Test Expectations.
+* The `expect(actual)` expression is what we call an Expectation. In conjunction with a Matcher it describes an expected piece of behaviour in the application.
+* The `matcher(expected)` expression is what we call a Matcher. It does a boolean comparison with the expected value passed in vs. the actual value passed to the expect function, if they are false the spec fails.
+
+
 #### Q. How to Test a components inputs as well as its outputs?
 #### Q. How to Interact with a components view?
 #### Q. Which of the following can be used to run unit tests in Angular?
