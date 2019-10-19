@@ -383,7 +383,6 @@ We store the emitted value to a user object and then add some expectations on th
 
 We can test inputs by just setting values on a components input properties. We can test outputs by subscribing to an EventEmitters observable and storing the emitted values on local variables.
 
-#### Q. How to Interact with a component view??
 #### Q. Which of the following can be used to run unit tests in Angular?
 * Karma
 * Protractor
