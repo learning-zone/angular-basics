@@ -125,15 +125,41 @@ describe('Component: Login', () => {
 </div>
 
 #### Q. What Is Karma? What Is the Use in Angular?
-Manually running Jasmine tests by refreshing a browser tab repeatedly in different browsers every-time we edit some code can become tiresome.
+Karma is a tool for executing source code against test code inside a browser environment. It supports the running of tests in each browser it’s configured for. Results are displayed on both the command line and on the browser for the developer to inspect which tests have passed or failed. Karma also watches the files and can trigger a test rerun whenever a file changes. At the root of the Angular project, we have the file karma.conf that’s used to configure Karma. 
 
-Karma is a tool which lets us spawn browsers and run jasmine tests inside of them all from the command line. The results of the tests are also displayed on the command line.
-
-Karma can also watch your development files for changes and re-run the tests automatically.
-
-Karma lets us run jasmine tests as part of a development tool chain which requires tests to be runnable and results inspectable via the command line.
-
-It’s not necessary to know the internals of how Karma works. When using the Angular CLI it handles the configuration for us and for the rest of this section we are going to run the tests using only Jasmine.
+The contents should look something like this:
+```typescript
+module.exports = function (config) {
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine', '@angular/cli'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular/cli/plugins/karma')
+    ],
+    client:{
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
+    coverageIstanbulReporter: {
+      reports: [ 'html', 'lcovonly' ],
+      fixWebpackSourcePaths: true
+    },
+    angularCli: {
+      environment: 'dev'
+    },
+    reporters: ['progress', 'kjhtml'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Chrome'],
+    singleRun: false
+  });
+};
+```
 
 #### Q. What Is Jasmine? What Is the Use in Angular? 
 Jasmine is a javascript testing framework that supports a software development practice called `Behaviour Driven Development`, or `BDD` for short. It’s a specific flavour of `Test Driven Development (TDD)`.
