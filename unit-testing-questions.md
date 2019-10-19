@@ -237,6 +237,10 @@ describe('Hello world', () => {
   });
 });
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. What is Protractor?  
 Protractor is an end-to-end test framework for Angular. It runs your tests inside a real browser, interacting with it as real person would. Unlike unit tests, where we test individual functions, here we test the entire logic. Protractor is able to fill in forms, click buttons and confirm that the expected data and styling is displayed in the HTML document. Just like Karma, Protractor has its own configuration file at the root of your Angular project, `protractor.conf`:
 ```typescript
@@ -390,7 +394,9 @@ describe('AppComponent', () => {
   </li>
 </ul>
 ```
-
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What Is Integration Testing in Angular? 
 The Integration Testing is used to testing a component with templates and this testing containing more time as per comparison Unit Test.
@@ -573,6 +579,9 @@ login.component.html
   </button>
 </form>
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How do you unit test a service with a dependency?
 Using `TestBed`
