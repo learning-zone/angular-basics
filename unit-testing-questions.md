@@ -271,7 +271,118 @@ exports.config = {
 };
 ```
 
-#### Q. How to Test a components inputs as well as its outputs?
+#### Q. How to test a components input as well as its outputs?
+**Test setup**  
+LoginComponent.ts  
+```typescript
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+
+export class User { (1)
+  constructor(public email: string, public password: string) {
+  }
+}
+
+@Component({
+  selector: 'app-login',
+  template: `
+<form>
+  <label>Email</label>
+  <input type="email"
+         #email>
+  <label>Password</label>
+  <input type="password"
+         #password>
+  <button type="button" (2)
+          (click)="login(email.value, password.value)"
+          [disabled]="!enabled">Login
+  </button>
+</form>
+`
+})
+export class LoginComponent {
+  @Output() loggedIn = new EventEmitter<User>(); (3)
+  @Input() enabled = true; (4)
+
+  login(email, password) { (5)
+    console.log(`Login ${email} ${password}`);
+    if (email && password) {
+      console.log(`Emitting`);
+      this.loggedIn.emit(new User(email, password));
+    }
+  }
+}
+```
+1. We create a User class which holds the model of a logged in user.
+1. The button is sometimes disabled depending on the enabled input property value and on clicking the button we call the login function.
+1. The component has an output event called loggedIn.
+1. The component has an input property called enabled.
+1. In the login function we emit a new user model on the loggedIn event.
+
+LoginComponent.spec.ts  
+```typescript
+describe('Component: Login', () => {
+
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
+  let submitEl: DebugElement;
+  let loginEl: DebugElement;
+  let passwordEl: DebugElement;
+
+  beforeEach(() => {
+
+    TestBed.configureTestingModule({
+      declarations: [LoginComponent]
+    });
+
+    // create component and test fixture
+    fixture = TestBed.createComponent(LoginComponent);
+
+    // get test component from the fixture
+    component = fixture.componentInstance;
+
+    submitEl = fixture.debugElement.query(By.css('button'));
+    loginEl = fixture.debugElement.query(By.css('input[type=email]'));
+    passwordEl = fixture.debugElement.query(By.css('input[type=password]'));
+  });
+});
+```
+
+**Testing @Inputs**  
+To test inputs we need to do things:
+
+* We need to be able to change the input property enabled on our component.
+* We need to check that the button is enabled or disabled depending on the value of our input property.
+```typescript
+it('Setting enabled to false disables the submit button', () => {
+    component.enabled = false;
+    fixture.detectChanges();
+    expect(submitEl.nativeElement.disabled).toBeTruthy();
+});
+```
+
+**Testing @Outputs**  
+```typescript
+it('Entering email and password emits loggedIn event', () => {
+  let user: User;
+  loginEl.nativeElement.value = "test@example.com"; (1)
+  passwordEl.nativeElement.value = "123456";
+
+  component.loggedIn.subscribe((value) => user = value);
+
+  submitEl.triggerEventHandler('click', null); (2)
+
+  expect(user.email).toBe("test@example.com");
+  expect(user.password).toBe("123456");
+});
+```
+1. Setup data in our input controls.
+1. Trigger a click on our submit button, this synchronously emits the user object in the subscribe callback!
+
+Since the output event is actually an Observable we can subscribe to it and get a callback for every item emitted.
+We store the emitted value to a user object and then add some expectations on the user object. 
+
+We can test inputs by just setting values on a components input properties. We can test outputs by subscribing to an EventEmitters observable and storing the emitted values on local variables.
+
 #### Q. How to Interact with a components view?
 #### Q. Which of the following can be used to run unit tests in Angular?
 * Karma
