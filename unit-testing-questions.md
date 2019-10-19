@@ -227,3 +227,25 @@ The quick list of best practices.
 * Make sure the string descriptions you put in `describe()` and `it()` make sense as output
 * Use `after()` and `afterEach()` to clean-up your tests if there is any state that may bleed over.
 * If any one test is over 15 lines of code, you may need to refactor the test
+```typescript
+import { TestBed, async } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+
+//describe – Test suit (just a function)
+describe('AppComponent', () => {
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [AppComponent]
+    }).compileComponents();
+  }));
+
+ // it - The spec or test
+ it('should have hello property', function() {
+  const fixture = TestBed.createComponent(AppComponent);
+  const app = fixture.debugElement.componentInstance;
+
+   //expect – This Is For expected outcome.
+   expect(app.hello).toBe('Hello, Anil!');
+ });
+});
+```
