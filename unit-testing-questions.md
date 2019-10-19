@@ -125,6 +125,16 @@ describe('Component: Login', () => {
 </div>
 
 #### Q. What Is Karma? What Is the Use in Angular?
+Manually running Jasmine tests by refreshing a browser tab repeatedly in different browsers every-time we edit some code can become tiresome.
+
+Karma is a tool which lets us spawn browsers and run jasmine tests inside of them all from the command line. The results of the tests are also displayed on the command line.
+
+Karma can also watch your development files for changes and re-run the tests automatically.
+
+Karma lets us run jasmine tests as part of a development tool chain which requires tests to be runnable and results inspectable via the command line.
+
+It’s not necessary to know the internals of how Karma works. When using the Angular CLI it handles the configuration for us and for the rest of this section we are going to run the tests using only Jasmine.
+
 #### Q. What Is Jasmine? What Is the Use in Angular? 
 Jasmine is a javascript testing framework that supports a software development practice called `Behaviour Driven Development`, or `BDD` for short. It’s a specific flavour of `Test Driven Development (TDD)`.
 
