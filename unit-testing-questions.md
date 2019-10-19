@@ -238,7 +238,7 @@ describe('AppComponent', () => {
 ```
 
 **app.component.html**  
-```typescript
+```html
 <div style="text-align:center">
   <h1>  Welcome to {{title}}! </h1>
 </div>
