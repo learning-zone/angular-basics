@@ -432,3 +432,11 @@ login.component.html
   </button>
 </form>
 ```
+
+#### Q. How do you unit test a service with a dependency?
+Using `TestBed`
+```typescript
+TestBed.configureTestingModule({
+  providers: [AuthService]
+});
+```
