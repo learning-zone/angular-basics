@@ -174,6 +174,33 @@ expect(spy).toHaveBeenCalledTimes(number);
 expect(spy).toHaveBeenCalledWith(...arguments);
 ```
 
+**Setup and teardown**
+
+**beforeAll**: This function is called once, before all the specs in describe test suite are run.
+**afterAll**: This function is called once after all the specs in a test suite are finished.
+**beforeEach**: This function is called before each test specification, it function, has been run.
+**afterEach**: This function is called after each test specification has been run.
+
+We might use these functions like so:
+```typescript
+describe('Hello world', () => {
+
+  let expected = "";
+
+  beforeEach(() => {
+    expected = "Hello World";
+  });
+
+  afterEach(() => {
+    expected = "";
+  });
+
+  it('says hello', () => {
+    expect(message())
+        .toEqual(expected);
+  });
+});
+```
 #### Q. How to Test a components inputs as well as its outputs?
 #### Q. How to Interact with a components view?
 #### Q. Which of the following can be used to run unit tests in Angular?
