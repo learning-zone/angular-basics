@@ -237,6 +237,36 @@ describe('Hello world', () => {
   });
 });
 ```
+#### Q. What is Protractor?  
+Protractor is an end-to-end test framework for Angular. It runs your tests inside a real browser, interacting with it as real person would. Unlike unit tests, where we test individual functions, here we test the entire logic. Protractor is able to fill in forms, click buttons and confirm that the expected data and styling is displayed in the HTML document. Just like Karma, Protractor has its own configuration file at the root of your Angular project, `protractor.conf`:
+```typescript
+const { SpecReporter } = require('jasmine-spec-reporter');
+
+exports.config = {
+  allScriptsTimeout: 11000,
+  specs: [
+    './e2e/**/*.e2e-spec.ts'
+  ],
+  capabilities: {
+    'browserName': 'chrome'
+  },
+  directConnect: true,
+  baseUrl: 'http://localhost:4200/',
+  framework: 'jasmine',
+  jasmineNodeOpts: {
+    showColors: true,
+    defaultTimeoutInterval: 30000,
+    print: function() {}
+  },
+  onPrepare() {
+    require('ts-node').register({
+      project: 'e2e/tsconfig.e2e.json'
+    });
+    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+  }
+};
+```
+
 #### Q. How to Test a components inputs as well as its outputs?
 #### Q. How to Interact with a components view?
 #### Q. Which of the following can be used to run unit tests in Angular?
