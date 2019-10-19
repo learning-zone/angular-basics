@@ -61,8 +61,7 @@ If we wanted to get the same instance of dependency that was passed to the compo
 ```typescript
 componentService = fixture.debugElement.injector.get(AuthService);
 ```
-
-**Listing**  
+ 
 login.component.spec.ts
 ```typescript
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
