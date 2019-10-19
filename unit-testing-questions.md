@@ -175,17 +175,20 @@ describe('Component: Login', () => {
 #### Q. Types of Test in Angular?
 
 The types of Testing looks like -
-1.     Unit Test
-2.     Integration Test
-3.     End to End (e2e) Test
+1. Unit Test
+2. Integration Test
+3. End to End (e2e) Test
 
-Unit Test – What is Unit Test in Angular? The Unit Test is used to testing a single function, single components in Isolation. This is very fast.
+#### Q. What is Unit Test in Angular? 
+The Unit Test is used to testing a single function, single components in Isolation. This is very fast.
 
 In this Test, we are not able to say that everything is all right in the application. Just for a single Unit or function assure that working fine.
 
-Integration Testing – What Is Integration Testing in Angular? The Integration Testing is used to testing a component with templates and this testing containing more time as per comparison Unit Test.
+#### Q. What Is Integration Testing in Angular? 
+The Integration Testing is used to testing a component with templates and this testing containing more time as per comparison Unit Test.
 
-End to End Test (e2e) – What is End-to-End Testing in Angular? The End to End Testing is used to testing the entire application looks like -
+#### Q. What is End-to-End Testing in Angular? 
+The End to End Testing is used to testing the entire application looks like -
 1. All User Interactions
 2. All Service Calls
 3. Authentication/Authorization of app
@@ -206,9 +209,9 @@ The following Steps –
 * ng install
 * ng serve/ng test
 
-Note – If you are going to development then type ng server command and if you want to test your project, you should type ng test command.  After type ng test command and press inter. It’s taking some time to installing everything in your project for test.
+*Note – If you are going to development then type ng server command and if you want to test your project, you should type ng test command.  After type ng test command and press inter. It’s taking some time to installing everything in your project for test.*
 
-Test functions–
+#### Q. What are the Test functions avilable in Angular?
 1. describe – Test suit (just a function)
 2. it  - The spec or test
 3. expect -  Expected outcome.
@@ -218,8 +221,9 @@ Triple Rule of Testing –
 2. Act -  Invoke the Methods/Functions of Components
 3. Assert - Assert the expected outcome/behaviour
 
-Best Practices - The quick list of best practices.
-* Use beforeEach() to Initialize the context for your tests.
-* Make sure the string descriptions you put in describe () and it () make sense as output
-* Use after () and afterEach () to clean-up your tests if there is any state that may bleed over.
+#### Q. What are the Best Practices in Unit Testing?
+The quick list of best practices.
+* Use `beforeEach()` to Initialize the context for your tests.
+* Make sure the string descriptions you put in `describe()` and `it()` make sense as output
+* Use `after()` and `afterEach()` to clean-up your tests if there is any state that may bleed over.
 * If any one test is over 15 lines of code, you may need to refactor the test
