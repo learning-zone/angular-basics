@@ -184,6 +184,76 @@ The Unit Test is used to testing a single function, single components in Isolati
 
 In this Test, we are not able to say that everything is all right in the application. Just for a single Unit or function assure that working fine.
 
+Example:
+**app.component.ts**  
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'app';
+}
+```
+
+**app.component.spec.ts**
+```typescript
+import { TestBed, async } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+
+describe('AppComponent', () => {
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        AppComponent
+      ],
+    }).compileComponents();
+  }));
+
+  it('should create the app', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+   
+    expect(app).toBeTruthy();
+  }));
+
+  it(`should have as title 'app'`, async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+
+    expect(app.title).toEqual('app');
+  }));
+
+  it('should render title in a h1 tag', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+  }));
+});
+```
+
+**app.component.html**  
+```typescript
+<div style="text-align:center">
+  <h1>  Welcome to {{title}}! </h1>
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://code-sample.com/">Tour of Examples</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://code-sample.com/">CLI Documentation</a></h2>
+  </li>
+</ul>
+```
+
+
 #### Q. What Is Integration Testing in Angular? 
 The Integration Testing is used to testing a component with templates and this testing containing more time as per comparison Unit Test.
 
