@@ -316,3 +316,118 @@ describe('AppComponent', () => {
  });
 });
 ```
+
+**Example: Login Testing**  
+login.component.ts
+```typescript
+import { Component, OnInit, EventEmitter,Input, Output, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
+  encapsulation: ViewEncapsulation.None
+})
+export class LoginComponent implements OnInit {
+
+  @Output() loggedIn = new EventEmitter<User>();
+  @Input() enabled = true;
+
+  constructor() { }
+
+  ngOnInit() {  }
+
+  login(email, password) {
+    if (email && password) {
+       this.loggedIn.emit(new User(email, password));
+    }
+   
+    console.log(`Login ${email} ${password}`);
+  }
+}
+
+export class User {
+  constructor(public email: string, public password: string) {
+  }
+}
+```
+
+login.component.spec.ts
+```typescript
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {Component, DebugElement} from "@angular/core";
+import {LoginComponent, User } from './login.component';
+import {By} from "@angular/platform-browser";
+
+describe('LoginComponent', () => {
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
+  let submitElement: DebugElement;
+  let loginElement: DebugElement;
+  let passwordElement: DebugElement;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [LoginComponent]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(LoginComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+
+    submitElement = fixture.debugElement.query(By.css('button'));
+    loginElement = fixture.debugElement.query(By.css('input[type=email]'));
+    passwordElement = fixture.debugElement.query(By.css('input[type=password]'));
+  });
+
+  it('Setting enabled to false disabled the submit button', () => {
+    component.enabled = false;
+    fixture.detectChanges();
+
+    //Expected outcome
+    expect(submitElement.nativeElement.disabled).toBeTruthy();
+  });
+
+  it('Setting enabled to true enables the submit button', () => {
+    component.enabled = true;
+    fixture.detectChanges();
+
+    //Expected outcome
+    expect(submitElement.nativeElement.disabled).toBeFalsy();
+  });
+
+  it('Entering email and password emits loggedIn event', () => {
+    let user: User;
+
+    loginElement.nativeElement.value = "anil.singh@code-sample.com";
+    passwordElement.nativeElement.value = "$ystem!1356";
+
+    // Subscribe to the Observable and store the user in a local variable.
+    component.loggedIn.subscribe((value) => user = value);
+
+    // This sync emits the event and the subscribe callback gets executed above
+    submitElement.triggerEventHandler('click', null);
+
+    //Expected outcome
+    expect(user.email).toBe("anil.singh@code-sample.com");
+    expect(user.password).toBe("$ystem!1356");
+  });
+
+});
+
+login.component.html
+```html
+<form>
+  <label>Email</label>
+  <input type="email" #email>
+  <label>Password</label>
+  <input type="password" #password>
+  <button type="button"
+          (click)="login(email.value, password.value)"
+          [disabled]="!enabled">Login
+  </button>
+</form>
+```
