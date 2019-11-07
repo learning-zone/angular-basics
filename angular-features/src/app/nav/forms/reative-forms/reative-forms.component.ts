@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ReativeFormsComponent implements OnInit {
   userForm: any = FormGroup;
-  submitted: boolean = false;
+  submitted = false;
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
