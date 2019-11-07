@@ -821,7 +821,6 @@ In the above expression, editProfile is a template statement. The below JavaScri
 </div>
 
 #### Q. How do you categorize data binding types?
-
 Binding types can be grouped into three categories distinguished by the direction of data flow. They are listed as below,
 * From the source-to-view
 * From view-to-source
