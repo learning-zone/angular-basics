@@ -3320,10 +3320,9 @@ Two-way data binding is mostly used in forms and when dealing with inputs. User 
 </div>
 
 #### Q. What is Self and Host Decorator in Angular?
-* **@Host**  
-The @Host decorator tells DI to look for a dependency in any injector until it reaches the host.
+**@Host**: The `@Host` decorator tells DI to look for a dependency in any injector until it reaches the host.
 
-When @Self is used, Angular will only look for a value that is bound on the component injector for the element that this Directive/Component exists on.
+When `@Self` is used, Angular will only look for a value that is bound on the component injector for the element that this Directive/Component exists on.
 ```typescript
 class OtherService {}
 class HostService {}
@@ -3356,10 +3355,9 @@ class ParentCmp {
 class App {
 }
 ```
-* **@Self**   
-The @Self decorator tells DI to look for a dependency only from itself, so it will not walk up the tree.
+**@Self**: The `@Self` decorator tells DI to look for a dependency only from itself, so it will not walk up the tree.
 
-When @Host is used, Angular will look for a value that is bound on either the component injector for the element that this Directive/Component exists on, or on the injector of the parent component. Angular calls this parent component the "host".
+When `@Host` is used, Angular will look for a value that is bound on either the component injector for the element that this Directive/Component exists on, or on the injector of the parent component. Angular calls this parent component the "host".
 ```typescript
 class Dependency {}
 
