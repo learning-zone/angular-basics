@@ -19,10 +19,10 @@ export class ParentComponent {
   };
 
   passBall(id: number) {
-    if (id == 1) {
+    if (id === 1) {
       this.child1.futbols.pop();
       this.child2.futbols.push(true);
-    } else if (id == 2) {
+    } else if (id === 2) {
       this.child2.futbols.pop();
       this.child1.futbols.push(true);
     }
