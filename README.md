@@ -1024,7 +1024,7 @@ Since the above service method returns an Observable which needs to be subscribe
 </div>
 
 #### Q. How can you read full response?
-The response body doesn't may not return full response data because sometimes servers also return special headers or status code which which are important for the application workflow. Inorder to get full response, you should use observe option from HttpClient,
+The response body doesn't may not return full response data because sometimes servers also return special headers or status code which which are important for the application workflow. In order to get full response, you should use observe option from HttpClient,
 ```javascript
 getUserResponse(): Observable<HttpResponse<User>> {
   return this.http.get<User>(
