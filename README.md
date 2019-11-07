@@ -1048,7 +1048,7 @@ import { catchError, retry } from 'rxjs/operators';
 An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the **subscribe()** method of the instance, passing an observer object to receive the notifications.
 
 ```javascript
-Creates an observable sequence of 5 integers, starting from 1
+// Creates an observable sequence of 5 integers, starting from 1
 const source = range(1, 5);
 
 // Create observer object
