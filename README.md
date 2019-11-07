@@ -3458,7 +3458,7 @@ npm install primeng --save
 npm install primeicons --save  
 npm install --save @angular/animations  
 ```
-* **App.module.ts**
+**App.module.ts**
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';  
 import { NgModule } from '@angular/core';  
@@ -3480,7 +3480,7 @@ import {OrderListModule} from 'primeng/orderlist';
 })  
 export class AppModule { } 
 ```
-* **app.component.ts**
+**app.component.ts**
 ```typescript
 import { Component } from '@angular/core';  
 @Component({  
@@ -3513,7 +3513,7 @@ export class AppComponent {
   ];  
 }  
 ```
-* **app.component.html**
+**app.component.html**
 ```html
 <p-accordion>  
   <p-accordionTab header="India">  
@@ -3552,7 +3552,7 @@ export class AppComponent {
 
 #### Q. How can you add an active class to a selected element in a list component?
 Add class to an element on click and remove on click of other item and highlight the current one.
-* **app.component.html**
+**app.component.html**
 ```html
 <div>
   <ul>
