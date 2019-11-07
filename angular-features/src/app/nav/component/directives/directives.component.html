@@ -53,7 +53,7 @@
 
 <h4>*ngIf with a &lt;ng-container&gt;</h4>
 
-<button (click)="hero = hero ? null : heroes[0]">Toggle hero</button>
+<button (click)="hero = hero ? null : heroes[0]" class="btn btn-primary">Toggle hero</button>
 
 <p>
   I turned the corner
@@ -69,19 +69,6 @@
   </span>
   and continued on my way.
 </p>
-
-<h5 id="ngFor">NgFor <hr/></h5>
-
-<div class="box">
-    <p class="code">&lt;div *ngFor="let hero of heroes; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd"&gt;</p>
-    <div *ngFor="let hero of heroes; let i=index; let odd=odd; trackBy: trackById" [class.odd]="odd">({{i}}) {{hero.name}}</div>
-
-    <p class="code">&lt;ng-template ngFor let-hero [ngForOf]="heroes" let-i="index" let-odd="odd" [ngForTrackBy]="trackById"/&gt;</p>
-    <ng-template ngFor let-hero [ngForOf]="heroes" let-i="index" let-odd="odd" [ngForTrackBy]="trackById">
-    <div [class.odd]="odd">({{i}}) {{hero.name}}</div>
-    </ng-template>
-</div>
-
 
 <h5 id="ngSwitch">NgSwitch <hr/></h5>
 
@@ -114,8 +101,9 @@
   <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
   <button
     (click)="condition = !condition"
-    [ngClass] = "{ 'a': condition, 'b': !condition }" >
+    [ngClass] = "{ 'a': condition, 'b': !condition }" class="btn btn-primary" >
     Toggle condition to {{condition ? 'false' : 'true'}}
+    
   </button>
 </p>
 <p *appUnless="condition" class="unless a">
