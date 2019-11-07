@@ -1025,7 +1025,7 @@ getUserResponse(): Observable<HttpResponse<User>> {
 Now HttpClient.get() method returns an Observable of typed HttpResponse rather than just the JSON data.
 #### Q. How do you perform Error handling?
 If the request fails on the server or failed to reach the server due to network issues then HttpClient will return an error object instead of a successful reponse. In this case, you need to handle in the component by passing error object as a second callback to subscribe() method.
-Let's see how it can be handled in the component with an example,
+
 ```javascript
 fetchUser() {
   this.userService.getProfile()
