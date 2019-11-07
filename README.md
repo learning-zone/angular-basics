@@ -3166,9 +3166,7 @@ function subscriberFunc(observer) {
 ```
 `Observable` also has the advantage over `Promise` to be **cancelable**. If the result of an HTTP request to a server or some other expensive async operation isn't needed anymore, the `Subscription` of an `Observable` allows to cancel the subscription, while a Promise will eventually call the success or failed callback even when you don't need the notification or the result it provides anymore.  
 
-Observable provides **operators** like map, forEach, reduce, ... similar to an array
-
-There are also powerful operators like retry(), or replay(), ... that are often quite handy.
+Observable provides operators like map(), forEach(), reduce(), ... similar to an array. There are also powerful operators like retry(), or replay(), ... that are often quite handy.
 
 **Differences**  
 
