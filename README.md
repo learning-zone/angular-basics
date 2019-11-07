@@ -3562,7 +3562,7 @@ Add class to an element on click and remove on click of other item and highlight
   </ul>
 </div>
 ```
-* **app.component.ts**
+**app.component.ts**
 ```typescript
 export class App {
   list:any;
@@ -3585,7 +3585,7 @@ export class App {
 
 }
 ```
-* **app.component.css**
+**app.component.css**
 ```css
 .active a { color: red; }
 ```
