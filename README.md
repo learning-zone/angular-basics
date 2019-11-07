@@ -957,23 +957,6 @@ export class AppModule { }
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are observables?
-Observables are declarative which provide support for passing messages between publishers and subscribers in application. They are mainly used for event handling, asynchronous programming, and handling multiple values. In this case, you define a function for publishing values, but it is not executed until a consumer subscribes to it. The subscribed consumer then receives notifications until the function completes, or until they unsubscribe.
-
-#### Q. What is HttpClient and its benefits?
-Most of the Front-end applications communicate with backend services over HTTP protocol using either XMLHttpRequest interface or the fetch() API. Angular provides a simplified client HTTP API known as **HttpClient** which is based on top of XMLHttpRequest interface. This client is avaialble from `@angular/common/http` package.
-You can import in your root module as below,
-```javascript
-import { HttpClientModule } from '@angular/common/http';
-```
-
-The major advantages of HttpClient can be listed as below,
-* Contains testability features
-* Provides typed request and response objects
-* Intercept request and response
-* Supports Observalbe APIs
-* Supports streamlined error handling
-
 #### Q. Explain on how to use HttpClient with an example?
 Below are the steps need to be followed for the usage of HttpClient.
 1. Import HttpClient into root module:
@@ -1019,6 +1002,14 @@ fetchUserProfile() {
 }
 ```
 Since the above service method returns an Observable which needs to be subscribed in the component.
+
+**Advantages**  
+* Contains testability features
+* Provides typed request and response objects
+* Intercept request and response
+* Supports Observalbe APIs
+* Supports streamlined error handling
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
