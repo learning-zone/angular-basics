@@ -1036,6 +1036,7 @@ fetchUser() {
 }
 ```
 It is always a good idea to give the user some meaningful feedback instead of displaying the raw error object returned from HttpClient.
+
 #### Q. What is RxJS?
 RxJS is a library for composing asynchronous and callback-based code in a functional, reactive style using Observables. Many APIs such as  HttpClient produce and consume RxJS Observables and also uses operators for processing observables.
 For example, you can import observables and operators for using HttpClient as below,
@@ -1045,7 +1046,7 @@ import { catchError, retry } from 'rxjs/operators';
 ```
 #### Q. What is subscribing?
 An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the **subscribe()** method of the instance, passing an observer object to receive the notifications.
-Let's take an example of creating and subscribing to a simple observable, with an observer that logs the received message to the console.
+
 ```javascript
 Creates an observable sequence of 5 integers, starting from 1
 const source = range(1, 5);
