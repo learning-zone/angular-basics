@@ -3299,25 +3299,20 @@ export class AppComponent {
 ```
 **Two-way data binding**: In two-way data binding both the class variables and the template keep each other up to date. This is achieved by using `[()]`.  
 ```typescript
-import { Component } from '@angular/core';
-@Component({
-  selector: 'app-root',
-  template: `
-  <div>
-    <p>
-        <input [(ngModel)]="msg" />
-        <b>{{msg}}</b>
-    </p>
-  </div>
-  `,
-  style: []
-})
-export class AppComponent {
-  msg = 'My Message'
-  changeMsg() {
-    this.msg = 'Message Changed'
-  }
-}
+import { Component } from "@angular/core";    
+@Component({    
+  selector: "app-root",    
+  templateUrl: "./app.component.html",    
+  styleUrls: ["./app.component.css"]    
+})    
+export class AppComponent {    
+  message: string = "Hello World!";    
+}    
+```
+```html
+<h2>Two-way Binding Example</h2>    
+   <input [(ngModel)]="message" /> <br/><br/>    
+<p> {{message}} </p> 
 ```
 Two-way data binding is mostly used in forms and when dealing with inputs. User input has to be grabbed from the DOM and stored in the class property before being used.
 <div align="right">
