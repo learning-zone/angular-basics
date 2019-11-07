@@ -38,7 +38,7 @@ AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   ngOnDestroy() {
     console.log('ngOnDestroy() called');
   }
-  fnAddNumber(): void {
+  addNumber(): void {
     this.data += 100;
   }
   deleteNumber(): void {
