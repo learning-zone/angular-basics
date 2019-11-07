@@ -3172,7 +3172,7 @@ Observable provides operators like map(), forEach(), reduce(), ... similar to an
 
 | Observable | Promise  |
 |------------|----------|
-| Declarative: Computation does not start until subscription so that they can be run whenever you need the result | Execute immediately on creation|
+| Computation does not start until subscription so that they can be run whenever you need the result | Execute immediately on creation|
 | Provide multiple values over time | Provide only one |
 | Subscribe method is used for error handling which makes centralized and predictable error handling| Push errors to the child promises |
 | Provides chaining and subscription to handle complex applications | Uses only .then() clause |
