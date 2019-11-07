@@ -1099,15 +1099,6 @@ A handler that implements the Observer interface for receiving observable notifi
 myObservable.subscribe(myObserver);
 ```
 *Note: If you don't supply a handler for a notification type, the observer ignores notifications of that type.*
-#### Q. What is the difference between promise and observable?
-Below are the list of differences between promise and observable,
-
-| Observable | Promise |
-|---- | --------- |
-| Declarative: Computation does not start until subscription so that they can be run whenever you need the result | Execute immediately on creation|
-| Provide multiple values over time | Provide only one |
-| Subscribe method is used for error handling which makes centralized and predictable error handling| Push errors to the child promises |
-| Provides chaining and subscription to handle complex applications | Uses only .then() clause |
 
 #### Q. What is multicasting?
 Multi-casting is the practice of broadcasting to a list of multiple subscribers in a single execution. Let's demonstrate the multi-casting feature,
@@ -3180,6 +3171,16 @@ function subscriberFunc(observer) {
 Observable provides **operators** like map, forEach, reduce, ... similar to an array
 
 There are also powerful operators like retry(), or replay(), ... that are often quite handy.
+
+**Differences**  
+
+| Observable | Promise  |
+|------------|----------|
+| Declarative: Computation does not start until subscription so that they can be run whenever you need the result | Execute immediately on creation|
+| Provide multiple values over time | Provide only one |
+| Subscribe method is used for error handling which makes centralized and predictable error handling| Push errors to the child promises |
+| Provides chaining and subscription to handle complex applications | Uses only .then() clause |
+
 #### Q. List the differences between Angular components vs directives?
 The difference between a component and a directive in Angular 2 is that a component is a directive with a view whereas a directive is a decorator with no view.
 
