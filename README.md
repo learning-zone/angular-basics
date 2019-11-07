@@ -3591,7 +3591,7 @@ export class App {
 ```
 #### Q. What is RouterLink? How would you pass data from a parent component to a child component?
 The Angular Router enables navigation from one view to the next as users perform application tasks.
-* **AppComponent.ts**
+**AppComponent.ts**
 ```typescript
 import { Component } from '@angular/core';
 
@@ -3607,7 +3607,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { }
 ```
-* **AppRoutes.ts**  
+**AppRoutes.ts**  
 ```typescript
 import { Routes } from '@angular/router';
 
@@ -3620,7 +3620,7 @@ export const routes: Routes = [
 ];
 export class AppRoutes { }
 ```
-* **AppModule.ts**  
+**AppModule.ts**  
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
