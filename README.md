@@ -3281,8 +3281,7 @@ export class App implements OnInit{
 Traceur compiler takes classes, generators, and other features from ECMAScript edition 6 (ES6) and compiles it into JavaScript ES5 that runs on the browser. This means developers can use the code from a future version that has more features and encourages design patterns.
 
 #### Q. How can we bind a variable with DOM element in Angular?
-* **One-way data binding**  
-One-way data binding keeps updates on the template of the HTML template. The flow of change(updates) is unidirectional.
+**One-way data binding**: One-way data binding keeps updates on the template of the HTML template. The flow of change(updates) is unidirectional.
 ```typescript
 import { Component } from '@angular/core';
 @Component({
@@ -3304,9 +3303,7 @@ export class AppComponent {
   }
 }
 ```
-* **Two-way data binding**  
-In two-way data binding both the class variables and the template keep each other up to date. This is achieved by using `[()]`.  
-The template can change the value of the data-bound class property and the class can change the value of the property in the template. The template and the class are bound to each other, any change in either of them results in data updates in both of them.
+**Two-way data binding**: In two-way data binding both the class variables and the template keep each other up to date. This is achieved by using `[()]`.  
 ```typescript
 import { Component } from '@angular/core';
 @Component({
