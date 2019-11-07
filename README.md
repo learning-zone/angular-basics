@@ -3311,8 +3311,8 @@ export class AppComponent {
 ```
 ```html
 <h2>Two-way Binding Example</h2>    
-   <input [(ngModel)]="message" /> <br/><br/>    
-<p> {{message}} </p> 
+   <input [(ngModel)]="message" />    
+<p>{{message}}</p> 
 ```
 Two-way data binding is mostly used in forms and when dealing with inputs. User input has to be grabbed from the DOM and stored in the class property before being used.
 <div align="right">
