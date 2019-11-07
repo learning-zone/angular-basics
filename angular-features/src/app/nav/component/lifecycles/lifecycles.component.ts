@@ -1,16 +1,20 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, AfterContentInit,
+DoCheck, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-lifecycles',
   templateUrl: './lifecycles.component.html',
   styleUrls: ['./lifecycles.component.scss']
 })
-export class LifecyclesComponent implements OnInit {
-  data: number = 100;
+export class LifecyclesComponent implements
+OnInit, OnChanges, DoCheck, AfterContentInit,
+AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+
+  data = 100;
   constructor() {
     console.log(`constructor() called: ${this.data}`);
   }
-  ngOnChanges() {
+  ngOnChanges(): void {
     console.log(`ngOnChanges() called: ${this.data}`);
   }
   ngOnInit() {
