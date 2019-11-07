@@ -3287,20 +3287,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <div>
-    <p>
-      {{title}} works!!
-      <app-todo [item]='title'></app-todo>
-    </p>
-  </div>
+   <div>
+     <p>{{title}} Rocks!</p>
+   </div>
   `,
   style: []
 })
 export class AppComponent {
-  title = 'app';
-  changeTitle() {
-      this.title = 'Angular app'
-  }
+  title = 'Angular';
 }
 ```
 **Two-way data binding**: In two-way data binding both the class variables and the template keep each other up to date. This is achieved by using `[()]`.  
