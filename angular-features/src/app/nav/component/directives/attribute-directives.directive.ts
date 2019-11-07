@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   selector: '[appAttributeDirectives]'
 })
 export class AttributeDirectivesDirective {
-  
+
   constructor(private el: ElementRef) {  }
 
   @Input('appAttributeDirectives') highlightColor: string;
