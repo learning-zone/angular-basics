@@ -3142,8 +3142,7 @@ export class AppComponent implements AfterViewChecked {
 }
 ```
 #### Q. What is the difference between observable and promises?
-* **Promise**  
-A `Promise` handles a single event when an async operation completes or fails.
+**Promise**: A `Promise` handles a single event when an async operation completes or fails.
 ```typescript
 new Promise(executorFunc);
 function executorFunc(resolve, reject) {
@@ -3153,8 +3152,7 @@ function executorFunc(resolve, reject) {
     reject(error);
 }
 ```
-* **Observable**  
-An `Observable` is like a `Stream` and allows to pass zero or more events where the callback is called for each event.
+**Observable**: An `Observable` is like a `Stream` and allows to pass zero or more events where the callback is called for each event.
 
 Often `Observable` is preferred over `Promise` because it provides the features of Promise and more. With Observable it doesn't matter if you want to handle 0, 1, or multiple events. You can utilize the same API in each case.
 ```typescript
