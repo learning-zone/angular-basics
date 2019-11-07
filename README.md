@@ -806,7 +806,7 @@ The below javascript expressions are prohibited in template expression
 * increment and decrement operators (++ and -)
 
 #### Q. What are template statements?
-A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statements appear in quotes to the right of the = symbol like **(event)="statement"**. Let's take an example of button click event's statement
+A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statements appear in quotes to the right of the = symbol like **(event)="statement"**. 
 ```html
 <button (click)="editProfile()">Edit Profile</button>
 ```
