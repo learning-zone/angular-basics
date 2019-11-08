@@ -1336,24 +1336,24 @@ class MyComponent {
   }
 }
 ```
-#### Q. What are router events?
+#### Q. What are Router Events?
 During each navigation, the Router emits navigation events through the Router.events property allowing you to track the lifecycle of the route. The sequence of router events is as below,
-1. NavigationStart,
-2. RouteConfigLoadStart,
-3. RouteConfigLoadEnd,
-4. RoutesRecognized,
-5. GuardsCheckStart,
-6. ChildActivationStart,
-7. ActivationStart,
-8. GuardsCheckEnd,
-9. ResolveStart,
-10. ResolveEnd,
-11. ActivationEnd
-12. ChildActivationEnd
-13. NavigationEnd,
-14. NavigationCancel,
-15. NavigationError
-16. Scroll
+* NavigationStart
+* RouteConfigLoadStart
+* RouteConfigLoadEnd
+* RoutesRecognized
+* GuardsCheckStart
+* ChildActivationStart
+* ActivationStart
+* GuardsCheckEnd
+* ResolveStart
+* ResolveEnd
+* ActivationEnd
+* ChildActivationEnd
+* NavigationEnd
+* NavigationCancel
+* NavigationError
+* Scroll
 
 #### Q. What is activated route?
 ActivatedRoute contains the information about a route associated with a component loaded in an outlet. It can also be used to traverse the router state tree. The ActivatedRoute will be injected as a router service to access the information. In the below example, you can access route path and parameters,
