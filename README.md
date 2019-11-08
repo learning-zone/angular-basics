@@ -1261,7 +1261,7 @@ There are mainly three kinds of directives.
 You can use CLI command `ng generate directive` to create the directive class file. It creates the source file(src/app/components/directivename.directive.ts), the respective test file(.spec.ts) and declare the directive class file in root module.
 
 #### Q. Give an example for attribute directives?
-Let's take simple highlighter behavior as a example directive for DOM element. You can create and apply the attribute directive using below steps,
+
 1. Create HighlightDirective class with the file name `src/app/highlight.directive.ts`. In this file, we need to import **Directive** from core library to apply the metadata and **ElementRef** in the directive's constructor to inject a reference to the host DOM element ,
 ```javascript
 import { Directive, ElementRef } from '@angular/core';
@@ -1275,8 +1275,8 @@ export class HighlightDirective {
     }
 }
 ```
-2. Apply the attribute directive as an attribute to the host element(for example, <p>)
-```javascript
+2. Apply the attribute directive as an attribute to the host element
+```html
 <p appHighlight>Highlight me!</p>
 ```
 3. Run the application to see the highlight behavior on paragraph element
