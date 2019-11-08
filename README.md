@@ -1355,7 +1355,7 @@ During each navigation, the Router emits navigation events through the Router.ev
 * NavigationError
 * Scroll
 
-#### Q. What is activated route?
+#### Q. What is Activated Route?
 ActivatedRoute contains the information about a route associated with a component loaded in an outlet. It can also be used to traverse the router state tree. The ActivatedRoute will be injected as a router service to access the information. In the below example, you can access route path and parameters,
 ```javascript
 @Component({...})
