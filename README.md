@@ -1292,11 +1292,6 @@ The routing application should add <base> element to the index.html as the first
 ```html
 <base href="/">
 ```
-#### Q. What are the router imports?
-The Angular Router which represents a particular component view for a given URL is not part of Angular Core. It is available in library named `@angular/router` to import required router components. For example, we import them in app module as below,
-```javascript
-import { RouterModule, Routes } from '@angular/router';
-```
 #### Q. What is router outlet?
 The RouterOutlet is a directive from the router library and it  acts as a placeholder that marks the spot in the template where the router should display the components for that outlet. Router outlet is used like a component,
 ```html
