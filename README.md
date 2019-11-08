@@ -1287,9 +1287,6 @@ ng serve
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is Angular Router?
-Angular Router is a mechanism in which navigation happens from one view to the next as users perform application tasks. It borrows the concepts or model of browser's application navigation.
-
 #### Q. What is the purpose of base href tag?
 The routing application should add <base> element to the index.html as the first child in the <head> tag inorder to indicate how to compose navigation URLs. If app folder is the application root then you can set the href value as below
 ```html
