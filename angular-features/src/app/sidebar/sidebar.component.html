@@ -2,11 +2,11 @@
   <div class="sidebar-content">
     <perfect-scrollbar>
       <div class="sidebar-header">
-        <a routerLink="/home" routerLinkActive="active"><i class="fas fa-home"></i> &nbsp; Home</a>
+        <a routerLink="/home" [routerLinkActive]="'active'"><i class="fas fa-home"></i> &nbsp; Home</a>
       </div> 
       <div class="sidebar-menu">
         <ul>
-          <li *ngFor="let menu of menus" [ngClass]="{'active': menu.active , 'sidebar-dropdown':menu.type === 'dropdown' , 'header-menu':menu.type === 'header'}">
+          <li *ngFor="let menu of menus" [routerLinkActive]="'active'" [ngClass]="{'active': menu.active , 'sidebar-dropdown':menu.type === 'dropdown' , 'header-menu':menu.type === 'header'}">
             <span *ngIf="menu.type === 'header'">{{menu.title}}</span>
             <a *ngIf="menu.type !== 'header'" (click)='toggle(menu)'>
               <i class="{{menu.icon}}"></i>
@@ -15,7 +15,7 @@
             </a>
             <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
               <ul>
-                <li *ngFor="let submenu of menu.submenus">
+                <li *ngFor="let submenu of menu.submenus" [routerLinkActive]="'active'">
                   <a routerLink="/{{submenu.path}}" routerLinkActive="active"> {{submenu.title}}
                     <span *ngIf="submenu.badge" class="badge badge-pill" [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
                   </a>

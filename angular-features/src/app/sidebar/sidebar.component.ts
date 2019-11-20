@@ -28,19 +28,19 @@ export class SidebarComponent implements OnInit {
     return this.sidebarservice.getSidebarState();
   }
 
-  toggle(currentMenu) {
+  toggle(currentMenu: any) {
     if (currentMenu.type === 'dropdown') {
       this.menus.forEach(element => {
         if (element === currentMenu) {
           currentMenu.active = !currentMenu.active;
         } else {
-          element.active = false;
+          element.active = false; 
         }
       });
     }
   }
 
-  getState(currentMenu) {
+  getState(currentMenu: any) {
 
     if (currentMenu.active) {
       return 'down';
