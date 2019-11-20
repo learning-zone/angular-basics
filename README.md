@@ -381,7 +381,7 @@ components.
 | Not a mobile friendly framework                   | Developed considering mobile platform               |
 | Difficulty in SEO friendly application development| Ease to create SEO friendly applications            |
 
-#### Q. What are directives?
+#### Q. what are directives in angular?
 Directives add behaviour to an existing DOM element or an existing component instance.
 There are four types of directives in Angular
 * Components directives
