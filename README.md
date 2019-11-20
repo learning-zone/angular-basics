@@ -429,12 +429,10 @@ export class AppComponent {
 ```
 
 #### Q. What are the differences between Component and Directive?
-In a short note, A component(@component) is a directive-with-a-template.
-
-Some of the major differences are mentioned in a tabular form
+A component is also a type of directive with template, styles and logic part.
 
 | Component | Directive |
-|---------- |----------
+|---------- |-----------|
 | To register a component we use @Component meta-data annotation  | To register directives we use @Directive meta-data annotation |
 | Components are typically used to create UI widgets| Directive is used to add behavior to an existing DOM element |
 | Component is used to break up the application into smaller components| Directive is use to design re-usable components|
