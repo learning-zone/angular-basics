@@ -440,6 +440,7 @@ A component is also a type of directive with template, styles and logic part.
 | @View decorator or templateurl/template are mandatory | Directive doesn't use View|
 
 
+Example:
 ```typescript
 import { Component, HostListener, HostBinding, Directive, ElementRef } from '@angular/core';
 
