@@ -479,10 +479,8 @@ import { Component } from '@angular/core';
         <div>
             <h1>{{title}}</h1>
             <div>Angular Template Example</div>
-        </div>
-      `
+        </div>`
 })
-
 export class AppComponent {
     title: string = 'Hello World';
 }
