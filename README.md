@@ -381,19 +381,6 @@ components.
 | Not a mobile friendly framework                   | Developed considering mobile platform               |
 | Difficulty in SEO friendly application development| Ease to create SEO friendly applications            |
 
-
-#### Q. What are the key components of Angular?
-Angular has the below key components,
-1. **Modules**: An angular module is set of angular basic building blocks like component, directives, services etc. An application is divided into logical pieces and each piece of code is called as "module" which perform a single task.
-1. **Components**: These are the basic building blocks of angular application to control HTML views.
-1. **Templates**: This represent the views of an Angular application.
-1. **MetaData**: This can be used to add more data to an Angular class.
-1. **Data-Binding**:
-1. **Directive**:
-1. **Services**: It is used to create components which can be shared across the entire application.
-1. **Dependency Injection**:
-
-
 #### Q. What are directives?
 Directives add behaviour to an existing DOM element or an existing component instance.
 There are four types of directives in Angular
