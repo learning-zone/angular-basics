@@ -471,9 +471,8 @@ export class AppComponent  {
 </div>
 
 #### Q. What is a module?
+In Angular, a module is a mechanism to group components, directives, pipes and services that are related, in such a way that can be combined with other modules to create an application. 
 
-Modules are logical boundaries in your application and the application is divided into separate modules to separate the functionality of your application.
-Lets take an example of **app.module.ts** root module declared with **@NgModule** decorator as below,
 ```typescript
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
