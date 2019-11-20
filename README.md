@@ -466,38 +466,6 @@ export class AppComponent  {
 
 }
 ```
-
-#### Q. What is a template?
-A template is a HTML view where we can display data by binding controls to properties of an Angular component. We can define it inline using the template property, or we can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.  
-
-```typescript
-import { Component } from '@angular/core';
-
-@Component ({
-    selector: 'my-app',
-    template: `
-        <div>
-            <h1>{{title}}</h1>
-            <div>Angular Template Example</div>
-        </div>`
-})
-export class AppComponent {
-    title: string = 'Hello World';
-}
-```
-**Using separate template file such as app.component.html**
-```typescript
-import { Component } from '@angular/core';
-
-@Component ({
-    selector: 'my-app',
-    templateUrl: 'app/app.component.html'
-})
-
-export class AppComponent {
-    title: string = 'Hello World';
-}
-```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
