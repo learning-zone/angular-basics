@@ -220,7 +220,7 @@ From subscription 2: 4
 </div>
 
 #### Q. What is rxjs BehaviorSubject, ReplaySubject and AsyncSubject in angular?
-**The BehaviorSubject**: The BehaviorSubject has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
+**BehaviorSubject**: It has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
 ```typescript
 import * as Rx from "rxjs";
 
