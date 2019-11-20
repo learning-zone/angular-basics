@@ -29,6 +29,7 @@ import { UsersComponent } from './nav/routing/lazy-loading/users/users.component
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/component-interaction', pathMatch: 'full' },
   { path: 'component-interaction', component: ComponentInteractionComponent },
   { path: 'directives', component: DirectivesComponent },
   { path: 'lifecycles', component: LifecyclesComponent },
@@ -62,7 +63,6 @@ const routes: Routes = [
   { path: 'virtual-scrolling', component: VirtualScrollingComponent },
  
   { path: 'home', redirectTo: '/', pathMatch: 'full' },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
