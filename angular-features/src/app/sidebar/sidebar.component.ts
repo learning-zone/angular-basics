@@ -34,7 +34,7 @@ export class SidebarComponent implements OnInit {
         if (element === currentMenu) {
           currentMenu.active = !currentMenu.active;
         } else {
-          element.active = false; 
+          element.active = false;
         }
       });
     }
