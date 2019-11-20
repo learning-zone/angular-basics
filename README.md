@@ -439,6 +439,33 @@ A component is also a type of directive with template, styles and logic part.
 | Only one component can be present per DOM element | Many directives can be used per DOM element |
 | @View decorator or templateurl/template are mandatory | Directive doesn't use View|
 
+
+```typescript
+import { Component, HostListener, HostBinding, Directive, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+  constructor(el: ElementRef) {
+    el.nativeElement.style.backgroundColor = 'red';
+ }
+}
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div *ngIf='myBool' appHighlight>Hi there</div>
+  `,
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent  {
+
+  myBool:boolean = true;
+
+}
+```
+
 #### Q. What is a template?
 A template is a HTML view where we can display data by binding controls to properties of an Angular component. We can define it inline using the template property, or we can define the template in a separate HTML file and link to it in the component metadata using the @Component decorator's templateUrl property.
 **Using inline template with template syntax,**
