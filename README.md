@@ -252,7 +252,7 @@ console.log(subject.value)
 // 0.1901322109907977
 ```
 
-**The ReplaySubject**: The ReplaySubject can send **old** values to new subscribers. It however has the extra characteristic that it can record a part of the observable execution and therefore store multiple old values and **replay** them to new subscribers.
+**ReplaySubject**: It can send **old** values to new subscribers. It however has the extra characteristic that it can record a part of the observable execution and therefore store multiple old values and **replay** them to new subscribers.
 
 When creating the ReplaySubject we can specify how much values want to store and for how long want to store them.
 ```typescript
@@ -285,7 +285,7 @@ subject.next(Math.random());
 // Subscriber B: 0.6664809293975393
 ```
 
-**The AsyncSubject**: The AsyncSubject is aSubject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes. 
+**AsyncSubject**: It is a Subject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes. 
 ```typescript
 import * as Rx from "rxjs";
 
