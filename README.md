@@ -867,7 +867,7 @@ template: `{{someInputValue | myCustomPipe: someOtherValue}}`
 </div>
 
 #### Q. Give an example of custom pipe?
-You can create custom reusable pipes for the transformation of existing value. For example, let us create a custom pipe for finding file size based on an extension,
+We can create custom reusable pipes for the transformation of existing value. For example, let us create a custom pipe for finding file size based on an extension,
 ```javascript
 import { Pipe, PipeTransform } from '@angular/core';
 
