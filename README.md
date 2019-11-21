@@ -728,11 +728,25 @@ export class AsyncObservablePipeComponent {
 </div>
 
 #### Q. What is the purpose of ngFor directive?
-We use Angular ngFor directive in the template to display each item in the list. For example, here we iterate over list of users,
-```html
-<li *ngFor="let user of users">
-    {{ user }}
-</li>
+NgFor is a structural directive, meaning that it changes the structure of the DOM. It is used to repeat a given HTML template once for each value in an array, each time passing it the array value as context for string interpolation or binding.
+```typescript
+@Component({
+  selector: 'ngfor-app',
+  template: `
+ <ul>
+  <li *ngFor="let person of people"> (1)
+    {{ person.name }}
+  </li>
+ </ul>
+ `
+})
+class NgForAppComponent {
+  people: any[] = [
+    { "name": "Douglas  Pace" },
+    { "name": "Mcleod  Mueller" },
+    { "name": "Day  Meyers" }
+  ];
+}
 ```
 The user variable in the ngFor double-quoted instruction is a **template input variable**
 #### Q. What is the purpose of ngIf directive?
