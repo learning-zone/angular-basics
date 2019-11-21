@@ -734,7 +734,7 @@ NgFor is a structural directive, meaning that it changes the structure of the DO
   selector: 'ngfor-app',
   template: `
  <ul>
-  <li *ngFor="let person of people"> (1)
+  <li *ngFor="let person of people">
     {{ person.name }}
   </li>
  </ul>
