@@ -1173,7 +1173,7 @@ Custom elements (or Web Components) are a Web Platform feature which extends HTM
 #### Q. Do I need to bootstrap custom elements?
 No, custom elements bootstrap (or start) automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM. Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular.
 
-#### Q. Explain how custom elements works internally?
+#### Q. How custom elements works internally?
 Below are the steps in an order about custom elements functionality,
 1. **App registers custom element with browser:** Use the createCustomElement() function to convert a component into a class that can be registered with the browser as a custom element.
 2. **App adds custom element to DOM:**  Add custom element just like a built-in HTML element directly into the DOM.
