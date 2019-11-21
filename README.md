@@ -1779,7 +1779,7 @@ transition('open => closed', [
 
 Using `DomSanitizer` we can inject the dynamic Html,Style,Script,Url.
 
-```
+```typescript
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 @Component({
