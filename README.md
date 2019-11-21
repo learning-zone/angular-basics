@@ -1987,11 +1987,6 @@ bazel test [targets] // Run the tests with *_test targets found in the pattern.
 bazel run [target]: Compile the program represented by target and then run it.
 ```
 
-#### Q. What is Angular Framework?
-Angular is a **TypeScript-based open-source** front-end platform that makes it easy to build applications with 
-in web/mobile/desktop. The major features of this framework such as declarative templates, dependency injection, 
-end to end tooling, and many more other features are used to ease the development.
-
 #### Q. What is angular CLI?
 Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
 You need to install using below npm command,
