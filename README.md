@@ -723,12 +723,6 @@ export class AsyncObservablePipeComponent {
     );
 }
 ```
-#### Q. What is the option to choose between inline and external template file?
-You can store your component's template in one of two places. You can define it inline using the **template** property, or you can define the template in a separate HTML file and link to it in the component metadata using the **@Component** decorator's **templateUrl** property.
-The choice between inline and separate HTML is a matter of taste, circumstances, and organization policy. But normally we use inline template for small portion of code and external template file for bigger views. By default, the Angular CLI generates components with a template file. But you can override that with the below command,
-```
-ng generate component hero -it
-```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
