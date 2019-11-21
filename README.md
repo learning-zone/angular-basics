@@ -1995,7 +1995,7 @@ npm install @angular/cli@latest
 ```
 Below are the list of few commands, which will come handy while creating angular projects
 1. **Creating New Project:** ng new <project-name>
-2. **Generating Components, Directives & Services:** ng generate/g <feature-name>
+2. **Generating Components, Directives & Services:** ng generate/g <feature-name>  
 The different types of commands would be,
 * ng generate class my-new-class: add a class to your application
 * ng generate component my-new-component: add a component to your application
