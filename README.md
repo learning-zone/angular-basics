@@ -762,8 +762,8 @@ export class InnerHtmlBindingComponent {
 </div>
 
 #### Q. What is interpolation?
-Interpolation is a special syntax that Angular converts into property binding. It’s a convenient alternative to property binding. It is represented by double curly braces({{}}). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
-Let's take an example,
+Interpolation is a special syntax that Angular converts into property binding. It’s a convenient alternative to property binding. It is represented by double curly braces(`{{ }}`). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
+
 ```html
 <h3>
   {{title}}
