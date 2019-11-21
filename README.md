@@ -490,7 +490,7 @@ The NgModule decorator has three options
 * The declarations option is used to define components in the respective module
 * The bootstrap option tells Angular which Component to bootstrap in the application
 
-#### Q. What are lifecycle hooks available?
+#### Q. What are lifecycle hooks available in Angular?
 Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
 
 The description of each lifecycle method is as below,
