@@ -504,7 +504,7 @@ Angular application goes through an entire set of processes or has a lifecycle r
 
 #### Q. What is a data binding?
 Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding(divided as 3 categories) which differ in the way the data is flowing.
-1. **From the Component to the DOM:**
+**1. From the Component to the DOM:**  
 **Interpolation:** {{ value }}: Adds the value of a property from the component
 ```html
 <li>Name: {{ user.name }}</li>
@@ -514,12 +514,12 @@ Data binding is a core concept in Angular and allows to define communication bet
 ```html
 <input type="email" [value]="user.email">
 ```
-2. **From the DOM to the Component:**
+**2. From the DOM to the Component:**  
 **Event binding: (event)=”function”:** When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component
 ```html
 <button (click)="logout()"></button>
 ```
-3. **Two-way binding:**
+**3. Two-way binding:**  
 **Two-way data binding:** [(ngModel)]=”value”: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync
 ```html
 <input type="email" [(ngModel)]="user.email">
