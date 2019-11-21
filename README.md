@@ -381,6 +381,31 @@ components.
 | Not a mobile friendly framework                   | Developed considering mobile platform               |
 | Difficulty in SEO friendly application development| Ease to create SEO friendly applications            |
 
+#### Q. How do you add web workers in your application?
+We can add web worker anywhere in our application. For example, If the file that contains expensive computation is `src/app/app.component.ts`, we can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
+1. Configure project to use Web Workers
+2. Adds app.worker.ts to receive messages
+```javascript
+addEventListener('message', ({ data }) => {
+  const response = `worker response to ${data}`;
+  postMessage(response);
+});
+```
+3. The component `app.component.ts` file updated with web worker file
+```javascript
+if (typeof Worker !== 'undefined') {
+  // Create a new
+  const worker = new Worker('./app.worker', { type: 'module' });
+  worker.onmessage = ({ data }) => {
+    console.log('page got message: $\{data\}');
+  };
+  worker.postMessage('hello');
+} else {
+  // Web Workers are not supported in this environment.
+}
+```
+*Note: You may need to refactor your initial scaffolding web worker code for sending messages to and from.*
+
 #### Q. What are directives in angular?
 Directives add behaviour to an existing DOM element or an existing component instance.
 There are four types of directives in Angular
@@ -1856,31 +1881,6 @@ After that add the following to the "compilerOptions" section of your project's 
 ]
 ```
 *Note: The completion and diagnostic services works for `.ts` files only. You need to use custom plugins for supporting HTML files.*
-
-#### Q. How do you add web workers in your application?
-We can add web worker anywhere in our application. For example, If the file that contains expensive computation is `src/app/app.component.ts`, we can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
-1. Configure project to use Web Workers
-2. Adds app.worker.ts to receive messages
-```javascript
-addEventListener('message', ({ data }) => {
-  const response = `worker response to ${data}`;
-  postMessage(response);
-});
-```
-3. The component `app.component.ts` file updated with web worker file
-```javascript
-if (typeof Worker !== 'undefined') {
-  // Create a new
-  const worker = new Worker('./app.worker', { type: 'module' });
-  worker.onmessage = ({ data }) => {
-    console.log('page got message: $\{data\}');
-  };
-  worker.postMessage('hello');
-} else {
-  // Web Workers are not supported in this environment.
-}
-```
-*Note: You may need to refactor your initial scaffolding web worker code for sending messages to and from.*
 
 #### Q. What are the limitations with web workers?
 1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, don't support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
