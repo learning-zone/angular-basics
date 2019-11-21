@@ -748,14 +748,6 @@ class NgForAppComponent {
   ];
 }
 ```
-
-#### Q. What is the purpose of ngIf directive?
-Sometimes an app needs to display a view or a portion of a view only under specific circumstances. The Angular ngIf directive inserts or removes an element based on a truthy/falsy condition. Let's take an example to display a message if the user age is more than 18,
-```html
-<p *ngIf="user.age > 18">You are not eligible for student pass!</p>
-```
-*Note: Angular isn't showing and hiding the message. It is adding and removing the paragraph element from the DOM. That improves performance, especially in the larger projects with many data bindings.*
-
 #### Q. What happens if you use script tag inside template?
 
 Angular recognizes the value as unsafe and automatically sanitizes it, which removes the *<script>* tag but keeps safe content such as the text content of the <script> tag. This way it eliminates the risk of script injection attacks. If you still use it then it will be ignored and a warning appears in the browser console.
