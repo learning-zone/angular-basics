@@ -1337,11 +1337,13 @@ class MyComponent {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How do you define routes?
-A router must be configured with a list of route definitions. You configures the router with routes via the `RouterModule.forRoot()` method, and adds the result to the AppModule's `imports` array.
-  ```javascript
+#### Q. How do you define Angular Routes?
+
+```javascript
 const appRoutes: Routes = [
-  { path: 'todo/:id',      component: TodoDetailComponent },
+  { 
+    path: 'todo/:id', 
+    component: TodoDetailComponent },
   {
     path: 'todos',
     component: TodosListComponent,
@@ -1351,7 +1353,10 @@ const appRoutes: Routes = [
     redirectTo: '/todos',
     pathMatch: 'full'
   },
-  { path: '**', component: PageNotFoundComponent }
+  { 
+    path: '**', 
+    component: PageNotFoundComponent 
+  }
 ];
 
 @NgModule({
@@ -1365,7 +1370,7 @@ const appRoutes: Routes = [
   ...
 })
 export class AppModule { }
-  ```
+```
 #### Q. What is the purpose of Wildcard route?
 If the URL doesn't match any predefined routes then it causes the router to throw an error and crash the app. In this case, you can use wildcard route. A wildcard route has a path consisting of two asterisks to match every URL.
 For example, you can define PageNotFoundComponent for wildcard route as below
