@@ -1512,16 +1512,16 @@ export class TypicalModule {}
 ```
 #### Q. Give an example of few metadata errors?
 Below are some of the errors encountered in metadata,
-1. **Expression form not supported:** Some of the language features outside of the compiler's restricted expression syntax used in angular metadata can produce this error.
-Let's see some of these examples,
-```javascript
+**1. Expression form not supported:** Some of the language features outside of the compiler's restricted expression syntax used in angular metadata can produce this error.
+
+```typescript
 1. export class User { ... }
     const prop = typeof User; // typeof is not valid in metadata
 2. { provide: 'token', useValue: { [prop]: 'value' } }; // bracket notation is not valid in metadata
 ```
-2. ** Reference to a local (non-exported) symbol:** The compiler encountered a referenced to a locally defined symbol that either wasn't exported or wasn't initialized.
-Let's take example of this error,
-```javascript
+**2. Reference to a local (non-exported) symbol:** The compiler encountered a referenced to a locally defined symbol that either wasn't exported or wasn't initialized.
+
+```typescript
 // ERROR
 let username: string; // neither exported nor initialized
 
@@ -1535,20 +1535,20 @@ let username: string; // neither exported nor initialized
 export class MyComponent {}
 ```
 You can fix this by either exporting or initializing the value,
-```javascript
+```typescript
 export let username: string; // exported
 (or)
 let username = 'John'; // initialized
 ```
-3. **Function calls are not supported:** The compiler does not currently support function expressions or lambda functions. For example, you cannot set a provider's useFactory to an anonymous function or arrow function as below.
-```javascript
+**3. Function calls are not supported:** The compiler does not currently support function expressions or lambda functions. For example, you cannot set a provider's useFactory to an anonymous function or arrow function as below.
+```typescript
   providers: [
     { provide: MyStrategy, useFactory: function() { ... } },
     { provide: OtherStrategy, useFactory: () => { ... } }
   ]
 ```
 You can fix this with exported function
-```javascript
+```typescript
 export function myStrategy() { ... }
 export function otherStrategy() { ... }
 ... // metadata
@@ -1556,9 +1556,9 @@ providers: [
     { provide: MyStrategy, useFactory: myStrategy },
     { provide: OtherStrategy, useFactory: otherStrategy },
 ```
-4. **Destructured variable or constant not supported:** The compiler does not support references to variables assigned by destructuring.
+**4. Destructured variable or constant not supported:** The compiler does not support references to variables assigned by destructuring.
 For example, you cannot write something like this:
-```javascript
+```typescript
 import { user } from './user';
 
 // destructured assignment to name and age
@@ -1570,7 +1570,7 @@ providers: [
   ]
 ```
 You can fix this by non-destructured values
-```javscript
+```typescript
 import { user } from './user';
 ... //metadata
 providers: [
