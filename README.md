@@ -1777,7 +1777,7 @@ transition('open => closed', [
 ```
 #### Q. How to inject the dynamic script in angular?
 
-Using DomSanitizer we can inject the dynamic Html,Style,Script,Url.
+Using `DomSanitizer` we can inject the dynamic Html,Style,Script,Url.
 
 ```
 import { Component, OnInit } from '@angular/core';
