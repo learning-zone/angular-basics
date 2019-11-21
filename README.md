@@ -493,7 +493,6 @@ The NgModule decorator has three options
 #### Q. What are lifecycle hooks available in Angular?
 Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
 
-The description of each lifecycle method is as below,
 * **ngOnChanges:** When the value of a data bound property changes, then this method is called.
 * **ngOnInit:** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
 * **ngDoCheck:** This is for the detection and to act on changes that Angular can't or won't detect on its own.
