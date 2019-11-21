@@ -2039,7 +2039,7 @@ constructor(myElement: ElementRef) { ... }
 ```
 
 #### Q. What is Redux and how does it relate to an Angular app?
-Redux is a way to manage application state and improve maintainability of asynchronicity in your application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
+Redux is a way to manage application state and improve maintainability of asynchronicity in application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
 
 #### Q. How routing works in Angular?
 When a user navigates to a page, Angular Router performs the following steps in order:
