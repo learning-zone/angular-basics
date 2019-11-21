@@ -607,11 +607,11 @@ export class MyComponent {
 A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content. Adding a service worker to an Angular application is one of the steps for turning an application into a **Progressive Web App** (also known as a `PWA`).
 
 Below are the list of design goals of Angular's service workers,
-1. It caches an application just like installing a native application
-2. A running application continues to run with the same version of all files without any incompatible files
-3. When you refresh the application, it loads the latest fully cached version
-4. When changes are published then it immediately updates in the background
-5. Service workers saves the bandwidth by downloading the resources only when they changed.
+* It caches an application just like installing a native application
+* A running application continues to run with the same version of all files without any incompatible files
+* When you refresh the application, it loads the latest fully cached version
+* When changes are published then it immediately updates in the background
+* Service workers saves the bandwidth by downloading the resources only when they changed.
 
 *Syntax:*
 ```typescript
