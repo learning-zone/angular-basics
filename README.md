@@ -1699,50 +1699,6 @@ ng lint
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is angular animation?
-Angular's Animation is built on CSS functionality in order to animate any property that the browser supports. These properties includes positions, sizes, transforms, colors, borders etc. The Angular modules for animations are `@angular/animations` and `@angular/platform-browser` and these dependencies are automatically added to project when we create a project using Angular CLI.
-
-**1. Enabling the animations module:** Import BrowserAnimationsModule to add animation capabilities into your Angular root application module(for example, src/app/app.module.ts).
-```javascript
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-@NgModule({
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule
-  ],
-  declarations: [ ],
-  bootstrap: [ ]
-})
-export class AppModule { }
-```
-**2. Importing animation functions into component files:** Import required animation functions from @angular/animations in component files(for example, src/app/app.component.ts).
-```javascript
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  // ...
-} from '@angular/animations';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css'],
-  animations: [
-    // animation triggers go here
-  ]
-})
-export class AppComponent { }
-```
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
 #### Q. What is State function?
 Angular's state() function is used to define different states to call at the end of each transition. This function takes two arguments: a unique name like open or closed and a style() function.
 For example, you can write a open state function
@@ -1767,7 +1723,7 @@ state('close', style({
 #### Q. What is the purpose of animate function?
 Angular Animations are a powerful way to implement sophisticated and compelling animations for your Angular single page web application.
 
-```
+```typescript
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
