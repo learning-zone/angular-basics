@@ -691,12 +691,11 @@ import { Http } from '@angular/http';
     // providedIn option registers the service with a specific NgModule
     providedIn: 'root',  // This declares the service with the root app (AppModule)
 })
-export class RepoService{
-    constructor(private http: Http){
-    }
+export class RepoService {
+    constructor(private http: Http) { }
 
-    fetchAll(){
-    return this.http.get('https://api.github.com/repositories');
+    fetchAll() {
+       return this.http.get('https://api.github.com/repositories');
     }
 }
 ```
