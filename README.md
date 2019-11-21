@@ -532,7 +532,7 @@ Data binding is a core concept in Angular and allows to define communication bet
 #### Q. What is metadata in Angular?
 Metadata is used to decorate a class so that it can configure the expected behavior of the class. The metadata is represented by decorators  
 
-**1. Class decorators**, e.g. @Component and @NgModule
+**1. Class decorators:** e.g. @Component and @NgModule
 ```typescript
 import { NgModule, Component } from '@angular/core';
 
@@ -556,7 +556,7 @@ export class MyModule {
     }
 }
 ```
-**2. Property decorators** Used for properties inside classes, e.g. @Input and @Output
+**2. Property decorators:** Used for properties inside classes, e.g. @Input and @Output
 ```typescript
 import { Component, Input } from '@angular/core';
 
@@ -569,7 +569,7 @@ export class MyComponent {
     @Input() title: string;
 }
 ```
-**3. Method decorators** Used for methods inside classes, e.g. @HostListener
+**3. Method decorators:** Used for methods inside classes, e.g. @HostListener
 ```typescript
 import { Component, HostListener } from '@angular/core';
 
@@ -584,7 +584,7 @@ export class MyComponent {
     }
 }
 ```
-**4. Parameter decorators** Used for parameters inside class constructors, e.g. @Inject
+**4. Parameter decorators:** Used for parameters inside class constructors, e.g. @Inject
 ```typescript
 import { Component, Inject } from '@angular/core';
 import { MyService } from './my-service';
