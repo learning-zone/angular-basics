@@ -1700,7 +1700,7 @@ ng lint
 </div>
 
 #### Q. What is angular animation?
-Angular's animation system is built on CSS functionality in order to animate any property that the browser considers animatable. These properties includes positions, sizes, transforms, colors, borders etc. The Angular modules for animations are **@angular/animations** and **@angular/platform-browser** and these dependencies are automatically added to project when we create a project using Angular CLI.
+Angular's Animation is built on CSS functionality in order to animate any property that the browser considers animatable. These properties includes positions, sizes, transforms, colors, borders etc. The Angular modules for animations are **@angular/animations** and **@angular/platform-browser** and these dependencies are automatically added to project when we create a project using Angular CLI.
 
 
 **1. Enabling the animations module:** Import BrowserAnimationsModule to add animation capabilities into your Angular root application module(for example, src/app/app.module.ts).
@@ -1729,9 +1729,7 @@ import {
   transition,
   // ...
 } from '@angular/animations';
-```
-**3. Adding the animation metadata property:** add a metadata property called animations: within the @Component() decorator in component files(for example, src/app/app.component.ts)
-```javascript
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -1740,6 +1738,7 @@ import {
     // animation triggers go here
   ]
 })
+export class AppComponent { }
 ```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
