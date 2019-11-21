@@ -1967,11 +1967,11 @@ Below are the list of key advantages of Bazel tool,
 
 #### Q. How do you use Bazel with Angular CLI?
 The @angular/bazel package provides a builder that allows Angular CLI to use Bazel as the build tool.
-1. **Use in an existing applciation:** Add @angular/bazel using CLI
+**1. Use in an existing applciation:** Add @angular/bazel using CLI
 ```javascript
 ng add @angular/bazel
 ```
-2. **Use in a new application:** Install the package and create the application with collection option
+**2. Use in a new application:** Install the package and create the application with collection option
 ```javascript
 npm install -g @angular/bazel
 ng new --collection=@angular/bazel
