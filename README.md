@@ -1959,7 +1959,7 @@ Bazel is a powerful build tool developed and massively used by Google and it can
 
 *Note: The Angular framework itself is built with Bazel.*
 
-#### Q. What are the advantages of Bazel tool?
+**Advantages**  
 Below are the list of key advantages of Bazel tool,
 1. It creates the possibility of building your back-ends and front-ends with the same tool
 2. The incremental build and tests
