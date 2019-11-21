@@ -1511,7 +1511,7 @@ The compiler treats the macro expression as it written directly
 export class TypicalModule {}
 ```
 #### Q. Give an example of few metadata errors?
-Below are some of the errors encountered in metadata,
+
 **1. Expression form not supported:** Some of the language features outside of the compiler's restricted expression syntax used in angular metadata can produce this error.
 
 ```typescript
