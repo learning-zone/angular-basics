@@ -947,6 +947,39 @@ export class AppModule { }
     <b><a href="#">↥ back to top</a></b>
 </div>
 
+#### Q. What is the difference between RouterModule.forRoot and RouterModule.forChild?
+* **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
+* **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.  
+Example: *RouterModule.forRoot(ROUTES)*
+```typescript
+// ...
+import { Routes, RouterModule } from '@angular/router';
+
+export const ROUTES: Routes = [];
+
+@NgModule({
+  imports: [BrowserModule, RouterModule.forRoot(ROUTES)],
+  // ...
+})
+export class AppModule {}
+```
+Example: *RouterModule.forChild(ROUTES)*
+```typescript
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+
+export const ROUTES: Routes = [];
+
+@NgModule({
+  imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  // ...
+})
+export class ChildModule {}
+```
+* **forRoot()**: service register to entire application
+* **forChild()**: service register to particular child component
+
 #### Q. Explain on how to use HttpClient with an example?
 Below are the steps need to be followed for the usage of HttpClient.
 1. Import HttpClient into root module:
@@ -2350,43 +2383,7 @@ export class AppComponent {
 </div>
 
 #### Q. Can we create two Components with the same name in two different .ts files?
-No
-#### Q. What is the difference between RouterModule.forRoot and RouterModule.forChild?
-* **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
-* **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.  
-Example: *RouterModule.forRoot(ROUTES)*
-```typescript
-// ...
-import { Routes, RouterModule } from '@angular/router';
-
-export const ROUTES: Routes = [];
-
-@NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(ROUTES)],
-  // ...
-})
-export class AppModule {}
-```
-Example: *RouterModule.forChild(ROUTES)*
-```typescript
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-
-export const ROUTES: Routes = [];
-
-@NgModule({
-  imports: [CommonModule, RouterModule.forChild(ROUTES)],
-  // ...
-})
-export class ChildModule {}
-```
-* **forRoot()**: service register to entire application
-* **forChild()**: service register to particular child component
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
+* No
 #### Q. What are the difference between @Inject and @Injectable?
 The `@Injectable` decorator aims to actually set some metadata about which dependencies to inject into the constructor of the associated class. It's a class decorator that doesn't require parameters. Without this decorator no dependency will be injected.
 ```typescript
