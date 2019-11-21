@@ -1700,12 +1700,10 @@ ng lint
 </div>
 
 #### Q. What is angular animation?
-Angular's animation system is built on CSS functionality in order to animate any property that the browser considers animatable. These properties includes positions, sizes, transforms, colors, borders etc. The Angular modules for animations are **@angular/animations** and **@angular/platform-browser** and these dependencies are automatically added to your project when you create a project using Angular CLI.
+Angular's animation system is built on CSS functionality in order to animate any property that the browser considers animatable. These properties includes positions, sizes, transforms, colors, borders etc. The Angular modules for animations are **@angular/animations** and **@angular/platform-browser** and these dependencies are automatically added to project when we create a project using Angular CLI.
 
-#### Q. What are the steps to use animation module?
-You need to follow below steps to implement animation in your angular project,
 
-1. **Enabling the animations module:** Import BrowserAnimationsModule to add animation capabilities into your Angular root application module(for example, src/app/app.module.ts).
+**1. Enabling the animations module:** Import BrowserAnimationsModule to add animation capabilities into your Angular root application module(for example, src/app/app.module.ts).
 ```javascript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -1721,7 +1719,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 })
 export class AppModule { }
 ```
-2. **Importing animation functions into component files:** Import required animation functions from @angular/animations in component files(for example, src/app/app.component.ts).
+**2. Importing animation functions into component files:** Import required animation functions from @angular/animations in component files(for example, src/app/app.component.ts).
 ```javascript
 import {
   trigger,
@@ -1732,7 +1730,7 @@ import {
   // ...
 } from '@angular/animations';
 ```
-3. **Adding the animation metadata property:** add a metadata property called animations: within the @Component() decorator in component files(for example, src/app/app.component.ts)
+**3. Adding the animation metadata property:** add a metadata property called animations: within the @Component() decorator in component files(for example, src/app/app.component.ts)
 ```javascript
 @Component({
   selector: 'app-root',
