@@ -1338,7 +1338,7 @@ class MyComponent {
 </div>
 
 #### Q. How do you define Angular Routes?
-
+The Angular Router enables navigation from one view to the next as users perform application tasks.
 ```javascript
 const appRoutes: Routes = [
   { 
