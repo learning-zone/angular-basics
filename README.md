@@ -1814,10 +1814,10 @@ ng new ivy-demo-app --enable-ivy
 ```
 #### Q. What are the features included in ivy preview?
 You can expect below features with Ivy preview,
-1. Generated code that is easier to read and debug at runtime
-2. Faster re-build time
-3. Improved payload size
-4. Improved template type checking
+* Generated code that is easier to read and debug at runtime
+* Faster re-build time
+* Improved payload size
+* Improved template type checking
 
 #### Q. Can I use AOT compilation with Ivy?
 Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster. So you need set the default build options(with in angular.json) for your project to always use AOT compilation.
