@@ -844,20 +844,6 @@ import { Component } from '@angular/core';
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How do you chain pipes?
-You can chain pipes together in potentially useful combinations as per the needs. Let's take a birthday property which uses date pipe(along with parameter) and uppercase pipes as below
-```javascript
-import { Component } from '@angular/core';
-
-    @Component({
-        selector: 'app-birthday',
-        template: `<p>Birthday is {{  birthday | date:'fullDate' | uppercase}} </p>` // THURSDAY, JUNE 18, 1987
-    })
-    export class BirthdayComponent {
-        birthday = new Date(1987, 6, 18);
-    }
-
-```
 #### Q. What is a custom pipe?
 Apart from built-inn pipes, you can write your own custom pipe with the below key characteristics,
 1. A pipe is a class decorated with pipe metadata **@Pipe** decorator, which you import from the core Angular library
