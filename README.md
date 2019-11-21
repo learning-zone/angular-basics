@@ -1087,7 +1087,7 @@ multicasted.subscribe({
 </div>
 
 #### Q. How do you perform error handling in observables?
-You can handle errors by specifying an **error callback** on the observer instead of relying on try/catch which are ineffective in asynchronous environment. For example, you can define error callback as below,
+We can handle errors by specifying an **error callback** on the observer instead of relying on try/catch which are ineffective in asynchronous environment. For example, you can define error callback as below,
 ```javascript
 myObservable.subscribe({
   next(num) { console.log('Next num: ' + num)},
