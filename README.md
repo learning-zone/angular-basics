@@ -1947,9 +1947,9 @@ const url = injector.get(BASE_URL);
 #### Q. What is Angular DSL?
 A domain-specific language (DSL) is a computer language specialized to a particular application domain. Angular has its own Domain Specific Language (DSL) which allows us to write Angular specific html-like syntax on top of normal html. It has its own compiler that compiles this syntax to html that the browser can understand. This DSL is defined in NgModules such as animations, forms, and routing and navigation.
 Basically you will see 3 main syntax in Angular DSL.
-1. (): Used for Output and DOM events.
-2. []: Used for Input and specific DOM element attributes.
-3. * : Structural directives(*ngFor or *ngIf) will affect/change the DOM structure.
+1. `()`: Used for Output and DOM events.
+2. `[]`: Used for Input and specific DOM element attributes.
+3. `*` : Structural directives(*ngFor or *ngIf) will affect/change the DOM structure.
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
