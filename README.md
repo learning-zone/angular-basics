@@ -1858,8 +1858,8 @@ After that add the following to the "compilerOptions" section of your project's 
 *Note: The completion and diagnostic services works for `.ts` files only. You need to use custom plugins for supporting HTML files.*
 
 #### Q. How do you add web workers in your application?
-You can add web worker anywhere in your application. For example, If the file that contains your expensive computation is `src/app/app.component.ts`, you can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
-1. Configure your project to use Web Workers
+We can add web worker anywhere in our application. For example, If the file that contains expensive computation is `src/app/app.component.ts`, we can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
+1. Configure project to use Web Workers
 2. Adds app.worker.ts to receive messages
 ```javascript
 addEventListener('message', ({ data }) => {
