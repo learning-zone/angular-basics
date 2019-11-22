@@ -40,8 +40,18 @@
 
 Angular has 2 types of build dev build or prod build :
 
-**Just-in-Time (JIT)**, which compiles app in the browser at runtime.  
-**Ahead-of-Time (AOT)**, which compiles app at build time.  
+**JIT**  
+Just-in-Time (JIT) is a type of compilation that compiles your app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
+```javascript
+ng build
+ng serve
+```
+**AOT**
+Ahead-of-Time (AOT) is a type of compilation that compiles your app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
+```javascript
+ng build --aot
+ng serve --aot
+```
 ```
 ng build or ng build --dev   -  this is for development build
 ng build --prod              -  this is for production build
@@ -59,6 +69,7 @@ ng build --prod              -  this is for production build
 **uglification** - process of transforming code to use short variable and function names  
 **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
+*Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
 #### Q. How to optimize loading large data in angular?
 **Load Time Performance**
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
@@ -1441,24 +1452,6 @@ No, the Routing Module is a design choice. You can skip routing Module (for exam
 #### Q. What is Angular Universal?
 Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under @angular/platform-server package. Recently Angular Universal is integrated with Angular CLI.
 
-#### Q. What are different types of compilation in Angular?
-Angular offers two ways to compile your application,
-1. Just-in-Time (JIT)
-2. Ahead-of-Time (AOT)
-
-#### Q. What is JIT?
-Just-in-Time (JIT) is a type of compilation that compiles your app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
-```javascript
-ng build
-ng serve
-```
-#### Q. What is AOT?
-Ahead-of-Time (AOT) is a type of compilation that compiles your app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
-```javascript
-ng build --aot
-ng serve --aot
-```
-*Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
