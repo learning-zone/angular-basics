@@ -1443,8 +1443,6 @@ For example, you can define PageNotFoundComponent for wildcard route as below
 ```typescript
 { path: '**', component: PageNotFoundComponent }
 ```
-#### Q. Do I need a Routing Module always?
-No, the Routing Module is a design choice. You can skip routing Module (for example, AppRoutingModule) when the configuration is simple and merge the routing configuration directly into the companion module (for example, AppModule). But it is recommended when the configuration is complex and includes specialized guard and resolver services.
 
 #### Q. What is Angular Universal?
 Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under @angular/platform-server package. Recently Angular Universal is integrated with Angular CLI.
