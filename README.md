@@ -1440,7 +1440,7 @@ export class AppModule { }
 #### Q. What is the purpose of Wildcard route?
 If the URL doesn't match any predefined routes then it causes the router to throw an error and crash the app. In this case, you can use wildcard route. A wildcard route has a path consisting of two asterisks to match every URL.
 For example, you can define PageNotFoundComponent for wildcard route as below
-```javascript
+```typescript
 { path: '**', component: PageNotFoundComponent }
 ```
 #### Q. Do I need a Routing Module always?
