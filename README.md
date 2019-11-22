@@ -46,7 +46,7 @@ Just-in-Time (JIT) is a type of compilation that compiles your app in the browse
 ng build
 ng serve
 ```
-**AOT**
+**AOT**  
 Ahead-of-Time (AOT) is a type of compilation that compiles your app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
 ```javascript
 ng build --aot
