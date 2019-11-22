@@ -4216,7 +4216,7 @@ export default {
 ```
 
 **package.json**  
-```typescript
+```javascript
 {
   "name": "babel-webpack",
   "version": "1.0.0",
