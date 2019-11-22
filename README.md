@@ -4116,7 +4116,7 @@ The ahead-of-time (AOT) compiler can catch template errors early and improve per
 </div>
 
 #### Q. What is hammerjs in angular?
-`HammerJS` gives us access to mobile gesture events that are not normally found in the browser, including `tap`, `swipe`, `pan`, `pinch`, `press`, and `rotate`. 
+**HammerJS** gives us access to mobile gesture events that are not normally found in the browser, including `tap`, `swipe`, `pan`, `pinch`, `press`, and `rotate`. 
 ```
 npm install --save hammerjs
 ```
