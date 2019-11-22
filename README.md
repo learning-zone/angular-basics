@@ -70,6 +70,20 @@ ng build --prod              -  this is for production build
 **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
 *Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
+
+#### Q. What are the advantages with AOT?
+Below are the list of AOT benefits,
+1. **Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
+2. **Fewer asynchronous requests:** It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.
+3. **Smaller Angular framework download size:** Doesn't require downloading the Angular compiler. Hence it dramatically reduces the application payload.
+4. **Detect template errors earlier:** Detects and reports template binding errors during the build step itself
+5. **Better security:** It compiles HTML templates and components into JavaScript.  So there won't be any injection attacks.
+
+#### Q. What are the ways to control AOT compilation?
+You can control your app compilation in two ways
+1. By providing template compiler options in the `tsconfig.json` file
+2. By configuring Angular metadata with decorators
+
 #### Q. How to optimize loading large data in angular?
 **Load Time Performance**
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
@@ -1453,19 +1467,6 @@ Angular Universal is a server-side rendering module for Angular applications in 
 
 #### Q. Why do we need compilation process?
 The Angular components and templates cannot be understood by the browser directly. Due to that Angular applications require a compilation process before they can run in a browser. For example, In AOT compilation, both Angular HTML and TypeScript code converted into efficient JavaScript code during the build phase before browser runs it.
-
-#### Q. What are the advantages with AOT?
-Below are the list of AOT benefits,
-1. **Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
-2. **Fewer asynchronous requests:** It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.
-3. **Smaller Angular framework download size:** Doesn't require downloading the Angular compiler. Hence it dramatically reduces the application payload.
-4. **Detect template errors earlier:** Detects and reports template binding errors during the build step itself
-5. **Better security:** It compiles HTML templates and components into JavaScript.  So there won't be any injection attacks.
-
-#### Q. What are the ways to control AOT compilation?
-You can control your app compilation in two ways
-1. By providing template compiler options in the `tsconfig.json` file
-2. By configuring Angular metadata with decorators
 
 #### Q. What are the restrictions of metadata?
 In Angular, You must write metadata with the following general constraints,
