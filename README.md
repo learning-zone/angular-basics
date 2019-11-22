@@ -1291,9 +1291,6 @@ There are mainly three kinds of directives.
 2. **Structural directives** — These directives change the DOM layout by adding and removing DOM elements.
 3. **Attribute directives** — These directives change the appearance or behavior of an element, component, or another directive.
 
-#### Q. How do you create directives using CLI?
-You can use CLI command `ng generate directive` to create the directive class file. It creates the source file(src/app/components/directivename.directive.ts), the respective test file(.spec.ts) and declare the directive class file in root module.
-
 #### Q. Give an example for attribute directives?
 
 1. Create HighlightDirective class with the file name `src/app/highlight.directive.ts`. In this file, we need to import **Directive** from core library to apply the metadata and **ElementRef** in the directive's constructor to inject a reference to the host DOM element ,
