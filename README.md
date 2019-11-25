@@ -1343,6 +1343,19 @@ The RouterOutlet is a directive from the router library and it  acts as a placeh
 <router-outlet></router-outlet>
 <!-- Routed components go here -->
 ```
+
+#### Q. How to create multiple router-outlets?
+```html
+<router-outlet></router-outlet>  
+<router-outlet  name="sidebar"></router-outlet>  
+```
+```typescript
+{
+   path: "",
+   component: SidebarComponent,
+   outlet: "sidebar"
+}
+```
 #### Q. What are router links?
 The RouterLink is a directive on the anchor tags give the router control over those elements. Since the navigation paths are fixed, you can assign string values to router-link directive as below,
 ```html
