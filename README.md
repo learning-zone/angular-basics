@@ -1100,7 +1100,6 @@ The operators can be broken down in multiple categories. There are `creation ope
 
 **Categories of operators**  
 
-There are over 100 operators in RxJS and they can be classified into various categories, some of these are creation, transformation, filtering, joining, multicasting, error handling and utility.
 
 |AREA          |OPERATORS         |
 |--------------|------------------|
