@@ -1111,6 +1111,51 @@ There are over 100 operators in RxJS and they can be classified into various cat
 |Utility	     |tap|
 |Multicasting	 |share|
 
+**1. Pipeable operators**: These are operators that can be piped to existing Observables using the pipe syntax.
+```typescript
+class PostsComponent {
+
+  private user: Observable<User>;
+
+  ngOnInit() {
+    this.posts = this.user.pipe(
+      map(user => user.id),
+      switchMap(id => 
+        this.postsService.getPosts(id)
+      )
+    );
+  }
+}
+```
+**2. Map Operator**: The map operator, basically, helps us to transform data using an observer. The map operator applies a given project function to each value emitted by the source Observable and emits the resulting values as an observable.
+```typescript
+import {map} from 'rxjs/operators';
+
+const nums = of (1, 2, 3);
+
+const mulValues = map ((val: number) => val * 2);
+const mulNums = mulValues (nums);
+
+mulNums.subscribe(x => console.log(x));
+
+// Outputs
+// 1
+// 4
+// 6
+```
+**3. Filter Operator**: RxJS filter is used to filter values emitted by source Observable on the basis of given predicate. If the condition returns true, filter will emit value obtained from source Observable otherwise not.
+
+Example: Filter values for null
+```typescript
+this.countryName$ = this.filterDemoService.getCountry().pipe(
+  filter(country => country.getCountryName() !== null),
+  map(country => country.getCountryName()),
+  catchError(err => {
+	  console.error(err);
+	  return of("");
+  })
+); 
+```
 
 #### Q. What is subscribing?
 An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the **subscribe()** method of the instance, passing an observer object to receive the notifications.
