@@ -1261,13 +1261,51 @@ export class AppComponent {
 }
 ```
 
-**7. Tap Operator [`tap()`]**:
+**7. Tap Operator [`tap()`]**: The do() operator was renamed to tap() in RxJS v5.5.x as part of the upgrade to lettable operators to avoid a confict with the reserved word do (part of the do-while loop).
 
-**8. Catch Operator [`catch()`]**:
+RxJS Tap operator uses to perform a side effect for every emission on the source Observable but returns an Observable that is identical to the source.
+```typescript
+getProducts(): Observable<any[]> {
+  return this.http.get<any[]>(apiUrl)
+    .pipe(
+      tap(product => console.log('fetched products')),
+      catchError(this.handleError('getProducts', []))
+    );
+}
+```
 
-**9. forkJoin Operator [`forkJoin()`]**:
+**8. Catch Operator [`catch()`]**: The catch() operator was renamed in RxJS v5.5.x to catchError(). The catchError() operator to receive any error notifications that are emitted in the observable stream.
+```typescript
+getProduct(id: number): Observable<any> {
+  const url = `${apiUrl}/${id}`;
+  return this.http.get<any>(url).pipe(
+    tap(_ => console.log(`fetched product id=${id}`)),
+    catchError(this.handleError<any>(`getProduct id=${id}`))
+  );
+}
+```
 
-**10. retry Operator [`retry()`]**:
+**9. forkJoin Operator [`forkJoin()`]**: The forkJoin() operator is similar to the `Promise.all()` method in that it starts (forks) multiple observers at once and then joins the final values from each observable when all observables complete. It is important to note that if any of the input observables never complete, then the forkJoin() will never complete.
+
+Example: Multiple http calls in parallel using forkJoin()
+```
+Observable.forkJoin(
+    call1(params),
+    call2(params),
+    call3(params)
+).subscribe((responses) => {
+    // responses[0] -> response of call1
+    // responses[1] -> response of call2
+    // responses[2] -> response of call3
+})
+```
+
+**10. retry Operator [`retry()`]**:  retry() operator returns source Observable with the exception of an error. When source Observable calls error then retry operator resubscribe it for the maximum of given number of time. If Observable starts emitting elements and suppose at any point it calls error before completion, then retry operator will resubscribe the source Observable and starts emitting from start again.
+```typescript
+return this.http
+           .get(this.url)
+           .retry(5);
+```
 
 #### Q. What is subscribing?
 An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the **subscribe()** method of the instance, passing an observer object to receive the notifications.
