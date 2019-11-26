@@ -1126,7 +1126,7 @@ class PostsComponent {
   }
 }
 ```
-**2. Map Operator [`map()`]**: The map operator, basically, helps us to transform data using an observer. The map operator applies a given project function to each value emitted by the source Observable and emits the resulting values as an observable.
+**2. Map Operator [`map()`]**: The map() operator, basically, helps us to transform data using an observer. The map operator applies a given project function to each value emitted by the source Observable and emits the resulting values as an observable.
 ```typescript
 import {map} from 'rxjs/operators';
 
@@ -1142,7 +1142,7 @@ mulNums.subscribe(x => console.log(x));
 // 4
 // 6
 ```
-**3. Filter Operator [`filter()`]**: RxJS filter is used to filter values emitted by source Observable on the basis of given predicate. If the condition returns true, filter will emit value obtained from source Observable otherwise not.
+**3. Filter Operator [`filter()`]**: RxJS filter() is used to filter values emitted by source Observable on the basis of given predicate. If the condition returns true, filter will emit value obtained from source Observable otherwise not.
 
 Example: Filter values for null
 ```typescript
@@ -1261,7 +1261,7 @@ export class AppComponent {
 }
 ```
 
-**7. Tap Operator [`tap()`]**: The do() operator was renamed to tap() in RxJS v5.5.x as part of the upgrade to lettable operators to avoid a confict with the reserved word do (part of the do-while loop).
+**7. Tap Operator [`tap()`]**: The `do()` operator was renamed to tap() in RxJS v5.5.x as part of the upgrade to lettable operators to avoid a confict with the reserved word do (part of the do-while loop).
 
 RxJS Tap operator uses to perform a side effect for every emission on the source Observable but returns an Observable that is identical to the source.
 ```typescript
