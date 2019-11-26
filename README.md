@@ -1170,6 +1170,71 @@ result.subscribe(x => console.log(x));
 // results in:
 // 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3 -immediate-> 1 ... 10
 ```
+**5. FlatMap Operator [`flatMap()`] or mergeMap Operator [`mergeMap()`]**: flatMap() is an alias for mergeMap(). By using flatMap we can transform our event stream (the keypress events on the text field) into our response stream (the search results from the HTTP request).
+
+Example: `app/services/search.service.ts`
+```typescript
+import {Http} from '@angular/http';
+import {Injectable} from '@angular/core';
+
+@Injectable()
+export class SearchService {
+
+  constructor(private http: Http) {}
+
+  search(term: string) {
+    return this.http
+            .get('https://api.spotify.com/v1/search?q=' + term + '&type=artist')
+            .map((response) => response.json())
+  }
+}
+```
+`app/app.component.ts`
+```typescript
+import { Component } from '@angular/core';
+import { FormControl,
+    FormGroup,
+    FormBuilder } from '@angular/forms';
+import { SearchService } from './services/search.service';
+import 'rxjs/Rx';
+
+@Component({
+    selector: 'app-root',
+    template: `
+        <form [formGroup]="coolForm"><input formControlName="search" placeholder="Search Spotify artist"></form>
+
+        <div *ngFor="let artist of result">
+          {{artist.name}}
+        </div>
+    `
+})
+export class AppComponent {
+    searchField: FormControl;
+    coolForm: FormGroup;
+
+    constructor(private searchService:SearchService, private fb:FormBuilder) {
+        this.searchField = new FormControl();
+        this.coolForm = fb.group({search: this.searchField});
+
+        this.searchField.valueChanges
+          .debounceTime(400)
+            .flatMap(term => this.searchService.search(term))
+            .subscribe((result) => {
+                this.result = result.artists.items
+            });
+    }
+}
+```
+
+**6. SwitchMap Operator [`switchMap()`]**:
+
+**7. Tap Operator [`tap()`]**:
+
+**8. Catch Operator [`catch()`]**:
+
+**9. forkJoin Operator [`forkJoin()`]**:
+
+**10. retry Operator [`retry()`]**:
 
 #### Q. What is subscribing?
 An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the **subscribe()** method of the instance, passing an observer object to receive the notifications.
