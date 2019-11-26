@@ -1094,7 +1094,7 @@ import { catchError, retry } from 'rxjs/operators';
 ```
 
 #### Q. What is an RxJS Operator?
-RxJS Operator are pure functions that transform information in the observable stream that create new observables, often based on the current observable.
+RxJS Operators are pure functions that transform information in the observable stream that create new observables, often based on the current observable.
 
 The operators can be broken down in multiple categories. There are `creation operators` that create a new observable optionally from a source, such as a promise or a value, `Transformation operators` will transform the data in the stream, and `filtration operators` will act as a gate for the observable stream.
 
@@ -1155,6 +1155,21 @@ this.countryName$ = this.filterDemoService.getCountry().pipe(
 	  return of("");
   })
 ); 
+```
+**4. Concat Operator**: Creates an output Observable which sequentially emits all values from given Observable and then moves on to the next.
+
+Example: Concatenate a timer counting from 0 to 3 with a synchronous sequence from 1 to 10
+```typescript
+import { concat, interval, range } from 'rxjs';
+import { take } from 'rxjs/operators';
+
+const timer = interval(1000).pipe(take(4));
+const sequence = range(1, 10);
+const result = concat(timer, sequence);
+result.subscribe(x => console.log(x));
+
+// results in:
+// 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3 -immediate-> 1 ... 10
 ```
 
 #### Q. What is subscribing?
