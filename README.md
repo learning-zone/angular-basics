@@ -1102,15 +1102,14 @@ The operators can be broken down in multiple categories. There are `creation ope
 
 There are over 100 operators in RxJS and they can be classified into various categories, some of these are creation, transformation, filtering, joining, multicasting, error handling and utility.
 
-|Category	          |Operators                      |
-|-------------------|-------------------------------|
-|Creation Operators	|ajax, bindCallback, defer, empty, from, fromEvent, fromEventPattern, generate, interval, of, range, throwError, timer and iif. There are join creation operators too like combineLatest, concat, forkJoin, merge, race and zip.|
-|Transformation Operators|	buffer, bufferCount, bufferTime, bufferToggle, bufferWhen, concatMap, concatMapTo, exhaust, exhaustMap, expand, groupBy, map, mapTo, mergeMap, mergeMapTo, mergeScan, pairwise, partition, pluck, scan, switchMap, switchMapTo, window, windowCount, windowTime, windowToggle, windowWhen.|
-|Filtering Operators |	audit, auditTime, debounce, debounceTime, distinct, distinctKey, distinctUntilChange, distinctUntilKeyChanged, elementAt, filter, first, ignoreElements, last, sample, sampleTime, single, skip, skipLast, skipUntil, skipWhile, take, takeLast, takeUntil, takeWhile, throttle and throttleTime.|
-|Joining Operators  |	combineAll, concatAll, exhaust, mergeAll, startWith and withLatestFrom.|
-|Multicasting Operators, Joining Operators|	multicast, publish, publishBehaviour, publishLast, publishReplay and share.|
-|Error Handling Operators|	catchError, retry and retryWhen.|
-|Utility Operators|	tap, delay, delayWhen, dematerialize, materialize, observeOn, subscribeOn, timeInterval, timestamp, timeout, timeoutWith and toArray.|
+|AREA          |OPERATORS         |
+|--------------|------------------|
+|Creation	     |from,fromEvent, of|
+|Combination	 |combineLatest, concat, merge, startWith , withLatestFrom, zip|
+|Filtering	   |debounceTime, distinctUntilChanged, filter, take, takeUntil|
+|Transformation|bufferTime, concatMap, map, mergeMap, scan, switchMap|
+|Utility	     |tap|
+|Multicasting	 |share|
 
 
 #### Q. What is subscribing?
