@@ -1126,7 +1126,7 @@ class PostsComponent {
   }
 }
 ```
-**2. Map Operator**: The map operator, basically, helps us to transform data using an observer. The map operator applies a given project function to each value emitted by the source Observable and emits the resulting values as an observable.
+**2. Map Operator [`map()`]**: The map operator, basically, helps us to transform data using an observer. The map operator applies a given project function to each value emitted by the source Observable and emits the resulting values as an observable.
 ```typescript
 import {map} from 'rxjs/operators';
 
@@ -1142,7 +1142,7 @@ mulNums.subscribe(x => console.log(x));
 // 4
 // 6
 ```
-**3. Filter Operator**: RxJS filter is used to filter values emitted by source Observable on the basis of given predicate. If the condition returns true, filter will emit value obtained from source Observable otherwise not.
+**3. Filter Operator [`filter()`]**: RxJS filter is used to filter values emitted by source Observable on the basis of given predicate. If the condition returns true, filter will emit value obtained from source Observable otherwise not.
 
 Example: Filter values for null
 ```typescript
@@ -1155,7 +1155,7 @@ this.countryName$ = this.filterDemoService.getCountry().pipe(
   })
 ); 
 ```
-**4. Concat Operator**: Creates an output Observable which sequentially emits all values from given Observable and then moves on to the next.
+**4. Concat Operator [`concat()`]**: Creates an output Observable which sequentially emits all values from given Observable and then moves on to the next.
 
 Example: Concatenate a timer counting from 0 to 3 with a synchronous sequence from 1 to 10
 ```typescript
