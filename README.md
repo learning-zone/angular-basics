@@ -1226,7 +1226,40 @@ export class AppComponent {
 }
 ```
 
-**6. SwitchMap Operator [`switchMap()`]**:
+**6. SwitchMap Operator [`switchMap()`]**: The switchMap() operator switches from one stream to another, unsubscribing from the previous observable and returning a new observable.
+```typescript
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { SearchService } from './services/search.service';
+import 'rxjs/Rx';
+
+@Component({
+    selector: 'app-root',
+    template: `
+        <form [formGroup]="coolForm"><input formControlName="search" placeholder="Search Spotify artist"></form>
+
+        <div *ngFor="let artist of result">
+          {{artist.name}}
+        </div>
+    `
+})
+export class AppComponent {
+    searchField: FormControl;
+    coolForm: FormGroup;
+
+    constructor(private searchService:SearchService, private fb:FormBuilder) {
+        this.searchField = new FormControl();
+        this.coolForm = fb.group({search: this.searchField});
+
+        this.searchField.valueChanges
+          .debounceTime(400)
+            .switchMap(term => this.searchService.search(term))
+            .subscribe((result) => {
+                this.result = result.artists.items
+            });
+    }
+}
+```
 
 **7. Tap Operator [`tap()`]**:
 
