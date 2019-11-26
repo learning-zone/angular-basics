@@ -1110,7 +1110,7 @@ The operators can be broken down in multiple categories. There are `creation ope
 |Utility	     |tap|
 |Multicasting	 |share|
 
-**1. Pipeable Operators `pipe()`**: These are operators that can be piped to existing Observables using the pipe syntax.
+**1. Pipeable Operators [`pipe()`]**: These are operators that can be piped to existing Observables using the pipe syntax.
 ```typescript
 class PostsComponent {
 
