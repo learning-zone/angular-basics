@@ -1488,6 +1488,22 @@ const subscription = mouseMoves.subscribe((e: MouseEvent) => {
 #### Q. What will happen if you do not supply handler for observer?
 Normally an observer object can define any combination of next, error and complete notification type handlers. If you don't supply a handler for a notification type, the observer just ignores notifications of that type.
 
+#### Q. Explain the difference between Promise and Observable in Angular?
+**Promises**:
+
+* return a single value
+* not cancellable
+* more readable code with try/catch and async/await
+
+
+**Observables**:
+
+* work with multiple values over time
+* cancellable
+* support map, filter, reduce and similar operators
+* use Reactive Extensions (RxJS)
+* an array whose items arrive asynchronously over time
+
 #### Q. What are angular elements?
 Angular elements are Angular components packaged as **custom elements**(a web standard for defining new HTML elements in a framework-agnostic way). Angular Elements hosts an Angular component, providing a bridge between the data and logic defined in the component and standard DOM APIs, thus, providing a way to use Angular components in `non-Angular environments`.
 
