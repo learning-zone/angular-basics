@@ -1373,7 +1373,7 @@ myObservable.subscribe(myObserver);
 
 #### Q. What is an observable?
 An Observable is a unique Object similar to a Promise that can help manage async code. Observables are not part of the JavaScript language so we need to rely on a popular Observable library called RxJS.
-The observables are created using new keyword. Let see the simple example of observable,
+The observables are created using new keyword. 
 ```typescript
 import { Observable } from 'rxjs';
 
