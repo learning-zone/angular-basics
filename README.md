@@ -1307,6 +1307,43 @@ return this.http
            .retry(5);
 ```
 
+**11. StartWith Operator [`startWith()`]**:
+```typescript
+import { startWith } from 'rxjs/operators';
+import { of } from 'rxjs';
+
+//emit (1,2,3)
+const source = of(1, 2, 3);
+//start with 0
+const example = source.pipe(startWith(0));
+//output: 0,1,2,3
+const subscribe = example.subscribe(val => console.log(val));
+```
+
+**12. Of Operator [`of()`]**:
+```typescript
+import { of } from 'rxjs';
+//emits any number of provided values in sequence
+const source = of(1, 2, 3, 4, 5);
+//output: 1,2,3,4,5
+const subscribe = source.subscribe(val => console.log(val));
+```
+
+**13. take Operator [`take()`]**: take() an operator returns the first N values observed and complete stream. It is also another filteration operator.
+```typescript
+import { interval } from ‘rxjs’;
+import { take } from ‘rxjs/operators’;
+
+const intervalCount = interval(1000);
+const takeFive = intervalCount.pipe(take(5));
+takeFive.subscribe(x => console.log(x));
+```
+Output
+```
+0, 1, 2, 3, 4
+```
+The above example will take only the first five elements after every 5 seconds with the 1-second interval for five seconds.
+
 #### Q. What is subscribing?
 An Observable instance begins publishing values only when someone subscribes to it. So you need to subscribe by calling the **subscribe()** method of the instance, passing an observer object to receive the notifications.
 
