@@ -439,6 +439,16 @@ There are four types of directives in Angular
 * Attribute directives
 * Custom Directive
 
+**Structural Directives**: Structural Directives are directives which change the structure of the DOM by adding or removing elements. There are three built in structural directives, NgIf, NgFor and NgSwitch.
+
+Example: Structural Directives
+```html
+<div *ngIf="user$ | async as user">
+  <span>Name: {{user.name}}</span>
+  <span>Age: {{user.age}}</span>
+</div>
+```
+
 Example: Custom Directive
 ```typescript
 import { Directive, ElementRef, Input } from '@angular/core';
