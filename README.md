@@ -439,7 +439,7 @@ There are four types of directives in Angular
 * Attribute directives
 * Custom Directive
 
-Example
+Example: Custom Directive
 ```typescript
 import { Directive, ElementRef, Input } from '@angular/core';
 
