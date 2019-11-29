@@ -608,9 +608,9 @@ import { NgModule, Component } from '@angular/core';
     template: '<div>Class decorator</div>',
 })
 export class MyComponent {
-    constructor() {
+  constructor() {
     console.log('Hey I am a component!');
-    }
+  }
 }
 
 @NgModule({
@@ -618,9 +618,9 @@ export class MyComponent {
     declarations: [],
 })
 export class MyModule {
-    constructor() {
+  constructor() {
     console.log('Hey I am a module!');
-    }
+  }
 }
 ```
 **2. Property decorators:** Used for properties inside classes, e.g. @Input and @Output
