@@ -49,6 +49,7 @@ import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.compon
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { TestOneComponent } from './nav/input-output/test-one/test-one.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -90,7 +91,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DashboardComponent,
     HomeComponent,
     RightsComponent,
-    UsersComponent
+    UsersComponent,
+    TestOneComponent
   ],
   imports: [
     BrowserModule,

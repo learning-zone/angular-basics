@@ -122,6 +122,18 @@ export class SidebarService {
           path: 'virtual-scrolling'
         }
       ]
+    },
+    {
+      title: 'Input Output',
+      icon: 'fa fa-folder',
+      active: false,
+      type: 'dropdown',
+      submenus: [
+        {
+          title: 'Test One',
+          path: 'test-one'
+        }
+      ]
     }
   ];
   constructor() {}
