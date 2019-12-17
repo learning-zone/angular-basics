@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Hero, heroes } from './hero';
 
 @Component({
@@ -6,7 +6,7 @@ import { Hero, heroes } from './hero';
   templateUrl: './directives.component.html',
   styleUrls: ['./directives.component.scss']
 })
-export class DirectivesComponent implements OnInit {
+export class DirectivesComponent {
   color: string;
   heroes = heroes;
   hero = this.heroes[0];
@@ -14,10 +14,6 @@ export class DirectivesComponent implements OnInit {
   logs: string[] = [];
   showSad = true;
   status = 'ready';
-
-  constructor() {}
-
-  ngOnInit() {}
 
   trackById(index: number, hero: Hero): number {
     return hero.id;
