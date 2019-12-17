@@ -9,11 +9,11 @@ import { map, takeWhile, finalize } from 'rxjs/operators';
 })
 export class PipesComponent implements OnInit {
 
-  title: string = 'Built-in Angular Pipes';  
-  todaydate = new Date();  
-  jsonval = {name: 'Alex', age: '25', address:{a1: 'Paris', a2: 'France'}};  
+  title = 'Built-in Angular Pipes';
+  today_date = new Date();
+  json_val = {name: 'Alex', age: '25', address:{a1: 'Paris', a2: 'France'}};
   months: Array<String> = ['Jan', 'Feb', 'Mar', 'April', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']; 
-  
+
   countCompleted = false;
   countDown = 5;
   count$: Observable<number>;
