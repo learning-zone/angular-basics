@@ -9,7 +9,7 @@ import { Employee } from './employee.model';
 })
 export class PromisesComponent implements OnInit {
 
-  url = 'http://dummy.restapiexample.com/api/v1/employee/34';
+  url = 'http://dummy.restapiexample.com/api/v1/employee/1';
 
   subscribeResult: Employee;
   promiseResult: Employee;
@@ -109,7 +109,7 @@ export class PromisesComponent implements OnInit {
       .then(data => {
         console.log('First Promise resolved.');
         if (data.id > 5) {
-          const anotherUrl = 'http://dummy.restapiexample.com/api/v1/employee/23';
+          const anotherUrl = 'http://dummy.restapiexample.com/api/v1/employee/1';
           this.httpClient
             .get<Employee>(anotherUrl)
             .toPromise()
@@ -124,7 +124,7 @@ export class PromisesComponent implements OnInit {
   async getConditionalDataUsingAsync() {
     const data = await this.httpClient.get<Employee>(this.url).toPromise();
     if (data.id > 5) {
-      const anotherUrl = 'http://dummy.restapiexample.com/api/v1/employee/23';
+      const anotherUrl = 'http://dummy.restapiexample.com/api/v1/employee/1';
       this.conditionalAsyncResult = await this.httpClient
         .get<Employee>(anotherUrl)
         .toPromise();
