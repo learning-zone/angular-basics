@@ -4546,7 +4546,7 @@ export default {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to configure Webpack 4 with Angular 7
+#### Q. How to configure Webpack 4 with Angular 7?
 **Install Angular 7 Dependencies**  
 ```
 npm install -save @angular/common@7 @angular/compiler@7 @angular/core@7 @angular/forms@7 @angular/platform-browser@7 @angular/platform-browser-dynamic@7 @angular/router@7 core-js@3 rxjs@6 zone.js@0
