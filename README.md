@@ -4731,3 +4731,6 @@ export class AppComponent {}
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
+
+#### Q. What is circular dependency error in angular?
+#### Q. What is static injector error in angular?
