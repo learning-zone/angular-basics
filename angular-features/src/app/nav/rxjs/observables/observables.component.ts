@@ -17,7 +17,6 @@ export class ObservablesComponent {
       });
     });
   }
-  
 }
 
 /**
