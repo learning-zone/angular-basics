@@ -23,7 +23,7 @@ export class RestApiService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }  
+  }
 
   // HttpClient API get() method => Fetch employees list
   getEmployees(): Observable<Employee> {
