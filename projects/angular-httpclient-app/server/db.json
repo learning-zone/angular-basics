@@ -1,0 +1,13 @@
+{
+    "employees": [{
+      "id": 1,
+      "name": "Tony Stark",
+      "email": "tony@mcu.com",
+      "phone": "001-123-4567"
+    }, {
+      "id": 2,
+      "name": "Black Widow",
+      "email": "black-widow@mcu.com",
+      "phone": "001-123-4568"
+    }]
+  }
