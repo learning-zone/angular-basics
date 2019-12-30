@@ -393,6 +393,8 @@ subject.next("d"); // Subscription got d
     <b><a href="#">↥ back to top</a></b>
 </div>
 
+#### Q. What is the difference between Subject and BehaviorSubject?
+*TODO*
 #### Q. What is the difference between AngularJS and Angular?
 Angular is a completely revived component-based framework in which an application is a tree of individual 
 components.
