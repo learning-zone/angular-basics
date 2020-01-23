@@ -3982,7 +3982,7 @@ source$.let(complicatedLogic).subscribe(x => console.log(x)); // 50
 </div>
 
 #### Q. How do components communicate with each other?
-**Parent to Child**: Sharing Data via `Input()`  
+**1. Parent to Child**: Sharing Data via `Input()`  
 
 This is probably the most common and straightforward method of sharing data. It works by using the `@Input()` decorator to allow data to be passed via the template.
 
@@ -4021,7 +4021,7 @@ export class ChildComponent {
 }
 ```
 
-**Child to Parent**: Sharing Data via `ViewChild()`  
+**2. Child to Parent**: Sharing Data via `ViewChild()`  
 
 `ViewChild` allows a one component to be injected into another, giving the parent access to its attributes and functions. 
 
@@ -4068,7 +4068,7 @@ export class ChildComponent {
 }
 ```
 
-**Child to Parent**: Sharing Data via `Output()` and `EventEmitter()`  
+**3. Child to Parent**: Sharing Data via `Output()` and `EventEmitter()`  
 
 This approach is ideal when you want to share data changes that occur on things like button clicks, form entires, and other user events.
 
@@ -4125,7 +4125,7 @@ export class ChildComponent {
 }
 ```
 
-**Unrelated Components**: Sharing Data with a `Service()`  
+**4. Unrelated Components**: Sharing Data with a `Service()`  
 
 When passing data between components that lack a direct connection, such as siblings, grandchildren, etc, you should you a shared service. When you have data that should aways been in sync, the `RxJS BehaviorSubject` very useful in this situation.
 
