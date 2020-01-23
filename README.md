@@ -902,20 +902,6 @@ In the above expression, editProfile is a template statement. The below JavaScri
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How do you categorize data binding types?
-Binding types can be grouped into three categories distinguished by the direction of data flow. They are listed as below,
-* From the source-to-view
-* From view-to-source
-* View-to-source-to-view
-
-The possible binding syntax can be tabularized as below,
-
-| Data direction | Syntax | Type |
-|---- | --------- | ---- |
-| From the source-to-view(One-way)  | 1. {{expression}} 2. [target]="expression" 3. bind-target="expression" | Interpolation, Property, Attribute, Class, Style|
-| From view-to-source(One-way) | 1. (target)="statement" 2. on-target="statement" | Event |
-| View-to-source-to-view(Two-way)| 1. [(target)]="expression" 2. bindon-target="expression"| Two-way |
-
 #### Q. What are pipes?
 A pipe takes in data as input and transforms it to a desired output. For example, let us take a pipe to transform a component's birthday property into a human-friendly date using **date** pipe.
 ```typescript
