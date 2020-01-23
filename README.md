@@ -1814,9 +1814,9 @@ In Angular, You must write metadata with the following general constraints,
 
 #### Q. What are the three phases of AOT?
 The AOT compiler works in three phases,
-**1. Code Analysis:** In this phase, the TypeScript compiler and AOT collector create a representation of the source.
-**2. Code Generation:** It handles the interpretation as well as places restrictions on what it interprets.
-**3. Template Type Checking:** In this phase, the Angular template compiler uses the TypeScript compiler to validate the binding expressions in templates.
+**1. Code Analysis:** In this phase, the TypeScript compiler and AOT collector create a representation of the source.  
+**2. Code Generation:** It handles the interpretation as well as places restrictions on what it interprets.  
+**3. Template Type Checking:** In this phase, the Angular template compiler uses the TypeScript compiler to validate the binding expressions in templates.  
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
