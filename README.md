@@ -4365,7 +4365,7 @@ Angular simplifies the following aspects of internationalization:
 </div>
 
 #### Q. How will you optimize image and svg in your angular app?
-**1. IMMUTABLE INPUT OBJECTS**  
+**1. Immutable Input Objects**  
 Angular’s `OnPush` change detection strategy enables us to reduce the number of checks Angular has to make when a change in our application happens.
 ```typescript
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
@@ -4382,7 +4382,7 @@ export class MySubComponent implements OnInit {
 }
 ```
 
-**2. OBSERVABLE INPUT OBJECTS**  
+**2. Observable Input Objects**  
 ```typescript
 import { Component, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
@@ -4406,7 +4406,7 @@ export class MySubComponent implements OnInit {
 }
 ```
 
-**3. LAZY LOADING**  
+**3. Lazy Loading**  
 ```typescript
 @NgModule({
     ...
@@ -4423,7 +4423,7 @@ export class MySubComponent implements OnInit {
 }
 ```
 
-**4. CODE SPLITTING AND COMMONS CHUNK PLUGIN (WEBPACK)**  
+**4. Code Splitting and Commons chunk plugin (WEBPACK)**  
 There are mainly two kinds of code splitting that can be accomplished with webpack: “Vendor code splitting” and “On demand code-splitting” (used for lazy loading).
 ```typescript
 new webpack.optimize.CommonsChunkPlugin({
@@ -4435,7 +4435,7 @@ new webpack.optimize.CommonsChunkPlugin({
 });
 ```
 
-**5. REUSABLE CSS WITH BEM AND SASS**  
+**5. Reusable CSS with BEM and SASS**  
 Sass has been an all-time favorite for writing structured and maintainable CSS for large projects. We combined this with the BEM methodology which helps to create extendable and reusable interface components. 
 
 **6. GZIP**  
