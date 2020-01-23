@@ -1122,7 +1122,7 @@ Since the above service method returns an Observable which needs to be subscribe
 The response body may not return full response data because sometimes servers also return special headers or status code which which are important for the application workflow. In order to get full response, we should use observe option from HttpClient,
 ```typescript
 getUserResponse(): Observable<HttpResponse<User>> {
-  return this.http.get<User>(
+  return this.HttpClient.get<User>(
     this.userUrl, { observe: 'response' });
 }
 ```
