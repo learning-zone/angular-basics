@@ -1062,7 +1062,7 @@ export class ChildModule {}
 #### Q. Explain on how to use HttpClient with an example?
 Below are the steps need to be followed for the usage of HttpClient.
 
-**Step 01**: Import HttpClient into root module
+**Step 01**: Import `HttpClient` into root module
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
@@ -1076,7 +1076,7 @@ import { HttpClientModule } from '@angular/common/http';
 ```
 **Step 02**: Inject the HttpClient into the application  
 
-Let's create a userProfileService(userprofile.service.ts) as an example. It also defines get method of HttpClient
+Let's create a `userProfileService(userprofile.service.ts)` as an example. It also defines get method of HttpClient
 ```typescript
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -1093,8 +1093,8 @@ export class UserProfileService {
 }
 ```
 **Step 03**: Create a component for subscribing service  
-  
-Let's create a component called UserProfileComponent(userprofile.component.ts) which inject UserProfileService and invokes the service method,
+
+Let's create a component called `UserProfileComponent(userprofile.component.ts)` which inject UserProfileService and invokes the service method,
 ```typescript
 fetchUserProfile() {
   this.userProfileService.getUserProfile()
