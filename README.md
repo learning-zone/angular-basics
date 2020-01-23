@@ -934,29 +934,24 @@ import { Component } from '@angular/core';
 </div>
 
 #### Q. What is a custom pipe?
-Apart from built-inn pipes, you can write your own custom pipe with the below key characteristics,
-1. A pipe is a class decorated with pipe metadata **@Pipe** decorator, which you import from the core Angular library
-    For example,
+
+A pipe is a class decorated with pipe metadata **@Pipe** decorator, which you import from the core Angular library
+
 ```typescript
-    @Pipe({name: 'myCustomPipe'})
+@Pipe({name: 'myCustomPipe'})
 ```
-2. The pipe class implements the **PipeTransform** interface's transform method that accepts an input value followed by optional parameters and returns the transformed value.
-    The structure of pipeTransform would be as below,
+The pipe class implements the **PipeTransform** interface's transform method that accepts an input value followed by optional parameters and returns the transformed value.
+
 ```typescript
 interface PipeTransform {
   transform(value: any, ...args: any[]): any
 }
 ```
-3. The @Pipe decorator allows you to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
+The **@Pipe** decorator allows to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
 ```typescript
 template: `{{someInputValue | myCustomPipe: someOtherValue}}`
 ```
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
-#### Q. Give an example of custom pipe?
-We can create custom reusable pipes for the transformation of existing value. For example, let us create a custom pipe for finding file size based on an extension,
+Example: 
 ```typescript
 import { Pipe, PipeTransform } from '@angular/core';
 
