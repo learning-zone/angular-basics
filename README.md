@@ -1075,6 +1075,7 @@ import { HttpClientModule } from '@angular/common/http';
   export class AppModule {}
 ```
 **Step 02**: Inject the HttpClient into the application  
+
 Let's create a userProfileService(userprofile.service.ts) as an example. It also defines get method of HttpClient
 ```typescript
 import { Injectable } from '@angular/core';
@@ -1092,6 +1093,7 @@ export class UserProfileService {
 }
 ```
 **Step 03**: Create a component for subscribing service  
+  
 Let's create a component called UserProfileComponent(userprofile.component.ts) which inject UserProfileService and invokes the service method,
 ```typescript
 fetchUserProfile() {
