@@ -1623,39 +1623,6 @@ container.greet = 'News';  // <-- ERROR: TypeScript knows there is no `greet` pr
 #### Q. What are dynamic components?
 Dynamic components are the components in which components location in the application is not defined at build time.i.e, They are not used in any angular template. But the component is instantiated and placed in the application at runtime.
 
-#### Q. What are the various kinds of directives?
-There are mainly three kinds of directives.
-1. **Components** — These are directives with a template.
-2. **Structural directives** — These directives change the DOM layout by adding and removing DOM elements.
-3. **Attribute directives** — These directives change the appearance or behavior of an element, component, or another directive.
-
-#### Q. Give an example for attribute directives?
-
-1. Create HighlightDirective class with the file name `src/app/highlight.directive.ts`. In this file, we need to import **Directive** from core library to apply the metadata and **ElementRef** in the directive's constructor to inject a reference to the host DOM element ,
-```typescript
-import { Directive, ElementRef } from '@angular/core';
-
-@Directive({
-  selector: '[appHighlight]'
-})
-export class HighlightDirective {
-    constructor(el: ElementRef) {
-        el.nativeElement.style.backgroundColor = 'red';
-    }
-}
-```
-2. Apply the attribute directive as an attribute to the host element
-```html
-<p appHighlight>Highlight me!</p>
-```
-3. Run the application to see the highlight behavior on paragraph element
-```javascript
-ng serve
-```
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
-
 #### Q. What is the purpose of base href tag?
 The routing application should add <base> element to the index.html as the first child in the <head> tag inorder to indicate how to compose navigation URLs. If app folder is the application root then you can set the href value as below
 ```html
