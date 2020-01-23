@@ -3328,9 +3328,7 @@ export class AppComponent {
 #### Q. What is transclusion in angular?
 Transclusion is a way to let you define a fixed view template, and at the same time allow you to define a slot for dynamic content by using `ng-content` tag.
 
-* **Content Projection**  
-Content projection consists in passing a portion of the DOM tree from a parent component to a child component.
-It’s perfect to build reusable components such as dialogs, modals, tabs, and the like.
+**Content Projection**: Content projection consists in passing a portion of the DOM tree from a parent component to a child component. It’s perfect to build reusable components such as dialogs, modals, tabs, and the like.
 
 Example: create a pop-up window with customizable content, and I’d like to “pass” that content to the pop-up as follows:
 ```html
