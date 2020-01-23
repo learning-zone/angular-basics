@@ -774,7 +774,7 @@ The above service uses Http service as a dependency.
 </div>
 
 #### Q. What is dependency injection in Angular?
-Dependency Injection (DI) is a core concept of Angular 2+ and allows a class receive dependencies from another class. Most of the time in Angular, dependency injection is done by injecting a service class into a component or module class.
+Dependency Injection (DI) allows a class receive dependencies from another class. Most of the time in Angular, dependency injection is done by injecting a service class into a component or module class.
 
 ```typescript
 import { Injectable } from '@angular/core';
