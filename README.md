@@ -922,10 +922,10 @@ import { Component } from '@angular/core';
 
     @Component({
       selector: 'app-birthday',
-      template: `<p>Birthday is {{ birthday | date:'dd/mm/yyyy'}}</p>` // 18/06/1987
+      template: `<p>Birthday is {{ birthday | date:'dd/mm/yyyy'}}</p>` // 18/06/2002
     })
     export class BirthdayComponent {
-      birthday = new Date(1987, 6, 18);
+      birthday = new Date(2002, 6, 18);
     }
 ```
 *Note: The parameter value can be any valid template expression, such as a string literal or a component property.*
