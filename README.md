@@ -2053,7 +2053,7 @@ class MyComponent {
 </div>
 
 #### Q. What is type narrowing?
-The expression used in an ngIf directive is used to narrow type unions in the Angular template compiler similar to if expression in typescript. So *ngIf allows the typeScript compiler to infer that the data used in the binding expression will never be undefined.
+The expression used in an ngIf directive is used to narrow type unions in the Angular template compiler similar to if expression in typescript. So `*ngIf` allows the typeScript compiler to infer that the data used in the binding expression will never be undefined.
 ```typescript
 @Component({
   selector: 'my-component',
