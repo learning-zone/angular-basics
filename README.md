@@ -1062,7 +1062,7 @@ export class ChildModule {}
 #### Q. Explain on how to use HttpClient with an example?
 Below are the steps need to be followed for the usage of HttpClient.
 
-**Step 01**: Import HttpClient into root module:
+**Step 01**: Import HttpClient into root module
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
