@@ -1067,9 +1067,8 @@ Below are the steps need to be followed for the usage of HttpClient.
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
-    BrowserModule,
-    // import HttpClientModule after BrowserModule.
-    HttpClientModule,
+    ...
+    HttpClientModule
   ],
   ......
   })
