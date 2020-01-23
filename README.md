@@ -2064,10 +2064,11 @@ class MyComponent {
 }
 ```
 #### Q. How do you describe various dependencies in angular application?
-The dependencies section of package.json with in an angular application can be divided as follow,
-1. **Angular packages:** Angular core and optional modules; their package names begin @angular/.
-2. **Support packages:** Third-party libraries that must be present for Angular apps to run.
-3. **Polyfill packages:** Polyfills plug gaps in a browser's JavaScript implementation.
+The dependencies section of package.json with in an angular application can be divided as follow,  
+
+**1. Angular packages:** Angular core and optional modules; their package names begin @angular/.  
+**2. Support packages:** Third-party libraries that must be present for Angular apps to run.  
+**3. Polyfill packages:** Polyfills plug gaps in a browser's JavaScript implementation.  
 
 #### Q. What is zone?
 A Zone is an execution context that persists across async tasks. Angular relies on zone.js to run Angular's change detection processes when native JavaScript operations raise events
