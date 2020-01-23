@@ -1028,7 +1028,7 @@ export class AppModule { }
 #### Q. What is the difference between RouterModule.forRoot() and RouterModule.forChild()?
 * **RouterModule.forRoot(ROUTES)**: forRoot creates a module that contains all the directives, the given routes, and the router service itself.
 * **RouterModule.forChild(ROUTES)**: forChild creates a module that contains all the directives and the given routes, but does not include the router service.  
-  
+
 Example: *RouterModule.forRoot(ROUTES)*
 ```typescript
 // ...
@@ -1061,7 +1061,8 @@ export class ChildModule {}
 
 #### Q. Explain on how to use HttpClient with an example?
 Below are the steps need to be followed for the usage of HttpClient.
-1. Import HttpClient into root module:
+
+**Step 01**: Import HttpClient into root module:
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
@@ -1074,7 +1075,7 @@ import { HttpClientModule } from '@angular/common/http';
   })
   export class AppModule {}
 ```
-2. Inject the HttpClient into the application:
+**Step 02**: Inject the HttpClient into the application:
 Let's create a userProfileService(userprofile.service.ts) as an example. It also defines get method of HttpClient
 ```typescript
 import { Injectable } from '@angular/core';
@@ -1091,7 +1092,7 @@ export class UserProfileService {
   }
 }
 ```
-3. Create a component for subscribing service:
+**Step 03**: Create a component for subscribing service
 Let's create a component called UserProfileComponent(userprofile.component.ts) which inject UserProfileService and invokes the service method,
 ```typescript
 fetchUserProfile() {
