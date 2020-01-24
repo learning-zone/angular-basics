@@ -22,5 +22,5 @@ export class ObservablesComponent {
 /**
  * Note:
  * npm install -g json-server
- * json-server --watch db.json 
+ * json-server --watch db.json
  */
