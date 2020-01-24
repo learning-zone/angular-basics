@@ -12,31 +12,31 @@ AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   data = 100;
   constructor() {
-    console.log(`constructor() called: ${this.data}`);
+    console.log(`constructor(): ${this.data}`);
   }
   ngOnChanges(): void {
-    console.log(`ngOnChanges() called: ${this.data}`);
+    console.log(`ngOnChanges(): ${this.data}`);
   }
   ngOnInit() {
-    console.log(`ngOnInit() called: ${this.data}`);
+    console.log(`ngOnInit(): ${this.data}`);
   }
   ngDoCheck() {
-    console.log('ngDoCheck() called');
+    console.log('ngDoCheck()');
   }
   ngAfterContentInit() {
-    console.log('ngAfterContentInit() called');
+    console.log('ngAfterContentInit()');
   }
   ngAfterContentChecked() {
-    console.log('ngAfterContentChecked() called');
+    console.log('ngAfterContentChecked()');
   }
   ngAfterViewInit() {
-    console.log('ngAfterViewInit() called');
+    console.log('ngAfterViewInit()');
   }
   ngAfterViewChecked() {
-    console.log('ngAfterViewChecked() called');
+    console.log('ngAfterViewChecked()');
   }
   ngOnDestroy() {
-    console.log('ngOnDestroy() called');
+    console.log('ngOnDestroy()');
   }
   addNumber(): void {
     this.data += 100;
