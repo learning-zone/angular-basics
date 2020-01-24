@@ -1,7 +1,9 @@
 <h5>Displaying Data <hr/></h5>
 <div>{{title}} {{output}}</div>
 <ul>
-    <li *ngFor='let number of numbers' (click)="call(number)" class="number-array">{{number}}</li>
+    <li *ngFor='let number of numbers' (click)="call(number)" class="number-array">
+        <input type="button" class="btn btn-light"  name="Click" value="{{number}}"/>
+    </li>
 </ul>
 <br/>
 <h5>Component Interaction <hr/></h5>
