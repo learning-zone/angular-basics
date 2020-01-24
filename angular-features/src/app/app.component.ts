@@ -28,9 +28,9 @@ if (typeof Worker !== 'undefined') {
   // Create a new
   const worker = new Worker('./app.worker', { type: 'module' });
   worker.onmessage = ({ data }) => {
-    console.log(`page got message: ${data}`);
+    console.log(`Page got message: ${data}`);
   };
-  worker.postMessage('hello');
+  worker.postMessage('Running !!!');
 } else {
   // Web Workers are not supported in this environment.
   // You should add a fallback so that your program still executes correctly.
