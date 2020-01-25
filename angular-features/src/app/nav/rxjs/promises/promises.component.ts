@@ -9,7 +9,7 @@ import { Employee } from './employee.model';
 })
 export class PromisesComponent implements OnInit {
 
-  url = 'http://dummy.restapiexample.com/api/v1/employee/1';
+  url = 'http://dummy.restapiexample.com/api/v1/employees';
 
   subscribeResult: Employee;
   promiseResult: Employee;
