@@ -9,26 +9,26 @@ import { Observable } from 'rxjs';
   styleUrls: ['./httpclient.component.scss']
 })
 export class HttpclientComponent {
-  apiRoot: string = 'http://httpbin.org';
+  apiRoot = 'http://httpbin.org';
 
-  constructor(private HttpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   doGET() {
     let url = `${this.apiRoot}/get`;
     let params = new HttpParams()
       .set('_page', '1')
       .set('_limit', '10');
-    
-    this.HttpClient.get(url, {params})
+
+    this.httpClient.get(url, {params})
       .subscribe(
         data => {
           console.log(data);
           document.getElementById('result').innerHTML = JSON.stringify(data);
         },
         error => {
-          console.log("Error: "+error);
+          console.log('Error: '+error);
         }
-      ); 
+      );
     document.getElementById('method_type').innerHTML = '[ GET Method ]';
   }
 
@@ -51,8 +51,8 @@ export class HttpclientComponent {
         address: 'UK'
       }
     ];
- 
-    this.HttpClient.post(url, {json}).subscribe(
+
+    this.httpClient.post(url, {json}).subscribe(
       data => {
         console.log(data);
         document.getElementById('result').innerHTML = JSON.stringify(data);
@@ -60,7 +60,7 @@ export class HttpclientComponent {
       error => {
         console.log('Error: ' + error);
       }
-    ); 
+    );
     document.getElementById('method_type').innerHTML = '[ POST Method ]';
   }
 
@@ -72,7 +72,7 @@ export class HttpclientComponent {
         address: 'USA'
       }];
 
-    this.HttpClient.put(url, { json }).subscribe(
+    this.httpClient.put(url, { json }).subscribe(
       data => {
         console.log(data);
         document.getElementById('result').innerHTML = JSON.stringify(data);
@@ -88,24 +88,24 @@ export class HttpclientComponent {
     let url = `${this.apiRoot}/delete`;
     let params = new HttpParams()
       .set('employee_id', '101');
-      
-    this.HttpClient.delete(url, {params})
+
+    this.httpClient.delete(url, {params})
         .subscribe(
           data => {
             console.log(data);
             document.getElementById('result').innerHTML = JSON.stringify(data);
           },
           error => {
-            console.log("Error: ", error);
+            console.log('Error: ', error);
           }
-        ); 
+        );
     document.getElementById('method_type').innerHTML = '[ DELETE Method ]';
   }
 
   doGETAsPromise() {
     console.log('GET as Promise');
     let url = `${this.apiRoot}/get`;
-    this.HttpClient.get(url)
+    this.httpClient.get(url)
       .toPromise()
       .then(
         data => {
@@ -114,14 +114,14 @@ export class HttpclientComponent {
         },
         error => {
           console.log(error);
-        } 
+        }
       );
     document.getElementById('method_type').innerHTML = '[ GET as Promise ]';
   }
 
   doGETAsPromiseError() {
     let url = `${this.apiRoot}/post`;
-    this.HttpClient.get(url)
+    this.httpClient.get(url)
       .toPromise()
       .then(
         data => {
@@ -139,7 +139,7 @@ export class HttpclientComponent {
   doGETAsObservableError() {
     console.log('GET As Observable Error');
     let url = `${this.apiRoot}/post`;
-    this.HttpClient.get(url).subscribe(
+    this.httpClient.get(url).subscribe(
       data => {
         console.log(data);
       },
@@ -155,9 +155,9 @@ export class HttpclientComponent {
     console.log('GET With Headers');
     let headers = new HttpHeaders()
         .set('Authorization', 'username:password');
-    
+
     let url = `${this.apiRoot}/get`;
-    this.HttpClient.get(url, { headers }).subscribe(
+    this.httpClient.get(url, { headers }).subscribe(
       data => {
         console.log(data);
         document.getElementById('result').innerHTML = JSON.stringify(data);
