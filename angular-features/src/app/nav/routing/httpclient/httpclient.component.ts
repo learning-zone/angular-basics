@@ -26,7 +26,7 @@ export class HttpclientComponent {
           document.getElementById('result').innerHTML = JSON.stringify(data);
         },
         error => {
-          console.log('Error: '+error);
+          console.log('Error: ' + error);
         }
       );
     document.getElementById('method_type').innerHTML = '[ GET Method ]';
