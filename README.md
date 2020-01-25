@@ -732,7 +732,7 @@ The above command completes the following actions:
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What are pwa cache types?
+#### Q. What are the types of cache in browsers?
 There are two types of cache in the browser: browser-managed cache and application-managed cache (service worker).
 
 * **Browser-managed caches** are a temporary storage location on computer for files downloaded by browser to display websites. Files that are cached locally include any documents that make up a website, such as HTML files, CSS style sheets, JavaScript scripts, as well as graphic images and other multimedia content. This cache is managed automatically by the browser and is not available offline.
