@@ -4746,3 +4746,5 @@ export class AppComponent {}
 #### Q. What is circular dependency error in angular?
 #### Q. What is static injector error in angular?
 #### Q. How to create logger service in angular 7?
+#### Q. How to do http response cache in angular 7?
+
