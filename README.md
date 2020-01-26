@@ -4,8 +4,8 @@
 
 ### Table of Contents
 
-* [TypeScript Interview Questions and Answers](typescript-questions.md)
-* [Angular Unit Testing Interview Questions and Answers](unit-testing-questions.md)
+* *[TypeScript Interview Questions and Answers](typescript-questions.md)*
+* *[Angular Unit Testing Interview Questions and Answers](unit-testing-questions.md)*
 
 
 #### Q. Frequently used angular 7 commands
