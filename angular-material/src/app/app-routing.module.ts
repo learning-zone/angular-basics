@@ -31,7 +31,6 @@ const routes: Routes = [
 
   { path: '', redirectTo: '/', pathMatch: 'full', data: {title: 'Home | Angular Material'}},
   { path: 'home', redirectTo: '/', pathMatch: 'full', data: {title: 'Home | Angular Material'}},
-  // { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found | Angular Material'}}
 
   { path: 'components/autocomplete', component: AutocompleteComponent, data: {title: 'Autocomplete | Angular Material'}},
   { path: 'components/checkbox', component: CheckboxComponent, data: {title: 'Checkbox | Angular Material'}},
@@ -57,6 +56,8 @@ const routes: Routes = [
   { path: 'cdk/portal', component: PortalComponent, data: {title: 'Portal | Angular Material'}},
   { path: 'cdk/scrolling', component: ScrollingComponent, data: {title: 'Scrolling | Angular Material'}},
   { path: 'cdk/text-field', component: TextFieldComponent, data: {title: 'TextField | Angular Material'}},
+
+  // { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found | Angular Material'}}
 
 ];
 
