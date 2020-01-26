@@ -572,7 +572,7 @@ Angular application goes through an entire set of processes or has a lifecycle r
 * **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
 
 #### Q. What is data binding in Angular?
-Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding (divided as 3 categories) which differ in the way the data is flowing.  
+Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data.
 
 **From the Component to the DOM:**  
 **1. Interpolation:** `{{ value }}`: Adds the value of a property from the component
