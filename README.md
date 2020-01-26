@@ -571,7 +571,7 @@ Angular application goes through an entire set of processes or has a lifecycle r
 * **ngAfterViewChecked:** This is called in response after Angular checks the component's views and child views.
 * **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
 
-#### Q. What is a data binding in Angular?
+#### Q. What is data binding in Angular?
 Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data. There are four forms of data binding(divided as 3 categories) which differ in the way the data is flowing.  
 
 **From the Component to the DOM:**  
