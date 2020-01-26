@@ -580,7 +580,7 @@ Data binding is a core concept in Angular and allows to define communication bet
 <li>Name: {{ user.name }}</li>
 <li>Address: {{ user.address }}</li>
 ```
-**2. Property binding:** `[property]="value"`: The value is passed from the component to the specified property or simple HTML attribute
+**2. Property binding:** `[property] = "value"`: The value is passed from the component to the specified property or simple HTML attribute
 ```html
 <input type="email" [value]="user.email">
 ```
