@@ -4752,6 +4752,7 @@ export class AppComponent {}
 
 #### Q. What is circular dependency error in angular?
 #### Q. What is static injector error in angular?
-#### Q. How to create logger service in angular 7?
+#### Q. How to create logger service in angular?
 #### Q. What is server side rendering in angular?
+#### Q. How to use authguard in angular 7?
 
