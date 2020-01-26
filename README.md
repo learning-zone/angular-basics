@@ -4754,4 +4754,4 @@ export class AppComponent {}
 #### Q. How to create logger service in angular?
 #### Q. What is server side rendering in angular?
 #### Q. How to use authguard in angular 7?
-#### Q. How two way binding works in angular 7
+
