@@ -4792,7 +4792,7 @@ webpack.server.config.js     * webpack server configuration
 npm run build:ssr && npm run serve:ssr
 ``` 
 
-**Why use server-side rendering**  
+**Benefits**  
 
 There are three main reasons to create a Universal version of your app.
 
