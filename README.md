@@ -4764,5 +4764,41 @@ export class AppComponent {}
 #### Q. What is static injector error in angular?
 #### Q. How to create logger service in angular?
 #### Q. What is server side rendering in angular?
+**Server Side Rendering** helps us convert parts of our extremely dynamic web applications into static web applications in which we create and render the content of the requested route on the server side. This static page acts as a placeholder while the rest of application (CSS, JS etc.) are downloaded and bootstrapped in the background. In Angular applications, Server Side Rendering can be enabled using **Angular Universal**.
+
+**Step 01**: Adding Universal to Your App
+```
+ng add @nguniversal/express-engine --clientProject angular.io-example
+```
+The command creates the following folder structure.
+```
+src/
+  index.html                 app web page
+  main.ts                    bootstrapper for client app
+  main.server.ts             * bootstrapper for server app
+  style.css                  styles for the app
+  app/ ...                   application code
+    app.server.module.ts     * server-side application module
+server.ts                    * express web server
+tsconfig.json                TypeScript client configuration
+tsconfig.app.json            TypeScript client configuration
+tsconfig.server.json         * TypeScript server configuration
+tsconfig.spec.json           TypeScript spec configuration
+package.json                 npm configuration
+webpack.server.config.js     * webpack server configuration
+```
+**Step 02**: To start rendering your app with Universal on your local system
+```
+npm run build:ssr && npm run serve:ssr
+``` 
+
+**Why use server-side rendering**  
+
+There are three main reasons to create a Universal version of your app.
+
+* Facilitate web crawlers through search engine optimization (SEO)
+* Improve performance on mobile and low-powered devices
+* Show the first page quickly with a first-contentful paint (FCP)
+
 #### Q. How to use authguard in angular 7?
 
