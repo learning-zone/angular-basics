@@ -941,12 +941,12 @@ import { Component } from '@angular/core';
 
 #### Q. What is a custom pipe?
 
-A pipe is a class decorated with pipe metadata **@Pipe** decorator, which you import from the core Angular library
+A pipe is a class decorated with pipe metadata **@Pipe()** decorator, which you import from the core Angular library
 
 ```typescript
 @Pipe({name: 'myCustomPipe'})
 ```
-The pipe class implements the **PipeTransform** interface's transform method that accepts an input value followed by optional parameters and returns the transformed value.
+The pipe class implements the **PipeTransform()** interface's transform method that accepts an input value followed by optional parameters and returns the transformed value.
 
 ```typescript
 interface PipeTransform {
