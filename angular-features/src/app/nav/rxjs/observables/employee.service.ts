@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeeService {
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   public getEmployees(): Observable<Employee[]> {
     const url = 'http://localhost:3000/employees';
 
-    return this.http.get<Employee[]>(url);
+    return this.httpClient.get<Employee[]>(url);
   }
 }
