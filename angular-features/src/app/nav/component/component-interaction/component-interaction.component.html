@@ -2,7 +2,7 @@
 <div>{{title}} {{output}}</div>
 <ul>
     <li *ngFor='let number of numbers' (click)="call(number)" class="number-array">
-        <input type="button" class="btn btn-light"  name="Click" value="{{number}}"/>
+        <span class="btn btn-light">{{number}}</span>
     </li>
 </ul>
 <br/>
