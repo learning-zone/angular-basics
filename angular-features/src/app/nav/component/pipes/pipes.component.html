@@ -29,8 +29,8 @@
          <i>{{months | slice:2:6}}</i><!-- here 2 and 6 refers to the start and the end index -->
      </li>
      <li><b>Async Pipe</b><br/>
-         <i><h2 *ngIf="!countCompleted">{{ count$ | async }}</h2>
-           <h2 *ngIf="countCompleted">{{ message }}</h2>
+         <i><h5 *ngIf="!countCompleted">{{ count$ | async }}</h5>
+           <h5 *ngIf="countCompleted">{{ message }}</h5>
          </i>
       </li>
       <li><b>Custom Pipe</b><br/>
