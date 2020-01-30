@@ -12,7 +12,7 @@ export class PipesComponent implements OnInit {
   title = 'Built-in Angular Pipes';
   today_date = new Date();
   json_val = {name: 'Alex', age: '25', address:{a1: 'Paris', a2: 'France'}};
-  months: Array<String> = ['Jan', 'Feb', 'Mar', 'April', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']; 
+  months: Array<String> = ['Jan', 'Feb', 'Mar', 'April', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
   countCompleted = false;
   countDown = 5;
@@ -27,5 +27,4 @@ export class PipesComponent implements OnInit {
       finalize(() => (this.countCompleted = true))
     );
   }
-
 }
