@@ -38,7 +38,7 @@ export class PromisesComponent implements OnInit {
     this.getConditionalDataUsingAsync();
   }
 
-  resolveAfter2Seconds(x) {
+  resolveAfter2Seconds(x: number) {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(x);
