@@ -1,19 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-
 import { AppRoutingModule } from './app-routing.module';
 import { BsDropdownModule } from 'ngx-bootstrap';
-
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { ComponentInteractionComponent } from './nav/component/component-interaction/component-interaction.component';
 import { DirectivesComponent } from './nav/component/directives/directives.component';
 import { LifecyclesComponent } from './nav/component/lifecycles/lifecycles.component';
@@ -42,13 +43,10 @@ import { heroSwitchComponents } from './nav/component/directives/hero-switch.com
 import { UnlessDirective } from './nav/component/directives/unless.directive';
 import { CustomPipe } from './nav/component/pipes/custom.pipe';
 import { TemplateDrivenComponent } from './nav/forms/template-driven/template-driven.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboard.component';
 import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
 import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { TestOneComponent } from './nav/input-output/test-one/test-one.component';
 
 
