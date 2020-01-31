@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpResponse, HttpResponseBase, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 
 @Component({
@@ -14,8 +13,8 @@ export class HttpclientComponent {
   constructor(private httpClient: HttpClient) {}
 
   doGET() {
-    let url = `${this.apiRoot}/get`;
-    let params = new HttpParams()
+    const url = `${this.apiRoot}/get`;
+    const params = new HttpParams()
       .set('_page', '1')
       .set('_limit', '10');
 
@@ -33,8 +32,8 @@ export class HttpclientComponent {
   }
 
   doPOST() {
-    let url = `${this.apiRoot}/post`;
-    let json = [
+    const url = `${this.apiRoot}/post`;
+    const json = [
       {
         name: 'Lexxi Whitehill',
         email: 'lexxiwhitehill@gmail.com',
@@ -65,8 +64,8 @@ export class HttpclientComponent {
   }
 
   doPUT() {
-    let url = `${this.apiRoot}/put`;
-    let json = [{
+    const url = `${this.apiRoot}/put`;
+    const json = [{
         name: 'Belladonna Madden',
         email: 'belladonnamadden@gmail.com',
         address: 'USA'
@@ -85,8 +84,8 @@ export class HttpclientComponent {
   }
 
   doDELETE() {
-    let url = `${this.apiRoot}/delete`;
-    let params = new HttpParams()
+    const url = `${this.apiRoot}/delete`;
+    const params = new HttpParams()
       .set('employee_id', '101');
 
     this.httpClient.delete(url, {params})
@@ -104,7 +103,7 @@ export class HttpclientComponent {
 
   doGETAsPromise() {
     console.log('GET as Promise');
-    let url = `${this.apiRoot}/get`;
+    const url = `${this.apiRoot}/get`;
     this.httpClient.get(url)
       .toPromise()
       .then(
@@ -120,7 +119,7 @@ export class HttpclientComponent {
   }
 
   doGETAsPromiseError() {
-    let url = `${this.apiRoot}/post`;
+    const url = `${this.apiRoot}/post`;
     this.httpClient.get(url)
       .toPromise()
       .then(
@@ -138,7 +137,7 @@ export class HttpclientComponent {
 
   doGETAsObservableError() {
     console.log('GET As Observable Error');
-    let url = `${this.apiRoot}/post`;
+    const url = `${this.apiRoot}/post`;
     this.httpClient.get(url).subscribe(
       data => {
         console.log(data);
@@ -153,10 +152,10 @@ export class HttpclientComponent {
 
   doGETWithHeaders() {
     console.log('GET With Headers');
-    let headers = new HttpHeaders()
+    const headers = new HttpHeaders()
         .set('Authorization', 'username:password');
 
-    let url = `${this.apiRoot}/get`;
+    const url = `${this.apiRoot}/get`;
     this.httpClient.get(url, { headers }).subscribe(
       data => {
         console.log(data);
