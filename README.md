@@ -4801,4 +4801,6 @@ There are three main reasons to create a Universal version of your app.
 * Show the first page quickly with a first-contentful paint (FCP)
 
 #### Q. How to use authguard in angular 7?
+#### Q. Write a program to perform column sorting using ngx-datatable?
+
 
