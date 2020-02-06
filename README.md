@@ -40,13 +40,13 @@
 
 Angular has 2 types of build dev build or prod build :
 
-* **JIT**  
+**JIT**  
 Just-in-Time (JIT) is a type of compilation that compiles app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
 ```javascript
 ng build
 ng serve
 ```
-* **AOT**  
+**AOT**  
 Ahead-of-Time (AOT) is a type of compilation that compiles app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
 ```javascript
 ng build --aot
