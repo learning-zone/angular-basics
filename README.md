@@ -40,13 +40,13 @@
 
 Angular has 2 types of build dev build or prod build :
 
-**JIT**  
+* **JIT**  
 Just-in-Time (JIT) is a type of compilation that compiles app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
 ```javascript
 ng build
 ng serve
 ```
-**AOT**  
+* **AOT**  
 Ahead-of-Time (AOT) is a type of compilation that compiles app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
 ```javascript
 ng build --aot
@@ -65,9 +65,9 @@ ng build --prod              -  this is for production build
 |No AOT compilation	                        |AOT compilation takes place                |
 
 
-**minification** - process of removing excess whitespace, comments and optinal tokens like curly braces and semi colons
-**uglification** - process of transforming code to use short variable and function names  
-**tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
+* **minification** - process of removing excess whitespace, comments and optinal tokens like curly braces and semi colons
+* **uglification** - process of transforming code to use short variable and function names  
+* **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
 *Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
 
