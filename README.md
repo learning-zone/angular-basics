@@ -412,7 +412,7 @@ subject.subscribe({
 subject.next(2);
 subject.next(3);
 ```
-Output
+Output:
 ```
 observerA: 2
 observerB: 2
@@ -438,7 +438,7 @@ subject.subscribe({
 
 subject.next(3);
 ```
-Output
+Output:
 ```
 observerA: 0
 observerA: 1
