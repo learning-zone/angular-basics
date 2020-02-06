@@ -73,15 +73,11 @@ ng build --prod              -  this is for production build
 
 #### Q. What are the advantages with AOT?
 
-**1. Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.   
-
-**2. Fewer asynchronous requests:** It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.  
-
-**3. Smaller Angular framework download size:** Doesn't require downloading the Angular compiler. Hence it dramatically reduces the application payload.  
-
-**4. Detect template errors earlier:** Detects and reports template binding errors during the build step itself  
-
-**5. Better security:** It compiles HTML templates and components into JavaScript.  So there won't be any injection attacks.  
+1. **Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
+2. **Fewer asynchronous requests:** It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.
+3. **Smaller Angular framework download size:** Doesn't require downloading the Angular compiler. Hence it dramatically reduces the application payload.
+4. **Detect template errors earlier:** Detects and reports template binding errors during the build step itself
+5. **Better security:** It compiles HTML templates and components into JavaScript.  So there won't be any injection attacks.
 
 #### Q. What are the ways to control AOT compilation?
 You can control your app compilation in two ways
