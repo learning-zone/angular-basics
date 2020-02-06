@@ -1716,13 +1716,13 @@ The RouterOutlet is a directive from the router library and it  acts as a placeh
    outlet: "sidebar"
 }
 ```
-#### Q. What are router links?
+#### Q. What is routerLink?
 The RouterLink is a directive on the anchor tags give the router control over those elements. Since the navigation paths are fixed, you can assign string values to router-link directive as below,
 ```html
 <h1>Angular Router</h1>
 <nav>
-  <a routerLink="/todosList" >List of todos</a>
-  <a routerLink="/completed" >Completed todos</a>
+  <a routerLink="/home" >Home</a>
+  <a routerLink="/user" >Users</a>
 </nav>
 <router-outlet></router-outlet>
 ```
@@ -1731,8 +1731,8 @@ RouterLinkActive is a directive that toggles css classes for active RouterLink b
   ```html
 <h1>Angular Router</h1>
 <nav>
-  <a routerLink="/todosList" routerLinkActive="active">List of todos</a>
-  <a routerLink="/completed" routerLinkActive="active">Completed todos</a>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/user" routerLinkActive="active">Users</a>
 </nav>
 <router-outlet></router-outlet>
 ```
