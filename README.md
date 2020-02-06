@@ -394,6 +394,31 @@ subject.next("d"); // Subscription got d
 </div>
 
 #### Q. What is the difference between Subject and BehaviorSubject?
+**Subject**  
+
+Subject does not return the current value on Subscription. It triggers only on `.next(value)` call and return/output the value
+```javascript
+var subject = new Rx.Subject();
+
+subject.next(1); //Subjects will not output this value
+
+subject.subscribe({
+  next: (v) => console.log('observerA: ' + v)
+});
+subject.subscribe({
+  next: (v) => console.log('observerB: ' + v)
+});
+
+subject.next(2);
+subject.next(3);
+```
+Output
+```
+observerA: 2
+observerB: 2
+observerA: 3
+observerB: 3
+```
 **BehaviorSubject**  
 
 A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject doesn't hold a value. BehaviourSubject will return the initial value or the current value on Subscription.
@@ -417,31 +442,6 @@ Output
 ```
 observerA: 0
 observerA: 1
-observerA: 2
-observerB: 2
-observerA: 3
-observerB: 3
-```
-**Subject**  
-
-Subject does not return the current value on Subscription. It triggers only on `.next(value)` call and return/output the value
-```javascript
-var subject = new Rx.Subject();
-
-subject.next(1); //Subjects will not output this value
-
-subject.subscribe({
-  next: (v) => console.log('observerA: ' + v)
-});
-subject.subscribe({
-  next: (v) => console.log('observerB: ' + v)
-});
-
-subject.next(2);
-subject.next(3);
-```
-Output
-```
 observerA: 2
 observerB: 2
 observerA: 3
