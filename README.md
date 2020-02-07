@@ -3976,15 +3976,15 @@ NgModules are classes decorated with @NgModule. The @NgModule decorator’s impo
 
 ```html
 <!-- Can't do this -->
-<div *ngIf="todos" *ngFor="let todo of todos">
-  {{ todo.content }}
+<div *ngIf="employees" *ngFor="let employee of employees">
+  {{ employee.name }}
 </div>
 ```
 Instead what we usually do is use a wrapper like this:
 ```html
-<div *ngIf="todos">
-  <div *ngFor="let todo of todos">
-    {{ todo.content }}
+<div *ngIf="employees">
+  <div *ngFor="let employee of employees">
+    {{ employee.name }}
   </div>
 </div>
 ```
@@ -3992,16 +3992,16 @@ Instead what we usually do is use a wrapper like this:
 ```html
 <div>
     <ng-container *ngIf="true">
-        <h2>Title</h2>
-        <div>Content</div>
+        <h2>Sl.No</h2>
+        <div>Employee Name</div>
     </ng-container>
 </div>
 ```
 will then produce :
 ```html
 <div>
-    <h2>Title</h2>
-    <div>Content</div>
+    <h2>Sl.No</h2>
+    <div>Employee Name</div>
 </div>
 ```
 <div align="right">
