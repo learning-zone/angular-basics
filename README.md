@@ -1796,7 +1796,7 @@ The Angular Router enables navigation from one view to the next as users perform
 const appRoutes: Routes = [
   { 
     path: 'home/:id', 
-    component: TodoDetailComponent },
+    component: HomeComponent },
   {
     path: 'users',
     component: UsersListComponent,
