@@ -1795,15 +1795,15 @@ The Angular Router enables navigation from one view to the next as users perform
 ```typescript
 const appRoutes: Routes = [
   { 
-    path: 'todo/:id', 
+    path: 'home/:id', 
     component: TodoDetailComponent },
   {
-    path: 'todos',
-    component: TodosListComponent,
-    data: { title: 'Todos List' }
+    path: 'users',
+    component: UsersListComponent,
+    data: { title: 'Users List' }
   },
   { path: '',
-    redirectTo: '/todos',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
   { 
