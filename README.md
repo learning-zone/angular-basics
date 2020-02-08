@@ -4817,9 +4817,6 @@ export class AppComponent {}
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. What is circular dependency error in angular?
-#### Q. What is static injector error in angular?
-#### Q. How to create logger service in angular?
 #### Q. What is server side rendering in angular?
 **Server Side Rendering** helps us convert parts of our extremely dynamic web applications into static web applications in which we create and render the content of the requested route on the server side. This static page acts as a placeholder while the rest of application (CSS, JS etc.) are downloaded and bootstrapped in the background. In Angular applications, Server Side Rendering can be enabled using **Angular Universal**.
 
@@ -4857,9 +4854,6 @@ There are three main reasons to create a Universal version of your app.
 * Improve performance on mobile and low-powered devices
 * Show the first page quickly with a first-contentful paint (FCP)
 
-#### Q. What is the difference between Stateless and Stateful Component?
-*TODO*
-
 #### Q. What is difference between Stateful and Stateless Pipes in angular?
 * **Stateless pipes** are pure functions that flow input data through without remembering anything or causing detectable side-effects. Most pipes are stateless. The CurrencyPipe we used and the length pipe we created are examples of a stateless pipe.
 
@@ -4869,6 +4863,12 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 
 #### Q. How to use authguard in angular 7?
 #### Q. Write a program to perform column sorting using ngx-datatable?
-
-
+#### Q. What is circular dependency error in angular?
+#### Q. What is static injector error in angular?
+#### Q. How to create logger service in angular?
+#### Q. What is the difference between Stateless and Stateful Component?
+*TODO*
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
