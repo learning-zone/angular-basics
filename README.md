@@ -3392,7 +3392,7 @@ Note that I’m also passing a title as an input to that component. Now, by defa
 </div>
 
 #### Q. If your data model is updated outside the Zone explain the process how will you the view?
-You can update your view using any of the following:
+We can update view using any of the following:
 
 * **ApplicationRef.prototype.tick()** : It will perform change detection on the complete component tree.
 * **NgZone.prototype.run()**: It will perform the change detection on the entire component tree. Here, the run() under the hood will call the tick itself and then parameter will take the function before tick and executes it.
