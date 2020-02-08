@@ -4852,7 +4852,13 @@ There are three main reasons to create a Universal version of your app.
 * Improve performance on mobile and low-powered devices
 * Show the first page quickly with a first-contentful paint (FCP)
 
+#### Q. What is Stateful?
+Keep and track the previously stored information which is used for a current transaction.
+
+A stateful service based on HTTP cookies uses the HTTP transport protocol and its ability to convey cookies, used as session context.
+
 #### Q. How to use authguard in angular 7?
 #### Q. Write a program to perform column sorting using ngx-datatable?
+
 
 
