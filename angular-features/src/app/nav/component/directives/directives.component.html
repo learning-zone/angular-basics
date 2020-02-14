@@ -41,15 +41,13 @@
   This paragraph is hidden but still in the DOM.
 </p>
 
-<b>NgIf with template</b>
-<p>&lt;ng-template&gt; element</p>
+<b>NgIf with &lt;ng-template&gt; element</b>
 <ng-template [ngIf]="hero">
   <div class="name">{{hero.name}}</div>
 </ng-template>
 
 <hr/>
 
-<b id="ng-container">&lt;ng-container&gt;</b>
 
 <h4>*ngIf with a &lt;ng-container&gt;</h4>
 
@@ -95,7 +93,7 @@
   </ng-template>
 </div>
 
-<h5 id="appUnless">UnlessDirective<hr/></h5>
+<h5 id="appUnless"><br/>UnlessDirective<hr/></h5>
 <p>
   The condition is currently
   <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
@@ -115,7 +113,7 @@
   this paragraph is displayed because appUnless is set to false.
 </p>
 
-<h5>UnlessDirective with template<hr/></h5>
+<h5><br/>UnlessDirective with template<hr/></h5>
 
 <p *appUnless="condition">Show this sentence unless the condition is true.</p>
 
