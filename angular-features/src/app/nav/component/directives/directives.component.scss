@@ -7,7 +7,7 @@ label {
   width: 25%;
   border-radius: 5px;
   text-align: center;
-  padding-top: 8%;
+  padding-top: 6%;
 }
 
 button {
@@ -81,4 +81,8 @@ span.b,
   border-color: green;
   background-color: lightgreen;
   font-size: 100%;
+}
+li, .name {
+  color: #666;
+  font-style: oblique;
 }
