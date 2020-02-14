@@ -612,7 +612,9 @@ The NgModule decorator has three options
 * The bootstrap option tells Angular which Component to bootstrap in the application
 
 #### Q. What are lifecycle hooks available in Angular?
-Angular application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
+Angular creates and renders components along with their children, checks when their data-bound properties change, and destroys them before removing them from the DOM.
+
+Angular offers lifecycle hooks that provide visibility into these key life moments and the ability to act when they occur.
 
 * **ngOnChanges:** When the value of a data bound property changes, then this method is called.
 * **ngOnInit:** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
