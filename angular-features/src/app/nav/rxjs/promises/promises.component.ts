@@ -106,9 +106,9 @@ export class PromisesComponent implements OnInit {
     this.httpClient
       .get<Employee>(this.url)
       .toPromise()
-      .then(data => {
+      .then(result => {
         console.log('First Promise resolved.');
-        if (data.id > 5) {
+        if (result.id > 5) {
           const anotherUrl = 'https://jsonplaceholder.typicode.com/todos/1';
           this.httpClient
             .get<Employee>(anotherUrl)
