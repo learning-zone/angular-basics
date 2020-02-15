@@ -54,31 +54,6 @@
       "id": "010",
       "name": "Carol Martin",
       "email": "carolmartinl@gmail.com"
-    },
-    {
-      "id": "011",
-      "name": "Jane Lane",
-      "email": "janelane@example.com"
-    },
-    {
-      "id": "012",
-      "name": "John Doe",
-      "email": "janedoe@example.com"
-    },
-    {
-      "id": "013",
-      "name": "Anna Smith",
-      "email": "annasmith@example.com"
-    },
-    {
-      "id": "014",
-      "name": "Peter Jones",
-      "email": "peterjones@example.com"
-    },
-    {
-      "id": "015",
-      "name": "Sam Jackson",
-      "email": "samjackson@example.com"
     }
   ]
 }
