@@ -47,7 +47,6 @@ import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboa
 import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
 import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
-import { TestOneComponent } from './nav/input-output/test-one/test-one.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -89,8 +88,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DashboardComponent,
     HomeComponent,
     RightsComponent,
-    UsersComponent,
-    TestOneComponent
+    UsersComponent
   ],
   imports: [
     BrowserModule,

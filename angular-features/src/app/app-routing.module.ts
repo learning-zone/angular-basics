@@ -26,7 +26,6 @@ import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboa
 import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
 import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
-import { TestOneComponent } from './nav/input-output/test-one/test-one.component';
 
 
 const routes: Routes = [
@@ -62,8 +61,6 @@ const routes: Routes = [
   { path: 'internationalization', component: InternationalizationComponent },
   { path: 'drag-drop', component: DragDropComponent },
   { path: 'virtual-scrolling', component: VirtualScrollingComponent },
-
-  { path: 'test-one', component: TestOneComponent },
 
   { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
