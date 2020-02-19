@@ -4871,7 +4871,8 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 #### Q. What is static injector error in angular?
 #### Q. How to create logger service in angular?
 #### Q. What is the difference between Stateless and Stateful Component?
-#### Q. Why EventEmitter is needed for @input and @Output decorator? 
+#### Q. Why EventEmitter is needed for @input and @Output decorator?
+#### Q. Why yarn is better than npm? 
 *TODO*
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
