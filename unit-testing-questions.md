@@ -706,3 +706,6 @@ TestBed.configureTestingModule({
   providers: [AuthService]
 });
 ```
+#### Q. How code coverage works in angular 7?
+#### Q. Which file get called first, when user run ng-test?
+#### Q. Explain Unit Testing using Mocha and Chai in Angular7?
