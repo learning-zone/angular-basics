@@ -793,8 +793,9 @@ There are two types of cache in the browser: browser-managed cache and applicati
 * **Application-managed caches** are created using the Cache API independent of the browser-managed caches. This API is available to applications (via **window.caches**) and the **service worker**. Application- managed caches hold the same kinds of assets as a browser cache but are accessible offline (e.g. by the service worker to enable offline support).This cache is managed by developers who implement scripts that use the Cache API to explicitly update items in named cache objects.
 
 #### Q. What is the difference between constructor() and ngOnInit()?
-TypeScript classes has a default method called constructor() which is normally used for the initialization purpose. Whereas ngOnInit() method is specific to Angular, especially used to define Angular bindings. Even though constructor() getting called first, it is preferred to move all of your Angular bindings to ngOnInit() method.
-In order to use ngOnInit(), you need to implement OnInit interface as below,
+TypeScript classes has a default method called `constructor()` which is normally used for the initialization purpose. Whereas `ngOnInit()` method is specific to Angular, especially used to define Angular bindings. Even though `constructor()` getting called first, it is preferred to use `ngOnInit()` method for Angular bindings.
+
+Example:
 ```typescript
 export class App implements OnInit{
     constructor(){
