@@ -581,7 +581,7 @@ describe('AppComponent', () => {
 ```
 
 **Example: Login Testing**  
-login.component.ts
+*login.component.ts*
 ```typescript
 import { Component, OnInit, EventEmitter,Input, Output, ViewEncapsulation } from '@angular/core';
 
@@ -615,7 +615,7 @@ export class User {
 }
 ```
 
-login.component.spec.ts
+*login.component.spec.ts*
 ```typescript
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {Component, DebugElement} from "@angular/core";
@@ -682,7 +682,7 @@ describe('LoginComponent', () => {
 });
 ```
 
-login.component.html
+*login.component.html*
 ```html
 <form>
   <label>Email</label>
