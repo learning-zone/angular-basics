@@ -741,11 +741,11 @@ ng add @angular/pwa --project *project-name*
 ```
 The above command completes the following actions:
 
-* Adds the @angular/service-worker package to your project.
+* Adds the *@angular/service-worker* package to your project.
 * Enables service worker build support in the CLI.
 * Imports and registers the service worker in the app module.
-* Updates the index.html file:
-    * Includes a link to add the manifest.json file.
+* Updates the *index.html* file:
+    * Includes a link to add the *manifest.json* file.
     * Adds meta tags for theme-color.
 * Installs icon files to support the installed Progressive Web App (PWA).
 * Creates the service worker configuration file called ngsw-config.json, which specifies the caching behaviors and other settings.
