@@ -897,12 +897,12 @@ NgFor is a structural directive, meaning that it changes the structure of the DO
 @Component({
   selector: 'ngfor-app',
   template: `
- <ul>
-  <li *ngFor="let person of people">
-    {{ person.name }}
-  </li>
- </ul>
- `
+      <ul>
+       <li *ngFor="let person of people">
+         {{ person.name }}
+       </li>
+      </ul>
+  `
 })
 class NgForAppComponent {
   people: any[] = [
