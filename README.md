@@ -2988,7 +2988,7 @@ It provides a way to intercept HTTP requests and responses to transform or handl
 This is because we might want to retry a request if it does not succeed at first. And immutability ensures that the interceptor chain can re-process the same request multiple times.
 
 **Create an Interceptor**:  
-   
+
 Let’s say we want to send 3 headers : Content-Type, Accept and Accept-Language. To set headers for every request in Angular, we will create a class that implements HttpInterceptor.
 
 ```typescript
@@ -4871,6 +4871,7 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 #### Q. What is static injector error in angular?
 #### Q. How to create logger service in angular?
 #### Q. What is the difference between Stateless and Stateful Component?
+#### Q. Why EventEmitter is needed for @input and @Output decorator? 
 *TODO*
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
