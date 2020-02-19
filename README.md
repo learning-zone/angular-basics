@@ -748,7 +748,7 @@ The above command completes the following actions:
     * Includes a link to add the *manifest.json* file.
     * Adds meta tags for theme-color.
 * Installs icon files to support the installed Progressive Web App (PWA).
-* Creates the service worker configuration file called ngsw-config.json, which specifies the caching behaviors and other settings.
+* Creates the service worker configuration file called *ngsw-config.json*, which specifies the caching behaviors and other settings.
 
 #### Q. How to set time for caching in service-worker?
 **ngsw-config.json**
