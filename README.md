@@ -852,7 +852,7 @@ export class PopcornService {
   }
 }
 ```
-AppComponent.ts
+*AppComponent.ts*
 ```typescript
 import { Component } from '@angular/core';
 import { PopcornService } from './popcorn.service';
