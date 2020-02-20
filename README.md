@@ -4872,8 +4872,18 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 #### Q. How to create logger service in angular?
 #### Q. What is the difference between Stateless and Stateful Component?
 #### Q. Why EventEmitter is needed for @input and @Output decorator?
-#### Q. Why yarn is better than npm? 
-*TODO*
+#### Q. Why yarn is better than npm?
+Yarn has a few differences from npm. First of all, Yarn caches all installed packages. Yarn is installing the packages simultaneously, and that is why Yarn is faster than NPM. They both download packages from npm repository. Yarn generates yarn.lock to lock down the versions of package’s dependencies by default. On the contrary, npm for this purpose offers shrinkwrap CLI command.
+
+Yarn is an alternative npm client with some distinctive aspects, including:
+
+* **multiple registries**: it reads and installs packages from both npmjs.com and Bower, thus ensuring a CI business continuity for developers if one of them goes down.
+* **selective version resolutions**: it lets the developer define custom package versions inside the various dependencies through the resolutions field in the package.json file.
+* **automatic retries**: Network requests are retried upon failure, reducing “red builds” due to single request fails or temporary network issues.
+* **parallel downloads**: Yarn uses parallel workers to download packages, thus maximizing resource utilization and reducing the time builds take to run.
+* **caching**: Yarn caches every package it downloads, so it never needs to download it again.
+* **lock file**: A dedicated lock file ( yarn.lock ) that keeps dependencies locked to specific versions, similar to Ruby’s Gemfile.lock.
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
