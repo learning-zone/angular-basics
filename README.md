@@ -4872,6 +4872,10 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 #### Q. How to create logger service in angular?
 #### Q. What is the difference between Stateless and Stateful Component?
 #### Q. Why EventEmitter is needed for @Output decorator?
+The `@Input` links a property of a component (which is generally the child component) with a value that was given by another component (the parent). On the other side, the `@Output` decorator is used to link a property of a child component and emit it through the event emitter. So the parent component can call the property and get the data emitted from it.
+
+To summarise: `@Input` is used to pass data from parent to child and the opposite, `@Output`, can be used when you want to pass data from the child to the parent (which can also be done with observables or simple functions).
+
 #### Q. Why yarn is better than npm?
 Yarn has a few differences from npm. First of all, Yarn **caches** all installed packages. Yarn is installing the packages simultaneously, and that is why Yarn is faster than NPM. They both download packages from npm repository. Yarn generates `yarn.lock` to lock down the versions of package’s dependencies by default. On the contrary, npm for this purpose offers shrinkwrap CLI command.
 
