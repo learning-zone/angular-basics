@@ -4873,7 +4873,7 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 #### Q. What is the difference between Stateless and Stateful Component?
 #### Q. Why EventEmitter is needed for @input and @Output decorator?
 #### Q. Why yarn is better than npm?
-Yarn has a few differences from npm. First of all, Yarn caches all installed packages. Yarn is installing the packages simultaneously, and that is why Yarn is faster than NPM. They both download packages from npm repository. Yarn generates yarn.lock to lock down the versions of package’s dependencies by default. On the contrary, npm for this purpose offers shrinkwrap CLI command.
+Yarn has a few differences from npm. First of all, Yarn **caches** all installed packages. Yarn is installing the packages simultaneously, and that is why Yarn is faster than NPM. They both download packages from npm repository. Yarn generates `yarn.lock` to lock down the versions of package’s dependencies by default. On the contrary, npm for this purpose offers shrinkwrap CLI command.
 
 Yarn is an alternative npm client with some distinctive aspects, including:
 
