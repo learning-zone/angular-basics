@@ -4866,9 +4866,9 @@ There are three main reasons to create a Universal version of your app.
 AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the input automatically, eventually returning the emitted value(s). It is stateful because the pipe maintains a subscription to the input and its returned values depend on that subscription.
 
 #### Q. What is index property in ngFor directive?
-The index property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template. For example, you can capture the index in a variable named indexVar and displays it with the todo's name using ngFor directive as below.
+The `index` property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template. For example, you can capture the index in a variable named indexVar and displays it with the employee's name using ngFor directive as below.
 ```html
-<div *ngFor="let todo of todos; let i=index">{{i + 1}} - {{todo.name}}</div>
+<div *ngFor="let employee of employees; let i=index">{{i + 1}} - {{employee.name}}</div>
 ```
 
 #### Q. How to use authguard in angular 7?
