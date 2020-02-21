@@ -4871,6 +4871,20 @@ The `index` property of the NgFor directive is used to return the zero-based ind
 <div *ngFor="let employee of employees; let i=index">{{i + 1}} - {{employee.name}}</div>
 ```
 
+#### Q. How do you provide build configuration for multiple locales?
+You can provide build configuration such as translation file path, name, format and application url in configuration settings of `Angular.json` file. For example, the German version of your application configured the build as follows,
+```json
+"configurations": {
+  "de": {
+    "aot": true,
+    "outputPath": "dist/my-project-de/",
+    "baseHref": "/fr/",
+    "i18nFile": "src/locale/messages.de.xlf",
+    "i18nFormat": "xlf",
+    "i18nLocale": "de",
+    "i18nMissingTranslation": "error",
+  }
+```
 #### Q. How to use authguard in angular 7?
 #### Q. Write a program to perform column sorting using angular-material?
 #### Q. What is circular dependency error in angular?
