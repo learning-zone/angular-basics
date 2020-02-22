@@ -20,6 +20,7 @@
     "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~8.0.3",
     "@angular/platform-browser-dynamic": "~8.0.3",
+    "@angular/platform-server": "~8.0.3",
     "@angular/pwa": "^0.900.3",
     "@angular/router": "~8.0.3",
     "@angular/service-worker": "~8.0.3",
