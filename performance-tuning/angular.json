@@ -152,5 +152,8 @@
       }
     }
   },
-  "defaultProject": "performance-tuning"
+  "defaultProject": "performance-tuning",
+  "cli": {
+    "analytics": "acc87f70-3787-4b02-9988-4d90776ed88d"
+  }
 }

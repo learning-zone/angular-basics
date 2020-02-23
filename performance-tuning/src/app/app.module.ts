@@ -16,8 +16,9 @@ import { DatepickerComponent } from './components/pages/datepicker/datepicker.co
 import { FormComponent } from './components/pages/form/form.component';
 
 // Angular Material Components
-import { MatCheckboxModule, MatNativeDateModule} from '@angular/material';
-import { MatButtonModule} from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule} from '@angular/material/badge';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatInputModule} from '@angular/material/input';
