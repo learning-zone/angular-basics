@@ -38,7 +38,7 @@
     "i18n": "^0.8.5",
     "ng-snotify": "^4.3.1",
     "ngx-webstorage": "^5.0.0",
-    "rxjs": "~6.4.0",
+    "rxjs": "~6.5.4",
     "tslib": "^1.9.0",
     "web-animations-js": "^2.3.2",
     "zone.js": "~0.9.1"
