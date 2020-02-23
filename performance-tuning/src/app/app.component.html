@@ -1,7 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+    </button>
+    <h1>Performance Tuning</h1>
+    <span class="menu-spacer"></span>
+    <div class="header-toolbar">
+      <!-- Header Toolbar Links Area -->
+      <button mat-button [routerLink]="'/components/autocomplete'" class="sidenav-link">Components</button>
+      <button mat-button [routerLink]="'/cdk/drag-drop'" class="sidenav-link">CDK</button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" opened="true" disableClose="true">
+    <!-- Sidebar Navigation Links Area -->
+    <app-sidebar></app-sidebar>    
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>
