@@ -26,6 +26,7 @@
     "@angular/router": "~8.0.3",
     "@angular/service-worker": "~8.0.3",
     "@ctrl/ngx-codemirror": "^3.0.0",
+    "@nguniversal/aspnetcore-engine": "^9.0.1",
     "@nguniversal/express-engine": "^8.2.6",
     "@ngx-translate/core": "^12.1.1",
     "@types/lodash": "^4.14.149",
