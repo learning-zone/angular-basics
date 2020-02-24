@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/pages/home/home.component';
 import { AutocompleteComponent } from '../app/components/pages/autocomplete/autocomplete.component';
 import { CheckboxComponent } from '../app/components/pages/checkbox/checkbox.component';
 import { DatepickerComponent } from '../app/components/pages/datepicker/datepicker.component';
@@ -26,10 +27,12 @@ import { PortalComponent } from '../app/cdk/pages/portal/portal.component';
 import { ScrollingComponent } from '../app/cdk/pages/scrolling/scrolling.component';
 import { TextFieldComponent } from '../app/cdk/pages/text-field/text-field.component';
 
+
 const routes: Routes = [
 
-  { path: '', redirectTo: 'components/autocomplete', pathMatch: 'full', data: {title: 'Autocomplete | Angular Material'}},
+  { path: '', redirectTo: 'components/home', pathMatch: 'full', data: {title: 'Home | Angular Material'}},
 
+  { path: 'components/home', component: HomeComponent, data: {title: 'Home | Angular Material'}},
   { path: 'components/autocomplete', component: AutocompleteComponent, data: {title: 'Autocomplete | Angular Material'}},
   { path: 'components/checkbox', component: CheckboxComponent, data: {title: 'Checkbox | Angular Material'}},
   { path: 'components/datepicker', component: DatepickerComponent, data: {title: 'Datepicker | Angular Material'}},

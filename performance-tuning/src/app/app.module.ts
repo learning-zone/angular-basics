@@ -63,6 +63,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { TextFieldModule } from '@angular/cdk/text-field';
 
 // Angular Custom Components
+import { HomeComponent } from './components/pages/home/home.component';
 import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
 import { CardComponent } from './components/pages/card/card.component';
@@ -96,10 +97,12 @@ import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.compo
 import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
 import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
+    HomeComponent,
     AutocompleteComponent,
     CheckboxComponent,
     DatepickerComponent,
