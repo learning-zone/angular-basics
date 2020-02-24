@@ -28,8 +28,7 @@ import { TextFieldComponent } from '../app/cdk/pages/text-field/text-field.compo
 
 const routes: Routes = [
 
-  { path: '', redirectTo: '/', pathMatch: 'full', data: {title: 'Home | Angular Material'}},
-  { path: 'home', redirectTo: '/', pathMatch: 'full', data: {title: 'Home | Angular Material'}},
+  { path: '', redirectTo: 'components/autocomplete', pathMatch: 'full', data: {title: 'Autocomplete | Angular Material'}},
 
   { path: 'components/autocomplete', component: AutocompleteComponent, data: {title: 'Autocomplete | Angular Material'}},
   { path: 'components/checkbox', component: CheckboxComponent, data: {title: 'Checkbox | Angular Material'}},
