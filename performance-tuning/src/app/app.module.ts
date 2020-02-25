@@ -10,10 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { AutocompleteComponent } from './components/pages/autocomplete/autocomplete.component';
-import { CheckboxComponent } from './components/pages/checkbox/checkbox.component';
-import { DatepickerComponent } from './components/pages/datepicker/datepicker.component';
-import { FormComponent } from './components/pages/form/form.component';
 
 // Angular Material Components
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -63,24 +59,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { TextFieldModule } from '@angular/cdk/text-field';
 
 // Angular Custom Components
-import { HomeComponent } from './components/pages/home/home.component';
 import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
-import { CardComponent } from './components/pages/card/card.component';
-import { ListComponent } from './components/pages/list/list.component';
-import { TabsComponent } from './components/pages/tabs/tabs.component';
-import { ButtonComponent } from './components/pages/button/button.component';
-import { BadgeComponent } from './components/pages/badge/badge.component';
-import { ChipsComponent } from './components/pages/chips/chips.component';
-import { ProgressSpinnerComponent } from './components/pages/progress-spinner/progress-spinner.component';
-import { ProgressBarComponent } from './components/pages/progress-bar/progress-bar.component';
-import { BottomSheetComponent } from './components/pages/bottom-sheet/bottom-sheet.component';
-import { DialogComponent } from './components/pages/dialog/dialog.component';
-import { SnackbarComponent } from './components/pages/snackbar/snackbar.component';
-import { TooltipComponent } from './components/pages/tooltip/tooltip.component';
-import { BottomSheetDialogComponent } from './components/pages/bottom-sheet-dialog/bottom-sheet-dialog.component';
-import { DialogExampleComponent } from './components/pages/dialog-example/dialog-example.component';
-import { SnackbarExampleComponent } from './components/pages/snackbar-example/snackbar-example.component';
+
 import { DragDropComponent } from './cdk/pages/drag-drop/drag-drop.component';
 import { PlatformComponent } from './cdk/pages/platform/platform.component';
 import { PortalComponent } from './cdk/pages/portal/portal.component';
@@ -96,34 +77,15 @@ import { HorizontalSortingComponent } from './cdk/pages/drag-drop/horizontal-sor
 import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.component';
 import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
 import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
+import { HomeComponent } from './components/pages/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HomeComponent,
-    AutocompleteComponent,
-    CheckboxComponent,
-    DatepickerComponent,
-    FormComponent,
     PaginatorComponent,
     SortHeaderComponent,
-    CardComponent,
-    ListComponent,
-    TabsComponent,
-    ButtonComponent,
-    BadgeComponent,
-    ChipsComponent,
-    ProgressSpinnerComponent,
-    ProgressBarComponent,
-    BottomSheetComponent,
-    DialogComponent,
-    SnackbarComponent,
-    TooltipComponent,
-    BottomSheetDialogComponent,
-    DialogExampleComponent,
-    SnackbarExampleComponent,
     DragDropComponent,
     PlatformComponent,
     PortalComponent,
@@ -138,7 +100,8 @@ import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-al
     HorizontalSortingComponent,
     BoundaryComponent,
     PositionLockingComponent,
-    WithAlternateRootElementComponent
+    WithAlternateRootElementComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
