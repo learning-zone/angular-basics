@@ -9,8 +9,6 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-
 // Angular Material Components
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -59,9 +57,10 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { TextFieldModule } from '@angular/cdk/text-field';
 
 // Angular Custom Components
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { HomeComponent } from './components/pages/home/home.component';
 import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
-
 import { DragDropComponent } from './cdk/pages/drag-drop/drag-drop.component';
 import { PlatformComponent } from './cdk/pages/platform/platform.component';
 import { PortalComponent } from './cdk/pages/portal/portal.component';
@@ -77,7 +76,7 @@ import { HorizontalSortingComponent } from './cdk/pages/drag-drop/horizontal-sor
 import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.component';
 import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
 import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
-import { HomeComponent } from './components/pages/home/home.component';
+
 
 
 @NgModule({
