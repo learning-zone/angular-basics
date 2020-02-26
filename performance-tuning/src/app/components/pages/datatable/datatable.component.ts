@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatatableComponent implements OnInit {
 
-  title = 'angulardatatables';
+  title = 'Example of Angular 8 DataTable';
   dtOptions: DataTables.Settings = {};
   public data = [
     {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
