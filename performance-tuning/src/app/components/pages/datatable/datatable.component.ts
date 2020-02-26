@@ -1,4 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+
+class Person {
+  id: number;
+  firstName: string;
+  lastName: string;
+}
+
+class DataTablesResponse {
+  data: any[];
+  draw: number;
+  recordsFiltered: number;
+  recordsTotal: number;
+}
 
 @Component({
   selector: 'app-datatable',
@@ -7,20 +21,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatatableComponent implements OnInit {
 
-  title = 'Example of Angular 8 DataTable';
   dtOptions: DataTables.Settings = {};
-  public data = [
-    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
-    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
-    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
-    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
-  ];
+  persons: Person[];
 
-  ngOnInit() {
+  constructor(private http: HttpClient) {}
+
+  ngOnInit(): void {
+    const _this = this;
+
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 5,
-      processing: true
+      pageLength: 10,
+      serverSide: true,
+      processing: true,
+      ajax: (dataTablesParameters: any, callback) => {
+        _this.http
+          .post<DataTablesResponse>(
+            'https://angular-datatables-demo-server.herokuapp.com/',
+            dataTablesParameters, {}
+          ).subscribe(resp => {
+            _this.persons = resp.data;
+
+            callback({
+              recordsTotal: resp.recordsTotal,
+              recordsFiltered: resp.recordsFiltered,
+              data: []
+            });
+          });
+      },
+      columns: [{ data: 'id' }, { data: 'firstName' }, { data: 'lastName' }]
     };
   }
 

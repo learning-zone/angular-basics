@@ -1,17 +1,22 @@
 <h3>Data Tables <hr/></h3>
-<table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Website</th>
+<table datatable [dtOptions]="dtOptions" class="row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>First name</th>
+      <th>Last name</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="persons?.length != 0">
+      <tr *ngFor="let person of persons">
+          <td>{{ person.id }}</td>
+          <td>{{ person.firstName }}</td>
+          <td>{{ person.lastName }}</td>
       </tr>
-    </thead>
-    <tbody>
-     <tr *ngFor="let group of data">
-           <td>{{group.name}}</td>
-           <td>{{group.email}}</td>
-           <td>{{group.website}}</td>
-       </tr>
-    </tbody>
-  </table>
+  </tbody>
+  <tbody *ngIf="persons?.length == 0">
+    <tr>
+      <td colspan="3" class="no-data-available">No data!</td>
+    </tr>
+  <tbody>
+</table>
