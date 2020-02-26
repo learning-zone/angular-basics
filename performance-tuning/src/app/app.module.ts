@@ -59,7 +59,6 @@ import { TextFieldModule } from '@angular/cdk/text-field';
 // Angular Custom Components
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { PaginatorComponent } from './components/pages/paginator/paginator.component';
 import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
 import { DragDropComponent } from './cdk/pages/drag-drop/drag-drop.component';
 import { PlatformComponent } from './cdk/pages/platform/platform.component';
@@ -76,6 +75,7 @@ import { HorizontalSortingComponent } from './cdk/pages/drag-drop/horizontal-sor
 import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.component';
 import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
 import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
+import { DatatableComponent } from './components/pages/datatable/datatable.component';
 
 
 
@@ -83,7 +83,6 @@ import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-al
   declarations: [
     AppComponent,
     SidebarComponent,
-    PaginatorComponent,
     SortHeaderComponent,
     DragDropComponent,
     PlatformComponent,
@@ -100,7 +99,8 @@ import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-al
     BoundaryComponent,
     PositionLockingComponent,
     WithAlternateRootElementComponent,
-    HomeComponent
+    HomeComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
