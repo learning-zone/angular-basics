@@ -8,6 +8,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataTablesModule } from 'angular-datatables';
 
 // Angular Material Components
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -153,6 +154,7 @@ import { DatatableComponent } from './components/pages/datatable/datatable.compo
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    DataTablesModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [Title,

@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatatableComponent implements OnInit {
 
-  constructor() { }
+  title = 'angulardatatables';
+  dtOptions: DataTables.Settings = {};
+  public data = [
+    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
+    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
+    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
+    {name: 'therichpost', email: 'therichpost@gmail.com', website: 'therichpost.com'},
+  ];
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 5,
+      processing: true
+    };
   }
 
 }
