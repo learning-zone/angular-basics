@@ -7,6 +7,7 @@
 * *[TypeScript Interview Questions and Answers](typescript-questions.md)*
 * *[Angular Unit Testing Interview Questions and Answers](unit-testing-questions.md)*
 
+<br/>
 
 #### Q. Frequently used Angular commands
 
