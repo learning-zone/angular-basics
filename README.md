@@ -8,7 +8,7 @@
 * *[Angular Unit Testing Interview Questions and Answers](unit-testing-questions.md)*
 
 
-#### Q. Frequently used angular commands
+#### Q. Frequently used Angular commands
 
 |Commands                             |Description                                                                  |
 |-------------------------------------|-----------------------------------------------------------------------------|
