@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'components/home', pathMatch: 'full', data: {title: 'Home | Angular Material'}},
 
   { path: 'components/home', component: HomeComponent, data: {title: 'Home | Angular Material'}},
-  { path: 'components/sort-header', component: SortHeaderComponent, data: {title: 'SortHeader | Angular Material'}},
+  { path: 'components/material-datatable', component: SortHeaderComponent, data: {title: 'Material Datatable | Angular Material'}},
   { path: 'components/datatable', component: DatatableComponent, data: {title: 'DataTables | Angular Material'}},
 
   { path: 'cdk/drag-drop', component: DragDropComponent, data: {title: 'DragDrop | Angular Material'}},
