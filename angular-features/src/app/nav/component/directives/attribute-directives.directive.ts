@@ -10,7 +10,7 @@ export class AttributeDirectivesDirective {
   @Input('appAttributeDirectives') highlightColor: string;
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.highlight(this.highlightColor || 'red');
+    this.highlight(this.highlightColor || 'skyblue');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
