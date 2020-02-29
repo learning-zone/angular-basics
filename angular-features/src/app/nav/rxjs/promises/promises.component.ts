@@ -38,30 +38,30 @@ export class PromisesComponent implements OnInit {
     this.getConditionalDataUsingAsync();
   }
 
-  resolveAfter2Seconds(x: number) {
+  resolveAfterHalfSeconds(x: number) {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(x);
-      }, 2000);
+      }, 500);
     });
   }
 
   getValueWithPromise() {
-    this.resolveAfter2Seconds(20).then(value => {
+    this.resolveAfterHalfSeconds(20).then(value => {
       console.log(`promise result: ${value}`);
     });
     console.log('I will not wait until promise is resolved');
   }
 
   async getValueWithAsync() {
-    const value = <number>await this.resolveAfter2Seconds(20);
+    const value = <number>await this.resolveAfterHalfSeconds(20);
     console.log(`async result: ${value}`);
   }
 
   addWithPromise() {
-    this.resolveAfter2Seconds(20).then(data1 => {
+    this.resolveAfterHalfSeconds(20).then(data1 => {
       const result1 = <number>data1;
-      this.resolveAfter2Seconds(30).then(data2 => {
+      this.resolveAfterHalfSeconds(30).then(data2 => {
         const result2 = <number>data2;
         this.additionPromiseResult = result1 + result2;
         console.log(`promise result: ${this.additionPromiseResult}`);
@@ -70,8 +70,8 @@ export class PromisesComponent implements OnInit {
   }
 
   async addWithAsync() {
-    const result1 = <number>await this.resolveAfter2Seconds(20);
-    const result2 = <number>await this.resolveAfter2Seconds(30);
+    const result1 = <number>await this.resolveAfterHalfSeconds(20);
+    const result2 = <number>await this.resolveAfterHalfSeconds(30);
     this.additionAsyncResult = result1 + result2;
     console.log(`async result: ${this.additionAsyncResult}`);
   }
