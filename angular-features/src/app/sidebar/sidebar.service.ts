@@ -28,6 +28,10 @@ export class SidebarService {
         {
           title: 'Pipes',
           path: 'pipes'
+        },
+        {
+          title: 'Radio',
+          path: 'radio'
         }
       ]
     },

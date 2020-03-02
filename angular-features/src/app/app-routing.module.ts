@@ -26,6 +26,7 @@ import { DashboardComponent } from './nav/routing/lazy-loading/dashboard/dashboa
 import { HomeComponent } from './nav/routing/lazy-loading/home/home.component';
 import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.component';
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
+import { RadioComponent } from './nav/component/radio/radio.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'directives', component: DirectivesComponent },
   { path: 'lifecycles', component: LifecyclesComponent },
   { path: 'pipes', component: PipesComponent },
+  { path: 'radio', component: RadioComponent },
 
   { path: 'template-driven-forms', component: TemplateDrivenComponent },
   { path: 'reative-forms', component: ReativeFormsComponent },
