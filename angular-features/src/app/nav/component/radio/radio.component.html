@@ -1,1 +1,20 @@
-<p>radio works!</p>
+<h5>Radio Button<hr /></h5>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form name="form" novalidate>
+                <div class="form-group">
+                    <span class="yes">
+                        <input type="radio" name="options"  [(ngModel)]="options"  [value]="true" [checked]="options"/> Yes
+                    </span>
+                    <span class="no">
+                        <input type="radio" name="options" [(ngModel)]="options"  [value]="false" [checked]="!options"/> No
+                    </span>
+                </div>
+            </form>
+
+            <h2 *ngIf="options">Supply</h2>
+            <h2 *ngIf="!options">Demand</h2>
+        </div>
+    </div>
+</div>
