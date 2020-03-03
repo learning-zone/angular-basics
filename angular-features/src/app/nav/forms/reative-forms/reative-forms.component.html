@@ -4,18 +4,40 @@
           <div class="col-md-12">
             <form [formGroup]="userForm" (ngSubmit)="onSubmit()"  >
               <div class="form-group">
-                <label for="First name">First Name</label>
-                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && formValues.firstName.errors }">
-                <div *ngIf="submitted && formValues.firstName.errors" class="invalid-feedback">
-                    <div *ngIf="formValues.firstName.errors.required">First Name is required</div>
+                <label for="Name">Name</label>
+                <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && formValues.name.errors }">
+                <div *ngIf="submitted && formValues.name.errors" class="invalid-feedback">
+                    <div *ngIf="formValues.name.errors.required">Name is required</div>
                 </div>
               </div>
               <div class="form-group">
-                <label for="Last Name">Last Name</label>
-                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && formValues.lastName.errors }">
-                <div *ngIf="submitted && formValues.lastName.errors" class="invalid-feedback">
-                    <div *ngIf="formValues.lastName.errors.required">Last Name is required</div>
+                <label for="Address">Address</label>
+                <textarea  formControlName="address" class="form-control" [ngClass]="{ 'is-invalid': submitted && formValues.address.errors }" rows="5"></textarea>
+                <div *ngIf="submitted && formValues.address.errors" class="invalid-feedback">
+                    <div *ngIf="formValues.address.errors.required">Address is required</div>
                 </div>
+              </div>
+              <div class="form-group">
+                <label for="Select Subjects">Select Subjects</label><br/>
+                <label class="checkbox-inline-1"><input type="checkbox" value="Physics">Physics</label>
+                <label class="checkbox-inline-2"><input type="checkbox" value="Chemistry">Chemistry</label>
+                <label class="checkbox-inline-3"><input type="checkbox" value="Mathematics">Mathematics</label>
+              </div>
+              <div class="form-group">
+                <label for="Select Gender">Select Gender</label><br/>
+                <input type="radio" name="gender" />
+                <label class="radio-inline" for="Male">Male</label><br> 
+                <input type="radio" name="gender" /> 
+                <label class="radio-inline" for="female">Female</label> 
+              </div>
+              <div class="form-group">
+                <label for="cars">Choose a car: </label>
+                <select id="cars">
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="audi">Audi</option>
+                </select>
               </div>
               <div class="form-group">
                 <label for="E-mail">Email</label>
@@ -25,8 +47,11 @@
                     <div *ngIf="formValues.email.errors.email">Email must be a valid email address</div>
                 </div>
               </div>
+              
               <button class="btn btn-primary" type="submit">Submit</button>
             </form>    
           </div>
       </div>
+      <br/><br/>
+      <div id="result" ></div>
 </div>

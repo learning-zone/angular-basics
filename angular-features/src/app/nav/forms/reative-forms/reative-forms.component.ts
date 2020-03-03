@@ -13,8 +13,8 @@ export class ReativeFormsComponent implements OnInit {
 
   ngOnInit() {
     this.userForm = this.formBuilder.group({
-      firstName: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      address: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]]
     });
   }
@@ -27,7 +27,6 @@ export class ReativeFormsComponent implements OnInit {
      if (this.userForm.invalid) {
        return;
      }
-
-     alert('SUCCESS !!! \n\n' + JSON.stringify(this.userForm.value));
+     document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(this.userForm.value) + '</pre>';
   }
 }
