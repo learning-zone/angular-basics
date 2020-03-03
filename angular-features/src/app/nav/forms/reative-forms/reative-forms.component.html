@@ -18,28 +18,6 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="Select Subjects">Select Subjects</label><br/>
-                <label class="checkbox-inline-1"><input type="checkbox" value="Physics">Physics</label>
-                <label class="checkbox-inline-2"><input type="checkbox" value="Chemistry">Chemistry</label>
-                <label class="checkbox-inline-3"><input type="checkbox" value="Mathematics">Mathematics</label>
-              </div>
-              <div class="form-group">
-                <label for="Select Gender">Select Gender</label><br/>
-                <input type="radio" name="gender" />
-                <label class="radio-inline" for="Male">Male</label><br> 
-                <input type="radio" name="gender" /> 
-                <label class="radio-inline" for="female">Female</label> 
-              </div>
-              <div class="form-group">
-                <label for="cars">Choose a car: </label>
-                <select id="cars">
-                  <option value="volvo">Volvo</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
-                </select>
-              </div>
-              <div class="form-group">
                 <label for="E-mail">Email</label>
                 <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && formValues.email.errors }">
                 <div *ngIf="submitted && formValues.email.errors" class="invalid-feedback">
