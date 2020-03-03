@@ -1,1 +1,20 @@
-<p>checkbox works!</p>
+<h5>Checkbox Validation<hr /></h5>
+<div class="container">
+<form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+   
+    <div *ngFor="let data of Data; let i=index" class="form-group">
+      <label>
+        <input type="checkbox" [value]="data.value" (change)="onCheckboxChange($event)" />
+        {{data.name}}
+      </label>
+    </div>
+  
+    <p class="error" *ngIf="this.form.controls['checkArray'].errors?.required">
+      Checkbox is required, select atleast one value.
+    </p>
+  
+    <input type="submit" class="btn btn-primary" value="Submit">
+  </form>
+<br/><br/>
+<div id="result" ></div>
+</div>
