@@ -32,6 +32,10 @@ export class SidebarService {
         {
           title: 'Radio',
           path: 'radio'
+        },
+        {
+          title: 'CheckBox',
+          path: 'checkbox'
         }
       ]
     },
