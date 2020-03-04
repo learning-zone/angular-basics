@@ -752,7 +752,7 @@ npm install chai mocha ts-node @types/chai @types/mocha --save-dev
 ```
 **Mocha** is a JavaScript test framework running on Node.js and in the browser. Mocha allows asynchronous testing, test coverage reports, and use of any assertion library. Mocha gives us a Suite for describing, running and building tests but it does not give us a way to check values.
 
-**Chai** is a BDD / TDD assertion library for NodeJS and the browser that can be delightfully paired with any javascript testing framework. It used to test values.
+**Chai** is a BDD / TDD assertion library for NodeJS and the browser that can be delightfully paired with any javascript testing framework. 
 
 Basically, mocha is a framework and chai is a library. Let's go a little deeper in mocha. Mocha uses hooks to organize its structure. 
 
