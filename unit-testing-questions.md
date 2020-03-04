@@ -714,7 +714,7 @@ The CLI can run unit tests and create code coverage reports. Code coverage repor
 
 To generate a coverage report run the following command in the root of your project.
 ```bash
-ng test --no-watch --code-coverage
+ng test --code-coverage
 ```
 When the tests are complete, the command creates a new `/coverage` folder in the project. Open the `index.html` file to see a report with your source code and code coverage values.
 
