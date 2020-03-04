@@ -1,7 +1,7 @@
 ## Angular Unit Testing Interview Questions and Answers
 
 #### Q. How do you mock a service to inject in a unit test?
-**Resolving via TestBed**  
+**a.) Resolving via TestBed**  
 The `TestBed` acts as a dummy Angular Module and we can configure it like one including with a set of providers like so:
 ```typescript
 TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ testBedService = TestBed.get(AuthService);
 ```
 If most of our test specs need the same dependency mocked the same way we can resolve it once in the `beforeEach` function and mock it it there.
 
-**Resolving via the inject function**  
+**b.) Resolving via the inject function**  
 ```typescript
 it('Service injected via inject(...) and TestBed.get(...) should be the same instance',
     inject([AuthService], (injectService: AuthService) => {
@@ -36,7 +36,7 @@ Using the `inject` function:
 * Makes it clear what dependencies each spec function uses.
 * If each test spec requires different mocks and spys this is a better solution that resolving it once per test suite.
 
-**Overriding the components providers**  
+**c.) Overriding the components providers**  
 Before we create a component via the `TestBed` we can override it’s providers. Lets imagine we have a mock `AuthService` like so:
 ```typescript
 class MockAuthService extends AuthService {
@@ -54,7 +54,7 @@ TestBed.overrideComponent(
 ```
 The syntax is pretty specific, it’s called a `MetaDataOverride` and it can have the properties `set`, `add` and `remove`. We use `set` to completely replace the providers array with the values we’ve set.
 
-**Resolving via the component injector**  
+**d.) Resolving via the component injector**  
 When the component is created since it has it’s own injector it will resolve the AuthService itself and not forward the request to it’s parent TestBed injector.
 
 If we wanted to get the same instance of dependency that was passed to the component constructor we need to resolve using the component injector, we can do that through the component fixture like so:
