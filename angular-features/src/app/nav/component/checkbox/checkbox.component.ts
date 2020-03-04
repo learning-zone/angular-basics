@@ -10,7 +10,7 @@ import { ValueTransformer } from '@angular/compiler/src/util';
 export class CheckboxComponent {
   form: FormGroup;
 
-  Data: Array<any> = [
+  fruits: Array<any> = [
     { name: 'Pear', value: 'pear' },
     { name: 'Plum', value: 'plum' },
     { name: 'Kiwi', value: 'kiwi' },
@@ -44,5 +44,4 @@ export class CheckboxComponent {
   submitForm() {
     document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(this.form.value) + '</pre>';
   }
-
 }

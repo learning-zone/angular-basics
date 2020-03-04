@@ -2,10 +2,10 @@
 <div class="container">
 <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
    
-    <div *ngFor="let data of Data; let i=index" class="form-group">
+    <div *ngFor="let fruit of fruits" class="form-group">
       <label>
-        <input type="checkbox" [value]="data.value" (change)="onCheckboxChange($event)" />
-        {{data.name}}
+        <input type="checkbox" [value]="fruit.value" (change)="onCheckboxChange($event)" />
+        {{fruit.name}}
       </label>
     </div>
   
