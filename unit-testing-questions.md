@@ -816,7 +816,7 @@ describe('Springfield', () => {
 ```
 **Scenario 5: Run once before each test case**  
 
-On the contrary of `before()`, **beforeEach()** is executed each time for each it() [or describe()] that we have. If we have one it(), it will be executed just once. if we have two it() it will be executed twice. If we have three it() it will be executed three times and so go on.
+On the contrary of `before()`, **beforeEach()** is executed each time for each `it()` [or `describe()`] that we have. If we have one `it()`, it will be executed just once. if we have two `it()` it will be executed twice and so go on.
 ```typescript
 describe('Springfield', () => {
 	beforeEach(() => {
@@ -832,7 +832,7 @@ describe('Springfield', () => {
 ```
 **Scenario 6: Two tests in a big test**  
 
-In this last scenario, mocha will nest the describe() and execute it().
+In this last scenario, mocha will nest the `describe()` and execute `it()`.
 ```typescript
 describe('Homer Simpson', () => {
 	describe('Bart Simpson', () => {
@@ -847,3 +847,10 @@ describe('Homer Simpson', () => {
 	})
 })
 ```
+Run
+```bash
+$ yarn mocha
+```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
