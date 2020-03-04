@@ -750,7 +750,100 @@ The thresholds property causes the tool to enforce a minimum of 80% code coverag
 ```bash
 npm install chai mocha ts-node @types/chai @types/mocha --save-dev
 ```
-**1.) Mocha**: Mocha gives us a Suite for describing, running and building tests but it does not give us a way to check values.
+**Mocha** is a JavaScript test framework running on Node.js and in the browser. Mocha allows asynchronous testing, test coverage reports, and use of any assertion library. Mocha gives us a Suite for describing, running and building tests but it does not give us a way to check values.
 
+**Chai** is a BDD / TDD assertion library for NodeJS and the browser that can be delightfully paired with any javascript testing framework. It used to test values.
 
-**2.) Chai**: It used to test values.
+Basically, mocha is a framework and chai is a library. Let's go a little deeper in mocha. Mocha uses hooks to organize its structure. 
+
+* **describe()**: It's used to group, which you can nest as deep;
+* **it()**: It's the test case;
+* **before()**: It's a hook to run before the first it() or describe();
+* **beforeEach()**: It’s a hook to run before each it() or describe();
+* **after()**: It’s a hook to run after it() or describe();
+* **afterEach()**: It’s a hook to run after each it() or describe();
+
+**Scenario 1: One test case**   
+
+In this case, we can just call a solitary `it()`, mocha will run this only test.
+```typescript
+it('Homer should drink beer', () => {
+  /** Test cases */
+})
+```
+**Scenario 2: A nested test case**  
+
+In this case, we can nest some `describes()` hooks and finally call `it()` to execute the test.
+```typescript
+describe('Abraham Simpson', () => {
+  describe('Homer Simpson', () => {
+    describe('Bart Simpson', () => {
+      it('Bart should skate', () => { 
+        /** Test cases */ 
+      })
+    })
+  })
+})
+```
+**Scenario 3: Two test cases in one test**  
+
+Here, inside the `describe()` we have two `it()` that will execute the tests.
+```typescript
+describe('Homer Simpson', () => {
+  it('Bart should skate', () => { 
+    /** Test cases for Bart */ 
+  })
+  it('Lisa should play sax', () => { 
+    /** Test cases for Lisa */ 
+  })
+})
+```
+**Scenario 4: Run just once before the first test case**  
+
+In this scenario, before the first `it()` mocha will execute what is inside `before()`, but only once.
+```javascript
+describe('Springfield', () => {
+	before(() => {
+		console.log('Marge calls Barge and Lisa (you see this only once)')
+	})
+	it('Bart should hear his mother', () => {
+		/** Test cases */
+	})
+	it('Lisa should hear her mother', () => {
+		/** Test cases */
+	})
+})
+```
+**Scenario 5: Run once before each test case**  
+
+On the contrary of `before()`, **beforeEach()** is executed each time for each it() [or describe()] that we have. If we have one it(), it will be executed just once. if we have two it() it will be executed twice. If we have three it() it will be executed three times and so go on.
+```typescript
+describe('Springfield', () => {
+	beforeEach(() => {
+		console.log('Marge calls Barge and Lisa (you see this twice)')
+	})
+	it('Bart should hear his mother', () => {
+		/** Test cases */
+	})
+	it('Lisa should hear her mother', () => {
+		/** Test cases */
+	})
+})
+```
+**Scenario 6: Two tests in a big test**  
+
+In this last scenario, mocha will nest the describe() and execute it().
+```typescript
+describe('Homer Simpson', () => {
+	describe('Bart Simpson', () => {
+		it('Bart should skate', () => {
+			/** Test cases */
+		})
+	})
+	describe('Lisa Simpson', () => {
+		it('Lisa should play sax', () => {
+			/** Test cases */
+		})
+	})
+})
+```
