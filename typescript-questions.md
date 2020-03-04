@@ -30,6 +30,9 @@ let school = getSchool("Elementary");
 let school2 = getSchool("Little Kid", "UK");  
 let school3 = getSchool("Rose Tree School", "US", "99501")
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How to declare variable so that it can hold multiple values?
 **Tuples**:
@@ -63,8 +66,10 @@ myStrArr.push("Hello TypeScript"); // OK
 
 myNumArr.push("Hi"); // Compiler Error
 myStrArr.push(500); // Compiler Error
-
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. How to implement class constants in TypeScript?
 In TypeScript, the `const` keyword cannot be used to declare class properties. Doing so causes the compiler to an error with "A class member cannot have the 'const' keyword." TypeScript 2.0 has the `readonly` modifier.
@@ -126,6 +131,9 @@ class Employee {
     put() { }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. What is the difference between "interface vs type" statements?
 ```typescript
@@ -165,6 +173,9 @@ function sum(a: number, ...b: number[]): number {
 let result1 = sum(3, 5);    
 let result2 = sum(3, 5, 7, 9);   
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. Explain Enum in TypeScript?
 Enums or enumerations are a TypeScipt data type that allow us to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. It is a collection of related values that can be numeric or string values.
@@ -180,3 +191,6 @@ console.log(Gender.Female); // Output: 1
 //We can also access an enum value by it's number value.  
 console.log(Gender[1]); // Output: Female  
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
