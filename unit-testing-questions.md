@@ -731,7 +731,7 @@ If you want to create code-coverage reports every time you test, you can set the
 The code coverage percentages let you estimate how much of your code is tested. If your team decides on a set minimum amount to be unit tested, you can enforce this minimum with the Angular CLI.
 
 For example, suppose you want the code base to have a minimum of 80% code coverage. To enable this, open the Karma test platform configuration file, `karma.conf.js`, and add the following in the `coverageIstanbulReporter`: key.
-```json
+```
 coverageIstanbulReporter: {
   reports: [ 'html', 'lcovonly' ],
   fixWebpackSourcePaths: true,
