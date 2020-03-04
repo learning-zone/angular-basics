@@ -745,5 +745,4 @@ coverageIstanbulReporter: {
 ```
 The thresholds property causes the tool to enforce a minimum of 80% code coverage when the unit tests are run in the project.
 
-#### Q. Which file get called first, when user run ng-test?
-#### Q. Explain Unit Testing using Mocha and Chai in Angular7?
+#### Q. Explain Unit Testing using Mocha and Chai in Angular 7?
