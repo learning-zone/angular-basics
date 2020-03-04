@@ -716,7 +716,7 @@ To generate a coverage report run the following command in the root of your proj
 ```bash
 ng test --no-watch --code-coverage
 ```
-When the tests are complete, the command creates a new `/coverage` folder in the project. Open the index.html file to see a report with your source code and code coverage values.
+When the tests are complete, the command creates a new `/coverage` folder in the project. Open the `index.html` file to see a report with your source code and code coverage values.
 
 If you want to create code-coverage reports every time you test, you can set the following option in the CLI configuration file, `angular.json`:
 ```json
