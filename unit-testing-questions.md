@@ -695,6 +695,9 @@ describe('LoginComponent', () => {
   </button>
 </form>
 ```
+```
+ng test
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
