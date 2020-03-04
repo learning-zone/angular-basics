@@ -746,3 +746,11 @@ coverageIstanbulReporter: {
 The thresholds property causes the tool to enforce a minimum of 80% code coverage when the unit tests are run in the project.
 
 #### Q. Explain Unit Testing using Mocha and Chai in Angular 7?
+**Installation**  
+```bash
+npm install chai mocha ts-node @types/chai @types/mocha --save-dev
+```
+**1.) Mocha**: Mocha gives us a Suite for describing, running and building tests but it does not give us a way to check values.
+
+
+**2.) Chai**: It used to test values.
