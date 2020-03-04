@@ -36,6 +36,10 @@ export class SidebarService {
         {
           title: 'CheckBox',
           path: 'checkbox'
+        },
+        {
+          title: 'Dropdown',
+          path: 'dropdown'
         }
       ]
     },

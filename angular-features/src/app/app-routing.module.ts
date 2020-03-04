@@ -28,6 +28,7 @@ import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.compon
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
 import { RadioComponent } from './nav/component/radio/radio.component';
 import { CheckboxComponent } from './nav/component/checkbox/checkbox.component';
+import { DropdownComponent } from './nav/component/dropdown/dropdown.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'pipes', component: PipesComponent },
   { path: 'radio', component: RadioComponent },
   { path: 'checkbox', component: CheckboxComponent },
+  { path: 'dropdown', component: DropdownComponent },
 
   { path: 'template-driven-forms', component: TemplateDrivenComponent },
   { path: 'reative-forms', component: ReativeFormsComponent },

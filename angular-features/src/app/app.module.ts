@@ -49,6 +49,7 @@ import { RightsComponent } from './nav/routing/lazy-loading/rights/rights.compon
 import { UsersComponent } from './nav/routing/lazy-loading/users/users.component';
 import { RadioComponent } from './nav/component/radio/radio.component';
 import { CheckboxComponent } from './nav/component/checkbox/checkbox.component';
+import { DropdownComponent } from './nav/component/dropdown/dropdown.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -92,7 +93,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RightsComponent,
     UsersComponent,
     RadioComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
