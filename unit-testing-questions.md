@@ -745,6 +745,10 @@ coverageIstanbulReporter: {
 ```
 The thresholds property causes the tool to enforce a minimum of 80% code coverage when the unit tests are run in the project.
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. Explain Unit Testing using Mocha and Chai in Angular 7?
 **Installation**  
 ```bash
