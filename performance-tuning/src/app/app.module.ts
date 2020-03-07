@@ -77,11 +77,8 @@ import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.compo
 import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
 import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
 import { DatatableComponent } from './components/pages/datatable/datatable.component';
-import { RoutingComponent } from './components/pages/routing/routing.component';
 import { LazyLoadingComponent } from './components/pages/routing/lazy-loading/lazy-loading.component';
 import { LazyComponentComponent } from './components/pages/routing/lazy-component/lazy-component.component';
-import { DashboardComponent } from './components/pages/routing/lazy-component/dashboard/dashboard.component';
-import { UserComponent } from './components/pages/routing/lazy-component/user/user.component';
 
 
 
@@ -107,11 +104,8 @@ import { UserComponent } from './components/pages/routing/lazy-component/user/us
     WithAlternateRootElementComponent,
     HomeComponent,
     DatatableComponent,
-    RoutingComponent,
     LazyLoadingComponent,
-    LazyComponentComponent,
-    DashboardComponent,
-    UserComponent
+    LazyComponentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
