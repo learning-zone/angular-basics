@@ -12,6 +12,7 @@ import { TextFieldComponent } from '../app/cdk/pages/text-field/text-field.compo
 import { DatatableComponent } from './components/pages/datatable/datatable.component';
 import { LazyComponentComponent } from './components/pages/routing/lazy-component/lazy-component.component';
 import { LazyLoadingComponent } from './components/pages/routing/lazy-loading/lazy-loading.component';
+import { LazyLoadingModule } from './components/pages/routing/lazy-loading/lazy-loading.module';
 
 
 const routes: Routes = [
@@ -22,7 +23,9 @@ const routes: Routes = [
   { path: 'components/material-datatable', component: SortHeaderComponent, data: {title: 'Material Datatable | Angular Material'}},
   { path: 'components/datatable', component: DatatableComponent, data: {title: 'DataTables | Angular Material'}},
   { path: 'components/lazy-component', component: LazyComponentComponent, data: {title: 'Lazy Component | Angular Material'}},
-  { path: 'components/lazy-loading', component: LazyLoadingComponent, data: {title: 'Lazy Loading | Angular Material'}},
+
+  // tslint:disable-next-line: max-line-length
+  { path: 'components/lazy-loading', loadChildren: () => import('./components/pages/routing/lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) },
 
   { path: 'cdk/drag-drop', component: DragDropComponent, data: {title: 'DragDrop | Angular Material'}},
   { path: 'cdk/platform', component: PlatformComponent, data: {title: 'Platform | Angular Material'}},
