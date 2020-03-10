@@ -79,6 +79,8 @@ import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-al
 import { DatatableComponent } from './components/pages/datatable/datatable.component';
 import { LazyLoadingComponent } from './components/pages/routing/lazy-loading/lazy-loading.component';
 import { LazyComponentComponent } from './components/pages/routing/lazy-component/lazy-component.component';
+import { Lazy1Component } from './components/pages/routing/lazy-component/lazy1/lazy1.component';
+import { Lazy2Component } from './components/pages/routing/lazy-component/lazy2/lazy2.component';
 
 
 
@@ -105,7 +107,9 @@ import { LazyComponentComponent } from './components/pages/routing/lazy-componen
     HomeComponent,
     DatatableComponent,
     LazyLoadingComponent,
-    LazyComponentComponent
+    LazyComponentComponent,
+    Lazy1Component,
+    Lazy2Component
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

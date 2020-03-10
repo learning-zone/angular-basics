@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import * as core from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
 
 ];
 
-@NgModule({
+@core.NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)],
