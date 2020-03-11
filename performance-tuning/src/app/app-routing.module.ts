@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'components/lazy-component', component: LazyComponentComponent, data: {title: 'Lazy Component | Angular Material'}},
 
   // tslint:disable-next-line: max-line-length
-  { path: 'components/lazy-loading', loadChildren: () => import('./components/pages/routing/lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) },
+  { path: 'components/lazy-loading', loadChildren: () => import('./components/pages/routing/lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule)},
 
   { path: 'cdk/drag-drop', component: DragDropComponent, data: {title: 'DragDrop | Angular Material'}},
   { path: 'cdk/platform', component: PlatformComponent, data: {title: 'Platform | Angular Material'}},

@@ -10,6 +10,7 @@ export class LazyLoadingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('LazyLoadingComponent');
   }
 
 }
