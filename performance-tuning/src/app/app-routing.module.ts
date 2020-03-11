@@ -24,14 +24,17 @@ const routes: Routes = [
   { path: 'components/datatable', component: DatatableComponent, data: {title: 'DataTables | Angular Material'}},
   { path: 'components/lazy-component', component: LazyComponentComponent, data: {title: 'Lazy Component | Angular Material'}},
 
-  // tslint:disable-next-line: max-line-length
-  { path: 'components/lazy-loading', loadChildren: () => import('./components/pages/routing/lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule)},
+  { path: 'components/lazy-loading', component: LazyLoadingComponent, data: {title: 'Lazy Component | Angular Material'}},
 
   { path: 'cdk/drag-drop', component: DragDropComponent, data: {title: 'DragDrop | Angular Material'}},
   { path: 'cdk/platform', component: PlatformComponent, data: {title: 'Platform | Angular Material'}},
   { path: 'cdk/portal', component: PortalComponent, data: {title: 'Portal | Angular Material'}},
   { path: 'cdk/scrolling', component: ScrollingComponent, data: {title: 'Scrolling | Angular Material'}},
   { path: 'cdk/text-field', component: TextFieldComponent, data: {title: 'TextField | Angular Material'}},
+
+  { path: 'user', loadChildren: () => import('./components/pages/routing/lazy-loading/user/user.module').then(m => m.UserModule) },
+  // tslint:disable-next-line: max-line-length
+  { path: 'dashboard', loadChildren: () => import('./components/pages/routing/lazy-loading/dashboard/dashboard.module').then(m => m.DashboardModule) },
 
   // { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found | Angular Material'}}
 
