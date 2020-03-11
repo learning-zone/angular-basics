@@ -7,8 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
-    { path: 'components/lazy-loading/user', component: UserComponent },
-    { path: 'components/lazy-loading/dashboard', component: DashboardComponent }
+    { path: 'user', component: UserComponent, outlet: 'LazyLoading' },
+    { path: 'dashboard', component: DashboardComponent, outlet: 'LazyLoading' }
 ];
 
 @NgModule({

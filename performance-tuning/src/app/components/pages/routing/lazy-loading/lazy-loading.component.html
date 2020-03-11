@@ -1,13 +1,13 @@
 <h3>Lazy-Loading <hr/></h3>
 <ul>
     <li>
-        <a mat-button [routerLink]="'/components/lazy-loading'" class="sidenav-link">Home</a>
+        <a mat-button [routerLink]="" class="sidenav-link">Home</a>
     </li>
     <li>
-        <a mat-button routerLink="'/components/lazy-loading/user'" class="sidenav-link">User</a>
+        <a mat-button [routerLink]="'user'" class="sidenav-link">User</a>
     </li>
     <li>
-        <a mat-button routerLink="'/components/lazy-loading/dashboard'" class="sidenav-link">Dashboard</a>
+        <a mat-button [routerLink]="'dashboard'" class="sidenav-link">Dashboard</a>
     </li>
  </ul>
- <router-outlet></router-outlet>
+ <router-outlet name="LazyLoading"></router-outlet>
