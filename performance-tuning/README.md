@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Technology: HTML, Angular-Material, SCSS, Angular-9, i18n, Drag & Drop, Progressive Web Application.
 - Database : Angular Firebase.
 
-### This Projects covers Performance Tuning Topics
+### This Projects covers
 
 - Angular Material Data Tables
 - Components Loading
