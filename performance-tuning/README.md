@@ -1,6 +1,25 @@
 ## Performance Tuning  
 
+**Live Demo** : [Angular Performance Tuning](https://angular-performancetuning.firebaseapp.com/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+
+### Tools and Technologies
+
+- Technology: HTML, Angular-Material, SCSS, Angular-9, i18n, Drag & Drop, Progressive Web Application.
+- Database : Angular Firebase.
+
+#### This Projects covers Performance Tuning Topics
+
+- Angular Material Data Tables
+- Components Loading
+- Lazy-Loading
+- Progressive Web App (PWA)
+- Server Side Rendering (SSR)
+- Service Worker
+- ChangeDetectionStrategy.OnPush
+- TrackBy
+
 
 ### Development server
 
