@@ -12,6 +12,8 @@ import { TextFieldComponent } from '../app/cdk/pages/text-field/text-field.compo
 import { DatatableComponent } from './components/pages/datatable/datatable.component';
 import { LazyComponentComponent } from './components/pages/routing/lazy-component/lazy-component.component';
 import { LazyLoadingComponent } from './components/pages/routing/lazy-loading/lazy-loading.component';
+import { UserComponent } from './components/pages/routing/lazy-loading/user/user.component';
+import { DashboardComponent } from './components/pages/routing/lazy-loading/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -24,7 +26,6 @@ const routes: Routes = [
   { path: 'components/lazy-component', component: LazyComponentComponent, data: {title: 'Lazy Component | Angular Material'}},
   { path: 'components/lazy-loading', component: LazyLoadingComponent, data: {title: 'Lazy Component | Angular Material'},
     children: [
-      // tslint:disable-next-line: max-line-length
       { path: 'user', loadChildren: () => import('./components/pages/routing/lazy-loading/user/user.module').then(m => m.UserModule) },
       // tslint:disable-next-line: max-line-length
       { path: 'dashboard', loadChildren: () => import('./components/pages/routing/lazy-loading/dashboard/dashboard.module').then(m => m.DashboardModule) },
