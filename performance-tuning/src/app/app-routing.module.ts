@@ -12,7 +12,6 @@ import { TextFieldComponent } from '../app/cdk/pages/text-field/text-field.compo
 import { DatatableComponent } from './components/pages/datatable/datatable.component';
 import { LazyComponentComponent } from './components/pages/routing/lazy-component/lazy-component.component';
 import { LazyLoadingComponent } from './components/pages/routing/lazy-loading/lazy-loading.component';
-import { LazyLoadingModule } from './components/pages/routing/lazy-loading/lazy-loading.module';
 
 
 const routes: Routes = [

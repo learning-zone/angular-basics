@@ -81,7 +81,6 @@ import { LazyLoadingComponent } from './components/pages/routing/lazy-loading/la
 import { LazyComponentComponent } from './components/pages/routing/lazy-component/lazy-component.component';
 import { Lazy1Component } from './components/pages/routing/lazy-component/lazy1/lazy1.component';
 import { Lazy2Component } from './components/pages/routing/lazy-component/lazy2/lazy2.component';
-import { LazyLoadingModule } from './components/pages/routing/lazy-loading/lazy-loading.module';
 
 
 
@@ -164,8 +163,7 @@ import { LazyLoadingModule } from './components/pages/routing/lazy-loading/lazy-
     MatSortModule,
     MatPaginatorModule,
     DataTablesModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    LazyLoadingModule
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [Title,
     MatDatepickerModule],
