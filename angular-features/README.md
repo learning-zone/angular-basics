@@ -1,6 +1,24 @@
-## Angular 7 feautres
+## Angular-7 feautres
+
+**Live Demo** : [Angular Performance Tuning](https://angular-features.firebaseapp.com)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+
+### Tools and Technologies
+
+- Technology: HTML, Angular-Material, SCSS, Angular-9, i18n, Drag & Drop, Progressive Web Application.
+- Database : Angular Firebase.
+
+### This Projects Covers
+
+- Angular Material Data Tables
+- Components Loading
+- Lazy-Loading
+- Progressive Web App (PWA)
+- Server Side Rendering (SSR)
+- Service Worker
+- ChangeDetectionStrategy.OnPush
+- TrackBy
 
 ### Development Server
 
@@ -49,6 +67,29 @@ ng xi18n --output-path src/locale
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+### Deploying an Angular App to Firebase Hosting
+
+1. Build your Angular app
+```bash
+ng build --prod
+```
+2. Install the Firebase command line tools
+```bash
+npm install -g firebase-tools
+```
+3. Login using the Firebase CLI & initialize your project
+```bash
+firebase login
+```
+4. Initialize the project using this command:
+```bash
+firebase init
+```
+5. Deploy to Firebase Hosting
+```bash
+firebase deploy
+```
 
 ### Project Output
 
