@@ -1,6 +1,6 @@
 ## Angular-7 feautres
 
-**Live Demo** : [Angular Performance Tuning](https://angular-features.firebaseapp.com)
+**Live Demo** : [Angular-feautres](https://angular-features.firebaseapp.com)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
