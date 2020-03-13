@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RadioComponent implements OnInit {
 
+  product = true;
   constructor() { }
 
   ngOnInit() {
