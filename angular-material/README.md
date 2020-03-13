@@ -11,15 +11,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### This Projects Covers
 
-- Components Interaction
-- Directives
-- Angular Pipes
-- Angular Forms
-- RxJS
-- Dependency Injection
-- Angular Routing
-- Angular Animations
-- Angular Internationalization
+- Form Control
+- Data Tables
+- Layout
+- Buttons
+- Popups
+- CDK
 - Drag and Drop
 - Virtual Scrolling
 
