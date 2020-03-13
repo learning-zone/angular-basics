@@ -46,23 +46,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Deploying an Angular App to Firebase Hosting
 
-1. Build your Angular app
+**1. Build your Angular app**
 ```bash
 ng build --prod
 ```
-2. Install the Firebase command line tools
+**2. Install the Firebase command line tools**
 ```bash
 npm install -g firebase-tools
 ```
-3. Login using the Firebase CLI & initialize your project
+**3. Login using the Firebase CLI & initialize your project**
 ```bash
 firebase login
 ```
-4. Initialize the project using this command:
+**4. Initialize the project using this command**
 ```bash
 firebase init
 ```
-5. Deploy to Firebase Hosting
+**5. Deploy to Firebase Hosting**
 ```bash
 firebase deploy
 ```
