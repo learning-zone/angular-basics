@@ -139,7 +139,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/performance-tuning-server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -153,6 +153,32 @@
               "sourceMap": false,
               "optimization": true
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "performance-tuning:build",
+            "serverTarget": "performance-tuning:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "performance-tuning:build:production",
+              "serverTarget": "performance-tuning:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "performance-tuning:build:production",
+            "serverTarget": "performance-tuning:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
