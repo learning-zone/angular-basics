@@ -59,28 +59,14 @@ import { TextFieldModule } from '@angular/cdk/text-field';
 
 // Angular Custom Components
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { HomeComponent } from './components/pages/home/home.component';
-import { SortHeaderComponent } from './components/pages/sort-header/sort-header.component';
-import { DragDropComponent } from './cdk/pages/drag-drop/drag-drop.component';
-import { PlatformComponent } from './cdk/pages/platform/platform.component';
-import { PortalComponent } from './cdk/pages/portal/portal.component';
-import { ScrollingComponent } from './cdk/pages/scrolling/scrolling.component';
-import { TextFieldComponent } from './cdk/pages/text-field/text-field.component';
-import { BasicDragDropComponent } from './cdk/pages/drag-drop/basic-drag-drop/basic-drag-drop.component';
-import { SortingComponent } from './cdk/pages/drag-drop/sorting/sorting.component';
-import { ConnectedSortingComponent } from './cdk/pages/drag-drop/connected-sorting/connected-sorting.component';
-import { WithAHandleComponent } from './cdk/pages/drag-drop/with-a-handle/with-a-handle.component';
-import { CustomPreviewComponent } from './cdk/pages/drag-drop/custom-preview/custom-preview.component';
-import { CustomPlaceholerComponent } from './cdk/pages/drag-drop/custom-placeholer/custom-placeholer.component';
-import { HorizontalSortingComponent } from './cdk/pages/drag-drop/horizontal-sorting/horizontal-sorting.component';
-import { BoundaryComponent } from './cdk/pages/drag-drop/boundary/boundary.component';
-import { PositionLockingComponent } from './cdk/pages/drag-drop/position-locking/position-locking.component';
-import { WithAlternateRootElementComponent } from './cdk/pages/drag-drop/with-alternate-root-element/with-alternate-root-element.component';
-import { DatatableComponent } from './components/pages/datatable/datatable.component';
-import { LazyLoadingComponent } from './components/pages/routing/lazy-loading/lazy-loading.component';
-import { LazyComponentComponent } from './components/pages/routing/lazy-component/lazy-component.component';
-import { Lazy1Component } from './components/pages/routing/lazy-component/lazy1/lazy1.component';
-import { Lazy2Component } from './components/pages/routing/lazy-component/lazy2/lazy2.component';
+import { HomeComponent } from './components/home/home.component';
+import { SortHeaderComponent } from './components/sort-header/sort-header.component';
+import { DatatableComponent } from './components/datatable/datatable.component';
+import { LazyLoadingComponent } from './components/routing/lazy-loading/lazy-loading.component';
+import { LazyComponentComponent } from './components/routing/lazy-component/lazy-component.component';
+import { Lazy1Component } from './components/routing/lazy-component/lazy1/lazy1.component';
+import { Lazy2Component } from './components/routing/lazy-component/lazy2/lazy2.component';
+import { ScrollingComponent } from './components/scrolling/scrolling.component';
 
 
 
@@ -89,21 +75,7 @@ import { Lazy2Component } from './components/pages/routing/lazy-component/lazy2/
     AppComponent,
     SidebarComponent,
     SortHeaderComponent,
-    DragDropComponent,
-    PlatformComponent,
-    PortalComponent,
     ScrollingComponent,
-    TextFieldComponent,
-    BasicDragDropComponent,
-    SortingComponent,
-    ConnectedSortingComponent,
-    WithAHandleComponent,
-    CustomPreviewComponent,
-    CustomPlaceholerComponent,
-    HorizontalSortingComponent,
-    BoundaryComponent,
-    PositionLockingComponent,
-    WithAlternateRootElementComponent,
     HomeComponent,
     DatatableComponent,
     LazyLoadingComponent,
