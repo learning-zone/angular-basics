@@ -1,6 +1,6 @@
 ## Performance Tuning  
 
-**Live Demo** : [Angular Performance Tuning](https://angular-performancetuning.firebaseapp.com/)
+**Live Demo** : [Angular Performance Tuning](https://performance-tuning-3450d.firebaseapp.com)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
 
@@ -44,3 +44,26 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ### Further Help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+### Deploying an Angular App to Firebase Hosting
+
+1. Build your Angular app
+```bash
+ng build --prod
+```
+2. Install the Firebase command line tools
+```bash
+npm install -g firebase-tools
+```
+3. Login using the Firebase CLI & initialize your project
+```bash
+firebase login
+```
+4. Initialize the project using this command:
+```bash
+firebase init
+```
+5. Deploy to Firebase Hosting
+```bash
+firebase deploy
+```
