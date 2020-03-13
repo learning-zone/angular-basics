@@ -7,5 +7,5 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ScrollingComponent {
-  items = Array.from({length: 100000}).map((_, i) => `Item #${i}`);
+  items = Array.from({length: 10000}).map((_, i) => `Item #${i + 1}`);
 }
