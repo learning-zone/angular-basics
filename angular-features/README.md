@@ -1,4 +1,4 @@
-## Angular-7 Feautres
+## Angular Feautres
 
 **Live Demo** : [Angular-Feautres](https://angular-features.firebaseapp.com)
 
