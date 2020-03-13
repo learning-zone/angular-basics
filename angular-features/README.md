@@ -1,24 +1,27 @@
-## Angular-7 feautres
+## Angular-7 Feautres
 
-**Live Demo** : [Angular-feautres](https://angular-features.firebaseapp.com)
+**Live Demo** : [Angular-Feautres](https://angular-features.firebaseapp.com)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ### Tools and Technologies
 
-- Technology: HTML, Angular-Material, SCSS, Angular-9, i18n, Drag & Drop, Progressive Web Application.
+- Technology: Angular-7, HTML, SCSS, i18n, Drag & Drop, Typescript.
 - Database : Angular Firebase.
 
 ### This Projects Covers
 
-- Angular Material Data Tables
-- Components Loading
-- Lazy-Loading
-- Progressive Web App (PWA)
-- Server Side Rendering (SSR)
-- Service Worker
-- ChangeDetectionStrategy.OnPush
-- TrackBy
+- Components Interaction
+- Directives
+- Angular Pipes
+- Angular Forms
+- RxJS
+- Dependency Injection
+- Angular Routing
+- Angular Animations
+- Angular Internationalization
+- Drag and Drop
+- Virtual Scrolling
 
 ### Development Server
 
