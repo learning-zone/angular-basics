@@ -1,41 +1,42 @@
-# Angular 7
+## Angular 7 feautres
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
-## Development server
+### Development Server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Code Scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+### Running Unit Tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Running End-to-End Tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Run Fake Rest API server
+### Run Fake Rest API server
 
 ```
  npm install -g json-server
  json-server --watch db.json 
 ```
 
-## Internationalization
+### Internationalization
 
 ```
 ng xi18n --output-path src/locale
 ```
 
-## Resources
+### Resources
+
 *   [Bootstrap](https://getbootstrap.com/)
 *   [ngx bootstrap](https://valor-software.com/ngx-bootstrap/)
 *   [Font awsome](http://fontawesome.io/)
@@ -45,10 +46,10 @@ ng xi18n --output-path src/locale
 *   [Material Design for Angular](https://github.com/angular/components#readme)
 *   [Touch Gestures](http://hammerjs.github.io/)
 
-## Further help
+### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Project Output
+### Project Output
 
 ![alt text](https://github.com/learning-zone/Angular/blob/master/angular-features/src/assets/img/angular-features.png)
