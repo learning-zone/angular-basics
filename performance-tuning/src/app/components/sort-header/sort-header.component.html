@@ -2,7 +2,7 @@
 <div class="example-container mat-elevation-z8">
   <div class="example-loading-shade"
        *ngIf="isLoadingResults || isRateLimitReached">
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoadingResults"></mat-progress-bar>
     <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
       GitHub's API rate limit has been reached. It will be reset in one minute.
     </div>
