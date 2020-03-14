@@ -67,7 +67,7 @@ import { LazyComponentComponent } from './components/routing/lazy-component/lazy
 import { Lazy1Component } from './components/routing/lazy-component/lazy1/lazy1.component';
 import { Lazy2Component } from './components/routing/lazy-component/lazy2/lazy2.component';
 import { ScrollingComponent } from './components/scrolling/scrolling.component';
-
+import { FactService } from './components/scrolling/_service/fact.service';
 
 
 @NgModule({
@@ -138,7 +138,8 @@ import { ScrollingComponent } from './components/scrolling/scrolling.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [Title,
-    MatDatepickerModule],
+    MatDatepickerModule,
+    FactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

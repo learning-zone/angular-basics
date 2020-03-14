@@ -1,4 +1,15 @@
-<h3>Virtual Scrolling<hr/></h3>
-<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-  <div *cdkVirtualFor="let item of items" class="example-item">{{item || 'Loading...'}}</div>
+<h3>Virtual Scrolling <hr/></h3>
+<cdk-virtual-scroll-viewport
+  itemSize="100"
+  class="fact-scroll-viewport">
+  <li *cdkVirtualFor="let fact of dataSource">
+
+    <div *ngIf="fact" class="fact-item">
+      <div class="fact-date">{{ fact.year }}</div>
+      <div class="fact-text">{{ fact.text }}</div>
+    </div>
+    <div *ngIf="!fact">
+      Loading ...
+    </div>
+  </li>
 </cdk-virtual-scroll-viewport>
