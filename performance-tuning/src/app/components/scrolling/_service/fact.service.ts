@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FactService {
-
+  Fact = [];
   constructor(private http: HttpClient) { }
 
   getRandomFact(): Observable<Fact[]> {

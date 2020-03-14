@@ -68,6 +68,7 @@ import { Lazy1Component } from './components/routing/lazy-component/lazy1/lazy1.
 import { Lazy2Component } from './components/routing/lazy-component/lazy2/lazy2.component';
 import { ScrollingComponent } from './components/scrolling/scrolling.component';
 import { FactService } from './components/scrolling/_service/fact.service';
+import { FactScrollerComponent } from './components/scrolling/fact-scroller/fact-scroller.component';
 
 
 @NgModule({
@@ -81,7 +82,8 @@ import { FactService } from './components/scrolling/_service/fact.service';
     LazyLoadingComponent,
     LazyComponentComponent,
     Lazy1Component,
-    Lazy2Component
+    Lazy2Component,
+    FactScrollerComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
