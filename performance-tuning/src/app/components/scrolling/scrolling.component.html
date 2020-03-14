@@ -1,4 +1,5 @@
 <h3>Virtual Scrolling <hr/></h3>
+<mat-progress-bar mode="indeterminate" *ngIf="!isLoadingResults"></mat-progress-bar>
 <cdk-virtual-scroll-viewport [itemSize] = "20">
   <table>
      <thead>
@@ -6,9 +7,6 @@
            <td>Sl. No</td>
            <td>Title</td>
            <td>Image</td>
-        </tr>
-        <tr>
-          <td colspan="5" id="progress-indicator"><mat-progress-bar mode="indeterminate"></mat-progress-bar></td>
         </tr>
      </thead>
      <tbody>

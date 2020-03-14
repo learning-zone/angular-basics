@@ -10,17 +10,15 @@ import { ScrollingService } from './scrolling.service';
   styleUrls: ['./scrolling.component.scss']
 })
 export class ScrollingComponent implements OnInit {
-
+   isLoadingResults = false;
    public albumdetails = [];
    constructor(private scrollingService: ScrollingService) {}
    ngOnInit() {
       this.scrollingService.getData().subscribe((data) => {
          this.albumdetails = Array.from(Object.keys(data), k => data[k]);
 
-         // Hide Progress Indicator once data fetched
-         if (this.albumdetails.length > 0) {
-            document.getElementById('progress-indicator').setAttribute('style', 'display: none');
-         }
+         // Progress Indicator
+         this.isLoadingResults = (this.albumdetails.length > 0) ? true : false;
       });
    }
 
