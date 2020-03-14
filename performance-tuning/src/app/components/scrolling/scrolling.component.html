@@ -1,6 +1,6 @@
 <h3>Virtual Scrolling <hr/></h3>
 <cdk-virtual-scroll-viewport [itemSize] = "20">
-  <table id="customers">
+  <table>
      <thead>
         <tr>
            <td>Sl. No</td>
@@ -13,8 +13,8 @@
      </thead>
      <tbody>
         <tr *cdkVirtualFor = "let item of albumdetails">
-           <td *ngIf="item.id < 10" style="text-align: center;">0{{item.id}}</td>
-           <td *ngIf="item.id > 9" style="text-align: center;">{{item.id}}</td>
+           <td *ngIf="item.id < 10">0{{item.id}}</td>
+           <td *ngIf="item.id > 9">{{item.id}}</td>
            <td title="{{item.title}}">{{item.title}}</td>
            <td><img src = "{{item.thumbnailUrl}}" alt="150 x 150" width = "100" height = "100"/></td>
         </tr>
