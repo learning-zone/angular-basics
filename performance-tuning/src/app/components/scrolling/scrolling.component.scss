@@ -1,9 +1,30 @@
-.outer {
-  padding: 10px;
+table {
+  width: 100%;
+  border: 1px solid #333;
+}
+cdk-virtual-scroll-viewport {
+  height: 500px;
+  width: 90%;
+}
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.inner {
-  margin: auto;
-  width: 500px;
-  height: 500px;
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
 }
