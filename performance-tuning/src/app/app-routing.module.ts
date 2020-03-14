@@ -27,7 +27,7 @@ const routes: Routes = [
       { path: 'dashboard', loadChildren: () => import('./components/routing/lazy-loading/dashboard/dashboard.module').then(m => m.DashboardModule) },
     ]
   },
-  { path: 'components/scrolling', component: ScrollingComponent, data: {title: 'Scrolling | Angular Material'}}
+  { path: 'virtual-scrolling', component: ScrollingComponent, data: {title: 'Scrolling | Angular Material'}}
   // { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found | Angular Material'}}
 ];
 
