@@ -16,7 +16,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Lazy-Loading
 - Progressive Web App (PWA)
 - Server Side Rendering (SSR)
-- Service Worker
 - ChangeDetectionStrategy.OnPush
 - TrackBy
 
@@ -45,12 +44,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-### Adding PWA in Angular 
+### Adding Service-Worker (PWA) in Angular 
 ```bash
 ng add @angular/pwa
 ```
 
-### Adding Server-side rendering (SSR) in Angular 
+### Adding Server-Side Rendering (SSR) in Angular 
 ```bash
 ng add @nguniversal/express-engine
 ```
