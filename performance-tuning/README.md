@@ -21,8 +21,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Service Workers (PWA) in Angular 
 
-Angular applications, as single-page applications, are in a prime position to benefit from the advantages of service workers. Starting with version 5.0.0, Angular ships with a service worker implementation. Angular developers can take advantage of this service worker and benefit from the increased reliability and performance it provides, without needing to code against low-level APIs.
-
 Angular's service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content.
 
 The Angular service worker's behavior follows that design goal:
