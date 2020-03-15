@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### This Projects Covers
 
 - Angular Material Data Tables
-- Components Loading
+- Lazy Loading Components
 - Lazy-Loading
 - Progressive Web App (PWA)
 - Server Side Rendering (SSR)
