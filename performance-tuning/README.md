@@ -33,7 +33,6 @@ The Angular service worker's behavior follows that design goal:
 
 To support these behaviors, the Angular service worker loads a manifest file from the server. The manifest describes the resources to cache and includes hashes of every file's contents. When an update to the application is deployed, the contents of the manifest change, informing the service worker that a new version of the application should be downloaded and cached. This manifest is generated from a CLI-generated configuration file called `ngsw-config.json`.
 
-Installing the Angular service worker is as simple as including an NgModule. In addition to registering the Angular service worker with the browser, this also makes a few services available for injection which interact with the service worker and can be used to control it. For example, an application can ask to be notified when a new update becomes available, or an application can ask the service worker to check the server for available updates.
 ```bash
 ng add @angular/pwa
 ```
