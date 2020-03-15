@@ -38,7 +38,10 @@ Installing the Angular service worker is as simple as including an NgModule. In 
 ng add @angular/pwa
 ```
 
-### Adding Server-Side Rendering (SSR) in Angular 
+### Server-Side Rendering (SSR) in Angular 
+
+Server Side Rendering helps us convert parts of our extremely dynamic web applications into static web applications in which we create and render the content of the requested route on the server side. This static page acts as a placeholder while the rest of application (CSS, JS etc.) are downloaded and bootstrapped in the background. In Angular applications, Server Side Rendering can be enabled using Angular Universal.
+
 ```bash
 ng add @nguniversal/express-engine
 ```
