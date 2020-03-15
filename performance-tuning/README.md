@@ -31,26 +31,29 @@ ng add @nguniversal/express-engine
 
 ### Deploying an Angular App to Firebase Hosting
 
-1. Build your Angular app
+**1. Build** 
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 ```bash
 ng build --prod
 ```
-2. Install the Firebase command line tools
+**2. Install the Firebase command line tools**
 ```bash
 npm install -g firebase-tools
 ```
-3. Login using the Firebase CLI & initialize your project
+**3. Login using the Firebase CLI & initialize your project**
 ```bash
 firebase login
 ```
-4. Initialize the project using this command:
+**4. Initialize the project using this command**
 ```bash
 firebase init
 ```
-5. Deploy to Firebase Hosting
+**5. Deploy to Firebase Hosting**
 ```bash
 firebase deploy
 ```
+
 ### Development Server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -58,10 +61,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ### Code Scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ### Running Unit Tests
 
