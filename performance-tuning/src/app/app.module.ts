@@ -67,6 +67,7 @@ import { LazyComponentComponent } from './components/routing/lazy-component/lazy
 import { Lazy1Component } from './components/routing/lazy-component/lazy1/lazy1.component';
 import { Lazy2Component } from './components/routing/lazy-component/lazy2/lazy2.component';
 import { ScrollingComponent } from './components/scrolling/scrolling.component';
+import { TrackbyComponent } from './components/runtime-optimizations/trackby/trackby.component';
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import { ScrollingComponent } from './components/scrolling/scrolling.component';
     LazyLoadingComponent,
     LazyComponentComponent,
     Lazy1Component,
-    Lazy2Component
+    Lazy2Component,
+    TrackbyComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

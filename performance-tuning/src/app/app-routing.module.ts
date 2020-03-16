@@ -8,6 +8,7 @@ import { DatatableComponent } from './components/datatable/datatable.component';
 import { LazyComponentComponent } from './components/routing/lazy-component/lazy-component.component';
 import { LazyLoadingComponent } from './components/routing/lazy-loading/lazy-loading.component';
 import { ScrollingComponent } from './components/scrolling/scrolling.component';
+import { TrackbyComponent } from './components/runtime-optimizations/trackby/trackby.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
       { path: 'dashboard', loadChildren: () => import('./components/routing/lazy-loading/dashboard/dashboard.module').then(m => m.DashboardModule) },
     ]
   },
-  { path: 'virtual-scrolling', component: ScrollingComponent, data: {title: 'Scrolling | Angular Material'}}
+  { path: 'virtual-scrolling', component: ScrollingComponent, data: {title: 'Scrolling | Angular Material'}},
+  { path: 'track-by', component: TrackbyComponent, data: {title: 'TrackBy | Angular Material'}}
   // { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found | Angular Material'}}
 ];
 
