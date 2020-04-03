@@ -4918,6 +4918,9 @@ Yarn is an alternative npm client with some distinctive aspects, including:
 ```
 Binds a host element property (here, the CSS class valid) to a directive/component property (isValid).
 
+#### Q. Why would you use renderer2 methods instead of using native element methods?
+The Renderer2 class is an abstraction provided by Angular in the form of a service that allows to manipulate elements of your app without having to touch the DOM directly. This is the recommended approach because it then makes it easier to develop apps that can be rendered in environments that don’t have DOM access, like on the server, in a web worker or on native mobile.
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
