@@ -4912,6 +4912,12 @@ Yarn is an alternative npm client with some distinctive aspects, including:
 #### Q. What is the difference between formControlName and FormControl?
 *TODO*
 
+#### Q. Explain the below code?
+```typescript
+@HostBinding('class.valid') isValid;
+```
+Binds a host element property (here, the CSS class valid) to a directive/component property (isValid).
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
