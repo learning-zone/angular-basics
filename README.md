@@ -5056,6 +5056,7 @@ scan shows incremental total 6
 scan shows incremental total 10
 scan shows incremental total 15
 scan shows incremental total 21
+
 reduce shows only total 21
 ```
 #### Q. How would you create a component to display error messages throughout your application?
