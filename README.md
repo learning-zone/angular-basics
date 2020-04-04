@@ -5063,10 +5063,40 @@ reduce shows only total 21
 The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.
 
 #### Q. Can you explain the difference between ActivatedRoute and RouterState?
-After the end of each successful navigation lifecycle, the router builds a tree of ActivatedRoute objects that make up the current state of the router. We can access the current RouterState from anywhere in our application using the Router service and the routerState property.
+**RouterState** is an interface which represents the state of the router as a tree of activated routes. Every node of this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data.
 
-RouterState is the current state of the router including a tree of the currently activated routes in our application along convenience methods for traversing the route tree.
+**RouterState Interface looks like:**  
+```typescript
+interface RouterState extends Tree {
+  snapshot: RouterStateSnapshot
+  toString(): string
+}
+```
+**ActivatedRoute** interface provides access to information about a route associated with a component that is loaded in an outlet. Use to traverse the RouterState tree and extract information from nodes.
 
+**ActivatedRoute Interface looks like**  
+
+```typescript
+interface ActivatedRoute {
+  snapshot: ActivatedRouteSnapshot
+  url: Observable<UrlSegment[]>
+  params: Observable
+  queryParams: Observable
+  fragment: Observable
+  data: Observable
+  outlet: string
+  component: Type | string | null
+  routeConfig: Route | null
+  root: ActivatedRoute
+  parent: ActivatedRoute | null
+  firstChild: ActivatedRoute | null
+  children: ActivatedRoute[]
+  pathFromRoot: ActivatedRoute[]
+  paramMap: Observable
+  queryParamMap: Observable
+  toString(): string
+}
+```
 
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
