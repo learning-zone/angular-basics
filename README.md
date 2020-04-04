@@ -5018,6 +5018,19 @@ I would not put services in a shared module which may be imported by a lazy load
 #### Q. What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?
 I would create a core module and provide all the singleton services I have from this module. I would import this module only in app.module so that, all the feature modules, even the lazy loaded ones, would use same instances of the services.
 
+#### Q. Why is it bad if Shared Module provides a service to a lazy loaded module?
+The lazy loaded scenario causes your app to create a new instance every time, instead of using the singleton.
+Lazy loading is the best practice of loading expensive resources on-demand. This can greatly reduce the initial startup time for single page web applications (SPA). Instead of downloading all the application code and resources before the app starts, they are fetched just-in-time (JIT), as needed.
+
+The eagerly loaded scenario your app to create a singleton, instead of creates new instance every time.
+
+**Example:**  
+
+Suppose we had listed the UserService in the module's providers. Suppose every module imports this SharedModule. When the app starts, Angular eagerly loads the AppModule and the ContactModule. Both instances of the imported SharedModule would provide the UserService. Angular registers one of them in the root app injector (see above). Then some component injects UserService, Angular finds it in the app root injector, and delivers the app-wide singleton UserService.
+
+Now consider the HeroModule which is lazy loaded. When the router lazy loads the HeroModule, it creates a child injector and registers the UserService provider with that child injector. The child injector is not the root injector.
+
+When Angular creates a lazy HeroComponent, it must inject a UserService. This time it finds a UserService provider in the lazy module's child injector and creates a new instance of the UserService. This is an entirely different UserService instance than the app-wide singleton version that Angular injected in one of the eagerly loaded components.
 
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
