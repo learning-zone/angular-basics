@@ -5012,6 +5012,9 @@ A lean component is a component which solely purpose is to display data to user.
 #### Q. What would you have in a shared module?
 I would put directives, pipes, components and other modules that are used throughout my application and export them from this shared module. This way, I would not have to declare/import same components/modules everywhere.
 
+#### Q. What would you not put shared module?
+I would not put services in a shared module which may be imported by a lazy loaded module. When a lazy loaded module imports a module which provide a service, angular will create another instance of this service which may result in unexpected behaviors.
+
 
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
