@@ -5062,6 +5062,11 @@ reduce shows only total 21
 #### Q. How does async pipe prevents memory leaks?
 The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.
 
+#### Q. Can you explain the difference between ActivatedRoute and RouterState?
+After the end of each successful navigation lifecycle, the router builds a tree of ActivatedRoute objects that make up the current state of the router. We can access the current RouterState from anywhere in our application using the Router service and the routerState property.
+
+RouterState is the current state of the router including a tree of the currently activated routes in our application along convenience methods for traversing the route tree.
+
 
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
