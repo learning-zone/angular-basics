@@ -5032,6 +5032,32 @@ Now consider the HeroModule which is lazy loaded. When the router lazy loads the
 
 When Angular creates a lazy HeroComponent, it must inject a UserService. This time it finds a UserService provider in the lazy module's child injector and creates a new instance of the UserService. This is an entirely different UserService instance than the app-wide singleton version that Angular injected in one of the eagerly loaded components.
 
+#### Q. What is the difference between scan() vs reduce()?
+* Scan will show all values emitted on source observable.
+* Reduce will show only the final value emitted on source observable.
+```typescript
+var obsScan = Observable.from([1, 2, 3, 4, 5, 6]);
+var count1 = obsScan.scan((acc, one) => acc + one, 0);
+count1.subscribe(x => {
+    console.log('scan shows incremental total', x);
+});
+
+var obsReduce = Observable.from([1, 2, 3, 4, 5, 6]);
+var count2 = obsReduce.reduce((acc, one) => acc + one, 0);
+count2.subscribe(x => {
+    console.log('reduce shows only total', x);
+});
+```
+Output 
+```
+scan shows incremental total 1
+scan shows incremental total 3
+scan shows incremental total 6
+scan shows incremental total 10
+scan shows incremental total 15
+scan shows incremental total 21
+reduce shows only total 21
+```
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
 #### Q. What is the difference between formControlName and FormControl?
