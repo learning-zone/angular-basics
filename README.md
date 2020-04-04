@@ -4909,8 +4909,6 @@ Yarn is an alternative npm client with some distinctive aspects, including:
 * **caching**: Yarn caches every package it downloads, so it never needs to download it again.
 * **lock file**: A dedicated lock file ( yarn.lock ) that keeps dependencies locked to specific versions, similar to Ruby’s Gemfile.lock.
 
-#### Q. What is the difference between formControlName and FormControl?
-*TODO*
 
 #### Q. Explain the below code?
 ```typescript
@@ -5008,6 +5006,10 @@ ngOnInit() {
   this.renderer.setProperty(this.el.nativeElement, 'alt', 'Cute alligator');
 }
 ```
+#### Q. How would you create a component to display error messages throughout your application?
+*TODO*
+#### Q. What is the difference between formControlName and FormControl?
+*TODO*
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
