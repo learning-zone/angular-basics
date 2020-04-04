@@ -191,6 +191,14 @@ console.log(Gender.Female); // Output: 1
 //We can also access an enum value by it's number value.  
 console.log(Gender[1]); // Output: Female  
 ```
+#### Q. Why do you need type definitions?
+#### Q. How would you define a custom type?
+#### Q. What is the difference between an Interface and a Class?
+#### Q. First line below gives compile error, second line doesn't. Why?
+#### Q. What are Discriminated union types?
+#### Q. How do you define Object of Objects type in typescript?
+#### Q. How can you capture the 'type' the user provides (e.g. number), so that we can use that information later.
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
