@@ -5097,6 +5097,36 @@ interface ActivatedRoute {
   toString(): string
 }
 ```
+#### Q. How would you select a custom component to style it.
+#### Q. What pseudo-class selector targets styles in the element that hosts the component?
+#### Q. How would you select all the child components' elements?
+#### Q. How would you select a css class in any ancestor of the component host element, all the way up to the document root?
+#### Q. What selector force a style down through the child component tree into all the child component views?
+Component styles normally apply only to the HTML in the component's own template.
+
+Use the `::ng-deep` shadow-piercing descendant combinator to force a style down through the child component tree into all the child component views. The `::ng-deep` combinator works to any depth of nested components, and it applies to both the view children and content children of the component.
+
+**Example:**  
+
+The following example targets all <h3> elements, from the host element down through this component to all of its child elements in the DOM.
+
+**parent.component.html**
+```html
+Parent content.
+
+<app-child></app-child>
+```
+**parent.component.css**
+```css
+::ng-deep h3 {
+  font-style: italic;
+}
+```
+**child.component.html**  
+```html
+<h3>Child title</h3>
+Child content.
+```
 
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
