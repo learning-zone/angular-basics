@@ -1,5 +1,7 @@
 ## Angular Unit Testing Interview Questions and Answers
 
+
+
 #### Q. How do you mock a service to inject in a unit test?
 **a.) Resolving via TestBed**  
 The `TestBed` acts as a dummy Angular Module and we can configure it like one including with a set of providers like so:
@@ -855,6 +857,13 @@ Run
 ```bash
 $ yarn mocha
 ```
+
+#### Q. What are some of the different tests types you can write?
+#### Q. How do you mock a service to inject in an integration test?
+#### Q. How do you mock a module in an integration test?
+#### Q. How do you test a component that has a dependency to an async service?
+#### Q. What is the difference between 'async()' and 'fakeAsync()'?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
