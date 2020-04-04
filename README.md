@@ -5015,6 +5015,9 @@ I would put directives, pipes, components and other modules that are used throug
 #### Q. What would you not put shared module?
 I would not put services in a shared module which may be imported by a lazy loaded module. When a lazy loaded module imports a module which provide a service, angular will create another instance of this service which may result in unexpected behaviors.
 
+#### Q. What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?
+I would create a core module and provide all the singleton services I have from this module. I would import this module only in app.module so that, all the feature modules, even the lazy loaded ones, would use same instances of the services.
+
 
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
