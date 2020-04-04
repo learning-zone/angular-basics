@@ -4921,6 +4921,94 @@ Binds a host element property (here, the CSS class valid) to a directive/compone
 #### Q. Why would you use renderer2 methods instead of using native element methods?
 The Renderer2 class is an abstraction provided by Angular in the form of a service that allows to manipulate elements of your app without having to touch the DOM directly. This is the recommended approach because it then makes it easier to develop apps that can be rendered in environments that don’t have DOM access, like on the server, in a web worker or on native mobile.
 
+**Example:** Renderer2 in Angular
+
+**Basic Usage**  
+
+It is often used in custom directives because of how Angular directives are the logical building block for modifying elements.
+ 
+```typescript
+import { Directive, Renderer2, ElementRef, OnInit } from '@angular/core';
+
+@Directive({
+  selector: '[appGoWild]'
+})
+export class HelloWorldDirective implements OnInit {
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+  ngOnInit() {
+    this.renderer.addClass(this.el.nativeElement, 'wild');
+  }
+}
+```
+```html
+<h1 appHelloWorld>
+  Hello World!
+</h1>
+```
+**a.) createElement / appendChild / createText**  
+
+Create new DOM elements and append them inside other elements. In this example, we create a new div and we create a text node. We then place the text node inside our new div and finally our div is added to the element referenced by our directive:
+```typescript
+constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+ngOnInit() {
+  const div = this.renderer.createElement('div');
+  const text = this.renderer.createText('Hello world!');
+
+  this.renderer.appendChild(div, text);
+  this.renderer.appendChild(this.el.nativeElement, div);
+}
+```
+```html
+<article>
+  <div>Hello world!</div>
+</article>
+```
+**b.) setAttribute / removeAttribute**  
+
+```typescript
+constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+ngOnInit() {
+  this.renderer.setAttribute(this.el.nativeElement, 'aria-hidden', 'true');
+}
+```
+
+**c.) addClass / removeClass**   
+
+```typescript
+constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+ngOnInit() {
+  this.renderer.removeClass(this.el.nativeElement, 'wild');
+}
+```
+
+**d.) setStyle / removeStyle**  
+
+```typescript
+constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+ngOnInit() {
+  this.renderer.setStyle(
+    this.el.nativeElement,
+    'border-left',
+    '2px dashed olive'
+  );
+}
+```
+
+**e.) setProperty**  
+
+```typescript
+constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+ngOnInit() {
+  this.renderer.setProperty(this.el.nativeElement, 'alt', 'Cute alligator');
+}
+```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
