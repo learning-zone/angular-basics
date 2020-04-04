@@ -5006,6 +5006,9 @@ ngOnInit() {
   this.renderer.setProperty(this.el.nativeElement, 'alt', 'Cute alligator');
 }
 ```
+#### Q. What does lean component mean to you?
+A lean component is a component which solely purpose is to display data to user. This means such component delegates data fetching, bussiness logic, input validation etc. to other classes like models, services, redux effects/actions etc. Lean component follows single responsibility principle.
+
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
 #### Q. What is the difference between formControlName and FormControl?
