@@ -195,6 +195,10 @@ console.log(Gender[1]); // Output: Female
 #### Q. How would you define a custom type?
 #### Q. What is the difference between an Interface and a Class?
 #### Q. First line below gives compile error, second line doesn't. Why?
+```typescript
+someService.someMethod(x);
+someService['someMethod'](x);
+```
 #### Q. What are Discriminated union types?
 #### Q. How do you define Object of Objects type in typescript?
 #### Q. How can you capture the 'type' the user provides (e.g. number), so that we can use that information later.
