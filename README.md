@@ -5108,7 +5108,7 @@ Use the `::ng-deep` shadow-piercing descendant combinator to force a style down 
 
 **Example:**  
 
-The following example targets all <h3> elements, from the host element down through this component to all of its child elements in the DOM.
+The following example targets all `<h3>` elements, from the host element down through this component to all of its child elements in the DOM.
 
 **parent.component.html**
 ```html
