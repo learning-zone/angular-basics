@@ -5009,6 +5009,10 @@ ngOnInit() {
 #### Q. What does lean component mean to you?
 A lean component is a component which solely purpose is to display data to user. This means such component delegates data fetching, bussiness logic, input validation etc. to other classes like models, services, redux effects/actions etc. Lean component follows single responsibility principle.
 
+#### Q. What would you have in a shared module?
+I would put directives, pipes, components and other modules that are used throughout my application and export them from this shared module. This way, I would not have to declare/import same components/modules everywhere.
+
+
 #### Q. How would you create a component to display error messages throughout your application?
 *TODO*
 #### Q. What is the difference between formControlName and FormControl?
