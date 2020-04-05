@@ -1,12 +1,11 @@
-## Angular Feautres
+## Angular Practice
 
-**Live Demo** : [Angular-Feautres](https://angular-features.firebaseapp.com)
+**Live Demo** : [Angular-Practice](https://angular-features.firebaseapp.com)
 
+### Project Description
 
-### Tools and Technologies
+Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your apps.
 
-- Technology: Angular-7, HTML, SCSS, i18n, Drag & Drop, Typescript.
-- Database : Angular Firebase.
 
 ### This Projects Covers
 
@@ -21,6 +20,13 @@
 - Angular Internationalization
 - Drag and Drop
 - Virtual Scrolling
+
+
+### Tools and Technologies
+
+- Technology: Angular-7, HTML, SCSS, i18n, Drag & Drop, Typescript.
+- Database : Angular Firebase.
+
 
 ### Development Server
 
