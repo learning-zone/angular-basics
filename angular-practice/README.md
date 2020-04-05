@@ -101,4 +101,4 @@ firebase deploy
 
 ### Project Output
 
-![Project Output](https://github.com/learning-zone/projects/blob/master/angular-features/src/assets/img/angular-features.png)
+![Project Output](https://github.com/learning-zone/angular-interview-questions/blob/master/angular-features/src/assets/img/angular-features.png)
