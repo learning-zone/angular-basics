@@ -3,10 +3,10 @@
 **Live Demo**: [Performance-Tuning](https://performance-tuning-3450d.firebaseapp.com)
 
 
-### Tools and Technologies
+### Project Description
 
-- Technology: Angular-9, Angular-Material, HTML, SCSS, i18n, Drag & Drop, Progressive Web Application (PWA)
-- Database : Angular Firebase
+This Projects contains a list of new tools and best practices that can help to build faster Angular apps and monitor their performance over time. Some of them involve improving the change detection, others involve the page load and UX in general.
+
 
 ### This Projects Covers
 
@@ -18,6 +18,13 @@
 - ChangeDetectionStrategy.OnPush
 - TrackBy
 - Pure Pipe
+
+
+### Tools and Technologies
+
+- Technology: Angular-9, Angular-Material, HTML, SCSS, i18n, Drag & Drop, Progressive Web Application (PWA)
+- Database : Angular Firebase
+
 
 ### Service Workers (PWA) in Angular 
 
