@@ -2,11 +2,9 @@
 
 **Live Demo** : [Angular-Material](https://angular-material8.firebaseapp.com)
 
+### Project Description
 
-### Tools and Technologies
-
-- Technology: Angular-8, Angular-Material, HTML, SCSS, i18n, Drag & Drop, Typescript.
-- Database : Angular Firebase.
+Angular Material is a UI component library for Angular developers. Angular Material components help in constructing attractive, consistent, and functional web pages and web applications while adhering to modern web design principles like browser portability, device independence, and graceful degradation. It helps in creating faster, beautiful, and responsive websites. It is inspired by the Google Material Design.
 
 ### This Projects Covers
 
@@ -18,6 +16,11 @@
 - CDK
 - Drag and Drop
 - Virtual Scrolling
+
+### Tools and Technologies
+
+- Technology: Angular-8, Angular-Material, HTML, SCSS, i18n, Drag & Drop, Typescript.
+- Database : Angular Firebase.
 
 ### Development server
 
