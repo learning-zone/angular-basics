@@ -1,6 +1,6 @@
 ## Angular Performance Tuning  
 
-**Live Demo**: [Performance-Tuning](https://performance-tuning-3450d.firebaseapp.com)
+**Live Demo**: [Angular-Performance-Tuning](https://performance-tuning-3450d.firebaseapp.com)
 
 
 ### Project Description
