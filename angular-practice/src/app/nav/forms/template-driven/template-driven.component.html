@@ -1,0 +1,35 @@
+<h5>Template-Driven Forms<hr/></h5>
+<div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                  <div class="form-group">
+                      <label for="userName">User Name</label>
+                      <input type="text" class="form-control" name="userName" [(ngModel)]="model.userName" #userName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && userName.invalid }" required />
+                      <div *ngIf="f.submitted && userName.invalid" class="invalid-feedback">
+                          <div *ngIf="userName.errors.required">User Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+                      <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                          <div *ngIf="email.errors.required">Email is required</div>
+                          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
+                      <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                          <div *ngIf="password.errors.required">Password is required</div>
+                          <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <button class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+</div>

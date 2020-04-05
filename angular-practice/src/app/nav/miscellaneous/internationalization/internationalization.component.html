@@ -1,0 +1,24 @@
+<h5>Angular - Internationalization <hr /></h5>
+<h2 i18n="User welcome|An introduction header for this sample@@introductionHeader">
+  Hello i18n!
+</h2>
+ 
+<ng-container i18n>i18n Internationalization Example !</ng-container>
+ 
+<br />
+<br />
+
+<button (click)="inc(1)">+</button> <button (click)="inc(-1)">-</button>
+<span i18n> Updated {minutes, plural, =0 {just now} =1 {one minute ago} other {{{minutes}} minutes ago}}</span>
+({{minutes}})
+<br><br>
+<button (click)="male()">&#9794;</button> 
+<button (click)="female()">&#9792;</button> 
+<button (click)="other()">&#9895;</button>
+<span i18n> The author is {gender, select, male {male} female {female} other {other}}</span>
+<br><br>
+<span i18n>Updated: {minutes, plural,
+  =0 {just now}
+  =1 {one minute ago}
+  other {{{minutes}} minutes ago by {gender, select, male {male} female {female} other {other}}}}
+</span>

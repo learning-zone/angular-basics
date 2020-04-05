@@ -1,0 +1,30 @@
+<h5>Dropdown Validation<hr /></h5>
+<div class="container">
+    <div class="row custom-wrapper">
+       <div class="col-md-12">
+          <!-- Form starts -->
+          <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+          <div class="group-gap">
+             <div class="d-block my-3">
+                <div class="mb-3">
+                   <select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
+                      <option value="">Choose your city</option>
+                      <option *ngFor="let city of City" [ngValue]="city">{{city}}</option>
+                   </select>
+                   <!-- error block -->
+                   <div class="invalid-feedback" *ngIf="isSubmitted && cityName.errors?.required">
+                      <sup>*</sup>Please enter your city name
+                   </div>
+                </div>
+             </div>
+          </div>
+          <!-- Submit Button -->
+          <div class="submit">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          </form><!-- Form ends -->
+       </div>
+    </div>
+    <br/><br/>
+    <div id="result" ></div>
+ </div>

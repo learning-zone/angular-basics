@@ -1,0 +1,12 @@
+<div class="parent">
+  <h6 class="text-center">The Parent Component</h6>
+  <div class="d-flex">
+    <div class="col-6 child-1">
+      <app-child [child]="child1" (emitPass)="passBall($event)"></app-child>
+    </div>
+    <div class="col-6 child-2">
+      <app-child [child]="child2" (emitPass)="passBall($event)"></app-child>
+    </div>
+  </div>
+</div>
+

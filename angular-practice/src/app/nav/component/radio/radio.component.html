@@ -1,0 +1,20 @@
+<h5>Radio Button<hr /></h5>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form name="form" novalidate>
+                <div class="form-group">
+                    <span class="yes">
+                        <input type="radio" name="product" [(ngModel)]="product"  [value]="true" [checked]="product"/> Yes
+                    </span>
+                    <span class="no">
+                        <input type="radio" name="product" [(ngModel)]="product"  [value]="false" [checked]="!product"/> No
+                    </span>
+                </div>
+            </form>
+
+            <h2 *ngIf="product">Supply</h2>
+            <h2 *ngIf="!product">Demand</h2>
+        </div>
+    </div>
+</div>

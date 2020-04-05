@@ -1,0 +1,40 @@
+<h5>Built-in Angular Pipes<hr /></h5>
+<div style = "width:100%;">  
+   <ul>
+     <li><b>Uppercase Pipe </b><br/> 
+          <i>{{title | uppercase}}</i>
+     </li>
+     <li><b>Lowercase Pipe</b><br/>
+         <i>{{title | lowercase}}</i>
+     </li>
+     <li><b>TitleCase Pipe</b><br/>
+         <i>{{title | titlecase}}</i>
+     </li>
+     <li><b>Currency Pipe</b><br/>
+         <i>{{6589.23 | currency:'INR': 'symbol'}} <!--//Boolean true is used to get the sign of the currency.--></i>
+     </li>
+     <li><b>Date pipe</b><br/> 
+         <i>{{today_date | date:'d/M/y'}}</i><i>{{today_date | date:'shortTime'}}</i> 
+     </li>
+     <li><b>Decimal Pipe</b><br/>
+         <i>{{ 454.78787814 | number: '3.4-4' }}</i> <!-- 3 is for main integer, 4 -4 are for integers to be displayed.--> 
+     </li>
+     <li><b>Json Pipe</b><br/>
+         <i>{{ json_val | json }}</i> 
+     </li>
+     <li><b>Percent Pipe</b><br/>
+         <i>{{00.54565 | percent}}</i> 
+     </li>
+     <li><b>Slice Pipe</b> <br/>
+         <i>{{months | slice:2:6}}</i><!-- here 2 and 6 refers to the start and the end index -->
+     </li>
+     <li><b>Async Pipe</b><br/>
+         <i><h5 *ngIf="!countCompleted">{{ count$ | async }}</h5>
+           <h5 *ngIf="countCompleted">{{ message }}</h5>
+         </i>
+      </li>
+      <li><b>Custom Pipe</b><br/>
+          <i>{{2 | custom: 5}}</i>
+      </li>
+   </ul>
+</div>
