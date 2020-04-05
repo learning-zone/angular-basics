@@ -1,6 +1,6 @@
-## Angular Material
+## Angular Material Practice
 
-**Live Demo** : [Angular-Material](https://angular-material8.firebaseapp.com)
+**Live Demo** : [Angular-Material-Practice](https://angular-material8.firebaseapp.com)
 
 ### Project Description
 
