@@ -494,7 +494,8 @@ There are four types of directives in Angular
 * Attribute directives
 * Custom Directive
 
-**Structural Directives**: Structural Directives are directives which change the structure of the DOM by adding or removing elements. There are three built in structural directives, `NgIf`, `NgFor` and `NgSwitch`.
+**Structural Directives**   
+Structural Directives are directives which change the structure of the DOM by adding or removing elements. There are three built in structural directives, `NgIf`, `NgFor` and `NgSwitch`.
 
 Example: Structural Directives
 ```html
@@ -504,7 +505,8 @@ Example: Structural Directives
 </div>
 ```
 
-**Attribute Directives**: Attribute directives change the appearance or behavior of an element, component, or another directive.  `ngClass`, `ngStyle` are examples of attribute directives built-in to the Angular framework.
+**Attribute Directives**   
+Attribute directives change the appearance or behavior of an element, component, or another directive.  `ngClass`, `ngStyle` are examples of attribute directives built-in to the Angular framework.
 
 Example: Attribute Directives
 ```html
