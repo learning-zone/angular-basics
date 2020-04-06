@@ -4020,6 +4020,8 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * **Untouched** – Opposite of touched
 * **Valid** – Checks whether all validation have passed
 * **Invalid** – opposite of valid
+</p>
+</details>
 
 #### Q. What is defer in promise?
 <details><summary>Answer</summary>
