@@ -5153,9 +5153,35 @@ You should omit the brackets when all of the following are true:
 * This initial value never changes.
 
 #### Q. How would you create a component to display error messages throughout your application?
-*TODO*
 #### Q. What is the difference between formControlName and FormControl?
-*TODO*
+#### Q. What is a good use case for ngrx/store?
+#### Q. What is a good use case for ngrx/entity?
+#### Q. Can you talk about a bug related to a race condition, how to solve it and how to test it?
+#### Q. What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?
+#### Q. How would you protect a component being activated through the router?
+#### Q. How would you insert an embedded view from a prepared TemplateRef
+#### Q. Which components will be notified when an event is emitted?
+#### Q. How would you use cached data?
+#### Q. When do you use template driven vs model driven forms? Why?
+#### Q. How do you submit a form?
+#### Q. What's the difference between NgForm, FormGroup, and FormControl? How do they work together?
+#### Q. What's the advantage of using FormBuilder?
+#### Q. How do you add form validation to a form built with FormBuilder?
+#### Q. What's the difference between dirty, touched, and pristine on a form element?
+#### Q. How can you access validation errors in the template to display error messages?
+#### Q. What is async validation and how is it done?
+#### Q. What is the difference between exports and declarations in NgModule?
+#### Q. How would you make use of ngOnInit()?
+#### Q. How would you implement a multiple api calls that needs to happen in order using rxjs?
+#### Q. What is the difference between switchMap, concatMap and mergeMap?
+#### Q. How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
+#### Q. How would you implement a brush behavior using rxjs?
+#### Q. How would you implement a color picker with rxjs?
+#### Q. If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons).
+#### Q. What tools would you use to find a performance issue in your code?
+#### Q. What are some ways you may improve your website's scrolling performance?
+#### Q. Explain the difference between layout, painting and compositing.
+#### Q. Why do we need route guards?
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
