@@ -10,7 +10,6 @@
 <br/>
 
 #### Q. What are the frequently used command in angular?
-
 <details><summary>Answer</summary>
 <p>
 
@@ -39,9 +38,9 @@
 </p>
 </details>
 
-
-
 #### Q. What is difference between Angular JIT compilation and AOT compilation?
+<details><summary>Answer</summary>
+<p>
 
 Angular has 2 types of build dev build or prod build :
 
@@ -76,7 +75,13 @@ ng build --prod              -  this is for production build
 
 *Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
 
+</p>
+</details>
+
 #### Q. What are the advantages with AOT?
+
+<details><summary>Answer</summary>
+<p>
 
 1. **Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
 2. **Fewer asynchronous requests:** It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.
@@ -84,12 +89,23 @@ ng build --prod              -  this is for production build
 4. **Detect template errors earlier:** Detects and reports template binding errors during the build step itself
 5. **Better security:** It compiles HTML templates and components into JavaScript.  So there won't be any injection attacks.
 
+</p>
+</details>
+
 #### Q. What are the ways to control AOT compilation?
+<details><summary>Answer</summary>
+<p>
+
 You can control your app compilation in two ways
 1. By providing template compiler options in the `tsconfig.json` file
 2. By configuring Angular metadata with decorators
 
+</p>
+</details>
+
 #### Q. How to optimize loading large data in angular?
+<details><summary>Answer</summary>
+<p>
 **Load Time Performance**
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
 2. **Tree-shaking**: This is the process of removing unused code resulting in smaller build size. In **angular-cli**, Tree-Shaking is enabled by default.
@@ -144,9 +160,13 @@ export class App {
   }
 }
 ```
-
+</p>
+</details>
 
 #### Q. How an Angular application gets started or loaded?
+<details><summary>Answer</summary>
+<p>
+
 The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
 
 **main.ts**
@@ -205,9 +225,13 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
   </body>
 </html>
 ```
-
+</p>
+</details>
 
 #### Q. What is rxjs subject in Angular?
+<details><summary>Answer</summary>
+<p>
+
 An RxJS Subject is a special type of Observable that allows values to be **multicasted** to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
 A Subject observable is used to immediately notify subscribers of updated values emitted by it. It does not keep track of old values, i.e. if a Subject observable first emitted a value and was then later subscribed to, then the subscriber will not get that value. A Subject is like an Observable, but can multicast to many Observers. Subjects are like **EventEmitters**: they maintain a registry of many listeners.
@@ -241,9 +265,12 @@ From subscription 1: 3
 From subscription 2: 3
 From subscription 2: 4
 ```
-
+</p>
+</details>
 
 #### Q. What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?
+<details><summary>Answer</summary>
+<p>
 **a.) BehaviorSubject**: It has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
 ```typescript
 import * as Rx from "rxjs";
@@ -335,9 +362,12 @@ subject.complete();
 // Subscriber A: 0.4447275989704571
 // Subscriber B: 0.4447275989704571
 ```
-
+</p>
+</details>
 
 #### Q. What is difference between BehaviorSubject and Observable?
+<details><summary>Answer</summary>
+<p>
 Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.   
 
 The unique features of a behavior subject are:
@@ -386,9 +416,12 @@ subject.subscribe((value) => {
 subject.next("c"); // Subscription got c
 subject.next("d"); // Subscription got d
 ```
-
+</p>
+</details>
 
 #### Q. What is the difference between Subject and BehaviorSubject?
+<details><summary>Answer</summary>
+<p>
 **Subject**  
 
 Subject does not return the current value on Subscription. It triggers only on `.next(value)` call and return/output the value
@@ -442,7 +475,12 @@ observerB: 2
 observerA: 3
 observerB: 3
 ```
+</p>
+</details>
+
 #### Q. What is the difference between AngularJS and Angular?
+<details><summary>Answer</summary>
+<p>
 Angular is a completely revived component-based framework in which an application is a tree of individual 
 components.
 
@@ -455,7 +493,12 @@ components.
 | Not a mobile friendly framework                   | Developed considering mobile platform               |
 | Difficulty in SEO friendly application development| Ease to create SEO friendly applications            |
 
+</p>
+</details>
+
 #### Q. How do you add web workers in your application?
+<details><summary>Answer</summary>
+<p>
 We can add web worker anywhere in our application. For example, If the file that contains expensive computation is `src/app/app.component.ts`, we can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
 1. Configure project to use Web Workers
 2. Adds app.worker.ts to receive messages
@@ -480,7 +523,12 @@ if (typeof Worker !== 'undefined') {
 ```
 *Note: You may need to refactor your initial scaffolding web worker code for sending messages to and from.*
 
+</p>
+</details>
+
 #### Q. What are directives in angular?
+<details><summary>Answer</summary>
+<p>
 Directives add behaviour to an existing DOM element or an existing component instance.
 There are four types of directives in Angular
 * Components directives
@@ -524,8 +572,12 @@ Now this directive extends HTML element behavior with a yellow background as bel
 <p myHighlight>Highlight me!</p>
 ```
 
+</p>
+</details>
 
 #### Q. What are components in angular?
+<details><summary>Answer</summary>
+<p>
 Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
 
 ```typescript
@@ -543,6 +595,8 @@ export class AppComponent {
     title: string = 'Welcome to Angular world';
 }
 ```
+</p>
+</details>
 
 #### Q. What are the differences between Component and Directive?
 A component is also a type of directive with template, styles and logic part.
