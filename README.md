@@ -3340,6 +3340,9 @@ export class AppComponent {
   }
 }
 ```
+</p>
+</details>
+
 #### Q. Can we create two Components with the same name in two different .ts files?
 <details><summary>Answer</summary>
 <p>
