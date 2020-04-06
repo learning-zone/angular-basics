@@ -11,7 +11,7 @@
 
 #### Q. Frequently used Angular commands
 
-<details><summary>CLICK ME</summary>
+<details><summary>Answer</summary>
 <p>
 
 |Commands                             |Description                                                                  |
