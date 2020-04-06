@@ -106,6 +106,7 @@ You can control your app compilation in two ways
 #### Q. How to optimize loading large data in angular?
 <details><summary>Answer</summary>
 <p>
+
 **Load Time Performance**
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
 2. **Tree-shaking**: This is the process of removing unused code resulting in smaller build size. In **angular-cli**, Tree-Shaking is enabled by default.
@@ -271,6 +272,7 @@ From subscription 2: 4
 #### Q. What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?
 <details><summary>Answer</summary>
 <p>
+
 **a.) BehaviorSubject**: It has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
 ```typescript
 import * as Rx from "rxjs";
@@ -368,6 +370,7 @@ subject.complete();
 #### Q. What is difference between BehaviorSubject and Observable?
 <details><summary>Answer</summary>
 <p>
+
 Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.   
 
 The unique features of a behavior subject are:
@@ -422,6 +425,7 @@ subject.next("d"); // Subscription got d
 #### Q. What is the difference between Subject and BehaviorSubject?
 <details><summary>Answer</summary>
 <p>
+
 **Subject**  
 
 Subject does not return the current value on Subscription. It triggers only on `.next(value)` call and return/output the value
@@ -481,6 +485,7 @@ observerB: 3
 #### Q. What is the difference between AngularJS and Angular?
 <details><summary>Answer</summary>
 <p>
+
 Angular is a completely revived component-based framework in which an application is a tree of individual 
 components.
 
@@ -499,6 +504,7 @@ components.
 #### Q. How do you add web workers in your application?
 <details><summary>Answer</summary>
 <p>
+
 We can add web worker anywhere in our application. For example, If the file that contains expensive computation is `src/app/app.component.ts`, we can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
 1. Configure project to use Web Workers
 2. Adds app.worker.ts to receive messages
