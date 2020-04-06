@@ -11,6 +11,9 @@
 
 #### Q. Frequently used Angular commands
 
+<details><summary>CLICK ME</summary>
+<p>
+
 |Commands                             |Description                                                                  |
 |-------------------------------------|-----------------------------------------------------------------------------|
 |ng new project-name                  | Create an Angular project with Angular CLI                                  |
@@ -32,6 +35,9 @@
 |ng add @angular/pwa                  |Adds support for an external library to project  |
 |ng xi18n --output-path src/locale    |Internationalization |
 |ng generate web-worker app           |Add a Web Worker to angular app|
+
+</p>
+</details>
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
