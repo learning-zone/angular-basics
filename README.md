@@ -374,7 +374,7 @@ bSubject.subscribe((value) => {
 bSubject.next("c"); // Subscription got c
 bSubject.next("d"); // Subscription got d
 ```
-Example 2: With regular subject
+**Example 2**: With regular subject
 ```typescript
 // Regular Subject
 
