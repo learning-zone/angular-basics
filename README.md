@@ -529,12 +529,13 @@ if (typeof Worker !== 'undefined') {
 #### Q. What are directives in angular?
 <details><summary>Answer</summary>
 <p>
+
 Directives add behaviour to an existing DOM element or an existing component instance.
 There are four types of directives in Angular
-* Components directives
-* Structural directives
-* Attribute directives
-* Custom Directive
+* Components directives  
+* Structural directives  
+* Attribute directives  
+* Custom Directive  
 
 **Structural Directives**   
 Structural Directives are directives which change the structure of the DOM by adding or removing elements. There are three built in structural directives, `NgIf`, `NgFor` and `NgSwitch`.
