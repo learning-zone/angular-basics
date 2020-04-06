@@ -71,4 +71,4 @@ firebase deploy
 
 ### Project Output
 
-![alt text](https://github.com/learning-zone/projects/blob/master/angular-material/src/assets/angular-material.png)
+![alt text](https://github.com/learning-zone/angular-interview-questions/blob/master/angular-material/src/assets/angular-material.png)
