@@ -9,7 +9,7 @@
 
 <br/>
 
-#### Q. Frequently used Angular commands
+#### Q. What are the frequently used command in angular?
 
 <details><summary>Answer</summary>
 <p>
