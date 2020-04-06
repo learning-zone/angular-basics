@@ -4888,12 +4888,6 @@ You can provide build configuration such as translation file path, name, format 
     "i18nMissingTranslation": "error",
   }
 ```
-#### Q. How to use authguard in angular 7?
-#### Q. Write a program to perform column sorting using angular-material?
-#### Q. What is circular dependency error in angular?
-#### Q. What is static injector error in angular?
-#### Q. How to create logger service in angular?
-#### Q. What is the difference between Stateless and Stateful Component?
 #### Q. Why EventEmitter is needed for @Output decorator?
 The `@Input` links a property of a component (which is generally the child component) with a value that was given by another component (the parent). On the other side, the `@Output` decorator is used to link a property of a child component and emit it through the event emitter. So the parent component can call the property and get the data emitted from it.
 
@@ -5099,10 +5093,6 @@ interface ActivatedRoute {
   toString(): string
 }
 ```
-#### Q. How would you select a custom component to style it.
-#### Q. What pseudo-class selector targets styles in the element that hosts the component?
-#### Q. How would you select all the child components' elements?
-#### Q. How would you select a css class in any ancestor of the component host element, all the way up to the document root?
 #### Q. What selector force a style down through the child component tree into all the child component views?
 Component styles normally apply only to the HTML in the component's own template.
 
@@ -5129,12 +5119,7 @@ Parent content.
 <h3>Child title</h3>
 Child content.
 ```
-#### Q. How can you add an active class to a selected element in a list component?
-#### Q. What is a template variable. How would you use it?
-#### Q. What is the difference of using a property binding verses a function binding on a template?
-#### Q. What happens if you subscribe to a data source multiple times with async pipe?
-#### Q. what is the difference between ng-content, ng-container and ng- template?
-#### Q. When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?
+
 #### Q. When can you omit the brackets in template binding?
 The brackets, `[]`, tell Angular to evaluate the template expression. If you omit the brackets, Angular treats the string as a constant and initializes the target property with that string:
 
@@ -5182,6 +5167,22 @@ You should omit the brackets when all of the following are true:
 #### Q. What are some ways you may improve your website's scrolling performance?
 #### Q. Explain the difference between layout, painting and compositing.
 #### Q. Why do we need route guards?
+#### Q. How can you add an active class to a selected element in a list component?
+#### Q. What is a template variable. How would you use it?
+#### Q. What is the difference of using a property binding verses a function binding on a template?
+#### Q. What happens if you subscribe to a data source multiple times with async pipe?
+#### Q. what is the difference between ng-content, ng-container and ng- template?
+#### Q. When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?
+#### Q. How would you select a custom component to style it.
+#### Q. What pseudo-class selector targets styles in the element that hosts the component?
+#### Q. How would you select all the child components' elements?
+#### Q. How would you select a css class in any ancestor of the component host element, all the way up to the document root?
+#### Q. How to use authguard in angular 7?
+#### Q. Write a program to perform column sorting using angular-material?
+#### Q. What is circular dependency error in angular?
+#### Q. What is static injector error in angular?
+#### Q. How to create logger service in angular?
+#### Q. What is the difference between Stateless and Stateful Component?
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
