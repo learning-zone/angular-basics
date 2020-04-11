@@ -455,11 +455,52 @@ components.
 
 | AngularJS                                         | Angular                                             |
 |---------------------------------------------------|-----------------------------------------------------|
-| It is based on MVC architecture                   | It is component based architecture                  |
-| This uses JavaScript to build the application     | Introduced the typescript to write the application  |
-| Based on controllers concept                      | This is a component based UI approach               |
-| Not a mobile friendly framework                   | Developed considering mobile platform               |
-| Difficulty in SEO friendly application development| Ease to create SEO friendly applications            |
+|JavaScript-based framework for creating SPA.       |Complete re-write of AngularJS version.       |
+|Still supported but no longer will be developed.   |It's updated version regularly released because of Semantic Versioning.|
+|The architecture of AngularJS is based on MVC.     |The architecture of Angular 2 is component based|
+|AngularJS was not developed with a mobile base in mind.|Angular 2 is a mobile-oriented framework.|
+|AngularJS code can write by using only ES5, ES6, and Dart.|We can use ES5, ES6, Typescript to write an Angular 2 code.|
+|Factory, service, provider, value and constant are used for services|The class is the only method to define services in Angular2|
+|Run on only client-side                             |Runs on client-side & server-side|
+|ng-app and angular bootstrap function are used to initialize | bootstrapmodule() function is used to initialize|
+
+**1. AngularJS**  
+
+
+**Advantages**  
+
+* It has great MVC data binding that makes app development fast.
+* Using HTML as a declarative language makes it very intuitive.
+* It is a comprehensive solution for rapid front-end development since it does not need any other frameworks or plugins.
+* AngularJS apps can run on every significant program and advanced cells including iOS and Android-based phones and tablets.
+* Two-way data binding
+* Directives
+* Dependency injection
+
+**Disadvantages**  
+
+* It is big and complicated due to the multiple ways of doing the same thing.
+* Implementations scale poorly.
+* If a user of an AngularJS application disables JavaScript, nothing but the basic page is visible.
+* There’s a lagging UI if there are more than 200 watchers.
+
+
+**2. Angular**
+
+
+**Advantages** 
+
+* Component-based architecture that provides a higher quality of code
+* Reusability: Components of similar nature are well encapsulated, in other words, self-sufficient. Developers can reuse them across different parts of an application. 
+* Unit-test friendly: The independent nature of components simplifies unit tests, quality assurance procedures aimed at verifying the performance of the smallest parts of the application, units.
+* Maintainability: Components that are easily decoupled from each other can be easily replaced with better implementations.
+
+
+**Disadvantages**
+
+* Angular is verbose and complex
+* Steep learning curve
+* Migrating legacy systems from AngularJS to Angular requires time
 
 
 #### Q. How do you add web workers in your application?
