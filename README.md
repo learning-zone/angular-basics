@@ -1,11 +1,11 @@
-## Angular Interview Questions and Answers
+## Angular Interview Questions 
 
 *Click <img src="https://github.com/learning-zone/angular-interview-questions/blob/master/assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
 ### Table of Contents
 
-* *[TypeScript Interview Questions and Answers](typescript-questions.md)*
-* *[Angular Unit Testing Interview Questions and Answers](unit-testing-questions.md)*
+* *[TypeScript Interview Questions](typescript-questions.md)*
+* *[Angular Unit Testing Interview Questions](unit-testing-questions.md)*
 
 <br/>
 
