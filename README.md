@@ -464,7 +464,7 @@ components.
 |Run on only client-side                             |Runs on client-side & server-side|
 |ng-app and angular bootstrap function are used to initialize | bootstrapmodule() function is used to initialize|
 
-**1. AngularJS**  
+**a.) AngularJS**  
 
 
 **Advantages**  
@@ -485,7 +485,7 @@ components.
 * There’s a lagging UI if there are more than 200 watchers.
 
 
-**2. Angular**
+**b.) Angular**
 
 
 **Advantages** 
