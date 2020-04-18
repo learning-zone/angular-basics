@@ -1,11 +1,308 @@
-## Angular Interview Questions 
+# Angular Interview Questions 
 
 *Click <img src="https://github.com/learning-zone/angular-interview-questions/blob/master/assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
-### Table of Contents
+## Table of Contents
 
 * *[TypeScript Interview Questions](typescript-questions.md)*
 * *[Angular Unit Testing Interview Questions](unit-testing-questions.md)*
+
+
+### 1. Basics 
+
+ - What is an Angular Module?
+ - What are the case types in Angular?
+ - What is the difference between AngularJS and Angular?
+ - What are the frequently used command in angular?
+ - What are lifecycle hooks available in Angular?
+ - What is data binding in Angular?
+ - What is the difference between constructor() and ngOnInit()?
+ - What are Angular Services?
+ - What is Interpolation?
+ - What is index property in ngFor directive?
+ - What happens if you use script tag inside template?
+ - What are template expressions?
+ - What are template statement?
+ - How do you enable binding expression validation?
+ - What is the purpose of any type cast function?
+ - What is Non null type assertion operator?
+ - How do you describe various dependencies in angular application?
+ - What is declarable in Angular?
+ - What are the restrictions on declarable classes?
+ - When to use NgOnInit and constructor in Angular?
+ - What is the expression context in Angular?
+ - How can you add an active class to a selected element in a list component?
+ - What is the purpose of NgModule? How do you decide to create a new NgModule?
+ - What is difference between Angular Modules and JavaScript Modules?
+ - How would you make use of ngOnInit()?
+
+
+### 2. Configuration & Tools
+
+ - What is angular CLI?
+ - What is codelyzer?
+ - What is Angular CLI Builder?
+ - What is a builder?
+ - How do you invoke a builder?
+ - How do you create app shell in Angular?
+ - What is difference between Angular JIT compilation and AOT compilation?
+ - What are the advantages with AOT?
+ - What are the three phases of AOT?
+ - Can I use arrow functions in AOT?
+ - What is the purpose of metadata json files?
+ - Can I use any javascript feature for expression syntax in AOT?
+ - What are the ways to control AOT compilation?
+ - What is Bazel tool?
+ - How do you use Bazel with Angular CLI?
+ - How do you run Bazel directly?
+ - What is Redux and how does it relate to an Angular app?
+ - What are Zones? What is Change Detection? What would be a good use for NgZone service?
+ - If your data model is updated outside the Zone explain the process how will you the view?
+ - What is Traceur Compiler?
+ - What Is PrimeNG? How Can It Be Used With Angular?
+ - What is hammerjs in angular?
+ - How to call component function from outside the app?
+ - What is Babel and how it is used in Angular?
+ - Why yarn is better than npm?
+ - What is a good use case for ngrx/store?
+ - What is a good use case for ngrx/entity?
+ - What tools would you use to find a performance issue in your code?
+
+
+### 3. Architecture 
+
+ - How an Angular application gets started or loaded?
+ - What is a bootstrapping module?
+ - Why do we need compilation process?
+ - How to optimize loading large data in angular?
+ - What is metadata in Angular?
+ - What is dependency injection in Angular?
+ - What are angular elements?
+ - What is the browser support of Angular Elements?
+ - What are custom elements?
+ - Do I need to bootstrap custom elements?
+ - How custom elements works internally?
+ - How to transfer components to custom elements?
+ - What are the mapping rules between Angular component and custom element?
+ - How do you define typings for custom elements?
+ - What are the restrictions of metadata?
+ - What is folding?
+ - What are macros?
+ - Give an example of few metadata errors?
+ - What is metadata rewriting?
+ - How do you provide configuration inheritance?
+ - How do you specify angular template compiler options?
+ - What is zone?
+ - What is the purpose of common module?
+ - What is Angular Ivy?
+ - What are the features included in ivy preview?
+ - Can I use AOT compilation with Ivy?
+ - What is the difference between exports and declarations in NgModule?
+
+
+### 4. Component Interaction
+
+  - What are components in angular?
+  - What are directives in angular?
+  - What are the differences between Component and Directive?
+  - What is the purpose of ngFor directive?
+  - What are dynamic components?
+  - What are the class decorators in Angular?
+  - What are class field decorators?
+  - Explain local reference variables, @ViewChild() and @ContentChild().
+  - Can we create two Components with the same name in two different .ts files?
+  - How do you get a reference to a child component?
+  - How do you listen for events in a component?
+  - How do you force a change detection cycle?
+  - How would you get a reference to a parent component?
+  - What are entryComponents?
+  - When building custom form components, what interface do they components need to implement to particpate in forms?
+  - How Event Emitters works in Angular?
+  - What is the difference between an Annotation and a Decorator in Angular?
+  - What is the process of inserting an embedded view from a prepared TemplateRef?
+  - List the differences between Angular components vs directives?
+  - How can we bind a variable with DOM element in Angular?
+  - What is Self and Host Decorator in Angular?
+  - How do components communicate with each other?
+  - How to dynamically create a component in Angular?
+  - Why EventEmitter is needed for @Output decorator?
+  - Why would you use renderer2 methods instead of using native element methods?
+  - What does lean component mean to you?
+  - How would you create a component to display error messages throughout your application?
+  - What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?
+  - Which components will be notified when an event is emitted?
+  - What is the difference between Stateless and Stateful Component?
+
+
+### 5. Angular Forms 
+
+ - What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?
+ - What is the difference between formControlName and FormControl?
+ - When do you use template driven vs model driven forms? Why?
+ - How do you submit a form?
+ - What's the difference between NgForm, FormGroup, and FormControl? How do they work together?
+ - What's the advantage of using FormBuilder?
+ - How do you add form validation to a form built with FormBuilder?
+ - What's the difference between dirty, touched, and pristine on a form element?
+ - What is async validation and how is it done?
+
+
+### 6. Pipes
+
+ - What are pipes?
+ - What is a parameterized pipe?
+ - What is a custom pipe?
+ - What is the purpose of async pipe?
+ - What is the difference between pure and impure pipe?
+ - What is difference between Stateful and Stateless Pipes in angular?
+ - How does async pipe prevents memory leaks?
+ - What happens if you subscribe to a data source multiple times with async pipe?
+
+ 
+### 7. RxJS
+
+ - What is RxJS?
+ - What is subscribing?
+ - What is an observable?
+ - What is an observer?
+ - What is multicasting?
+ - What is an RxJS Operator?
+ - What is rxjs subject in Angular?
+ - What are observable creation functions?
+ - What are the utility functions provided by RxJS?
+ - How do you perform error handling in observables?
+ - What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?
+ - What is difference between BehaviorSubject and Observable?
+ - What is the difference between Subject and BehaviorSubject?
+ - How can you read full response?
+ - How do you perform Error handling?
+ - What will happen if you do not supply handler for observer?
+ - What is the short hand notation for subscribe method?
+ - Explain the difference between Promise and Observable in Angular?
+ - How to cache an observable data?
+ - What are the best way to unsubscribe from Observables in Angular?
+ - If you need to respond to two different Observable or Subject with one callback function how would you do it?
+ - What is the difference between an observable and a subject?
+ - What is the difference between observable and promises?
+ - What are rxjs lettable operators?
+ - How would you implement a multiple api calls that needs to happen in order using rxjs?
+ - What is the difference between switchMap, concatMap and mergeMap?
+ - How would you implement a brush behavior using rxjs?
+ - How would you implement a color picker with rxjs?
+ - If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons).
+ 
+
+### 8. Routing
+
+ - How routing works in Angular?
+ - What is the difference between RouterModule.forRoot() and RouterModule.forChild()?
+ - Explain on how to use HttpClient with an example?
+ - What is router outlet?
+ - How to create multiple router-outlets?
+ - What is routerLink?
+ - What are active router links?
+ - What is router state?
+ - What are Router Events?
+ - What is Activated Route?
+ - How do you define Angular Routes?
+ - What is the purpose of Wildcard route?
+ - What is auxiliary routes in angular?
+ - How can you cancel a router navigation?
+ - What is RouterLink? How would you pass data from a parent component to a child component?
+ - Can you explain the difference between ActivatedRoute and RouterState?
+ - How would you protect a component being activated through the router?
+ - How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
+ - Why do we need route guards?
+ - How to use authguard in angular 7?
+
+
+### 9. Services & DI
+
+ - What is Angular Language Service?
+ - How do you install angular language service in the project?
+ - What is a DI token?
+ - How to make sure that single instance will be used in an entire application?
+ - How do you reference the host of a component?
+ - What are the difference between @Inject and @Injectable?
+ - What does forwardRef do?
+ - How will you intercept http to inject header to each http call?
+ - How will you parallelize multiple observable call?
+ - How will you put one async call before another?
+ - How would you make sure an api call that needs to be called only once but with multiple conditions?
+ - What is defer in promise?
+ - Why do we need provider aliases?
+ - What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?
+ - Why is it bad if Shared Module provides a service to a lazy loaded module?
+ - What is circular dependency error in angular?
+ - What is static injector error in angular?
+ - How to create logger service in angular?
+
+
+### 10. Angular Template
+
+ - What is Ng-Content/Content Projection?
+ - Why would you use renderer methods instead of using native element methods? 
+ - What is difference between Renderer and ElementRef in angular?
+ - How would you control size of an element on resize of the window in a component?
+ - What do you understand by a template variable?
+ - How can you access validation errors in the template to display error messages?
+ - What is transclusion in angular?
+ - What is ng-container and why is it useful?
+ - When can you omit the brackets in template binding?
+ - How would you insert an embedded view from a prepared TemplateRef?
+ - How can you access validation errors in the template to display error messages?
+ - What is a template variable. How would you use it?
+ - What is the difference of using a property binding verses a function binding on a template?
+ - what is the difference between ng-content, ng-container and ng- template?
+ - When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?
+
+
+### 11. Angular Animations
+
+ - What is State function?
+ - What is Style function?
+ - What is the purpose of animate function?
+ - What is transition function?
+ - How would you animate routing?
+ - How do you define the transition between two states in Angular?
+ - What selector force a style down through the child component tree into all the child component views?
+ - How can you add an active class to a selected element in a list component?
+ - How would you select a custom component to style it.
+ - What pseudo-class selector targets styles in the element that hosts the component?
+ - How would you select all the child components' elements?
+ - How would you select a css class in any ancestor of the component host element, all the way up to the document root?
+
+
+### 12. Performance
+
+ - What is a service worker and its role in Angular?
+ - How do you add web workers in your application?
+ - What are the limitations with web workers?
+ - How to set time for caching in service-worker?
+ - What are the types of cache in browsers?
+ - How will you optimize image and svg in your angular app?
+ - What is shadow DOM? How is it helping Angular to perform better?
+ - What is Angular Universal?
+ - What is server side rendering in angular?
+ - How would you use cached data?
+ - What are some ways you may improve your website's scrolling performance?
+
+
+### 13. Miscellaneous
+ - How to display only month in Angular?
+ - What is the purpose of base href tag?
+ - What is type narrowing?
+ - How to inject the dynamic script in angular?
+ - What is Angular DSL?
+ - How do you use a JavaScript third party lib in an Angular App?
+ - How to configure Webpack with Angular?
+ - How do you provide build configuration for multiple locales?
+ - What would you have in a shared module?
+ - What would you not put shared module?
+ - What is the difference between scan() vs reduce()?
+ - Can you talk about a bug related to a race condition, how to solve it and how to test it?
+ - Explain the difference between layout, painting and compositing.
+ - Write a program to perform column sorting using angular-material?
 
 <br/>
 
