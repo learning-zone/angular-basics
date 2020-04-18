@@ -8,7 +8,7 @@
 * *[Angular Unit Testing Interview Questions](unit-testing-questions.md)*
 
 
-### 1. Basics 
+### 1. Angular Basics 
 
  - What is an Angular Module?
  - What are the case types in Angular?
@@ -261,6 +261,7 @@
 
  - What is State function?
  - What is Style function?
+ - What is Angular DSL?
  - What is the purpose of animate function?
  - What is transition function?
  - How would you animate routing?
@@ -293,7 +294,6 @@
  - What is the purpose of base href tag?
  - What is type narrowing?
  - How to inject the dynamic script in angular?
- - What is Angular DSL?
  - How do you use a JavaScript third party lib in an Angular App?
  - How to configure Webpack with Angular?
  - How do you provide build configuration for multiple locales?
@@ -5369,10 +5369,10 @@ export default {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. How to configure Webpack 4 with Angular 7?
+#### Q. How to configure Angular with Webpack?
 
 
-**Install Angular 7 Dependencies**  
+**Install Angular Dependencies**  
 ```
 npm install -save @angular/common@7 @angular/compiler@7 @angular/core@7 @angular/forms@7 @angular/platform-browser@7 @angular/platform-browser-dynamic@7 @angular/router@7 core-js@3 rxjs@6 zone.js@0
 ```
