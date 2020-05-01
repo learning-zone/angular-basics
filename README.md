@@ -5895,7 +5895,7 @@ You should omit the brackets when all of the following are true:
 #### Q. ***Can you talk about a bug related to a race condition, how to solve it and how to test it?***
 #### Q. ***What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?***
 #### Q. ***How would you protect a component being activated through the router?***
-#### Q. ***How would you insert an embedded view from a prepared TemplateRef
+#### Q. ***How would you insert an embedded view from a prepared TemplateRef?***
 #### Q. ***Which components will be notified when an event is emitted?***
 #### Q. ***How would you use cached data?***
 #### Q. ***When do you use template driven vs model driven forms? Why?***
@@ -5916,7 +5916,7 @@ You should omit the brackets when all of the following are true:
 #### Q. ***If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons)?***
 #### Q. ***What tools would you use to find a performance issue in your code?***
 #### Q. ***What are some ways you may improve your website's scrolling performance?***
-#### Q. ***Explain the difference between layout, painting and compositing.
+#### Q. ***Explain the difference between layout, painting and compositing?***
 #### Q. ***Why do we need route guards?***
 #### Q. ***How can you add an active class to a selected element in a list component?***
 #### Q. ***What is a template variable. How would you use it?***
