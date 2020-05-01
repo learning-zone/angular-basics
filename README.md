@@ -5277,8 +5277,8 @@ It makes available all the syntactical sugar that was added to JavaScript with t
 
 **Initial Setup**  
 ```
-cmd> npm install --save-dev babel-loader @babel/core @babel/preset-env html-webpack-plugin script-ext-html-webpack-plugin
-cmd> npm install --save-dev @babel/register
+npm install --save-dev babel-loader @babel/core @babel/preset-env html-webpack-plugin script-ext-html-webpack-plugin
+npm install --save-dev @babel/register
 ```
 
 **Configuration Files**  
