@@ -5934,6 +5934,7 @@ You should omit the brackets when all of the following are true:
 #### Q. ***What is static injector error in angular?***
 #### Q. ***How to create logger service in angular?***
 #### Q. ***What is the difference between Stateless and Stateful Component?***
+*ToDo*
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
