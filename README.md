@@ -208,26 +208,28 @@
 
 ### 8. Routing
 
- - How routing works in Angular?
- - What is the difference between RouterModule.forRoot() and RouterModule.forChild()?
- - Explain on how to use HttpClient with an example?
- - What is router outlet?
- - How to create multiple router-outlets?
- - What is routerLink?
- - What are active router links?
- - What is router state?
- - What are Router Events?
- - What is Activated Route?
- - How do you define Angular Routes?
- - What is the purpose of Wildcard route?
- - What is auxiliary routes in angular?
- - How can you cancel a router navigation?
- - What is RouterLink? How would you pass data from a parent component to a child component?
- - Can you explain the difference between ActivatedRoute and RouterState?
- - How would you protect a component being activated through the router?
- - How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.
- - Why do we need route guards?
- - How to use authguard in angular 7?
+|Sl.No|  Questions                                                     |
+|-----|----------------------------------------------------------------|
+| 01. |[How routing works in Angular?](#q-how-routing-works-in-angular)|
+| 02. |[What is the difference between RouterModule.forRoot() and RouterModule.forChild()?](#q-what-is-the-difference-between-routermoduleforroot-and-routermoduleforchild)|
+| 03. |[Explain on how to use HttpClient with an example?](#q-explain-on-how-to-use-httpclient-with-an-example)|
+| 04. |[What is router outlet?](#q-what-is-router-outlet)|
+| 05. |[How to create multiple router-outlets?](#q-how-to-create-multiple-router-outlets)|
+| 06. |[What is routerLink?](#q-what-is-routerlink)|
+| 07. |[What are active router links?](#q-what-are-active-router-links)|
+| 08. |[What is router state?](#q-what-is-router-state)|
+| 09. |[What are Router Events?](#q-what-are-router-events)|
+| 10. |[What is Activated Route?](#q-what-is-activated-route)|
+| 11. |[How do you define Angular Routes?](#q-how-do-you-define-angular-routes)|
+| 12. |[What is the purpose of Wildcard route?](#q-what-is-the-purpose-of-wildcard-route)|
+| 13. |[What is auxiliary routes in angular?](#q-what-is-auxiliary-routes-in-angular)|
+| 14. |[How can you cancel a router navigation?](#q-how-can-you-cancel-a-router-navigation)|
+| 15. |[What is RouterLink? How would you pass data from a parent component to a child component?](#q-what-is-routerlink-how-would-you-pass-data-from-a-parent-component-to-a-child-component)|
+| 16. |[Can you explain the difference between ActivatedRoute and RouterState?](#q-can-you-explain-the-difference-between-activatedroute-and-routerstate)|
+| 17. |[How would you protect a component being activated through the router?](#q-how-would-you-protect-a-component-being-activated-through-the-router)|
+| 18. |[How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions-example-if-you-need-to-get-some-data-in-multiple-routes-but-once-you-get-it-you-can-reuse-it-in-the-routes-that-needs-it-therefor-no-need-to-make-another-call-to-your-backend-apis)
+| 19. |[Why do we need route guards?](#q-why-do-we-need-route-guards)|
+| 20. |[How to use authguard in angular 7?](#q-how-to-use-authguard-in-angular-7)|
 
 
 ### 9. Services & DI
