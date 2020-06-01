@@ -258,21 +258,23 @@
 
 ### 10. Angular Template
 
- - What is Ng-Content/Content Projection?
- - Why would you use renderer methods instead of using native element methods? 
- - What is difference between Renderer and ElementRef in angular?
- - How would you control size of an element on resize of the window in a component?
- - What do you understand by a template variable?
- - How can you access validation errors in the template to display error messages?
- - What is transclusion in angular?
- - What is ng-container and why is it useful?
- - When can you omit the brackets in template binding?
- - How would you insert an embedded view from a prepared TemplateRef?
- - How can you access validation errors in the template to display error messages?
- - What is a template variable. How would you use it?
- - What is the difference of using a property binding verses a function binding on a template?
- - what is the difference between ng-content, ng-container and ng- template?
- - When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?
+|Sl.No|  Questions                                                                       |
+|-----|----------------------------------------------------------------------------------|
+| 01  |[What is Ng-Content/Content Projection?](#q-what-is-ng-content-content-projection)|
+| 02. |[Why would you use renderer methods instead of using native element methods?](#q-why-would-you-use-renderer-methods-instead-of-using-native-element-methods)|
+| 03. |[What is difference between Renderer and ElementRef in angular?](#q-what-is-difference-between-renderer-and-elementref-in-angular)|
+| 04. |[How would you control size of an element on resize of the window in a component?](#q-how-would-you-control-size-of-an-element-on-resize-of-the-window-in-a-component)|
+| 05. |[What do you understand by a template variable?](#q-what-do-you-understand-by-a-template-variable)|
+| 06. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages)|
+| 07. |[What is transclusion in angular?](#q-what-is-transclusion-in-angular)|
+| 08. |[What is ng-container and why is it useful?](#q-what-is-ng-container-and-why-is-it-useful)|
+| 09. |[When can you omit the brackets in template binding?](#q-when-can-you-omit-the-brackets-in-template-binding)|
+| 10. |[How would you insert an embedded view from a prepared TemplateRef?](#q-how-would-you-insert-an-embedded-view-from-a-prepared-templateref)|
+| 11. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages-1)
+| 12. |[What is a template variable. How would you use it?](#q-what-is-a-template-variable-how-would-you-use-it)|
+| 13. |[What is the difference of using a property binding verses a function binding on a template?](#q-what-is-the-difference-of-using-a-property-binding-verses-a-function-binding-on-a-template)|
+| 14. |[what is the difference between ng-content, ng-container and ng- template?](#q-what-is-the-difference-between-ng-content-ng-container-and-ng-template)|
+| 15. |[When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?](#q-when-you-create-a-data-binding-in-angular-are-you-working-with-attributes-or-properties-what-is-the-difference-anyway)|
 
 
 ### 11. Angular Animations
