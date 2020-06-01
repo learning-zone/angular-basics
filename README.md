@@ -298,20 +298,23 @@
 
 ### 12. Performance
 
- - What is a service worker and its role in Angular?
- - How do you add web workers in your application?
- - What are the limitations with web workers?
- - How to set time for caching in service-worker?
- - What are the types of cache in browsers?
- - How will you optimize image and svg in your angular app?
- - What is shadow DOM? How is it helping Angular to perform better?
- - What is Angular Universal?
- - What is server side rendering in angular?
- - How would you use cached data?
- - What are some ways you may improve your website's scrolling performance?
+|Sl.No|  Questions                                       |
+|-----|--------------------------------------------------|
+| 01. |[What is a service worker and its role in Angular?](#q-what-is-a-service-worker-and-its-role-in-angular)|
+| 02. |[How do you add web workers in your application?](#q-how-do-you-add-web-workers-in-your-application)|
+| 03. |[What are the limitations with web workers?](#q-what-are-the-limitations-with-web-workers)|
+| 04. |[How to set time for caching in service-worker?](#q-how-to-set-time-for-caching-in-service-worker)|
+| 05. |[What are the types of cache in browsers?](#q-what-are-the-types-of-cache-in-browsers)|
+| 06. |[How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)|
+| 07. |[What is shadow DOM? How is it helping Angular to perform better?](#q-what-is-shadow-dom-how-is-it-helping-angular-to-perform-better)|
+| 08. |[What is Angular Universal?](#q-what-is-angular-universal)|
+| 09. |[What is server side rendering in angular?](#q-what-is-server-side-rendering-in-angular)|
+| 10. |[How would you use cached data?](#q-how-would-you-use-cached-data)|
+| 11. |[What are some ways you may improve your website's scrolling performance?](#q-what-are-some-ways-you-may-improve-your-website-s-scrolling-performance)|
 
 
 ### 13. Miscellaneous
+
  - How to display only month in Angular?
  - What is the purpose of base href tag?
  - What is type narrowing?
