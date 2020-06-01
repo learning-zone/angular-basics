@@ -41,34 +41,36 @@
 
 ### 2. Configuration & Tools
 
- - What is angular CLI?
- - What is codelyzer?
- - What is Angular CLI Builder?
- - What is a builder?
- - How do you invoke a builder?
- - How do you create app shell in Angular?
- - What is difference between Angular JIT compilation and AOT compilation?
- - What are the advantages with AOT?
- - What are the three phases of AOT?
- - Can I use arrow functions in AOT?
- - What is the purpose of metadata json files?
- - Can I use any javascript feature for expression syntax in AOT?
- - What are the ways to control AOT compilation?
- - What is Bazel tool?
- - How do you use Bazel with Angular CLI?
- - How do you run Bazel directly?
- - What is Redux and how does it relate to an Angular app?
- - What are Zones? What is Change Detection? What would be a good use for NgZone service?
- - If your data model is updated outside the Zone explain the process how will you the view?
- - What is Traceur Compiler?
- - What Is PrimeNG? How Can It Be Used With Angular?
- - What is hammerjs in angular?
- - How to call component function from outside the app?
- - What is Babel and how it is used in Angular?
- - Why yarn is better than npm?
- - What is a good use case for ngrx/store?
- - What is a good use case for ngrx/entity?
- - What tools would you use to find a performance issue in your code?
+|Sl.No|  Questions                                   |
+|-----|----------------------------------------------|
+| 01. |[What is angular CLI?](#q-what-is-angular-cli)|
+| 02. |[What is codelyzer?](#q-what-is-codelyzer)|
+| 03. |[What is Angular CLI Builder?](#q-what-is-angular-cli-builder)|
+| 04. |[What is a builder?](#q-what-is-a-builder)|
+| 05. |[How do you invoke a builder?](#q-how-do-you-invoke-a-builder)|
+| 06. |[How do you create app shell in Angular?](#q-how-do-you-create-app-shell-in-angular)|
+| 07. |[What is difference between Angular JIT compilation and AOT compilation?](#q-what-is-difference-between-angular-jit-compilation-and-aot-compilation)|
+| 08. |[What are the advantages with AOT?](#q-what-are-the-advantages-with-aot)|
+| 09. |[What are the three phases of AOT?](#q-what-are-the-three-phases-of-aot)|
+| 10. |[Can I use arrow functions in AOT?](#q-can-i-use-arrow-functions-in-aot)|
+| 11. |[What is the purpose of metadata json files?](#q-what-is-the-purpose-of-metadata-json-files)|
+| 12. |[Can I use any javascript feature for expression syntax in AOT?](#q-can-i-use-any-javascript-feature-for-expression-syntax-in-aot)|
+| 13. |[What are the ways to control AOT compilation?](#q-what-are-the-ways-to-control-aot-compilation)|
+| 14. |[What is Bazel tool?](#q-what-is-bazel-tool)|
+| 15. |[How do you use Bazel with Angular CLI?](#q-how-do-you-use-bazel-with-angular-cli)|
+| 16. |[How do you run Bazel directly?](#q-how-do-you-run-bazel-directly)|
+| 17. |[What is Redux and how does it relate to an Angular app?](#q-what-is-redux-and-how-does-it-relate-to-an-angular-app)|
+| 18. |[What are Zones? What is Change Detection? What would be a good use for NgZone service?](#q-what-are-zones-what-is-change-detection-what-would-be-a-good-use-for-ngzone-service)|
+| 19. |[If your data model is updated outside the Zone explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the-zone-explain-the-process-how-will-you-the-view)|
+| 20. |[What is Traceur Compiler?](#q-what-is-traceur-compiler)|
+| 21. |[What Is PrimeNG? How Can It Be Used With Angular?](#q-what-is-primeng-how-can-it-be-used-with-angular)|
+| 22. |[What is hammerjs in angular?](#q-what-is-hammerjs-in-angular)|
+| 23. |[How to call component function from outside the app?](#q-how-to-call-component-function-from-outside-the-app)|
+| 24. |[What is Babel and how it is used in Angular?](#q-what-is-babel-and-how-it-is-used-in-angular)|
+| 25. |[Why yarn is better than npm?](#q-why-yarn-is-better-than-npm)|
+| 26. |[What is a good use case for ngrx/store?](#q-what-is-a-good-use-case-for-ngrx-store)|
+| 27. |[What is a good use case for ngrx/entity?](#q-what-is-a-good-use-case-for-ngrx-entity)|
+| 28. |[What tools would you use to find a performance issue in your code?](#q-what-tools-would-you-use-to-find-a-performance-issue-in-your-code)|
 
 
 ### 3. Architecture 
