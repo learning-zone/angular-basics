@@ -159,14 +159,16 @@
 
 ### 6. Pipes
 
- - What are pipes?
- - What is a parameterized pipe?
- - What is a custom pipe?
- - What is the purpose of async pipe?
- - What is the difference between pure and impure pipe?
- - What is difference between Stateful and Stateless Pipes in angular?
- - How does async pipe prevents memory leaks?
- - What happens if you subscribe to a data source multiple times with async pipe?
+|Sl.No|  Questions                         |
+|-----|------------------------------------|
+| 01. |[What are pipes?](#q-what-are-pipes)|
+| 02. |[What is a parameterized pipe?](#q-what-is-a-parameterized-pipe)|
+| 03. |[What is a custom pipe?](#q-what-is-a-custom-pipe)|
+| 04. |[What is the purpose of async pipe?](#q-what-is-the-purpose-of-async-pipe)|
+| 05. |[What is the difference between pure and impure pipe?](#q-what-is-the-difference-between-pure-and-impure-pipe)|
+| 06. |[What is difference between Stateful and Stateless Pipes in angular?](#q-what-is-difference-between-stateful-and-stateless-pipes-in-angular)|
+| 07. |[How does async pipe prevents memory leaks?](#q-how-does-async-pipe-prevents-memory-leaks)|
+| 08. |[What happens if you subscribe to a data source multiple times with async pipe?](#q-what-happens-if-you-subscribe-to-a-data-source-multiple-times-with-async-pipe)|
 
  
 ### 7. RxJS
