@@ -144,15 +144,17 @@
 
 ### 5. Angular Forms 
 
- - What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?
- - What is the difference between formControlName and FormControl?
- - When do you use template driven vs model driven forms? Why?
- - How do you submit a form?
- - What's the difference between NgForm, FormGroup, and FormControl? How do they work together?
- - What's the advantage of using FormBuilder?
- - How do you add form validation to a form built with FormBuilder?
- - What's the difference between dirty, touched, and pristine on a form element?
- - What is async validation and how is it done?
+|Sl.No|  Questions                                                                      |
+|-----|---------------------------------------------------------------------------------|
+| 01. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag-pristine-touched-untouched-valid-invalid)|
+| 02. |[What is the difference between formControlName and FormControl?](#q-what-is-the-difference-between-formcontrolname-and-formcontrol)|
+| 03. |[When do you use template driven vs model driven forms? Why?](#q-when-do-you-use-template-driven-vs-model-driven-forms-why)|
+| 04. |[How do you submit a form?](#q-how-do-you-submit-a-form)|
+| 05. |[What's the difference between NgForm, FormGroup, and FormControl? How do they work together?](#q-what-s-the-difference-between-ngform-formgroup-and-formcontrol-how-do-they-work-together)|
+| 06. |[What's the advantage of using FormBuilder?](#q-what-s-the-advantage-of-using-formbuilder)|
+| 07. |[How do you add form validation to a form built with FormBuilder?](#q-how-do-you-add-form-validation-to-a-form-built-with-formbuilder)|
+| 08. |[What's the difference between dirty, touched, and pristine on a form element?](#q-what-s-the-difference-between-dirty-touched-and-pristine-on-a-form-element)|
+| 09. |[What is async validation and how is it done?](#q-what-is-async-validation-and-how-is-it-done)|
 
 
 ### 6. Pipes
