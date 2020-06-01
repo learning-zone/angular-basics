@@ -75,33 +75,35 @@
 
 ### 3. Architecture 
 
- - How an Angular application gets started or loaded?
- - What is a bootstrapping module?
- - Why do we need compilation process?
- - How to optimize loading large data in angular?
- - What is metadata in Angular?
- - What is dependency injection in Angular?
- - What are angular elements?
- - What is the browser support of Angular Elements?
- - What are custom elements?
- - Do I need to bootstrap custom elements?
- - How custom elements works internally?
- - How to transfer components to custom elements?
- - What are the mapping rules between Angular component and custom element?
- - How do you define typings for custom elements?
- - What are the restrictions of metadata?
- - What is folding?
- - What are macros?
- - Give an example of few metadata errors?
- - What is metadata rewriting?
- - How do you provide configuration inheritance?
- - How do you specify angular template compiler options?
- - What is zone?
- - What is the purpose of common module?
- - What is Angular Ivy?
- - What are the features included in ivy preview?
- - Can I use AOT compilation with Ivy?
- - What is the difference between exports and declarations in NgModule?
+|Sl.No|    Questions                                                                                             |
+|-----|----------------------------------------------------------------------------------------------------------|
+| 01. |[How an Angular application gets started or loaded?](#q-how-an-angular-application-gets-started-or-loaded)|
+| 02. |[What is a bootstrapping module?](#q-what-is-a-bootstrapping-module)|
+| 03. |[Why do we need compilation process?](#q-why-do-we-need-compilation-process)|
+| 04. |[How to optimize loading large data in angular?](#q-how-to-optimize-loading-large-data-in-angular)|
+| 05. |[What is metadata in Angular?](#q-what-is-metadata-in-angular)|
+| 06. |[What is dependency injection in Angular?](#q-what-is-dependency-injection-in-angular)|
+| 07. |[What are angular elements?](#q-what-are-angular-elements)|
+| 08. |[What is the browser support of Angular Elements?](#q-what-is-the-browser-support-of-angular-elements)|
+| 09. |[What are custom elements?](#q-what-are-custom-elements)|
+| 10. |[Do I need to bootstrap custom elements?](#q-do-i-need-to-bootstrap-custom-elements)|
+| 11. |[How custom elements works internally?](#q-how-custom-elements-works-internally)|
+| 12. |[How to transfer components to custom elements?](#q-how-to-transfer-components-to-custom-elements)|
+| 13. |[What are the mapping rules between Angular component and custom element?](#q-what-are-the-mapping-rules-between-angular-component-and-custom-element)|
+| 14. |[How do you define typings for custom elements?](#q-how-do-you-define-typings-for-custom-elements)|
+| 15. |[What are the restrictions of metadata?](#q-what-are-the-restrictions-of-metadata)|
+| 16. |[What is folding?](#q-what-is-folding)|
+| 17. |[What are macros?](#q-what-are-macros)|
+| 18. |[Give an example of few metadata errors?](#q-give-an-example-of-few-metadata-errors)|
+| 19. |[What is metadata rewriting?](#q-what-is-metadata-rewriting)|
+| 20. |[How do you provide configuration inheritance?](#q-how-do-you-provide-configuration-inheritance)|
+| 21. |[How do you specify angular template compiler options?](#q-how-do-you-specify-angular-template-compiler-options)|
+| 22. |[What is zone?](#q-what-is-zone)|
+| 23. |[What is the purpose of common module?](#q-what-is-the-purpose-of-common-module)|
+| 24. |[What is Angular Ivy?](#q-what-is-angular-ivy)|
+| 25. |[What are the features included in ivy preview?](#q-what-are-the-features-included-in-ivy-preview)|
+| 26. |[Can I use AOT compilation with Ivy?](#q-can-i-use-aot-compilation-with-ivy)|
+| 27. |[What is the difference between exports and declarations in NgModule?](#q-what-is-the-difference-between-exports-and-declarations-in-ngmode)|
 
 
 ### 4. Component Interaction
