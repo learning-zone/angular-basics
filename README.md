@@ -234,24 +234,26 @@
 
 ### 9. Services & DI
 
- - What is Angular Language Service?
- - How do you install angular language service in the project?
- - What is a DI token?
- - How to make sure that single instance will be used in an entire application?
- - How do you reference the host of a component?
- - What are the difference between @Inject and @Injectable?
- - What does forwardRef do?
- - How will you intercept http to inject header to each http call?
- - How will you parallelize multiple observable call?
- - How will you put one async call before another?
- - How would you make sure an api call that needs to be called only once but with multiple conditions?
- - What is defer in promise?
- - Why do we need provider aliases?
- - What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?
- - Why is it bad if Shared Module provides a service to a lazy loaded module?
- - What is circular dependency error in angular?
- - What is static injector error in angular?
- - How to create logger service in angular?
+|Sl.No|  Questions                                                             |
+|-----|------------------------------------------------------------------------|
+| 01. |[What is Angular Language Service?](#q-what-is-angular-language-service)|
+| 02. |[How do you install angular language service in the project?](#q-how-do-you-install-angular-language-service-in-the-project)|
+| 03. |[What is a DI token?](#q-what-is-a-di-token)|
+| 04. |[How to make sure that single instance will be used in an entire application?](#q-how-to-make-sure-that-single-instance-will-be-used-in-an-entire-application)|
+| 05. |[How do you reference the host of a component?](#q-how-do-you-reference-the-host-of-a-component)|
+| 06. |[What are the difference between @Inject and @Injectable?](#q-what-are-the-difference-between-inject-and-injectable)|
+| 07. |[What does forwardRef do?](#q-what-does-forwardref-do)|
+| 08. |[How will you intercept http to inject header to each http call?](#q-how-will-you-intercept-http-to-inject-header-to-each-http-call)|
+| 09. |[How will you parallelize multiple observable call?](#q-how-will-you-parallelize-multiple-observable-call)|
+| 10. |[How will you put one async call before another?](#q-how-will-you-put-one-async-call-before-another)|
+| 11. |[How would you make sure an api call that needs to be called only once but with multiple conditions?](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions)|
+| 12. |[What is defer in promise?](#q-what-is-defer-in-promise)|
+| 13. |[Why do we need provider aliases?](#q-why-do-we-need-provider-aliases)|
+| 14. |[What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?](#q-what-module-would-you-put-a-singleton-service-whose-instance-will-be-shared-throughout-the-application-eg-exceptionservice-andloggerservice)|
+| 15. |[Why is it bad if Shared Module provides a service to a lazy loaded module?](#q-why-is-it-bad-if-shared-module-provides-a-service-to-a-lazy-loaded-module)|
+| 16. |[What is circular dependency error in angular?](#q-what-is-circular-dependency-error-in-angular)|
+| 17. |[What is static injector error in angular?](#q-what-is-static-injector-error-in-angular)|
+| 18. |[How to create logger service in angular?](#q-how-to-create-logger-service-in-angular)|
 
 
 ### 10. Angular Template
