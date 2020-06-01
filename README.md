@@ -315,19 +315,21 @@
 
 ### 13. Miscellaneous
 
- - How to display only month in Angular?
- - What is the purpose of base href tag?
- - What is type narrowing?
- - How to inject the dynamic script in angular?
- - How do you use a JavaScript third party lib in an Angular App?
- - How to configure Webpack with Angular?
- - How do you provide build configuration for multiple locales?
- - What would you have in a shared module?
- - What would you not put shared module?
- - What is the difference between scan() vs reduce()?
- - Can you talk about a bug related to a race condition, how to solve it and how to test it?
- - Explain the difference between layout, painting and compositing.
- - Write a program to perform column sorting using angular-material?
+|Sl.No|  Questions                           |
+|-----|--------------------------------------|
+| 01. |[How to display only month in Angular?](#q-how-to-display-only-month-in-angular)|
+| 02. |[What is the purpose of base href tag?](#q-what-is-the-purpose-of-base-href-tag)|
+| 03. |[What is type narrowing?](#q-what-is-type-narrowing)|
+| 04. |[How to inject the dynamic script in angular?](#q-how-to-inject-the-dynamic-script-in-angular)|
+| 05. |[How do you use a JavaScript third party lib in an Angular App?](#q-how-do-you-use-a-javascript-third-party-lib-in-an-angular-app)|
+| 06. |[How to configure Webpack with Angular?](#q-how-to-configure-webpack-with-angular)|
+| 07. |[How do you provide build configuration for multiple locales?](#q-how-do-you-provide-build-configuration-for-multiple-locales)|
+| 08. |[What would you have in a shared module?](#q-what-would-you-have-in-a-shared-module)|
+| 09. |[What would you not put shared module?](#q-what-would-you-not-put-shared-module)|
+| 10. |[What is the difference between scan() vs reduce()?](#q-what-is-the-difference-between-scan-vs-reduce)|
+| 11. |[Can you talk about a bug related to a race condition, how to solve it and how to test it?](#q-can-you-talk-about-a-bug-related-to-a-race-condition-how-to-solve-it-and-how-to-test-it)|
+| 12. |[Explain the difference between layout, painting and compositing.](#q-explain-the-difference-between-layout-painting-and-compositing)
+| 13. |[Write a program to perform column sorting using angular-material?](#q-write-a-program-to-perform-column-sorting-using-angular-material)|
 
 <br/>
 
