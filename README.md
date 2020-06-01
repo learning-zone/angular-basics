@@ -279,19 +279,21 @@
 
 ### 11. Angular Animations
 
- - What is State function?
- - What is Style function?
- - What is Angular DSL?
- - What is the purpose of animate function?
- - What is transition function?
- - How would you animate routing?
- - How do you define the transition between two states in Angular?
- - What selector force a style down through the child component tree into all the child component views?
- - How can you add an active class to a selected element in a list component?
- - How would you select a custom component to style it.
- - What pseudo-class selector targets styles in the element that hosts the component?
- - How would you select all the child components' elements?
- - How would you select a css class in any ancestor of the component host element, all the way up to the document root?
+|Sl.No|  Quesions                                          |
+|-----|----------------------------------------------------|
+| 01. |[What is State function?](#q-what-is-state-function)|
+| 02. |[What is Style function?](#q-what-is-style-function)|
+| 03. |[What is Angular DSL?](#q-what-is-angular-dsl)|
+| 04. |[What is the purpose of animate function?](#q-what-is-the-purpose-of-animate-function)|
+| 05. |[What is transition function?](#q-what-is-transition-function)|
+| 06. |[How would you animate routing?](#q-how-would-you-animate-routing)|
+| 07. |[How do you define the transition between two states in Angular?](#q-how-do-you-define-the-transition-between-two-states-in-angular)|
+| 08. |[What selector force a style down through the child component tree into all the child component views?](#q-what-selector-force-a-style-down-through-the-child-component-tree-into-all-the-child-component-views)|
+| 09. |[How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)|
+| 10. |[How would you select a custom component to style it.](#q-how-would-you-select-a-custom-component-to-style-it)|
+| 11. |[What pseudo-class selector targets styles in the element that hosts the component?](#q-what-pseudo-class-selector-targets-styles-in-the-element-that-hosts-the-component)|
+| 12. |[How would you select all the child components' elements?](#q-how-would-you-select-all-the-child-components-elements)|
+| 13. |[How would you select a css class in any ancestor of the component host element, all the way up to the document root?](#q-how-would-you-select-a-css-class-in-any-ancestor-of-the-component-host-element-all-the-way-up-to-the-document-root)|
 
 
 ### 12. Performance
