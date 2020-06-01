@@ -108,36 +108,38 @@
 
 ### 4. Component Interaction
 
-  - What are components in angular?
-  - What are directives in angular?
-  - What are the differences between Component and Directive?
-  - What is the purpose of ngFor directive?
-  - What are dynamic components?
-  - What are the class decorators in Angular?
-  - What are class field decorators?
-  - Explain local reference variables, @ViewChild() and @ContentChild().
-  - Can we create two Components with the same name in two different .ts files?
-  - How do you get a reference to a child component?
-  - How do you listen for events in a component?
-  - How do you force a change detection cycle?
-  - How would you get a reference to a parent component?
-  - What are entryComponents?
-  - When building custom form components, what interface do they components need to implement to particpate in forms?
-  - How Event Emitters works in Angular?
-  - What is the difference between an Annotation and a Decorator in Angular?
-  - What is the process of inserting an embedded view from a prepared TemplateRef?
-  - List the differences between Angular components vs directives?
-  - How can we bind a variable with DOM element in Angular?
-  - What is Self and Host Decorator in Angular?
-  - How do components communicate with each other?
-  - How to dynamically create a component in Angular?
-  - Why EventEmitter is needed for @Output decorator?
-  - Why would you use renderer2 methods instead of using native element methods?
-  - What does lean component mean to you?
-  - How would you create a component to display error messages throughout your application?
-  - What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?
-  - Which components will be notified when an event is emitted?
-  - What is the difference between Stateless and Stateful Component?
+|Sl.No|  Questions                                                         |
+|-----|--------------------------------------------------------------------|
+| 01. |[What are components in angular?](#q-what-are-components-in-angular)|
+| 02. |[What are directives in angular?](#q-what-are-directives-in-angular)|
+| 03. |[What are the differences between Component and Directive?](#q-what-are-the-differences-between-component-and-directive)|
+| 04. |[What is the purpose of ngFor directive?](#q-what-is-the-purpose-of-ngfor-directive)|
+| 05. |[What are dynamic components?](#q-what-are-dynamic-components)|
+| 06. |[What are the class decorators in Angular?](#q-what-are-the-class-decorators-in-angular)|
+| 07. |[What are class field decorators?](#q-what-are-class-field-decorators)|
+| 08. |[Explain local reference variables, @ViewChild() and @ContentChild().](#q-explain-local-reference-variables-viewchild-and-contentchild)|
+| 09. |[Can we create two Components with the same name in two different .ts files?](#q-can-we-create-two-components-with-the-same-name-in-two-different-ts-files)|
+| 10. |[How do you get a reference to a child component?](#q-how-do-you-get-a-reference-to-a-child-component)|
+| 11. |[How do you listen for events in a component?](#q-how-do-you-listen-for-events-in-a-component)|
+| 12. |[How do you force a change detection cycle?](#q-how-do-you-force-a-change-detection-cycle)|
+| 13. |[How would you get a reference to a parent component?](#q-how-would-you-get-a-reference-to-a-parent-component)|
+| 14. |[What are entryComponents?](#q-what-are-entrycomponents)|
+| 15. |[When building custom form components, what interface do they components need to implement to particpate in forms?](#q-when-building-custom-form-components-what-interface-do-they-components-need-to-implement-to-particpate-in-forms)|
+| 16. |[How Event Emitters works in Angular?](#q-how-event-emitters-works-in-angular)|
+| 17. |[What is the difference between an Annotation and a Decorator in Angular?](#q-what-is-the-difference-between-an-annotation-and-a-decorator-in-angular)|
+| 18. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#q-what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
+| 19. |[List the differences between Angular components vs directives?](#q-list-the-differences-between-angular-components-vs-directives)|
+| 20. |[How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)|
+| 21. |[What is Self and Host Decorator in Angular?](#q-what-is-self-and-host-decorator-in-angular)|
+| 22. |[How do components communicate with each other?](#q-how-do-components-communicate-with-each-other)|
+| 23. |[How to dynamically create a component in Angular?](#q-how-to-dynamically-create-a-component-in-angular)|
+| 24. |[Why EventEmitter is needed for @Output decorator?](#q-why-eventemitter-is-needed-for-output-decorator)|
+| 25. |[Why would you use renderer2 methods instead of using native element methods?](#q-why-would-you-use-renderer2-methods-instead-of-using-native-element-methods)|
+| 26. |[What does lean component mean to you?](#q-what-does-lean-component-mean-to-you)|
+| 27. |[How would you create a component to display error messages throughout your application?](#q-how-would-you-create-a-component-to-display-error-messages-throughout-your-application)|
+| 28. |[What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?](#q-what-is-the-difference-between-a-smart-container-component-and-dumb-presentational-component-what-is-a-good-use-case-example-what-are-the-advantages)|
+| 29. |[Which components will be notified when an event is emitted?](#q-which-components-will-be-notified-when-an-event-is-emitted)|
+| 30. |[What is the difference between Stateless and Stateful Component?](#q-what-is-the-difference-between-stateless-and-stateful-component)|
 
 
 ### 5. Angular Forms 
