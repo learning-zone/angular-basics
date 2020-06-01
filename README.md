@@ -357,6 +357,9 @@
 |ng xi18n --output-path src/locale    |Internationalization |
 |ng generate web-worker app           |Add a Web Worker to angular app|
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. ***What is difference between Angular JIT compilation and AOT compilation?***
 Angular has 2 types of build dev build or prod build :
@@ -391,6 +394,10 @@ ng build --prod              -  this is for production build
 * **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
 
 *Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. ***What are the advantages with AOT?***
 1. **Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
@@ -459,6 +466,10 @@ export class App {
   }
 }
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. ***How an Angular application gets started or loaded?***
 
 The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
@@ -771,6 +782,10 @@ observerB: 2
 observerA: 3
 observerB: 3
 ```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
 #### Q. ***What is the difference between AngularJS and Angular?***
 
 Angular is a completely revived component-based framework in which an application is a tree of individual 
@@ -826,6 +841,9 @@ components.
 * Steep learning curve
 * Migrating legacy systems from AngularJS to Angular requires time
 
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. ***How do you add web workers in your application?***
 
@@ -852,6 +870,10 @@ if (typeof Worker !== 'undefined') {
 }
 ```
 *Note: You may need to refactor your initial scaffolding web worker code for sending messages to and from.*
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. ***What are directives in angular?***
 
@@ -998,6 +1020,10 @@ Angular offers lifecycle hooks that provide visibility into these key life momen
 * **ngAfterViewInit:** This is called in response after Angular initializes the component's views and child views.
 * **ngAfterViewChecked:** This is called in response after Angular checks the component's views and child views.
 * **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
+
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
 
 #### Q. ***What is data binding in Angular?***
 
