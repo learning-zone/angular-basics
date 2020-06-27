@@ -604,7 +604,7 @@ const subject = new Rx.BehaviorSubject();
 
 // subscriber 1
 subject.subscribe((data) => {
-    console.log('Subscriber A:', data);
+    console.log('Subscriber A: ', data);
 });
 
 subject.next(Math.random());
@@ -612,7 +612,7 @@ subject.next(Math.random());
 
 // subscriber 2
 subject.subscribe((data) => {
-    console.log('Subscriber B:', data);
+    console.log('Subscriber B: ', data);
 });
 
 subject.next(Math.random());
@@ -1057,14 +1057,14 @@ Angular creates and renders components along with their children, checks when th
 
 Angular offers lifecycle hooks that provide visibility into these key life moments and the ability to act when they occur.
 
-* **ngOnChanges:** When the value of a data bound property changes, then this method is called.
-* **ngOnInit:** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
-* **ngDoCheck:** This is for the detection and to act on changes that Angular can't or won't detect on its own.
-* **ngAfterContentInit:** This is called in response after Angular projects external content into the component\'s view.
-* **ngAfterContentChecked:** This is called in response after Angular checks the content projected into the component.
-* **ngAfterViewInit:** This is called in response after Angular initializes the component\'s views and child views.
-* **ngAfterViewChecked:** This is called in response after Angular checks the component\'s views and child views.
-* **ngOnDestroy:** This is the cleanup phase just before Angular destroys the directive/component.
+* **ngOnChanges** When the value of a data bound property changes, then this method is called.
+* **ngOnInit** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
+* **ngDoCheck** This is for the detection and to act on changes that Angular can't or won't detect on its own.
+* **ngAfterContentInit** This is called in response after Angular projects external content into the component\'s view.
+* **ngAfterContentChecked** This is called in response after Angular checks the content projected into the component.
+* **ngAfterViewInit** This is called in response after Angular initializes the component\'s views and child views.
+* **ngAfterViewChecked** This is called in response after Angular checks the component\'s views and child views.
+* **ngOnDestroy** This is the cleanup phase just before Angular destroys the directive/component.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -1074,29 +1074,29 @@ Angular offers lifecycle hooks that provide visibility into these key life momen
 
 Data binding is a core concept in Angular and allows to define communication between a component and the DOM, making it very easy to define interactive applications without worrying about pushing and pulling data.
 
-**From the Component to the DOM:**  
-**1. Interpolation:** `{{ value }}`: Adds the value of a property from the component
+**From the Component to the DOM**  
+**1. Interpolation** `{{ value }}`: Adds the value of a property from the component
 
 ```html
 <li>Name: {{ user.name }}</li>
 <li>Address: {{ user.address }}</li>
 ```
 
-**2. Property binding:** `[property] = "value"`: The value is passed from the component to the specified property or simple HTML attribute
+**2. Property binding** `[property] = "value"`: The value is passed from the component to the specified property or simple HTML attribute
 
 ```html
 <input type="email" [value]="user.email">
 ```
 
-**From the DOM to the Component:**  
+**From the DOM to the Component**  
 
-**3. Event binding:** `(event) = "function"`: When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component
+**3. Event binding** `(event) = "function"`: When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component
 
 ```html
 <button (click)="logout()"></button>
 ``` 
 
-**4. Two-way data binding:** `[(ngModel)] = "value"`: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync
+**4. Two-way data binding** `[(ngModel)] = "value"`: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync
 
 ```html
 <input type="email" [(ngModel)]="user.email">
@@ -1109,7 +1109,7 @@ Data binding is a core concept in Angular and allows to define communication bet
 
 Metadata is used to decorate a class so that it can configure the expected behavior of the class. The metadata is represented by decorators  
 
-**1. Class Decorators:** e.g. @Component and @NgModule
+**1. Class Decorators** e.g. @Component and @NgModule
 
 ```typescript
 import { NgModule, Component } from '@angular/core';
@@ -1134,7 +1134,7 @@ export class MyModule {
   }
 }
 ```
-**2. Property Decorators:** Used for properties inside classes, e.g. @Input and @Output
+**2. Property Decorators** Used for properties inside classes, e.g. @Input and @Output
 
 ```typescript
 import { Component, Input } from '@angular/core';
@@ -1148,7 +1148,7 @@ export class MyComponent {
     @Input() title: string;
 }
 ```
-**3. Method Decorators:** Used for methods inside classes, e.g. @HostListener
+**3. Method Decorators** Used for methods inside classes, e.g. @HostListener
 
 ```typescript
 import { Component, HostListener } from '@angular/core';
@@ -1165,7 +1165,7 @@ export class MyComponent {
 }
 ```
 
-**4. Parameter Decorators:** Used for parameters inside class constructors, e.g. @Inject
+**4. Parameter Decorators** Used for parameters inside class constructors, e.g. @Inject
 
 ```typescript
 import { Component, Inject } from '@angular/core';
@@ -1196,7 +1196,7 @@ Below are the list of design goals of Angular\'s service workers,
 * When changes are published then it immediately updates in the background
 * Service workers saves the bandwidth by downloading the resources only when they changed.
 
-*Syntax:*
+*Syntax*
 ```bash
 ng add @angular/pwa --project *project-name*
 ```
@@ -1450,7 +1450,7 @@ export class BirthdayComponent {
 ```
 #### Q. ***What is a parameterized pipe?***
 
-A pipe can accept any number of optional parameters to fine-tune its output. The parameterized pipe can be created by declaring the pipe name with a colon ( : ) and then the parameter value. If the pipe accepts multiple parameters, separate the values with colons. Let\'s take a birthday example with a particular format(dd/mm/yyyy):
+A pipe can accept any number of optional parameters to fine-tune its output. The parameterized pipe can be created by declaring the pipe name with a colon (` : `) and then the parameter value. If the pipe accepts multiple parameters, separate the values with colons. Let\'s take a birthday example with a particular format(dd/mm/yyyy)
 ```typescript
 import { Component } from '@angular/core';
 
@@ -2016,7 +2016,7 @@ A handler that implements the Observer interface for receiving observable notifi
 ```javascript
 myObservable.subscribe(myObserver);
 ```
-*Note: If you don't supply a handler for a notification type, the observer ignores notifications of that type.*
+*Note: If you don\'t supply a handler for a notification type, the observer ignores notifications of that type.*
 
 #### Q. ***What is multicasting?***
 
@@ -2157,10 +2157,10 @@ No, custom elements bootstrap (or start) automatically when they are added to th
 #### Q. ***How custom elements works internally?***
 
 Below are the steps in an order about custom elements functionality,
-1. **App registers custom element with browser:** Use the createCustomElement() function to convert a component into a class that can be registered with the browser as a custom element.
-2. **App adds custom element to DOM:**  Add custom element just like a built-in HTML element directly into the DOM.
-3. **Browser instantiate component based class:** Browser creates an instance of the registered class and adds it to the DOM.
-4. **Instance provides content with data binding and change detection:** The content with in template is rendered using the component and DOM data.
+1. **App registers custom element with browser** Use the createCustomElement() function to convert a component into a class that can be registered with the browser as a custom element.
+2. **App adds custom element to DOM**  Add custom element just like a built-in HTML element directly into the DOM.
+3. **Browser instantiate component based class** Browser creates an instance of the registered class and adds it to the DOM.
+4. **Instance provides content with data binding and change detection** The content with in template is rendered using the component and DOM data.
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -2168,8 +2168,8 @@ Below are the steps in an order about custom elements functionality,
 #### Q. ***How to transfer components to custom elements?***
 
 Transforming components to custom elements involves **two** major steps,
-1. **Build custom element class:** Angular provides the `createCustomElement()` function for converting an Angular component (along with its dependencies) to a custom element. The conversion process implements `NgElementConstructor` interface, and creates a constructor class which is used to produce a self-bootstrapping instance of Angular component.
-2. **Register element class with browser:** It uses `customElements.define()` JS function, to register the configured constructor and its associated custom-element tag with the browser\'s `CustomElementRegistry`. When the browser encounters the tag for the registered element, it uses the constructor to create a custom-element instance.
+1. **Build custom element class** Angular provides the `createCustomElement()` function for converting an Angular component (along with its dependencies) to a custom element. The conversion process implements `NgElementConstructor` interface, and creates a constructor class which is used to produce a self-bootstrapping instance of Angular component.
+2. **Register element class with browser** It uses `customElements.define()` JS function, to register the configured constructor and its associated custom-element tag with the browser\'s `CustomElementRegistry`. When the browser encounters the tag for the registered element, it uses the constructor to create a custom-element instance.
 
 #### Q. ***What are the mapping rules between Angular component and custom element?***
 
@@ -2188,11 +2188,12 @@ class MyContainer {
 }
 ```
 After applying types typescript validates input value and their types,
+
 ```javascirpt
 const container = document.createElement('my-container') as NgElement & WithProperties<{message: string}>;
 container.message = 'Welcome to Angular elements!';
-container.message = true;  // <-- ERROR: TypeScript knows this should be a string.
-container.greet = 'News';  // <-- ERROR: TypeScript knows there is no `greet` property on `container`.
+container.message = true;  // ERROR: TypeScript knows this should be a string.
+container.greet = 'News';  // ERROR: TypeScript knows there is no `greet` property on `container`.
 ```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -2383,9 +2384,9 @@ In Angular, You must write metadata with the following general constraints,
 
 The AOT compiler works in three phases,  
 
-**1. Code Analysis:** In this phase, the TypeScript compiler and AOT collector create a representation of the source.  
-**2. Code Generation:** It handles the interpretation as well as places restrictions on what it interprets.  
-**3. Template Type Checking:** In this phase, the Angular template compiler uses the TypeScript compiler to validate the binding expressions in templates.  
+**1. Code Analysis** In this phase, the TypeScript compiler and AOT collector create a representation of the source.  
+**2. Code Generation** It handles the interpretation as well as places restrictions on what it interprets.  
+**3. Template Type Checking** In this phase, the Angular template compiler uses the TypeScript compiler to validate the binding expressions in templates.  
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -2672,9 +2673,9 @@ class MyComponent {
 
 The dependencies section of package.json with in an angular application can be divided as follow,  
 
-**1. Angular packages:** Angular core and optional modules; their package names begin @angular/.  
-**2. Support packages:** Third-party libraries that must be present for Angular apps to run.  
-**3. Polyfill packages:** Polyfills plug gaps in a browser\'s JavaScript implementation.  
+**1. Angular packages** Angular core and optional modules; their package names begin @angular/.  
+**2. Support packages** Third-party libraries that must be present for Angular apps to run.  
+**3. Polyfill packages** Polyfills plug gaps in a browser\'s JavaScript implementation.  
 
 #### Q. ***What is zone?***
 
@@ -2697,7 +2698,7 @@ ng lint
 
 #### Q. ***What is State function?***
 
-Angular\'s state() function is used to define different states to call at the end of each transition. This function takes two arguments: a unique name like open or closed and a style() function.
+Angular\'s state() function is used to define different states to call at the end of each transition. This function takes two arguments a unique name like open or closed and a style() function.
 For example, you can write a open state function
 ```typescript
 state('open', style({
@@ -2825,17 +2826,13 @@ ng new ivy-demo-app --enable-ivy
 
 #### Q. ***What are the features included in ivy preview?***
 
-
 You can expect below features with Ivy preview,
 * Generated code that is easier to read and debug at runtime
 * Faster re-build time
 * Improved payload size
 * Improved template type checking
 
-
-
 #### Q. ***Can I use AOT compilation with Ivy?***
-
 
 Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster. So you need set the default build options(with in angular.json) for your project to always use AOT compilation.
 ```typescript
@@ -2860,13 +2857,9 @@ Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster
 
 #### Q. ***What is Angular Language Service?***
 
-
 The Angular Language Service is a way to get completions, errors, hints, and navigation inside your Angular templates whether they are external in an HTML file or embedded in annotations/decorators in a string. It has the ability to autodetect that you are opening an Angular file, reads your `tsconfig.json` file, finds all the templates you have in your application, and then provides all the language services.
 
-
-
 #### Q. ***How do you install angular language service in the project?***
-
 
 You can install Angular Language Service in your project with the following npm command
 ```javascript
@@ -2880,56 +2873,38 @@ After that add the following to the "compilerOptions" section of your project\'s
 ```
 *Note: The completion and diagnostic services works for `.ts` files only. You need to use custom plugins for supporting HTML files.*
 
-
-
 #### Q. ***What are the limitations with web workers?***
-
 
 1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, don't support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
 2. Running Angular in web worker using `@angular/platform-webworker` is not yet supported in Angular CLI.
 
-
-
 #### Q. ***What is Angular CLI Builder?***
-
 
 In Angular8, the CLI Builder API is stable and available to developers who want to customize the `Angular CLI` by adding or modifying commands. For example, you could supply a builder to perform an entirely new task, or to change which third-party tool is used by an existing command.
 
-
-
 #### Q. ***What is a builder?***
-
 
 A builder function is a function that uses the `Architect API` to perform a complex process such as "build" or "test". The builder code is defined in an npm package. For example, BrowserBuilder runs a webpack build for a browser target and KarmaBuilder starts the Karma server and runs a webpack build for unit tests.
 
-
-
 #### Q. ***How do you invoke a builder?***
-
 
 The Angular CLI command `ng run` is used to invoke a builder with a specific target configuration. The workspace configuration file, `angular.json`, contains default configurations for built-in builders.
 
-
-
 #### Q. ***How do you create app shell in Angular?***
 
-
 An App shell is a way to render a portion of your application via a route at build time. This is useful to first paint of your application that appears quickly because the browser can render static HTML and CSS without the need to initialize JavaScript. You can achieve this using Angular CLI which generates an app shell for running server-side of your app.
+
 ```javascript
 ng generate appShell [options] (or)
 ng g appShell [options]
 ```
-
-
-
 #### Q. ***What are the case types in Angular?***
 
-
 Angular uses capitalization conventions to distinguish the names of various types. Angular follows the list of the below case types.
-* **camelCase :** Symbols, properties, methods, pipe names, non-component directive selectors, constants uses lowercase on the first letter of the item. For example, "selectedUser"
-* **UpperCamelCase (or PascalCase):** Class names, including classes that define components, interfaces, NgModules, directives, and pipes uses uppercase on the first letter of the item.
-* **dash-case (or "kebab-case"):** The descriptive part of file names, component selectors uses dashes between the words. For example, "app-user-list".
-* **UPPER_UNDERSCORE_CASE:** All constants uses capital letters connected with underscores. For example, "NUMBER_OF_USERS".
+* **camelCase** Symbols, properties, methods, pipe names, non-component directive selectors, constants uses lowercase on the first letter of the item. For example, "selectedUser"
+* **UpperCamelCase (or PascalCase)** Class names, including classes that define components, interfaces, NgModules, directives, and pipes uses uppercase on the first letter of the item.
+* **dash-case (or "kebab-case")** The descriptive part of file names, component selectors uses dashes between the words. For example, "app-user-list".
+* **UPPER_UNDERSCORE_CASE** All constants uses capital letters connected with underscores. For example, "NUMBER_OF_USERS".
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -2945,21 +2920,20 @@ The following list of decorators comes under class decorators,
 4. @Injectable()
 5. @NgModule()
 
-
-
-
 #### Q. ***What are class field decorators?***
 
-
 The class field decorators are the statements declared immediately before a field in a class definition that defines the type of that field. Some of the examples are: @input and @output,
+
 ```typescript
 @Input() myProperty;
 @Output() myEvent = new EventEmitter();
 ```
 #### Q. ***What is declarable in Angular?***
+
 Declarable is a class type that you can add to the declarations list of an NgModule. The class types such as components, directives, and pipes comes can be declared in the module.
 
 #### Q. ***What are the restrictions on declarable classes?***
+
 Below classes shouldn't be declared,
 1. A class that\'s already declared in another NgModule
 2. Ngmodule classes
@@ -2987,7 +2961,6 @@ Basically you will see 3 main syntax in Angular DSL.
 
 #### Q. ***What is Bazel tool?***
 
-
 Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.  
 
 *Note: The Angular framework itself is built with Bazel.*
@@ -2998,10 +2971,7 @@ Below are the list of key advantages of Bazel tool,
 2. The incremental build and tests
 3. It creates the possibility to have remote builds and cache on a build farm.
 
-
-
 #### Q. ***How do you use Bazel with Angular CLI?***
-
 
 The @angular/bazel package provides a builder that allows Angular CLI to use Bazel as the build tool.  
 
@@ -3016,22 +2986,17 @@ ng new --collection=@angular/bazel
 ```
 When you use ng build and ng serve commands, Bazel is used behind the scenes and outputs the results in dist/bin folder.
 
-
-
 #### Q. ***How do you run Bazel directly?***
 
-
 Sometimes you may want to bypass the Angular CLI builder and run Bazel directly using Bazel CLI. You can install it globally using @bazel/bazel npm package. i.e, Bazel CLI is available under @bazel/bazel package. After you can apply the below common commands,
+
 ```javascrippt
 bazel build [targets] // Compile the default output artifacts of the given targets.
 bazel test [targets] // Run the tests with *_test targets found in the pattern.
 bazel run [target]: Compile the program represented by target and then run it.
 ```
 
-
-
 #### Q. ***What is angular CLI?***
-
 
 Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
 You need to install using below npm command,
@@ -3039,8 +3004,8 @@ You need to install using below npm command,
 npm install @angular/cli@latest
 ```
 Below are the list of few commands, which will come handy while creating angular projects
-1. **Creating New Project:** ng new <project-name>
-2. **Generating Components, Directives & Services:** ng generate/g <feature-name>  
+1. **Creating New Project** ng new <project-name>
+2. **Generating Components, Directives & Services** ng generate/g <feature-name>  
 The different types of commands would be,
 * ng generate class my-new-class: add a class to your application
 * ng generate component my-new-component: add a component to your application
@@ -3049,7 +3014,8 @@ The different types of commands would be,
 * ng generate module my-new-module: add a module to your application
 * ng generate pipe my-new-pipe: add a pipe to your application
 * ng generate service my-new-service: add a service to your application
-3. **Running the Project:** ng serve
+3. **Running the Project** ng serve
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -3079,27 +3045,18 @@ Example
 </project-content>
 ```
 
-
-
 #### Q. ***How can I select an element in a component template?***
-
 
 We can get a handle to the DOM element via **ElementRef** by injecting it into component\'s constructor:
 ```typescript
 constructor(myElement: ElementRef) { ... }
 ```
 
-
-
 #### Q. ***What is Redux and how does it relate to an Angular app?***
-
 
 Redux is a way to manage application state and improve maintainability of asynchronicity in application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
 
-
-
 #### Q. ***How routing works in Angular?***
-
 
 When a user navigates to a page, Angular Router performs the following steps in order:
 
@@ -3126,8 +3083,7 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 
 #### Q. ***Explain local reference variables, @ViewChild() and @ContentChild()?***
 
-
-![alt text](https://github.com/learning-zone/angular-interview-questions/blob/master/assets/viewchild-1.png)
+<img src="assets/viewchild-1.png" alt="Local Reference Variables" />
 
 The @ViewChild and @ViewChildren decorators in Angular provide a way to access and manipulate DOM elements, directives and components. @ViewChild is used to query one element from the DOM and @ViewChildren for multiple elements.
 
@@ -3139,6 +3095,7 @@ If you want to access following inside the Parent Component, use @ViewChild deco
 
 ViewChild returns the first element that matches the selector.
 Example: *@ViewChild()*
+
 ```typescript
 import { Component, Input } from '@angular/core';
 @Component({
@@ -3152,6 +3109,7 @@ export class MessageComponent {
 }
 ```
 We are using MessageComponent inside AppComponent as shown in below listing:
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -3171,6 +3129,7 @@ export class AppComponent implements OnInit {
 }
 ```
 Here MessageComponent is located inside template of AppComponent, so it can be accessed as ViewChild.
+
 ```typescript
 export class AppComponent implements OnInit, AfterViewInit {
     message: any;
@@ -3188,6 +3147,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 * **@ContentChild()**
 
 Example: MessageContainerComponent
+
 ```typescript
 import { Component } from '@angular/core';
 @Component({
@@ -3252,16 +3212,12 @@ export class MessageContainerComponent implements AfterContentInit {
 
 #### Q. ***How to make sure that single instance will be used in an entire application?***
 
-
 There are two ways to make a service a singleton in Angular:
 
 * Declare root for the value of the @Injectable() providedIn property
 * Include the service in the AppModule or in a module that is only imported by the AppModule
 
-
-
 #### Q. ***How do you reference the host of a component?***
-
 
 We can get the host element reference using
 ```typescript
@@ -3282,10 +3238,7 @@ class MyComponent {
 }
 ```
 
-
-
-#### Q. ***Why would you use renderer methods instead of using native element methods? / What is difference between Renderer and ElementRef in angular?***
-
+#### Q. ***Why would you use renderer methods instead of using native element methods? What is difference between Renderer and ElementRef in angular?***
 
 The `Renderer` is a class that is a partial abstraction over the DOM. Using the `Renderer` for manipulating the DOM doesn't break server-side rendering or Web Workers (where direct access to the DOM would break).
 
@@ -3293,15 +3246,12 @@ The `Renderer` is a class that is a partial abstraction over the DOM. Using the 
 
 There are other ways to acquire an `ElementRef` instance like `@ViewChild()`, `@ViewChildren()`, `@ContentChild()`, `@ContentChildren()`. In this case `ElementRef` is a reference to the matching element(s) in the template or children.
 
-
-
-
 #### Q. ***How would you control size of an element on resize of the window in a component?***
-
 
 ```html
 <div (window:resize)="onResize($event)"
 ```
+
 ```typescript
 @Component({
   selector: 'app-root',
@@ -3324,10 +3274,7 @@ onResize(event) {
 }
 ```
 
-
-
 #### Q. ***How to cache an observable data?***
-
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -3350,6 +3297,7 @@ export class CachedService {
 This will make an HTTP call when the fetch method is called, and any subscribers to `service.data$` ($ as a suffix basically represents a stream of values) will get the response from the `ReplaySubject`. As it replays earlier values, any subscribers who join after the HTTP call resolves will still get the previous response.
 
 If we want to trigger an update, we can just call `service.fetch()` to kick off a new HTTP call and all subscribers will be updated once the new response arrives.
+
 ```typescript
 @Component({ ... })
 export class SomeComponent implements OnInit {
@@ -5354,7 +5302,6 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 #### Q. ***How to call component function from outside the app?***
 
-
 ```typescript
 function callbackfunction(){   
    window['angularComponent'].zone.run(() => {
@@ -5378,9 +5325,7 @@ OR
 ```typescript
 window.angularComponentRef.zone.run(() => {window.angularComponentRef.componentFn('2');})
 ```
-
 #### Q. ***What is Babel and how it is used in Angular?***
-
 
 **Babel** is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones).
 
@@ -5463,7 +5408,6 @@ export default {
 </div>
 
 #### Q. ***How to configure Angular with Webpack?***
-
 
 **Install Angular Dependencies**  
 ```
@@ -5691,7 +5635,6 @@ There are three main reasons to create a Universal version of your app.
 
 #### Q. ***What is difference between Stateful and Stateless Pipes in angular?***
 
-
 * **Stateless pipes** are pure functions that flow input data through without remembering anything or causing detectable side-effects. Most pipes are stateless. The CurrencyPipe we used and the length pipe we created are examples of a stateless pipe.
 
 * **Stateful pipes** are those which can manage the state of the data they transform. A pipe that creates an HTTP request, stores the response and displays the output, is a stateful pipe. Stateful Pipes should be used cautiously. For example Angular provides `AsyncPipe`, which is stateful. 
@@ -5700,14 +5643,12 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 
 #### Q. ***What is index property in ngFor directive?***
 
-
 The `index` property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template. For example, you can capture the index in a variable named indexVar and displays it with the employee\'s name using ngFor directive as below.
 ```html
 <div *ngFor="let employee of employees; let i=index">{{i + 1}} - {{employee.name}}</div>
 ```
 
 #### Q. ***How do you provide build configuration for multiple locales?***
-
 
 You can provide build configuration such as translation file path, name, format and application url in configuration settings of `Angular.json` file. For example, the German version of your application configured the build as follows,
 ```json
@@ -5731,7 +5672,6 @@ To summarise: `@Input` is used to pass data from parent to child and the opposit
 
 
 #### Q. ***Why yarn is better than npm?***
-
 
 Yarn has a few differences from npm. First of all, Yarn **caches** all installed packages. Yarn is installing the packages simultaneously, and that is why Yarn is faster than NPM. They both download packages from npm repository. Yarn generates `yarn.lock` to lock down the versions of package’s dependencies by default. On the contrary, npm for this purpose offers shrinkwrap CLI command.
 
@@ -5757,7 +5697,7 @@ Binds a host element property (here, the CSS class valid) to a directive/compone
 
 The Renderer2 class is an abstraction provided by Angular in the form of a service that allows to manipulate elements of your app without having to touch the DOM directly. This is the recommended approach because it then makes it easier to develop apps that can be rendered in environments that don’t have DOM access, like on the server, in a web worker or on native mobile.
 
-**Example:** Renderer2 in Angular
+**Example** Renderer2 in Angular
 
 **Basic Usage**  
 
@@ -5871,7 +5811,7 @@ Lazy loading is the best practice of loading expensive resources on-demand. This
 
 The eagerly loaded scenario your app to create a singleton, instead of creates new instance every time.
 
-**Example:**  
+**Example**  
 
 Suppose we had listed the UserService in the module\'s providers. Suppose every module imports this SharedModule. When the app starts, Angular eagerly loads the AppModule and the ContactModule. Both instances of the imported SharedModule would provide the UserService. Angular registers one of them in the root app injector (see above). Then some component injects UserService, Angular finds it in the app root injector, and delivers the app-wide singleton UserService.
 
@@ -5957,7 +5897,7 @@ Component styles normally apply only to the HTML in the component\'s own templat
 
 Use the `::ng-deep` shadow-piercing descendant combinator to force a style down through the child component tree into all the child component views. The `::ng-deep` combinator works to any depth of nested components, and it applies to both the view children and content children of the component.
 
-**Example:**  
+**Example**  
 
 The following example targets all `<h3>` elements, from the host element down through this component to all of its child elements in the DOM.
 
@@ -5986,7 +5926,8 @@ Child content.
 
 The brackets, `[]`, tell Angular to evaluate the template expression. If you omit the brackets, Angular treats the string as a constant and initializes the target property with that string
 
-**app.component.html**  
+**app.component.html** 
+
 ```html
 <app-item-detail childItem="parentItem"></app-item-detail>
 ```
@@ -6052,4 +5993,3 @@ You should omit the brackets when all of the following are true
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
-
