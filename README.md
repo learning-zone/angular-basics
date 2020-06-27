@@ -854,7 +854,7 @@ components.
 * It is big and complicated due to the multiple ways of doing the same thing.
 * Implementations scale poorly.
 * If a user of an AngularJS application disables JavaScript, nothing but the basic page is visible.
-* There’s a lagging UI if there are more than 200 watchers.
+* There is a lagging UI if there are more than 200 watchers.
 
 
 **b.) Angular**
@@ -1396,7 +1396,7 @@ export class InnerHtmlBindingComponent {
 
 #### Q. ***What is Interpolation?***
 
-Interpolation is a special syntax that Angular converts into property binding. It’s a convenient alternative to property binding. It is represented by double curly braces(`{{ }}`). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
+Interpolation is a special syntax that Angular converts into property binding. It is a convenient alternative to property binding. It is represented by double curly braces(`{{ }}`). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
 
 ```html
 <h3>
@@ -3296,8 +3296,9 @@ show(name: HTMLInputElement){
 
 #### Q. ***What is shadow DOM? How is it helping Angular to perform better?***
 
-Shadow DOM basically allows group of DOM implementation to be hidden inside a single element and encapsulate styles to the element. Whenever we create a component, Angular puts it’s template into a shadowRoot, which is the Shadow DOM of that particular component.     
+Shadow DOM basically allows group of DOM implementation to be hidden inside a single element and encapsulate styles to the element. Whenever we create a component, Angular puts its template into a shadowRoot, which is the Shadow DOM of that particular component.     
 Example:
+
 ```typescript
 @Component({
   templateUrl: 'card.html',
@@ -3656,7 +3657,7 @@ export class AppModule { }
 
 Parallel Http requests are required when application need to make simultaneously to get data and display result to end user. 
 
-* **forkJoin()**: waits for each HTTP request to complete and group’s all the observables returned by each HTTP call into a single observable array and finally return that observable array.  
+* **forkJoin()**: waits for each HTTP request to complete and groups all the observables returned by each HTTP call into a single observable array and finally return that observable array.  
 ```typescript
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -3997,16 +3998,17 @@ export class AppComponent {
 
 Transclusion is a way to let you define a fixed view template, and at the same time allow you to define a slot for dynamic content by using `ng-content` tag.
 
-**Content Projection**: Content projection consists in passing a portion of the DOM tree from a parent component to a child component. It’s perfect to build reusable components such as dialogs, modals, tabs, and the like.
+**Content Projection**: Content projection consists in passing a portion of the DOM tree from a parent component to a child component. It is perfect to build reusable components such as dialogs, modals, tabs, and the like.
 
-Example: create a pop-up window with customizable content, and I’d like to “pass” that content to the pop-up as follows:
+Example: 
+
 ```html
 <app-popup-window [isOpen]="showPopup" title="Test pop-up">
    This is the content of the pop-up 
 </app-popup-window>
 ```
 
-Note that I’m also passing a title as an input to that component. Now, by default, the above code would not project the content. In order to make content projection happen, we need to add the ng-content directive somewhere in the template of the child component:
+Note that I am also passing a title as an input to that component. Now, by default, the above code would not project the content. In order to make content projection happen, we need to add the ng-content directive somewhere in the template of the child component:
 ```html
 <div class="modalW-content">
       <div class="modalW-header">
@@ -4019,7 +4021,7 @@ Note that I’m also passing a title as an input to that component. Now, by defa
 </div>
 ```
 
-`ng-content` works very much like `router-outlet`: It’s a directive that indicates where dynamic content is going to be loaded.
+`ng-content` works very much like `router-outlet`: It is a directive that indicates where dynamic content is going to be loaded.
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -4576,9 +4578,10 @@ export class AppModule { }
 ```
 There are several ways how Angular components can pass data around:
 * Using `@Input` and `@Output`
-* By injecting parent component through constructor or child components through `@ViewChild`, `@ViewChildren`, `@ContentChild`, `@ContentChildren` and directly calling component’s API
+* By injecting parent component through constructor or child components through `@ViewChild`, `@ViewChildren`, `@ContentChild`, `@ContentChildren` and directly calling components API
 * Using services (this covers state management libraries like ngrx)
 * Using router parameters
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -4609,23 +4612,27 @@ In the process of developing an app we might create a feature which we do not wa
 #### Q. ***What is difference between Angular Modules and JavaScript Modules?***
 
 **JavaScript modules**  
-In JavaScript, modules are individual files with JavaScript code in them. To make what’s in them available, you write an export statement, usually after the relevant code, like this:
+In JavaScript, modules are individual files with JavaScript code in them. To make what is in them available, you write an export statement, usually after the relevant code, like this:
+
 ```typescript
 export class AppComponent { ... }
 ```
-Then, when you need that file’s code in another file, you import it like this:
+Then, when you need that file code in another file, you import it like this:
+
 ```typescript
 import { AppComponent } from './app.component';
 ```
 JavaScript modules help you namespace, preventing accidental global variables.
+
 **NgModules**  
-NgModules are classes decorated with @NgModule. The @NgModule decorator’s imports array tells Angular what other NgModules the current module needs. The modules in the imports array are different than JavaScript modules because they are NgModules rather than regular JavaScript modules. 
+NgModules are classes decorated with `@NgModule`. The `@NgModule` decorator imports array tells Angular what other NgModules the current module needs. The modules in the imports array are different than JavaScript modules because they are NgModules rather than regular JavaScript modules. 
 
 **The NgModule classes differ from JavaScript module in the following key ways:**
 * An NgModule bounds declarable classes only. Declarables are the only classes that matter to the Angular compiler.
-* Instead of defining all member classes in one giant file as in a JavaScript module, you list the modules classes in the  @NgModule.declarations list.
+* Instead of defining all member classes in one giant file as in a JavaScript module, you list the modules classes in the  `@NgModule`.declarations list.
 * An NgModule can only export the declarable classes it owns or imports from other modules. It does not declare or export any other kind of class.
-* Unlike JavaScript modules, an NgModule can extend the entire application with services by adding providers to the  @NgModule.providers list.
+* Unlike JavaScript modules, an NgModule can extend the entire application with services by adding providers to the  `@NgModule`.providers list.
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -4808,7 +4815,7 @@ In the parent, we create a function to receive the message and set it equal to t
 
 In the child, we declare a messageEvent variable with the Output decorator and set it equal to a new event emitter. Then we create a function named sendMessage that calls emit on this event with the message we want to send. Lastly, we create a button to trigger this function.
 
-The parent can now subscribe to this messageEvent that’s outputted by the child component, then run the receive message function whenever this event occurs.
+The parent can now subscribe to this messageEvent that is outputted by the child component, then run the receive message function whenever this event occurs.
 
 **parent.component.ts**  
 ```typescript
@@ -4861,7 +4868,7 @@ export class ChildComponent {
 
 When passing data between components that lack a direct connection, such as siblings, grandchildren, etc, you should you a shared service. When you have data that should aways been in sync, the `RxJS BehaviorSubject` very useful in this situation.
 
-You can also use a regular RxJS Subject for sharing data via the service, but here’s why I prefer a BehaviorSubject.
+You can also use a regular RxJS Subject for sharing data via the service, but here is why I prefer a BehaviorSubject.
 
 * It will always return the current value on subscription - there is no need to call `onnext`
 * It has a `getValue()` function to extract the last value as raw data.
@@ -4871,7 +4878,7 @@ In the service, we create a private BehaviorSubject that will hold the current v
 
 The parent, child, and sibling components all receive the same treatment. We inject the DataService in the constructor, then subscribe to the currentMessage observable and set its value equal to the message variable.
 
-Now if we create a function in any one of these components that changes the value of the message. when this function is executed the new data it’s automatically broadcast to all other components.
+Now if we create a function in any one of these components that changes the value of the message. when this function is executed the new data it is automatically broadcast to all other components.
 
 **data.service.ts**  
 ```typescript
@@ -4949,7 +4956,8 @@ export class SiblingComponent implements OnInit {
 #### Q. ***How to dynamically create a component in Angular?***
 
 **1. Dynamic Component**  
-First of all, we’ll create the Component to be dynamically added to the DOM:
+First of all, we will create the Component to be dynamically added to the DOM:
+
 ```typescript
 import { Component } from '@angular/core'
 @Component({
@@ -4959,7 +4967,7 @@ import { Component } from '@angular/core'
 export class DynamicComponent { }
 ```
 **2. Service Loader**  
-The Service must have an exposed method to set the ViewContainerRef because it’s not possible to inject the ViewContainerRef by using the service’s constructor due to it not being a Component, so we must use a setter method: setRootViewContainer.
+The Service must have an exposed method to set the ViewContainerRef because it is not possible to inject the ViewContainerRef by using the service constructor due to it not being a Component, so we must use a setter method: setRootViewContainer.
 addDynamicContainer adds the DynamicComponent to the DOM.
 ```typescript
 import {
@@ -4987,7 +4995,8 @@ export class Service {
 }
 ```
 **3. Main Component**  
-The main component will inject it’s container (ViewContainerRef ) to the service:
+The main component will inject it is container (ViewContainerRef) to the service:
+
 ```typescript
 import { 
   Component, 
@@ -5072,7 +5081,7 @@ Angular simplifies the following aspects of internationalization:
 #### Q. ***How will you optimize image and svg in your angular app?***
 
 **1. Immutable Input Objects**  
-Angular’s `OnPush` change detection strategy enables us to reduce the number of checks Angular has to make when a change in our application happens.
+Angular `OnPush` change detection strategy enables us to reduce the number of checks Angular has to make when a change in our application happens.
 ```typescript
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
@@ -5560,7 +5569,7 @@ To summarise: `@Input` is used to pass data from parent to child and the opposit
 
 #### Q. ***Why yarn is better than npm?***
 
-Yarn has a few differences from npm. First of all, Yarn **caches** all installed packages. Yarn is installing the packages simultaneously, and that is why Yarn is faster than NPM. They both download packages from npm repository. Yarn generates `yarn.lock` to lock down the versions of package’s dependencies by default. On the contrary, npm for this purpose offers shrinkwrap CLI command.
+Yarn has a few differences from npm. First of all, Yarn **caches** all installed packages. Yarn is installing the packages simultaneously, and that is why Yarn is faster than NPM. They both download packages from npm repository. Yarn generates `yarn.lock` to lock down the versions of package dependencies by default. On the contrary, npm for this purpose offers shrinkwrap CLI command.
 
 Yarn is an alternative npm client with some distinctive aspects, including:
 
@@ -5569,7 +5578,7 @@ Yarn is an alternative npm client with some distinctive aspects, including:
 * **automatic retries**: Network requests are retried upon failure, reducing “red builds” due to single request fails or temporary network issues.
 * **parallel downloads**: Yarn uses parallel workers to download packages, thus maximizing resource utilization and reducing the time builds take to run.
 * **caching**: Yarn caches every package it downloads, so it never needs to download it again.
-* **lock file**: A dedicated lock file ( yarn.lock ) that keeps dependencies locked to specific versions, similar to Ruby’s Gemfile.lock.
+* **lock file**: A dedicated lock file ( yarn.lock ) that keeps dependencies locked to specific versions, similar to Ruby Gemfile.lock.
 
 #### Q. ***Explain the below code?***
 
