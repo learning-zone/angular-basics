@@ -366,16 +366,19 @@ Angular has 2 types of build dev build or prod build :
 
 **JIT**  
 Just-in-Time (JIT) is a type of compilation that compiles app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
+
 ```javascript
 ng build
 ng serve
 ```
 **AOT**  
 Ahead-of-Time (AOT) is a type of compilation that compiles app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
+
 ```javascript
 ng build --aot
 ng serve --aot
 ```
+
 ```
 ng build or ng build --dev   -  this is for development build
 ng build --prod              -  this is for production build
@@ -428,6 +431,7 @@ ii). An event occurred from the component or one of his children.
 iii). You run change detection explicitly by calling `detectChanges()/tick()/markForCheck()`  
 
 Example
+
 ```typescript
 @Component({
   selector: 'my-select',
@@ -437,9 +441,11 @@ Example
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 ```
+
 11. **TrackBy**: If we provide a trackBy function, Angular can track which items have been added or removed according to the unique identifier and only create or destroy the things that have changed.
 
 Example:
+
 ```typescript
 @Component({
   selector: 'my-app',
@@ -466,6 +472,7 @@ export class App {
   }
 }
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -475,6 +482,7 @@ export class App {
 The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
 
 **main.ts**
+
 ```typescript
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -493,6 +501,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 Most importantly here is the line where bootstraps start our angular app by passing app module to the method. AppModule refers to the app.module.ts file.
 
 **app.module.ts**
+
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -512,9 +521,11 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
+
 When angular starts, it bootstrap array in `@NgModule`. It basically there is a list of all components which should be known to Angular at the point of time it analyzes **index.html** file.
 
 **index.html**
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -530,6 +541,7 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
   </body>
 </html>
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -539,6 +551,7 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
 An RxJS Subject is a special type of Observable that allows values to be **multicasted** to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
 A Subject observable is used to immediately notify subscribers of updated values emitted by it. It does not keep track of old values, i.e. if a Subject observable first emitted a value and was then later subscribed to, then the subscriber will not get that value. A Subject is like an Observable, but can multicast to many Observers. Subjects are like **EventEmitters**: they maintain a registry of many listeners.
+
 ``` typescript
 import { Subject } from 'rxjs';
 
@@ -562,21 +575,24 @@ subscription1.unsubscribe();
 
 mySubject.next(4);
 ```
+
 Output
+
 ```typescript
 From subscription 1: 2
 From subscription 1: 3
 From subscription 2: 3
 From subscription 2: 4
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q. ***What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?***
 
-
 **a.) BehaviorSubject**: It has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
+
 ```typescript
 import * as Rx from "rxjs";
 
@@ -611,6 +627,7 @@ console.log(subject.value)
 **b.) ReplaySubject**: It can send **old** values to new subscribers. It however has the extra characteristic that it can record a part of the observable execution and therefore store multiple old values and **replay** them to new subscribers.
 
 When creating the ReplaySubject we can specify how much values want to store and for how long want to store them.
+
 ```typescript
 import * as Rx from "rxjs";
 
@@ -642,6 +659,7 @@ subject.next(Math.random());
 ```
 
 **c.) AsyncSubject**: It is a Subject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes. 
+
 ```typescript
 import * as Rx from "rxjs";
 
@@ -667,12 +685,12 @@ subject.complete();
 // Subscriber A: 0.4447275989704571
 // Subscriber B: 0.4447275989704571
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q. ***What is difference between BehaviorSubject and Observable?***
-
 
 Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.   
 
@@ -687,6 +705,7 @@ The unique features of a subject compared to a observable are:
 * It is a observer in addition to being a observable so you can also send values to a subject in addition to subscribing to it.
 * In addition you can get a observable from behavior subject using the asobservable() method on behaviour subject.
 * Observable is a Generic, and Behavior subject is technically a sub-type of Observable because behavior subject is a observable with specific qualities.
+
 ```typescript
 // Behavior Subject
 
@@ -706,7 +725,9 @@ bSubject.subscribe((value) => {
 bSubject.next("c"); // Subscription got c
 bSubject.next("d"); // Subscription got d
 ```
+
 **Example 2**: With regular subject
+
 ```typescript
 // Regular Subject
 
@@ -722,16 +743,17 @@ subject.subscribe((value) => {
 subject.next("c"); // Subscription got c
 subject.next("d"); // Subscription got d
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
 #### Q. ***What is the difference between Subject and BehaviorSubject?***
 
-
 **Subject**  
 
 Subject does not return the current value on Subscription. It triggers only on `.next(value)` call and return/output the value
+
 ```javascript
 var subject = new Rx.Subject();
 
@@ -747,16 +769,20 @@ subject.subscribe({
 subject.next(2);
 subject.next(3);
 ```
+
 Output:
+
 ```
 observerA: 2
 observerB: 2
 observerA: 3
 observerB: 3
 ```
+
 **BehaviorSubject**  
 
 A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject doesn't hold a value. BehaviourSubject will return the initial value or the current value on Subscription.
+
 ```javascript
 var subject = new Rx.BehaviorSubject(0);  // 0 is the initial value
 
@@ -773,7 +799,9 @@ subject.subscribe({
 
 subject.next(3);
 ```
+
 Output:
+
 ```
 observerA: 0
 observerA: 1
@@ -782,6 +810,7 @@ observerB: 2
 observerA: 3
 observerB: 3
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -850,13 +879,16 @@ components.
 We can add web worker anywhere in our application. For example, If the file that contains expensive computation is `src/app/app.component.ts`, we can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
 1. Configure project to use Web Workers
 2. Adds app.worker.ts to receive messages
+
 ```typescript
 addEventListener('message', ({ data }) => {
   const response = `worker response to ${data}`;
   postMessage(response);
 });
 ```
+
 3. The component `app.component.ts` file updated with web worker file
+
 ```typescript
 if (typeof Worker !== 'undefined') {
   // Create a new
@@ -869,6 +901,7 @@ if (typeof Worker !== 'undefined') {
   // Web Workers are not supported in this environment.
 }
 ```
+
 *Note: You may need to refactor your initial scaffolding web worker code for sending messages to and from.*
 
 <div align="right">
@@ -888,6 +921,7 @@ There are four types of directives in Angular
 Structural Directives are directives which change the structure of the DOM by adding or removing elements. There are three built in structural directives, `NgIf`, `NgFor` and `NgSwitch`.
 
 Example: Structural Directives
+
 ```html
 <div *ngIf="user$ | async as user">
   <span>Name: {{user.name}}</span>
@@ -899,11 +933,13 @@ Example: Structural Directives
 Attribute directives change the appearance or behavior of an element, component, or another directive.  `ngClass`, `ngStyle` are examples of attribute directives built-in to the Angular framework.
 
 Example: Attribute Directives
+
 ```html
 <p [ngStyle]="{'background': isBlue ? 'blue' : 'red'}"> I am an Attribute Directive</p>
 ```
 
 Example: Custom Directive
+
 ```typescript
 import { Directive, ElementRef, Input } from '@angular/core';
 
@@ -916,6 +952,7 @@ export class HighlightDirective {
 ```
 
 Now this directive extends HTML element behavior with a yellow background as below
+
 ```html
 <p myHighlight>Highlight me!</p>
 ```
@@ -943,6 +980,7 @@ export class AppComponent {
     title: string = 'Welcome to Angular world';
 }
 ```
+
 #### Q. ***What are the differences between Component and Directive?***
 
 A component is also a type of directive with template, styles and logic part.
@@ -957,6 +995,7 @@ A component is also a type of directive with template, styles and logic part.
 
 
 Example:
+
 ```typescript
 import { Component, HostListener, HostBinding, Directive, ElementRef } from '@angular/core';
 
@@ -982,6 +1021,7 @@ export class AppComponent  {
 
 }
 ```
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -1001,6 +1041,7 @@ import { AppComponent }  from './app.component';
 })
 export class AppModule { }
 ```
+
 The NgModule decorator has three options
 * The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application
 * The declarations option is used to define components in the respective module
@@ -1031,20 +1072,28 @@ Data binding is a core concept in Angular and allows to define communication bet
 
 **From the Component to the DOM:**  
 **1. Interpolation:** `{{ value }}`: Adds the value of a property from the component
+
 ```html
 <li>Name: {{ user.name }}</li>
 <li>Address: {{ user.address }}</li>
 ```
+
 **2. Property binding:** `[property] = "value"`: The value is passed from the component to the specified property or simple HTML attribute
+
 ```html
 <input type="email" [value]="user.email">
 ```
+
 **From the DOM to the Component:**  
+
 **3. Event binding:** `(event) = "function"`: When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component
+
 ```html
 <button (click)="logout()"></button>
 ``` 
+
 **4. Two-way data binding:** `[(ngModel)] = "value"`: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync
+
 ```html
 <input type="email" [(ngModel)]="user.email">
 ```
@@ -1057,6 +1106,7 @@ Data binding is a core concept in Angular and allows to define communication bet
 Metadata is used to decorate a class so that it can configure the expected behavior of the class. The metadata is represented by decorators  
 
 **1. Class Decorators:** e.g. @Component and @NgModule
+
 ```typescript
 import { NgModule, Component } from '@angular/core';
 
@@ -1081,6 +1131,7 @@ export class MyModule {
 }
 ```
 **2. Property Decorators:** Used for properties inside classes, e.g. @Input and @Output
+
 ```typescript
 import { Component, Input } from '@angular/core';
 
@@ -1094,6 +1145,7 @@ export class MyComponent {
 }
 ```
 **3. Method Decorators:** Used for methods inside classes, e.g. @HostListener
+
 ```typescript
 import { Component, HostListener } from '@angular/core';
 
@@ -1108,7 +1160,9 @@ export class MyComponent {
     }
 }
 ```
+
 **4. Parameter Decorators:** Used for parameters inside class constructors, e.g. @Inject
+
 ```typescript
 import { Component, Inject } from '@angular/core';
 import { MyService } from './my-service';
@@ -5904,25 +5958,27 @@ Use the `::ng-deep` shadow-piercing descendant combinator to force a style down 
 The following example targets all `<h3>` elements, from the host element down through this component to all of its child elements in the DOM.
 
 **parent.component.html**
+
 ```html
 Parent content.
 
 <app-child></app-child>
 ```
 **parent.component.css**
+
 ```css
 ::ng-deep h3 {
   font-style: italic;
 }
 ```
 **child.component.html**  
+
 ```html
 <h3>Child title</h3>
 Child content.
 ```
 
 #### Q. ***When can you omit the brackets in template binding?***
-
 
 The brackets, `[]`, tell Angular to evaluate the template expression. If you omit the brackets, Angular treats the string as a constant and initializes the target property with that string:
 
@@ -5953,10 +6009,10 @@ You should omit the brackets when all of the following are true:
 #### Q. ***How would you use cached data?***
 #### Q. ***When do you use template driven vs model driven forms? Why?***
 #### Q. ***How do you submit a form?***
-#### Q. ***What\'s the difference between NgForm, FormGroup, and FormControl? How do they work together?***
-#### Q. ***What\'s the advantage of using FormBuilder?***
+#### Q. ***What is the difference between NgForm, FormGroup, and FormControl? How do they work together?***
+#### Q. ***What is the advantage of using FormBuilder?***
 #### Q. ***How do you add form validation to a form built with FormBuilder?***
-#### Q. ***What\'s the difference between dirty, touched, and pristine on a form element?***
+#### Q. ***What is the difference between dirty, touched, and pristine on a form element?***
 #### Q. ***How can you access validation errors in the template to display error messages?***
 #### Q. ***What is async validation and how is it done?***
 #### Q. ***What is the difference between exports and declarations in NgModule?***
