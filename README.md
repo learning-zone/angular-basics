@@ -117,7 +117,7 @@
 | 05. |[What are dynamic components?](#q-what-are-dynamic-components)|
 | 06. |[What are the class decorators in Angular?](#q-what-are-the-class-decorators-in-angular)|
 | 07. |[What are class field decorators?](#q-what-are-class-field-decorators)|
-| 08. |[Explain local reference variables, @ViewChild() and @ContentChild().](#q-explain-local-reference-variables-viewchild-and-contentchild)|
+| 08. |[Explain local reference variables, `@ViewChild()` and `@ContentChild()`.](#q-explain-local-reference-variables-viewchild-and-contentchild)|
 | 09. |[Can we create two Components with the same name in two different .ts files?](#q-can-we-create-two-components-with-the-same-name-in-two-different-ts-files)|
 | 10. |[How do you get a reference to a child component?](#q-how-do-you-get-a-reference-to-a-child-component)|
 | 11. |[How do you listen for events in a component?](#q-how-do-you-listen-for-events-in-a-component)|
@@ -133,7 +133,7 @@
 | 21. |[What is Self and Host Decorator in Angular?](#q-what-is-self-and-host-decorator-in-angular)|
 | 22. |[How do components communicate with each other?](#q-how-do-components-communicate-with-each-other)|
 | 23. |[How to dynamically create a component in Angular?](#q-how-to-dynamically-create-a-component-in-angular)|
-| 24. |[Why EventEmitter is needed for @Output decorator?](#q-why-eventemitter-is-needed-for-output-decorator)|
+| 24. |[Why EventEmitter is needed for `@Output` decorator?](#q-why-eventemitter-is-needed-for-output-decorator)|
 | 25. |[Why would you use renderer2 methods instead of using native element methods?](#q-why-would-you-use-renderer2-methods-instead-of-using-native-element-methods)|
 | 26. |[What does lean component mean to you?](#q-what-does-lean-component-mean-to-you)|
 | 27. |[How would you create a component to display error messages throughout your application?](#q-how-would-you-create-a-component-to-display-error-messages-throughout-your-application)|
@@ -241,7 +241,7 @@
 | 03. |[What is a DI token?](#q-what-is-a-di-token)|
 | 04. |[How to make sure that single instance will be used in an entire application?](#q-how-to-make-sure-that-single-instance-will-be-used-in-an-entire-application)|
 | 05. |[How do you reference the host of a component?](#q-how-do-you-reference-the-host-of-a-component)|
-| 06. |[What are the difference between @Inject and @Injectable?](#q-what-are-the-difference-between-inject-and-injectable)|
+| 06. |[What are the difference between `@Inject` and `@Injectable`?](#q-what-are-the-difference-between-inject-and-injectable)|
 | 07. |[What does forwardRef do?](#q-what-does-forwardref-do)|
 | 08. |[How will you intercept http to inject header to each http call?](#q-how-will-you-intercept-http-to-inject-header-to-each-http-call)|
 | 09. |[How will you parallelize multiple observable call?](#q-how-will-you-parallelize-multiple-observable-call)|
@@ -1135,7 +1135,7 @@ export class MyModule {
   }
 }
 ```
-**2. Property Decorators** Used for properties inside classes, e.g. @Input and @Output
+**2. Property Decorators** Used for properties inside classes, e.g. `@Input()` and `@Output()`
 
 ```typescript
 import { Component, Input } from '@angular/core';
@@ -1149,7 +1149,7 @@ export class MyComponent {
     @Input() title: string;
 }
 ```
-**3. Method Decorators** Used for methods inside classes, e.g. @HostListener
+**3. Method Decorators** Used for methods inside classes, e.g. `@HostListener()`
 
 ```typescript
 import { Component, HostListener } from '@angular/core';
@@ -1166,7 +1166,7 @@ export class MyComponent {
 }
 ```
 
-**4. Parameter Decorators** Used for parameters inside class constructors, e.g. @Inject
+**4. Parameter Decorators** Used for parameters inside class constructors, e.g. `@Inject()`
 
 ```typescript
 import { Component, Inject } from '@angular/core';
@@ -1203,7 +1203,7 @@ ng add @angular/pwa --project *project-name*
 ```
 The above command completes the following actions:
 
-* Adds the *@angular/service-worker* package to your project.
+* Adds the `@angular/service-worker` package to your project.
 * Enables service worker build support in the CLI.
 * Imports and registers the service worker in the app module.
 * Updates the *index.html* file:
@@ -1361,6 +1361,7 @@ export class AsyncObservablePipeComponent {
 #### Q. ***What is the purpose of ngFor directive?***
 
 NgFor is a structural directive, meaning that it changes the structure of the DOM. It is used to repeat a given HTML template once for each value in an array, each time passing it the array value as context for string interpolation or binding.
+
 ```typescript
 @Component({
   selector: 'ngfor-app',
@@ -1470,7 +1471,7 @@ import { Component } from '@angular/core';
 
 #### Q. ***What is a custom pipe?***
 
-A pipe is a class decorated with pipe metadata **@Pipe()** decorator, which you import from the core Angular library
+A pipe is a class decorated with pipe metadata `@Pipe()` decorator, which you import from the core Angular library
 
 ```typescript
 @Pipe({name: 'myCustomPipe'})
@@ -1482,7 +1483,7 @@ interface PipeTransform {
   transform(value: any, ...args: any[]): any
 }
 ```
-The **@Pipe** decorator allows to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
+The `@Pipe()` decorator allows to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
 ```typescript
 template: `{{someInputValue | myCustomPipe: someOtherValue}}`
 ```
@@ -1786,6 +1787,7 @@ result.subscribe(x => console.log(x));
 **5. FlatMap Operator [`flatMap()`] or mergeMap Operator [`mergeMap()`]**: flatMap() is an alias for mergeMap(). By using flatMap we can transform our event stream (the keypress events on the text field) into our response stream (the search results from the HTTP request).
 
 Example: `app/services/search.service.ts`
+
 ```typescript
 import {Http} from '@angular/http';
 import {Injectable} from '@angular/core';
@@ -2171,13 +2173,14 @@ Transforming components to custom elements involves **two** major steps,
 #### Q. ***What are the mapping rules between Angular component and custom element?***
 
 The Component properties and logic maps directly into HTML attributes and the browser event system. Let us describe them in two steps,
-1. The createCustomElement() API parses the component input properties with corresponding attributes for the custom element. For example, component @Input('myInputProp') converted as custom element attribute `my-input-prop`.
-2. The Component outputs are dispatched as HTML Custom Events, with the name of the custom event matching the output name. For example, component @Output() valueChanged = new EventEmitter() converted as custom element with dispatch event as "valueChanged".
+1. The createCustomElement() API parses the component input properties with corresponding attributes for the custom element. For example, component `@Input('myInputProp')` converted as custom element attribute `my-input-prop`.
+2. The Component outputs are dispatched as HTML Custom Events, with the name of the custom event matching the output name. For example, component `@Output()` valueChanged = new EventEmitter() converted as custom element with dispatch event as "valueChanged".
 
 #### Q. ***How do you define typings for custom elements?***
 
-You can use the `NgElement` and `WithProperties` types exported from @angular/elements. Lets see how it can be applied by comparing with Angular component,
+You can use the `NgElement` and `WithProperties` types exported from `@angular/elements`. Lets see how it can be applied by comparing with Angular component,
 The simple container with input property would be as below,
+
 ```typescript
 @Component(...)
 class MyContainer {
@@ -2353,7 +2356,7 @@ For example, you can define PageNotFoundComponent for wildcard route as below
 ```
 #### Q. ***What is Angular Universal?***
 
-Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under @angular/platform-server package. Recently Angular Universal is integrated with Angular CLI.
+Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under `@angular/platform-server` package. Recently Angular Universal is integrated with Angular CLI.
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -2645,7 +2648,7 @@ class MyComponent {
 
 The dependencies section of package.json with in an angular application can be divided as follow,  
 
-**1. Angular packages** Angular core and optional modules; their package names begin @angular/.  
+**1. Angular packages** Angular core and optional modules; their package names begin `@angular`.  
 **2. Support packages** Third-party libraries that must be present for Angular apps to run.  
 **3. Polyfill packages** Polyfills plug gaps in a browser JavaScript implementation.  
 
@@ -2655,7 +2658,7 @@ A Zone is an execution context that persists across async tasks. Angular relies 
 
 #### Q. ***What is the purpose of common module?***
 
-The commonly-needed services, pipes, and directives provided by @angular/common module. Apart from these HttpClientModule is available under @angular/common/http.
+The commonly-needed services, pipes, and directives provided by `@angular/common` module. Apart from these HttpClientModule is available under `@angular/common/http`.
 
 #### Q. ***What is codelyzer?***
 
@@ -2840,7 +2843,7 @@ After that add the following to the "compilerOptions" section of your project ts
 
 #### Q. ***What are the limitations with web workers?***
 
-1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, do not support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
+1. Some environments or platforms(like `@angular/platform-server`) used in Server-side Rendering, do not support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
 2. Running Angular in web worker using `@angular/platform-webworker` is not yet supported in Angular CLI.
 
 #### Q. ***What is Angular CLI Builder?***
@@ -2878,15 +2881,15 @@ Angular uses capitalization conventions to distinguish the names of various type
 
 A class decorator is a decorator that appears immediately before a class definition, which declares the class to be of the given type, and provides metadata suitable to the type
 The following list of decorators comes under class decorators,
-1. @Component()
-2. @Directive()
-3. @Pipe()
-4. @Injectable()
-5. @NgModule()
+1. `@Component()`
+2. `@Directive()`
+3. `@Pipe()`
+4. `@Injectable()`
+5. `@NgModule()`
 
 #### Q. ***What are class field decorators?***
 
-The class field decorators are the statements declared immediately before a field in a class definition that defines the type of that field. Some of the examples are: @input and @output,
+The class field decorators are the statements declared immediately before a field in a class definition that defines the type of that field. Some of the examples are: `@input()` and `@output()`,
 
 ```typescript
 @Input() myProperty;
@@ -2940,9 +2943,9 @@ Below are the list of key advantages of Bazel tool,
 
 #### Q. ***How do you use Bazel with Angular CLI?***
 
-The @angular/bazel package provides a builder that allows Angular CLI to use Bazel as the build tool.  
+The `@angular/bazel` package provides a builder that allows Angular CLI to use Bazel as the build tool.  
 
-**1. Use in an existing applciation:** Add @angular/bazel using CLI
+**1. Use in an existing applciation:** Add `@angular/bazel` using CLI
 ```javascript
 ng add @angular/bazel
 ```
@@ -2955,7 +2958,7 @@ When you use ng build and ng serve commands, Bazel is used behind the scenes and
 
 #### Q. ***How do you run Bazel directly?***
 
-Sometimes you may want to bypass the Angular CLI builder and run Bazel directly using Bazel CLI. You can install it globally using @bazel/bazel npm package. i.e, Bazel CLI is available under @bazel/bazel package. After you can apply the below common commands,
+Sometimes you may want to bypass the Angular CLI builder and run Bazel directly using Bazel CLI. You can install it globally using `@bazel/bazel` npm package. i.e, Bazel CLI is available under `@bazel/bazel` package. After you can apply the below common commands,
 
 ```javascrippt
 bazel build [targets] // Compile the default output artifacts of the given targets.
@@ -3047,20 +3050,20 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-#### Q. ***Explain local reference variables, @ViewChild() and @ContentChild()?***
+#### Q. ***Explain local reference variables, `@ViewChild()` and `@ContentChild()`?***
 
 <img src="assets/viewchild-1.png" alt="Local Reference Variables" />
 
-The @ViewChild and @ViewChildren decorators in Angular provide a way to access and manipulate DOM elements, directives and components. @ViewChild is used to query one element from the DOM and @ViewChildren for multiple elements.
+The `@ViewChild()` and `@ViewChildren()` decorators in Angular provide a way to access and manipulate DOM elements, directives and components. `@ViewChild()` is used to query one element from the DOM and `@ViewChildren()` for multiple elements.
 
-If you want to access following inside the Parent Component, use @ViewChild decorator of Angular.
+If you want to access following inside the Parent Component, use `@ViewChild()` decorator of Angular.
 
 1. Child Component
 1. Directive
 1. DOM Element
 
 ViewChild returns the first element that matches the selector.
-Example: *@ViewChild()*
+Example: `@ViewChild()`
 
 ```typescript
 import { Component, Input } from '@angular/core';
@@ -3180,7 +3183,7 @@ export class MessageContainerComponent implements AfterContentInit {
 
 There are two ways to make a service a singleton in Angular:
 
-* Declare root for the value of the @Injectable() providedIn property
+* Declare root for the value of the `@Injectable()` providedIn property
 * Include the service in the AppModule or in a module that is only imported by the AppModule
 
 #### Q. ***How do you reference the host of a component?***
@@ -3353,9 +3356,9 @@ export class AppComponent {
 
 * No
 
-#### Q. ***What are the difference between @Inject and @Injectable?***
+#### Q. ***What are the difference between `@Inject()` and `@Injectable()`?***
 
-The `@Injectable` decorator aims to actually set some metadata about which dependencies to inject into the constructor of the associated class. It is a class decorator that does not require parameters. Without this decorator no dependency will be injected.
+The `@Injectable()` decorator aims to actually set some metadata about which dependencies to inject into the constructor of the associated class. It is a class decorator that does not require parameters. Without this decorator no dependency will be injected.
 
 ```typescript
 @Injectable()
@@ -3424,6 +3427,7 @@ Each auxiliary route is an independent route which can have:
 * Its own auxiliary routes
 * Its own route-params
 * Its own history stack
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -3557,7 +3561,7 @@ At runtime, the function componentDestroyed alters the component instance and cr
 
 #### Q. ***How Event Emitters works in Angular?***
 
-`Event Emitters` use in components with the @Output directive to emit custom events synchronously or asynchronously, and register handlers for those events by subscribing to an instance.
+`Event Emitters` use in components with the `@Output()` directive to emit custom events synchronously or asynchronously, and register handlers for those events by subscribing to an instance.
 
 EventEmitter is really an Angular abstraction, and should be used pretty much only for emitting custom Events in components. Otherwise, just use Rx as if it was any other library.
 
@@ -4241,9 +4245,10 @@ Two-way data binding is mostly used in forms and when dealing with inputs. User 
 
 #### Q. ***What is Self and Host Decorator in Angular?***
 
-**@Host**: The `@Host` decorator tells DI to look for a dependency in any injector until it reaches the host.
+**`@Host()`**: The `@Host()` decorator tells DI to look for a dependency in any injector until it reaches the host.
 
 When `@Self` is used, Angular will only look for a value that is bound on the component injector for the element that this Directive/Component exists on.
+
 ```typescript
 class OtherService {}
 class HostService {}
@@ -4276,7 +4281,7 @@ class ParentCmp {
 class App {
 }
 ```
-**@Self**: The `@Self` decorator tells DI to look for a dependency only from itself, so it will not walk up the tree.
+**`@Self()`**: The `@Self()` decorator tells DI to look for a dependency only from itself, so it will not walk up the tree.
 
 When `@Host` is used, Angular will look for a value that is bound on either the component injector for the element that this Directive/Component exists on, or on the injector of the parent component. Angular calls this parent component the "host".
 ```typescript
@@ -5231,6 +5236,7 @@ window.angularComponentRef.zone.run(() => {window.angularComponentRef.componentF
 It makes available all the syntactical sugar that was added to JavaScript with the new ES6 specification, including classes, fat arrows and multiline strings.
 
 **Initial Setup**  
+
 ```
 npm install --save-dev babel-loader @babel/core @babel/preset-env html-webpack-plugin script-ext-html-webpack-plugin
 npm install --save-dev @babel/register
