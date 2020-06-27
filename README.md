@@ -828,7 +828,7 @@ components.
 | AngularJS                                         | Angular                                             |
 |---------------------------------------------------|-----------------------------------------------------|
 |JavaScript-based framework for creating SPA.       |Complete re-write of AngularJS version.       |
-|Still supported but no longer will be developed.   |It's updated version regularly released because of Semantic Versioning.|
+|Still supported but no longer will be developed.   |It is updated version regularly released because of Semantic Versioning.|
 |The architecture of AngularJS is based on MVC.     |The architecture of Angular 2 is component based|
 |AngularJS was not developed with a mobile base in mind.|Angular 2 is a mobile-oriented framework.|
 |AngularJS code can write by using only ES5, ES6, and Dart.|We can use ES5, ES6, Typescript to write an Angular 2 code.|
@@ -1060,7 +1060,7 @@ Angular offers lifecycle hooks that provide visibility into these key life momen
 
 * **ngOnChanges** When the value of a data bound property changes, then this method is called.
 * **ngOnInit** This is called whenever the initialization of the directive/component after Angular first displays the data-bound properties happens.
-* **ngDoCheck** This is for the detection and to act on changes that Angular can't or won't detect on its own.
+* **ngDoCheck** This is for the detection and to act on changes that Angular can not or wont detect on its own.
 * **ngAfterContentInit** This is called in response after Angular projects external content into the components view.
 * **ngAfterContentChecked** This is called in response after Angular checks the content projected into the component.
 * **ngAfterViewInit** This is called in response after Angular initializes the components views and child views.
@@ -2014,7 +2014,7 @@ A handler that implements the Observer interface for receiving observable notifi
 ```javascript
 myObservable.subscribe(myObserver);
 ```
-*Note: If you don\'t supply a handler for a notification type, the observer ignores notifications of that type.*
+*Note: If you do not supply a handler for a notification type, the observer ignores notifications of that type.*
 
 #### Q. ***What is multicasting?***
 
@@ -2108,7 +2108,7 @@ const subscription = mouseMoves.subscribe((e: MouseEvent) => {
 
 #### Q. ***What will happen if you do not supply handler for observer?***
 
-Normally an observer object can define any combination of next, error and complete notification type handlers. If you don't supply a handler for a notification type, the observer just ignores notifications of that type.
+Normally an observer object can define any combination of next, error and complete notification type handlers. If you do not supply a handler for a notification type, the observer just ignores notifications of that type.
 
 #### Q. ***Explain the difference between Promise and Observable in Angular?***
 
@@ -2420,7 +2420,7 @@ No, the AOT collector understands a subset  of (or limited) JavaScript features.
 #### Q. ***What is folding?***
 
 The compiler can only resolve references to exported symbols in the metadata. Where as some of the non-exported members are folded while generating the code. i.e Folding is a process in which the collector evaluate an expression during collection and record the result in the .metadata.json instead of the original expression.
-For example, the compiler couldn't refer selector reference because it is not exported
+For example, the compiler couldnot refer selector reference because it is not exported
 ```typescript
 let selector = 'app-root';
 @Component({
@@ -2472,7 +2472,7 @@ export class TypicalModule {}
     const prop = typeof User; // typeof is not valid in metadata
 2. { provide: 'token', useValue: { [prop]: 'value' } }; // bracket notation is not valid in metadata
 ```
-**2. Reference to a local (non-exported) symbol:** The compiler encountered a referenced to a locally defined symbol that either wasn't exported or wasn't initialized.
+**2. Reference to a local (non-exported) symbol:** The compiler encountered a referenced to a locally defined symbol that either wasnot exported or wasnot initialized.
 
 ```typescript
 // ERROR
@@ -2840,7 +2840,7 @@ After that add the following to the "compilerOptions" section of your project ts
 
 #### Q. ***What are the limitations with web workers?***
 
-1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, don't support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
+1. Some environments or platforms(like @angular/platform-server) used in Server-side Rendering, do not support Web Workers. In this case we need to provide a fallback mechanism to perform the computations to work in this environments.
 2. Running Angular in web worker using `@angular/platform-webworker` is not yet supported in Angular CLI.
 
 #### Q. ***What is Angular CLI Builder?***
@@ -2898,7 +2898,7 @@ Declarable is a class type that you can add to the declarations list of an NgMod
 
 #### Q. ***What are the restrictions on declarable classes?***
 
-Below classes shouldn't be declared,
+Below classes should not be declared,
 1. A class that is already declared in another NgModule
 2. Ngmodule classes
 3. Service classes
@@ -3208,7 +3208,7 @@ class MyComponent {
 
 The `Renderer` is a class that is a partial abstraction over the DOM. Using the `Renderer` for manipulating the DOM does not break server-side rendering or Web Workers (where direct access to the DOM would break).
 
-`ElementRef` is a class that can hold a reference to a DOM element. This is again an abstraction to not break in environments where the browsers DOM isn't actually available.
+`ElementRef` is a class that can hold a reference to a DOM element. This is again an abstraction to not break in environments where the browsers DOM is not actually available.
 
 There are other ways to acquire an `ElementRef` instance like `@ViewChild()`, `@ViewChildren()`, `@ContentChild()`, `@ContentChildren()`. In this case `ElementRef` is a reference to the matching element(s) in the template or children.
 
@@ -3374,7 +3374,7 @@ export class SomeService {
 
 #### Q. ***What are Zones? What is Change Detection? What would be a good use for NgZone service?***
 
-The most common use of `NgZone` service is to optimize performance when starting a work consisting of one or more asynchronous tasks that don't require UI updates or error handling to be handled by Angular.   
+The most common use of `NgZone` service is to optimize performance when starting a work consisting of one or more asynchronous tasks that do not require UI updates or error handling to be handled by Angular.   
 
 Zone.js is an execution context that helps developers intercept and keep track of async operations. Zone works on the concept of associating each operation with a zone. Each zone can fork and create a child zone with a different context, no limits. Inside a zone, async operations are captured using different APIs, so that the developer can decide what to do with the interceptions.
 
@@ -4074,7 +4074,7 @@ function subscriberFunc(observer) {
     observer.error(error);
 }
 ```
-`Observable` also has the advantage over `Promise` to be **cancelable**. If the result of an HTTP request to a server or some other expensive async operation isn't needed anymore, the `Subscription` of an `Observable` allows to cancel the subscription, while a Promise will eventually call the success or failed callback even when you don't need the notification or the result it provides anymore.  
+`Observable` also has the advantage over `Promise` to be **cancelable**. If the result of an HTTP request to a server or some other expensive async operation is not needed anymore, the `Subscription` of an `Observable` allows to cancel the subscription, while a Promise will eventually call the success or failed callback even when you do not need the notification or the result it provides anymore.  
 
 Observable provides operators like map(), forEach(), reduce(), ... similar to an array. There are also powerful operators like retry(), or replay(), ... that are often quite handy.
 
@@ -4604,7 +4604,7 @@ For example, we have 5 components in your project and that each component is dep
 
 When we are dealing with medium or large apps, it includes discrete set of functionality. Administration, Dashboard, Bookings/Orders, Promotions are all examples of areas of our apps that, when linked together, make our app. We basically breakdown our app into smaller pieces called Features / Modules.
 
-In the process of developing an app we might create a feature which we don't want to expose or create a feature which we want to lazy loading when the user decides it is time to revisit the feature. NgModules helps us to separate our features to logical units and load it when required.
+In the process of developing an app we might create a feature which we do not want to expose or create a feature which we want to lazy loading when the user decides it is time to revisit the feature. NgModules helps us to separate our features to logical units and load it when required.
 
 #### Q. ***What is difference between Angular Modules and JavaScript Modules?***
 
@@ -4635,7 +4635,7 @@ NgModules are classes decorated with @NgModule. The @NgModule decorator’s impo
 `<ng-container>` is a logical container that can be used to group nodes but is not rendered in the DOM tree as a node. `<ng-container>` is rendered as an HTML comment.
 
 ```html
-<!-- Can't do this -->
+<!-- Can not do this -->
 <div *ngIf="employees" *ngFor="let employee of employees">
   {{ employee.name }}
 </div>
@@ -4648,7 +4648,7 @@ Instead what we usually do is use a wrapper like this:
   </div>
 </div>
 ```
-`ng-container` is useful when you want to conditionaly append a group of elements (ie using *ngIf="foo") in your application but don't want to wrap them with another element.
+`ng-container` is useful when you want to conditionaly append a group of elements (ie using *ngIf="foo") in your application but do not want to wrap them with another element.
 ```html
 <div>
     <ng-container *ngIf="true">
