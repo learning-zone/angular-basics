@@ -362,7 +362,7 @@
 </div>
 
 #### Q. ***What is difference between Angular JIT compilation and AOT compilation?***
-Angular has 2 types of build dev build or prod build :
+Angular has 2 types of build dev build or prod build
 
 **JIT**  
 Just-in-Time (JIT) is a type of compilation that compiles app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
@@ -403,19 +403,23 @@ ng build --prod              -  this is for production build
 </div>
 
 #### Q. ***What are the advantages with AOT?***
+
 1. **Faster rendering:** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
 2. **Fewer asynchronous requests:** It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.
-3. **Smaller Angular framework download size:** Doesn't require downloading the Angular compiler. Hence it dramatically reduces the application payload.
+3. **Smaller Angular framework download size:** Doesn\'t require downloading the Angular compiler. Hence it dramatically reduces the application payload.
 4. **Detect template errors earlier:** Detects and reports template binding errors during the build step itself
 5. **Better security:** It compiles HTML templates and components into JavaScript.  So there won't be any injection attacks.
 
 #### Q. ***What are the ways to control AOT compilation?***
+
 You can control your app compilation in two ways
 1. By providing template compiler options in the `tsconfig.json` file
 2. By configuring Angular metadata with decorators
 
 #### Q. ***How to optimize loading large data in angular?***
+
 **Load Time Performance**
+
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
 2. **Tree-shaking**: This is the process of removing unused code resulting in smaller build size. In **angular-cli**, Tree-Shaking is enabled by default.
 3. **Uglify**: It is the process where the code size is reduced using various code transformations like mangling, removal of white spaces, removal of comments etc. For webpack use uglify plugin and with angular-cli specify the “prod” flag to perform the uglification process.
@@ -5980,7 +5984,7 @@ Child content.
 
 #### Q. ***When can you omit the brackets in template binding?***
 
-The brackets, `[]`, tell Angular to evaluate the template expression. If you omit the brackets, Angular treats the string as a constant and initializes the target property with that string:
+The brackets, `[]`, tell Angular to evaluate the template expression. If you omit the brackets, Angular treats the string as a constant and initializes the target property with that string
 
 **app.component.html**  
 ```html
@@ -5990,7 +5994,7 @@ Omitting the brackets will render the string parentItem, not the value of parent
 
 **One-time string initialization**   
 
-You should omit the brackets when all of the following are true:
+You should omit the brackets when all of the following are true
 
 * The target property accepts a string value.
 * The string is a fixed value that you can put directly into the template.
