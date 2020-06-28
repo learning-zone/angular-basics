@@ -9,7 +9,7 @@
 
 
 
-### Angular Basic Projects
+### Angular Projects
 
 |Sl.No| Project Name                              | Technologies Used                             |Live Demo    |
 |-----|-------------------------------------------|---------------------------------------------- |-------------|
