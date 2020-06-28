@@ -8,6 +8,16 @@
 * *[Angular Unit Testing Interview Questions](unit-testing-questions.md)*
 
 
+
+### Angular Basic Projects
+
+|Sl.No| Project Name                              | Technologies Used                             |Live Demo    |
+|-----|-------------------------------------------|---------------------------------------------- |-------------|
+| 01  |	[Angular-Features](angular-practice)      |Angular, Routing                               |[live](https://angular-features.firebaseapp.com)             |
+| 02  |	[Angular-Material](angular-material-practice)|Angular, Material                           |[live](https://angular-material8.firebaseapp.com)            |
+| 03  |	[Performance-Tuning](angular-performance-tuning)|Angular                                  |[live](https://performance-tuning-3450d.firebaseapp.com)             |
+
+
 ### 1. Angular Basics 
 
 |Sl.No|   Questions                                              |
