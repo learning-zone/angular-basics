@@ -19,7 +19,7 @@
 
 <br/>
 
-### 1. Angular Basics 
+### Angular Basics 
 
 |Sl.No|   Questions                                              |
 |-----|----------------------------------------------------------|
@@ -50,7 +50,7 @@
 | 25. |[How would you make use of ngOnInit()?](#q-how-would-you-make-use-of-ngoninit)|
 
 
-### 2. Configuration & Tools
+###  Configuration & Tools
 
 |Sl.No|  Questions                                   |
 |-----|----------------------------------------------|
@@ -84,7 +84,7 @@
 | 53. |[What tools would you use to find a performance issue in your code?](#q-what-tools-would-you-use-to-find-a-performance-issue-in-your-code)|
 
 
-### 3. Architecture 
+###  Architecture 
 
 |Sl.No|    Questions                                                                                             |
 |-----|----------------------------------------------------------------------------------------------------------|
@@ -117,7 +117,7 @@
 | 80. |[What is the difference between exports and declarations in NgModule?](#q-what-is-the-difference-between-exports-and-declarations-in-ngmode)|
 
 
-### 4. Component Interaction
+### Component Interaction
 
 |Sl.No|  Questions                                                         |
 |-----|--------------------------------------------------------------------|
@@ -152,7 +152,7 @@
 | 109. |[Which components will be notified when an event is emitted?](#q-which-components-will-be-notified-when-an-event-is-emitted)|
 | 110. |[What is the difference between Stateless and Stateful Component?](#q-what-is-the-difference-between-stateless-and-stateful-component)|
 
-### 5. Angular Forms 
+###  Angular Forms 
 
 |Sl.No|  Questions                                                                      |
 |-----|---------------------------------------------------------------------------------|
@@ -167,7 +167,7 @@
 | 119. |[What is async validation and how is it done?](#q-what-is-async-validation-and-how-is-it-done)|
 
 
-### 6. Pipes
+###  Pipes
 
 |Sl.No|  Questions                         |
 |-----|------------------------------------|
@@ -181,7 +181,7 @@
 | 127. |[What happens if you subscribe to a data source multiple times with async pipe?](#q-what-happens-if-you-subscribe-to-a-data-source-multiple-times-with-async-pipe)|
 
  
-### 7. RxJS
+###  RxJS
 
 |Sl.No|  Questions                     |
 |-----|--------------------------------|
@@ -216,7 +216,7 @@
 | 156. |[If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons).](#q-if-you-need-to-respond-to-two-different-observable-subject-with-one-callback-function-how-would-you-do-it-ex-if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons)|
  
 
-### 8. Routing
+### Routing
 
 |Sl.No|  Questions                                                     |
 |-----|----------------------------------------------------------------|
@@ -242,7 +242,7 @@
 | 176. |[How to use authguard in angular 7?](#q-how-to-use-authguard-in-angular-7)|
 
 
-### 9. Services & DI
+### Services & DI
 
 |Sl.No|  Questions                                                             |
 |-----|------------------------------------------------------------------------|
@@ -266,7 +266,7 @@
 | 194. |[How to create logger service in angular?](#q-how-to-create-logger-service-in-angular)|
 
 
-### 10. Angular Template
+### Angular Template
 
 |Sl.No|  Questions                                                                       |
 |-----|----------------------------------------------------------------------------------|
@@ -287,7 +287,7 @@
 | 209. |[When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?](#q-when-you-create-a-data-binding-in-angular-are-you-working-with-attributes-or-properties-what-is-the-difference-anyway)|
 
 
-### 11. Angular Animations
+### Angular Animations
 
 |Sl.No|  Quesions                                          |
 |-----|----------------------------------------------------|
@@ -306,7 +306,7 @@
 | 222. |[How would you select a css class in any ancestor of the component host element, all the way up to the document root?](#q-how-would-you-select-a-css-class-in-any-ancestor-of-the-component-host-element-all-the-way-up-to-the-document-root)|
 
 
-### 12. Performance
+### Performance
 
 |Sl.No|  Questions                                       |
 |-----|--------------------------------------------------|
@@ -323,7 +323,7 @@
 | 233. |[What are some ways you may improve your website scrolling performance?](#q-what-are-some-ways-you-may-improve-your-website-s-scrolling-performance)|
 
 
-### 13. Miscellaneous
+### Miscellaneous
 
 |Sl.No|  Questions                           |
 |-----|--------------------------------------|
