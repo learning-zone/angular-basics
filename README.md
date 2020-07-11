@@ -9,7 +9,7 @@
 
 <br/>
 
-### Angular Projects
+### Projects
 
 |Sl.No| Project Name                              | Technologies Used                             |Live Demo    |
 |-----|-------------------------------------------|---------------------------------------------- |-------------|
