@@ -1,4 +1,4 @@
-# Angular Interview Questions with Answers ( updated upto v9.0 )
+# Angular Interview Questions ( v9.0 )
 
 *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
