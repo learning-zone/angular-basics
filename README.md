@@ -6,6 +6,7 @@
 
 * *[TypeScript Interview Questions](typescript-questions.md)*
 * *[Angular Unit Testing Interview Questions](unit-testing-questions.md)*
+* *[Angular Commands List](angular-commands.md)*
 
 <br/>
 
@@ -19,7 +20,7 @@
 
 <br/>
 
-### Angular Basics 
+### Angular Basics
 
 |Sl.No|   Questions                                              |
 |-----|----------------------------------------------------------|
@@ -48,7 +49,6 @@
 | 23. |[What is the purpose of NgModule? How do you decide to create a new NgModule?](#q-what-is-the-purpose-of-ngmodule-how-do-you-decide-to-create-a-new-ngmodule)|
 | 24. |[What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)|
 | 25. |[How would you make use of ngOnInit()?](#q-how-would-you-make-use-of-ngoninit)|
-
 
 ###  Configuration & Tools
 
