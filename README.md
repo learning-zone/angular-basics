@@ -6,17 +6,17 @@
 
 ## Related Interview Questions
 
-* [HTML5 Interview Questions](https://github.com/learning-zone/html-interview-questions/blob/master/README.md)
-* [CSS Interview Questions](https://github.com/learning-zone/css-interview-questions/blob/master/README.md)
-* [JavaScript Interview Questions](https://github.com/learning-zone/javascript-interview-questions/blob/master/README.md)
+* [HTML5 Interview Questions](https://github.com/learning-zone/html-interview-questions)
+* [CSS Interview Questions](https://github.com/learning-zone/css-interview-questions)
+* [JavaScript Interview Questions](https://github.com/learning-zone/javascript-interview-questions)
+* [Typescript Basics](https://github.com/learning-zone/typescript-basics)
 
 <br/>
 
 ## Table of Contents
 
-* *[TypeScript Interview Questions](typescript-questions.md)*
-* *[Angular Unit Testing Interview Questions](unit-testing-questions.md)*
-* *[Angular Commands List](angular-commands.md)*
+* [Angular Unit Testing Interview Questions](unit-testing-questions.md)
+* [Angular Commands List](angular-commands.md)
 
 <br/>
 
