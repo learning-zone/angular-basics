@@ -30,7 +30,7 @@
 
 <br/>
 
-### Angular Basics
+### [Angular Basics](#-1-angular-basics)
 
 |Sl.No|   Questions                                              |
 |-----|----------------------------------------------------------|
@@ -352,6 +352,8 @@
 | 246. |[Write a program to perform column sorting using angular-material?](#q-write-a-program-to-perform-column-sorting-using-angular-material)|
 
 <br/>
+
+## # 1. ANGULAR BASICS
 
 ## Q. What are the frequently used command in angular?
 
