@@ -60,7 +60,7 @@
 | 24. |[What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)|
 | 25. |[How would you make use of ngOnInit()?](#q-how-would-you-make-use-of-ngoninit)|
 
-###  Configuration & Tools
+###  [Configuration and Tools](#-2-configuration-and-tools)
 
 |Sl.No|  Questions                                   |
 |-----|----------------------------------------------|
@@ -3359,6 +3359,10 @@ bazel run [target]: Compile the program represented by target and then run it.
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
+
+<br/>
+
+## # 2. CONFIGURATION AND TOOLS
 
 ## Q. What is angular CLI?
 
