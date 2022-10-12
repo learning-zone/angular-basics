@@ -20,7 +20,7 @@
 
 <br/>
 
-### Projects
+## Projects
 
 |Sl.No| Project Name                              | Technologies Used                             |Live Demo    |
 |-----|-------------------------------------------|---------------------------------------------- |-------------|
@@ -30,7 +30,7 @@
 
 <br/>
 
-### [Angular Basics](#-1-angular-basics)
+## [Angular Basics](#-1-angular-basics)
 
 |Sl.No|   Questions                                              |
 |-----|----------------------------------------------------------|
@@ -60,7 +60,7 @@
 | 24. |[What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)|
 | 25. |[How would you make use of ngOnInit()?](#q-how-would-you-make-use-of-ngoninit)|
 
-###  [Configuration and Tools](#-2-configuration-and-tools)
+## [Configuration and Tools](#-2-configuration-and-tools)
 
 |Sl.No|  Questions                                   |
 |-----|----------------------------------------------|
@@ -93,8 +93,7 @@
 | 52. |[What is a good use case for ngrx/entity?](#q-what-is-a-good-use-case-for-ngrx-entity)|
 | 53. |[What tools would you use to find a performance issue in your code?](#q-what-tools-would-you-use-to-find-a-performance-issue-in-your-code)|
 
-
-###  Architecture 
+## Architecture
 
 |Sl.No|    Questions                                                                                             |
 |-----|----------------------------------------------------------------------------------------------------------|
@@ -126,8 +125,7 @@
 | 79. |[Can I use AOT compilation with Ivy?](#q-can-i-use-aot-compilation-with-ivy)|
 | 80. |[What is the difference between exports and declarations in NgModule?](#q-what-is-the-difference-between-exports-and-declarations-in-ngmode)|
 
-
-### Component Interaction
+## Component Interaction
 
 |Sl.No|  Questions                                                         |
 |-----|--------------------------------------------------------------------|
@@ -162,7 +160,7 @@
 | 109. |[Which components will be notified when an event is emitted?](#q-which-components-will-be-notified-when-an-event-is-emitted)|
 | 110. |[What is the difference between Stateless and Stateful Component?](#q-what-is-the-difference-between-stateless-and-stateful-component)|
 
-###  Angular Forms 
+## Angular Forms
 
 |Sl.No|  Questions                                                                      |
 |-----|---------------------------------------------------------------------------------|
@@ -176,8 +174,7 @@
 | 118. |[What is the difference between dirty, touched, and pristine on a form element?](#q-what-is-the-difference-between-dirty-touched-and-pristine-on-a-form-element)|
 | 119. |[What is async validation and how is it done?](#q-what-is-async-validation-and-how-is-it-done)|
 
-
-###  Pipes
+## Pipes
 
 |Sl.No|  Questions                         |
 |-----|------------------------------------|
@@ -190,8 +187,7 @@
 | 126. |[How does async pipe prevents memory leaks?](#q-how-does-async-pipe-prevents-memory-leaks)|
 | 127. |[What happens if you subscribe to a data source multiple times with async pipe?](#q-what-happens-if-you-subscribe-to-a-data-source-multiple-times-with-async-pipe)|
 
- 
-###  RxJS
+## RxJS
 
 |Sl.No|  Questions                     |
 |-----|--------------------------------|
@@ -224,9 +220,8 @@
 | 154. |[How would you implement a brush behavior using rxjs?](#q-how-would-you-implement-a-brush-behavior-using-rxjs)|
 | 155. |[How would you implement a color picker with rxjs?](#q-how-would-you-implement-a-color-picker-with-rxjs)|
 | 156. |[If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons).](#q-if-you-need-to-respond-to-two-different-observable-subject-with-one-callback-function-how-would-you-do-it-ex-if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons)|
- 
 
-### Routing
+## Routing
 
 |Sl.No|  Questions                                                     |
 |-----|----------------------------------------------------------------|
@@ -251,8 +246,7 @@
 | 175. |[Why do we need route guards?](#q-why-do-we-need-route-guards)|
 | 176. |[How to use authguard in angular 7?](#q-how-to-use-authguard-in-angular-7)|
 
-
-### Services & DI
+## Services & DI
 
 |Sl.No|  Questions                                                             |
 |-----|------------------------------------------------------------------------|
@@ -275,8 +269,7 @@
 | 193. |[What is static injector error in angular?](#q-what-is-static-injector-error-in-angular)|
 | 194. |[How to create logger service in angular?](#q-how-to-create-logger-service-in-angular)|
 
-
-### Angular Template
+## Angular Template
 
 |Sl.No|  Questions                                                                       |
 |-----|----------------------------------------------------------------------------------|
@@ -296,8 +289,7 @@
 | 208. |[what is the difference between ng-content, ng-container and ng- template?](#q-what-is-the-difference-between-ng-content-ng-container-and-ng-template)|
 | 209. |[When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?](#q-when-you-create-a-data-binding-in-angular-are-you-working-with-attributes-or-properties-what-is-the-difference-anyway)|
 
-
-### Angular Animations
+## Angular Animations
 
 |Sl.No|  Quesions                                          |
 |-----|----------------------------------------------------|
@@ -315,8 +307,7 @@
 | 221. |[How would you select all the child components elements?](#q-how-would-you-select-all-the-child-components-elements)|
 | 222. |[How would you select a css class in any ancestor of the component host element, all the way up to the document root?](#q-how-would-you-select-a-css-class-in-any-ancestor-of-the-component-host-element-all-the-way-up-to-the-document-root)|
 
-
-### Performance
+## Performance
 
 |Sl.No|  Questions                                       |
 |-----|--------------------------------------------------|
@@ -332,8 +323,7 @@
 | 232. |[How would you use cached data?](#q-how-would-you-use-cached-data)|
 | 233. |[What are some ways you may improve your website scrolling performance?](#q-what-are-some-ways-you-may-improve-your-website-s-scrolling-performance)|
 
-
-### Miscellaneous
+## Miscellaneous
 
 |Sl.No|  Questions                           |
 |-----|--------------------------------------|
@@ -354,6 +344,8 @@
 <br/>
 
 ## # 1. ANGULAR BASICS
+
+<br/>
 
 ## Q. What are the frequently used command in angular?
 
@@ -387,22 +379,24 @@
 
 Angular has 2 types of build dev build or prod build
 
-**JIT**  
+**1. JIT:**
+
 Just-in-Time (JIT) is a type of compilation that compiles app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
 
-```javascript
+```js
 ng build
 ng serve
 ```
-**AOT**  
+
+**2. AOT:**  
 Ahead-of-Time (AOT) is a type of compilation that compiles app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
 
-```javascript
+```js
 ng build --aot
 ng serve --aot
 ```
 
-```
+```js
 ng build or ng build --dev   -  this is for development build
 ng build --prod              -  this is for production build
 ```
@@ -413,7 +407,6 @@ ng build --prod              -  this is for production build
 |Dev Build is not minified and uglified	    |Production Build is minified and uglified  |
 |Dev build is not tree shaked	              |Production build is tree shaked            |
 |No AOT compilation	                        |AOT compilation takes place                |
-
 
 * **minification** - process of removing excess whitespace, comments and optinal tokens like curly braces and semi colons
 * **uglification** - process of transforming code to use short variable and function names  
@@ -449,7 +442,7 @@ You can control your app compilation in two ways
 
 ## Q. How to optimize loading large data in angular?
 
-**Load Time Performance**
+**Load Time Performance:**
 
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
 2. **Tree-shaking**: This is the process of removing unused code resulting in smaller build size. In **angular-cli**, Tree-Shaking is enabled by default.
@@ -789,7 +782,7 @@ subject.next("d"); // Subscription got d
 
 Subject does not return the current value on Subscription. It triggers only on `.next(value)` call and return/output the value
 
-```javascript
+```js
 var subject = new Rx.Subject();
 
 subject.next(1); //Subjects will not output this value
@@ -818,7 +811,7 @@ observerB: 3
 
 A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject does not hold a value. BehaviourSubject will return the initial value or the current value on Subscription.
 
-```javascript
+```js
 var subject = new Rx.BehaviorSubject(0);  // 0 is the initial value
 
 subject.subscribe({
@@ -2152,7 +2145,7 @@ interface Observer<T> {
 }
 ```
 A handler that implements the Observer interface for receiving observable notifications will be passed as a parameter for observable as below,
-```javascript
+```js
 myObservable.subscribe(myObserver);
 ```
 *Note: If you do not supply a handler for a notification type, the observer ignores notifications of that type.*
@@ -2966,7 +2959,7 @@ The commonly-needed services, pipes, and directives provided by `@angular/common
 ## Q. What is codelyzer?
 
 Codelyzer provides set of tslint rules for static code analysis of Angular TypeScript projects. ou can run the static code analyzer over web apps, NativeScript, Ionic etc. Angular CLI has support for this and it can be use as below,
-```javascript
+```js
 ng new codelyzer
 ng lint
 ```
@@ -3099,7 +3092,7 @@ export class App {
 
 Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.
 1. You can enable ivy in a new project by using the --enable-ivy flag with the ng new command
-```javascript
+```js
 ng new ivy-demo-app --enable-ivy
 ```
 2. You can add it to an existing project by adding `enableIvy` option in the `angularCompilerOptions` in your project `tsconfig.app.json`.
@@ -3163,7 +3156,7 @@ The Angular Language Service is a way to get completions, errors, hints, and nav
 ## Q. How do you install angular language service in the project?
 
 You can install Angular Language Service in your project with the following npm command
-```javascript
+```js
 npm install --save-dev @angular/language-service
 ```
 After that add the following to the "compilerOptions" section of your project tsconfig.json
@@ -3216,7 +3209,7 @@ The Angular CLI command `ng run` is used to invoke a builder with a specific tar
 
 An App shell is a way to render a portion of your application via a route at build time. This is useful to first paint of your application that appears quickly because the browser can render static HTML and CSS without the need to initialize JavaScript. You can achieve this using Angular CLI which generates an app shell for running server-side of your app.
 
-```javascript
+```js
 ng generate appShell [options] (or)
 ng g appShell [options]
 ```
@@ -3332,11 +3325,11 @@ Below are the list of key advantages of Bazel tool,
 The `@angular/bazel` package provides a builder that allows Angular CLI to use Bazel as the build tool.  
 
 **1. Use in an existing applciation:** Add `@angular/bazel` using CLI
-```javascript
+```js
 ng add @angular/bazel
 ```
 **2. Use in a new application:** Install the package and create the application with collection option
-```javascript
+```js
 npm install -g @angular/bazel
 ng new --collection=@angular/bazel
 ```
@@ -3360,9 +3353,9 @@ bazel run [target]: Compile the program represented by target and then run it.
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-<br/>
-
 ## # 2. CONFIGURATION AND TOOLS
+
+<br/>
 
 ## Q. What is angular CLI?
 
@@ -5828,7 +5821,7 @@ export default {
 ```
 
 **package.json**  
-```javascript
+```js
 {
   "name": "babel-webpack",
   "version": "1.0.0",
