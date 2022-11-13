@@ -19,8 +19,8 @@
 
 |Sl.No| Project Name                              | Technologies Used   |Live Demo    |
 |-----|-------------------------------------------|---------------------|-------------|
-| 01  |	[Angular-app](angular-practice)      |Angular, Routing     |[live](https://angular-features.firebaseapp.com)|
-| 02  |	[Angular-with-Material-UI](angular-material-practice)|Angular, Material-UI |[live](https://angular-material8.firebaseapp.com)|
+| 01  |[Angular-app](angular-practice)      |Angular, Routing     |[live](https://angular-features.firebaseapp.com)|
+| 02  |[Angular-with-Material-UI](angular-material-practice)|Angular, Material-UI |[live](https://angular-material8.firebaseapp.com)|
 
 <br/>
 
@@ -132,6 +132,7 @@ ng build --prod              -  this is for production build
 ## Q. What are the ways to control AOT compilation?
 
 You can control your app compilation in two ways
+
 1. By providing template compiler options in the `tsconfig.json` file
 2. By configuring Angular metadata with decorators
 
@@ -144,15 +145,25 @@ You can control your app compilation in two ways
 **Load Time Performance:**
 
 1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
+
 2. **Tree-shaking**: This is the process of removing unused code resulting in smaller build size. In **angular-cli**, Tree-Shaking is enabled by default.
+
 3. **Uglify**: It is the process where the code size is reduced using various code transformations like mangling, removal of white spaces, removal of comments etc. For webpack use uglify plugin and with angular-cli specify the “prod” flag to perform the uglification process.
-4. **Lazy loading**: Lazy loading is the mechanism where instead of loading complete app, we load only the modules which are required at the moment thereby reducing the initial load time. 
+
+4. **Lazy loading**: Lazy loading is the mechanism where instead of loading complete app, we load only the modules which are required at the moment thereby reducing the initial load time.
+
 5. **Ivy Render Engine**: It results in much smaller bundle size than the current engine with improved debugging experience.
-6. **RxJS**: RxJS makes the whole library more tree-shakable thereby reducing the final bundle size. However, it has some breaking changes like operators chaining is not possible instead, pipe() function (helps in better tree shaking) is introduced to add operators. 
+
+6. **RxJS**: RxJS makes the whole library more tree-shakable thereby reducing the final bundle size. However, it has some breaking changes like operators chaining is not possible instead, pipe() function (helps in better tree shaking) is introduced to add operators.
+
 7. **Service worker cache**: A service worker is a script that runs in the web browser and manages caching for an application.
-8. **defer attribute**: Mentioning defer attribute to script tag will defer the loading of the scripts (sychronous) until the document is not parsed thus making site interactive quicker. 
+
+8. **defer attribute**: Mentioning defer attribute to script tag will defer the loading of the scripts (sychronous) until the document is not parsed thus making site interactive quicker.
+
 9. **async attribute**: async delays the loading of scripts until the document is not parsed but without respecting the order of loading of the scripts.
-10. **ChangeDetectionStrategy.OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:  
+
+10. **ChangeDetectionStrategy.OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:
+
 i). The `Input` reference changes.  
 ii). An event occurred from the component or one of his children.  
 iii). You run change detection explicitly by calling `detectChanges()/tick()/markForCheck()`  
@@ -212,7 +223,7 @@ export class App {
 
 The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
 
-**main.ts**
+**main.ts:**
 
 ```typescript
 import { enableProdMode } from '@angular/core';
@@ -231,7 +242,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 
 Most importantly here is the line where bootstraps start our angular app by passing app module to the method. AppModule refers to the app.module.ts file.
 
-**app.module.ts**
+**app.module.ts:**
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -255,7 +266,7 @@ export class AppModule { }
 
 When angular starts, it bootstrap array in `@NgModule`. It basically there is a list of all components which should be known to Angular at the point of time it analyzes **index.html** file.
 
-**index.html**
+**index.html:**
 
 ```html
 <!DOCTYPE html>
@@ -322,7 +333,7 @@ From subscription 2: 4
 
 ## Q. What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?
 
-**a.) BehaviorSubject**: It has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it. 
+**a.) BehaviorSubject**: It has the characteristic that it stores the **current** value. This means that we can always directly get the last emitted value from the BehaviorSubject. We can either get the value by accessing the **.value** property on the BehaviorSubject or we can subscribe to it.
 
 ```typescript
 import * as Rx from "rxjs";
@@ -389,7 +400,7 @@ subject.next(Math.random());
 // Subscriber B: 0.6664809293975393
 ```
 
-**c.) AsyncSubject**: It is a Subject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes. 
+**c.) AsyncSubject**: It is a Subject variant where only the last value of the Observable execution is sent to its subscribers, and only when the execution completes.
 
 ```typescript
 import * as Rx from "rxjs";
@@ -423,7 +434,7 @@ subject.complete();
 
 ## Q. What is difference between BehaviorSubject and Observable?
 
-Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.   
+Behavior Subject is a type of subject, a subject is a special type of observable so you can subscribe to messages like any other observable.
 
 The unique features of a behavior subject are:
 
@@ -481,7 +492,7 @@ subject.next("d"); // Subscription got d
 
 ## Q. What is the difference between Subject and BehaviorSubject?
 
-**Subject**  
+**Subject:**  
 
 Subject does not return the current value on Subscription. It triggers only on `.next(value)` call and return/output the value
 
@@ -503,14 +514,14 @@ subject.next(3);
 
 Output:
 
-```
+```js
 observerA: 2
 observerB: 2
 observerA: 3
 observerB: 3
 ```
 
-**BehaviorSubject**  
+**BehaviorSubject:**  
 
 A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject does not hold a value. BehaviourSubject will return the initial value or the current value on Subscription.
 
@@ -533,7 +544,7 @@ subject.next(3);
 
 Output:
 
-```
+```js
 observerA: 0
 observerA: 1
 observerA: 2
@@ -548,9 +559,8 @@ observerB: 3
 
 ## Q. What is the difference between AngularJS and Angular?
 
-Angular is a completely revived component-based framework in which an application is a tree of individual 
+Angular is a completely revived component-based framework in which an application is a tree of individual
 components.
-
 
 | AngularJS                                         | Angular                                             |
 |---------------------------------------------------|-----------------------------------------------------|
@@ -563,10 +573,9 @@ components.
 |Run on only client-side                             |Runs on client-side & server-side|
 |ng-app and angular bootstrap function are used to initialize | bootstrapmodule() function is used to initialize|
 
-**a.) AngularJS**  
+**a.) AngularJS:**  
 
-
-**Advantages**  
+**Advantages:**  
 
 * It has great MVC data binding that makes app development fast.
 * Using HTML as a declarative language makes it very intuitive.
@@ -576,26 +585,23 @@ components.
 * Directives
 * Dependency injection
 
-**Disadvantages**  
+**Disadvantages:**  
 
 * It is big and complicated due to the multiple ways of doing the same thing.
 * Implementations scale poorly.
 * If a user of an AngularJS application disables JavaScript, nothing but the basic page is visible.
 * There is a lagging UI if there are more than 200 watchers.
 
+**b.) Angular:**
 
-**b.) Angular**
-
-
-**Advantages** 
+**Advantages:**
 
 * Component-based architecture that provides a higher quality of code
-* Reusability: Components of similar nature are well encapsulated, in other words, self-sufficient. Developers can reuse them across different parts of an application. 
+* Reusability: Components of similar nature are well encapsulated, in other words, self-sufficient. Developers can reuse them across different parts of an application.
 * Unit-test friendly: The independent nature of components simplifies unit tests, quality assurance procedures aimed at verifying the performance of the smallest parts of the application, units.
 * Maintainability: Components that are easily decoupled from each other can be easily replaced with better implementations.
 
-
-**Disadvantages**
+**Disadvantages:**
 
 * Angular is verbose and complex
 * Steep learning curve
@@ -608,6 +614,7 @@ components.
 ## Q. How do you add web workers in your application?
 
 We can add web worker anywhere in our application. For example, If the file that contains expensive computation is `src/app/app.component.ts`, we can add a Web Worker using `ng generate web-worker app` command which will create `src/app/app.worker.ts` web worker file. This command will perform below actions,
+
 1. Configure project to use Web Workers
 2. Adds app.worker.ts to receive messages
 
@@ -643,12 +650,14 @@ if (typeof Worker !== 'undefined') {
 
 Directives add behaviour to an existing DOM element or an existing component instance.
 There are four types of directives in Angular
+
 * Components directives  
 * Structural directives  
 * Attribute directives  
 * Custom Directive  
 
-**Structural Directives**   
+**Structural Directives:**
+
 Structural Directives are directives which change the structure of the DOM by adding or removing elements. There are three built in structural directives, `NgIf`, `NgFor` and `NgSwitch`.
 
 Example: Structural Directives
@@ -660,7 +669,8 @@ Example: Structural Directives
 </div>
 ```
 
-**Attribute Directives**   
+**Attribute Directives:**
+
 Attribute directives change the appearance or behavior of an element, component, or another directive.  `ngClass`, `ngStyle` are examples of attribute directives built-in to the Angular framework.
 
 Example: Attribute Directives
@@ -698,7 +708,6 @@ Now this directive extends HTML element behavior with a yellow background as bel
 
 ## Q. What are components in angular?
 
-
 Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
 
 ```typescript
@@ -732,7 +741,6 @@ A component is also a type of directive with template, styles and logic part.
 | Component is used to break up the application into smaller components| Directive is use to design re-usable components|
 | Only one component can be present per DOM element | Many directives can be used per DOM element |
 | @View decorator or templateurl/template are mandatory | Directive does not use View|
-
 
 Example:
 
@@ -768,7 +776,7 @@ export class AppComponent  {
 
 ## Q. What is an Angular Module?
 
-In Angular, a module is a mechanism to group components, directives, pipes and services that are related, in such a way that can be combined with other modules to create an application. 
+In Angular, a module is a mechanism to group components, directives, pipes and services that are related, in such a way that can be combined with other modules to create an application.
 
 ```typescript
 import { NgModule }      from '@angular/core';
@@ -784,6 +792,7 @@ export class AppModule { }
 ```
 
 The NgModule decorator has three options
+
 * The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application
 * The declarations option is used to define components in the respective module
 * The bootstrap option tells Angular which Component to bootstrap in the application
@@ -829,13 +838,13 @@ Data binding is a core concept in Angular and allows to define communication bet
 <input type="email" [value]="user.email">
 ```
 
-**From the DOM to the Component**  
+**From the DOM to the Component:**
 
 **3. Event binding** `(event) = "function"`: When a specific DOM event happens (eg.: click, change, keyup), call the specified method in the component
 
 ```html
 <button (click)="logout()"></button>
-``` 
+```
 
 **4. Two-way data binding** `[(ngModel)] = "value"`: Two-way data binding allows to have the data flow both ways. For example, in the below code snippet, both the email DOM input and component email property are in sync
 
@@ -876,6 +885,7 @@ export class MyModule {
   }
 }
 ```
+
 **2. Property Decorators** Used for properties inside classes, e.g. `@Input()` and `@Output()`
 
 ```typescript
@@ -890,6 +900,7 @@ export class MyComponent {
     @Input() title: string;
 }
 ```
+
 **3. Method Decorators** Used for methods inside classes, e.g. `@HostListener()`
 
 ```typescript
@@ -928,26 +939,24 @@ export class MyComponent {
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## # 12. PERFORMANCE
-
-<br/>
-
 ## Q. What is a service worker and its role in Angular?
 
 A service worker is a script that runs in the web browser and manages caching for an application. Starting from 5.0.0 version, Angular ships with a service worker implementation. Angular service worker is designed to optimize the end user experience of using an application over a slow or unreliable network connection, while also minimizing the risks of serving outdated content. Adding a service worker to an Angular application is one of the steps for turning an application into a **Progressive Web App** (also known as a `PWA`).
 
 Below are the list of design goals of Angular service workers,
+
 * It caches an application just like installing a native application
 * A running application continues to run with the same version of all files without any incompatible files
 * When you refresh the application, it loads the latest fully cached version
 * When changes are published then it immediately updates in the background
 * Service workers saves the bandwidth by downloading the resources only when they changed.
 
-*Syntax*
+*Syntax:*
 
 ```bash
 ng add @angular/pwa --project *project-name*
 ```
+
 The above command completes the following actions:
 
 * Adds the `@angular/service-worker` package to your project.
@@ -965,7 +974,8 @@ The above command completes the following actions:
 
 ## Q. How to set time for caching in service-worker?
 
-**ngsw-config.json**
+**ngsw-config.json:**
+
 ```typescript
 {
     ...
@@ -1038,7 +1048,7 @@ export class App implements OnInit{
 
 Angular services are singleton objects which get instantiated only once during the lifetime of an application. It contains method that maintain data throughout the life of an application, i.e. data does not get refreshed and is available all the time. The main objective of a service is to organize and share business logic, models, or data and functions with different components of an Angular application.
 
-**Benefits**
+**Benefits:**
 
 An Angular service is a stateless object and provides some very useful functions. These functions can be invoked from any component of Angular, like Controllers, Directives, etc. This helps in dividing the web application into small, different logical units which can be reused.
 
@@ -1084,7 +1094,9 @@ export class PopcornService {
   }
 }
 ```
-*AppComponent.ts*
+
+*AppComponent.ts:*
+
 ```typescript
 import { Component } from '@angular/core';
 import { PopcornService } from './popcorn.service';
@@ -1195,10 +1207,13 @@ In the example above, Angular evaluates the title and url properties and fills i
 
 A template expression produces a value similar to any Javascript expression. Angular executes the expression and assigns it to a property of a binding target; the target might be an HTML element, a component, or a directive. In the property binding, a template expression appears in quotes to the right of the = symbol as in [property]="expression".
 In interpolation syntax, the template expression is surrounded by double curly braces. For example, in the below interpolation, the template expression is {{username}},
+
 ```html
 <h3>{{username}}, welcome to Angular</h3>
 ```
+
 The below javascript expressions are prohibited in template expression
+
 * assignments (=, +=, -=, ...)
 * new
 * chaining expressions with ; or ,
@@ -1210,11 +1225,14 @@ The below javascript expressions are prohibited in template expression
 
 ## Q. What are template statement?
 
-A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statement appear in quotes to the right of the = symbol like **(event)="statement"**. 
+A template statement responds to an event raised by a binding target such as an element, component, or directive. The template statement appear in quotes to the right of the = symbol like **(event)="statement"**.
+
 ```html
 <button (click)="editProfile()">Edit Profile</button>
 ```
+
 In the above expression, editProfile is a template statement. The below JavaScript syntax expressions are not allowed.
+
 * new
 * increment and decrement operators, `++` and `--`
 * operator assignment, such as `+=` and `-=`
@@ -1232,6 +1250,7 @@ In the above expression, editProfile is a template statement. The below JavaScri
 ## Q. What are pipes?
 
 A pipe takes in data as input and transforms it to a desired output. For example, let us take a pipe to transform a component birthday property into a human-friendly date using **date** pipe.
+
 ```typescript
 import { Component } from '@angular/core';
 
@@ -1277,6 +1296,7 @@ A pipe is a class decorated with pipe metadata `@Pipe()` decorator, which you im
 ```typescript
 @Pipe({name: 'myCustomPipe'})
 ```
+
 The pipe class implements the **PipeTransform()** interface transform method that accepts an input value followed by optional parameters and returns the transformed value.
 
 ```typescript
@@ -1284,11 +1304,15 @@ interface PipeTransform {
   transform(value: any, ...args: any[]): any
 }
 ```
+
 The `@Pipe()` decorator allows to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
+
 ```typescript
 template: `{{someInputValue | myCustomPipe: someOtherValue}}`
 ```
-Example: 
+
+Example:
+
 ```typescript
 import { Pipe, PipeTransform } from '@angular/core';
 
@@ -1299,7 +1323,9 @@ export class FileSizePipe implements PipeTransform {
   }
 }
 ```
+
 Now you can use the above pipe in template expression as below,
+
 ```typescript
   template: `
     <h2>Find the size of a file</h2>
@@ -1338,10 +1364,6 @@ export class myPipe implements PipeTransform {
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
-
-## # 13. MISCELLANEOUS
-
-<br/>
 
 ## Q. How to display only month in Angular?
 
@@ -1454,9 +1476,11 @@ import { HttpClientModule } from '@angular/common/http';
   })
   export class AppModule {}
 ```
+
 **Step 02**: Inject the HttpClient into the application  
 
 Lets create a `userProfileService(userprofile.service.ts)` as an example. It also defines get method of HttpClient
+
 ```typescript
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -1472,9 +1496,11 @@ export class UserProfileService {
   }
 }
 ```
+
 **Step 03**: Create a component for subscribing service  
 
 Lets create a component called `UserProfileComponent(userprofile.component.ts)` which inject UserProfileService and invokes the service method,
+
 ```typescript
 fetchUserProfile() {
   this.userProfileService.getUserProfile()
@@ -1485,9 +1511,11 @@ fetchUserProfile() {
     });
 }
 ```
+
 Since the above service method returns an Observable which needs to be subscribed in the component.
 
-**Advantages**  
+**Advantages:**
+
 * Contains testability features
 * Provides typed request and response objects
 * Intercept request and response
@@ -1559,8 +1587,7 @@ RxJS Operators are pure functions that transform information in the observable s
 
 The operators can be broken down in multiple categories. There are `creation operators` that create a new observable optionally from a source, such as a promise or a value, `Transformation operators` will transform the data in the stream, and `filtration operators` will act as a gate for the observable stream.
 
-**Categories of operators**  
-
+**Categories of operators:**  
 
 |AREA          |OPERATORS         |
 |--------------|------------------|
@@ -1572,6 +1599,7 @@ The operators can be broken down in multiple categories. There are `creation ope
 |Multicasting	 |share|
 
 **1. Pipeable Operators [`pipe()`]**: These are operators that can be piped to existing Observables using the pipe syntax.
+
 ```typescript
 class PostsComponent {
 
@@ -1587,7 +1615,9 @@ class PostsComponent {
   }
 }
 ```
+
 **2. Map Operator [`map()`]**: The map() operator, basically, helps us to transform data using an observer. The map operator applies a given project function to each value emitted by the source Observable and emits the resulting values as an observable.
+
 ```typescript
 import {map} from 'rxjs/operators';
 
@@ -1603,9 +1633,11 @@ mulNums.subscribe(x => console.log(x));
 // 4
 // 6
 ```
+
 **3. Filter Operator [`filter()`]**: RxJS filter() is used to filter values emitted by source Observable on the basis of given predicate. If the condition returns true, filter will emit value obtained from source Observable otherwise not.
 
 Example: Filter values for null
+
 ```typescript
 this.countryName$ = this.filterDemoService.getCountry().pipe(
   filter(country => country.getCountryName() !== null),
@@ -1616,9 +1648,11 @@ this.countryName$ = this.filterDemoService.getCountry().pipe(
   })
 ); 
 ```
+
 **4. Concat Operator [`concat()`]**: Creates an output Observable which sequentially emits all values from given Observable and then moves on to the next.
 
 Example: Concatenate a timer counting from 0 to 3 with a synchronous sequence from 1 to 10
+
 ```typescript
 import { concat, interval, range } from 'rxjs';
 import { take } from 'rxjs/operators';
@@ -1631,6 +1665,7 @@ result.subscribe(x => console.log(x));
 // results in:
 // 0 -1000ms-> 1 -1000ms-> 2 -1000ms-> 3 -immediate-> 1 ... 10
 ```
+
 **5. FlatMap Operator [`flatMap()`] or mergeMap Operator [`mergeMap()`]**: flatMap() is an alias for mergeMap(). By using flatMap we can transform our event stream (the keypress events on the text field) into our response stream (the search results from the HTTP request).
 
 Example: `app/services/search.service.ts`
@@ -1651,7 +1686,9 @@ export class SearchService {
   }
 }
 ```
+
 `app/app.component.ts`
+
 ```typescript
 import { Component } from '@angular/core';
 import { FormControl,
@@ -1689,6 +1726,7 @@ export class AppComponent {
 ```
 
 **6. SwitchMap Operator [`switchMap()`]**: The switchMap() operator switches from one stream to another, unsubscribing from the previous observable and returning a new observable.
+
 ```typescript
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
@@ -1726,6 +1764,7 @@ export class AppComponent {
 **7. Tap Operator [`tap()`]**: The `do()` operator was renamed to tap() in RxJS v5.5.x as part of the upgrade to lettable operators to avoid a confict with the reserved word do (part of the do-while loop).
 
 RxJS Tap operator uses to perform a side effect for every emission on the source Observable but returns an Observable that is identical to the source.
+
 ```typescript
 getProducts(): Observable<any[]> {
   return this.http.get<any[]>(apiUrl)
@@ -1737,6 +1776,7 @@ getProducts(): Observable<any[]> {
 ```
 
 **8. Catch Operator [`catch()`]**: The catch() operator was renamed in RxJS v5.5.x to catchError(). The catchError() operator to receive any error notifications that are emitted in the observable stream.
+
 ```typescript
 getProduct(id: number): Observable<any> {
   const url = `${apiUrl}/${id}`;
@@ -1750,7 +1790,8 @@ getProduct(id: number): Observable<any> {
 **9. forkJoin Operator [`forkJoin()`]**: The forkJoin() operator is similar to the `Promise.all()` method in that it starts (forks) multiple observers at once and then joins the final values from each observable when all observables complete. It is important to note that if any of the input observables never complete, then the forkJoin() will never complete.
 
 Example: Multiple http calls in parallel using forkJoin()
-```
+
+```js
 Observable.forkJoin(
     call1(params),
     call2(params),
@@ -1763,6 +1804,7 @@ Observable.forkJoin(
 ```
 
 **10. retry Operator [`retry()`]**:  retry() operator returns source Observable with the exception of an error. When source Observable calls error then retry operator resubscribe it for the maximum of given number of time. If Observable starts emitting elements and suppose at any point it calls error before completion, then retry operator will resubscribe the source Observable and starts emitting from start again.
+
 ```typescript
 return this.http
            .get(this.url)
@@ -1770,6 +1812,7 @@ return this.http
 ```
 
 **11. StartWith Operator [`startWith()`]**:
+
 ```typescript
 import { startWith } from 'rxjs/operators';
 import { of } from 'rxjs';
@@ -1783,6 +1826,7 @@ const subscribe = example.subscribe(val => console.log(val));
 ```
 
 **12. Of Operator [`of()`]**:
+
 ```typescript
 import { of } from 'rxjs';
 //emits any number of provided values in sequence
@@ -1792,6 +1836,7 @@ const subscribe = source.subscribe(val => console.log(val));
 ```
 
 **13. take Operator [`take()`]**: take() an operator returns the first N values observed and complete stream. It is also another filteration operator.
+
 ```typescript
 import { interval } from ‘rxjs’;
 import { take } from ‘rxjs/operators’;
@@ -1800,10 +1845,13 @@ const intervalCount = interval(1000);
 const takeFive = intervalCount.pipe(take(5));
 takeFive.subscribe(x => console.log(x));
 ```
+
 Output
-```
+
+```js
 0, 1, 2, 3, 4
 ```
+
 The above example will take only the first five elements after every 5 seconds with the 1-second interval for five seconds.
 
 <div align="right">
@@ -1842,7 +1890,8 @@ myObservable.subscribe(myObserver);
 ## Q. What is an observable?
 
 An Observable is a unique Object similar to a Promise that can help manage async code. Observables are not part of the JavaScript language so we need to rely on a popular Observable library called RxJS.
-The observables are created using new keyword. 
+The observables are created using new keyword.
+
 ```typescript
 import { Observable } from 'rxjs';
 
@@ -1860,6 +1909,7 @@ const observable = new Observable(observer => {
 ## Q. What is an observer?
 
 Observer is an interface for a consumer of push-based notifications delivered by an Observable. It has below structure,
+
 ```typescript
 interface Observer<T> {
   closed?: boolean;
@@ -1868,10 +1918,13 @@ interface Observer<T> {
   complete: () => void;
 }
 ```
+
 A handler that implements the Observer interface for receiving observable notifications will be passed as a parameter for observable as below,
+
 ```js
 myObservable.subscribe(myObserver);
 ```
+
 *Note: If you do not supply a handler for a notification type, the observer ignores notifications of that type.*
 
 <div align="right">
@@ -1881,6 +1934,7 @@ myObservable.subscribe(myObserver);
 ## Q. What is multicasting?
 
 Multi-casting is the practice of broadcasting to a list of multiple subscribers in a single execution. Lets demonstrate the multi-casting feature,
+
 ```typescript
 var source = Rx.Observable.from([1, 2, 3]);
 var subject = new Rx.Subject();
@@ -1904,6 +1958,7 @@ multicasted.subscribe({
 ## Q. How do you perform error handling in observables?
 
 We can handle errors by specifying an **error callback** on the observer instead of relying on try/catch which are ineffective in asynchronous environment. For example, you can define error callback as below,
+
 ```typescript
 myObservable.subscribe({
   next(num) { console.log('Next num: ' + num)},
@@ -1934,6 +1989,7 @@ myObservable.subscribe(
 ## Q. What are the utility functions provided by RxJS?
 
 The RxJS library also provides below utility functions for creating and working with observables.
+
 1. Converting existing code for async operations into observables
 2. Iterating through the values in a stream
 3. Mapping values to different types
@@ -1959,21 +2015,27 @@ data.subscribe({
   complete() { console.log('Completed'); }
 });
 ```
+
 2. Create an observable that creates an AJAX request
+
 ```typescript
 import { ajax } from 'rxjs/ajax'; // ajax function
 const apiData = ajax('/api/data'); // Created from AJAX request
 // Subscribe to create the request
 apiData.subscribe(res => console.log(res.status, res.response));
 ```
+
 3. Create an observable from a counter
+
 ```typescript
 import { interval } from 'rxjs'; // interval function
 const secondsCounter = interval(1000); // Created from Counter value
 secondsCounter.subscribe(n =>
   console.log(`Counter value: ${n}`));
 ```
+
 4. Create an observable from an event
+
 ```typescript
 import { fromEvent } from 'rxjs';
 const el = document.getElementById('custom-element');
@@ -2002,7 +2064,6 @@ Normally an observer object can define any combination of next, error and comple
 * return a single value
 * not cancellable
 * more readable code with try/catch and async/await
-
 
 **Observables**:
 
@@ -2059,6 +2120,7 @@ No, custom elements bootstrap (or start) automatically when they are added to th
 ## Q. How custom elements works internally?
 
 Below are the steps in an order about custom elements functionality,
+
 1. **App registers custom element with browser** Use the createCustomElement() function to convert a component into a class that can be registered with the browser as a custom element.
 2. **App adds custom element to DOM**  Add custom element just like a built-in HTML element directly into the DOM.
 3. **Browser instantiate component based class** Browser creates an instance of the registered class and adds it to the DOM.
@@ -2071,6 +2133,7 @@ Below are the steps in an order about custom elements functionality,
 ## Q. How to transfer components to custom elements?
 
 Transforming components to custom elements involves **two** major steps,
+
 1. **Build custom element class** Angular provides the `createCustomElement()` function for converting an Angular component (along with its dependencies) to a custom element. The conversion process implements `NgElementConstructor` interface, and creates a constructor class which is used to produce a self-bootstrapping instance of Angular component.
 2. **Register element class with browser** It uses `customElements.define()` JS function, to register the configured constructor and its associated custom-element tag with the browser `CustomElementRegistry`. When the browser encounters the tag for the registered element, it uses the constructor to create a custom-element instance.
 
@@ -2081,6 +2144,7 @@ Transforming components to custom elements involves **two** major steps,
 ## Q. What are the mapping rules between Angular component and custom element?
 
 The Component properties and logic maps directly into HTML attributes and the browser event system. Let us describe them in two steps,
+
 1. The createCustomElement() API parses the component input properties with corresponding attributes for the custom element. For example, component `@Input('myInputProp')` converted as custom element attribute `my-input-prop`.
 2. The Component outputs are dispatched as HTML Custom Events, with the name of the custom event matching the output name. For example, component `@Output()` valueChanged = new EventEmitter() converted as custom element with dispatch event as "valueChanged".
 
@@ -2099,6 +2163,7 @@ class MyContainer {
   @Input() message: string;
 }
 ```
+
 After applying types typescript validates input value and their types,
 
 ```javascirpt
@@ -2151,6 +2216,7 @@ The RouterOutlet is a directive from the router library and it  acts as a placeh
 <router-outlet></router-outlet>  
 <router-outlet  name="sidebar"></router-outlet>  
 ```
+
 ```typescript
 {
    path: "",
@@ -2166,6 +2232,7 @@ The RouterOutlet is a directive from the router library and it  acts as a placeh
 ## Q. What is routerLink?
 
 The RouterLink is a directive on the anchor tags give the router control over those elements. Since the navigation paths are fixed, you can assign string values to router-link directive as below,
+
 ```html
 <h1>Angular Router</h1>
 <nav>
@@ -2199,6 +2266,7 @@ RouterLinkActive is a directive that toggles css classes for active RouterLink b
 ## Q. What is router state?
 
 RouterState is a tree of activated routes. Every node in this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data. You can access the current RouterState from anywhere in the application using the `Router service` and the `routerState` property.
+
 ```typescript
 @Component({templateUrl:'template.html'})
 class MyComponent {
@@ -2219,6 +2287,7 @@ class MyComponent {
 ## Q. What are Router Events?
 
 During each navigation, the Router emits navigation events through the Router.events property allowing you to track the lifecycle of the route. The sequence of router events is as below,
+
 * NavigationStart
 * RouteConfigLoadStart
 * RouteConfigLoadEnd
@@ -2243,6 +2312,7 @@ During each navigation, the Router emits navigation events through the Router.ev
 ## Q. What is Activated Route?
 
 ActivatedRoute contains the information about a route associated with a component loaded in an outlet. It can also be used to traverse the router state tree. The ActivatedRoute will be injected as a router service to access the information. In the below example, you can access route path and parameters,
+
 ```typescript
 @Component({...})
 class MyComponent {
@@ -2262,6 +2332,7 @@ class MyComponent {
 ## Q. How do you define Angular Routes?
 
 The Angular Router enables navigation from one view to the next as users perform application tasks.
+
 ```typescript
 const appRoutes: Routes = [
   { 
@@ -2303,6 +2374,7 @@ export class AppModule { }
 
 If the URL does not match any predefined routes then it causes the router to throw an error and crash the app. In this case, you can use wildcard route. A wildcard route has a path consisting of two asterisks to match every URL.
 For example, you can define PageNotFoundComponent for wildcard route as below
+
 ```typescript
 { path: '**', component: PageNotFoundComponent }
 ```
@@ -2330,6 +2402,7 @@ The Angular components and templates cannot be understood by the browser directl
 ## Q. What are the restrictions of metadata?
 
 In Angular, You must write metadata with the following general constraints,
+
 1. Write expression syntax with in the supported range of javascript features
 2. The compiler can only reference symbols which are exported
 3. Only call the functions supported by the compiler
@@ -2354,6 +2427,7 @@ The AOT compiler works in three phases,
 ## Q. Can I use arrow functions in AOT?
 
 No, Arrow functions or lambda functions can’t be used to assign values to the decorator properties. For example, the following snippet is invalid:
+
 ```typescript
 @Component({
   providers: [{
@@ -2361,7 +2435,9 @@ No, Arrow functions or lambda functions can’t be used to assign values to the 
   }]
 })
 ```
+
 To fix this, it has to be changed as following exported function:
+
 ```typescript
 function getService(){
   return new MyService();
@@ -2373,6 +2449,7 @@ function getService(){
   }]
 })
 ```
+
 If you still use arrow function, it generates an error node in place of the function. When the compiler later interprets this node, it reports an error to turn the arrow function into an exported function.  
 
 *Note: From Angular5 onwards, the compiler automatically performs this rewriting while emitting the `.js` file.*
@@ -2401,19 +2478,23 @@ No, the AOT collector understands a subset  of (or limited) JavaScript features.
 
 The compiler can only resolve references to exported symbols in the metadata. Where as some of the non-exported members are folded while generating the code. i.e Folding is a process in which the collector evaluate an expression during collection and record the result in the .metadata.json instead of the original expression.
 For example, the compiler couldnot refer selector reference because it is not exported
+
 ```typescript
 let selector = 'app-root';
 @Component({
   selector: selector
 })
 ```
+
 Will be folded into inline selector
+
 ```typescript
 @Component({
       selector: 'app-root'
     })
 ```
-Remember that the compiler can’t fold everything. For example, spread operator on arrays, objects created using new keywords and function calls.
+
+Remember that the compiler can\'t fold everything. For example, spread operator on arrays, objects created using new keywords and function calls.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -2429,14 +2510,18 @@ export function wrapInArray<T>(value: T): T[] {
   return [value];
 }
 ```
+
 You can use it inside metadata as an expression,
+
 ```typescript
 @NgModule({
   declarations: wrapInArray(TypicalComponent)
 })
 export class TypicalModule {}
 ```
+
 The compiler treats the macro expression as it written directly
+
 ```typescript
 @NgModule({
   declarations: [TypicalComponent]
@@ -2457,6 +2542,7 @@ export class TypicalModule {}
     const prop = typeof User; // typeof is not valid in metadata
 2. { provide: 'token', useValue: { [prop]: 'value' } }; // bracket notation is not valid in metadata
 ```
+
 **2. Reference to a local (non-exported) symbol:** The compiler encountered a referenced to a locally defined symbol that either wasnot exported or wasnot initialized.
 
 ```typescript
@@ -2472,20 +2558,26 @@ let username: string; // neither exported nor initialized
 })
 export class MyComponent {}
 ```
+
 You can fix this by either exporting or initializing the value,
+
 ```typescript
 export let username: string; // exported
 (or)
 let username = 'John'; // initialized
 ```
+
 **3. Function calls are not supported:** The compiler does not currently support function expressions or lambda functions. For example, you cannot set a provider useFactory to an anonymous function or arrow function as below.
+
 ```typescript
   providers: [
     { provide: MyStrategy, useFactory: function() { ... } },
     { provide: OtherStrategy, useFactory: () => { ... } }
   ]
 ```
+
 You can fix this with exported function
+
 ```typescript
 export function myStrategy() { ... }
 export function otherStrategy() { ... }
@@ -2494,8 +2586,10 @@ providers: [
     { provide: MyStrategy, useFactory: myStrategy },
     { provide: OtherStrategy, useFactory: otherStrategy },
 ```
+
 **4. Destructured variable or constant not supported:** The compiler does not support references to variables assigned by destructuring.
 For example, you cannot write something like this:
+
 ```typescript
 import { user } from './user';
 
@@ -2507,7 +2601,9 @@ providers: [
     {provide: Age, useValue: age},
   ]
 ```
+
 You can fix this by non-destructured values
+
 ```typescript
 import { user } from './user';
 ... //metadata
@@ -2532,6 +2628,7 @@ Metadata rewriting is the process in which the compiler converts the expression 
 ## Q. How do you provide configuration inheritance?
 
 Angular Compiler supports configuration inheritance through extends in the **tsconfig.json** on `angularCompilerOptions`. i.e,The configuration from the base file (example, tsconfig.base.json) are loaded first, then overridden by those in the inheriting config file.
+
 ```typescript
 {
   "extends": "../tsconfig.base.json",
@@ -2554,6 +2651,7 @@ Angular Compiler supports configuration inheritance through extends in the **tsc
 ## Q. How do you specify angular template compiler options?
 
 The angular template compiler options are specified as members of the `angularCompilerOptions` object in the **tsconfig.json** file. These options will be specified adjecent to typescript compiler options.
+
 ```typescript
 {
   "compilerOptions": {
@@ -2599,10 +2697,13 @@ my.component.ts.MyComponent.html(1,1): : Property 'contacts' does not exist on t
 ## Q. What is the purpose of any type cast function?
 
 You can disable binding expression type checking using $any() type cast function(by surrounding the expression). In the following example, the error Property contacts does not exist is suppressed by casting user to the any type.
+
 ```typescript
   template: '{{$any(user).contacts.email}}'
 ```
+
 The $any() cast function also works with this to allow access to undeclared members of the component.
+
 ```typescript
   template: '{{$any(this).contacts.email}}'
 ```
@@ -2638,6 +2739,7 @@ class MyComponent {
 ## Q. What is type narrowing?
 
 The expression used in an ngIf directive is used to narrow type unions in the Angular template compiler similar to if expression in typescript. So `*ngIf` allows the typeScript compiler to infer that the data used in the binding expression will never be undefined.
+
 ```typescript
 @Component({
   selector: 'my-component',
@@ -2683,6 +2785,7 @@ The commonly-needed services, pipes, and directives provided by `@angular/common
 ## Q. What is codelyzer?
 
 Codelyzer provides set of tslint rules for static code analysis of Angular TypeScript projects. ou can run the static code analyzer over web apps, NativeScript, Ionic etc. Angular CLI has support for this and it can be use as below,
+
 ```js
 ng new codelyzer
 ng lint
@@ -2716,6 +2819,7 @@ state('open', style({
 ## Q. What is Style function?
 
 The style function is used to define a set of styles to associate with a given state name. You need to use it along with state() function to set CSS style attributes. For example, in the close state, the button has a height of 100 pixels, an opacity of 0.8, and a background color of green.
+
 ```typescript
 state('close', style({
   height: '100px',
@@ -2819,11 +2923,15 @@ export class App {
 ## Q. What is Angular Ivy?
 
 Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.
+
 1. You can enable ivy in a new project by using the --enable-ivy flag with the ng new command
+
 ```js
 ng new ivy-demo-app --enable-ivy
 ```
+
 2. You can add it to an existing project by adding `enableIvy` option in the `angularCompilerOptions` in your project `tsconfig.app.json`.
+
 ```typescript
 {
   "compilerOptions": { ... },
@@ -2840,6 +2948,7 @@ ng new ivy-demo-app --enable-ivy
 ## Q. What are the features included in ivy preview?
 
 You can expect below features with Ivy preview,
+
 * Generated code that is easier to read and debug at runtime
 * Faster re-build time
 * Improved payload size
@@ -2852,6 +2961,7 @@ You can expect below features with Ivy preview,
 ## Q. Can I use AOT compilation with Ivy?
 
 Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster. So you need set the default build options(with in angular.json) for your project to always use AOT compilation.
+
 ```typescript
 {
   "projects": {
@@ -2888,10 +2998,13 @@ The Angular Language Service is a way to get completions, errors, hints, and nav
 ## Q. How do you install angular language service in the project?
 
 You can install Angular Language Service in your project with the following npm command
+
 ```js
 npm install --save-dev @angular/language-service
 ```
+
 After that add the following to the "compilerOptions" section of your project tsconfig.json
+
 ```typescript
 "plugins": [
     {"name": "@angular/language-service"}
