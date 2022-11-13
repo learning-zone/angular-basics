@@ -1,22 +1,22 @@
-# Angular Interview Questions ( v14.x )
+# Angular Basics ( v14.x )
 
 *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
 
 <br/>
 
-## Related Interview Questions
+## Related Topics
 
-* [HTML5 Interview Questions](https://github.com/learning-zone/html-interview-questions)
-* [CSS Interview Questions](https://github.com/learning-zone/css-interview-questions)
-* [JavaScript Interview Questions](https://github.com/learning-zone/javascript-interview-questions)
+* [HTML Basics](https://github.com/learning-zone/html-basics)
+* [CSS Basics](https://github.com/learning-zone/css-basics)
+* [JavaScript Basics](https://github.com/learning-zone/javascript-basics)
 * [Typescript Basics](https://github.com/learning-zone/typescript-basics)
 
 <br/>
 
 ## Table of Contents
 
-* [Angular Unit Testing Interview Questions](unit-testing-questions.md)
 * [Angular Commands List](angular-commands.md)
+* [Angular Unit Testing](unit-testing-questions.md)
 
 <br/>
 
