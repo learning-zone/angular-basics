@@ -2684,6 +2684,7 @@ class MyComponent {
   user?: User;
 }
 ```
+
 This will produce the following error:
 
 ```typescript
@@ -3066,6 +3067,7 @@ ng g appShell [options]
 ## Q. What are the case types in Angular?
 
 Angular uses capitalization conventions to distinguish the names of various types. Angular follows the list of the below case types.
+
 * **camelCase** Symbols, properties, methods, pipe names, non-component directive selectors, constants uses lowercase on the first letter of the item. For example, "selectedUser"
 * **UpperCamelCase (or PascalCase)** Class names, including classes that define components, interfaces, NgModules, directives, and pipes uses uppercase on the first letter of the item.
 * **dash-case (or "kebab-case")** The descriptive part of file names, component selectors uses dashes between the words. For example, "app-user-list".
@@ -3079,6 +3081,7 @@ Angular uses capitalization conventions to distinguish the names of various type
 
 A class decorator is a decorator that appears immediately before a class definition, which declares the class to be of the given type, and provides metadata suitable to the type
 The following list of decorators comes under class decorators,
+
 1. `@Component()`
 2. `@Directive()`
 3. `@Pipe()`
@@ -3113,6 +3116,7 @@ Declarable is a class type that you can add to the declarations list of an NgMod
 ## Q. What are the restrictions on declarable classes?
 
 Below classes should not be declared,
+
 1. A class that is already declared in another NgModule
 2. Ngmodule classes
 3. Service classes
@@ -3141,6 +3145,7 @@ const url = injector.get(BASE_URL);
 
 A domain-specific language (DSL) is a computer language specialized to a particular application domain. Angular has its own Domain Specific Language (DSL) which allows us to write Angular specific html-like syntax on top of normal html. It has its own compiler that compiles this syntax to html that the browser can understand. This DSL is defined in NgModules such as animations, forms, and routing and navigation.
 Basically you will see 3 main syntax in Angular DSL.
+
 1. `()`: Used for Output and DOM events.
 2. `[]`: Used for Input and specific DOM element attributes.
 3. `*` : Structural directives(*ngFor or *ngIf) will affect/change the DOM structure.
@@ -3155,8 +3160,10 @@ Bazel is a powerful build tool developed and massively used by Google and it can
 
 *Note: The Angular framework itself is built with Bazel.*
 
-**Advantages**  
+**Advantages:**
+
 Below are the list of key advantages of Bazel tool,
+
 1. It creates the possibility of building your back-ends and front-ends with the same tool
 2. The incremental build and tests
 3. It creates the possibility to have remote builds and cache on a build farm.
@@ -3170,14 +3177,18 @@ Below are the list of key advantages of Bazel tool,
 The `@angular/bazel` package provides a builder that allows Angular CLI to use Bazel as the build tool.  
 
 **1. Use in an existing applciation:** Add `@angular/bazel` using CLI
+
 ```js
 ng add @angular/bazel
 ```
+
 **2. Use in a new application:** Install the package and create the application with collection option
+
 ```js
 npm install -g @angular/bazel
 ng new --collection=@angular/bazel
 ```
+
 When you use ng build and ng serve commands, Bazel is used behind the scenes and outputs the results in dist/bin folder.
 
 <div align="right">
@@ -3206,13 +3217,18 @@ bazel run [target]: Compile the program represented by target and then run it.
 
 Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
 You need to install using below npm command,
-```
+
+```js
 npm install @angular/cli@latest
 ```
+
 Below are the list of few commands, which will come handy while creating angular projects
-1. **Creating New Project** ng new <project-name>
-2. **Generating Components, Directives & Services** ng generate/g <feature-name>  
+
+1. **Creating New Project** ng new `<project-name>`
+2. **Generating Components, Directives & Services** ng generate/g `<feature-name>`
+
 The different types of commands would be,
+
 * ng generate class my-new-class: add a class to your application
 * ng generate component my-new-component: add a component to your application
 * ng generate directive my-new-directive: add a directive to your application
@@ -3220,6 +3236,7 @@ The different types of commands would be,
 * ng generate module my-new-module: add a module to your application
 * ng generate pipe my-new-pipe: add a pipe to your application
 * ng generate service my-new-service: add a service to your application
+
 3. **Running the Project** ng serve
 
 <div align="right">
@@ -3235,7 +3252,9 @@ The different types of commands would be,
 The `<ng-content></ng-content>` tag as a placeholder for dynamic content, then when the template is parsed Angular will replace that placeholder tag with your content.
 
 They are used to create configurable components. This means the components can be configured depending on the needs of its user. This is well known as **Content Projection**. Components that are used in published libraries make use of <ng-content> to make themselves configurable.
+
 Example
+
 ```html
 <!-- project-content.html -->
 <div class="heading">
@@ -3248,6 +3267,7 @@ Example
   <ng-content></ng-content>
 </div>
 ```
+
 ```html
 <project-content>
   <div>This is custom footer...</div>
@@ -3261,6 +3281,7 @@ Example
 ## Q. How can I select an element in a component template?
 
 We can get a handle to the DOM element via **ElementRef** by injecting it into component constructor:
+
 ```typescript
 constructor(myElement: ElementRef) { ... }
 ```
@@ -3302,6 +3323,7 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 * **guard**: script that runs when a route is loaded, activated or deactivated
 * **resolver**: script that fetches data before the requested page is activated
 * **router outlet**: location in the DOM where Angular Router can place activated components.
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -3333,6 +3355,7 @@ export class MessageComponent {
     @Input() message: string;
 }
 ```
+
 We are using MessageComponent inside AppComponent as shown in below listing:
 
 ```typescript
@@ -3353,6 +3376,7 @@ export class AppComponent implements OnInit {
     }
 }
 ```
+
 Here MessageComponent is located inside template of AppComponent, so it can be accessed as ViewChild.
 
 ```typescript
@@ -3408,6 +3432,7 @@ export class AppComponent implements OnInit {
     }
 }
 ```
+
 Since, MessageComponnet is projected and being used inside template of MessageContainerComponent, it can be used as ContentChild as shown in the below listing:
 
 ```typescript
@@ -3450,6 +3475,7 @@ There are two ways to make a service a singleton in Angular:
 ## Q. How do you reference the host of a component?
 
 We can get the host element reference using
+
 ```typescript
 class MyComponent {
   constructor(private elRef:ElementRef) {
@@ -3457,7 +3483,9 @@ class MyComponent {
   }
 }
 ```
+
 We can also subscribe to the `focus` event
+
 ```typescript
 class MyComponent {
   @HostBinding() tabindex = 0;
@@ -3536,6 +3564,7 @@ export class CachedService {
   }
 }
 ```
+
 This will make an HTTP call when the fetch method is called, and any subscribers to `service.data$` ($ as a suffix basically represents a stream of values) will get the response from the `ReplaySubject`. As it replays earlier values, any subscribers who join after the HTTP call resolves will still get the previous response.
 
 If we want to trigger an update, we can just call `service.fetch()` to kick off a new HTTP call and all subscribers will be updated once the new response arrives.
@@ -3552,18 +3581,21 @@ export class SomeComponent implements OnInit {
   }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. What do you understand by a template variable? 
+## Q. What do you understand by a template variable?
 
 A template reference variable is often a reference to a DOM element within a template. It can also be a reference to an Angular component or directive or a web component.  
 Example:
+
 ```html
 <input type="text" #name>
 <button (click)="show(name)">Show</button>
 ```
+
 ```typescript
 show(name: HTMLInputElement){
     console.log(name.value);
@@ -3576,7 +3608,8 @@ show(name: HTMLInputElement){
 
 ## Q. What is shadow DOM? How is it helping Angular to perform better?
 
-Shadow DOM basically allows group of DOM implementation to be hidden inside a single element and encapsulate styles to the element. Whenever we create a component, Angular puts its template into a shadowRoot, which is the Shadow DOM of that particular component.     
+Shadow DOM basically allows group of DOM implementation to be hidden inside a single element and encapsulate styles to the element. Whenever we create a component, Angular puts its template into a shadowRoot, which is the Shadow DOM of that particular component.
+
 Example:
 
 ```typescript
@@ -3607,18 +3640,25 @@ Example:
 Example: Adding `underscore.js` library to a Angular Project.
 
 Step 1: Create a new project using Angular CLI
+
 ```typescript
 ng new learning
 ```
-Step 2: Install the package 
+
+Step 2: Install the package
+
 ```typescript
 npm install --save underscore
 ```
+
 Step 3: Import the library into Angular (TypeScript)
+
 ```typescript
 npm install --save @types/underscore
 ```
+
 Step 4: Import type declaration into Angular app
+
 ```typescript
 import * as _ from 'underscore';
 
@@ -3654,7 +3694,9 @@ export class SomeService {
   }
 }
 ```
+
 The `@Inject` decorator must be used at the level of constructor parameters to specify metadata regarding elements to inject. Without it, the type of parameters is used (`obj:SomeType` is equivalent to `@Inject(SomeType) obj`).
+
 ```typescript
 @Injectable()
 export class SomeService {
@@ -3669,11 +3711,11 @@ export class SomeService {
 
 ## Q. What are Zones? What is Change Detection? What would be a good use for NgZone service?
 
-The most common use of `NgZone` service is to optimize performance when starting a work consisting of one or more asynchronous tasks that do not require UI updates or error handling to be handled by Angular.   
+The most common use of `NgZone` service is to optimize performance when starting a work consisting of one or more asynchronous tasks that do not require UI updates or error handling to be handled by Angular.
 
 Zone.js is an execution context that helps developers intercept and keep track of async operations. Zone works on the concept of associating each operation with a zone. Each zone can fork and create a child zone with a different context, no limits. Inside a zone, async operations are captured using different APIs, so that the developer can decide what to do with the interceptions.
 
-`Zone` and `NgZone` are used to automatically trigger change detection as a result of async operations. But since change detection is a separate mechanism it can successfully work without Zone and NgZone. 
+`Zone` and `NgZone` are used to automatically trigger change detection as a result of async operations. But since change detection is a separate mechanism it can successfully work without Zone and NgZone.
 
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -3685,6 +3727,7 @@ Angular supports the concept of auxiliary routes, which allow to set up and navi
 
 To define the auxiliary route we must first add a named router `outlet` where contents for the auxiliary route are to be rendered.  
 Example:
+
 ```typescript
 import {Component} from '@angular/core';
 
@@ -3712,12 +3755,15 @@ export class AppComponent { }
 ```
 
 Next we must define the link to the auxiliary route for the application to navigate and render the contents.
+
 ```html
 <a [routerLink]="[{ outlets: { 'sidebar': ['component-aux'] } }]">
   Component Aux
 </a>
 ```
+
 Each auxiliary route is an independent route which can have:
+
 * Its own child routes
 * Its own auxiliary routes
 * Its own route-params
@@ -3727,7 +3773,7 @@ Each auxiliary route is an independent route which can have:
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. How do you get a reference to a child component? 
+## Q. How do you get a reference to a child component?
 
 `ViewChild`/`ViewChildren` or `ContentChild`/`ContentChildren`
 
@@ -3735,7 +3781,7 @@ Each auxiliary route is an independent route which can have:
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. How do you listen for events in a component? 
+## Q. How do you listen for events in a component?
 
 `HostListener` or via `elementRef.nativeElement`
 
@@ -3743,7 +3789,7 @@ Each auxiliary route is an independent route which can have:
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. How do you force a change detection cycle? 
+## Q. How do you force a change detection cycle?
 
 `changeDetectorRef.markForCheck` or `changeDetectorRef.detectChanges()`
 
@@ -3765,6 +3811,7 @@ Allows to refer to references which are not yet defined.
 
 For instance, `forwardRef` is used when the token which we need to refer to for the purposes of DI is declared, but not yet defined. It is also used when the token which we use when creating a query is not yet defined.  
 Example:
+
 ```typescript
 class Door {
   lock: Lock;
@@ -3789,11 +3836,12 @@ expect(door.lock instanceof Lock).toBeTruthy();
 
 ## Q. What are entryComponents?
 
-An entry component is any component that Angular loads imperatively. 
+An entry component is any component that Angular loads imperatively.
 There are two main kinds of entry components:
 
 * The bootstrapped root component.
-* A component you specify in a route definition.  
+* A component you specify in a route definition.
+
 ```typescript
 @NgModule({
   declarations: [
@@ -3809,6 +3857,7 @@ There are two main kinds of entry components:
   bootstrap: [AppComponent] // bootstrapped entry component
 })
 ```
+
 A bootstrapped component is an entry component that Angular loads into the DOM during the bootstrap process (application launch).
 
 <div align="right">
@@ -3825,7 +3874,7 @@ A bootstrapped component is an entry component that Angular loads into the DOM d
 
 ## Q. What are the best way to unsubscribe from Observables in Angular?
 
-**The Problem**  
+**The Problem:**
 
 ```typescript
 export class SimpleComponent implements OnInit, OnDestroy {
@@ -3850,9 +3899,11 @@ export class SimpleComponent implements OnInit, OnDestroy {
   }
 }
 ```
+
 For every `Observable.subscribe()`, we store the Subscription instance and call its unsubscribe method in the `ngOnDestroy` callback. Angular calls the `ngOnDestroy` method once the component is not used anymore. Therefore, its the perfect place to end our subscriptions. While this solution might be OK for if you have one or two subscriptions, it becomes very tedious if we have more subscriptions.
 
-**The solution**  
+**The solution:**
+
 ```typescript
 export class SimpleComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute,
@@ -3875,6 +3926,7 @@ export class SimpleComponent implements OnInit, OnDestroy {
   }
 }
 ```
+
 At runtime, the function componentDestroyed alters the component instance and creates a new `ngOnDestroy` method which in turn calls an internally created Subject. The existing ngOnDestroy gets called by the new ngOnDestroy method.
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -3886,7 +3938,8 @@ At runtime, the function componentDestroyed alters the component instance and cr
 
 EventEmitter is really an Angular abstraction, and should be used pretty much only for emitting custom Events in components. Otherwise, just use Rx as if it was any other library.
 
-Example: 
+Example:
+
 ```typescript
 @Component({
     selector : 'child',
@@ -3913,7 +3966,9 @@ class Parent {
     }
 }
 ```
+
 **How not to use it?**
+
 ```typescript
 class MyService {
     @Output() myServiceEvent : EventEmitter<any> = new EventEmitter();
@@ -3952,7 +4007,9 @@ export class CustomHttpInterceptorService implements HttpInterceptor {
   }
 }
 ```
+
 Adding the interceptor to app.module.ts  
+
 ```typescript
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -3974,16 +4031,17 @@ import { AppComponent } from './app.component';
 })
 export class AppModule { }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
 ## Q. How will you parallelize multiple observable call?
 
+Parallel Http requests are required when application need to make simultaneously to get data and display result to end user.
 
-Parallel Http requests are required when application need to make simultaneously to get data and display result to end user. 
+* **forkJoin()**: waits for each HTTP request to complete and groups all the observables returned by each HTTP call into a single observable array and finally return that observable array.
 
-* **forkJoin()**: waits for each HTTP request to complete and groups all the observables returned by each HTTP call into a single observable array and finally return that observable array.  
 ```typescript
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -4004,7 +4062,9 @@ export class DataService {
   }
 }
 ```
-At the component level we can subscribe to single observable array and save the responses separately.   
+
+At the component level we can subscribe to single observable array and save the responses separately.
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../data.service";
@@ -4032,6 +4092,7 @@ export class DemoComponent implements OnInit {
 ```
 
 * **mergeMap()**: Projects each source value to an Observable which is merged in the output Observable. It executes requests in parallel and it is fault tolerant so we still display most of the posts even if some of the requests fail.
+
 ```typescript
 getItems(ids: number[]): Observable<Item> {
   return from(ids).pipe(
@@ -4039,7 +4100,9 @@ getItems(ids: number[]): Observable<Item> {
   );
 }
 ```
+
 * **concatMap()**: Projects each source value to an Observable which is merged in the output Observable, in a serialized fashion waiting for each one to complete before merging the next
+
 ```typescript
 getItems(ids: number[]): Observable<Item> {
   return from(ids).pipe(
@@ -4047,6 +4110,7 @@ getItems(ids: number[]): Observable<Item> {
   );
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4055,6 +4119,7 @@ getItems(ids: number[]): Observable<Item> {
 
 An `async` function can contain an `await` expression, that pauses the execution of the async function and waits for the passed `Promise` resolution, and then resumes the `async` function execution and returns the resolved value.  
 Example:
+
 ```typescript
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -4089,6 +4154,7 @@ export class AppComponent  {
       .toPromise();
   }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4122,7 +4188,9 @@ export class CanDeactivateGuard implements CanDeactivate<MyComponent> {
   }
 }
 ```
+
 Where `MyComponent` is custom component and `CanDeactivateGuard` is going to be registered in `AppModule` in the providers section and, more importantly, in your routing config in the `canDeactivate` array property:
+
 ```typescript
 {
   path: 'somePath',
@@ -4137,7 +4205,8 @@ Where `MyComponent` is custom component and `CanDeactivateGuard` is going to be 
 
 ## Q. How would you animate routing?
 
-**Set up Routes**
+**Set up Routes:**
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -4158,8 +4227,11 @@ export const routes: Routes = [
 })
 export class AppRoutingModule {}
 ```
-**Creating an Animation**  
+
+**Creating an Animation:**
+
 First we need to add the Angular Animation module to our application.
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -4177,7 +4249,9 @@ import { AboutComponent } from './about/about.component';
 })
 export class AppModule { }
 ```
+
 We will now add a new file `animations.ts`. In this file, we will define our fade animation.
+
 ```typescript
 import {
   trigger,
@@ -4214,7 +4288,9 @@ export const fadeAnimation = trigger('fadeAnimation', [
   ])
 ]);
 ```
-Now that we have defined our animation we need to explicitly set what element it should be applied to.  
+
+Now that we have defined our animation we need to explicitly set what element it should be applied to.
+
 ```html
 <header>
   <nav>
@@ -4227,7 +4303,9 @@ Now that we have defined our animation we need to explicitly set what element it
   <router-outlet #o="outlet"></router-outlet>
 </main>
 ```
-Next in our App Component TypeScript file we need to add some information to our component decorator.  
+
+Next in our App Component TypeScript file we need to add some information to our component decorator.
+
 ```typescript
 import { Component } from '@angular/core';
 import { fadeAnimation } from './animations';
@@ -4240,7 +4318,9 @@ import { fadeAnimation } from './animations';
 })
 export class AppComponent { }
 ```
-The last missing piece is some CSS in our global style sheet.  
+
+The last missing piece is some CSS in our global style sheet.
+
 ```css
 router-outlet ~ * {
   position: absolute;
@@ -4248,6 +4328,7 @@ router-outlet ~ * {
   width: 100%;
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4310,6 +4391,7 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 ## Q. What is defer in promise?
 
 `Defer` is a object that exposes promises. It has three methods.
+
 * Reject
 * Resolve
 * Notify
@@ -4349,6 +4431,7 @@ export class AppComponent {
   }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4359,7 +4442,7 @@ Transclusion is a way to let you define a fixed view template, and at the same t
 
 **Content Projection**: Content projection consists in passing a portion of the DOM tree from a parent component to a child component. It is perfect to build reusable components such as dialogs, modals, tabs, and the like.
 
-Example: 
+Example:
 
 ```html
 <app-popup-window [isOpen]="showPopup" title="Test pop-up">
@@ -4368,6 +4451,7 @@ Example:
 ```
 
 Note that I am also passing a title as an input to that component. Now, by default, the above code would not project the content. In order to make content projection happen, we need to add the ng-content directive somewhere in the template of the child component:
+
 ```html
 <div class="modalW-content">
       <div class="modalW-header">
@@ -4423,6 +4507,7 @@ export class AppComponent implements AfterViewChecked {
 ## Q. What is the difference between observable and promises?
 
 **Promise**: A `Promise` handles a single event when an async operation completes or fails.
+
 ```typescript
 new Promise(executorFunc);
 function executorFunc(resolve, reject) {
@@ -4432,9 +4517,11 @@ function executorFunc(resolve, reject) {
     reject(error);
 }
 ```
+
 **Observable**: An `Observable` is like a `Stream` and allows to pass zero or more events where the callback is called for each event.
 
 Often `Observable` is preferred over `Promise` because it provides the features of Promise and more. With Observable it does not matter if you want to handle 0, 1, or multiple events. You can utilize the same API in each case.
+
 ```typescript
 new Observable(subscriberFunc);
 function subscriberFunc(observer) {
@@ -4444,11 +4531,12 @@ function subscriberFunc(observer) {
     observer.error(error);
 }
 ```
+
 `Observable` also has the advantage over `Promise` to be **cancelable**. If the result of an HTTP request to a server or some other expensive async operation is not needed anymore, the `Subscription` of an `Observable` allows to cancel the subscription, while a Promise will eventually call the success or failed callback even when you do not need the notification or the result it provides anymore.  
 
 Observable provides operators like map(), forEach(), reduce(), ... similar to an array. There are also powerful operators like retry(), or replay(), ... that are often quite handy.
 
-**Differences**  
+**Differences:**
 
 | Observable | Promise  |
 |------------|----------|
@@ -4467,13 +4555,15 @@ The difference between a component and a directive in Angular 2 is that a compon
 
 A Component is a special kind of directive that uses a simpler configuration which is suitable for a component-based application structure.
 
-**Advantages of Components:**  
+**Advantages of Components:**
+
 * simpler configuration than plain directives
 * promote sane defaults and best practices
 * optimized for component-based architecture
 * writing component directives will make it easier to upgrade to Angular 2
 
-**When not to use Components:**  
+**When not to use Components:**
+
 * for directives that rely on DOM manipulation, adding event listeners etc, because the compile and link functions are unavailable
 * when you need advanced directive definition options like priority, terminal, multi-element
 * when you want a directive that is triggered by an attribute or CSS class, rather than an element
@@ -4484,13 +4574,16 @@ A Component is a special kind of directive that uses a simpler configuration whi
 
 ## Q. How do you define the transition between two states in Angular?
 
-* **open-close.component.html**
+* **open-close.component.html:**
+
 ```html
 <div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
   <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
 </div>
 ```
+
 * **open-close.component.ts**
+
 ```typescript
 @Component({
   selector: 'app-open-close',
@@ -4526,7 +4619,9 @@ export class OpenCloseComponent {
   }
 }
 ```
+
 * **open-close.component.css**
+
 ```css
 :host {
   display: block;
@@ -4541,6 +4636,7 @@ export class OpenCloseComponent {
   font-size: 20px;
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4548,10 +4644,13 @@ export class OpenCloseComponent {
 ## Q. When to use NgOnInit and constructor in Angular?
 
 * **Constructor**: The `Constructor` is a default method of the class that is executed when the class is instantiated and ensures proper initialization of fields in the class and its subclasses. Angular or better Dependency Injector (DI) analyzes the constructor parameters and when it creates a new instance by calling `new MyClass()` it tries to find providers that match the types of the constructor parameters, resolves them and passes them to the constructor like
+
 ```typescript
 new MyClass(someArg);
 ```
+
 * **ngOnInit**: The ngOnInit is a life cycle hook called by Angular2 to indicate that Angular is done creating the component.
+
 ```typescript
 import {Component, OnInit} from '@angular/core';
 
@@ -4581,6 +4680,7 @@ Traceur compiler takes classes, generators, and other features from ECMAScript e
 ## Q. How can we bind a variable with DOM element in Angular?
 
 **One-way data binding**: One-way data binding keeps updates on the template of the HTML template. The flow of change(updates) is unidirectional.
+
 ```typescript
 import { Component } from '@angular/core';
 @Component({
@@ -4596,7 +4696,9 @@ export class AppComponent {
   title = 'Angular';
 }
 ```
+
 **Two-way data binding**: In two-way data binding both the class variables and the template keep each other up to date. This is achieved by using `[()]`.  
+
 ```typescript
 import { Component } from "@angular/core";    
 @Component({    
@@ -4608,11 +4710,13 @@ export class AppComponent {
   message: string = "Hello World!";    
 }    
 ```
+
 ```html
 <h2>Two-way Binding Example</h2>    
    <input [(ngModel)]="message" />    
 <p>{{message}}</p> 
 ```
+
 Two-way data binding is mostly used in forms and when dealing with inputs. User input has to be grabbed from the DOM and stored in the class property before being used.
 
 <div align="right">
@@ -4657,9 +4761,11 @@ class ParentCmp {
 class App {
 }
 ```
+
 **`@Self()`**: The `@Self()` decorator tells DI to look for a dependency only from itself, so it will not walk up the tree.
 
 When `@Host` is used, Angular will look for a value that is bound on either the component injector for the element that this Directive/Component exists on, or on the injector of the parent component. Angular calls this parent component the "host".
+
 ```typescript
 class Dependency {}
 
@@ -4677,6 +4783,7 @@ inj = ReflectiveInjector.resolveAndCreate([Dependency]);
 const child = inj.resolveAndCreateChild([NeedsDependency]);
 expect(() => child.get(NeedsDependency)).toThrowError();
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4686,6 +4793,7 @@ expect(() => child.get(NeedsDependency)).toThrowError();
 **Provider**: A provider is an object declared to Angular so that it can be injected in the constructor of your components, directives and other classes instantiated by Angular. A service is a particular type of provider that is declared with its class name.
 
 In order for a service in Angular to be properly injected, it needs to be provided to either the component, the parent module or the app module. A service provided in the app module will have the same instance provided everywhere. Here is an example of two services provided in a component:
+
 ```typescript
 import { Component } from '@angular/core';
 import { WeatherApiService } from './weather-api.service';
@@ -4702,7 +4810,9 @@ export class AppComponent {
 
 }
 ```
+
 And here they are provided in the module instead:
+
 ```typescript
 import { WeatherApiService } from './weather-api.service';
 import { AuthService } from './auth.service';
@@ -4719,18 +4829,26 @@ import { AuthService } from './auth.service';
 })
 export class AppModule { }
 ```
-**Class Providers**  
+
+**Class Providers:**
+
 By default Angular will inject a provider with the same class name and token, but `useClass` allows to use a different class. For example, the following will provide a service with the Auth token, but the UserAuth class:
+
 ```typescript
 providers: [{ provide: Auth, useClass: UserAuth }]
 ```
+
 **Aliased Providers**  
 If we want to alias an old provider to be handled by a new provider, we can do so with `useExisting`. This would be useful if,for example, a component needs to be still be using the old provider, but the logic should still be handled by the new provider:
+
 ```typescript
 providers: [{ provide: OldService, useExisting: NewService }]
 ```
-**Value Providers**  
+
+**Value Providers:**
+
 Most of the time classes are used as providers, but simple values can also be used instead with `useValue`:
+
 ```typescript
 const AUTH_CONFIG = {
   apiKey: "...",
@@ -4739,6 +4857,7 @@ const AUTH_CONFIG = {
 
 providers: [{ provide: AuthConfig, useValue: AUTH_CONFIG }]
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4764,12 +4883,15 @@ A template helps us to render HTML with some dynamic parts depending on our data
 `PrimeNG` is a free and open source library of UI components. It is developed by PrimeTek Informatics. PrimeNG provides 80+ UI components in a single library, so there would be no need to add any other library for different UIs. It includes all UI components like Datatable, Breadcrumbs, Input, Accordion, Notification message box, Multimedia, and Menu etc.  
 
 commands to install PrimeNG packages in the project
-```
+
+```js
 npm install primeng --save  
 npm install primeicons --save  
 npm install --save @angular/animations  
 ```
-**App.module.ts**
+
+**App.module.ts:**
+
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';  
 import { NgModule } from '@angular/core';  
@@ -4791,7 +4913,9 @@ import {OrderListModule} from 'primeng/orderlist';
 })  
 export class AppModule { } 
 ```
-**app.component.ts**
+
+**app.component.ts:**
+
 ```typescript
 import { Component } from '@angular/core';  
 @Component({  
@@ -4824,7 +4948,9 @@ export class AppComponent {
   ];  
 }  
 ```
-**app.component.html**
+
+**app.component.html:**
+
 ```html
 <p-accordion>  
   <p-accordionTab header="India">  
@@ -4857,6 +4983,7 @@ export class AppComponent {
   </p-accordionTab>  
 </p-accordion>
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -4865,6 +4992,7 @@ export class AppComponent {
 
 Add class to an element on click and remove on click of other item and highlight the current one.
 **app.component.html**
+
 ```html
 <div>
   <ul>
@@ -4874,7 +5002,9 @@ Add class to an element on click and remove on click of other item and highlight
   </ul>
 </div>
 ```
-**app.component.ts**
+
+**app.component.ts:**
+
 ```typescript
 export class App {
   list:any;
@@ -4897,7 +5027,9 @@ export class App {
 
 }
 ```
-**app.component.css**
+
+**app.component.css:**
+
 ```css
 .active a { color: red; }
 ```
@@ -4910,6 +5042,7 @@ export class App {
 
 The Angular Router enables navigation from one view to the next as users perform application tasks.
 **AppComponent.ts**
+
 ```typescript
 import { Component } from '@angular/core';
 
@@ -4925,7 +5058,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { }
 ```
-**AppRoutes.ts**  
+
+**AppRoutes.ts:**
+
 ```typescript
 import { Routes } from '@angular/router';
 
@@ -4938,7 +5073,9 @@ export const routes: Routes = [
 ];
 export class AppRoutes { }
 ```
-**AppModule.ts**  
+
+**AppModule.ts**
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -4966,6 +5103,7 @@ import { HomeComponent } from './home.component';
 })
 export class AppModule { }
 ```
+
 There are several ways how Angular components can pass data around:
 * Using `@Input` and `@Output`
 * By injecting parent component through constructor or child components through `@ViewChild`, `@ViewChildren`, `@ContentChild`, `@ContentChildren` and directly calling components API
@@ -4979,6 +5117,7 @@ There are several ways how Angular components can pass data around:
 ## Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
 
 `NgModule` helps us to organize our components, directives and services into a logical unit, each focused on a feature.
+
 ```typescript
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -4991,9 +5130,10 @@ import { AppComponent }  from './app.component';
 })
 export class AppModule { }
 ```
+
 For example, we have 5 components in your project and that each component is dependent on other component or services or pipes then we need to import them into the respective component. And, then repeat the same process for all other components. This will become cumbersome to keep including on each of these components. This is where NgModules recuse us by importing everything to @NgModule which will be available throughout the components under one module.
 
-**When to use new NgModule**  
+**When to use new NgModule:**
 
 When we are dealing with medium or large apps, it includes discrete set of functionality. Administration, Dashboard, Bookings/Orders, Promotions are all examples of areas of our apps that, when linked together, make our app. We basically breakdown our app into smaller pieces called Features / Modules.
 
@@ -5005,23 +5145,28 @@ In the process of developing an app we might create a feature which we do not wa
 
 ## Q. What is difference between Angular Modules and JavaScript Modules?
 
-**JavaScript modules**  
+**JavaScript modules:**
+
 In JavaScript, modules are individual files with JavaScript code in them. To make what is in them available, you write an export statement, usually after the relevant code, like this:
 
 ```typescript
 export class AppComponent { ... }
 ```
+
 Then, when you need that file code in another file, you import it like this:
 
 ```typescript
 import { AppComponent } from './app.component';
 ```
+
 JavaScript modules help you namespace, preventing accidental global variables.
 
-**NgModules**  
-NgModules are classes decorated with `@NgModule`. The `@NgModule` decorator imports array tells Angular what other NgModules the current module needs. The modules in the imports array are different than JavaScript modules because they are NgModules rather than regular JavaScript modules. 
+**NgModules:**
+
+NgModules are classes decorated with `@NgModule`. The `@NgModule` decorator imports array tells Angular what other NgModules the current module needs. The modules in the imports array are different than JavaScript modules because they are NgModules rather than regular JavaScript modules.
 
 **The NgModule classes differ from JavaScript module in the following key ways:**
+
 * An NgModule bounds declarable classes only. Declarables are the only classes that matter to the Angular compiler.
 * Instead of defining all member classes in one giant file as in a JavaScript module, you list the modules classes in the  `@NgModule`.declarations list.
 * An NgModule can only export the declarable classes it owns or imports from other modules. It does not declare or export any other kind of class.
@@ -5041,7 +5186,9 @@ NgModules are classes decorated with `@NgModule`. The `@NgModule` decorator impo
   {{ employee.name }}
 </div>
 ```
+
 Instead what we usually do is use a wrapper like this:
+
 ```html
 <div *ngIf="employees">
   <div *ngFor="let employee of employees">
@@ -5049,7 +5196,9 @@ Instead what we usually do is use a wrapper like this:
   </div>
 </div>
 ```
+
 `ng-container` is useful when you want to conditionaly append a group of elements (ie using *ngIf="foo") in your application but do not want to wrap them with another element.
+
 ```html
 <div>
     <ng-container *ngIf="true">
@@ -5058,13 +5207,16 @@ Instead what we usually do is use a wrapper like this:
     </ng-container>
 </div>
 ```
+
 will then produce :
+
 ```html
 <div>
     <h2>Sl.No</h2>
     <div>Employee Name</div>
 </div>
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -5074,22 +5226,28 @@ will then produce :
 The version 5.5.0 beta of RxJS introduces `lettable` operators. Those operators are pure functions that can be used as standalone operators instead of methods on an observable. A lettable operator is basically any function that returns a function with the signature: `<T, R>(source: Observable<T>) => Observable<R>`. They are lightweight, will make your code easily re-usable and can decrease your overall build size.
 
 These operators are:
+
 * do -> tap
 * catch -> catchError
 * switch -> switchAll
 * finally -> finalize
 
 Basically, instead of doing:
+
 ```typescript
 import 'rxjs/add/operator/switchMap'
 ```
+
 We can do:
+
 ```typescript
 import {switchMap} from 'rxjs/operators'
 ```
+
 The old `rxjs/add/operator/switchMap` syntax is really bad for tree shaking since it patches the prototype of Observable directly. Every time you import an operator, the operator is added to Observable.prototype.
 
 Example
+
 ```typescript
 import { Observable, pipe } from 'rxjs/Rx';
 import { filter, map, reduce } from 'rxjs/operators';
@@ -5107,6 +5265,7 @@ const complicatedLogic = pipe(
 const source$ = Observable.range(0, 10);
 source$.let(complicatedLogic).subscribe(x => console.log(x)); // 50
 ```
+
 *Note: The `do` operator was renamed in RxJS 5.5 to `tap` because it collided with the JavaScript `do` keyword.*
 
 <div align="right">
@@ -5119,7 +5278,8 @@ source$.let(complicatedLogic).subscribe(x => console.log(x)); // 50
 
 This is probably the most common and straightforward method of sharing data. It works by using the `@Input()` decorator to allow data to be passed via the template.
 
-**parent.component.ts**  
+**parent.component.ts:**
+
 ```typescript
 import { Component } from '@angular/core';
 
@@ -5136,7 +5296,8 @@ export class ParentComponent{
 }
 ```
 
-**child.component.ts**  
+**child.component.ts:**
+
 ```typescript
 import { Component, Input } from '@angular/core';
 
@@ -5156,9 +5317,10 @@ export class ChildComponent {
 
 **2. Child to Parent**: Sharing Data via `ViewChild()`  
 
-`ViewChild` allows a one component to be injected into another, giving the parent access to its attributes and functions. 
+`ViewChild` allows a one component to be injected into another, giving the parent access to its attributes and functions.
 
-**parent.component.ts**  
+**parent.component.ts:**
+
 ```typescript
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { ChildComponent } from "../child/child.component";
@@ -5184,7 +5346,8 @@ export class ParentComponent implements AfterViewInit {
 }
 ```
 
-**child.component.ts**  
+**child.component.ts:**
+
 ```typescript
 import { Component} from '@angular/core';
 
@@ -5211,7 +5374,8 @@ In the child, we declare a messageEvent variable with the Output decorator and s
 
 The parent can now subscribe to this messageEvent that is outputted by the child component, then run the receive message function whenever this event occurs.
 
-**parent.component.ts**  
+**parent.component.ts:**
+
 ```typescript
 import { Component } from '@angular/core';
 
@@ -5235,6 +5399,7 @@ export class ParentComponent {
 ```
 
 **child.component.ts**  
+
 ```typescript
 import { Component, Output, EventEmitter } from '@angular/core';
 
@@ -5275,6 +5440,7 @@ The parent, child, and sibling components all receive the same treatment. We inj
 Now if we create a function in any one of these components that changes the value of the message. when this function is executed the new data it is automatically broadcast to all other components.
 
 **data.service.ts**  
+
 ```typescript
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
@@ -5294,6 +5460,7 @@ export class DataService {
 ```
 
 **parent.component.ts**  
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../data.service";
@@ -5317,6 +5484,7 @@ export class ParentComponent implements OnInit {
 ```
 
 **sibling.component.ts**  
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "../data.service";
@@ -5343,6 +5511,7 @@ export class SiblingComponent implements OnInit {
   }
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -5360,9 +5529,12 @@ import { Component } from '@angular/core'
 })
 export class DynamicComponent { }
 ```
-**2. Service Loader**  
+
+**2. Service Loader**
+
 The Service must have an exposed method to set the ViewContainerRef because it is not possible to inject the ViewContainerRef by using the service constructor due to it not being a Component, so we must use a setter method: setRootViewContainer.
 addDynamicContainer adds the DynamicComponent to the DOM.
+
 ```typescript
 import {
   ComponentFactoryResolver,
@@ -5388,7 +5560,9 @@ export class Service {
   }
 }
 ```
-**3. Main Component**  
+
+**3. Main Component** 
+
 The main component will inject it is container (ViewContainerRef) to the service:
 
 ```typescript
@@ -5421,7 +5595,9 @@ export class AppComponent implements OnInit {
   }
 }
 ```
+
 **4. Main Module: entryComponents**  
+
 The `entryComponents` will create a factory so that when the `ComponentFactoryResolver` is called we are able to create an instance of the component and add it to the DOM.
 
 ```typescript
@@ -5442,6 +5618,7 @@ import { DynamicComponent } from './dynamic.component'
 })
 export class AppModule { }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -5456,6 +5633,7 @@ const routes:Routes = [
     {path: "**", component: PageNotFoundComponent }  
 ]; 
 ```
+
 The path can be the empty string which usually refers to the main URL of your application or can be also a **wildcard** string `(**)` which will be matched by the router if the visited URL doesn’t match any paths in the router configuration. This is usually used to display a **page doesn’t exist** message or redirect the users to an existing path.
 
 <div align="right">
@@ -5472,6 +5650,7 @@ Angular simplifies the following aspects of internationalization:
 * Preparing text in component templates for translation.
 * Handling plural forms of words.
 * Handling alternative text.
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -5480,6 +5659,7 @@ Angular simplifies the following aspects of internationalization:
 
 **1. Immutable Input Objects**  
 Angular `OnPush` change detection strategy enables us to reduce the number of checks Angular has to make when a change in our application happens.
+
 ```typescript
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
@@ -5496,6 +5676,7 @@ export class MySubComponent implements OnInit {
 ```
 
 **2. Observable Input Objects**  
+
 ```typescript
 import { Component, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
@@ -5520,6 +5701,7 @@ export class MySubComponent implements OnInit {
 ```
 
 **3. Lazy Loading**  
+
 ```typescript
 @NgModule({
     ...
@@ -5528,6 +5710,7 @@ export class MySubComponent implements OnInit {
     ]
 });
 ```
+
 ```typescript
 {
     path: 'performance',
@@ -5548,16 +5731,20 @@ new webpack.optimize.CommonsChunkPlugin({
 });
 ```
 
-**5. Reusable CSS with BEM and SASS**  
+**5. Reusable CSS with BEM and SASS** 
+
 Sass has been an all-time favorite for writing structured and maintainable CSS for large projects. We combined this with the BEM methodology which helps to create extendable and reusable interface components. 
 
 **6. GZIP**  
+
 Gzip is a file format and also a method of compressing files (making them smaller) for faster network transfers. It allows your web server to provide files with a smaller size that will be loaded faster by your browser. Compression of your files with gzip typically saves around fifty to seventy percent of the file size.
 
 **7. AOT**  
+
 The ahead-of-time (AOT) compiler can catch template errors early and improve performance by compiling at build time.
 
   * **AOT ENSURES**
+
     * Faster rendering
     * Fewer asynchronous requests
     * Smaller Angular framework download size
@@ -5571,10 +5758,13 @@ The ahead-of-time (AOT) compiler can catch template errors early and improve per
 ## Q. What is hammerjs in angular?
 
 **HammerJS** gives us access to mobile gesture events that are not normally found in the browser, including `tap`, `swipe`, `pan`, `pinch`, `press`, and `rotate`. 
-```
+
+```js
 npm install --save hammerjs
 ```
+
 Add the import to `main.ts` to make the events globally available in your application.
+
 ```typescript
 import 'hammerjs';
 
@@ -5587,12 +5777,14 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 ```
 
 **Gesture Recognizers**  
+
 * **Pan**: A Pan gesture is recognized when a pointer is down and moved within a set direction. The pan gesture is commonly used when scrolling through a set of items.
 * **Pinch**: A Pinch gesture is recognized when two or more pointers are moving toward or away from each other. The pinch gesture is commonly used for zooming in or out.
 * **Press**: A Press gesture is recognized when the pointer is being held down for a set amount of time. This is commonly used for long presses.
 * **Rotate**: A Rotate gesture is recognized when a set amount of pointers, minimum of 2, are moving in a circular motion. This is commonly used to rotate items.
 * **Swipe**: A Swipe gesture is recognized when a pointer is moving at a set speed for a set minimum amount of distance. This is commonly used to flip between items within a UI. Instead of scrolling, it is more useful to swap out items in a set direction.
 * **Tap**: A Tap gesture is recognized when a user taps the screen. This is commonly used for button presses.
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
@@ -5614,11 +5806,15 @@ ngOnDestroy() {
   window.angularComponent = null;
 }
 ```
+
 use:
+
 ```typescript
 window['angularComponentRef'].zone.run(() => {window['angularComponentRef'].component.callFromOutside('1');})
 ```
+
 OR
+
 ```typescript
 window.angularComponentRef.zone.run(() => {window.angularComponentRef.componentFn('2');})
 ```
@@ -5635,13 +5831,14 @@ It makes available all the syntactical sugar that was added to JavaScript with t
 
 **Initial Setup**  
 
-```
+```js
 npm install --save-dev babel-loader @babel/core @babel/preset-env html-webpack-plugin script-ext-html-webpack-plugin
 npm install --save-dev @babel/register
 ```
 
 **Configuration Files**  
 **webpack.config.babel.js**  
+
 ```typescript
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -5678,6 +5875,7 @@ export default {
 ```
 
 **package.json**  
+
 ```js
 {
   "name": "babel-webpack",
@@ -5706,17 +5904,21 @@ export default {
   "dependencies": {}
 }
 ```
+
 <div align="right">
     <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
 ## Q. How to configure Angular with Webpack?
 
-**Install Angular Dependencies**  
-```
+**Install Angular Dependencies** 
+
+```js
 npm install -save @angular/common@7 @angular/compiler@7 @angular/core@7 @angular/forms@7 @angular/platform-browser@7 @angular/platform-browser-dynamic@7 @angular/router@7 core-js@3 rxjs@6 zone.js@0
 ```
+
 The package.json should look like this after installing Angular 7 dependencies with the above command:
+
 ```typescript
 {
     "name": "angular-7-tutorial",
@@ -5737,10 +5939,13 @@ The package.json should look like this after installing Angular 7 dependencies w
 ```
 
 **Install Angular 7 Development Dependencies**  
-```
+
+```js
 npm install --save-dev @types/node@11 angular2-template-loader@0 html-webpack-plugin@3 raw-loader@1 ts-loader@5 typescript@3 webpack@4 webpack-cli@3 webpack-dev-server@3
 ```
+
 The package.json should look like this after installing Angular 7 development dependencies with the above command:
+
 ```typescript
 {
     "name": "angular-7-tutorial",
@@ -6171,6 +6376,7 @@ When Angular creates a lazy HeroComponent, it must inject a UserService. This ti
 
 * Scan will show all values emitted on source observable.
 * Reduce will show only the final value emitted on source observable.
+
 ```typescript
 var obsScan = Observable.from([1, 2, 3, 4, 5, 6]);
 var count1 = obsScan.scan((acc, one) => acc + one, 0);
@@ -6184,8 +6390,10 @@ count2.subscribe(x => {
     console.log('reduce shows only total', x);
 });
 ```
+
 Output 
-```
+
+```js
 scan shows incremental total 1
 scan shows incremental total 3
 scan shows incremental total 6
@@ -6213,12 +6421,14 @@ The async pipe subscribes to an Observable or Promise and returns the latest val
 **RouterState** is an interface which represents the state of the router as a tree of activated routes. Every node of this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data.
 
 **RouterState Interface looks like:**  
+
 ```typescript
 interface RouterState extends Tree {
   snapshot: RouterStateSnapshot
   toString(): string
 }
 ```
+
 **ActivatedRoute** interface provides access to information about a route associated with a component that is loaded in an outlet. Use to traverse the RouterState tree and extract information from nodes.
 
 **ActivatedRoute Interface looks like**  
@@ -6266,6 +6476,7 @@ Parent content.
 
 <app-child></app-child>
 ```
+
 **parent.component.css**
 
 ```css
@@ -6273,6 +6484,7 @@ Parent content.
   font-style: italic;
 }
 ```
+
 **child.component.html**  
 
 ```html
@@ -6293,6 +6505,7 @@ The brackets, `[]`, tell Angular to evaluate the template expression. If you omi
 ```html
 <app-item-detail childItem="parentItem"></app-item-detail>
 ```
+
 Omitting the brackets will render the string parentItem, not the value of parentItem.
 
 **One-time string initialization**   
