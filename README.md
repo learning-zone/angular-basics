@@ -10,11 +10,6 @@
 * [CSS Basics](https://github.com/learning-zone/css-basics)
 * [JavaScript Basics](https://github.com/learning-zone/javascript-basics)
 * [Typescript Basics](https://github.com/learning-zone/typescript-basics)
-
-<br/>
-
-## Table of Contents
-
 * [Angular Commands List](angular-commands.md)
 * [Angular Unit Testing](unit-testing-questions.md)
 
@@ -27,323 +22,27 @@
 | 01  |	[Angular-app](angular-practice)      |Angular, Routing     |[live](https://angular-features.firebaseapp.com)|
 | 02  |	[Angular-with-Material-UI](angular-material-practice)|Angular, Material-UI |[live](https://angular-material8.firebaseapp.com)|
 
+<br/>
+
+## Table of Contents
+
+* [Introduction](#-1-introduction)
+* [Configuration and Tools](#-2-configuration-and-tools)
+* [Architecture](#-3-architecture)
+* [Component Interaction](#-4-component-interaction)
+* [Angular Forms](#-5-angular-forms)
+* [Pipes](#-6-pipes)
+* [RxJS](#-7-rxjs)
+* [Routing](#-8-routing)
+* [Services and DI](#-9-services-and-di)
+* [Angular Template](#-10-angular-template)
+* [Angular Animations](#-11-angular-animations)
+* [Performance](#-12-performance)
+* [Miscellaneous](#-13-miscellaneous)
 
 <br/>
 
-## [Angular Basics](#-1-angular-basics)
-
-|Sl.No|   Questions                                              |
-|-----|----------------------------------------------------------|
-| 01. |[What is an Angular Module?](#q-what-is-an-angular-module)|
-| 02. |[What are the case types in Angular?](#q-what-are-the-case-types-in-angular)|
-| 03. |[What is the difference between AngularJS and Angular?](#q-what-is-the-difference-between-angularjs-and-angular)|
-| 04. |[What are the frequently used command in angular?](#q-what-are-the-frequently-used-command-in-angular)|
-| 05. |[What are lifecycle hooks available in Angular?](#q-what-are-lifecycle-hooks-available-in-angular)|
-| 06. |[What is data binding in Angular?](#q-what-is-data-binding-in-angular)|
-| 07. |[What is the difference between constructor() and ngOnInit()?](#q-what-is-the-difference-between-constructor-and-ngoninit)|
-| 08. |[What are Angular Services?](#q-what-are-angular-services)|
-| 09. |[What is Interpolation?](#q-what-is-interpolation)|
-| 10. |[What is index property in ngFor directive?](#q-what-is-index-property-in-ngfor-directive)|
-| 11. |[What happens if you use script tag inside template?](#q-what-happens-if-you-use-script-tag-inside-template)|
-| 12. |[What are template expressions?](#q-what-are-template-expressions)|
-| 13. |[What are template statement?](#q-what-are-template-statement)|
-| 14. |[How do you enable binding expression validation?](#q-how-do-you-enable-binding-expression-validation)|
-| 15. |[What is the purpose of any type cast function?](#q-what-is-the-purpose-of-any-type-cast-function)|
-| 16. |[What is Non null type assertion operator?](#q-what-is-non-null-type-assertion-operator)|
-| 17. |[How do you describe various dependencies in angular application?](#q-how-do-you-describe-various-dependencies-in-angular-application)|
-| 18. |[What is declarable in Angular?](#q-what-is-declarable-in-angular)|
-| 19. |[What are the restrictions on declarable classes?](#q-what-are-the-restrictions-on-declarable-classes)|
-| 20. |[When to use NgOnInit and constructor in Angular?](#q-when-to-use-ngoninit-and-constructor-in-angular)|
-| 21. |[What is the expression context in Angular?](#q-what-is-the-expression-context-in-angular)|
-| 22. |[How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)|
-| 23. |[What is the purpose of NgModule? How do you decide to create a new NgModule?](#q-what-is-the-purpose-of-ngmodule-how-do-you-decide-to-create-a-new-ngmodule)|
-| 24. |[What is difference between Angular Modules and JavaScript Modules?](#q-what-is-difference-between-angular-modules-and-javascript-modules)|
-| 25. |[How would you make use of ngOnInit()?](#q-how-would-you-make-use-of-ngoninit)|
-
-## [Configuration and Tools](#-2-configuration-and-tools)
-
-|Sl.No|  Questions                                   |
-|-----|----------------------------------------------|
-| 26. |[What is angular CLI?](#q-what-is-angular-cli)|
-| 27. |[What is codelyzer?](#q-what-is-codelyzer)|
-| 28. |[What is Angular CLI Builder?](#q-what-is-angular-cli-builder)|
-| 29. |[What is a builder?](#q-what-is-a-builder)|
-| 30. |[How do you invoke a builder?](#q-how-do-you-invoke-a-builder)|
-| 31. |[How do you create app shell in Angular?](#q-how-do-you-create-app-shell-in-angular)|
-| 32. |[What is difference between Angular JIT compilation and AOT compilation?](#q-what-is-difference-between-angular-jit-compilation-and-aot-compilation)|
-| 33. |[What are the advantages with AOT?](#q-what-are-the-advantages-with-aot)|
-| 34. |[What are the three phases of AOT?](#q-what-are-the-three-phases-of-aot)|
-| 35. |[Can I use arrow functions in AOT?](#q-can-i-use-arrow-functions-in-aot)|
-| 36. |[What is the purpose of metadata json files?](#q-what-is-the-purpose-of-metadata-json-files)|
-| 37. |[Can I use any javascript feature for expression syntax in AOT?](#q-can-i-use-any-javascript-feature-for-expression-syntax-in-aot)|
-| 38. |[What are the ways to control AOT compilation?](#q-what-are-the-ways-to-control-aot-compilation)|
-| 39. |[What is Bazel tool?](#q-what-is-bazel-tool)|
-| 40. |[How do you use Bazel with Angular CLI?](#q-how-do-you-use-bazel-with-angular-cli)|
-| 41. |[How do you run Bazel directly?](#q-how-do-you-run-bazel-directly)|
-| 42. |[What is Redux and how does it relate to an Angular app?](#q-what-is-redux-and-how-does-it-relate-to-an-angular-app)|
-| 43. |[What are Zones? What is Change Detection? What would be a good use for NgZone service?](#q-what-are-zones-what-is-change-detection-what-would-be-a-good-use-for-ngzone-service)|
-| 44. |[If your data model is updated outside the Zone explain the process how will you the view?](#q-if-your-data-model-is-updated-outside-the-zone-explain-the-process-how-will-you-the-view)|
-| 45. |[What is Traceur Compiler?](#q-what-is-traceur-compiler)|
-| 46. |[What Is PrimeNG? How Can It Be Used With Angular?](#q-what-is-primeng-how-can-it-be-used-with-angular)|
-| 47. |[What is hammerjs in angular?](#q-what-is-hammerjs-in-angular)|
-| 48. |[How to call component function from outside the app?](#q-how-to-call-component-function-from-outside-the-app)|
-| 49. |[What is Babel and how it is used in Angular?](#q-what-is-babel-and-how-it-is-used-in-angular)|
-| 50. |[Why yarn is better than npm?](#q-why-yarn-is-better-than-npm)|
-| 51. |[What is a good use case for ngrx/store?](#q-what-is-a-good-use-case-for-ngrx-store)|
-| 52. |[What is a good use case for ngrx/entity?](#q-what-is-a-good-use-case-for-ngrx-entity)|
-| 53. |[What tools would you use to find a performance issue in your code?](#q-what-tools-would-you-use-to-find-a-performance-issue-in-your-code)|
-
-## Architecture
-
-|Sl.No|    Questions                                                                                             |
-|-----|----------------------------------------------------------------------------------------------------------|
-| 54. |[How an Angular application gets started or loaded?](#q-how-an-angular-application-gets-started-or-loaded)|
-| 55. |[What is a bootstrapping module?](#q-what-is-a-bootstrapping-module)|
-| 56. |[Why do we need compilation process?](#q-why-do-we-need-compilation-process)|
-| 57. |[How to optimize loading large data in angular?](#q-how-to-optimize-loading-large-data-in-angular)|
-| 58. |[What is metadata in Angular?](#q-what-is-metadata-in-angular)|
-| 59. |[What is dependency injection in Angular?](#q-what-is-dependency-injection-in-angular)|
-| 60. |[What are angular elements?](#q-what-are-angular-elements)|
-| 61. |[What is the browser support of Angular Elements?](#q-what-is-the-browser-support-of-angular-elements)|
-| 62. |[What are custom elements?](#q-what-are-custom-elements)|
-| 63. |[Do I need to bootstrap custom elements?](#q-do-i-need-to-bootstrap-custom-elements)|
-| 64. |[How custom elements works internally?](#q-how-custom-elements-works-internally)|
-| 65. |[How to transfer components to custom elements?](#q-how-to-transfer-components-to-custom-elements)|
-| 66. |[What are the mapping rules between Angular component and custom element?](#q-what-are-the-mapping-rules-between-angular-component-and-custom-element)|
-| 67. |[How do you define typings for custom elements?](#q-how-do-you-define-typings-for-custom-elements)|
-| 68. |[What are the restrictions of metadata?](#q-what-are-the-restrictions-of-metadata)|
-| 69. |[What is folding?](#q-what-is-folding)|
-| 70. |[What are macros?](#q-what-are-macros)|
-| 71. |[Give an example of few metadata errors?](#q-give-an-example-of-few-metadata-errors)|
-| 72. |[What is metadata rewriting?](#q-what-is-metadata-rewriting)|
-| 73. |[How do you provide configuration inheritance?](#q-how-do-you-provide-configuration-inheritance)|
-| 74. |[How do you specify angular template compiler options?](#q-how-do-you-specify-angular-template-compiler-options)|
-| 75. |[What is zone?](#q-what-is-zone)|
-| 76. |[What is the purpose of common module?](#q-what-is-the-purpose-of-common-module)|
-| 77. |[What is Angular Ivy?](#q-what-is-angular-ivy)|
-| 78. |[What are the features included in ivy preview?](#q-what-are-the-features-included-in-ivy-preview)|
-| 79. |[Can I use AOT compilation with Ivy?](#q-can-i-use-aot-compilation-with-ivy)|
-| 80. |[What is the difference between exports and declarations in NgModule?](#q-what-is-the-difference-between-exports-and-declarations-in-ngmode)|
-
-## Component Interaction
-
-|Sl.No|  Questions                                                         |
-|-----|--------------------------------------------------------------------|
-| 81. |[What are components in angular?](#q-what-are-components-in-angular)|
-| 82. |[What are directives in angular?](#q-what-are-directives-in-angular)|
-| 83. |[What are the differences between Component and Directive?](#q-what-are-the-differences-between-component-and-directive)|
-| 84. |[What is the purpose of ngFor directive?](#q-what-is-the-purpose-of-ngfor-directive)|
-| 85. |[What are dynamic components?](#q-what-are-dynamic-components)|
-| 86. |[What are the class decorators in Angular?](#q-what-are-the-class-decorators-in-angular)|
-| 87. |[What are class field decorators?](#q-what-are-class-field-decorators)|
-| 88. |[Explain local reference variables, `@ViewChild()` and `@ContentChild()`.](#q-explain-local-reference-variables-viewchild-and-contentchild)|
-| 89. |[Can we create two Components with the same name in two different .ts files?](#q-can-we-create-two-components-with-the-same-name-in-two-different-ts-files)|
-| 90. |[How do you get a reference to a child component?](#q-how-do-you-get-a-reference-to-a-child-component)|
-| 91. |[How do you listen for events in a component?](#q-how-do-you-listen-for-events-in-a-component)|
-| 92. |[How do you force a change detection cycle?](#q-how-do-you-force-a-change-detection-cycle)|
-| 93. |[How would you get a reference to a parent component?](#q-how-would-you-get-a-reference-to-a-parent-component)|
-| 94. |[What are entryComponents?](#q-what-are-entrycomponents)|
-| 95. |[When building custom form components, what interface do they components need to implement to particpate in forms?](#q-when-building-custom-form-components-what-interface-do-they-components-need-to-implement-to-particpate-in-forms)|
-| 96. |[How Event Emitters works in Angular?](#q-how-event-emitters-works-in-angular)|
-| 97. |[What is the difference between an Annotation and a Decorator in Angular?](#q-what-is-the-difference-between-an-annotation-and-a-decorator-in-angular)|
-| 98. |[What is the process of inserting an embedded view from a prepared TemplateRef?](#q-what-is-the-process-of-inserting-an-embedded-view-from-a-prepared-templateref)|
-| 99. |[List the differences between Angular components vs directives?](#q-list-the-differences-between-angular-components-vs-directives)|
-| 100. |[How can we bind a variable with DOM element in Angular?](#q-how-can-we-bind-a-variable-with-dom-element-in-angular)|
-| 101. |[What is Self and Host Decorator in Angular?](#q-what-is-self-and-host-decorator-in-angular)|
-| 102. |[How do components communicate with each other?](#q-how-do-components-communicate-with-each-other)|
-| 103. |[How to dynamically create a component in Angular?](#q-how-to-dynamically-create-a-component-in-angular)|
-| 104. |[Why EventEmitter is needed for `@Output` decorator?](#q-why-eventemitter-is-needed-for-output-decorator)|
-| 105. |[Why would you use renderer2 methods instead of using native element methods?](#q-why-would-you-use-renderer2-methods-instead-of-using-native-element-methods)|
-| 106. |[What does lean component mean to you?](#q-what-does-lean-component-mean-to-you)|
-| 107. |[How would you create a component to display error messages throughout your application?](#q-how-would-you-create-a-component-to-display-error-messages-throughout-your-application)|
-| 108. |[What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?](#q-what-is-the-difference-between-a-smart-container-component-and-dumb-presentational-component-what-is-a-good-use-case-example-what-are-the-advantages)|
-| 109. |[Which components will be notified when an event is emitted?](#q-which-components-will-be-notified-when-an-event-is-emitted)|
-| 110. |[What is the difference between Stateless and Stateful Component?](#q-what-is-the-difference-between-stateless-and-stateful-component)|
-
-## Angular Forms
-
-|Sl.No|  Questions                                                                      |
-|-----|---------------------------------------------------------------------------------|
-| 111. |[What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?](#q-what-the-importance-of-dirty-flag-pristine-touched-untouched-valid-invalid)|
-| 112. |[What is the difference between formControlName and FormControl?](#q-what-is-the-difference-between-formcontrolname-and-formcontrol)|
-| 113. |[When do you use template driven vs model driven forms? Why?](#q-when-do-you-use-template-driven-vs-model-driven-forms-why)|
-| 114. |[How do you submit a form?](#q-how-do-you-submit-a-form)|
-| 115. |[What is the difference between NgForm, FormGroup, and FormControl? How do they work together?](#q-what-is-the-difference-between-ngform-formgroup-and-formcontrol-how-do-they-work-together)|
-| 116. |[What is the advantage of using FormBuilder?](#q-what-s-the-advantage-of-using-formbuilder)|
-| 117. |[How do you add form validation to a form built with FormBuilder?](#q-how-do-you-add-form-validation-to-a-form-built-with-formbuilder)|
-| 118. |[What is the difference between dirty, touched, and pristine on a form element?](#q-what-is-the-difference-between-dirty-touched-and-pristine-on-a-form-element)|
-| 119. |[What is async validation and how is it done?](#q-what-is-async-validation-and-how-is-it-done)|
-
-## Pipes
-
-|Sl.No|  Questions                         |
-|-----|------------------------------------|
-| 120. |[What are pipes?](#q-what-are-pipes)|
-| 121. |[What is a parameterized pipe?](#q-what-is-a-parameterized-pipe)|
-| 122. |[What is a custom pipe?](#q-what-is-a-custom-pipe)|
-| 123. |[What is the purpose of async pipe?](#q-what-is-the-purpose-of-async-pipe)|
-| 124. |[What is the difference between pure and impure pipe?](#q-what-is-the-difference-between-pure-and-impure-pipe)|
-| 125. |[What is difference between Stateful and Stateless Pipes in angular?](#q-what-is-difference-between-stateful-and-stateless-pipes-in-angular)|
-| 126. |[How does async pipe prevents memory leaks?](#q-how-does-async-pipe-prevents-memory-leaks)|
-| 127. |[What happens if you subscribe to a data source multiple times with async pipe?](#q-what-happens-if-you-subscribe-to-a-data-source-multiple-times-with-async-pipe)|
-
-## RxJS
-
-|Sl.No|  Questions                     |
-|-----|--------------------------------|
-| 128. |[What is RxJS?](#q-what-is-rxjs)|
-| 129. |[What is subscribing?](#q-what-is-subscribing)|
-| 130. |[What is an observable?](#q-what-is-an-observable)|
-| 131. |[What is an observer?](#q-what-is-an-observer)|
-| 132. |[What is multicasting?](#q-what-is-multicasting)|
-| 133. |[What is an RxJS Operator?](#q-what-is-an-rxjs-operator)|
-| 134. |[What is rxjs subject in Angular?](#q-what-is-rxjs-subject-in-angular)|
-| 135. |[What are observable creation functions?](#q-what-are-observable-creation-functions)|
-| 136. |[What are the utility functions provided by RxJS?](#q-what-are-the-utility-functions-provided-by-rxjs)|
-| 137. |[How do you perform error handling in observables?](#q-how-do-you-perform-error-handling-in-observables)|
-| 138. |[What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?](#q-what-is-rxjs-behaviorsubject-replaysubject-and-asyncsubject-in-angular)|
-| 139. |[What is difference between BehaviorSubject and Observable?](#q-what-is-difference-between-behaviorsubject-and-observable)|
-| 140. |[What is the difference between Subject and BehaviorSubject?](#q-what-is-the-difference-between-subject-and-behaviorsubject)|
-| 141. |[How can you read full response?](#q-how-can-you-read-full-response)|
-| 142. |[How do you perform Error handling?](#q-how-do-you-perform-error-handling)|
-| 143. |[What will happen if you do not supply handler for observer?](#q-what-will-happen-if-you-do-not-supply-handler-for-observer)|
-| 144. |[What is the short hand notation for subscribe method?](#q-what-is-the-short-hand-notation-for-subscribe-method)|
-| 145. |[Explain the difference between Promise and Observable in Angular?](#q-explain-the-difference-between-promise-and-observable-in-angular)|
-| 146. |[How to cache an observable data?](#q-how-to-cache-an-observable-data)|
-| 147. |[What are the best way to unsubscribe from Observables in Angular?](#q-what-are-the-best-way-to-unsubscribe-from-observables-in-angular)|
-| 148. |[If you need to respond to two different Observable or Subject with one callback function how would you do it?](#q-if-you-need-to-respond-to-two-different-observable-or-subject-with-one-callback-function-how-would-you-do-it)|
-| 149. |[What is the difference between an observable and a subject?](#q-what-is-the-difference-between-an-observable-and-a-subject)|
-| 150. |[What is the difference between observable and promises?](#q-what-is-the-difference-between-observable-and-promises)|
-| 151. |[What are rxjs lettable operators?](#q-what-are-rxjs-lettable-operators)|
-| 152. |[How would you implement a multiple api calls that needs to happen in order using rxjs?](#q-how-would-you-implement-a-multiple-api-calls-that-needs-to-happen-in-order-using-rxjs)|
-| 153. |[What is the difference between switchMap, concatMap and mergeMap?](#q-what-is-the-difference-between-switchmap-concatmap-and-mergemap)|
-| 154. |[How would you implement a brush behavior using rxjs?](#q-how-would-you-implement-a-brush-behavior-using-rxjs)|
-| 155. |[How would you implement a color picker with rxjs?](#q-how-would-you-implement-a-color-picker-with-rxjs)|
-| 156. |[If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons).](#q-if-you-need-to-respond-to-two-different-observable-subject-with-one-callback-function-how-would-you-do-it-ex-if-you-need-to-change-the-url-through-route-parameters-and-with-prev-next-buttons)|
-
-## Routing
-
-|Sl.No|  Questions                                                     |
-|-----|----------------------------------------------------------------|
-| 157. |[How routing works in Angular?](#q-how-routing-works-in-angular)|
-| 158. |[What is the difference between RouterModule.forRoot() and RouterModule.forChild()?](#q-what-is-the-difference-between-routermoduleforroot-and-routermoduleforchild)|
-| 159. |[Explain on how to use HttpClient with an example?](#q-explain-on-how-to-use-httpclient-with-an-example)|
-| 160. |[What is router outlet?](#q-what-is-router-outlet)|
-| 161. |[How to create multiple router-outlets?](#q-how-to-create-multiple-router-outlets)|
-| 162. |[What is routerLink?](#q-what-is-routerlink)|
-| 163. |[What are active router links?](#q-what-are-active-router-links)|
-| 164. |[What is router state?](#q-what-is-router-state)|
-| 165. |[What are Router Events?](#q-what-are-router-events)|
-| 166. |[What is Activated Route?](#q-what-is-activated-route)|
-| 167. |[How do you define Angular Routes?](#q-how-do-you-define-angular-routes)|
-| 168. |[What is the purpose of Wildcard route?](#q-what-is-the-purpose-of-wildcard-route)|
-| 169. |[What is auxiliary routes in angular?](#q-what-is-auxiliary-routes-in-angular)|
-| 170. |[How can you cancel a router navigation?](#q-how-can-you-cancel-a-router-navigation)|
-| 171. |[What is RouterLink? How would you pass data from a parent component to a child component?](#q-what-is-routerlink-how-would-you-pass-data-from-a-parent-component-to-a-child-component)|
-| 172. |[Can you explain the difference between ActivatedRoute and RouterState?](#q-can-you-explain-the-difference-between-activatedroute-and-routerstate)|
-| 173. |[How would you protect a component being activated through the router?](#q-how-would-you-protect-a-component-being-activated-through-the-router)|
-| 174. |[How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis.](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions-example-if-you-need-to-get-some-data-in-multiple-routes-but-once-you-get-it-you-can-reuse-it-in-the-routes-that-needs-it-therefor-no-need-to-make-another-call-to-your-backend-apis)
-| 175. |[Why do we need route guards?](#q-why-do-we-need-route-guards)|
-| 176. |[How to use authguard in angular 7?](#q-how-to-use-authguard-in-angular-7)|
-
-## Services & DI
-
-|Sl.No|  Questions                                                             |
-|-----|------------------------------------------------------------------------|
-| 177. |[What is Angular Language Service?](#q-what-is-angular-language-service)|
-| 178. |[How do you install angular language service in the project?](#q-how-do-you-install-angular-language-service-in-the-project)|
-| 179. |[What is a DI token?](#q-what-is-a-di-token)|
-| 180. |[How to make sure that single instance will be used in an entire application?](#q-how-to-make-sure-that-single-instance-will-be-used-in-an-entire-application)|
-| 181. |[How do you reference the host of a component?](#q-how-do-you-reference-the-host-of-a-component)|
-| 182. |[What are the difference between `@Inject` and `@Injectable`?](#q-what-are-the-difference-between-inject-and-injectable)|
-| 183. |[What does forwardRef do?](#q-what-does-forwardref-do)|
-| 184. |[How will you intercept http to inject header to each http call?](#q-how-will-you-intercept-http-to-inject-header-to-each-http-call)|
-| 185. |[How will you parallelize multiple observable call?](#q-how-will-you-parallelize-multiple-observable-call)|
-| 186. |[How will you put one async call before another?](#q-how-will-you-put-one-async-call-before-another)|
-| 187. |[How would you make sure an api call that needs to be called only once but with multiple conditions?](#q-how-would-you-make-sure-an-api-call-that-needs-to-be-called-only-once-but-with-multiple-conditions)|
-| 188. |[What is defer in promise?](#q-what-is-defer-in-promise)|
-| 189. |[Why do we need provider aliases?](#q-why-do-we-need-provider-aliases)|
-| 190. |[What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?](#q-what-module-would-you-put-a-singleton-service-whose-instance-will-be-shared-throughout-the-application-eg-exceptionservice-andloggerservice)|
-| 191. |[Why is it bad if Shared Module provides a service to a lazy loaded module?](#q-why-is-it-bad-if-shared-module-provides-a-service-to-a-lazy-loaded-module)|
-| 192. |[What is circular dependency error in angular?](#q-what-is-circular-dependency-error-in-angular)|
-| 193. |[What is static injector error in angular?](#q-what-is-static-injector-error-in-angular)|
-| 194. |[How to create logger service in angular?](#q-how-to-create-logger-service-in-angular)|
-
-## Angular Template
-
-|Sl.No|  Questions                                                                       |
-|-----|----------------------------------------------------------------------------------|
-| 195.  |[What is Ng-Content/Content Projection?](#q-what-is-ng-content-content-projection)|
-| 196. |[Why would you use renderer methods instead of using native element methods?](#q-why-would-you-use-renderer-methods-instead-of-using-native-element-methods)|
-| 197. |[What is difference between Renderer and ElementRef in angular?](#q-what-is-difference-between-renderer-and-elementref-in-angular)|
-| 198. |[How would you control size of an element on resize of the window in a component?](#q-how-would-you-control-size-of-an-element-on-resize-of-the-window-in-a-component)|
-| 199. |[What do you understand by a template variable?](#q-what-do-you-understand-by-a-template-variable)|
-| 200. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages)|
-| 201. |[What is transclusion in angular?](#q-what-is-transclusion-in-angular)|
-| 202. |[What is ng-container and why is it useful?](#q-what-is-ng-container-and-why-is-it-useful)|
-| 203. |[When can you omit the brackets in template binding?](#q-when-can-you-omit-the-brackets-in-template-binding)|
-| 204. |[How would you insert an embedded view from a prepared TemplateRef?](#q-how-would-you-insert-an-embedded-view-from-a-prepared-templateref)|
-| 205. |[How can you access validation errors in the template to display error messages?](#q-how-can-you-access-validation-errors-in-the-template-to-display-error-messages-1)
-| 206. |[What is a template variable. How would you use it?](#q-what-is-a-template-variable-how-would-you-use-it)|
-| 207. |[What is the difference of using a property binding verses a function binding on a template?](#q-what-is-the-difference-of-using-a-property-binding-verses-a-function-binding-on-a-template)|
-| 208. |[what is the difference between ng-content, ng-container and ng- template?](#q-what-is-the-difference-between-ng-content-ng-container-and-ng-template)|
-| 209. |[When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?](#q-when-you-create-a-data-binding-in-angular-are-you-working-with-attributes-or-properties-what-is-the-difference-anyway)|
-
-## Angular Animations
-
-|Sl.No|  Quesions                                          |
-|-----|----------------------------------------------------|
-| 210. |[What is State function?](#q-what-is-state-function)|
-| 211. |[What is Style function?](#q-what-is-style-function)|
-| 212. |[What is Angular DSL?](#q-what-is-angular-dsl)|
-| 213. |[What is the purpose of animate function?](#q-what-is-the-purpose-of-animate-function)|
-| 214. |[What is transition function?](#q-what-is-transition-function)|
-| 215. |[How would you animate routing?](#q-how-would-you-animate-routing)|
-| 216. |[How do you define the transition between two states in Angular?](#q-how-do-you-define-the-transition-between-two-states-in-angular)|
-| 217. |[What selector force a style down through the child component tree into all the child component views?](#q-what-selector-force-a-style-down-through-the-child-component-tree-into-all-the-child-component-views)|
-| 218. |[How can you add an active class to a selected element in a list component?](#q-how-can-you-add-an-active-class-to-a-selected-element-in-a-list-component)|
-| 219. |[How would you select a custom component to style it.](#q-how-would-you-select-a-custom-component-to-style-it)|
-| 220. |[What pseudo-class selector targets styles in the element that hosts the component?](#q-what-pseudo-class-selector-targets-styles-in-the-element-that-hosts-the-component)|
-| 221. |[How would you select all the child components elements?](#q-how-would-you-select-all-the-child-components-elements)|
-| 222. |[How would you select a css class in any ancestor of the component host element, all the way up to the document root?](#q-how-would-you-select-a-css-class-in-any-ancestor-of-the-component-host-element-all-the-way-up-to-the-document-root)|
-
-## Performance
-
-|Sl.No|  Questions                                       |
-|-----|--------------------------------------------------|
-| 223. |[What is a service worker and its role in Angular?](#q-what-is-a-service-worker-and-its-role-in-angular)|
-| 224. |[How do you add web workers in your application?](#q-how-do-you-add-web-workers-in-your-application)|
-| 225. |[What are the limitations with web workers?](#q-what-are-the-limitations-with-web-workers)|
-| 226. |[How to set time for caching in service-worker?](#q-how-to-set-time-for-caching-in-service-worker)|
-| 227. |[What are the types of cache in browsers?](#q-what-are-the-types-of-cache-in-browsers)|
-| 228. |[How will you optimize image and svg in your angular app?](#q-how-will-you-optimize-image-and-svg-in-your-angular-app)|
-| 229. |[What is shadow DOM? How is it helping Angular to perform better?](#q-what-is-shadow-dom-how-is-it-helping-angular-to-perform-better)|
-| 230. |[What is Angular Universal?](#q-what-is-angular-universal)|
-| 231. |[What is server side rendering in angular?](#q-what-is-server-side-rendering-in-angular)|
-| 232. |[How would you use cached data?](#q-how-would-you-use-cached-data)|
-| 233. |[What are some ways you may improve your website scrolling performance?](#q-what-are-some-ways-you-may-improve-your-website-s-scrolling-performance)|
-
-## Miscellaneous
-
-|Sl.No|  Questions                           |
-|-----|--------------------------------------|
-| 234. |[How to display only month in Angular?](#q-how-to-display-only-month-in-angular)|
-| 235. |[What is the purpose of base href tag?](#q-what-is-the-purpose-of-base-href-tag)|
-| 236. |[What is type narrowing?](#q-what-is-type-narrowing)|
-| 237. |[How to inject the dynamic script in angular?](#q-how-to-inject-the-dynamic-script-in-angular)|
-| 238. |[How do you use a JavaScript third party lib in an Angular App?](#q-how-do-you-use-a-javascript-third-party-lib-in-an-angular-app)|
-| 239. |[How to configure Webpack with Angular?](#q-how-to-configure-webpack-with-angular)|
-| 240. |[How do you provide build configuration for multiple locales?](#q-how-do-you-provide-build-configuration-for-multiple-locales)|
-| 241. |[What would you have in a shared module?](#q-what-would-you-have-in-a-shared-module)|
-| 242. |[What would you not put shared module?](#q-what-would-you-not-put-shared-module)|
-| 243. |[What is the difference between scan() vs reduce()?](#q-what-is-the-difference-between-scan-vs-reduce)|
-| 244. |[Can you talk about a bug related to a race condition, how to solve it and how to test it?](#q-can-you-talk-about-a-bug-related-to-a-race-condition-how-to-solve-it-and-how-to-test-it)|
-| 245. |[Explain the difference between layout, painting and compositing.](#q-explain-the-difference-between-layout-painting-and-compositing)
-| 246. |[Write a program to perform column sorting using angular-material?](#q-write-a-program-to-perform-column-sorting-using-angular-material)|
-
-<br/>
-
-## # 1. ANGULAR BASICS
+## # 1. INTRODUCTION
 
 <br/>
 
@@ -372,7 +71,7 @@
 |ng generate web-worker app           |Add a Web Worker to angular app|
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is difference between Angular JIT compilation and AOT compilation?
@@ -415,7 +114,7 @@ ng build --prod              -  this is for production build
 *Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the advantages with AOT?
@@ -427,7 +126,7 @@ ng build --prod              -  this is for production build
 5. **Better security** It compiles HTML templates and components into JavaScript.  So there wont be any injection attacks.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the ways to control AOT compilation?
@@ -437,7 +136,7 @@ You can control your app compilation in two ways
 2. By configuring Angular metadata with decorators
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to optimize loading large data in angular?
@@ -502,8 +201,12 @@ export class App {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 3. ARCHITECTURE
+
+<br/>
 
 ## Q. How an Angular application gets started or loaded?
 
@@ -571,7 +274,7 @@ When angular starts, it bootstrap array in `@NgModule`. It basically there is a 
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is rxjs subject in Angular?
@@ -614,7 +317,7 @@ From subscription 2: 4
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is RxJS BehaviorSubject, ReplaySubject and AsyncSubject in angular?
@@ -715,7 +418,7 @@ subject.complete();
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is difference between BehaviorSubject and Observable?
@@ -773,7 +476,7 @@ subject.next("d"); // Subscription got d
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between Subject and BehaviorSubject?
@@ -840,7 +543,7 @@ observerB: 3
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between AngularJS and Angular?
@@ -899,7 +602,7 @@ components.
 * Migrating legacy systems from AngularJS to Angular requires time
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you add web workers in your application?
@@ -933,7 +636,7 @@ if (typeof Worker !== 'undefined') {
 *Note: You may need to refactor your initial scaffolding web worker code for sending messages to and from.*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are directives in angular?
@@ -984,9 +687,14 @@ Now this directive extends HTML element behavior with a yellow background as bel
 ```html
 <p myHighlight>Highlight me!</p>
 ```
+
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 4. COMPONENT INTERACTION
+
+<br/>
 
 ## Q. What are components in angular?
 
@@ -1010,7 +718,7 @@ export class AppComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the differences between Component and Directive?
@@ -1055,7 +763,7 @@ export class AppComponent  {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is an Angular Module?
@@ -1081,7 +789,7 @@ The NgModule decorator has three options
 * The bootstrap option tells Angular which Component to bootstrap in the application
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are lifecycle hooks available in Angular?
@@ -1100,7 +808,7 @@ Angular offers lifecycle hooks that provide visibility into these key life momen
 * **ngOnDestroy** This is the cleanup phase just before Angular destroys the directive/component.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is data binding in Angular?
@@ -1136,7 +844,7 @@ Data binding is a core concept in Angular and allows to define communication bet
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is metadata in Angular?
@@ -1217,8 +925,12 @@ export class MyComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 12. PERFORMANCE
+
+<br/>
 
 ## Q. What is a service worker and its role in Angular?
 
@@ -1248,7 +960,7 @@ The above command completes the following actions:
 * Creates the service worker configuration file called *ngsw-config.json*, which specifies the caching behaviors and other settings.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to set time for caching in service-worker?
@@ -1285,7 +997,7 @@ The above command completes the following actions:
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the types of cache in browsers?
@@ -1297,7 +1009,7 @@ There are two types of cache in the browser: browser-managed cache and applicati
 * **Application-managed caches** are created using the Cache API independent of the browser-managed caches. This API is available to applications (via **window.caches**) and the **service worker**. Application- managed caches hold the same kinds of assets as a browser cache but are accessible offline (e.g. by the service worker to enable offline support).This cache is managed by developers who implement scripts that use the Cache API to explicitly update items in named cache objects.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between constructor() and ngOnInit()?
@@ -1319,7 +1031,7 @@ export class App implements OnInit{
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are Angular Services?
@@ -1350,7 +1062,7 @@ export class RepoService {
 The above service uses Http service as a dependency.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is dependency injection in Angular?
@@ -1393,7 +1105,7 @@ export class AppComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of async pipe?
@@ -1415,7 +1127,7 @@ export class AsyncObservablePipeComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of ngFor directive?
@@ -1443,7 +1155,7 @@ class NgForAppComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What happens if you use script tag inside template?
@@ -1459,7 +1171,7 @@ export class InnerHtmlBindingComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Interpolation?
@@ -1476,7 +1188,7 @@ Interpolation is a special syntax that Angular converts into property binding. I
 In the example above, Angular evaluates the title and url properties and fills in the blanks, first displaying a bold application title and then a URL.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are template expressions?
@@ -1493,7 +1205,7 @@ The below javascript expressions are prohibited in template expression
 * increment and decrement operators (++ and -)
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are template statement?
@@ -1510,8 +1222,12 @@ In the above expression, editProfile is a template statement. The below JavaScri
 * the template expression operators
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 6. PIPES
+
+<br/>
 
 ## Q. What are pipes?
 
@@ -1529,7 +1245,7 @@ export class BirthdayComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is a parameterized pipe?
@@ -1551,7 +1267,7 @@ export class BirthdayComponent {
 *Note: The parameter value can be any valid template expression, such as a string literal or a component property.*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is a custom pipe?
@@ -1592,7 +1308,7 @@ Now you can use the above pipe in template expression as below,
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between pure and impure pipe?
@@ -1620,8 +1336,12 @@ export class myPipe implements PipeTransform {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 13. MISCELLANEOUS
+
+<br/>
 
 ## Q. How to display only month in Angular?
 
@@ -1638,7 +1358,7 @@ export class BirthdayComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is a bootstrapping module?
@@ -1671,7 +1391,7 @@ export class AppModule { }
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between RouterModule.forRoot() and RouterModule.forChild()?
@@ -1714,7 +1434,7 @@ export class ChildModule {}
 * **forChild()**: service register to particular child component
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Explain on how to use HttpClient with an example?
@@ -1775,7 +1495,7 @@ Since the above service method returns an Observable which needs to be subscribe
 * Supports streamlined error handling
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How can you read full response?
@@ -1792,7 +1512,7 @@ getUserResponse(): Observable<HttpResponse<User>> {
 Now `HttpClient.get()` method returns an Observable of typed HttpResponse rather than just the JSON data.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you perform Error handling?
@@ -1812,8 +1532,12 @@ fetchUser() {
 It is always a good idea to give the user some meaningful feedback instead of displaying the raw error object returned from HttpClient.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 7. RXJS
+
+<br/>
 
 ## Q. What is RxJS?
 
@@ -1826,7 +1550,7 @@ import { catchError, retry } from 'rxjs/operators';
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is an RxJS Operator?
@@ -2083,7 +1807,7 @@ Output
 The above example will take only the first five elements after every 5 seconds with the 1-second interval for five seconds.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is subscribing?
@@ -2112,7 +1836,7 @@ myObservable.subscribe(myObserver);
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is an observable?
@@ -2130,7 +1854,7 @@ const observable = new Observable(observer => {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is an observer?
@@ -2151,7 +1875,7 @@ myObservable.subscribe(myObserver);
 *Note: If you do not supply a handler for a notification type, the observer ignores notifications of that type.*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is multicasting?
@@ -2174,7 +1898,7 @@ multicasted.subscribe({
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you perform error handling in observables?
@@ -2188,7 +1912,7 @@ myObservable.subscribe({
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the short hand notation for subscribe method?
@@ -2204,7 +1928,7 @@ myObservable.subscribe(
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the utility functions provided by RxJS?
@@ -2217,7 +1941,7 @@ The RxJS library also provides below utility functions for creating and working 
 5. Composing multiple streams
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are observable creation functions?
@@ -2260,7 +1984,7 @@ const subscription = mouseMoves.subscribe((e: MouseEvent) => {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What will happen if you do not supply handler for observer?
@@ -2268,7 +1992,7 @@ const subscription = mouseMoves.subscribe((e: MouseEvent) => {
 Normally an observer object can define any combination of next, error and complete notification type handlers. If you do not supply a handler for a notification type, the observer just ignores notifications of that type.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Explain the difference between Promise and Observable in Angular?
@@ -2289,7 +2013,7 @@ Normally an observer object can define any combination of next, error and comple
 * an array whose items arrive asynchronously over time
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are angular elements?
@@ -2297,7 +2021,7 @@ Normally an observer object can define any combination of next, error and comple
 Angular elements are Angular components packaged as **custom elements**(a web standard for defining new HTML elements in a framework-agnostic way). Angular Elements hosts an Angular component, providing a bridge between the data and logic defined in the component and standard DOM APIs, thus, providing a way to use Angular components in `non-Angular environments`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the browser support of Angular Elements?
@@ -2313,7 +2037,7 @@ Since Angular elements are packaged as custom elements the browser support of an
 | Edge| Currently it is in progress|
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are custom elements?
@@ -2321,7 +2045,7 @@ Since Angular elements are packaged as custom elements the browser support of an
 Custom elements (or Web Components) are a Web Platform feature which extends HTML by allowing you to define a tag whose content is created and controlled by JavaScript code. The browser maintains a `CustomElementRegistry` of defined custom elements, which maps an instantiable JavaScript class to an HTML tag. Currently this feature is supported by Chrome, Firefox, Opera, and Safari, and available in other browsers through polyfills.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Do I need to bootstrap custom elements?
@@ -2329,7 +2053,7 @@ Custom elements (or Web Components) are a Web Platform feature which extends HTM
 No, custom elements bootstrap (or start) automatically when they are added to the DOM, and are automatically destroyed when removed from the DOM. Once a custom element is added to the DOM for any page, it looks and behaves like any other HTML element, and does not require any special knowledge of Angular.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How custom elements works internally?
@@ -2341,7 +2065,7 @@ Below are the steps in an order about custom elements functionality,
 4. **Instance provides content with data binding and change detection** The content with in template is rendered using the component and DOM data.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to transfer components to custom elements?
@@ -2351,7 +2075,7 @@ Transforming components to custom elements involves **two** major steps,
 2. **Register element class with browser** It uses `customElements.define()` JS function, to register the configured constructor and its associated custom-element tag with the browser `CustomElementRegistry`. When the browser encounters the tag for the registered element, it uses the constructor to create a custom-element instance.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the mapping rules between Angular component and custom element?
@@ -2361,7 +2085,7 @@ The Component properties and logic maps directly into HTML attributes and the br
 2. The Component outputs are dispatched as HTML Custom Events, with the name of the custom event matching the output name. For example, component `@Output()` valueChanged = new EventEmitter() converted as custom element with dispatch event as "valueChanged".
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you define typings for custom elements?
@@ -2385,7 +2109,7 @@ container.greet = 'News';  // ERROR: TypeScript knows there is no `greet` proper
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are dynamic components?
@@ -2393,7 +2117,7 @@ container.greet = 'News';  // ERROR: TypeScript knows there is no `greet` proper
 Dynamic components are the components in which components location in the application is not defined at build time.i.e, They are not used in any angular template. But the component is instantiated and placed in the application at runtime.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of base href tag?
@@ -2405,7 +2129,7 @@ The routing application should add <base> element to the index.html as the first
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is router outlet?
@@ -2418,7 +2142,7 @@ The RouterOutlet is a directive from the router library and it  acts as a placeh
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to create multiple router-outlets?
@@ -2436,7 +2160,7 @@ The RouterOutlet is a directive from the router library and it  acts as a placeh
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is routerLink?
@@ -2452,7 +2176,7 @@ The RouterLink is a directive on the anchor tags give the router control over th
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are active router links?
@@ -2469,7 +2193,7 @@ RouterLinkActive is a directive that toggles css classes for active RouterLink b
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is router state?
@@ -2489,7 +2213,7 @@ class MyComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are Router Events?
@@ -2513,7 +2237,7 @@ During each navigation, the Router emits navigation events through the Router.ev
 * Scroll
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Activated Route?
@@ -2532,7 +2256,7 @@ class MyComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you define Angular Routes?
@@ -2572,7 +2296,7 @@ export class AppModule { }
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of Wildcard route?
@@ -2584,7 +2308,7 @@ For example, you can define PageNotFoundComponent for wildcard route as below
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Angular Universal?
@@ -2592,7 +2316,7 @@ For example, you can define PageNotFoundComponent for wildcard route as below
 Angular Universal is a server-side rendering module for Angular applications in various scenarios. This is a community driven project and available under `@angular/platform-server` package. Recently Angular Universal is integrated with Angular CLI.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Why do we need compilation process?
@@ -2600,7 +2324,7 @@ Angular Universal is a server-side rendering module for Angular applications in 
 The Angular components and templates cannot be understood by the browser directly. Due to that Angular applications require a compilation process before they can run in a browser. For example, In AOT compilation, both Angular HTML and TypeScript code converted into efficient JavaScript code during the build phase before browser runs it.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the restrictions of metadata?
@@ -2612,7 +2336,7 @@ In Angular, You must write metadata with the following general constraints,
 4. Decorated and data-bound class members must be public.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the three phases of AOT?
@@ -2624,7 +2348,7 @@ The AOT compiler works in three phases,
 **3. Template Type Checking** In this phase, the Angular template compiler uses the TypeScript compiler to validate the binding expressions in templates.  
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Can I use arrow functions in AOT?
@@ -2654,7 +2378,7 @@ If you still use arrow function, it generates an error node in place of the func
 *Note: From Angular5 onwards, the compiler automatically performs this rewriting while emitting the `.js` file.*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of metadata json files?
@@ -2662,7 +2386,7 @@ If you still use arrow function, it generates an error node in place of the func
 The metadata.json file can be treated as a diagram of the overall structure of a decorator metadata, represented as an abstract syntax tree(AST). During the analysis phase, the AOT collector scan the metadata recorded in the Angular decorators and outputs metadata information in .metadata.json files, one per .d.ts file.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Can I use any javascript feature for expression syntax in AOT?
@@ -2670,7 +2394,7 @@ The metadata.json file can be treated as a diagram of the overall structure of a
 No, the AOT collector understands a subset  of (or limited) JavaScript features. If an expression uses unsupported syntax, the collector writes an error node to the .metadata.json file. Later point of time, the compiler reports an error if it needs that piece of metadata to generate the application code.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is folding?
@@ -2692,7 +2416,7 @@ Will be folded into inline selector
 Remember that the compiler can’t fold everything. For example, spread operator on arrays, objects created using new keywords and function calls.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are macros?
@@ -2721,7 +2445,7 @@ export class TypicalModule {}
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Give an example of few metadata errors?
@@ -2794,7 +2518,7 @@ providers: [
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is metadata rewriting?
@@ -2802,7 +2526,7 @@ providers: [
 Metadata rewriting is the process in which the compiler converts the expression initializing the fields such as `useClass`, `useValue`, `useFactory`, and data into an exported variable, which replaces the expression. Remember that the compiler does this rewriting during the emit of the `.js` file but not in definition files ( .d.ts file).
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you provide configuration inheritance?
@@ -2824,7 +2548,7 @@ Angular Compiler supports configuration inheritance through extends in the **tsc
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you specify angular template compiler options?
@@ -2845,7 +2569,7 @@ The angular template compiler options are specified as members of the `angularCo
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you enable binding expression validation?
@@ -2869,7 +2593,7 @@ my.component.ts.MyComponent.html(1,1): : Property 'contacts' does not exist on t
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of any type cast function?
@@ -2884,7 +2608,7 @@ The $any() cast function also works with this to allow access to undeclared memb
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Non null type assertion operator?
@@ -2908,7 +2632,7 @@ class MyComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is type narrowing?
@@ -2925,7 +2649,7 @@ class MyComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you describe various dependencies in angular application?
@@ -2937,7 +2661,7 @@ The dependencies section of package.json with in an angular application can be d
 **3. Polyfill packages** Polyfills plug gaps in a browser JavaScript implementation.  
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is zone?
@@ -2945,7 +2669,7 @@ The dependencies section of package.json with in an angular application can be d
 A Zone is an execution context that persists across async tasks. Angular relies on zone.js to run Angular change detection processes when native JavaScript operations raise events
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of common module?
@@ -2953,7 +2677,7 @@ A Zone is an execution context that persists across async tasks. Angular relies 
 The commonly-needed services, pipes, and directives provided by `@angular/common` module. Apart from these HttpClientModule is available under `@angular/common/http`.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is codelyzer?
@@ -2965,8 +2689,12 @@ ng lint
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 11. ANGULAR ANIMATIONS
+
+<br/>
 
 ## Q. What is State function?
 
@@ -2982,7 +2710,7 @@ state('open', style({
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Style function?
@@ -2999,7 +2727,7 @@ state('close', style({
 *Note: The style attributes must be in camelCase*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of animate function?
@@ -3047,7 +2775,7 @@ export class AnimateComponent implements OnInit {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is transition function?
@@ -3062,7 +2790,7 @@ transition('open => closed', [
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to inject the dynamic script in angular?
@@ -3085,7 +2813,7 @@ export class App {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Angular Ivy?
@@ -3106,7 +2834,7 @@ ng new ivy-demo-app --enable-ivy
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the features included in ivy preview?
@@ -3118,7 +2846,7 @@ You can expect below features with Ivy preview,
 * Improved template type checking
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Can I use AOT compilation with Ivy?
@@ -3142,15 +2870,19 @@ Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 9. SERVICES AND DI
+
+<br/>
 
 ## Q. What is Angular Language Service?
 
 The Angular Language Service is a way to get completions, errors, hints, and navigation inside your Angular templates whether they are external in an HTML file or embedded in annotations/decorators in a string. It has the ability to autodetect that you are opening an Angular file, reads your `tsconfig.json` file, finds all the templates you have in your application, and then provides all the language services.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you install angular language service in the project?
@@ -3169,7 +2901,7 @@ After that add the following to the "compilerOptions" section of your project ts
 *Note: The completion and diagnostic services works for `.ts` files only. You need to use custom plugins for supporting HTML files.*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the limitations with web workers?
@@ -3178,7 +2910,7 @@ After that add the following to the "compilerOptions" section of your project ts
 2. Running Angular in web worker using `@angular/platform-webworker` is not yet supported in Angular CLI.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Angular CLI Builder?
@@ -3186,7 +2918,7 @@ After that add the following to the "compilerOptions" section of your project ts
 In Angular8, the CLI Builder API is stable and available to developers who want to customize the `Angular CLI` by adding or modifying commands. For example, you could supply a builder to perform an entirely new task, or to change which third-party tool is used by an existing command.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is a builder?
@@ -3194,7 +2926,7 @@ In Angular8, the CLI Builder API is stable and available to developers who want 
 A builder function is a function that uses the `Architect API` to perform a complex process such as "build" or "test". The builder code is defined in an npm package. For example, BrowserBuilder runs a webpack build for a browser target and KarmaBuilder starts the Karma server and runs a webpack build for unit tests.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you invoke a builder?
@@ -3202,7 +2934,7 @@ A builder function is a function that uses the `Architect API` to perform a comp
 The Angular CLI command `ng run` is used to invoke a builder with a specific target configuration. The workspace configuration file, `angular.json`, contains default configurations for built-in builders.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you create app shell in Angular?
@@ -3215,7 +2947,7 @@ ng g appShell [options]
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the case types in Angular?
@@ -3227,7 +2959,7 @@ Angular uses capitalization conventions to distinguish the names of various type
 * **UPPER_UNDERSCORE_CASE** All constants uses capital letters connected with underscores. For example, "NUMBER_OF_USERS".
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the class decorators in Angular?
@@ -3241,7 +2973,7 @@ The following list of decorators comes under class decorators,
 5. `@NgModule()`
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are class field decorators?
@@ -3254,7 +2986,7 @@ The class field decorators are the statements declared immediately before a fiel
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is declarable in Angular?
@@ -3262,7 +2994,7 @@ The class field decorators are the statements declared immediately before a fiel
 Declarable is a class type that you can add to the declarations list of an NgModule. The class types such as components, directives, and pipes comes can be declared in the module.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the restrictions on declarable classes?
@@ -3274,7 +3006,7 @@ Below classes should not be declared,
 4. Helper classes
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is a DI token?
@@ -3289,7 +3021,7 @@ const url = injector.get(BASE_URL);
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Angular DSL?
@@ -3301,7 +3033,7 @@ Basically you will see 3 main syntax in Angular DSL.
 3. `*` : Structural directives(*ngFor or *ngIf) will affect/change the DOM structure.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Bazel tool?
@@ -3317,7 +3049,7 @@ Below are the list of key advantages of Bazel tool,
 3. It creates the possibility to have remote builds and cache on a build farm.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you use Bazel with Angular CLI?
@@ -3336,7 +3068,7 @@ ng new --collection=@angular/bazel
 When you use ng build and ng serve commands, Bazel is used behind the scenes and outputs the results in dist/bin folder.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you run Bazel directly?
@@ -3350,7 +3082,7 @@ bazel run [target]: Compile the program represented by target and then run it.
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## # 2. CONFIGURATION AND TOOLS
@@ -3378,8 +3110,12 @@ The different types of commands would be,
 3. **Running the Project** ng serve
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 10. ANGULAR TEMPLATE
+
+<br/>
 
 ## Q. What is Ng-Content/Content Projection?
 
@@ -3406,7 +3142,7 @@ Example
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How can I select an element in a component template?
@@ -3417,7 +3153,7 @@ constructor(myElement: ElementRef) { ... }
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Redux and how does it relate to an Angular app?
@@ -3425,8 +3161,12 @@ constructor(myElement: ElementRef) { ... }
 Redux is a way to manage application state and improve maintainability of asynchronicity in application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 8. ROUTING
+
+<br/>
 
 ## Q. How routing works in Angular?
 
@@ -3450,7 +3190,7 @@ To accomplish its tasks, Angular Router introduces the following terms and conce
 * **resolver**: script that fetches data before the requested page is activated
 * **router outlet**: location in the DOM where Angular Router can place activated components.
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Explain local reference variables, `@ViewChild()` and `@ContentChild()`?
@@ -3580,7 +3320,7 @@ export class MessageContainerComponent implements AfterContentInit {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to make sure that single instance will be used in an entire application?
@@ -3591,7 +3331,7 @@ There are two ways to make a service a singleton in Angular:
 * Include the service in the AppModule or in a module that is only imported by the AppModule
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you reference the host of a component?
@@ -3616,7 +3356,7 @@ class MyComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Why would you use renderer methods instead of using native element methods? What is difference between Renderer and ElementRef in angular?
@@ -3628,7 +3368,7 @@ The `Renderer` is a class that is a partial abstraction over the DOM. Using the 
 There are other ways to acquire an `ElementRef` instance like `@ViewChild()`, `@ViewChildren()`, `@ContentChild()`, `@ContentChildren()`. In this case `ElementRef` is a reference to the matching element(s) in the template or children.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How would you control size of an element on resize of the window in a component?
@@ -3660,7 +3400,7 @@ onResize(event) {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to cache an observable data?
@@ -3700,7 +3440,7 @@ export class SomeComponent implements OnInit {
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What do you understand by a template variable? 
@@ -3718,7 +3458,7 @@ show(name: HTMLInputElement){
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is shadow DOM? How is it helping Angular to perform better?
@@ -3746,7 +3486,7 @@ Example:
 * **ViewEncapsulation.Native**: - Native Shadow DOM enabled.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you use a JavaScript third party lib in an Angular App?
@@ -3779,7 +3519,7 @@ export class AppComponent {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Can we create two Components with the same name in two different .ts files?
@@ -3787,7 +3527,7 @@ export class AppComponent {
 * No
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the difference between `@Inject()` and `@Injectable()`?
@@ -3811,7 +3551,7 @@ export class SomeService {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are Zones? What is Change Detection? What would be a good use for NgZone service?
@@ -3823,7 +3563,7 @@ Zone.js is an execution context that helps developers intercept and keep track o
 `Zone` and `NgZone` are used to automatically trigger change detection as a result of async operations. But since change detection is a separate mechanism it can successfully work without Zone and NgZone. 
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is auxiliary routes in angular?
@@ -3871,7 +3611,7 @@ Each auxiliary route is an independent route which can have:
 * Its own history stack
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you get a reference to a child component? 
@@ -3879,7 +3619,7 @@ Each auxiliary route is an independent route which can have:
 `ViewChild`/`ViewChildren` or `ContentChild`/`ContentChildren`
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you listen for events in a component? 
@@ -3887,7 +3627,7 @@ Each auxiliary route is an independent route which can have:
 `HostListener` or via `elementRef.nativeElement`
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you force a change detection cycle? 
@@ -3895,7 +3635,7 @@ Each auxiliary route is an independent route which can have:
 `changeDetectorRef.markForCheck` or `changeDetectorRef.detectChanges()`
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How would you get a reference to a parent component?  
@@ -3903,7 +3643,7 @@ Each auxiliary route is an independent route which can have:
 Inject it in the constructor.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What does forwardRef do?
@@ -3931,7 +3671,7 @@ expect(door.lock instanceof Lock).toBeTruthy();
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are entryComponents?
@@ -3959,7 +3699,7 @@ There are two main kinds of entry components:
 A bootstrapped component is an entry component that Angular loads into the DOM during the bootstrap process (application launch).
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. When building custom form components, what interface do they components need to implement to particpate in forms?
@@ -3967,7 +3707,7 @@ A bootstrapped component is an entry component that Angular loads into the DOM d
 `ControlValueAccessor`
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are the best way to unsubscribe from Observables in Angular?
@@ -4024,7 +3764,7 @@ export class SimpleComponent implements OnInit, OnDestroy {
 ```
 At runtime, the function componentDestroyed alters the component instance and creates a new `ngOnDestroy` method which in turn calls an internally created Subject. The existing ngOnDestroy gets called by the new ngOnDestroy method.
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How Event Emitters works in Angular?
@@ -4068,7 +3808,7 @@ class MyService {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How will you intercept http to inject header to each http call?
@@ -4122,7 +3862,7 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How will you parallelize multiple observable call?
@@ -4195,7 +3935,7 @@ getItems(ids: number[]): Observable<Item> {
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How will you put one async call before another?
@@ -4237,7 +3977,7 @@ export class AppComponent  {
   }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How can you cancel a router navigation?
@@ -4279,7 +4019,7 @@ Where `MyComponent` is custom component and `CanDeactivateGuard` is going to be 
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How would you animate routing?
@@ -4396,7 +4136,7 @@ router-outlet ~ * {
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How would you make sure an api call that needs to be called only once but with multiple conditions?
@@ -4404,7 +4144,7 @@ router-outlet ~ * {
 We can store data in a  singleton service, which its object is created once and it won’t get destroyed throughout the application. So even routes get changes the data will be available in other routes
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. If you need to respond to two different Observable or Subject with one callback function how would you do it?
@@ -4412,7 +4152,7 @@ We can store data in a  singleton service, which its object is created once and 
 We can create page change Subject and we can emit when route parameters change or next/prev button change.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How can you access validation errors in the template to display error messages?
@@ -4424,7 +4164,7 @@ We can create page change Subject and we can emit when route parameters change o
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between an observable and a subject?
@@ -4434,8 +4174,12 @@ A RxJS Subject is a special type of Observable that allows values to be multicas
 A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
+
+## # 5. ANGULAR FORMS
+
+<br/>
 
 ## Q. What the importance of Dirty Flag, pristine, touched, untouched, valid, invalid?
 
@@ -4447,7 +4191,7 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * **Invalid** – opposite of valid
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is defer in promise?
@@ -4458,7 +4202,7 @@ A Subject is like an Observable, but can multicast to many Observers. Subjects a
 * Notify
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between an Annotation and a Decorator in Angular?
@@ -4493,7 +4237,7 @@ export class AppComponent {
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is transclusion in angular?
@@ -4525,7 +4269,7 @@ Note that I am also passing a title as an input to that component. Now, by defau
 
 `ng-content` works very much like `router-outlet`: It is a directive that indicates where dynamic content is going to be loaded.
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. If your data model is updated outside the Zone explain the process how will you the view?
@@ -4537,7 +4281,7 @@ We can update view using any of the following:
 * **ChangeDetectorRef.prototype.detectChanges()**: It will launch the change detection on the current component and its children.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the process of inserting an embedded view from a prepared TemplateRef?
@@ -4560,7 +4304,7 @@ export class AppComponent implements AfterViewChecked {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between observable and promises?
@@ -4601,7 +4345,7 @@ Observable provides operators like map(), forEach(), reduce(), ... similar to an
 | Provides chaining and subscription to handle complex applications | Uses only .then() clause |
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. List the differences between Angular components vs directives?
@@ -4622,7 +4366,7 @@ A Component is a special kind of directive that uses a simpler configuration whi
 * when you want a directive that is triggered by an attribute or CSS class, rather than an element
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you define the transition between two states in Angular?
@@ -4685,7 +4429,7 @@ export class OpenCloseComponent {
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. When to use NgOnInit and constructor in Angular?
@@ -4710,7 +4454,7 @@ export class App implements OnInit{
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Traceur Compiler?
@@ -4718,7 +4462,7 @@ export class App implements OnInit{
 Traceur compiler takes classes, generators, and other features from ECMAScript edition 6 (ES6) and compiles it into JavaScript ES5 that runs on the browser. This means developers can use the code from a future version that has more features and encourages design patterns.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How can we bind a variable with DOM element in Angular?
@@ -4759,7 +4503,7 @@ export class AppComponent {
 Two-way data binding is mostly used in forms and when dealing with inputs. User input has to be grabbed from the DOM and stored in the class property before being used.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Self and Host Decorator in Angular?
@@ -4821,7 +4565,7 @@ const child = inj.resolveAndCreateChild([NeedsDependency]);
 expect(() => child.get(NeedsDependency)).toThrowError();
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Why do we need provider aliases?  
@@ -4883,7 +4627,7 @@ const AUTH_CONFIG = {
 providers: [{ provide: AuthConfig, useValue: AUTH_CONFIG }]
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the expression context in Angular?
@@ -4899,7 +4643,7 @@ A template helps us to render HTML with some dynamic parts depending on our data
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What Is PrimeNG? How Can It Be Used With Angular?
@@ -5001,7 +4745,7 @@ export class AppComponent {
 </p-accordion>
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How can you add an active class to a selected element in a list component?
@@ -5046,7 +4790,7 @@ export class App {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is RouterLink? How would you pass data from a parent component to a child component?
@@ -5116,7 +4860,7 @@ There are several ways how Angular components can pass data around:
 * Using router parameters
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the purpose of NgModule? How do you decide to create a new NgModule?
@@ -5143,7 +4887,7 @@ When we are dealing with medium or large apps, it includes discrete set of funct
 In the process of developing an app we might create a feature which we do not want to expose or create a feature which we want to lazy loading when the user decides it is time to revisit the feature. NgModules helps us to separate our features to logical units and load it when required.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is difference between Angular Modules and JavaScript Modules?
@@ -5171,7 +4915,7 @@ NgModules are classes decorated with `@NgModule`. The `@NgModule` decorator impo
 * Unlike JavaScript modules, an NgModule can extend the entire application with services by adding providers to the  `@NgModule`.providers list.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is ng-container and why is it useful?
@@ -5209,7 +4953,7 @@ will then produce :
 </div>
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What are rxjs lettable operators?
@@ -5253,7 +4997,7 @@ source$.let(complicatedLogic).subscribe(x => console.log(x)); // 50
 *Note: The `do` operator was renamed in RxJS 5.5 to `tap` because it collided with the JavaScript `do` keyword.*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do components communicate with each other?
@@ -5487,7 +5231,7 @@ export class SiblingComponent implements OnInit {
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to dynamically create a component in Angular?
@@ -5586,7 +5330,7 @@ import { DynamicComponent } from './dynamic.component'
 export class AppModule { }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is wildcard state?
@@ -5602,7 +5346,7 @@ const routes:Routes = [
 The path can be the empty string which usually refers to the main URL of your application or can be also a **wildcard** string `(**)` which will be matched by the router if the visited URL doesn’t match any paths in the router configuration. This is usually used to display a **page doesn’t exist** message or redirect the users to an existing path.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How will you localize numbers currencies and dates?
@@ -5616,7 +5360,7 @@ Angular simplifies the following aspects of internationalization:
 * Handling plural forms of words.
 * Handling alternative text.
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How will you optimize image and svg in your angular app?
@@ -5708,7 +5452,7 @@ The ahead-of-time (AOT) compiler can catch template errors early and improve per
     * Better security
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is hammerjs in angular?
@@ -5737,7 +5481,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 * **Swipe**: A Swipe gesture is recognized when a pointer is moving at a set speed for a set minimum amount of distance. This is commonly used to flip between items within a UI. Instead of scrolling, it is more useful to swap out items in a set direction.
 * **Tap**: A Tap gesture is recognized when a user taps the screen. This is commonly used for button presses.
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to call component function from outside the app?
@@ -5767,7 +5511,7 @@ window.angularComponentRef.zone.run(() => {window.angularComponentRef.componentF
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is Babel and how it is used in Angular?
@@ -5850,7 +5594,7 @@ export default {
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How to configure Angular with Webpack?
@@ -6037,7 +5781,7 @@ export class AppComponent {}
 }
 ```
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is server side rendering in angular?
@@ -6079,7 +5823,7 @@ There are three main reasons to create a Universal version of your app.
 * Show the first page quickly with a first-contentful paint (FCP)
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is difference between Stateful and Stateless Pipes in angular?
@@ -6091,7 +5835,7 @@ There are three main reasons to create a Universal version of your app.
 AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the input automatically, eventually returning the emitted value(s). It is stateful because the pipe maintains a subscription to the input and its returned values depend on that subscription.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is index property in ngFor directive?
@@ -6102,7 +5846,7 @@ The `index` property of the NgFor directive is used to return the zero-based ind
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How do you provide build configuration for multiple locales?
@@ -6122,7 +5866,7 @@ You can provide build configuration such as translation file path, name, format 
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Why EventEmitter is needed for @Output decorator?
@@ -6132,7 +5876,7 @@ The `@Input` links a property of a component (which is generally the child compo
 To summarise: `@Input` is used to pass data from parent to child and the opposite, `@Output`, can be used when you want to pass data from the child to the parent (which can also be done with observables or simple functions).
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Why yarn is better than npm?
@@ -6149,7 +5893,7 @@ Yarn is an alternative npm client with some distinctive aspects, including:
 * **lock file**: A dedicated lock file ( yarn.lock ) that keeps dependencies locked to specific versions, similar to Ruby Gemfile.lock.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Explain the below code?
@@ -6160,7 +5904,7 @@ Yarn is an alternative npm client with some distinctive aspects, including:
 Binds a host element property (here, the CSS class valid) to a directive/component property (isValid).
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Why would you use renderer2 methods instead of using native element methods?
@@ -6256,7 +6000,7 @@ ngOnInit() {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What does lean component mean to you?
@@ -6264,7 +6008,7 @@ ngOnInit() {
 A lean component is a component which solely purpose is to display data to user. This means such component delegates data fetching, bussiness logic, input validation etc. to other classes like models, services, redux effects/actions etc. Lean component follows single responsibility principle.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What would you have in a shared module?
@@ -6272,7 +6016,7 @@ A lean component is a component which solely purpose is to display data to user.
 I would put directives, pipes, components and other modules that are used throughout my application and export them from this shared module. This way, I would not have to declare/import same components/modules everywhere.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What would you not put shared module?
@@ -6280,7 +6024,7 @@ I would put directives, pipes, components and other modules that are used throug
 I would not put services in a shared module which may be imported by a lazy loaded module. When a lazy loaded module imports a module which provide a service, angular will create another instance of this service which may result in unexpected behaviors.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What module would you put a singleton service whose instance will be shared throughout the application (e.g. ExceptionService andLoggerService)?
@@ -6288,7 +6032,7 @@ I would not put services in a shared module which may be imported by a lazy load
 I would create a core module and provide all the singleton services I have from this module. I would import this module only in app.module so that, all the feature modules, even the lazy loaded ones, would use same instances of the services.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Why is it bad if Shared Module provides a service to a lazy loaded module?
@@ -6307,7 +6051,7 @@ Now consider the HeroModule which is lazy loaded. When the router lazy loads the
 When Angular creates a lazy HeroComponent, it must inject a UserService. This time it finds a UserService provider in the lazy modules child injector and creates a new instance of the UserService. This is an entirely different UserService instance than the app-wide singleton version that Angular injected in one of the eagerly loaded components.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What is the difference between scan() vs reduce()?
@@ -6340,7 +6084,7 @@ reduce shows only total 21
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. How does async pipe prevents memory leaks?
@@ -6348,7 +6092,7 @@ reduce shows only total 21
 The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. Can you explain the difference between ActivatedRoute and RouterState?
@@ -6389,7 +6133,7 @@ interface ActivatedRoute {
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. What selector force a style down through the child component tree into all the child component views?
@@ -6424,7 +6168,7 @@ Child content.
 ```
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
 ## Q. When can you omit the brackets in template binding?
@@ -6447,57 +6191,58 @@ You should omit the brackets when all of the following are true
 * This initial value never changes.
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
 
-#### Q. ***How would you create a component to display error messages throughout your application?***
-#### Q. ***What is the difference between formControlName and FormControl?***
-#### Q. ***What is a good use case for ngrx/store?***
-#### Q. ***What is a good use case for ngrx/entity?***
-#### Q. ***Can you talk about a bug related to a race condition, how to solve it and how to test it?***
-#### Q. ***What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?***
-#### Q. ***How would you protect a component being activated through the router?***
-#### Q. ***How would you insert an embedded view from a prepared TemplateRef?***
-#### Q. ***Which components will be notified when an event is emitted?***
-#### Q. ***How would you use cached data?***
-#### Q. ***When do you use template driven vs model driven forms? Why?***
-#### Q. ***How do you submit a form?***
-#### Q. ***What is the difference between NgForm, FormGroup, and FormControl? How do they work together?***
-#### Q. ***What is the advantage of using FormBuilder?***
-#### Q. ***How do you add form validation to a form built with FormBuilder?***
-#### Q. ***What is the difference between dirty, touched, and pristine on a form element?***
-#### Q. ***How can you access validation errors in the template to display error messages?***
-#### Q. ***What is async validation and how is it done?***
-#### Q. ***What is the difference between exports and declarations in NgModule?***
-#### Q. ***How would you make use of ngOnInit()?***
-#### Q. ***How would you implement a multiple api calls that needs to happen in order using rxjs?***
-#### Q. ***What is the difference between switchMap, concatMap and mergeMap?***
-#### Q. ***How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis?***
-#### Q. ***How would you implement a brush behavior using rxjs?***
-#### Q. ***How would you implement a color picker with rxjs?***
-#### Q. ***If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons)?***
-#### Q. ***What tools would you use to find a performance issue in your code?***
-#### Q. ***What are some ways you may improve your website scrolling performance?***
-#### Q. ***Explain the difference between layout, painting and compositing?***
-#### Q. ***Why do we need route guards?***
-#### Q. ***How can you add an active class to a selected element in a list component?***
-#### Q. ***What is a template variable. How would you use it?***
-#### Q. ***What is the difference of using a property binding verses a function binding on a template?***
-#### Q. ***What happens if you subscribe to a data source multiple times with async pipe?***
-#### Q. ***what is the difference between ng-content, ng-container and ng- template?***
-#### Q. ***When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?***
-#### Q. ***How would you select a custom component to style it?***
-#### Q. ***What pseudo-class selector targets styles in the element that hosts the component?***
-#### Q. ***How would you select all the child components elements?***
-#### Q. ***How would you select a css class in any ancestor of the component host element, all the way up to the document root?***
-#### Q. ***How to use authguard in angular 7?***
-#### Q. ***Write a program to perform column sorting using angular-material?***
-#### Q. ***What is circular dependency error in angular?***
-#### Q. ***What is static injector error in angular?***
-#### Q. ***How to create logger service in angular?***
-#### Q. ***What is the difference between Stateless and Stateful Component?***
+#### Q. How would you create a component to display error messages throughout your application?
+#### Q. What is the difference between formControlName and FormControl?
+#### Q. What is a good use case for ngrx/store?
+#### Q. What is a good use case for ngrx/entity?
+#### Q. Can you talk about a bug related to a race condition, how to solve it and how to test it?
+#### Q. What is the difference between a smart/container component and dumb/presentational component? What is a good use case example? What are the advantages?
+#### Q. How would you protect a component being activated through the router?
+#### Q. How would you insert an embedded view from a prepared TemplateRef?
+#### Q. Which components will be notified when an event is emitted?
+#### Q. How would you use cached data?
+#### Q. When do you use template driven vs model driven forms? Why?
+#### Q. How do you submit a form?
+#### Q. What is the difference between NgForm, FormGroup, and FormControl? How do they work together?
+#### Q. What is the advantage of using FormBuilder?
+#### Q. How do you add form validation to a form built with FormBuilder?
+#### Q. What is the difference between dirty, touched, and pristine on a form element?
+#### Q. How can you access validation errors in the template to display error messages?
+#### Q. What is async validation and how is it done?
+#### Q. What is the difference between exports and declarations in NgModule?
+#### Q. How would you make use of ngOnInit()?
+#### Q. How would you implement a multiple api calls that needs to happen in order using rxjs?
+#### Q. What is the difference between switchMap, concatMap and mergeMap?
+#### Q. How would you make sure an api call that needs to be called only once but with multiple conditions. Example: if you need to get some data in multiple routes but, once you get it, you can reuse it in the routes that needs it, therefor no need to make another call to your backend apis?
+#### Q. How would you implement a brush behavior using rxjs?
+#### Q. How would you implement a color picker with rxjs?
+#### Q. If you need to respond to two different Observable/Subject with one callback function, how would you do it?(ex: if you need to change the url through route parameters and with prev/next buttons)?
+#### Q. What tools would you use to find a performance issue in your code?
+#### Q. What are some ways you may improve your website scrolling performance?
+#### Q. Explain the difference between layout, painting and compositing?
+#### Q. Why do we need route guards?
+#### Q. How can you add an active class to a selected element in a list component?
+#### Q. What is a template variable. How would you use it?
+#### Q. What is the difference of using a property binding verses a function binding on a template?
+#### Q. What happens if you subscribe to a data source multiple times with async pipe?
+#### Q. what is the difference between ng-content, ng-container and ng- template?
+#### Q. When you create a data-binding in Angular, are you working with attributes or properties? What is the difference anyway?
+#### Q. How would you select a custom component to style it?
+#### Q. What pseudo-class selector targets styles in the element that hosts the component?
+#### Q. How would you select all the child components elements?
+#### Q. How would you select a css class in any ancestor of the component host element, all the way up to the document root?
+#### Q. How to use authguard in angular 7?
+#### Q. Write a program to perform column sorting using angular-material?
+#### Q. What is circular dependency error in angular?
+#### Q. What is static injector error in angular?
+#### Q. How to create logger service in angular?
+#### Q. What is the difference between Stateless and Stateful Component?
+
 *ToDo*
 
 <div align="right">
-    <b><a href="#">↥ back to top</a></b>
+    <b><a href="#table-of-contents">↥ back to top</a></b>cs
 </div>
