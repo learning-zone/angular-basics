@@ -22,11 +22,11 @@
 
 ## Projects
 
-|Sl.No| Project Name                              | Technologies Used                             |Live Demo    |
-|-----|-------------------------------------------|---------------------------------------------- |-------------|
-| 01  |	[Angular-Features](angular-practice)      |Angular, Routing                               |[live](https://angular-features.firebaseapp.com)             |
-| 02  |	[Angular-Material](angular-material-practice)|Angular, Material                           |[live](https://angular-material8.firebaseapp.com)            |
-| 03  |	[Performance-Tuning](angular-performance-tuning)|Angular                                  |[live](https://performance-tuning-3450d.firebaseapp.com)             |
+|Sl.No| Project Name                              | Technologies Used   |Live Demo    |
+|-----|-------------------------------------------|---------------------|-------------|
+| 01  |	[Angular-app](angular-practice)      |Angular, Routing     |[live](https://angular-features.firebaseapp.com)|
+| 02  |	[Angular-with-Material-UI](angular-material-practice)|Angular, Material |[live](https://angular-material8.firebaseapp.com)|
+
 
 <br/>
 
