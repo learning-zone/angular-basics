@@ -100,6 +100,40 @@ components.
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
+## # 2. CONFIGURATION AND TOOLS
+
+<br/>
+
+## Q. What is angular CLI?
+
+Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
+You need to install using below npm command,
+
+```js
+npm install @angular/cli@latest
+```
+
+Below are the list of few commands, which will come handy while creating angular projects
+
+**1. Creating New Project** ng new `<project-name>`
+**2. Generating Components, Directives & Services** ng generate/g `<feature-name>`
+
+The different types of commands would be,
+
+* ng generate class my-new-class: add a class to your application
+* ng generate component my-new-component: add a component to your application
+* ng generate directive my-new-directive: add a directive to your application
+* ng generate enum my-new-enum: add an enum to your application
+* ng generate module my-new-module: add a module to your application
+* ng generate pipe my-new-pipe: add a pipe to your application
+* ng generate service my-new-service: add a service to your application
+
+**3. Running the Project** ng serve
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
 ## Q. What are the frequently used command in angular?
 
 |Commands                             |Description                                                                  |
@@ -123,6 +157,79 @@ components.
 |ng add @angular/pwa                  |Adds support for an external library to project  |
 |ng xi18n --output-path src/locale    |Internationalization |
 |ng generate web-worker app           |Add a Web Worker to angular app|
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## # 3. ARCHITECTURE
+
+<br/>
+
+## Q. How an Angular application gets started or loaded?
+
+The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
+
+**main.ts:**
+
+```typescript
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+```
+
+Most importantly here is the line where bootstraps start our angular app by passing app module to the method. AppModule refers to the app.module.ts file.
+
+**app.module.ts:**
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [ ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+When angular starts, it bootstrap array in `@NgModule`. It basically there is a list of all components which should be known to Angular at the point of time it analyzes **index.html** file.
+
+**index.html:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular 8</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-root>Loading...</app-root>
+  </body>
+</html>
+```
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -314,79 +421,6 @@ The metadata.json file can be treated as a diagram of the overall structure of a
 ## Q. Can I use any javascript feature for expression syntax in AOT?
 
 No, the AOT collector understands a subset  of (or limited) JavaScript features. If an expression uses unsupported syntax, the collector writes an error node to the .metadata.json file. Later point of time, the compiler reports an error if it needs that piece of metadata to generate the application code.
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## # 3. ARCHITECTURE
-
-<br/>
-
-## Q. How an Angular application gets started or loaded?
-
-The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
-
-**main.ts:**
-
-```typescript
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
-```
-
-Most importantly here is the line where bootstraps start our angular app by passing app module to the method. AppModule refers to the app.module.ts file.
-
-**app.module.ts:**
-
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
-  providers: [ ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-
-When angular starts, it bootstrap array in `@NgModule`. It basically there is a list of all components which should be known to Angular at the point of time it analyzes **index.html** file.
-
-**index.html:**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Angular 8</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <app-root>Loading...</app-root>
-  </body>
-</html>
-```
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -1137,6 +1171,14 @@ fetchUser() {
 ```
 
 It is always a good idea to give the user some meaningful feedback instead of displaying the raw error object returned from HttpClient.
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How does async pipe prevents memory leaks?
+
+The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -2221,6 +2263,43 @@ export class App {
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
+## Q. What selector force a style down through the child component tree into all the child component views?
+
+Component styles normally apply only to the HTML in the components own template.
+
+Use the `::ng-deep` shadow-piercing descendant combinator to force a style down through the child component tree into all the child component views. The `::ng-deep` combinator works to any depth of nested components, and it applies to both the view children and content children of the component.
+
+**Example:**  
+
+The following example targets all `<h3>` elements, from the host element down through this component to all of its child elements in the DOM.
+
+**parent.component.html:**
+
+```html
+Parent content.
+
+<app-child></app-child>
+```
+
+**parent.component.css:**
+
+```css
+::ng-deep h3 {
+  font-style: italic;
+}
+```
+
+**child.component.html:**  
+
+```html
+<h3>Child title</h3>
+Child content.
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
 ## # 9. SERVICES AND DI
 
 <br/>
@@ -2600,40 +2679,6 @@ bazel build [targets] // Compile the default output artifacts of the given targe
 bazel test [targets] // Run the tests with *_test targets found in the pattern.
 bazel run [target]: Compile the program represented by target and then run it.
 ```
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## # 2. CONFIGURATION AND TOOLS
-
-<br/>
-
-## Q. What is angular CLI?
-
-Angular CLI(**Command Line Interface**) is a command line interface to scaffold and build angular apps using nodejs style (commonJs) modules.
-You need to install using below npm command,
-
-```js
-npm install @angular/cli@latest
-```
-
-Below are the list of few commands, which will come handy while creating angular projects
-
-1. **Creating New Project** ng new `<project-name>`
-2. **Generating Components, Directives & Services** ng generate/g `<feature-name>`
-
-The different types of commands would be,
-
-* ng generate class my-new-class: add a class to your application
-* ng generate component my-new-component: add a component to your application
-* ng generate directive my-new-directive: add a directive to your application
-* ng generate enum my-new-enum: add an enum to your application
-* ng generate module my-new-module: add a module to your application
-* ng generate pipe my-new-pipe: add a pipe to your application
-* ng generate service my-new-service: add a service to your application
-
-3. **Running the Project** ng serve
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -3048,6 +3093,49 @@ export class MessageContainerComponent implements AfterContentInit {
     ngAfterContentInit() {
         console.log(this.MessageComponnetContentChild);
     }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. Can you explain the difference between ActivatedRoute and RouterState?
+
+**RouterState** is an interface which represents the state of the router as a tree of activated routes. Every node of this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data.
+
+**RouterState Interface looks like:**  
+
+```typescript
+interface RouterState extends Tree {
+  snapshot: RouterStateSnapshot
+  toString(): string
+}
+```
+
+**ActivatedRoute** interface provides access to information about a route associated with a component that is loaded in an outlet. Use to traverse the RouterState tree and extract information from nodes.
+
+**ActivatedRoute Interface looks like:**  
+
+```typescript
+interface ActivatedRoute {
+  snapshot: ActivatedRouteSnapshot
+  url: Observable<UrlSegment[]>
+  params: Observable
+  queryParams: Observable
+  fragment: Observable
+  data: Observable
+  outlet: string
+  component: Type | string | null
+  routeConfig: Route | null
+  root: ActivatedRoute
+  parent: ActivatedRoute | null
+  firstChild: ActivatedRoute | null
+  children: ActivatedRoute[]
+  pathFromRoot: ActivatedRoute[]
+  paramMap: Observable
+  queryParamMap: Observable
+  toString(): string
 }
 ```
 
@@ -6042,94 +6130,6 @@ scan shows incremental total 15
 scan shows incremental total 21
 
 reduce shows only total 21
-```
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. How does async pipe prevents memory leaks?
-
-The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. Can you explain the difference between ActivatedRoute and RouterState?
-
-**RouterState** is an interface which represents the state of the router as a tree of activated routes. Every node of this tree knows about the "consumed" URL segments, the extracted parameters, and the resolved data.
-
-**RouterState Interface looks like:**  
-
-```typescript
-interface RouterState extends Tree {
-  snapshot: RouterStateSnapshot
-  toString(): string
-}
-```
-
-**ActivatedRoute** interface provides access to information about a route associated with a component that is loaded in an outlet. Use to traverse the RouterState tree and extract information from nodes.
-
-**ActivatedRoute Interface looks like**  
-
-```typescript
-interface ActivatedRoute {
-  snapshot: ActivatedRouteSnapshot
-  url: Observable<UrlSegment[]>
-  params: Observable
-  queryParams: Observable
-  fragment: Observable
-  data: Observable
-  outlet: string
-  component: Type | string | null
-  routeConfig: Route | null
-  root: ActivatedRoute
-  parent: ActivatedRoute | null
-  firstChild: ActivatedRoute | null
-  children: ActivatedRoute[]
-  pathFromRoot: ActivatedRoute[]
-  paramMap: Observable
-  queryParamMap: Observable
-  toString(): string
-}
-```
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. What selector force a style down through the child component tree into all the child component views?
-
-Component styles normally apply only to the HTML in the components own template.
-
-Use the `::ng-deep` shadow-piercing descendant combinator to force a style down through the child component tree into all the child component views. The `::ng-deep` combinator works to any depth of nested components, and it applies to both the view children and content children of the component.
-
-**Example**  
-
-The following example targets all `<h3>` elements, from the host element down through this component to all of its child elements in the DOM.
-
-**parent.component.html**
-
-```html
-Parent content.
-
-<app-child></app-child>
-```
-
-**parent.component.css**
-
-```css
-::ng-deep h3 {
-  font-style: italic;
-}
-```
-
-**child.component.html**  
-
-```html
-<h3>Child title</h3>
-Child content.
 ```
 
 <div align="right">
