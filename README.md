@@ -1030,10 +1030,6 @@ export class myPipe implements PipeTransform {
 }
 ```
 
-```html
-<div> {{ arrayOfElements | sort }}<div>
-```
-
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
