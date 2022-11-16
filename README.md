@@ -5886,7 +5886,10 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 
 ## Q. What is index property in ngFor directive?
 
-The `index` property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template. 
+The `index` property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template. For example, you can capture the index in a variable named indexVar and displays it with the employee name using ngFor directive as below.
+```html
+<div *ngFor="let employee of employees; let i=index">{{i + 1}} - {{employee.name}}</div>
+```
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -5895,7 +5898,6 @@ The `index` property of the NgFor directive is used to return the zero-based ind
 ## Q. How do you provide build configuration for multiple locales?
 
 You can provide build configuration such as translation file path, name, format and application url in configuration settings of `Angular.json` file. For example, the German version of your application configured the build as follows,
-
 ```json
 "configurations": {
   "de": {
