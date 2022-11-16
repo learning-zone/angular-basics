@@ -934,19 +934,7 @@ In the above expression, editProfile is a template statement. The below JavaScri
 
 ## Q. What are pipes?
 
-A pipe takes in data as input and transforms it to a desired output. For example, let us take a pipe to transform a component birthday property into a human-friendly date using **date** pipe.
-
-```typescript
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-birthday',
-  template: `<p>Birthday is {{ birthday | date }}</p>`
-})
-export class BirthdayComponent {
-  birthday = new Date(2002, 6, 18); // June 18, 2002
-}
-```
+*ToDo*
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -5886,10 +5874,7 @@ AsyncPipe can receive a `Promise` or `Observable` as input and subscribe to the 
 
 ## Q. What is index property in ngFor directive?
 
-The `index` property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template. For example, you can capture the index in a variable named indexVar and displays it with the employee name using ngFor directive as below.
-```html
-<div *ngFor="let employee of employees; let i=index">{{i + 1}} - {{employee.name}}</div>
-```
+The `index` property of the NgFor directive is used to return the zero-based index of the item in each iteration. You can capture the index in a template input variable and use it in the template. 
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -5898,6 +5883,7 @@ The `index` property of the NgFor directive is used to return the zero-based ind
 ## Q. How do you provide build configuration for multiple locales?
 
 You can provide build configuration such as translation file path, name, format and application url in configuration settings of `Angular.json` file. For example, the German version of your application configured the build as follows,
+
 ```json
 "configurations": {
   "de": {
