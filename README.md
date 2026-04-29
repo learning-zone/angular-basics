@@ -39,66 +39,16 @@
 * [Angular Animations](#-11-angular-animations)
 * [Performance](#-12-performance)
 * [Miscellaneous](#-13-miscellaneous)
+* [Change Detection](#-14-change-detection)
+* [Security](#-15-security)
+* [Unit Testing](#-16-unit-testing)
+* [Architecture Patterns](#-17-architecture-patterns)
 
 <br/>
 
 ## # 1. INTRODUCTION
 
 <br/>
-
-## Q. What is the difference between AngularJS and Angular?
-
-Angular is a completely revived component-based framework in which an application is a tree of individual
-components.
-
-| AngularJS                                         | Angular                                             |
-|---------------------------------------------------|-----------------------------------------------------|
-|JavaScript-based framework for creating SPA.       |Complete re-write of AngularJS version.       |
-|Still supported but no longer will be developed.   |It is updated version regularly released because of Semantic Versioning.|
-|The architecture of AngularJS is based on MVC.     |The architecture of Angular 2 is component based|
-|AngularJS was not developed with a mobile base in mind.|Angular 2 is a mobile-oriented framework.|
-|AngularJS code can write by using only ES5, ES6, and Dart.|We can use ES5, ES6, Typescript to write an Angular 2 code.|
-|Factory, service, provider, value and constant are used for services|The class is the only method to define services in Angular2|
-|Run on only client-side                             |Runs on client-side & server-side|
-|ng-app and angular bootstrap function are used to initialize | bootstrapmodule() function is used to initialize|
-
-**a.) AngularJS:**  
-
-**Advantages:**  
-
-* It has great MVC data binding that makes app development fast.
-* Using HTML as a declarative language makes it very intuitive.
-* It is a comprehensive solution for rapid front-end development since it does not need any other frameworks or plugins.
-* AngularJS apps can run on every significant program and advanced cells including iOS and Android-based phones and tablets.
-* Two-way data binding
-* Directives
-* Dependency injection
-
-**Disadvantages:**  
-
-* It is big and complicated due to the multiple ways of doing the same thing.
-* Implementations scale poorly.
-* If a user of an AngularJS application disables JavaScript, nothing but the basic page is visible.
-* There is a lagging UI if there are more than 200 watchers.
-
-**b.) Angular:**
-
-**Advantages:**
-
-* Component-based architecture that provides a higher quality of code
-* Reusability: Components of similar nature are well encapsulated, in other words, self-sufficient. Developers can reuse them across different parts of an application.
-* Unit-test friendly: The independent nature of components simplifies unit tests, quality assurance procedures aimed at verifying the performance of the smallest parts of the application, units.
-* Maintainability: Components that are easily decoupled from each other can be easily replaced with better implementations.
-
-**Disadvantages:**
-
-* Angular is verbose and complex
-* Steep learning curve
-* Migrating legacy systems from AngularJS to Angular requires time
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
 
 ## # 2. CONFIGURATION AND TOOLS
 
@@ -141,21 +91,15 @@ The different types of commands would be,
 |ng new project-name                  | Create an Angular project with Angular CLI                                  |
 |ng serve --open                      | Builds and serves app, rebuilding on file changes                           |
 |ng test						                  | Running unit tests                                                          |
-|ng e2e 						                  | Running end-to-end tests with protractor framwork                           |
 |ng generate					                | Generate Angular components                                                 |
 |ng lint						                  | prints out linting errors                                                   |
 |ng build						                  | Compiles an Angular app into an output directory named dist/ at the given output path. |
 |ng build --prod				              | apply uglify and minify to reduce the bundle as well make angular work in production mode which reduces runtime warnings given by angular compiler as well increase performance. The ng build command with the --prod meta-flag (ng build --prod) compiles with AOT by default.                          |
-|ng build --dev				                | Compiles an Angular app into an output directory named dist/ at the given output path.|
-|ng get/ng set					              | Set a value in the Angular CLI configuration                                |
 |ng doc						                    | Opens a browser window with the keyword as search in Angular documentation. |
-|ng eject						                  | ejects your app and output the proper webpack configuration and scripts     |
-|ng xi18n						                  | Extracts i18n messages from the templates.                                  |
 |<pre>ng test --watch=false --code-coverage</pre>| Generate Code Coverage Reports                                   |
 |npm run                              | Runs an Architect target with an optional custom builder configuration defined in  project. |
 |ng build --aot                       | generally when we serve angular project all the angular files are downloaded on browser and it will compile and execute the application on the browser but in aot entire application delivered to the browser is precompiled hence improves the performance. |
 |ng add @angular/pwa                  |Adds support for an external library to project  |
-|ng xi18n --output-path src/locale    |Internationalization |
 |ng generate web-worker app           |Add a Web Worker to angular app|
 
 <div align="right">
@@ -342,85 +286,6 @@ function getService(){
 If you still use arrow function, it generates an error node in place of the function. When the compiler later interprets this node, it reports an error to turn the arrow function into an exported function.  
 
 *Note: From Angular5 onwards, the compiler automatically performs this rewriting while emitting the `.js` file.*
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. What is Angular Ivy?
-
-Angular Ivy is a new rendering engine for Angular. You can choose to opt in a preview version of Ivy from Angular version 8.
-
-1. You can enable ivy in a new project by using the --enable-ivy flag with the ng new command
-
-```js
-ng new ivy-demo-app --enable-ivy
-```
-
-2. You can add it to an existing project by adding `enableIvy` option in the `angularCompilerOptions` in your project `tsconfig.app.json`.
-
-```typescript
-{
-  "compilerOptions": { ... },
-  "angularCompilerOptions": {
-    "enableIvy": true
-  }
-}
-```
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. What are the features included in ivy preview?
-
-You can expect below features with Ivy preview,
-
-* Generated code that is easier to read and debug at runtime
-* Faster re-build time
-* Improved payload size
-* Improved template type checking
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. Can I use AOT compilation with Ivy?
-
-Yes, it is a recommended configuration. Also, AOT compilation with Ivy is faster. So you need set the default build options(with in angular.json) for your project to always use AOT compilation.
-
-```typescript
-{
-  "projects": {
-    "my-project": {
-      "architect": {
-        "build": {
-          "options": {
-            ...
-            "aot": true,
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. What is the purpose of metadata json files?
-
-The metadata.json file can be treated as a diagram of the overall structure of a decorator metadata, represented as an abstract syntax tree(AST). During the analysis phase, the AOT collector scan the metadata recorded in the Angular decorators and outputs metadata information in .metadata.json files, one per .d.ts file.
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
-## Q. Can I use any javascript feature for expression syntax in AOT?
-
-No, the AOT collector understands a subset  of (or limited) JavaScript features. If an expression uses unsupported syntax, the collector writes an error node to the .metadata.json file. Later point of time, the compiler reports an error if it needs that piece of metadata to generate the application code.
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -923,6 +788,159 @@ In the above expression, editProfile is a template statement. The below JavaScri
 * operator assignment, such as `+=` and `-=`
 * the bitwise operators `|` and `&`
 * the template expression operators
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between Smart (Container) and Dumb (Presentational) Components?
+
+**Smart (Container) Components:**
+- Aware of the application state and logic
+- Interact with services and state management
+- Pass data down to child components via `@Input`
+- Listen to events from child components via `@Output`
+- Contain little to no template/UI logic
+
+```typescript
+@Component({
+  selector: 'app-user-list-container',
+  template: `
+    <app-user-list
+      [users]="users$ | async"
+      (userSelected)="onUserSelected($event)">
+    </app-user-list>
+  `
+})
+export class UserListContainerComponent implements OnInit {
+  users$: Observable<User[]>;
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.users$ = this.userService.getUsers();
+  }
+
+  onUserSelected(user: User) {
+    // Handle business logic
+  }
+}
+```
+
+**Dumb (Presentational) Components:**
+- Not aware of application state
+- Receive data only through `@Input`
+- Communicate only through `@Output` events
+- Are highly reusable and easily testable
+- Focus solely on how things look
+
+```typescript
+@Component({
+  selector: 'app-user-list',
+  template: `
+    <ul>
+      <li *ngFor="let user of users" (click)="selectUser(user)">
+        {{ user.name }}
+      </li>
+    </ul>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class UserListComponent {
+  @Input() users: User[];
+  @Output() userSelected = new EventEmitter<User>();
+
+  selectUser(user: User) {
+    this.userSelected.emit(user);
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you create nested components in Angular?
+
+Nested components are components rendered inside another component\'s template. The parent passes data via `@Input()` and receives events via `@Output()`.
+
+**Parent Component:**
+
+```typescript
+@Component({
+  selector: 'app-parent',
+  template: `
+    <h2>Parent Component</h2>
+    <app-child
+      [title]="parentTitle"
+      (notify)="onChildNotify($event)">
+    </app-child>
+  `
+})
+export class ParentComponent {
+  parentTitle = 'Data from Parent';
+
+  onChildNotify(message: string) {
+    console.log('Child says:', message);
+  }
+}
+```
+
+**Child Component:**
+
+```typescript
+@Component({
+  selector: 'app-child',
+  template: `
+    <h3>Child: {{ title }}</h3>
+    <button (click)="sendToParent()">Notify Parent</button>
+  `
+})
+export class ChildComponent {
+  @Input() title: string;
+  @Output() notify = new EventEmitter<string>();
+
+  sendToParent() {
+    this.notify.emit('Hello from child!');
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is multi-slot content projection in Angular?
+
+Multi-slot content projection allows a component to accept content in multiple named slots using the `select` attribute on `<ng-content>`.
+
+```typescript
+@Component({
+  selector: 'app-card',
+  template: `
+    <div class="card">
+      <div class="card-header">
+        <ng-content select="[card-header]"></ng-content>
+      </div>
+      <div class="card-body">
+        <ng-content select="[card-body]"></ng-content>
+      </div>
+      <div class="card-footer">
+        <ng-content select="[card-footer]"></ng-content>
+      </div>
+    </div>
+  `
+})
+export class CardComponent {}
+```
+
+```html
+<app-card>
+  <div card-header>Card Title</div>
+  <p card-body>Card content goes here...</p>
+  <div card-footer>Footer actions</div>
+</app-card>
+```
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -2109,19 +2127,6 @@ The commonly-needed services, pipes, and directives provided by `@angular/common
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. What is codelyzer?
-
-Codelyzer provides set of tslint rules for static code analysis of Angular TypeScript projects. ou can run the static code analyzer over web apps, NativeScript, Ionic etc. Angular CLI has support for this and it can be use as below,
-
-```js
-ng new codelyzer
-ng lint
-```
-
-<div align="right">
-  <b><a href="#table-of-contents">↥ back to top</a></b>
-</div>
-
 ## # 11. ANGULAR ANIMATIONS
 
 <br/>
@@ -2613,56 +2618,102 @@ Basically you will see 3 main syntax in Angular DSL.
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. What is Bazel tool?
+## Q. What are the different types of providers in Angular?
 
-Bazel is a powerful build tool developed and massively used by Google and it can keep track of the dependencies between different packages and build targets. In Angular8, you can build your CLI application with Bazel.  
+Angular\'s dependency injection supports several provider types:
 
-*Note: The Angular framework itself is built with Bazel.*
+**1. `useClass`**: Provide a different class for a given token.
 
-**Advantages:**
+```typescript
+providers: [{ provide: LoggerService, useClass: ConsoleLoggerService }]
+```
 
-Below are the list of key advantages of Bazel tool,
+**2. `useValue`**: Provide a static value.
 
-1. It creates the possibility of building your back-ends and front-ends with the same tool
-2. The incremental build and tests
-3. It creates the possibility to have remote builds and cache on a build farm.
+```typescript
+export const APP_CONFIG = { apiUrl: 'https://api.example.com' };
+providers: [{ provide: APP_CONFIG_TOKEN, useValue: APP_CONFIG }]
+```
+
+**3. `useExisting`**: Create an alias to another registered token.
+
+```typescript
+providers: [{ provide: OldService, useExisting: NewService }]
+```
+
+**4. `useFactory`**: Use a factory function to create the instance at runtime.
+
+```typescript
+export function loggerFactory(isDev: boolean) {
+  return isDev ? new DevLogger() : new ProdLogger();
+}
+
+providers: [{
+  provide: LoggerService,
+  useFactory: loggerFactory,
+  deps: [IS_DEVELOPMENT]
+}]
+```
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. How do you use Bazel with Angular CLI?
+## Q. What is a factory provider and when should you use it?
 
-The `@angular/bazel` package provides a builder that allows Angular CLI to use Bazel as the build tool.  
+A factory provider uses a factory function to create the dependency at runtime. It is useful when the service instance depends on runtime conditions or on other services/values.
 
-**1. Use in an existing applciation:** Add `@angular/bazel` using CLI
+```typescript
+import { InjectionToken } from '@angular/core';
 
-```js
-ng add @angular/bazel
+export const LOGGER = new InjectionToken<Logger>('Logger');
+
+export function loggerFactory(http: HttpClient, config: AppConfig): Logger {
+  if (config.environment === 'production') {
+    return new RemoteLogger(http, config.loggingEndpoint);
+  }
+  return new ConsoleLogger();
+}
+
+@NgModule({
+  providers: [{
+    provide: LOGGER,
+    useFactory: loggerFactory,
+    deps: [HttpClient, AppConfig]
+  }]
+})
+export class AppModule {}
 ```
-
-**2. Use in a new application:** Install the package and create the application with collection option
-
-```js
-npm install -g @angular/bazel
-ng new --collection=@angular/bazel
-```
-
-When you use ng build and ng serve commands, Bazel is used behind the scenes and outputs the results in dist/bin folder.
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
-## Q. How do you run Bazel directly?
+## Q. What is hierarchical dependency injection in Angular?
 
-Sometimes you may want to bypass the Angular CLI builder and run Bazel directly using Bazel CLI. You can install it globally using `@bazel/bazel` npm package. i.e, Bazel CLI is available under `@bazel/bazel` package. After you can apply the below common commands,
+Angular\'s DI system is hierarchical — injectors mirror the component tree. When a component requests a dependency, Angular searches up the injector tree until it finds a matching provider.
 
-```javascrippt
-bazel build [targets] // Compile the default output artifacts of the given targets.
-bazel test [targets] // Run the tests with *_test targets found in the pattern.
-bazel run [target]: Compile the program represented by target and then run it.
+**Injector levels (top to bottom):**
+
+1. **NullInjector** — Throws an error if reached.
+2. **Platform injector** — Platform-level services.
+3. **Root module injector** — Services provided in `AppModule` or with `providedIn: 'root'`.
+4. **Lazy module injector** — Services provided in lazy-loaded modules.
+5. **Element injector** — Per-component providers declared in `@Component.providers`.
+
+```typescript
+// Creates a new instance scoped to this component and its children
+@Component({
+  selector: 'app-child',
+  template: `...`,
+  providers: [MyService]  // component-level instance
+})
+export class ChildComponent {
+  constructor(private myService: MyService) {}
+}
 ```
+
+If `providers` is omitted on the component, the nearest ancestor injector\'s instance is used (singleton behaviour when provided at root).
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -2718,6 +2769,104 @@ constructor(myElement: ElementRef) { ... }
 ## Q. What is Redux and how does it relate to an Angular app?
 
 Redux is a way to manage application state and improve maintainability of asynchronicity in application by providing a single source of truth for the application state, and a unidirectional flow of data change in the application. **ngrx/store** is one implementation of Redux principles.
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is ViewContainerRef in Angular?
+
+`ViewContainerRef` represents a container where one or more views can be attached dynamically. It provides methods to create, insert, move, and remove views (both component views and embedded views from `TemplateRef`).
+
+```typescript
+@Component({
+  selector: 'app-dynamic-host',
+  template: `<ng-template #container></ng-template>`
+})
+export class DynamicHostComponent implements OnInit {
+  @ViewChild('container', { read: ViewContainerRef }) container: ViewContainerRef;
+
+  constructor(private cfr: ComponentFactoryResolver) {}
+
+  ngOnInit() {
+    this.loadComponent();
+  }
+
+  loadComponent() {
+    this.container.clear();
+    // Angular 13+ simplified API
+    const componentRef = this.container.createComponent(AlertComponent);
+    componentRef.instance.message = 'Dynamically loaded!';
+  }
+}
+```
+
+**Common methods:**
+
+| Method | Description |
+|--------|-------------|
+| `createComponent(component)` | Creates and inserts a component view |
+| `createEmbeddedView(templateRef, context?)` | Creates a view from a `TemplateRef` |
+| `clear()` | Removes all views |
+| `remove(index?)` | Removes a specific view |
+| `move(viewRef, index)` | Moves a view to a new index |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between ViewChildren and ContentChildren?
+
+**`@ViewChildren`** queries multiple child elements defined inside the component\'s **own template**:
+
+```typescript
+@Component({
+  selector: 'app-parent',
+  template: `
+    <app-item *ngFor="let item of items" [data]="item"></app-item>
+  `
+})
+export class ParentComponent implements AfterViewInit {
+  @ViewChildren(ItemComponent) itemComponents: QueryList<ItemComponent>;
+
+  ngAfterViewInit() {
+    console.log(this.itemComponents.length);
+    // Listen for dynamic changes
+    this.itemComponents.changes.subscribe(() => {
+      console.log('Items changed!');
+    });
+  }
+}
+```
+
+**`@ContentChildren`** queries multiple child elements **projected** into the component via `<ng-content>`:
+
+```typescript
+@Component({
+  selector: 'app-tabs',
+  template: `<ng-content></ng-content>`
+})
+export class TabsComponent implements AfterContentInit {
+  @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+
+  ngAfterContentInit() {
+    this.tabs.forEach(tab => console.log(tab.label));
+  }
+}
+```
+
+```html
+<app-tabs>
+  <app-tab label="Tab 1">Content 1</app-tab>
+  <app-tab label="Tab 2">Content 2</app-tab>
+</app-tabs>
+```
+
+| | `@ViewChildren` | `@ContentChildren` |
+|---|---|---|
+| Source | Component\'s own template | Projected content via `ng-content` |
+| Available in | `ngAfterViewInit` | `ngAfterContentInit` |
+| Returns | `QueryList<T>` | `QueryList<T>` |
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -4076,6 +4225,210 @@ We can create page change Subject and we can emit when route parameters change o
 A RxJS Subject is a special type of Observable that allows values to be multicasted to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.
 
 A Subject is like an Observable, but can multicast to many Observers. Subjects are like EventEmitters: they maintain a registry of many listeners.
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you implement lazy loading in Angular?
+
+Lazy loading defers the loading of a feature module until the route is first activated, reducing the initial bundle size and startup time.
+
+**Step 1**: Create a feature module with its own routing:
+
+```typescript
+// users/users-routing.module.ts
+const routes: Routes = [
+  { path: '', component: UsersListComponent },
+  { path: ':id', component: UserDetailComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class UsersRoutingModule {}
+```
+
+**Step 2**: Use `loadChildren` with a dynamic import in the root router:
+
+```typescript
+// app-routing.module.ts
+const routes: Routes = [
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
+];
+```
+
+**Preloading lazy modules** in the background after app start:
+
+```typescript
+@NgModule({
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })]
+})
+export class AppRoutingModule {}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are route guards and what types are available in Angular?
+
+Route guards are interfaces that control whether navigation should proceed, be cancelled, or redirected.
+
+| Guard Interface | Usage |
+|-----------------|-------|
+| `CanActivate` | Prevent navigating to a route |
+| `CanActivateChild` | Prevent navigating to child routes |
+| `CanDeactivate` | Prevent navigating away from the current route |
+| `CanLoad` | Prevent a lazy-loaded module from even being downloaded |
+| `Resolve` | Pre-fetch data before activating a route |
+
+**Example: `CanActivate`**
+
+```typescript
+@Injectable({ providedIn: 'root' })
+export class AuthGuard implements CanActivate {
+  constructor(private auth: AuthService, private router: Router) {}
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    if (this.auth.isLoggedIn()) {
+      return true;
+    }
+    this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+    return false;
+  }
+}
+```
+
+```typescript
+const routes: Routes = [
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
+];
+```
+
+**Example: `CanLoad`** (prevents lazy module from being downloaded)
+
+```typescript
+@Injectable({ providedIn: 'root' })
+export class CanLoadGuard implements CanLoad {
+  constructor(private auth: AuthService) {}
+
+  canLoad(): boolean {
+    return this.auth.isLoggedIn();
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is a route resolver and how do you use it?
+
+A resolver pre-fetches data before a route is activated, ensuring the component always receives its required data on initialization.
+
+```typescript
+@Injectable({ providedIn: 'root' })
+export class UserResolver implements Resolve<User> {
+  constructor(private userService: UserService) {}
+
+  resolve(route: ActivatedRouteSnapshot): Observable<User> {
+    return this.userService.getUserById(route.params['id']);
+  }
+}
+```
+
+Register in the route config:
+
+```typescript
+const routes: Routes = [{
+  path: 'users/:id',
+  component: UserDetailComponent,
+  resolve: { user: UserResolver }
+}];
+```
+
+Access the resolved data in the component:
+
+```typescript
+export class UserDetailComponent implements OnInit {
+  user: User;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.user = this.route.snapshot.data['user'];
+    // Or subscribe to handle future navigation changes:
+    this.route.data.subscribe(data => this.user = data['user']);
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you implement HTTP caching and retry with interceptors?
+
+**Caching interceptor:**
+
+```typescript
+@Injectable()
+export class CacheInterceptor implements HttpInterceptor {
+  private cache = new Map<string, HttpResponse<any>>();
+
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    if (req.method !== 'GET') {
+      return next.handle(req);
+    }
+    const cached = this.cache.get(req.url);
+    if (cached) {
+      return of(cached.clone());
+    }
+    return next.handle(req).pipe(
+      tap(event => {
+        if (event instanceof HttpResponse) {
+          this.cache.set(req.url, event.clone());
+        }
+      })
+    );
+  }
+}
+```
+
+**Retry interceptor:**
+
+```typescript
+@Injectable()
+export class RetryInterceptor implements HttpInterceptor {
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    return next.handle(req).pipe(
+      retryWhen(errors =>
+        errors.pipe(
+          delayWhen(() => timer(1000)),
+          take(3)
+        )
+      )
+    );
+  }
+}
+```
+
+Register interceptors in `AppModule`:
+
+```typescript
+providers: [
+  { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
+  { provide: HTTP_INTERCEPTORS, useClass: RetryInterceptor, multi: true }
+]
+```
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
@@ -6142,6 +6495,256 @@ You should omit the brackets when all of the following are true
   <b><a href="#table-of-contents">↥ back to top</a></b>
 </div>
 
+## Q. What are Template-Driven Forms in Angular?
+
+Template-driven forms use `ngModel` and form directives in the template to implicitly build the form model. They are suitable for simple forms.
+
+**Step 1**: Import `FormsModule`
+
+```typescript
+@NgModule({ imports: [FormsModule] })
+export class AppModule {}
+```
+
+**Step 2**: Create the form template
+
+```html
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <input
+    type="email"
+    name="email"
+    [(ngModel)]="user.email"
+    required
+    email
+    #emailField="ngModel">
+  <div *ngIf="emailField.invalid && emailField.touched">
+    <span *ngIf="emailField.errors?.['required']">Email is required</span>
+    <span *ngIf="emailField.errors?.['email']">Invalid email format</span>
+  </div>
+  <input
+    type="password"
+    name="password"
+    [(ngModel)]="user.password"
+    required
+    minlength="6">
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
+```
+
+```typescript
+export class LoginComponent {
+  user = { email: '', password: '' };
+
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      console.log(form.value);
+    }
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are Reactive Forms in Angular?
+
+Reactive forms provide a model-driven approach where the form model is built explicitly in the component class, offering better control, testability, and scalability.
+
+**Step 1**: Import `ReactiveFormsModule`
+
+```typescript
+@NgModule({ imports: [ReactiveFormsModule] })
+export class AppModule {}
+```
+
+**Step 2**: Build the form model using `FormBuilder`
+
+```typescript
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+export class SignupComponent implements OnInit {
+  signupForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.signupForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
+    });
+  }
+
+  onSubmit() {
+    if (this.signupForm.valid) {
+      console.log(this.signupForm.value);
+    }
+  }
+}
+```
+
+**Step 3**: Bind in the template
+
+```html
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <input formControlName="name">
+  <div *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched">
+    <span *ngIf="signupForm.get('name')?.errors?.['required']">Name is required</span>
+    <span *ngIf="signupForm.get('name')?.errors?.['minlength']">Min 3 characters</span>
+  </div>
+  <input formControlName="email">
+  <input formControlName="password" type="password">
+  <button type="submit" [disabled]="signupForm.invalid">Submit</button>
+</form>
+```
+
+| Feature | Template-Driven | Reactive |
+|---------|-----------------|----------|
+| Form model | Created by directives | Created in component class |
+| Data flow | Asynchronous | Synchronous |
+| Validation | Directives | Functions |
+| Testability | Harder | Easier |
+| Scalability | Simple forms | Complex/dynamic forms |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you create custom validators in Angular?
+
+**Synchronous custom validator (ValidatorFn):**
+
+```typescript
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+
+export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const forbidden = nameRe.test(control.value);
+    return forbidden ? { forbiddenName: { value: control.value } } : null;
+  };
+}
+
+// Usage
+name: ['', [Validators.required, forbiddenNameValidator(/admin/i)]]
+```
+
+**Cross-field validator (group-level):**
+
+```typescript
+export function passwordMatchValidator(group: AbstractControl): ValidationErrors | null {
+  const pass = group.get('password')?.value;
+  const confirm = group.get('confirmPassword')?.value;
+  return pass === confirm ? null : { passwordMismatch: true };
+}
+
+// Usage
+this.fb.group({
+  password: ['', Validators.required],
+  confirmPassword: ['', Validators.required]
+}, { validators: passwordMatchValidator })
+```
+
+**Async validator (e.g., check username availability):**
+
+```typescript
+export function uniqueUsernameValidator(userService: UserService): AsyncValidatorFn {
+  return (control: AbstractControl): Observable<ValidationErrors | null> => {
+    return userService.checkUsername(control.value).pipe(
+      debounceTime(300),
+      map(isTaken => (isTaken ? { usernameTaken: true } : null)),
+      catchError(() => of(null))
+    );
+  };
+}
+
+// Usage
+username: ['', Validators.required, uniqueUsernameValidator(this.userService)]
+```
+
+Display errors in template:
+
+```html
+<div *ngIf="signupForm.get('username')?.errors?.['usernameTaken']">
+  This username is already taken.
+</div>
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are Dynamic Forms in Angular?
+
+Dynamic forms are built programmatically at runtime from a data model that describes the form structure. They are useful when the form fields are determined by backend data or user configuration.
+
+```typescript
+// Question base data model
+export class QuestionBase<T> {
+  key: string;
+  label: string;
+  value: T;
+  validators: ValidatorFn[];
+  controlType: string;
+
+  constructor(options: Partial<QuestionBase<T>> = {}) {
+    this.key = options.key || '';
+    this.label = options.label || '';
+    this.value = options.value as T;
+    this.validators = options.validators || [];
+    this.controlType = options.controlType || 'textbox';
+  }
+}
+```
+
+```typescript
+// Service to convert question array to FormGroup
+@Injectable()
+export class QuestionControlService {
+  toFormGroup(questions: QuestionBase<any>[]): FormGroup {
+    const group: { [key: string]: FormControl } = {};
+    questions.forEach(q => {
+      group[q.key] = new FormControl(q.value ?? '', q.validators);
+    });
+    return new FormGroup(group);
+  }
+}
+```
+
+```typescript
+// Dynamic form component
+@Component({
+  selector: 'app-dynamic-form',
+  template: `
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div *ngFor="let question of questions">
+        <label>{{ question.label }}</label>
+        <input [formControlName]="question.key">
+      </div>
+      <button type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+  `
+})
+export class DynamicFormComponent implements OnInit {
+  @Input() questions: QuestionBase<any>[] = [];
+  form: FormGroup;
+
+  constructor(private qcs: QuestionControlService) {}
+
+  ngOnInit() {
+    this.form = this.qcs.toFormGroup(this.questions);
+  }
+
+  onSubmit() {
+    console.log(this.form.value);
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
 ## # 12. PERFORMANCE
 
 <br/>
@@ -6561,6 +7164,765 @@ Metadata rewriting is the process in which the compiler converts the expression 
 #### Q. What is the difference between Stateless and Stateful Component?
 
 *ToDo*
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## # 14. CHANGE DETECTION
+
+<br/>
+
+## Q. What is Change Detection in Angular?
+
+Change Detection is the mechanism by which Angular keeps the view in sync with the component data. Whenever data changes — due to user events, HTTP responses, timers, or Promises — Angular traverses the component tree to determine which views need to be re-rendered.
+
+**Angular uses Zone.js** to intercept all async operations (setTimeout, Promises, XHR, etc.) and automatically trigger change detection after each one completes.
+
+**Two Change Detection Strategies:**
+
+**1. Default (CheckAlways)** — Every component is checked on every change detection cycle regardless of whether its inputs changed.
+
+**2. OnPush** — A component is only checked when:
+- An `@Input()` reference changes
+- An event originates from the component or its children
+- An `async` pipe emits a new value
+- Change detection is triggered manually via `ChangeDetectorRef`
+
+```typescript
+@Component({
+  selector: 'app-user-card',
+  template: `<h2>{{ user.name }}</h2>`,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class UserCardComponent {
+  @Input() user: User;
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is zone pollution in Angular and how do you prevent it?
+
+Zone pollution occurs when third-party code or non-Angular operations run inside Angular\'s zone, triggering unnecessary change detection cycles and degrading performance.
+
+**Common causes:**
+- Third-party libraries using `setTimeout`, `setInterval`, or DOM event listeners
+- Frequent scroll/resize event handlers not tied to UI updates
+- Polling mechanisms that update internal state without changing the view
+
+**Solutions:**
+
+**1. Run code outside Angular\'s zone using `NgZone`:**
+
+```typescript
+constructor(private ngZone: NgZone) {}
+
+ngOnInit() {
+  this.ngZone.runOutsideAngular(() => {
+    setInterval(() => {
+      this.updateInternalCounter(); // does not trigger CD
+    }, 100);
+  });
+}
+
+updateUI() {
+  this.ngZone.run(() => {
+    this.displayValue = this.internalCounter; // triggers CD
+  });
+}
+```
+
+**2. Use `ChangeDetectionStrategy.OnPush`** to limit change detection to components that actually changed.
+
+**3. Detach a component from the CD tree:**
+
+```typescript
+constructor(private cdr: ChangeDetectorRef) {
+  this.cdr.detach();
+}
+
+updateView() {
+  this.cdr.detectChanges(); // manually trigger only when needed
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you handle slow computations in Angular templates?
+
+Slow functions called directly in templates execute on every change detection cycle, causing performance degradation.
+
+**1. Use pure pipes instead of template methods:**
+
+❌ Avoid — method called on every CD cycle:
+```html
+<li *ngFor="let item of items">{{ formatItem(item) }}</li>
+```
+
+✅ Prefer — pure pipe is called only when input changes:
+```typescript
+@Pipe({ name: 'formatItem', pure: true })
+export class FormatItemPipe implements PipeTransform {
+  transform(item: Item): string {
+    return `${item.name} — $${item.price}`;
+  }
+}
+```
+
+**2. Use `trackBy` in `*ngFor`** to prevent full list re-rendering:
+
+```html
+<li *ngFor="let item of items; trackBy: trackById">{{ item.name }}</li>
+```
+
+```typescript
+trackById(index: number, item: Item): number { return item.id; }
+```
+
+**3. Memoize expensive computations:**
+
+```typescript
+private _cache = new Map<string, any>();
+
+compute(input: string): any {
+  if (!this._cache.has(input)) {
+    this._cache.set(input, this.heavyComputation(input));
+  }
+  return this._cache.get(input);
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are Angular lifecycle hooks and when are they called?
+
+| Hook | When It Is Called |
+|------|------------------|
+| `ngOnChanges(changes)` | Before `ngOnInit()` and whenever an `@Input()` property changes. Receives a `SimpleChanges` map. |
+| `ngOnInit()` | Once, after the first `ngOnChanges()`. Use for component initialization. |
+| `ngDoCheck()` | On every CD cycle. Use for custom change detection logic. |
+| `ngAfterContentInit()` | Once, after projected content (`ng-content`) is initialized. |
+| `ngAfterContentChecked()` | After every check of projected content. |
+| `ngAfterViewInit()` | Once, after the component\'s view and child views are initialized. Use to access `@ViewChild`. |
+| `ngAfterViewChecked()` | After every check of the component\'s view. |
+| `ngOnDestroy()` | Just before Angular destroys the component. Use to unsubscribe and release resources. |
+
+```typescript
+@Component({ selector: 'app-example', template: `<p>{{ message }}</p>` })
+export class ExampleComponent implements OnInit, OnChanges, OnDestroy {
+  @Input() data: string;
+  private subscription: Subscription;
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['data']) {
+      console.log('Changed:', changes['data'].previousValue, '→', changes['data'].currentValue);
+    }
+  }
+
+  ngOnInit() {
+    this.subscription = someObservable$.subscribe();
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe(); // Always clean up
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is NgZone and when should you use it?
+
+`NgZone` is an Angular service that wraps Zone.js and provides methods to execute code inside or outside Angular\'s change detection zone.
+
+**Key methods:**
+
+| Method | Purpose |
+|--------|---------|
+| `runOutsideAngular(fn)` | Run code without triggering change detection |
+| `run(fn)` | Run code inside the zone (triggers CD) |
+| `runGuarded(fn)` | Run inside zone with automatic error handling |
+| `onStable` | Observable that emits after Angular finishes processing |
+
+```typescript
+@Component({...})
+export class HeavyAnimationComponent {
+  constructor(private ngZone: NgZone) {}
+
+  startAnimation() {
+    this.ngZone.runOutsideAngular(() => {
+      const animate = () => {
+        this.updateCanvasFrame(); // no CD triggered
+        requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+    });
+  }
+
+  processResult(data: any) {
+    this.ngZone.run(() => {
+      this.result = data; // triggers CD to update view
+    });
+  }
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## # 15. SECURITY
+
+<br/>
+
+## Q. How does Angular prevent Cross-Site Scripting (XSS) attacks?
+
+Angular treats all values as untrusted by default and automatically sanitizes them before inserting into the DOM.
+
+**1. Template interpolation auto-escaping:**
+
+```html
+<!-- If userInput = '<script>alert("xss")</script>', Angular renders it as text, not code -->
+<p>{{ userInput }}</p>
+```
+
+**2. Property binding sanitization** — Angular sanitizes `[innerHTML]`, `[src]`, `[href]`, and `[style]`:
+
+```html
+<div [innerHTML]="untrustedHtml"></div>  <!-- Sanitized automatically -->
+```
+
+**3. `DomSanitizer` for explicitly trusted content:**
+
+```typescript
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
+@Component({ template: `<div [innerHTML]="trustedHtml"></div>` })
+export class MyComponent {
+  trustedHtml: SafeHtml;
+
+  constructor(private sanitizer: DomSanitizer) {
+    // ONLY use when you are 100% certain the content is safe
+    this.trustedHtml = this.sanitizer.bypassSecurityTrustHtml('<b>Safe content</b>');
+  }
+}
+```
+
+**Security contexts Angular enforces:** HTML, Style, URL, Resource URL, Script.
+
+**Best practices:**
+- Never use `bypassSecurityTrust*` with user-controlled data
+- Always validate and sanitize input on the server side
+- Avoid direct DOM manipulation via `nativeElement`; use `Renderer2` instead
+- Keep Angular and all dependencies updated
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is Content Security Policy (CSP) and how does it work with Angular?
+
+CSP is an HTTP response header that restricts the resources the browser is allowed to load, mitigating XSS and injection attacks.
+
+**Example CSP header:**
+```
+Content-Security-Policy:
+  default-src 'self';
+  script-src 'self';
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data: https:;
+  connect-src 'self' https://api.example.com;
+```
+
+**Angular and CSP:**
+- AOT-compiled Angular apps do not use `eval()`, making them compatible with strict CSP
+- JIT compilation requires `'unsafe-eval'` — avoid JIT in production
+- Angular-generated inline styles can be whitelisted with nonces (Angular 15+ supports `ng-csp`)
+
+```typescript
+// In server.ts (Angular Universal / Express)
+import * as crypto from 'crypto';
+
+app.use((req, res, next) => {
+  const nonce = crypto.randomBytes(16).toString('base64');
+  res.setHeader('Content-Security-Policy',
+    `script-src 'self' 'nonce-${nonce}'; style-src 'self' 'nonce-${nonce}'`
+  );
+  next();
+});
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you prevent Cross-Site Request Forgery (CSRF) in Angular?
+
+Angular\'s `HttpClient` provides built-in CSRF protection by automatically reading a token from a cookie and attaching it as an HTTP header on mutating requests.
+
+```typescript
+import { HttpClientXsrfModule } from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    HttpClientModule,
+    HttpClientXsrfModule.withOptions({
+      cookieName: 'XSRF-TOKEN',    // Cookie set by the server
+      headerName: 'X-XSRF-TOKEN'  // Header Angular sends automatically
+    })
+  ]
+})
+export class AppModule {}
+```
+
+**Server side (Express.js):**
+
+```javascript
+const csrf = require('csurf');
+app.use(csrf({ cookie: true }));
+app.use((req, res, next) => {
+  res.cookie('XSRF-TOKEN', req.csrfToken());
+  next();
+});
+```
+
+**Additional Angular security best practices:**
+- Use `HttpOnly` and `Secure` flags on session cookies
+- Implement route guards for authentication and authorization
+- Keep Angular and all dependencies updated (`npm audit`)
+- Use HTTPS in production for all communication
+- Avoid storing sensitive tokens in `localStorage` (prefer `HttpOnly` cookies)
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## # 16. UNIT TESTING
+
+<br/>
+
+## Q. How do you test an Angular component?
+
+Angular provides `TestBed` to create a testing module and `ComponentFixture` to interact with a component\'s template and class.
+
+```typescript
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { UserCardComponent } from './user-card.component';
+
+describe('UserCardComponent', () => {
+  let component: UserCardComponent;
+  let fixture: ComponentFixture<UserCardComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [UserCardComponent]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(UserCardComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges(); // triggers ngOnInit
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should display the user name', () => {
+    component.user = { name: 'Alice', email: 'alice@test.com' };
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h2')?.textContent).toContain('Alice');
+  });
+
+  it('should emit userSelected on button click', () => {
+    component.user = { name: 'Alice', email: 'alice@test.com' };
+    fixture.detectChanges();
+    spyOn(component.userSelected, 'emit');
+    fixture.nativeElement.querySelector('button').click();
+    expect(component.userSelected.emit).toHaveBeenCalledWith(component.user);
+  });
+});
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you test an Angular service with HTTP calls?
+
+Use `HttpClientTestingModule` and `HttpTestingController` to mock HTTP requests without making real network calls.
+
+```typescript
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { UserService } from './user.service';
+
+describe('UserService', () => {
+  let service: UserService;
+  let httpMock: HttpTestingController;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [UserService]
+    });
+    service = TestBed.inject(UserService);
+    httpMock = TestBed.inject(HttpTestingController);
+  });
+
+  afterEach(() => httpMock.verify()); // ensure no outstanding requests
+
+  it('should fetch users', () => {
+    const mockUsers = [{ id: 1, name: 'Alice' }];
+
+    service.getUsers().subscribe(users => {
+      expect(users.length).toBe(1);
+      expect(users[0].name).toBe('Alice');
+    });
+
+    const req = httpMock.expectOne('/api/users');
+    expect(req.request.method).toBe('GET');
+    req.flush(mockUsers);
+  });
+});
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you mock dependencies in Angular unit tests?
+
+**1. Spy on an existing service method:**
+
+```typescript
+const userService = TestBed.inject(UserService);
+spyOn(userService, 'getUsers').and.returnValue(of(mockUsers));
+```
+
+**2. Provide a stub class:**
+
+```typescript
+class MockUserService {
+  getUsers() { return of([{ id: 1, name: 'Mock User' }]); }
+}
+
+TestBed.configureTestingModule({
+  providers: [{ provide: UserService, useClass: MockUserService }]
+});
+```
+
+**3. Use `jasmine.createSpyObj`:**
+
+```typescript
+const spy = jasmine.createSpyObj('UserService', ['getUsers', 'deleteUser']);
+spy.getUsers.and.returnValue(of(mockUsers));
+
+TestBed.configureTestingModule({
+  providers: [{ provide: UserService, useValue: spy }]
+});
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you test Angular directives and pipes?
+
+**Testing a directive:**
+
+```typescript
+@Component({ template: `<div appHighlight>Test</div>` })
+class TestHostComponent {}
+
+describe('HighlightDirective', () => {
+  let fixture: ComponentFixture<TestHostComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [TestHostComponent, HighlightDirective]
+    });
+    fixture = TestBed.createComponent(TestHostComponent);
+    fixture.detectChanges();
+  });
+
+  it('should apply yellow background', () => {
+    const el = fixture.nativeElement.querySelector('div');
+    expect(el.style.backgroundColor).toBe('yellow');
+  });
+});
+```
+
+**Testing a pure pipe (no TestBed needed):**
+
+```typescript
+describe('TruncatePipe', () => {
+  let pipe: TruncatePipe;
+
+  beforeEach(() => { pipe = new TruncatePipe(); });
+
+  it('should truncate long strings', () => {
+    expect(pipe.transform('Hello World', 5)).toBe('Hello...');
+  });
+
+  it('should not truncate short strings', () => {
+    expect(pipe.transform('Hi', 10)).toBe('Hi');
+  });
+});
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How do you generate and measure code coverage in Angular?
+
+**Generate coverage report:**
+
+```bash
+ng test --no-watch --code-coverage
+```
+
+This generates a `coverage/` folder. Open `coverage/index.html` in a browser to view the full report.
+
+**Configure minimum coverage thresholds in `karma.conf.js`:**
+
+```javascript
+coverageReporter: {
+  check: {
+    global: {
+      statements: 80,
+      branches: 70,
+      functions: 80,
+      lines: 80
+    }
+  }
+}
+```
+
+**Exclude files from coverage in `angular.json`:**
+
+```json
+"codeCoverageExclude": [
+  "src/app/models/**",
+  "src/environments/**"
+]
+```
+
+| Metric | Meaning |
+|--------|---------|
+| **Statements** | % of code statements executed |
+| **Branches** | % of conditional branches (if/else, ternary) executed |
+| **Functions** | % of functions/methods called |
+| **Lines** | % of source lines executed |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## # 17. ARCHITECTURE PATTERNS
+
+<br/>
+
+## Q. What is a Monorepo and how do you use Nx with Angular?
+
+A monorepo is a single repository containing multiple related projects (applications and libraries). **Nx** is the leading tool for managing Angular monorepos, providing build optimisation, code sharing, and project-graph analysis.
+
+**Set up an Nx workspace:**
+
+```bash
+npx create-nx-workspace my-org --preset=angular
+```
+
+**Typical structure:**
+
+```
+my-org/
+  apps/
+    shell/               # Host Angular application
+    dashboard/           # Feature application
+  libs/
+    ui/                  # Shared UI components
+    data-access/         # Services, API calls, state
+    feature-auth/        # Auth feature module
+  nx.json
+  tsconfig.base.json
+```
+
+**Generate a shared library:**
+
+```bash
+nx generate @nrwl/angular:lib shared/ui
+```
+
+**Import across apps:**
+
+```typescript
+import { ButtonComponent } from '@my-org/shared/ui';
+```
+
+**Key Nx benefits:**
+
+| Feature | Benefit |
+|---------|---------|
+| Affected builds | Only rebuild changed projects: `nx affected:build` |
+| Dependency graph | Visualise project deps: `nx graph` |
+| Computation caching | Skip redundant work automatically |
+| Code sharing | No need to publish internal npm packages |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are Microfrontends and how do you implement them in Angular?
+
+Microfrontends extend the microservices concept to the UI layer — each team owns and independently deploys a slice of the frontend.
+
+**Implementation approaches:**
+
+**1. Module Federation (Webpack 5) — recommended:**
+
+```bash
+ng add @angular-architects/module-federation --project shell --port 4200 --type host
+ng add @angular-architects/module-federation --project mfe1 --port 4201 --type remote
+```
+
+**Remote app `webpack.config.js`:**
+
+```javascript
+module.exports = withModuleFederationPlugin({
+  name: 'mfe1',
+  exposes: {
+    './Module': './src/app/flights/flights.module.ts',
+  },
+});
+```
+
+**Shell app routing:**
+
+```typescript
+{
+  path: 'flights',
+  loadChildren: () => loadRemoteModule({
+    type: 'module',
+    remoteEntry: 'http://localhost:4201/remoteEntry.js',
+    exposedModule: './Module'
+  }).then(m => m.FlightsModule)
+}
+```
+
+**2. Angular Elements** — Export Angular components as Web Components, consumable in any framework.
+
+**3. iframes** — Simple isolation but with UX and performance drawbacks.
+
+| Benefit | Challenge |
+|---------|-----------|
+| Independent deployments | Shared dependency management |
+| Team autonomy | Cross-MFE communication |
+| Fault isolation | Consistent UX across teams |
+| Smaller focused codebases | Potential bundle duplication |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. How does Angular Universal enable Server-Side Rendering (SSR)?
+
+Angular Universal renders Angular components on the server and sends pre-rendered HTML to the browser, improving First Contentful Paint (FCP), SEO, and performance on low-powered devices.
+
+**Add Universal to an existing app:**
+
+```bash
+ng add @nguniversal/express-engine
+```
+
+**Build and serve:**
+
+```bash
+npm run build:ssr
+npm run serve:ssr
+```
+
+**Handle browser-only APIs** using platform checks:
+
+```typescript
+import { PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
+@Injectable()
+export class StorageService {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  setItem(key: string, value: string) {
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem(key, value); // Safe to call only in browser
+    }
+  }
+}
+```
+
+**Avoid duplicate HTTP requests with `TransferState`:**
+
+```typescript
+import { TransferState, makeStateKey } from '@angular/platform-browser';
+
+const USERS_KEY = makeStateKey<User[]>('users');
+
+// On the server: store the response
+this.state.set(USERS_KEY, users);
+
+// In the browser: retrieve without another HTTP call
+const users = this.state.get(USERS_KEY, []);
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are Angular design patterns for large-scale applications?
+
+**1. Feature Module Pattern** — Organise code into cohesive feature modules (Auth, Dashboard, Reports).
+
+**2. Core / Shared / Feature Module Pattern:**
+- `CoreModule` — Singleton services (auth, logging, error handling); imported once in `AppModule`
+- `SharedModule` — Reusable components, directives, and pipes; imported in feature modules
+- `FeatureModules` — Lazy-loaded, self-contained feature areas
+
+**3. Facade Pattern** — Abstract state management behind a simple service API:
+
+```typescript
+@Injectable({ providedIn: 'root' })
+export class UserFacade {
+  users$ = this.store.select(selectAllUsers);
+
+  constructor(private store: Store) {}
+
+  loadUsers() { this.store.dispatch(loadUsers()); }
+  selectUser(id: number) { this.store.dispatch(selectUser({ id })); }
+}
+```
+
+**4. Container / Presentational Pattern** — Smart components manage data and state; dumb components handle display only.
+
+**5. State Management with NgRx:**
+
+| Concept | Role |
+|---------|------|
+| `Actions` | Events describing state changes |
+| `Reducers` | Pure functions producing new state |
+| `Selectors` | Memoized state queries |
+| `Effects` | Side effects (HTTP calls) handled in isolation |
+
+**6. OnPush + Immutability** — Use `ChangeDetectionStrategy.OnPush` with immutable data updates for optimal performance across large component trees.
 
 <div align="right">
   <b><a href="#table-of-contents">↥ back to top</a></b>
