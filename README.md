@@ -50,6 +50,417 @@
 
 <br/>
 
+## Q. What is Angular?
+
+Angular is an open-source, component-based front-end web application framework developed and maintained by Google. It is written in TypeScript and provides a complete platform for building single-page applications (SPAs), including:
+
+- A powerful **component-based architecture** for building reusable UI pieces
+- **Declarative templates** with two-way data binding
+- A built-in **dependency injection** system
+- End-to-end **tooling** via Angular CLI
+- Integrated support for **routing**, **forms**, **HTTP**, **testing**, and **animations**
+
+**Angular vs AngularJS:**
+
+| Feature | AngularJS (1.x) | Angular (2+) |
+|---------|-----------------|--------------|
+| Language | JavaScript | TypeScript |
+| Architecture | MVC | Component-based |
+| Mobile support | Not optimized | Mobile-first |
+| Performance | Digest cycle | Zone.js + CD tree |
+| CLI | No official CLI | Angular CLI |
+| Rendering | Client-side only | SSR via Universal |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are the key features of Angular?
+
+| Feature | Description |
+|---------|-------------|
+| **Component-based architecture** | UI is composed of self-contained, reusable components |
+| **TypeScript** | Provides static typing, interfaces, and decorators for early error detection |
+| **Data Binding** | One-way, two-way, event, and property binding between component class and template |
+| **Dependency Injection** | Built-in DI system for providing and consuming services across the app |
+| **Directives** | Extend HTML with structural (`*ngIf`, `*ngFor`) and attribute directives |
+| **Pipes** | Transform data in templates (`date`, `currency`, `async`, custom pipes) |
+| **Routing** | Client-side navigation with lazy loading, guards, and resolvers |
+| **RxJS / Reactive Programming** | Asynchronous data streams via Observables throughout the framework |
+| **Angular CLI** | Scaffolding, building, testing, and deploying Angular apps |
+| **Ivy Renderer** | Modern, tree-shakable compilation and rendering engine (default since Angular 9) |
+| **Angular Universal** | Server-side rendering for SEO and performance |
+| **PWA Support** | Service workers via `@angular/pwa` |
+| **i18n** | Built-in internationalization and localization tooling |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between AngularJS and Angular?
+
+AngularJS refers to Angular version 1.x, while Angular (without the "JS") refers to versions 2 and above, which is a complete rewrite.
+
+| Aspect | AngularJS (1.x) | Angular (2+) |
+|--------|-----------------|--------------|
+| **Release year** | 2010 | 2016 |
+| **Language** | JavaScript | TypeScript |
+| **Architecture** | MVC (Model-View-Controller) | Component-based |
+| **Data binding** | Two-way (`ng-model`) | One-way by default; two-way opt-in via `[(ngModel)]` |
+| **Dependency Injection** | Uses `$injector` | Hierarchical injector |
+| **Mobile** | Not designed for mobile | Mobile-first design |
+| **Routing** | `ngRoute` / UI-Router | `@angular/router` |
+| **Change detection** | Dirty checking (digest cycle) | Zone.js + unidirectional change detection tree |
+| **Performance** | Slower for large apps | Significantly faster with OnPush and Ivy |
+| **Tooling** | Grunt/Gulp | Angular CLI |
+| **Testing** | Karma/Jasmine | Karma/Jasmine + TestBed |
+| **Community support** | End of Life (Dec 2021) | Actively maintained by Google |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are the building blocks of an Angular application?
+
+An Angular application is built from the following core building blocks:
+
+**1. Modules (`NgModule`)** — Organise the application into cohesive feature blocks.
+
+```typescript
+@NgModule({
+  declarations: [AppComponent],  // Components, Directives, Pipes
+  imports: [BrowserModule],       // Other modules
+  providers: [UserService],       // Services
+  bootstrap: [AppComponent]       // Root component
+})
+export class AppModule {}
+```
+
+**2. Components** — The fundamental UI building block; each manages a view.
+
+**3. Templates** — HTML with Angular-specific syntax for binding and directives.
+
+**4. Metadata / Decorators** — Decorators (`@Component`, `@NgModule`, etc.) provide Angular with configuration information.
+
+**5. Data Binding** — Communication between the component class and its template.
+
+**6. Directives** — Classes that add behaviour to DOM elements.
+
+**7. Services** — Classes that encapsulate business logic, data access, and reusable functionality.
+
+**8. Dependency Injection** — Provides instances of services to classes that need them.
+
+**9. Routing** — Navigates between views without full page reloads.
+
+**10. Pipes** — Transform displayed values in templates.
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is TypeScript and why does Angular use it?
+
+TypeScript is a statically-typed superset of JavaScript developed by Microsoft. Angular uses TypeScript for the following benefits:
+
+**1. Static typing** — Catch type errors at compile time rather than runtime.
+
+```typescript
+// JavaScript — error only discovered at runtime
+function add(a, b) { return a + b; }
+add(1, '2'); // Returns '12' (string concatenation — silent bug)
+
+// TypeScript — error caught immediately by the compiler
+function addNumbers(a: number, b: number): number { return a + b; }
+// addNumbers(1, '2'); ERROR: Argument of type 'string' is not assignable to 'number'
+```
+
+**2. Interfaces & Types** — Define contracts for data structures.
+
+```typescript
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  role?: 'admin' | 'user'; // Optional union type
+}
+```
+
+**3. Decorators** — Enable Angular\'s metadata system (`@Component`, `@Injectable`, `@Input`, etc.).
+
+**4. Better IDE support** — Rich autocompletion, inline documentation, and refactoring tools.
+
+**5. Access modifiers** — `public`, `private`, `protected` enforce encapsulation.
+
+**6. Generics** — Write reusable, type-safe code.
+
+```typescript
+getItems<T>(url: string): Observable<T[]> {
+  return this.http.get<T[]>(url);
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the Angular component lifecycle?
+
+Every Angular component goes through a sequence of lifecycle phases managed by Angular\'s change detection mechanism:
+
+```
+Constructor → ngOnChanges → ngOnInit → ngDoCheck
+  → ngAfterContentInit → ngAfterContentChecked
+  → ngAfterViewInit → ngAfterViewChecked
+  → (repeats on updates)
+  → ngOnDestroy
+```
+
+**When to use which hook:**
+
+| Hook | Best Used For |
+|------|--------------|
+| `constructor` | Dependency injection; avoid side effects |
+| `ngOnChanges` | React to `@Input()` changes |
+| `ngOnInit` | Component initialisation, first data fetch |
+| `ngDoCheck` | Custom change detection logic |
+| `ngAfterContentInit` | Access projected content (`@ContentChild`) |
+| `ngAfterViewInit` | Access component\'s DOM / child components (`@ViewChild`) |
+| `ngOnDestroy` | Unsubscribe, clear timers, release resources |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is two-way data binding in Angular?
+
+Two-way data binding synchronises data between the component class and the template in both directions simultaneously. Angular implements it using the **banana-in-a-box** syntax `[()]`, which combines property binding `[]` and event binding `()`.
+
+```typescript
+@Component({
+  selector: 'app-root',
+  template: `
+    <input [(ngModel)]="username" placeholder="Enter name">
+    <p>Hello, {{ username }}!</p>
+  `
+})
+export class AppComponent {
+  username = '';
+}
+```
+
+**Under the hood**, `[(ngModel)]` is shorthand for:
+
+```html
+<input [ngModel]="username" (ngModelChange)="username = $event">
+```
+
+**Comparison of binding types:**
+
+| Type | Syntax | Direction |
+|------|--------|-----------|
+| Interpolation | `{{ value }}` | Class → Template |
+| Property binding | `[property]="expr"` | Class → Template |
+| Event binding | `(event)="handler()"` | Template → Class |
+| Two-way binding | `[(ngModel)]="prop"` | Both directions |
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is a Single Page Application (SPA) and how does Angular enable it?
+
+A **Single Page Application** is a web application that loads a single HTML page and dynamically updates the view as the user interacts with the app, without full page reloads.
+
+**How Angular enables SPA:**
+
+1. **Angular Router** — Intercepts URL changes and renders the matching component without a full page reload.
+
+```typescript
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'users/:id', component: UserDetailComponent }
+];
+```
+
+2. **Component-based rendering** — Only the components that need to update are re-rendered.
+3. **Lazy loading** — Feature modules are downloaded on demand, keeping the initial bundle small.
+
+**SPA benefits:**
+
+| Benefit | Description |
+|---------|-------------|
+| Speed | Subsequent navigation is near-instant (no server round-trips for HTML) |
+| Better UX | Smooth transitions; app state is preserved between views |
+| Reduced server load | Server serves API data (JSON), not rendered HTML pages |
+| Native-app feel | Animations, offline support, PWA capabilities |
+
+**SPA trade-offs:**
+- Initial load may be heavier (mitigated by lazy loading and code splitting)
+- SEO requires server-side rendering (Angular Universal)
+- Browser history management must be handled explicitly
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are decorators in Angular?
+
+Decorators are a TypeScript feature that attach metadata to classes, methods, properties, and parameters. Angular uses decorators extensively to configure its building blocks.
+
+**Class decorators:**
+
+```typescript
+@Component({ selector: 'app-root', templateUrl: './app.component.html' })
+export class AppComponent { }
+
+@NgModule({ declarations: [...], imports: [...] })
+export class AppModule { }
+
+@Injectable({ providedIn: 'root' })
+export class DataService { }
+
+@Pipe({ name: 'titleCase' })
+export class TitleCasePipe { }
+
+@Directive({ selector: '[appHighlight]' })
+export class HighlightDirective { }
+```
+
+**Property decorators:**
+
+```typescript
+@Input() title: string;
+@Output() clicked = new EventEmitter<void>();
+@ViewChild(ChildComponent) child: ChildComponent;
+@HostBinding('class.active') isActive = false;
+```
+
+**Method decorators:**
+
+```typescript
+@HostListener('click', ['$event'])
+onClick(event: Event) { }
+```
+
+**Parameter decorators:**
+
+```typescript
+constructor(@Inject(TOKEN) private config: Config) {}
+constructor(@Optional() private logger: LoggerService) {}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is the difference between declarations, imports, providers and exports in NgModule?
+
+The `@NgModule` decorator accepts a metadata object with key arrays that serve distinct purposes:
+
+| Property | Accepts | Purpose |
+|----------|---------|---------|
+| `declarations` | Components, Directives, Pipes | Makes them available within this module\'s templates |
+| `imports` | Other NgModules | Imports the exported declarations of those modules into this module |
+| `providers` | Services, Tokens | Registers services with the module\'s injector |
+| `exports` | Components, Directives, Pipes, Modules | Makes them available to other modules that import this module |
+| `bootstrap` | Components | Root component(s) to insert into the DOM on startup |
+
+```typescript
+@NgModule({
+  declarations: [
+    UserCardComponent,    // belongs to THIS module
+    HighlightDirective,
+    TruncatePipe
+  ],
+  imports: [
+    CommonModule,         // provides *ngIf, *ngFor, async pipe etc.
+    ReactiveFormsModule   // provides formGroup, formControl directives
+  ],
+  providers: [
+    UserService           // available to all components in this module
+  ],
+  exports: [
+    UserCardComponent,    // other modules importing this module can use this
+    HighlightDirective
+  ]
+})
+export class UserModule {}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What is Ivy in Angular?
+
+**Ivy** is Angular\'s modern compilation and rendering engine, introduced as opt-in in Angular 8 and made the default engine in **Angular 9**.
+
+**Key improvements over the previous View Engine:**
+
+| Area | View Engine | Ivy |
+|------|-------------|-----|
+| Bundle size | Larger bundles | Smaller bundles via better tree-shaking |
+| Build speed | Slower rebuilds | Faster incremental compilation |
+| Debugging | Less informative stack traces | Human-readable component debug info in DevTools |
+| Type checking | Limited template type-check | Strict template type checking |
+| Standalone components | Not supported | Fully supported (Angular 14+) |
+
+**Ivy powers modern Angular features:**
+- **Standalone components** (Angular 14+) — Components without `NgModule`
+- **Typed reactive forms** (Angular 14+)
+- **Required `@Input()`** (Angular 16+)
+- **Signals** (Angular 17+)
+
+```typescript
+// Standalone component (Ivy-powered, no NgModule needed)
+@Component({
+  selector: 'app-hello',
+  standalone: true,
+  imports: [CommonModule],
+  template: `<p>Hello {{ name }}</p>`
+})
+export class HelloComponent {
+  name = 'Angular';
+}
+```
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
+## Q. What are the new features added in Angular 21?
+
+**Core Framework & Performance**
+
+* Zoneless by Default: New applications no longer include zone.js by default. This shift improves Core Web Vitals, reduces bundle size by approximately 30KB, and provides better control over change detection through signals.
+* HttpClient Provided by Default: You no longer need to manually call provideHttpClient() in standalone applications; it is automatically provided at the root level.
+* Vitest as Default Test Runner: [Vitest](https://vitest.dev/) has replaced Karma as the default testing framework for new projects, offering significantly faster execution and better compatibility with modern tooling.
+* Generic SimpleChanges: The SimpleChanges type is now generic, allowing for stronger type checking of property values within the ngOnChanges lifecycle hook. 
+
+**Reactive Forms & Templates**
+
+* Experimental Signal Forms: A new API built natively on Signals, designed to replace traditional Reactive and Template-driven forms with a more declarative, type-safe, and composable experience.
+* NgStyle and NgClass Migrations: New schematics help automatically migrate NgStyle and NgClass directives to standard [style] and [class] bindings for better performance and readability.
+* Enhanced Template Syntax:
+* RegExp Support: Regular expressions can now be used directly within templates.
+   * Multiple Case Matching: The @switch control flow now supports fall-through cases, allowing multiple @case labels for a single block of code.
+   * Spread Operators: Templates now support spread operators (...) for array and object literals.  
+
+**Developer Experience & AI**
+
+* Angular MCP Server: The CLI integrates a [Model Context Protocol](https://modelcontextprotocol.io/introduction) (MCP) server. It allows AI agents, such as GitHub Copilot or Gemini, to access up-to-date documentation, best practices, and project context.
+* AI Tutor: An AI-powered learning assistant is included in the MCP server. It helps developers learn modern Angular concepts.
+* Advanced Diagnostics: The compiler catches more errors at build time. For example, it can detect reading a required property before initialization.  
+
+**Accessibility**
+
+* Angular Aria (Developer Preview): This is a new library of headless, accessible UI primitives. It includes components like Accordions, Menus, and Tabs. It handles complex accessibility patterns while allowing custom styles.  
+
+<div align="right">
+  <b><a href="#table-of-contents">↥ back to top</a></b>
+</div>
+
 ## # 2. CONFIGURATION AND TOOLS
 
 <br/>
